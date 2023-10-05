@@ -24,7 +24,7 @@ const Navbar = () => {
           <h1
             className={`${montserrat.className} text-xl md:text-2xl font-black !italic text-white`}
           >
-            Planetopedia
+            PLANETOPEDIA
           </h1>
 
           <ul className='flex items-center gap-10 text-white'>
