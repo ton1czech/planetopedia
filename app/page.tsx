@@ -1,5 +1,11 @@
-import Hero from '@/components/hero/Hero'
+import About from '@/components/homepage/About'
+import Hero from '@/components/homepage/Hero'
 
 export default function Home() {
-  return <Hero />
+  return (
+    <div className='bg-black'>
+      <Hero />
+      <About />
+    </div>
+  )
 }

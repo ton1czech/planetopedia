@@ -79,3 +79,48 @@
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
     1px 1px 0 white;
 }
+
+.text-gold {
+  background-image: linear-gradient(
+    to right,
+    #573e3d 0,
+    #cb9b51 22%,
+    #b4980b 45%,
+    #9d9307 50%,
+    #b4980b 55%,
+    #cb9b51 78%,
+    #573e3d 100%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.earth-gradient {
+  background: linear-gradient(0deg, #ffffff 50%, #ffffff 50%);
+  -webkit-mask: radial-gradient(circle at 50% 50%, white 0%, transparent 40%);
+  mask: radial-gradient(circle at 50% 50%, white 0%, transparent 40%);
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 6px; /* Zaoblení rohů */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000; /* Barva pozadí scrollbaru */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Barva interaktivní části scrollbaru */
+  border-radius: 6px; /* Zaoblení rohů */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1; /* Barva interaktivní části a pozadí scrollbaru */
+}

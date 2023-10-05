@@ -10,7 +10,7 @@ const montserrat = Montserrat({ subsets: ['latin'] })
 
 const Navbar = () => {
   return (
-    <nav className='fixed top-0 w-full py-5 bg-black'>
+    <nav className='fixed top-0 z-50 w-full py-5 bg-black'>
       <Container>
         <div className='flex items-center justify-between'>
           <h1
