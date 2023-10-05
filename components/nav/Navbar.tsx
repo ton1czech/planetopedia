@@ -4,15 +4,7 @@ import { Montserrat } from 'next/font/google'
 import Container from '../Container'
 import LanguageSelector from './LanguageSelector'
 import NavItem from './NavItem'
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from '../ui/navigation-menu'
-import { navigationMenuTriggerStyle } from '@/components/ui/navigation-menu'
+import { MenuIcon } from 'lucide-react'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -27,14 +19,19 @@ const Navbar = () => {
             PLANETOPEDIA
           </h1>
 
-          <ul className='flex items-center gap-10 text-white'>
-            <li className='mr-5'>
-              <LanguageSelector />
-            </li>
-            <NavItem label='Blog' href='/blog' />
-            <NavItem label='About' href='/services' />
-            <NavItem label='Services' href='/services' />
-          </ul>
+          <div className='items-center hidden gap-20 md:flex'>
+            <LanguageSelector />
+            <ul className='flex items-center gap-8 text-white'>
+              <NavItem label='Blog' href='/blog' />
+              <NavItem label='About' href='/services' />
+              <NavItem label='Services' href='/services' />
+            </ul>
+          </div>
+
+          <div className='flex items-center gap-5 md:hidden'>
+            <LanguageSelector />
+            <MenuIcon className='text-white' />
+          </div>
         </div>
       </Container>
     </nav>
