@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@/lib/utils'
 import { ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -10,9 +11,10 @@ interface ExpandableNavItemProps {
     label: string
     href: string
   }[]
+  black?: boolean
 }
 
-const ExpandableNavItem = ({ label, links }: ExpandableNavItemProps) => {
+const ExpandableNavItem = ({ label, links, black }: ExpandableNavItemProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   return (
@@ -24,12 +26,22 @@ const ExpandableNavItem = ({ label, links }: ExpandableNavItemProps) => {
       onMouseLeave={() => setIsOpen(false)}
       className='relative'
     >
-      <p className='cursor-pointer flex gap-2 text-white'>
+      <p
+        className={cn(
+          'cursor-pointer flex gap-2',
+          black ? 'text-white' : 'text-black'
+        )}
+      >
         {label}
         <ChevronDown size={20} />
       </p>
       {isOpen && (
-        <div className='grid absolute top-6 left-1/2 translate-x-[-50%] bg-white h-max p-4 rounded-md gap-2'>
+        <div
+          className={cn(
+            'grid absolute top-6 left-1/2 translate-x-[-50%] h-max p-4 rounded-md gap-2 border border-zinc-300',
+            black ? 'bg-white' : 'bg-white'
+          )}
+        >
           {links.map(link => (
             <Link
               href={link.href}

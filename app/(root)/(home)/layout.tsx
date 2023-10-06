@@ -1,5 +1,5 @@
 import Navbar from '@/components/nav/Navbar'
-import './globals.css'
+import '../../globals.css'
 import type { Metadata } from 'next'
 import { Hind } from 'next/font/google'
 
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${hind.className} overflow-x-hidden bg-black`}>
-        <Navbar />
+        <Navbar black />
         {children}
       </body>
     </html>

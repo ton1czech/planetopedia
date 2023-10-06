@@ -24,7 +24,11 @@ const languages = [
   },
 ]
 
-const LanguageSelector = () => {
+interface LanguageSelectorProps {
+  black?: boolean
+}
+
+const LanguageSelector = ({ black }: LanguageSelectorProps) => {
   const { language, imgSrc, setLanguage } = useLanguage(state => state)
 
   const [open, setOpen] = useState<boolean>(false)
@@ -36,7 +40,12 @@ const LanguageSelector = () => {
           variant='outline'
           role='combobox'
           aria-expanded={open}
-          className='w-[70px] justify-between bg-transparent text-white border-none hover:bg-zinc-100/20 hover:text-white'
+          className={cn(
+            'w-[70px] justify-between bg-transparent border-none hover:bg-zinc-100/20',
+            black
+              ? 'text-white hover:text-white'
+              : 'text-black hover:text-black'
+          )}
         >
           <Image src={imgSrc(language)} width={30} height={30} alt={language} />
           <ChevronsUpDown className='w-4 h-4 ml-2 opacity-50 shrink-0' />
