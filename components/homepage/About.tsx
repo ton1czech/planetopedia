@@ -34,7 +34,8 @@ const Item = ({ num, text, millions, delay }: ItemProps) => {
 
 const About = () => {
   return (
-    <Container className='grid gap-6 pb-20 md:pt-10 lg:grid-cols-3 absolute left-1/2 translate-x-[-50%]'>
+    <Container className='grid gap-6 pb-20 md:pt-10 lg:grid-cols-4 absolute left-1/2 translate-x-[-50%]'>
+      <Item num={45} text='Happy clients' delay={700} />
       <Item num={10} text='Instagram followers' millions delay={500} />
       <Item num={250} text='creators around the world' delay={800} />
       <Item
