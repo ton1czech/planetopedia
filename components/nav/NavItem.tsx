@@ -10,7 +10,13 @@ interface NavItemProps {
 const NavItem = ({ label, href, black }: NavItemProps) => {
   return (
     <li>
-      <Link href={href} className={cn('', black ? 'text-white' : 'text-black')}>
+      <Link
+        href={href}
+        className={cn(
+          'text-lg hover:underline hover:underline-offset-4',
+          black ? 'text-white' : 'text-black'
+        )}
+      >
         {label}
       </Link>
     </li>

@@ -20,7 +20,7 @@ const Navbar = ({ black }: NavbarProps) => {
     <nav
       className={cn(
         'fixed top-0 z-50 w-full py-5',
-        black ? 'bg-black' : 'bg-white/60 backdrop-blur-lg'
+        black ? 'bg-black/40' : 'bg-white/60 backdrop-blur-lg'
       )}
     >
       <Container>

@@ -28,7 +28,7 @@ const ExpandableNavItem = ({ label, links, black }: ExpandableNavItemProps) => {
     >
       <p
         className={cn(
-          'cursor-pointer flex gap-2',
+          'cursor-pointer flex gap-2 text-lg',
           black ? 'text-white' : 'text-black'
         )}
       >
