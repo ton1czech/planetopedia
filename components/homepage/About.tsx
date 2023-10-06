@@ -27,7 +27,7 @@ const Item = ({ num, text, millions, delay }: ItemProps) => {
         scrollSpyOnce
         scrollSpyDelay={delay}
       />
-      <p className='text-sm text-zinc-500'>{text}</p>
+      <p className='text-sm text-gold'>{text}</p>
     </div>
   )
 }
