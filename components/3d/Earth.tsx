@@ -1,7 +1,7 @@
 'use client'
 
 import Loader from './Loader'
-import { Suspense, useEffect } from 'react'
+import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 import useMediaQuery from '@/hooks/useMediaQuery'
