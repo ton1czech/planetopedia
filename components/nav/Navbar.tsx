@@ -8,14 +8,15 @@ import { MenuIcon } from 'lucide-react'
 import Link from 'next/link'
 import ExpandableNavItem from './ExpandableNavItem'
 import { cn } from '@/lib/utils'
+import { useRouter, usePathname } from 'next/navigation'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
-interface NavbarProps {
-  black?: boolean
-}
+const Navbar = () => {
+  const pathname = usePathname()
 
-const Navbar = ({ black }: NavbarProps) => {
+  const black = pathname === '/'
+
   return (
     <nav
       className={cn(
