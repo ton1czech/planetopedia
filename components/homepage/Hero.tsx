@@ -1,6 +1,9 @@
+'use client'
+
 import Earth from '@/components/3d/Earth'
 import Container from '@/components/Container'
 import { Montserrat, Caramel } from 'next/font/google'
+import { TypeAnimation } from 'react-type-animation'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 const caramel = Caramel({ subsets: ['latin'], weight: '400' })
@@ -17,7 +20,7 @@ const Hero = () => {
         <p
           className={`${caramel.className} text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-gold drop-shadow-sm -mt-3 lg:-mt-5`}
         >
-          More than an agency
+          <TypeAnimation sequence={['More than an agency', 1000]} speed={20} />
         </p>
       </div>
 
