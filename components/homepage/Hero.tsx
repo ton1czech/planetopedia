@@ -28,7 +28,7 @@ const Hero = () => {
                       translate-y-[-25%] z-10 pointer-events-none whitespace-nowrap`}
       >
         <TypeAnimation
-          sequence={[300, 'More than an agency']}
+          sequence={[700, 'More than an agency']}
           speed={15}
           cursor={false}
         />

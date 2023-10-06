@@ -41,8 +41,8 @@ const About = () => {
       className='grid gap-12 pb-10 md:pt-10 lg:grid-cols-3 absolute left-1/2 -bottom-60 lg:bottom-4 translate-x-[-50%] z-10'
     >
       <Item num={45} text='Notable clients' delay={2} />
-      <Item num={10} text='Instagram followers' millions delay={2} />
-      <Item num={250} text='creators worldwide' delay={2} />
+      <Item num={10} text='Instagram followers' millions delay={2.3} />
+      <Item num={250} text='Creators worldwide' delay={2.6} />
     </motion.div>
   )
 }
