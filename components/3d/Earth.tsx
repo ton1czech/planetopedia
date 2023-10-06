@@ -7,7 +7,7 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 import useMediaQuery from '@/hooks/useMediaQuery'
 
 const EarthModel = () => {
-  const earth = useGLTF('3d/earth2/scene.gltf')
+  const earth = useGLTF('3d/earth/scene.gltf')
 
   return (
     <mesh>
@@ -16,7 +16,7 @@ const EarthModel = () => {
       <pointLight intensity={100} position={[0, 50, 20]} />
       <primitive
         object={earth.scene}
-        scale={2}
+        scale={7}
         position-y={0}
         position-x={0}
         castShadow
@@ -39,7 +39,7 @@ export default function Earth() {
         far: 200,
         position: [isMobile ? -35 : -20, 3, 6],
       }}
-      className='!w-screen !h-screen !opacity-90 !absolute !top-0 !right-0 md:!-right-[45vw]'
+      className='!w-screen !h-screen !opacity-90 !absolute !top-0 !right-0 md:!-right-[45vw] !pointer-events-none md:!pointer-events-auto'
     >
       <Suspense fallback={<Loader />}>
         <OrbitControls
