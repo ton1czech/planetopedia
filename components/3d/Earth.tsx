@@ -19,7 +19,7 @@ const EarthModel = () => {
         scale={11}
         position-y={0}
         position-x={0}
-        rotation={[0, Math.PI, 0]}
+        rotation={[0, 2.7, -0.5]}
         castShadow
       />
     </mesh>
