@@ -14,7 +14,6 @@ const EarthModel = () => {
       <ambientLight color={0xa2a2a2} intensity={6} />
       <directionalLight
         color={0xc4c4c4}
-        angle={0.12}
         penumbra={1}
         intensity={1}
         castShadow
