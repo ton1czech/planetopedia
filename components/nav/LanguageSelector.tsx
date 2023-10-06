@@ -42,7 +42,7 @@ const LanguageSelector = () => {
           <ChevronsUpDown className='w-4 h-4 ml-2 opacity-50 shrink-0' />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className='w-[100px] p-2 z-[1112] bg-black/60 backdrop-blur-lg'>
+      <PopoverContent className='w-[100px] p-2 z-[1112] bg-black/20 backdrop-blur-lg border-white/30'>
         <Command className='!bg-transparent'>
           <CommandGroup className='space-y-2'>
             {languages.map(({ src, value }: { src: string; value: string }) => (

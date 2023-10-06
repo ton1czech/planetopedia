@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={hind.className}>
+      <body className={`${hind.className} overflow-x-hidden`}>
         <Navbar />
         {children}
       </body>

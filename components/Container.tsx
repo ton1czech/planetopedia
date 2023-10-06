@@ -8,7 +8,7 @@ interface ContainerProps {
 const Container: React.FC<ContainerProps> = ({ children, className }) => (
   <div
     className={cn(
-      '2xl:max-w-screen-2xl xl:max-w-screen-xl mx-auto px-3 overflow-hidden',
+      '2xl:max-w-screen-2xl xl:max-w-screen-xl mx-auto px-3',
       className
     )}
   >

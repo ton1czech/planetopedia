@@ -95,25 +95,20 @@
   -webkit-background-clip: text;
 }
 
-.earth-gradient {
-  background: linear-gradient(0deg, #ffffff 50%, #ffffff 50%);
-  -webkit-mask: radial-gradient(circle at 50% 50%, white 0%, transparent 40%);
-  mask: radial-gradient(circle at 50% 50%, white 0%, transparent 40%);
-  pointer-events: none;
-}
+/* SCROLLBAR */
 
 ::-webkit-scrollbar {
   width: 12px;
-  border-radius: 6px; /* Zaoblení rohů */
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #000; /* Barva pozadí scrollbaru */
+  background-color: #000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #888; /* Barva interaktivní části scrollbaru */
-  border-radius: 6px; /* Zaoblení rohů */
+  background-color: #888;
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -122,5 +117,5 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #888 #f1f1f1; /* Barva interaktivní části a pozadí scrollbaru */
+  scrollbar-color: #888 #f1f1f1;
 }
