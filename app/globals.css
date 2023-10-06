@@ -80,6 +80,10 @@
     1px 1px 0 white;
 }
 
+.hero-shadow {
+  text-shadow: -7px 7px 5px #86868670;
+}
+
 .text-gold {
   background-image: linear-gradient(
     to right,

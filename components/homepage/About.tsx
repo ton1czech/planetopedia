@@ -1,7 +1,6 @@
 'use client'
 
 import CountUp from 'react-countup'
-import Container from '../Container'
 
 interface ItemProps {
   num: number
@@ -12,7 +11,7 @@ interface ItemProps {
 
 const Item = ({ num, text, millions, delay }: ItemProps) => {
   return (
-    <div className='p-4 text-center text-white rounded-md'>
+    <div className='text-white rounded-md'>
       <CountUp
         start={0}
         end={num}
@@ -22,19 +21,19 @@ const Item = ({ num, text, millions, delay }: ItemProps) => {
         separator=' '
         decimal=','
         suffix={millions ? 'M+' : '+'}
-        className='text-4xl font-bold md:text-5xl'
+        className='text-2xl font-bold md:text-3xl before:absolute relative before:-left-5 before:top-0 before:w-px before:h-full before:bg-yellow-600/40'
         enableScrollSpy
         scrollSpyOnce
         scrollSpyDelay={delay}
       />
-      <p className='text-sm text-gold'>{text}</p>
+      <p className='text-gold whitespace-nowrap'>{text}</p>
     </div>
   )
 }
 
 const About = () => {
   return (
-    <Container className='grid gap-6 pb-20 md:pt-10 lg:grid-cols-4 absolute left-1/2 translate-x-[-50%]'>
+    <div className='grid gap-6 pb-10 md:pt-10 lg:grid-cols-4 absolute left-1/2 translate-x-[-50%]'>
       <Item num={45} text='Happy clients' delay={700} />
       <Item num={10} text='Instagram followers' millions delay={500} />
       <Item num={250} text='creators around the world' delay={800} />
@@ -44,7 +43,7 @@ const About = () => {
         millions
         delay={1100}
       />
-    </Container>
+    </div>
   )
 }
 
