@@ -11,7 +11,7 @@ const EarthModel = () => {
 
   return (
     <mesh>
-      <ambientLight color={0xa2a2a2} intensity={6} />
+      <ambientLight color={0xffffff} intensity={10} />
       <directionalLight color={0xc4c4c4} castShadow position={[0, 50, 50]} />
       <pointLight intensity={100} position={[0, 50, 20]} />
       <primitive
