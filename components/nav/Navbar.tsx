@@ -63,7 +63,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <div className='flex items-center gap-5 md:hidden'>
+          <div className='flex items-center gap-3 md:hidden'>
             <LanguageSelector />
             <MenuIcon className='text-white' />
           </div>

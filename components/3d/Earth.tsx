@@ -4,6 +4,7 @@ import Loader from './Loader'
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
+import useMediaQuery from '@/hooks/useMediaQuery'
 
 const EarthModel = () => {
   const earth = useGLTF('3d/earth2/scene.gltf')
@@ -32,16 +33,28 @@ const EarthModel = () => {
 }
 
 export default function Earth() {
+  const isMobile = useMediaQuery('(max-width: 450px)')
+
   return (
     <Canvas
       shadows
       frameloop='demand'
       gl={{ preserveDrawingBuffer: true }}
-      camera={{ fov: 45, near: 3, far: 200, position: [-30, 3, 6] }}
-      className='!w-screen !h-screen !opacity-90 !absolute !top-0 !-right-[40vw]'
+      camera={{
+        fov: 45,
+        near: 3,
+        far: 200,
+        position: [isMobile ? -35 : -20, 3, 6],
+      }}
+      className='!w-screen !h-screen !opacity-90 !absolute !top-0 !right-0 md:!-right-[45vw]'
     >
       <Suspense fallback={<Loader />}>
-        <OrbitControls autoRotate autoRotateSpeed={0.8} enableZoom={false} />
+        <OrbitControls
+          autoRotate
+          autoRotateSpeed={0.1}
+          rotateSpeed={0.3}
+          enableZoom={false}
+        />
         <EarthModel />
       </Suspense>
 
