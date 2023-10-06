@@ -1,7 +1,7 @@
 'use client'
 
 import Loader from './Loader'
-import { Suspense } from 'react'
+import { Suspense, useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 import useMediaQuery from '@/hooks/useMediaQuery'
@@ -19,6 +19,7 @@ const EarthModel = () => {
         scale={11}
         position-y={0}
         position-x={0}
+        rotation={[0, Math.PI, 0]}
         castShadow
       />
     </mesh>
@@ -39,7 +40,7 @@ export default function Earth() {
         far: 200,
         position: [isMobile ? -35 : -20, 3, 6],
       }}
-      className='!w-screen !h-screen !opacity-90 !absolute !top-0 !right-0 md:!-right-[45vw] !pointer-events-none md:!pointer-events-auto !z-0'
+      className='!w-screen !h-screen !opacity-90 !absolute !top-0 !right-0 md:!-right-[45vw]'
     >
       <Suspense fallback={<Loader />}>
         <OrbitControls

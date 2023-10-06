@@ -16,7 +16,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
-        className={`${montserrat.className} font-bold !italic text-3xl sm:text-4xl md:text-5xl lg:text-6xl 
+        className={`${montserrat.className} font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl 
                       drop-shadow-lg text-stroke text-white hero-shadow absolute left-1/2 top-1/2 translate-x-[-50%]
                       translate-y-[-100%] z-10 pointer-events-none`}
       >

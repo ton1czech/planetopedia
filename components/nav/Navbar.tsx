@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className='flex items-center justify-between'>
           <Link
             href='/'
-            className={`${montserrat.className} text-xl md:text-2xl font-black !italic text-white`}
+            className={`${montserrat.className} text-xl md:text-2xl font-black text-white`}
           >
             PLANETOPEDIA
           </Link>
