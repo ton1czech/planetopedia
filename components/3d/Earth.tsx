@@ -12,13 +12,7 @@ const EarthModel = () => {
   return (
     <mesh>
       <ambientLight color={0xa2a2a2} intensity={6} />
-      <directionalLight
-        color={0xc4c4c4}
-        penumbra={1}
-        intensity={1}
-        castShadow
-        position={[0, 50, 50]}
-      />
+      <directionalLight color={0xc4c4c4} castShadow position={[0, 50, 50]} />
       <pointLight intensity={100} position={[0, 50, 20]} />
       <primitive
         object={earth.scene}
