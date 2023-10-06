@@ -12,7 +12,7 @@ interface ItemProps {
 
 const Item = ({ num, text, millions, delay }: ItemProps) => {
   return (
-    <div className='p-4 text-center text-white border rounded-md border-white/10 bg-gradient-to-br from-zinc-200/10 to-white/10'>
+    <div className='p-4 text-center text-white rounded-md'>
       <CountUp
         start={0}
         end={num}
@@ -34,7 +34,7 @@ const Item = ({ num, text, millions, delay }: ItemProps) => {
 
 const About = () => {
   return (
-    <Container className='grid gap-6 pb-20 md:pt-10 lg:grid-cols-3'>
+    <Container className='grid gap-6 pb-20 md:pt-10 lg:grid-cols-3 absolute left-1/2 translate-x-[-50%]'>
       <Item num={10} text='Instagram followers' millions delay={500} />
       <Item num={250} text='creators around the world' delay={800} />
       <Item

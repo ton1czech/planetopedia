@@ -4,16 +4,17 @@ import Earth from '@/components/3d/Earth'
 import Container from '@/components/Container'
 import { Montserrat, Caramel } from 'next/font/google'
 import { TypeAnimation } from 'react-type-animation'
+import About from './About'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 const caramel = Caramel({ subsets: ['latin'], weight: '400' })
 
 const Hero = () => {
   return (
-    <Container className='bg-black h-screen w-screen'>
+    <Container className='bg-black h-screen w-screen grid place-items-end z-[99999]'>
       <div className='absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] z-10 pointer-events-none'>
         <h1
-          className={`${montserrat.className} font-black !italic text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl drop-shadow-lg text-stroke text-white`}
+          className={`${montserrat.className} font-bold !italic text-3xl sm:text-4xl md:text-5xl lg:text-6xl drop-shadow-lg text-stroke text-white`}
         >
           PLANETOPEDIA
         </h1>
@@ -29,6 +30,8 @@ const Hero = () => {
       </div>
 
       <Earth />
+
+      <About />
     </Container>
   )
 }
