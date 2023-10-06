@@ -44,6 +44,7 @@ const ExpandableNavItem = ({ label, links, black }: ExpandableNavItemProps) => {
         >
           {links.map(link => (
             <Link
+              key={link.href}
               href={link.href}
               className='text-black hover:underline whitespace-nowrap'
             >

@@ -38,7 +38,7 @@ const Member = ({ src, name, body, links, role, imagetop }: MemberProps) => {
       <p className='text-justify md:text-lg'>{body}</p>
       <div className='flex gap-2 pt-3'>
         {links.map(({ href, icon: Icon }) => (
-          <Link href={href}>
+          <Link href={href} key={href}>
             {<Icon className='hover:stroke-yellow-700 transition' />}
           </Link>
         ))}
