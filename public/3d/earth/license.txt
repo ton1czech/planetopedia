@@ -1,11 +1,11 @@
 Model Information:
-* title:	Earth Rotation
-* source:	https://sketchfab.com/3d-models/earth-rotation-374e5604a9184f7693c1b64144e9a041
-* author:	its.nihal (https://sketchfab.com/its.nihal)
+* title:	Earth
+* source:	https://sketchfab.com/3d-models/earth-2b691638fa034aca919abb9e4d77c632
+* author:	Danny.Gallegos (https://sketchfab.com/Danny.Gallegos)
 
 Model License:
-* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
-* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Earth Rotation" (https://sketchfab.com/3d-models/earth-rotation-374e5604a9184f7693c1b64144e9a041) by its.nihal (https://sketchfab.com/its.nihal) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+This work is based on "Earth" (https://sketchfab.com/3d-models/earth-2b691638fa034aca919abb9e4d77c632) by Danny.Gallegos (https://sketchfab.com/Danny.Gallegos) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -16,7 +16,7 @@ const EarthModel = () => {
       <pointLight intensity={100} position={[0, 50, 20]} />
       <primitive
         object={earth.scene}
-        scale={7}
+        scale={9}
         position-y={0}
         position-x={0}
         castShadow
