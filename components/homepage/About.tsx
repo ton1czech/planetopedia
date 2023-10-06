@@ -38,7 +38,7 @@ const About = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.8, duration: 0.5 }}
-      className='grid gap-6 pb-10 md:pt-10 lg:grid-cols-4 absolute left-1/2 -bottom-60 lg:bottom-4 translate-x-[-50%] z-10 bg-black'
+      className='grid gap-6 pb-10 md:pt-10 lg:grid-cols-4 absolute left-1/2 -bottom-60 lg:bottom-4 translate-x-[-50%] z-10'
     >
       <Item num={45} text='Happy clients' delay={700} />
       <Item num={10} text='Instagram followers' millions delay={500} />
