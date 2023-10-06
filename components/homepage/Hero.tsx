@@ -20,7 +20,11 @@ const Hero = () => {
         <p
           className={`${caramel.className} text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-gold drop-shadow-sm -mt-3 lg:-mt-5`}
         >
-          <TypeAnimation sequence={['More than an agency', 1000]} speed={20} />
+          <TypeAnimation
+            sequence={['More than an agency', 1000]}
+            speed={20}
+            cursor={false}
+          />
         </p>
       </div>
 
