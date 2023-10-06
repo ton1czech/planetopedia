@@ -32,7 +32,7 @@ export default function Earth() {
   return (
     <Canvas
       shadows
-      frameloop='demand'
+      frameloop='always'
       gl={{ preserveDrawingBuffer: true }}
       camera={{
         fov: 45,
@@ -44,6 +44,8 @@ export default function Earth() {
     >
       <Suspense fallback={<Loader />}>
         <OrbitControls
+          enablePan={true}
+          enableDamping
           autoRotate
           autoRotateSpeed={0.4}
           rotateSpeed={0.3}
