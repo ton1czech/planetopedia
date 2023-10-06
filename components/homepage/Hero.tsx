@@ -12,7 +12,7 @@ const caramel = Caramel({ subsets: ['latin'], weight: '400' })
 
 const Hero = () => {
   return (
-    <Container className='bg-black h-screen w-screen grid place-items-end z-[99999]'>
+    <Container className='h-screen w-screen grid place-items-end z-[99999] bg-black'>
       <h1
         className={`${montserrat.className} font-bold !italic text-3xl sm:text-4xl md:text-5xl lg:text-6xl 
                       drop-shadow-lg text-stroke text-white hero-shadow absolute left-1/2 top-1/2 translate-x-[-50%]
@@ -33,8 +33,6 @@ const Hero = () => {
       </p>
 
       <Earth />
-
-      <About />
     </Container>
   )
 }
