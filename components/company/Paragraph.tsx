@@ -14,7 +14,7 @@ const Paragraph = ({
   return (
     <>
       <p
-        className='text-xl md:text-2xl lg:text-3xl xl:text-4xl'
+        className='text-xl transition duration-500 md:text-2xl lg:text-3xl xl:text-4xl'
         style={{ opacity: opacityForBlock(progress, pageNum) }}
       >
         {text}
