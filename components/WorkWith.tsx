@@ -25,6 +25,22 @@ const logos = [
     src: '/logos/ritzcarlton.webp',
     label: 'Ritz Carlton',
   },
+  {
+    src: '/logos/dji.webp',
+    label: 'DJI',
+  },
+  {
+    src: '/logos/samsonite.webp',
+    label: 'Samsonite',
+  },
+  {
+    src: '/logos/sony.webp',
+    label: 'Sony',
+  },
+  {
+    src: '/logos/vans.webp',
+    label: 'Vans',
+  },
 ]
 
 const WorkWith = () => {
@@ -54,7 +70,7 @@ const WorkWith = () => {
               alt={label}
               width={100}
               height={50}
-              className='w-auto h-24'
+              className='w-full'
             />
           </div>
         ))}
