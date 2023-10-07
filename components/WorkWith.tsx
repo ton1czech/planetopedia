@@ -45,7 +45,7 @@ const logos = [
 
 const WorkWith = () => {
   return (
-    <div>
+    <div className='font-cantarell'>
       <div className='mb-12'>
         <h2 className='mb-2 text-xl font-thin md:text-2xl lg:text-3xl text-zinc-500'>
           Who we work with

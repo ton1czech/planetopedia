@@ -19,7 +19,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
   return (
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
       <Container className='relative'>
-        <div className='fixed flex-col hidden w-full -translate-y-1/2 top-1/2 xl:flex'>
+        <div className='fixed flex-col hidden w-full -translate-y-1/2 top-1/2 xl:flex font-cantarell'>
           <h1 className='text-2xl font-bold'>{restaurant?.name}</h1>
           {language === 'en' && <p>{restaurant.location_en}</p>}
           {language === 'cs' && <p>{restaurant.location_cz}</p>}
@@ -44,7 +44,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
         </div>
 
         <div className='grid px-3 mx-auto place-content-center md:max-w-screen-md 2xl:max-w-screen-md'>
-          <div className='xl:hidden'>
+          <div className='xl:hidden font-cantarell'>
             <h1 className='text-2xl font-bold md:text-3xl'>
               {restaurant?.name}
             </h1>
@@ -69,7 +69,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
           </div>
 
           {(restaurant?.overview_en || restaurant?.overview_cz) && (
-            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl'>
+            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl font-cantarell'>
               restaurant overview
             </h1>
           )}
@@ -103,7 +103,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
           </div>
 
           {(restaurant?.menu_en || restaurant?.menu_cz) && (
-            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl'>
+            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl font-cantarell'>
               menu & food
             </h1>
           )}
@@ -134,7 +134,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
           </div>
 
           {(restaurant?.conclusion_en || restaurant?.conclusion_cz) && (
-            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4'>
+            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
               conclusion
             </h1>
           )}
@@ -167,7 +167,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
             ))}
           </div>
 
-          <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4'>
+          <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
             essential info
           </h1>
 

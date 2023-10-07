@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        'z-50 w-full py-5',
+        'z-50 w-full py-5 font-cantarell',
         black ? 'bg-black/40' : 'bg-white/60 backdrop-blur-lg',
         studio ? 'block' : 'fixed top-0'
       )}
