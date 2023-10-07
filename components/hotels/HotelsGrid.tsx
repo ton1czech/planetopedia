@@ -7,8 +7,6 @@ interface HotelsGridProps {
 }
 
 const HotelsGrid = ({ hotels }: HotelsGridProps) => {
-  console.log(hotels)
-
   return (
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
       <Container className='grid gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-12'>
