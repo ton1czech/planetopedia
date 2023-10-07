@@ -11,13 +11,13 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'place_en',
-      title: 'Place 🇬🇧',
+      name: 'location_en',
+      title: 'Location 🇬🇧',
       type: 'string',
     }),
     defineField({
-      name: 'place_cz',
-      title: 'Place 🇨🇿',
+      name: 'location_cz',
+      title: 'Location 🇨🇿',
       type: 'string',
     }),
     defineField({
