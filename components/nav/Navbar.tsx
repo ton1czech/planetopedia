@@ -87,7 +87,7 @@ const Navbar = () => {
 
           <div className='flex items-center gap-3 md:hidden'>
             <LanguageSelector black={black} />
-            <MenuIcon className='text-white' />
+            <MenuIcon className={cn('', black ? 'text-white' : 'text-black')} />
           </div>
         </div>
       </Container>
