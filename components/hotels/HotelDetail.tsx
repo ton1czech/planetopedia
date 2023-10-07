@@ -52,7 +52,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
             {language === 'cs' && <p className='mb-2'>{hotel.location_cz}</p>}
           </div>
 
-          <div className='space-y-4'>
+          <div>
             {hotel?.intro_images?.map((image: any) => (
               <Image
                 src={urlForImage(image).url()}
@@ -65,144 +65,170 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
           </div>
 
           {(hotel?.overview_en || hotel?.overview_cz) && (
-            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl font-cantarell'>
-              hotel overview
-            </h1>
+            <>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+                hotel overview
+              </h1>
+              {language === 'en' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={hotel?.overview_en}
+                    components={RichText}
+                  />
+                </div>
+              )}
+              {language === 'cs' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={hotel?.overview_cz}
+                    components={RichText}
+                  />
+                </div>
+              )}
+              <div>
+                {hotel?.overview_images?.map((image: any) => (
+                  <Image
+                    src={urlForImage(image).url()}
+                    alt='overview image'
+                    width={900}
+                    height={400}
+                    className='pb-6 md:pb-10'
+                  />
+                ))}
+              </div>
+            </>
           )}
-          {language === 'en' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText value={hotel?.overview_en} components={RichText} />
-            </div>
-          )}
-          {language === 'cs' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText value={hotel?.overview_cz} components={RichText} />
-            </div>
-          )}
-
-          <div className='space-y-4'>
-            {hotel?.overview_images?.map((image: any) => (
-              <Image
-                src={urlForImage(image).url()}
-                alt='overview image'
-                width={900}
-                height={400}
-                className='mb-6 md:pb-10'
-              />
-            ))}
-          </div>
 
           {(hotel?.rooms_en || hotel?.rooms_cz) && (
-            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
-              the rooms
-            </h1>
-          )}
-          {language === 'en' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText value={hotel?.rooms_en} components={RichText} />
-            </div>
-          )}
-          {language === 'cs' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText value={hotel?.rooms_cz} components={RichText} />
-            </div>
-          )}
+            <>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+                the rooms
+              </h1>
+              {language === 'en' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText value={hotel?.rooms_en} components={RichText} />
+                </div>
+              )}
+              {language === 'cs' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText value={hotel?.rooms_cz} components={RichText} />
+                </div>
+              )}
 
-          <div className='space-y-4'>
-            {hotel?.rooms_images?.map((image: any) => (
-              <Image
-                src={urlForImage(image).url()}
-                alt='rooms image'
-                width={900}
-                height={400}
-                className='pb-6 md:pb-10'
-              />
-            ))}
-          </div>
+              <div>
+                {hotel?.rooms_images?.map((image: any) => (
+                  <Image
+                    src={urlForImage(image).url()}
+                    alt='rooms image'
+                    width={900}
+                    height={400}
+                    className='pb-6 md:pb-10'
+                  />
+                ))}
+              </div>
+            </>
+          )}
 
           {(hotel?.services_en || hotel?.services_cz) && (
-            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
-              services and facilities
-            </h1>
-          )}
-          {language === 'en' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText value={hotel?.services_en} components={RichText} />
-            </div>
-          )}
-          {language === 'cs' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText value={hotel?.services_cz} components={RichText} />
-            </div>
-          )}
+            <>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+                services and facilities
+              </h1>
+              {language === 'en' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={hotel?.services_en}
+                    components={RichText}
+                  />
+                </div>
+              )}
+              {language === 'cs' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={hotel?.services_cz}
+                    components={RichText}
+                  />
+                </div>
+              )}
 
-          <div className='space-y-4'>
-            {hotel?.services_images?.map((image: any) => (
-              <Image
-                src={urlForImage(image).url()}
-                alt='services image'
-                width={900}
-                height={400}
-                className='pb-6 md:pb-10'
-              />
-            ))}
-          </div>
+              <div>
+                {hotel?.services_images?.map((image: any) => (
+                  <Image
+                    src={urlForImage(image).url()}
+                    alt='services image'
+                    width={900}
+                    height={400}
+                    className='pb-6 md:pb-10'
+                  />
+                ))}
+              </div>
+            </>
+          )}
 
           {(hotel?.fitness_en || hotel?.fitness_cz) && (
-            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
-              spa & fitness
-            </h1>
+            <>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+                spa & fitness
+              </h1>
+              {language === 'en' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={hotel?.fitness_en}
+                    components={RichText}
+                  />
+                </div>
+              )}
+              {language === 'cs' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={hotel?.fitness_cz}
+                    components={RichText}
+                  />
+                </div>
+              )}
+              <div>
+                {hotel?.fitness_images?.map((image: any) => (
+                  <Image
+                    src={urlForImage(image).url()}
+                    alt='fitness image'
+                    width={900}
+                    height={400}
+                    className='pb-6 md:pb-10'
+                  />
+                ))}
+              </div>
+            </>
           )}
-          {language === 'en' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText value={hotel?.fitness_en} components={RichText} />
-            </div>
-          )}
-          {language === 'cs' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText value={hotel?.fitness_cz} components={RichText} />
-            </div>
-          )}
-
-          <div className='space-y-4'>
-            {hotel?.fitness_images?.map((image: any) => (
-              <Image
-                src={urlForImage(image).url()}
-                alt='fitness image'
-                width={900}
-                height={400}
-                className='pb-6 md:pb-10'
-              />
-            ))}
-          </div>
 
           {(hotel?.food_en || hotel?.food_cz) && (
-            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
-              food & drinks
-            </h1>
-          )}
-          {language === 'en' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText value={hotel?.food_en} components={RichText} />
-            </div>
-          )}
-          {language === 'cs' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText value={hotel?.food_cz} components={RichText} />
-            </div>
-          )}
+            <>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+                food & drinks
+              </h1>
+              {language === 'en' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText value={hotel?.food_en} components={RichText} />
+                </div>
+              )}
+              {language === 'cs' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText value={hotel?.food_cz} components={RichText} />
+                </div>
+              )}
 
-          <div className='space-y-4'>
-            {hotel?.food_images?.map((image: any) => (
-              <Image
-                src={urlForImage(image).url()}
-                alt='food image'
-                width={900}
-                height={400}
-                className='pb-2 md:pb-4'
-              />
-            ))}
-          </div>
+              <div>
+                {hotel?.food_images?.map((image: any) => (
+                  <Image
+                    src={urlForImage(image).url()}
+                    alt='food image'
+                    width={900}
+                    height={400}
+                    className='pb-6 md:pb-10'
+                  />
+                ))}
+              </div>
+            </>
+          )}
 
           <div className='grid gap-8 md:grid-cols-2'>
             {hotel?.labeled_images?.map((item: any) => (
@@ -219,38 +245,40 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
           </div>
 
           {(hotel?.conclusion_en || hotel?.conclusion_cz) && (
-            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
-              conclusion
-            </h1>
-          )}
-          {language === 'en' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText
-                value={hotel?.conclusion_en}
-                components={RichText}
-              />
-            </div>
-          )}
-          {language === 'cs' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText
-                value={hotel?.conclusion_cz}
-                components={RichText}
-              />
-            </div>
-          )}
+            <>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+                conclusion
+              </h1>
+              {language === 'en' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={hotel?.conclusion_en}
+                    components={RichText}
+                  />
+                </div>
+              )}
+              {language === 'cs' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={hotel?.conclusion_cz}
+                    components={RichText}
+                  />
+                </div>
+              )}
 
-          <div className='space-y-4'>
-            {hotel?.conclusion_images?.map((image: any) => (
-              <Image
-                src={urlForImage(image).url()}
-                alt='fitness image'
-                width={900}
-                height={400}
-                className='pb-6 md:pb-10'
-              />
-            ))}
-          </div>
+              <div>
+                {hotel?.conclusion_images?.map((image: any) => (
+                  <Image
+                    src={urlForImage(image).url()}
+                    alt='fitness image'
+                    width={900}
+                    height={400}
+                    className='pb-6 md:pb-10'
+                  />
+                ))}
+              </div>
+            </>
+          )}
 
           <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
             essential info

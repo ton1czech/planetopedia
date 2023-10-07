@@ -56,7 +56,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
             )}
           </div>
 
-          <div className='space-y-4'>
+          <div>
             {restaurant?.intro_images?.map((image: any) => (
               <Image
                 src={urlForImage(image).url()}
@@ -69,102 +69,114 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
           </div>
 
           {(restaurant?.overview_en || restaurant?.overview_cz) && (
-            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl font-cantarell'>
-              restaurant overview
-            </h1>
-          )}
-          {language === 'en' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText
-                value={restaurant?.overview_en}
-                components={RichText}
-              />
-            </div>
-          )}
-          {language === 'cs' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText
-                value={restaurant?.overview_cz}
-                components={RichText}
-              />
-            </div>
-          )}
+            <>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl font-cantarell'>
+                restaurant overview
+              </h1>
+              {language === 'en' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={restaurant?.overview_en}
+                    components={RichText}
+                  />
+                </div>
+              )}
+              {language === 'cs' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={restaurant?.overview_cz}
+                    components={RichText}
+                  />
+                </div>
+              )}
 
-          <div className='space-y-4'>
-            {restaurant?.overview_images?.map((image: any) => (
-              <Image
-                src={urlForImage(image).url()}
-                alt='intro image'
-                width={900}
-                height={400}
-                className='pb-6 md:pb-10'
-              />
-            ))}
-          </div>
+              <div>
+                {restaurant?.overview_images?.map((image: any) => (
+                  <Image
+                    src={urlForImage(image).url()}
+                    alt='intro image'
+                    width={900}
+                    height={400}
+                    className='pb-6 md:pb-10'
+                  />
+                ))}
+              </div>
+            </>
+          )}
 
           {(restaurant?.menu_en || restaurant?.menu_cz) && (
-            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl font-cantarell'>
-              menu & food
-            </h1>
-          )}
-          {language === 'en' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText value={restaurant?.menu_en} components={RichText} />
-            </div>
-          )}
-          {language === 'cs' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText value={restaurant?.menu_cz} components={RichText} />
-            </div>
-          )}
+            <>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl font-cantarell'>
+                menu & food
+              </h1>
+              {language === 'en' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={restaurant?.menu_en}
+                    components={RichText}
+                  />
+                </div>
+              )}
+              {language === 'cs' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={restaurant?.menu_cz}
+                    components={RichText}
+                  />
+                </div>
+              )}
 
-          <div className='grid gap-8 md:grid-cols-2'>
-            {restaurant?.menu_images?.map((item: any) => (
-              <div className='pb-6 md:pb-10'>
-                <Image
-                  src={urlForImage(item.image).url()}
-                  alt='food image'
-                  width={900}
-                  height={400}
-                />
-                <p className='mt-1 text-center text-zinc-800'>{item.alt}</p>
+              <div className='grid gap-8 md:grid-cols-2'>
+                {restaurant?.menu_images?.map((item: any) => (
+                  <div className='pb-6 md:pb-10'>
+                    <Image
+                      src={urlForImage(item.image).url()}
+                      alt='food image'
+                      width={900}
+                      height={400}
+                    />
+                    <p className='mt-1 text-center text-zinc-800'>{item.alt}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          )}
 
           {(restaurant?.conclusion_en || restaurant?.conclusion_cz) && (
-            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
-              conclusion
-            </h1>
-          )}
-          {language === 'en' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText
-                value={restaurant?.conclusion_en}
-                components={RichText}
-              />
-            </div>
-          )}
-          {language === 'cs' && (
-            <div className='pb-6 md:pb-10'>
-              <PortableText
-                value={restaurant?.conclusion_cz}
-                components={RichText}
-              />
-            </div>
-          )}
+            <>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+                conclusion
+              </h1>
+              {language === 'en' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={restaurant?.conclusion_en}
+                    components={RichText}
+                  />
+                </div>
+              )}
+              {language === 'cs' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={restaurant?.conclusion_cz}
+                    components={RichText}
+                  />
+                </div>
+              )}
 
-          <div className='space-y-4'>
-            {restaurant?.conclusion_images?.map((image: any) => (
-              <Image
-                src={urlForImage(image).url()}
-                alt='fitness image'
-                width={900}
-                height={400}
-                className='pb-6 md:pb-10'
-              />
-            ))}
-          </div>
+              <div>
+                {restaurant?.conclusion_images?.map((image: any) => (
+                  <Image
+                    src={urlForImage(image).url()}
+                    alt='fitness image'
+                    width={900}
+                    height={400}
+                    className='pb-6 md:pb-10'
+                  />
+                ))}
+              </div>
+            </>
+          )}
 
           <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
             essential info
