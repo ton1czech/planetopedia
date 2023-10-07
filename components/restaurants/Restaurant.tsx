@@ -4,7 +4,7 @@ import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
 import Link from 'next/link'
 
-interface HotelProps {
+interface RestaurantProps {
   src: any
   name: string
   locationCz: string
@@ -13,18 +13,18 @@ interface HotelProps {
   href: string
 }
 
-const Hotel = ({
+const Restaurant = ({
   src,
   name,
   locationCz,
   locationEn,
   minutes,
   href,
-}: HotelProps) => {
+}: RestaurantProps) => {
   const { language } = useLanguage(state => state)
 
   return (
-    <Link href={`/blog/hotels/${href}`} className='group'>
+    <Link href={`/blog/restaurants/${href}`} className='group'>
       <div className='relative w-full overflow-hidden transition duration-500 aspect-square rounded-3xl group-hover:shadow-2xl'>
         <Image
           src={src}
@@ -49,4 +49,4 @@ const Hotel = ({
   )
 }
 
-export default Hotel
+export default Restaurant
