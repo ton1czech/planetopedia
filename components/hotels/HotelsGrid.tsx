@@ -1,3 +1,6 @@
+'use client'
+
+import { AnimatePresence } from 'framer-motion'
 import { urlForImage } from '@/sanity/lib/image'
 import Container from '../Container'
 import Hotel from './Hotel'

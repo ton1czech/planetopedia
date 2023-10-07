@@ -25,7 +25,7 @@ const Hotel = ({
 
   return (
     <Link href={`/blog/hotels/${href}`} className='group'>
-      <div className='relative w-full overflow-hidden aspect-square rounded-3xl group-hover:shadow-2xl'>
+      <div className='relative w-full overflow-hidden transition duration-500 aspect-square rounded-3xl group-hover:shadow-2xl'>
         <Image
           src={src}
           fill

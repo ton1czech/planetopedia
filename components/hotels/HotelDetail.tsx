@@ -1,47 +1,286 @@
 'use client'
 
 import Image from 'next/image'
-import Container from '../Container'
 import { urlForImage } from '@/sanity/lib/image'
+import { useLanguage } from '@/store/useLanguage'
+import { PortableText } from '@portabletext/react'
+import { RichText } from '../RichText'
+import { Instagram, Link2 } from 'lucide-react'
+import Link from 'next/link'
+import Container from '../Container'
 
 interface HotelDetailProps {
   hotel: any
 }
 
 const HotelDetail = ({ hotel }: HotelDetailProps) => {
+  const { language } = useLanguage(state => state)
+
   return (
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
-      <Container>
-        <h1>{hotel.name}</h1>
-        <p>{hotel.location_en}</p>
+      <Container className='relative'>
+        <div className='fixed flex-col hidden w-full -translate-y-1/2 top-1/2 xl:flex'>
+          <h1 className='text-2xl font-bold'>{hotel?.name}</h1>
+          {language === 'en' && <p>{hotel.location_en}</p>}
+          {language === 'cs' && <p>{hotel.location_cz}</p>}
+          <div className='flex items-center gap-4 mt-3'>
+            {hotel?.web_link && (
+              <Link href={hotel.web_link}>
+                <Link2
+                  size={20}
+                  className='transition text-zinc-700 hover:text-black'
+                />
+              </Link>
+            )}
+            {hotel?.instagram_link && (
+              <Link href={hotel.instagram_link}>
+                <Instagram
+                  size={20}
+                  className='transition text-zinc-700 hover:text-black'
+                />
+              </Link>
+            )}
+          </div>
+        </div>
 
-        {hotel.intro_images.map((image: any) => (
-          <Image
-            src={urlForImage(image).url()}
-            alt='intro image'
-            width={900}
-            height={400}
+        <div className='grid px-3 mx-auto place-content-center md:max-w-screen-md 2xl:max-w-screen-md'>
+          <div className='xl:hidden'>
+            <h1 className='text-2xl font-bold md:text-3xl'>{hotel?.name}</h1>
+            {language === 'en' && <p className='mb-2'>{hotel.location_en}</p>}
+            {language === 'cs' && <p className='mb-2'>{hotel.location_cz}</p>}
+          </div>
+
+          <div className='space-y-4'>
+            {hotel?.intro_images?.map((image: any) => (
+              <Image
+                src={urlForImage(image).url()}
+                alt='intro image'
+                width={900}
+                height={400}
+                className='rounded-lg shadow-xl'
+              />
+            ))}
+          </div>
+
+          {(hotel?.overview_en || hotel?.overview_cz) && (
+            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl'>
+              hotel overview
+            </h1>
+          )}
+          {language === 'en' && (
+            <div className='pb-6 md:pb-10'>
+              <PortableText value={hotel?.overview_en} components={RichText} />
+            </div>
+          )}
+          {language === 'cs' && (
+            <div className='pb-6 md:pb-10'>
+              <PortableText value={hotel?.overview_cz} components={RichText} />
+            </div>
+          )}
+
+          <div className='space-y-4'>
+            {hotel?.overview_images?.map((image: any) => (
+              <Image
+                src={urlForImage(image).url()}
+                alt='overview image'
+                width={900}
+                height={400}
+                className='rounded-lg shadow-xl'
+              />
+            ))}
+          </div>
+
+          {(hotel?.rooms_en || hotel?.rooms_cz) && (
+            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4'>
+              the rooms
+            </h1>
+          )}
+          {language === 'en' && (
+            <div className='pb-6 md:pb-10'>
+              <PortableText value={hotel?.rooms_en} components={RichText} />
+            </div>
+          )}
+          {language === 'cs' && (
+            <div className='pb-6 md:pb-10'>
+              <PortableText value={hotel?.rooms_cz} components={RichText} />
+            </div>
+          )}
+
+          <div className='space-y-4'>
+            {hotel?.rooms_images?.map((image: any) => (
+              <Image
+                src={urlForImage(image).url()}
+                alt='rooms image'
+                width={900}
+                height={400}
+                className='rounded-lg shadow-xl'
+              />
+            ))}
+          </div>
+
+          {(hotel?.services_en || hotel?.services_cz) && (
+            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4'>
+              services and facilities
+            </h1>
+          )}
+          {language === 'en' && (
+            <div className='pb-6 md:pb-10'>
+              <PortableText value={hotel?.services_en} components={RichText} />
+            </div>
+          )}
+          {language === 'cs' && (
+            <div className='pb-6 md:pb-10'>
+              <PortableText value={hotel?.services_cz} components={RichText} />
+            </div>
+          )}
+
+          <div className='space-y-4'>
+            {hotel?.services_images?.map((image: any) => (
+              <Image
+                src={urlForImage(image).url()}
+                alt='services image'
+                width={900}
+                height={400}
+                className='rounded-lg shadow-xl'
+              />
+            ))}
+          </div>
+
+          {(hotel?.fitness_en || hotel?.fitness_cz) && (
+            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4'>
+              spa & fitness
+            </h1>
+          )}
+          {language === 'en' && (
+            <div className='pb-6 md:pb-10'>
+              <PortableText value={hotel?.fitness_en} components={RichText} />
+            </div>
+          )}
+          {language === 'cs' && (
+            <div className='pb-6 md:pb-10'>
+              <PortableText value={hotel?.fitness_cz} components={RichText} />
+            </div>
+          )}
+
+          <div className='space-y-4'>
+            {hotel?.fitness_images?.map((image: any) => (
+              <Image
+                src={urlForImage(image).url()}
+                alt='fitness image'
+                width={900}
+                height={400}
+                className='rounded-lg shadow-xl'
+              />
+            ))}
+          </div>
+
+          {(hotel?.food_en || hotel?.food_cz) && (
+            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4'>
+              food & drinks
+            </h1>
+          )}
+          {language === 'en' && (
+            <div className='pb-6 md:pb-10'>
+              <PortableText value={hotel?.food_en} components={RichText} />
+            </div>
+          )}
+          {language === 'cs' && (
+            <div className='pb-6 md:pb-10'>
+              <PortableText value={hotel?.food_cz} components={RichText} />
+            </div>
+          )}
+
+          <div className='space-y-4'>
+            {hotel?.food_images?.map((image: any) => (
+              <Image
+                src={urlForImage(image).url()}
+                alt='fitness image'
+                width={900}
+                height={400}
+                className='rounded-lg shadow-xl'
+              />
+            ))}
+          </div>
+
+          <div className='grid gap-8 md:grid-cols-2'>
+            {hotel?.labeled_images?.map((image: any) => (
+              <div>
+                <Image
+                  src={urlForImage(image).url()}
+                  alt='fitness image'
+                  width={900}
+                  height={400}
+                  className='rounded-lg shadow-xl'
+                />
+                <p>{image.alt}</p>
+              </div>
+            ))}
+          </div>
+
+          {(hotel?.conclusion_en || hotel?.conclusin_cz) && (
+            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4'>
+              conclusion
+            </h1>
+          )}
+          {language === 'en' && (
+            <div className='pb-6 md:pb-10'>
+              <PortableText
+                value={hotel?.conclusion_en}
+                components={RichText}
+              />
+            </div>
+          )}
+          {language === 'cs' && (
+            <div className='pb-6 md:pb-10'>
+              <PortableText
+                value={hotel?.conclusion_cz}
+                components={RichText}
+              />
+            </div>
+          )}
+
+          <div className='space-y-4'>
+            {hotel?.conclusion_images?.map((image: any) => (
+              <Image
+                src={urlForImage(image).url()}
+                alt='fitness image'
+                width={900}
+                height={400}
+                className='rounded-lg shadow-xl'
+              />
+            ))}
+          </div>
+
+          <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4'>
+            essential info
+          </h1>
+
+          <iframe
+            src={hotel?.address}
+            scrolling='no'
+            referrerPolicy='no-referrer-when-downgrade'
+            className='w-full h-80'
           />
-        ))}
 
-        <h1 className='pt-6 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl'>
-          hotel overview
-        </h1>
-        <h1 className='pt-6 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl'>
-          the rooms
-        </h1>
-        <h1 className='pt-6 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl'>
-          services and facilities
-        </h1>
-        <h1 className='pt-6 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl'>
-          spa & fitness
-        </h1>
-        <h1 className='pt-6 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl'>
-          food & drinks
-        </h1>
-        <h1 className='pt-6 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl'>
-          conclusion
-        </h1>
+          <div className='flex items-center justify-center gap-4 mt-4 md:mt-6'>
+            {hotel?.web_link && (
+              <Link href={hotel.web_link}>
+                <Link2
+                  size={30}
+                  className='transition text-zinc-700 hover:text-black'
+                />
+              </Link>
+            )}
+            {hotel?.instagram_link && (
+              <Link href={hotel.instagram_link}>
+                <Instagram
+                  size={30}
+                  className='transition text-zinc-700 hover:text-black'
+                />
+              </Link>
+            )}
+          </div>
+        </div>
       </Container>
     </div>
   )
