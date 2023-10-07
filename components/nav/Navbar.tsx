@@ -16,12 +16,14 @@ const Navbar = () => {
   const pathname = usePathname()
 
   const black = pathname === '/'
+  const studio = pathname.includes('/studio')
 
   return (
     <nav
       className={cn(
-        'fixed top-0 z-50 w-full py-5',
-        black ? 'bg-black/40' : 'bg-white/60 backdrop-blur-lg'
+        'z-50 w-full py-5',
+        black ? 'bg-black/40' : 'bg-white/60 backdrop-blur-lg',
+        studio ? 'block' : 'fixed top-0'
       )}
     >
       <Container>
