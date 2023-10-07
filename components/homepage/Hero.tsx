@@ -18,14 +18,14 @@ const Hero = () => {
         transition={{ delay: 0.3, duration: 0.5 }}
         className={`${montserrat.className} font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl 
                       drop-shadow-lg text-stroke text-white hero-shadow absolute left-1/2 top-1/2 translate-x-[-50%]
-                      translate-y-[-100%] z-10 pointer-events-none`}
+                      translate-y-[-100%] z-10 pointer-events-none select-none`}
       >
         PLANETOPEDIA
       </motion.h1>
       <p
         className={`${caramel.className} text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 
                       text-gold drop-shadow-sm  absolute left-1/2 top-1/2 translate-x-[-50%]
-                      translate-y-[-25%] z-10 pointer-events-none whitespace-nowrap`}
+                      translate-y-[-25%] z-10 pointer-events-none whitespace-nowrap select-none`}
       >
         <TypeAnimation
           sequence={[700, 'More than an agency']}
