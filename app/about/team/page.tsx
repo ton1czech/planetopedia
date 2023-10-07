@@ -1,8 +1,13 @@
+'use client'
+
 import Container from '@/components/Container'
 import Member from '@/components/team/Member'
+import { useLanguage } from '@/store/useLanguage'
 import { Instagram, Link, Linkedin } from 'lucide-react'
 
 export default function Team() {
+  const { language } = useLanguage(state => state)
+
   return (
     <div className='bg-white'>
       <Container className='grid gap-20 pt-24 pb-20 md:pt-32 md:pb-32 md:grid-cols-2 xl:grid-cols-3 md:gap-16'>
@@ -21,6 +26,7 @@ export default function Team() {
               href: 'https://www.linkedin.com/in/dominik-gr%C3%B6ssl/',
             },
           ]}
+          index={1}
         />
         <Member
           src='/team/fabian-dagostin.webp'
@@ -37,6 +43,7 @@ export default function Team() {
               href: 'https://www.linkedin.com/in/fabiandagostin/',
             },
           ]}
+          index={2}
         />
         <Member
           src='/team/adam-vaughan.webp'
@@ -54,6 +61,7 @@ export default function Team() {
             },
           ]}
           imagetop
+          index={3}
         />
         <Member
           src='/team/felipe-prieto.webp'
@@ -72,6 +80,7 @@ I am grateful for everything that photography has brought into my life so far, a
               href: 'https://www.felipeprietofineart.com/',
             },
           ]}
+          index={1}
         />
         <Member
           src='/team/francesco-de-franco.webp'
@@ -84,6 +93,7 @@ I am grateful for everything that photography has brought into my life so far, a
               href: 'https://www.instagram.com/ergodyne/',
             },
           ]}
+          index={2}
         />
         <Member
           src='/team/drew-peden.webp'
@@ -100,6 +110,7 @@ I am grateful for everything that photography has brought into my life so far, a
               href: 'https://www.linkedin.com/in/drew-peden-438a62172/',
             },
           ]}
+          index={3}
         />
       </Container>
     </div>
