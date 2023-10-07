@@ -9,10 +9,13 @@ import Link from 'next/link'
 import ExpandableNavItem from './ExpandableNavItem'
 import { cn } from '@/lib/utils'
 import { useRouter, usePathname } from 'next/navigation'
+import { useLanguage } from '@/store/useLanguage'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 const Navbar = () => {
+  const { language } = useLanguage(state => state)
+
   const pathname = usePathname()
 
   const black = pathname === '/'
@@ -51,39 +54,47 @@ const Navbar = () => {
                 label='Blog'
                 links={[
                   {
-                    label: 'Luxury Hotels',
+                    label:
+                      language === 'en' ? 'Luxury Hotels' : 'Luxusní Hotely',
                     href: '/blog/hotels',
                   },
                   {
-                    label: 'Luxury Restaurants',
+                    label:
+                      language === 'en'
+                        ? 'Luxury Restaurant'
+                        : 'Luxusní Restaurace',
                     href: '/blog/restaurants',
                   },
                 ]}
                 black={black}
               />
               <ExpandableNavItem
-                label='About'
+                label={language === 'en' ? 'About' : 'O nás'}
                 links={[
                   {
-                    label: 'Team',
+                    label: language === 'en' ? 'Team' : 'Tým',
                     href: '/about/team',
                   },
                   {
-                    label: 'Company',
+                    label: language === 'en' ? 'Company' : 'Společnost',
                     href: '/about/company',
                   },
                   {
-                    label: 'Clients',
+                    label: language === 'en' ? 'Clients' : 'Klienti',
                     href: '/about/clients',
                   },
                   {
-                    label: 'Feedback',
+                    label: language === 'en' ? 'Feedback' : 'Zpětná Vazba',
                     href: '/about/feedback',
                   },
                 ]}
                 black={black}
               />
-              <NavItem label='Services' href='/services' black={black} />
+              <NavItem
+                label={language === 'en' ? 'Services' : 'Služby'}
+                href='/services'
+                black={black}
+              />
             </ul>
           </div>
 
