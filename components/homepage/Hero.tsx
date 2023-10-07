@@ -5,11 +5,13 @@ import Container from '@/components/Container'
 import { Montserrat, Caramel } from 'next/font/google'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/store/useLanguage'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 const caramel = Caramel({ subsets: ['latin'], weight: '400' })
 
 const Hero = () => {
+  const { language } = useLanguage(state => state)
   return (
     <Container className='h-screen w-screen grid place-items-end z-[99999] bg-black'>
       <motion.h1
@@ -27,11 +29,20 @@ const Hero = () => {
                       text-gold drop-shadow-sm  absolute left-1/2 top-1/2 translate-x-[-50%]
                       translate-y-[-25%] z-10 pointer-events-none whitespace-nowrap select-none`}
       >
-        <TypeAnimation
-          sequence={[700, 'More than an agency']}
-          speed={15}
-          cursor={false}
-        />
+        {language === 'en' && (
+          <TypeAnimation
+            sequence={[700, 'More than an agency']}
+            speed={15}
+            cursor={false}
+          />
+        )}
+        {language === 'cs' && (
+          <TypeAnimation
+            sequence={[700, 'Více než agentura']}
+            speed={15}
+            cursor={false}
+          />
+        )}
       </p>
 
       <Earth />
