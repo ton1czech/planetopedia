@@ -3,17 +3,24 @@
 import CountUp from 'react-countup'
 import { motion } from 'framer-motion'
 import { useLanguage } from '@/store/useLanguage'
+import { cn } from '@/lib/utils'
 
 interface ItemProps {
   num: number
   text: string
   millions?: boolean
   delay?: number
+  margin?: boolean
 }
 
-const Item = ({ num, text, millions, delay }: ItemProps) => {
+const Item = ({ num, text, millions, delay, margin }: ItemProps) => {
   return (
-    <div className='text-white rounded-md'>
+    <div
+      className={cn(
+        'text-white rounded-md',
+        margin && 'ml-0 lg:ml-2 xl:ml-8 2xl:ml-10'
+      )}
+    >
       <CountUp
         start={0}
         end={num}
@@ -23,7 +30,9 @@ const Item = ({ num, text, millions, delay }: ItemProps) => {
         separator=' '
         decimal=','
         suffix={millions ? 'M+' : '+'}
-        className='relative text-2xl font-bold md:text-3xl before:absolute before:-left-5 before:top-0 before:w-px before:h-full before:bg-yellow-600/40'
+        className={
+          'relative text-2xl font-bold md:text-3xl before:absolute before:-left-5 before:top-0 before:w-px before:h-full before:bg-yellow-600/40'
+        }
         enableScrollSpy
         scrollSpyOnce
         delay={delay}
@@ -60,8 +69,9 @@ const About = () => {
       />
       <Item
         num={250}
-        text={language === 'en' ? 'Creators Worldwide' : 'Celosvětových Tvůrců'}
+        text={language === 'en' ? 'Creators Worldwide' : 'Tvůrců Celosvětově'}
         delay={2.6}
+        margin
       />
     </motion.div>
   )

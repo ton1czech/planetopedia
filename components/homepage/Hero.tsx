@@ -31,7 +31,8 @@ const Hero = () => {
                       text-gold drop-shadow-sm  absolute left-1/2 top-1/2 translate-x-[-50%]
                       translate-y-[-25%] z-10 pointer-events-none whitespace-nowrap select-none`}
       >
-        More than an agency
+        {language === 'en' && <>More than an agency</>}
+        {language === 'cs' && <>Více než jen agentura</>}
       </motion.p>
 
       <Earth />

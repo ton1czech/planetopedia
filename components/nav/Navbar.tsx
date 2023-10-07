@@ -50,6 +50,11 @@ const Navbar = () => {
                 black ? 'text-white' : 'text-black'
               )}
             >
+              <NavItem
+                label={language === 'en' ? 'Our Creators' : 'Naši Tvůrci'}
+                href='/creators'
+                black={black}
+              />
               <ExpandableNavItem
                 label='Blog'
                 links={[
@@ -69,7 +74,7 @@ const Navbar = () => {
                 black={black}
               />
               <ExpandableNavItem
-                label={language === 'en' ? 'About' : 'O nás'}
+                label={language === 'en' ? 'About' : 'O Nás'}
                 links={[
                   {
                     label: language === 'en' ? 'Team' : 'Tým',
