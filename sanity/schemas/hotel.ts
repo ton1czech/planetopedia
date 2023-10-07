@@ -11,6 +11,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'order',
+      title: 'Order',
+      type: 'number',
+    }),
+    defineField({
       name: 'location_en',
       title: 'Location 🇬🇧',
       type: 'string',
