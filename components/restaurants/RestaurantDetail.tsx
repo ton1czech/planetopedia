@@ -133,7 +133,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
             ))}
           </div>
 
-          {(restaurant?.conclusion_en || restaurant?.conclusin_cz) && (
+          {(restaurant?.conclusion_en || restaurant?.conclusion_cz) && (
             <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4'>
               conclusion
             </h1>

@@ -57,13 +57,13 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                 alt='intro image'
                 width={900}
                 height={400}
-                className='rounded-lg shadow-xl'
+                className='mb-6 rounded-lg shadow-xl md:mb-10'
               />
             ))}
           </div>
 
           {(hotel?.overview_en || hotel?.overview_cz) && (
-            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl'>
+            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl'>
               hotel overview
             </h1>
           )}
@@ -194,7 +194,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
             {hotel?.food_images?.map((image: any) => (
               <Image
                 src={urlForImage(image).url()}
-                alt='fitness image'
+                alt='food image'
                 width={900}
                 height={400}
                 className='rounded-lg shadow-xl'
@@ -203,21 +203,21 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
           </div>
 
           <div className='grid gap-8 md:grid-cols-2'>
-            {hotel?.labeled_images?.map((image: any) => (
+            {hotel?.labeled_images?.map((item: any) => (
               <div>
                 <Image
-                  src={urlForImage(image).url()}
-                  alt='fitness image'
+                  src={urlForImage(item.image).url()}
+                  alt='food image'
                   width={900}
                   height={400}
                   className='rounded-lg shadow-xl'
                 />
-                <p>{image.alt}</p>
+                <p className='mt-1 text-center text-zinc-800'>{item.alt}</p>
               </div>
             ))}
           </div>
 
-          {(hotel?.conclusion_en || hotel?.conclusin_cz) && (
+          {(hotel?.conclusion_en || hotel?.conclusion_cz) && (
             <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4'>
               conclusion
             </h1>
