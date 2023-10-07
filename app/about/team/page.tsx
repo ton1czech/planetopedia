@@ -5,7 +5,7 @@ import { Instagram, Link, Linkedin } from 'lucide-react'
 export default function Team() {
   return (
     <div className='bg-white'>
-      <Container className='grid md:grid-cols-2 xl:grid-cols-3 gap-20 md:gap-16 pt-32'>
+      <Container className='grid gap-20 pt-24 pb-20 md:pt-32 md:pb-32 md:grid-cols-2 xl:grid-cols-3 md:gap-16'>
         <Member
           src='/team/dominik-grossl.webp'
           name='Dominik Grössl'
