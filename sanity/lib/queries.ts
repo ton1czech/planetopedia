@@ -3,7 +3,7 @@ import { groq } from 'next-sanity'
 export const HotelsQuery = groq`
     *[_type=='hotel'] {
         ...,
-    } | order(order asc)
+    } | order(order desc)
 `
 
 export const HotelsPathsQuery = groq`*[_type == "hotel" && defined(slug.current)][]{
@@ -19,7 +19,7 @@ export const HotelQuery = groq`*[_type == "hotel" && slug.current == $slug][0]{
 export const RestaurantsQuery = groq`
     *[_type=='restaurant'] {
         ...,
-    } | order(order asc)
+    } | order(order desc)
 `
 
 export const RestaurantsPathsQuery = groq`*[_type == "restaurant" && defined(slug.current)][]{
