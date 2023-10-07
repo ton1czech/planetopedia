@@ -4,8 +4,8 @@ import Container from '@/components/Container'
 import WorkWith from '@/components/WorkWith'
 import Paragraph from '@/components/company/Paragraph'
 import { ScrollContext } from '@/utils/scroll-observer'
-import Image from 'next/image'
 import { useContext, useRef } from 'react'
+import { motion } from 'framer-motion'
 
 const opacityForBlock = (sectionProgress: number, blockNo: number) => {
   const progress = sectionProgress - blockNo
@@ -60,11 +60,19 @@ export default function Company() {
     <div className='pt-24 pb-20 bg-white md:pb-32 md:pt-32'>
       <Container>
         <div className='grid justify-center'>
-          <h2 className='mb-3 text-4xl font-semibold text-center md:mb-12 lg:mb-6 md:text-5xl lg:text-6xl'>
+          <motion.h2
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.7 }}
+            className='mb-3 text-4xl font-semibold text-center md:mb-12 lg:mb-6 md:text-5xl lg:text-6xl'
+          >
             Our story
-          </h2>
+          </motion.h2>
 
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
             ref={refContainer}
             className='max-w-3xl mb-16 space-y-6 text-lg text-justify md:mb-40'
           >
@@ -77,7 +85,7 @@ export default function Company() {
                 pageNum={index}
               />
             ))}
-          </div>
+          </motion.div>
         </div>
 
         <WorkWith />
