@@ -59,7 +59,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                 alt='intro image'
                 width={900}
                 height={400}
-                className='mb-6 rounded-lg shadow-xl md:mb-10'
+                className='mb-6 md:mb-10'
               />
             ))}
           </div>
@@ -87,13 +87,13 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                 alt='overview image'
                 width={900}
                 height={400}
-                className='rounded-lg shadow-xl'
+                className='mb-6 md:pb-10'
               />
             ))}
           </div>
 
           {(hotel?.rooms_en || hotel?.rooms_cz) && (
-            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
               the rooms
             </h1>
           )}
@@ -115,13 +115,13 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                 alt='rooms image'
                 width={900}
                 height={400}
-                className='rounded-lg shadow-xl'
+                className='pb-6 md:pb-10'
               />
             ))}
           </div>
 
           {(hotel?.services_en || hotel?.services_cz) && (
-            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
               services and facilities
             </h1>
           )}
@@ -143,13 +143,13 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                 alt='services image'
                 width={900}
                 height={400}
-                className='rounded-lg shadow-xl'
+                className='pb-6 md:pb-10'
               />
             ))}
           </div>
 
           {(hotel?.fitness_en || hotel?.fitness_cz) && (
-            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
               spa & fitness
             </h1>
           )}
@@ -171,13 +171,13 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                 alt='fitness image'
                 width={900}
                 height={400}
-                className='rounded-lg shadow-xl'
+                className='pb-6 md:pb-10'
               />
             ))}
           </div>
 
           {(hotel?.food_en || hotel?.food_cz) && (
-            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
               food & drinks
             </h1>
           )}
@@ -199,20 +199,19 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                 alt='food image'
                 width={900}
                 height={400}
-                className='rounded-lg shadow-xl'
+                className='pb-2 md:pb-4'
               />
             ))}
           </div>
 
           <div className='grid gap-8 md:grid-cols-2'>
             {hotel?.labeled_images?.map((item: any) => (
-              <div>
+              <div className='pb-6 md:pb-10'>
                 <Image
                   src={urlForImage(item.image).url()}
                   alt='food image'
                   width={900}
                   height={400}
-                  className='rounded-lg shadow-xl'
                 />
                 <p className='mt-1 text-center text-zinc-800'>{item.alt}</p>
               </div>
@@ -220,7 +219,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
           </div>
 
           {(hotel?.conclusion_en || hotel?.conclusion_cz) && (
-            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
               conclusion
             </h1>
           )}
@@ -248,12 +247,12 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                 alt='fitness image'
                 width={900}
                 height={400}
-                className='rounded-lg shadow-xl'
+                className='pb-6 md:pb-10'
               />
             ))}
           </div>
 
-          <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+          <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
             essential info
           </h1>
 

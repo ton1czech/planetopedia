@@ -63,7 +63,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                 alt='intro image'
                 width={900}
                 height={400}
-                className='mb-6 rounded-lg shadow-xl md:mb-10'
+                className='mb-6 md:mb-10'
               />
             ))}
           </div>
@@ -97,13 +97,13 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                 alt='intro image'
                 width={900}
                 height={400}
-                className='rounded-lg shadow-xl'
+                className='pb-6 md:pb-10'
               />
             ))}
           </div>
 
           {(restaurant?.menu_en || restaurant?.menu_cz) && (
-            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl font-cantarell'>
+            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl font-cantarell'>
               menu & food
             </h1>
           )}
@@ -120,13 +120,12 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
 
           <div className='grid gap-8 md:grid-cols-2'>
             {restaurant?.menu_images?.map((item: any) => (
-              <div>
+              <div className='pb-6 md:pb-10'>
                 <Image
                   src={urlForImage(item.image).url()}
                   alt='food image'
                   width={900}
                   height={400}
-                  className='rounded-lg shadow-xl'
                 />
                 <p className='mt-1 text-center text-zinc-800'>{item.alt}</p>
               </div>
@@ -134,7 +133,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
           </div>
 
           {(restaurant?.conclusion_en || restaurant?.conclusion_cz) && (
-            <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
               conclusion
             </h1>
           )}
@@ -162,12 +161,12 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                 alt='fitness image'
                 width={900}
                 height={400}
-                className='rounded-lg shadow-xl'
+                className='pb-6 md:pb-10'
               />
             ))}
           </div>
 
-          <h1 className='pt-6 pb-2 text-2xl font-bold uppercase md:pt-10 md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+          <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
             essential info
           </h1>
 

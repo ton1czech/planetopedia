@@ -35,12 +35,12 @@ const Member = ({
       viewport={{ once: true }}
       transition={{ duration: 0.7, delay: index * 0.5 }}
     >
-      <div className='relative w-full aspect-square rounded-3xl'>
+      <div className='relative w-full aspect-square'>
         <Image
           src={src}
           fill
           className={cn(
-            'object-cover rounded-3xl',
+            'object-cover',
             imagetop ? 'object-top' : 'object-center'
           )}
           alt={name}

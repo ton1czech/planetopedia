@@ -34,7 +34,7 @@ const Navbar = () => {
           <Link
             href='/'
             className={cn(
-              'text-xl md:text-2xl font-black',
+              'text-lg md:text-xl font-black',
               black ? 'text-white' : 'text-black',
               montserrat.className
             )}
