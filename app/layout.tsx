@@ -18,12 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`${hind.className} overflow-x-hidden bg-black`}>
-        <ScrollObserver>
+      <ScrollObserver>
+        <body className={`${hind.className} overflow-x-hidden bg-black`}>
           <Navbar />
           {children}
-        </ScrollObserver>
-      </body>
+        </body>
+      </ScrollObserver>
     </html>
   )
 }
