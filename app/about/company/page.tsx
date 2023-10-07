@@ -46,7 +46,7 @@ export default function Company() {
   if (elContainer) {
     const { clientHeight, offsetTop } = elContainer
     const screenH = window.innerHeight
-    const halfH = screenH / 2
+    const halfH = screenH / 2 - 200
     const percentY =
       Math.min(
         clientHeight + halfH,
@@ -63,15 +63,6 @@ export default function Company() {
           <h2 className='mb-3 text-4xl font-semibold text-center md:mb-12 lg:mb-6 md:text-5xl lg:text-6xl'>
             Our story
           </h2>
-
-          <div className='relative w-full h-[400px] rounded-xl mb-8 lg:mb-16'>
-            <Image
-              src='/company/hero.webp'
-              alt='hero'
-              fill
-              className='object-cover rounded-xl'
-            />
-          </div>
 
           <div
             ref={refContainer}
