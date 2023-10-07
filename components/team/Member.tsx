@@ -46,10 +46,10 @@ const Member = ({
           alt={name}
         />
       </div>
-      <h2 className='pt-4 text-4xl font-bold sm:text-5xl md:text-4xl lg:text-5xl drop-shadow-lg font-cantarell'>
+      <h2 className='pt-4 text-2xl font-semibold sm:text-3xl md:text-2xl lg:text-3xl drop-shadow-lg font-cantarell'>
         {name}
       </h2>
-      <h5 className='pb-3 text-xl italic text-gold md:text-2xl md:pb-5 drop-shadow-md font-cantarell'>
+      <h5 className='pb-3 text-xl italic text-zinc-500 md:pb-5 drop-shadow-md font-cantarell'>
         {role}
       </h5>
       <p className='text-justify md:text-lg'>{body}</p>
