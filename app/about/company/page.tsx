@@ -6,6 +6,7 @@ import Paragraph from '@/components/company/Paragraph'
 import { ScrollContext } from '@/utils/scroll-observer'
 import { useContext, useRef } from 'react'
 import { motion } from 'framer-motion'
+import useMediaQuery from '@/hooks/useMediaQuery'
 
 const opacityForBlock = (sectionProgress: number, blockNo: number) => {
   const progress = sectionProgress - blockNo
@@ -36,6 +37,7 @@ const paragraphs = [
 ]
 
 export default function Company() {
+  const isMobile = useMediaQuery('(max-width: 450px)')
   const { scrollY } = useContext(ScrollContext)
   const refContainer = useRef<HTMLDivElement>(null)
 
@@ -46,7 +48,7 @@ export default function Company() {
   if (elContainer) {
     const { clientHeight, offsetTop } = elContainer
     const screenH = window.innerHeight
-    const halfH = screenH / 2 - 200
+    const halfH = screenH / 2 - (isMobile ? 100 : 278)
     const percentY =
       Math.min(
         clientHeight + halfH,
