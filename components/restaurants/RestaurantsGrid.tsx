@@ -19,7 +19,7 @@ const RestaurantsGrid = ({ restaurants }: RestaurantsGridProps) => {
               locationCz={restaurant.location_cz}
               locationEn={restaurant.location_en}
               minutes={restaurant.minutes}
-              src={urlForImage(restaurant.image).url()}
+              src={urlForImage(restaurant.image).url() || ''}
               href={restaurant.slug.current}
             />
           ))}

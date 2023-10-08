@@ -19,7 +19,7 @@ const HotelsGrid = ({ hotels }: HotelsGridProps) => {
               locationCz={hotel.location_cz}
               locationEn={hotel.location_en}
               minutes={hotel.minutes}
-              src={urlForImage(hotel.image).url()}
+              src={urlForImage(hotel.image).url() || ''}
               href={hotel.slug.current}
             />
           ))}
