@@ -16,10 +16,7 @@ interface ItemProps {
 const Item = ({ num, text, millions, delay, margin }: ItemProps) => {
   return (
     <div
-      className={cn(
-        'text-white rounded-md',
-        margin && 'ml-0 lg:ml-6 xl:ml-7 2xl:ml-9'
-      )}
+      className={cn('text-white rounded-md', margin && 'ml-0 lg:ml-6 xl:ml-7')}
     >
       <CountUp
         start={0}
@@ -31,13 +28,15 @@ const Item = ({ num, text, millions, delay, margin }: ItemProps) => {
         decimal=','
         suffix={millions ? 'M+' : '+'}
         className={
-          'relative text-2xl font-bold md:text-3xl before:absolute before:-left-5 before:top-0 before:w-px before:h-full before:bg-yellow-600/40'
+          'relative font-bold sm:text-2xl md:text-3xl before:absolute before:-left-5 before:top-0 before:w-px before:h-full before:bg-yellow-600/40'
         }
         enableScrollSpy
         scrollSpyOnce
         delay={delay}
       />
-      <p className='text-gold whitespace-nowrap'>{text}</p>
+      <p className='text-[9px] md:text-sm lg:text-base text-gold whitespace-nowrap'>
+        {text}
+      </p>
     </div>
   )
 }
@@ -50,7 +49,7 @@ const About = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.8, duration: 0.5 }}
-      className='grid gap-12 lg:grid-cols-3 absolute left-1/2 -bottom-32 lg:bottom-14 translate-x-[-50%] z-10 bg-black/70 lg:bg-transparent pl-8 pr-2 py-2 lg:p-0 rounded-sm'
+      className='grid w-full lg:w-auto gap-1 md:gap-4 lg:gap-12 grid-cols-3 absolute ml-8 lg:ml-0 left-1/2 bottom-14 translate-x-[-50%] z-10 bg-black/70 lg:bg-transparent lg:p-0 rounded-sm'
     >
       <Item
         num={45}

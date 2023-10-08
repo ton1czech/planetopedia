@@ -7,7 +7,7 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 import useMediaQuery from '@/hooks/useMediaQuery'
 
 const EarthModel = () => {
-  const earth = useGLTF('3d/earth2/scene.gltf')
+  const earth = useGLTF('3d/earth/scene.gltf')
 
   return (
     <mesh>
