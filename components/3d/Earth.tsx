@@ -38,9 +38,9 @@ export default function Earth() {
         fov: 45,
         near: 3,
         far: 200,
-        position: [isMobile ? -35 : -20, 3, 6],
+        position: [isMobile ? -40 : -20, 3, 6],
       }}
-      className='!w-[200vh] !h-screen !opacity-90 !absolute !top-0 !right-0 md:!-right-[40vw]'
+      className='!w-[100vw] md:!w-[200vh] !h-screen !opacity-90 !absolute !top-0 !right-0 md:!-right-[43vw]'
     >
       <Suspense fallback={<Loader />}>
         <OrbitControls

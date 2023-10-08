@@ -18,7 +18,7 @@ const Item = ({ num, text, millions, delay, margin }: ItemProps) => {
     <div
       className={cn(
         'text-white rounded-md',
-        margin && 'ml-0 lg:ml-2 xl:ml-8 2xl:ml-10'
+        margin && 'ml-0 lg:ml-6 xl:ml-7 2xl:ml-9'
       )}
     >
       <CountUp
@@ -50,7 +50,7 @@ const About = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.8, duration: 0.5 }}
-      className='grid gap-12 pb-10 md:pt-10 lg:grid-cols-3 absolute left-1/2 -bottom-60 lg:bottom-4 translate-x-[-50%] z-10'
+      className='grid gap-12 lg:grid-cols-3 absolute left-1/2 -bottom-32 lg:bottom-14 translate-x-[-50%] z-10 bg-black/70 lg:bg-transparent pl-8 pr-2 py-2 lg:p-0 rounded-sm'
     >
       <Item
         num={45}
