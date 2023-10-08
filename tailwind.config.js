@@ -15,10 +15,6 @@ module.exports = {
         '2xl': '1400px',
       },
     },
-    fontFamily: {
-      cantarell: ['Cantarell', 'ui-sans-serif'],
-      manrope: ['Manrope', 'ui-sans-serif'],
-    },
     extend: {
       colors: {
         border: 'hsl(var(--border))',

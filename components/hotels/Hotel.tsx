@@ -24,7 +24,7 @@ const Hotel = ({
   const { language } = useLanguage(state => state)
 
   return (
-    <Link href={`/blog/hotels/${href}`} className='group font-cantarell'>
+    <Link href={`/blog/hotels/${href}`} className='group'>
       {src && (
         <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl'>
           <Image

@@ -24,7 +24,7 @@ const Restaurant = ({
   const { language } = useLanguage(state => state)
 
   return (
-    <Link href={`/blog/restaurants/${href}`} className='group font-cantarell'>
+    <Link href={`/blog/restaurants/${href}`} className='group'>
       {src && (
         <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl'>
           <Image

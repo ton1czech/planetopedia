@@ -50,7 +50,7 @@ const WorkWith = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div className='font-cantarell'>
+    <div>
       <div className='mb-12'>
         <h2 className='mb-2 text-xl font-thin md:text-2xl lg:text-3xl text-zinc-600'>
           {language === 'en' && <>Who we work with</>}

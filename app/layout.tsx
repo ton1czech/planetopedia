@@ -1,11 +1,9 @@
 import Navbar from '@/components/nav/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Hind, Cantarell, Manrope } from 'next/font/google'
+import { Manrope } from 'next/font/google'
 import ScrollObserver from '@/utils/scroll-observer'
 
-const hind = Hind({ subsets: ['latin'], weight: '400' })
-const cantarell = Cantarell({ subsets: ['latin'], weight: '400' })
 const manrope = Manrope({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {

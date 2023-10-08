@@ -19,7 +19,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
   return (
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
       <Container className='relative'>
-        <div className='fixed flex-col hidden w-full -translate-y-1/2 top-1/2 xl:flex font-cantarell'>
+        <div className='fixed flex-col hidden w-full -translate-y-1/2 top-1/2 xl:flex'>
           <h1 className='text-2xl font-bold'>{hotel?.name}</h1>
           {language === 'en' && <p>{hotel.location_en}</p>}
           {language === 'cs' && <p>{hotel.location_cz}</p>}
@@ -44,10 +44,8 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
         </div>
 
         <div className='grid px-3 mx-auto place-content-center md:max-w-screen-md 2xl:max-w-screen-md'>
-          <div className='xl:hidden font-cantarell'>
-            <h1 className='text-2xl font-bold md:text-3xl font-cantarell'>
-              {hotel?.name}
-            </h1>
+          <div className='xl:hidden'>
+            <h1 className='text-2xl font-bold md:text-3xl'>{hotel?.name}</h1>
             {language === 'en' && <p className='mb-2'>{hotel.location_en}</p>}
             {language === 'cs' && <p className='mb-2'>{hotel.location_cz}</p>}
           </div>
@@ -66,7 +64,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
           {(hotel?.overview_en || hotel?.overview_cz) && (
             <>
-              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                 hotel overview
               </h1>
               {language === 'en' && (
@@ -101,7 +99,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
           {(hotel?.rooms_en || hotel?.rooms_cz) && (
             <>
-              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                 the rooms
               </h1>
               {language === 'en' && (
@@ -131,7 +129,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
           {(hotel?.services_en || hotel?.services_cz) && (
             <>
-              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                 services and facilities
               </h1>
               {language === 'en' && (
@@ -167,7 +165,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
           {(hotel?.fitness_en || hotel?.fitness_cz) && (
             <>
-              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                 spa & fitness
               </h1>
               {language === 'en' && (
@@ -202,7 +200,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
           {(hotel?.food_en || hotel?.food_cz) && (
             <>
-              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                 food & drinks
               </h1>
               {language === 'en' && (
@@ -246,7 +244,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
           {(hotel?.conclusion_en || hotel?.conclusion_cz) && (
             <>
-              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                 conclusion
               </h1>
               {language === 'en' && (
@@ -280,7 +278,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
             </>
           )}
 
-          <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4 font-cantarell'>
+          <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
             essential info
           </h1>
 
