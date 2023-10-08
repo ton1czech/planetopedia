@@ -25,14 +25,16 @@ const Hotel = ({
 
   return (
     <Link href={`/blog/hotels/${href}`} className='group font-cantarell'>
-      <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl'>
-        <Image
-          src={src}
-          fill
-          alt={name}
-          className='object-cover transition duration-500 group-hover:scale-110'
-        />
-      </div>
+      {src && (
+        <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl'>
+          <Image
+            src={src}
+            fill
+            alt={name}
+            className='object-cover transition duration-500 group-hover:scale-110'
+          />
+        </div>
+      )}
       {language === 'en' && (
         <p className='text-center text-zinc-700'>{locationEn}</p>
       )}
