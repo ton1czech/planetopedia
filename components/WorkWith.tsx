@@ -1,6 +1,7 @@
 'use client'
 
 import { useLanguage } from '@/store/useLanguage'
+import { Langar } from 'next/font/google'
 import Image from 'next/image'
 
 const logos = [
@@ -158,6 +159,37 @@ const logos = [
   },
 ]
 
+const czlogos = [
+  {
+    src: '/logos/farmahajek.webp',
+    label: '',
+  },
+  {
+    src: '/logos/grundstein.webp',
+    label: '',
+  },
+  {
+    src: '/logos/colorzeman.webp',
+    label: '',
+  },
+  {
+    src: '/logos/lumicoffee.webp',
+    label: '',
+  },
+  {
+    src: '/logos/niceface.webp',
+    label: '',
+  },
+  {
+    src: '/logos/homehpstav.webp',
+    label: '',
+  },
+  {
+    src: '/logos/rozmluvse.webp',
+    label: '',
+  },
+]
+
 const WorkWith = () => {
   const { language } = useLanguage(state => state)
 
@@ -197,8 +229,33 @@ const WorkWith = () => {
         </div>
       </div>
 
-      <div className='grid items-center justify-center w-full grid-cols-2 gap-14 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6'>
+      <div className='grid items-center justify-center w-full grid-cols-3 gap-14 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6'>
         {logos.map(({ src, label }) => (
+          <div className='grid place-content-center'>
+            <Image
+              src={src}
+              alt={label}
+              width={100}
+              height={50}
+              className='w-full'
+            />
+          </div>
+        ))}
+      </div>
+
+      <div className='mt-10 mb-8 md:mt-20'>
+        <div className='w-full h-px bg-zinc-400' />
+        <p className='mt-2 text-lg md:text-xl text-zinc-600'>
+          {language === 'en' ? (
+            <>Clients in the Czech republic</>
+          ) : (
+            <>Klienti v České republice</>
+          )}
+        </p>
+      </div>
+
+      <div className='grid items-center justify-center w-full grid-cols-3 gap-14 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6'>
+        {czlogos.map(({ src, label }) => (
           <div className='grid place-content-center'>
             <Image
               src={src}

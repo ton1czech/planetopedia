@@ -43,7 +43,7 @@ export default function Company() {
           <motion.h2
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.3 }}
             className='mb-3 text-4xl font-semibold text-center md:mb-12 lg:mb-6 md:text-5xl lg:text-6xl'
           >
             {language === 'en' ? <>Our story</> : <>Náš příběh</>}
@@ -52,7 +52,7 @@ export default function Company() {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.3 }}
             className='max-w-3xl mb-16 space-y-6 text-lg text-justify md:mb-40'
           >
             {paragraphs.map((paragraph, index) => (

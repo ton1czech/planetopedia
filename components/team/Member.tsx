@@ -33,7 +33,7 @@ const Member = ({
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.7, delay: index * 0.5 }}
+      transition={{ duration: 0.3, delay: index * 0.5 }}
     >
       <div className='relative w-full aspect-square'>
         <Image
