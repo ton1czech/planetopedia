@@ -31,3 +31,9 @@ export const RestaurantQuery = groq`*[_type == "restaurant" && slug.current == $
     ...
   }
 `
+
+export const CreatorsQuery = groq`
+    *[_type=='creator'] {
+        ...,
+    } | order(name asc)
+`
