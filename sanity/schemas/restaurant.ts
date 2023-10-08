@@ -40,6 +40,14 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'banner',
+      title: 'Banner',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',
