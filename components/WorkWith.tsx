@@ -1,3 +1,6 @@
+'use client'
+
+import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
 
 const logos = [
@@ -44,20 +47,40 @@ const logos = [
 ]
 
 const WorkWith = () => {
+  const { language } = useLanguage(state => state)
+
   return (
     <div className='font-cantarell'>
       <div className='mb-12'>
-        <h2 className='mb-2 text-xl font-thin md:text-2xl lg:text-3xl text-zinc-500'>
-          Who we work with
+        <h2 className='mb-2 text-xl font-thin md:text-2xl lg:text-3xl text-zinc-600'>
+          {language === 'en' && <>Who we work with</>}
+          {language === 'cs' && <>S kým spolupracujeme</>}
         </h2>
         <div className='grid gap-6 md:grid-cols-2 md:gap-12'>
           <p className='text-2xl font-semibold text-justify md:text-3xl lg:text-4xl'>
-            We are here for people who want to stay connected.
+            {language === 'en' && (
+              <>We are here for people who want to stay connected.</>
+            )}
+            {language === 'cs' && (
+              <>Jsme zde pro lidi, kteří chtějí zůstat ve spojení</>
+            )}
           </p>
           <p className='text-lg'>
-            From the biggest hotel companies to brands and world-inspiring
-            marketing agencies, our clients have the same thing in common: big
-            challenges that require a fresh & different approach.
+            {language === 'en' && (
+              <>
+                From the biggest hotel companies to brands and world-inspiring
+                marketing agencies, our clients have the same thing in common:
+                big challenges that require a fresh & different approach.
+              </>
+            )}
+            {language === 'cs' && (
+              <>
+                Od největších hotelových společností až po značky a světově
+                inspirativní marketingových agentur, mají naši klienti společné
+                to, že jsou velcí velké výzvy, které vyžadují nový a odlišný
+                přístup.
+              </>
+            )}
           </p>
         </div>
       </div>

@@ -1,11 +1,12 @@
 import Navbar from '@/components/nav/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Hind, Cantarell } from 'next/font/google'
+import { Hind, Cantarell, Manrope } from 'next/font/google'
 import ScrollObserver from '@/utils/scroll-observer'
 
 const hind = Hind({ subsets: ['latin'], weight: '400' })
 const cantarell = Cantarell({ subsets: ['latin'], weight: '400' })
+const manrope = Manrope({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
   title: 'Planetopedia | More than an agency',
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <ScrollObserver>
-        <body className={`overflow-x-hidden bg-black font-serif`}>
+        <body className={`${manrope.className} overflow-x-hidden bg-black`}>
           <Navbar />
           {children}
         </body>

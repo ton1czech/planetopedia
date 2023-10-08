@@ -17,6 +17,7 @@ module.exports = {
     },
     fontFamily: {
       cantarell: ['Cantarell', 'ui-sans-serif'],
+      manrope: ['Manrope', 'ui-sans-serif'],
     },
     extend: {
       colors: {
