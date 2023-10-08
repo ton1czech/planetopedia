@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
 import ScrollObserver from '@/utils/scroll-observer'
+import Footer from '@/components/footer/Footer'
 
 const manrope = Manrope({ subsets: ['latin'], weight: '400' })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <body className={`${manrope.className} overflow-x-hidden bg-black`}>
           <Navbar />
           {children}
+          <Footer />
         </body>
       </ScrollObserver>
     </html>
