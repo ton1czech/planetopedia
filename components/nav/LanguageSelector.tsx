@@ -41,17 +41,17 @@ const LanguageSelector = ({ black }: LanguageSelectorProps) => {
           role='combobox'
           aria-expanded={open}
           className={cn(
-            'w-[70px] justify-between bg-transparent border-none hover:bg-zinc-100/20',
+            'w-[70px] justify-between bg-transparent border-none',
             black
-              ? 'text-white hover:text-white'
-              : 'text-black hover:text-black'
+              ? 'text-white hover:text-white hover:bg-zinc-100/10'
+              : 'text-black hover:text-black hover:bg-zinc-800/10'
           )}
         >
           <Image src={imgSrc(language)} width={30} height={30} alt={language} />
           <ChevronsUpDown className='w-4 h-4 ml-2 opacity-50 shrink-0' />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className='w-[100px] p-2 z-[1112] bg-black/20 backdrop-blur-lg border-white/30'>
+      <PopoverContent className='w-[100px] p-2 z-[1112] bg-white backdrop-blur-lg border-zinc-500/40'>
         <Command className='!bg-transparent'>
           <CommandGroup className='space-y-2'>
             {languages.map(({ src, value }: { src: string; value: string }) => (
@@ -61,11 +61,11 @@ const LanguageSelector = ({ black }: LanguageSelectorProps) => {
                   setLanguage(value)
                   setOpen(false)
                 }}
-                className='mb-2 !bg-transparent cursor-pointer hover:!bg-zinc-300/20'
+                className='mb-2 !bg-transparent cursor-pointer hover:!bg-zinc-400/20'
               >
                 <Check
                   className={cn(
-                    'mr-2 h-4 w-4 text-white',
+                    'mr-2 h-4 w-4 text-black',
                     language === value ? 'opacity-100' : 'opacity-0'
                   )}
                 />

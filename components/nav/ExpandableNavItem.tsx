@@ -28,25 +28,22 @@ const ExpandableNavItem = ({ label, links, black }: ExpandableNavItemProps) => {
     >
       <p
         className={cn(
-          'cursor-pointer flex gap-2 text-lg',
-          black ? 'text-white' : 'text-black'
+          'cursor-pointer flex gap-2 transition',
+          black
+            ? 'text-white hover:text-zinc-400'
+            : 'text-black hover:text-zinc-600'
         )}
       >
         {label}
         <ChevronDown size={20} />
       </p>
       {isOpen && (
-        <div
-          className={cn(
-            'grid absolute top-6 left-1/2 translate-x-[-50%] h-max p-4 rounded-md gap-2 border border-zinc-300',
-            black ? 'bg-white' : 'bg-white'
-          )}
-        >
+        <div className='grid absolute top-6 left-1/2 translate-x-[-50%] h-max p-4 rounded-md gap-2 border border-zinc-300 bg-white'>
           {links.map(link => (
             <Link
               key={link.href}
               href={link.href}
-              className='text-black hover:underline whitespace-nowrap'
+              className='text-black hover:text-zinc-600 whitespace-nowrap'
             >
               {link.label}
             </Link>

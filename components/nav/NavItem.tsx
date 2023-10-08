@@ -13,8 +13,10 @@ const NavItem = ({ label, href, black }: NavItemProps) => {
       <Link
         href={href}
         className={cn(
-          'text-lg hover:underline hover:underline-offset-4',
-          black ? 'text-white' : 'text-black'
+          'transition',
+          black
+            ? 'text-white hover:text-zinc-400'
+            : 'text-black hover:text-zinc-600'
         )}
       >
         {label}
