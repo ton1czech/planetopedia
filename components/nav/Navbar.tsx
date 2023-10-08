@@ -95,9 +95,22 @@ const Navbar = () => {
                 ]}
                 black={black}
               />
-              <NavItem
+              <ExpandableNavItem
                 label={language === 'en' ? 'Services' : 'Služby'}
-                href='/services'
+                links={[
+                  {
+                    label: language === 'en' ? 'For Creators' : 'Pro Tvůrce',
+                    href: '/services/creators',
+                  },
+                  {
+                    label: language === 'en' ? 'For Hotels' : 'Pro Hotely',
+                    href: '/services/hotels',
+                  },
+                  {
+                    label: language === 'en' ? 'For Brands' : 'Pro Značky',
+                    href: '/services/brands',
+                  },
+                ]}
                 black={black}
               />
             </ul>
