@@ -13,7 +13,7 @@ const RestaurantsGrid = ({ restaurants }: RestaurantsGridProps) => {
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
       <div className='max-w-5xl mx-auto'>
         <Container className='grid gap-6 md:grid-cols-2 md:gap-12'>
-          {restaurants.map((restaurant: any) => (
+          {/* {restaurants.map((restaurant: any) => (
             <Restaurant
               name={restaurant.name}
               locationCz={restaurant.location_cz}
@@ -22,7 +22,7 @@ const RestaurantsGrid = ({ restaurants }: RestaurantsGridProps) => {
               src={urlForImage(restaurant.image).url() || ''}
               href={restaurant.slug.current}
             />
-          ))}
+          ))} */}
         </Container>
       </div>
     </div>
