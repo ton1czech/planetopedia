@@ -5,7 +5,7 @@ const Loader = () => {
 
   return (
     <Html>
-      <p className='text-xl text-light'>{progress.toFixed(2)}%</p>
+      <p className='opacity-0'>{progress.toFixed(2)}%</p>
     </Html>
   )
 }
