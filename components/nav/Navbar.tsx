@@ -100,15 +100,15 @@ const Navbar = () => {
                 links={[
                   {
                     label: language === 'en' ? 'For Creators' : 'Pro Tvůrce',
-                    href: '/services/creators',
+                    href: '/services/for-creators',
                   },
                   {
                     label: language === 'en' ? 'For Hotels' : 'Pro Hotely',
-                    href: '/services/hotels',
+                    href: '/services/for-hotels',
                   },
                   {
                     label: language === 'en' ? 'For Brands' : 'Pro Značky',
-                    href: '/services/brands',
+                    href: '/services/for-brands',
                   },
                 ]}
                 black={black}
