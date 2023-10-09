@@ -2,7 +2,7 @@ import Container from '../Container'
 
 const Hero = () => {
   return (
-    <div className='sticky top-0 h-[90vh] w-screen lg:h-screen'>
+    <div className='w-screen h-[90vh] lg:h-screen'>
       <video
         muted
         autoPlay
