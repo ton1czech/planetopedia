@@ -16,7 +16,10 @@ interface ItemProps {
 const Item = ({ num, text, millions, delay, margin }: ItemProps) => {
   return (
     <div
-      className={cn('text-white rounded-md', margin && 'ml-0 lg:ml-6 xl:ml-7')}
+      className={cn(
+        'text-white rounded-md'
+        // margin && 'ml-0 lg:ml-6 xl:ml-7'
+      )}
     >
       <CountUp
         start={0}
@@ -34,7 +37,7 @@ const Item = ({ num, text, millions, delay, margin }: ItemProps) => {
         scrollSpyOnce
         delay={delay}
       />
-      <p className='text-[9px] md:text-sm lg:text-base text-gold whitespace-nowrap'>
+      <p className='text-[9px] sm:text-sm md:text-base text-gold whitespace-nowrap'>
         {text}
       </p>
     </div>
@@ -49,7 +52,7 @@ const About = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.8, duration: 0.5 }}
-      className='grid w-full lg:w-auto gap-1 md:gap-4 lg:gap-12 grid-cols-3 absolute ml-8 lg:ml-0 left-1/2 bottom-14 translate-x-[-50%] z-10 bg-black/70 lg:bg-transparent lg:p-0 rounded-sm'
+      className='absolute flex ml-2 -translate-x-1/2 rounded-sm gap-9 md:gap-12 lg:gap-16 left-1/2 bottom-14 bg-black/70 lg:bg-transparent'
     >
       <Item
         num={45}
