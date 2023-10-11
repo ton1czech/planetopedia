@@ -15,7 +15,7 @@ const HotelsGrid = ({ hotels }: HotelsGridProps) => {
 
   const [query, setQuery] = useState<string>('')
 
-  const getFilteredHotels = (query: string, items: {}[]) => {
+  const getFilteredHotels = (query: string) => {
     if (!query) return hotels
 
     return hotels.filter(
@@ -27,7 +27,7 @@ const HotelsGrid = ({ hotels }: HotelsGridProps) => {
     )
   }
 
-  const filteredHotels = getFilteredHotels(query, hotels)
+  const filteredHotels = getFilteredHotels(query)
 
   return (
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
