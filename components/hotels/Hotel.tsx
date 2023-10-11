@@ -1,49 +1,40 @@
 'use client'
 
+import { urlForImage } from '@/sanity/lib/image'
 import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
 import Link from 'next/link'
 
 interface HotelProps {
-  src: any
-  name: string
-  locationCz: string
-  locationEn: string
-  minutes: number
-  href: string
+  hotel: any
 }
 
-const Hotel = ({
-  src,
-  name,
-  locationCz,
-  locationEn,
-  minutes,
-  href,
-}: HotelProps) => {
+const Hotel = ({ hotel }: HotelProps) => {
   const { language } = useLanguage(state => state)
 
   return (
-    <Link href={`/blog/hotels/${href}`} className='group'>
-      {src && (
+    <Link href={`/blog/hotels/${hotel.href}`} className='group'>
+      {hotel.image && (
         <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl'>
           <Image
-            src={src}
+            src={urlForImage(hotel.image).url()}
             fill
-            alt={name}
+            alt={hotel.name}
             className='object-cover transition duration-500 group-hover:scale-110'
           />
         </div>
       )}
       {language === 'en' && (
-        <p className='text-center text-zinc-700'>{locationEn}</p>
+        <p className='text-center text-zinc-700'>{hotel.location_en}</p>
       )}
       {language === 'cs' && (
-        <p className='text-center text-zinc-700'>{locationCz}</p>
+        <p className='text-center text-zinc-700'>{hotel.location_cz}</p>
       )}
-      <h3 className='text-xl font-medium text-center md:text-xl'>{name}</h3>
+      <h3 className='text-xl font-medium text-center md:text-xl'>
+        {hotel.name}
+      </h3>
       <p className='text-sm text-center text-zinc-600'>
-        {minutes}
+        {hotel.minutes}
         {language === 'en' && <> minutes read</>}
         {language === 'cs' && <> minuty čtení</>}
       </p>
