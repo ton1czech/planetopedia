@@ -40,7 +40,7 @@ const MobileExpandableNavItem = ({
         <Icon size={20} />
       </p>
       {isOpen && (
-        <div className='z-40 grid absolute top-9 left-1/2 translate-x-[-50%] h-min p-4 rounded-md gap-2 border border-zinc-300 bg-white'>
+        <div className='z-40 flex flex-col absolute top-9 left-1/2 translate-x-[-50%] h-min p-4 rounded-md gap-2 border border-zinc-300 bg-white'>
           {links.map(link => (
             <Link
               key={link.href}
