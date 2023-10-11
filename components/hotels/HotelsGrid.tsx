@@ -5,9 +5,9 @@ import Container from '../Container'
 import Hotel from './Hotel'
 import { Input } from '../ui/input'
 import { useLanguage } from '@/store/useLanguage'
-import Map from './Map'
+import Map from '../Map'
 import { Label } from '../ui/label'
-import { locations } from '@/database/locations'
+import { locations } from '@/database/hotelLocations'
 
 interface HotelsGridProps {
   hotels: any
