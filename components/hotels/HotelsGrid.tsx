@@ -5,6 +5,9 @@ import Container from '../Container'
 import Hotel from './Hotel'
 import { Input } from '../ui/input'
 import { useLanguage } from '@/store/useLanguage'
+import Map from './Map'
+import { Label } from '../ui/label'
+import { locations } from '@/database/locations'
 
 interface HotelsGridProps {
   hotels: any
@@ -33,12 +36,23 @@ const HotelsGrid = ({ hotels }: HotelsGridProps) => {
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
       <div className='max-w-5xl mx-auto'>
         <Container>
+          <div className='mb-5 md:mb-10'>
+            <Map locations={locations} />
+          </div>
+
+          <Label className='text-lg md:text-xl lg:text-2xl'>
+            {language === 'en' ? (
+              <>Search for hotels or locations</>
+            ) : (
+              <>Hledej hotely nebo lokace</>
+            )}
+          </Label>
           <Input
             type='text'
             placeholder={
               language === 'en'
-                ? 'Search for hotels or locations'
-                : 'Hledej hotely nebo lokace'
+                ? 'ritz-carlton, switzerland...'
+                : 'ritz-carlton, švýcarsko...'
             }
             onChange={e => setQuery(e.target.value)}
             className='bg-zinc-200 p-1 border border-zinc-300/40 w-full mb-5 md:mb-10'
