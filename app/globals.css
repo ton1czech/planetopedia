@@ -121,3 +121,11 @@
   scrollbar-width: thin;
   scrollbar-color: #888 #f1f1f1;
 }
+
+.services-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.95) 35%,
+    transparent
+  );
+}
