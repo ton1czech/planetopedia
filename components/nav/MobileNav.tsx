@@ -37,9 +37,12 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
         black ? 'bg-black' : 'bg-white'
       )}
     >
-      <ul
+      <motion.ul
+        initial={{ y: 50, opacity: 0, x: '-50%' }}
+        animate={{ y: 0, opacity: 1, x: '-50%' }}
+        transition={{ delay: 0.5 }}
         className={cn(
-          'flex flex-col gap-2 absolute left-1/2 top-40 -translate-x-1/2',
+          'flex flex-col gap-2 absolute left-1/2 top-60 -translate-x-1/2',
           black ? 'text-white' : 'text-black'
         )}
       >
@@ -107,8 +110,13 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
           black={black}
           setIsOpen={setIsOpen}
         />
-      </ul>
-      <div className='flex gap-5 items-center absolute left-1/2 bottom-56 -translate-x-1/2'>
+      </motion.ul>
+      <motion.div
+        initial={{ opacity: 0, y: 50, x: '-50%' }}
+        animate={{ opacity: 1, y: 0, x: '-50%' }}
+        transition={{ duration: 0.4, delay: 0.7 }}
+        className='flex gap-5 items-center absolute left-1/2 bottom-56 -translate-x-1/2'
+      >
         <Instagram
           className={cn('', black ? 'text-white' : 'text-black')}
           size={30}
@@ -121,7 +129,7 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
           className={cn('', black ? 'text-white' : 'text-black')}
           size={30}
         />
-      </div>
+      </motion.div>
     </motion.div>
   )
 }

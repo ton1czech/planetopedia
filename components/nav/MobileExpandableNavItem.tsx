@@ -1,10 +1,9 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { motion } from 'framer-motion'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface MobileExpandableNavItemProps {
   label: string
@@ -23,8 +22,23 @@ const MobileExpandableNavItem = ({
   setIsOpen: setIsMenuOpen,
 }: MobileExpandableNavItemProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
+  const ref = useRef<HTMLDivElement>(null)
 
   const Icon = isOpen ? ChevronUp : ChevronDown
+
+  useEffect(() => {
+    const handleOutsideClick = (event: any) => {
+      if (isOpen && ref.current && !ref?.current?.contains(event.target)) {
+        setIsOpen(false)
+      }
+    }
+
+    document.addEventListener('click', handleOutsideClick)
+
+    return () => {
+      document.removeEventListener('click', handleOutsideClick)
+    }
+  }, [isOpen])
 
   return (
     <div onClick={() => setIsOpen(prev => !prev)} className='relative'>
@@ -40,7 +54,10 @@ const MobileExpandableNavItem = ({
         <Icon size={20} />
       </p>
       {isOpen && (
-        <div className='z-40 flex flex-col absolute top-9 left-1/2 translate-x-[-50%] h-min p-4 rounded-md gap-2 border border-zinc-300 bg-white'>
+        <div
+          ref={ref}
+          className='z-40 flex flex-col absolute top-9 left-1/2 translate-x-[-50%] h-min p-4 rounded-md gap-2 border border-zinc-300 bg-white'
+        >
           {links.map(link => (
             <Link
               key={link.href}
