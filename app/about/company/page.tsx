@@ -64,7 +64,7 @@ export default function Company() {
           </motion.div>
         </div>
 
-        <WorkWith />
+        <WorkWith isCompanyPage />
       </Container>
     </div>
   )
