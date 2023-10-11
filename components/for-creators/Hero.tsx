@@ -2,12 +2,30 @@
 
 import { useLanguage } from '@/store/useLanguage'
 import Container from '../Container'
+import { useContext, useRef } from 'react'
+import { ScrollContext } from '@/utils/scroll-observer'
 
 const Hero = () => {
   const { language } = useLanguage(state => state)
 
+  const refContainer = useRef<HTMLDivElement>(null)
+  const { scrollY } = useContext(ScrollContext)
+
+  let progress = 0
+
+  const { current: elContainer } = refContainer
+  if (elContainer) {
+    progress = Math.min(1, scrollY / elContainer.clientHeight)
+  }
+
   return (
-    <div className='w-screen h-[90vh] lg:h-screen'>
+    <div
+      className='w-screen sticky top-0 h-screen -z-10'
+      ref={refContainer}
+      style={{
+        transform: `translateY(-${progress * 20}vh)`,
+      }}
+    >
       <video
         muted
         autoPlay
