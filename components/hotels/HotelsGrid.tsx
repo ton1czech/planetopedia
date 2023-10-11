@@ -5,9 +5,10 @@ import Container from '../Container'
 import Hotel from './Hotel'
 import { Input } from '../ui/input'
 import { useLanguage } from '@/store/useLanguage'
-import Map from '../Map'
 import { Label } from '../ui/label'
 import { locations } from '@/database/hotelLocations'
+import dynamic from 'next/dynamic'
+const Map = dynamic(() => import('@/components/Map'), { ssr: false })
 
 interface HotelsGridProps {
   hotels: any

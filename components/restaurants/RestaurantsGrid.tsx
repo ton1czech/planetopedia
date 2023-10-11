@@ -5,9 +5,10 @@ import Container from '../Container'
 import { Input } from '../ui/input'
 import Restaurant from './Restaurant'
 import { useLanguage } from '@/store/useLanguage'
-import Map from '../Map'
 import { locations } from '@/database/restaurantLocations'
 import { Label } from '../ui/label'
+import dynamic from 'next/dynamic'
+const Map = dynamic(() => import('@/components/Map'), { ssr: false })
 
 interface RestaurantsGridProps {
   restaurants: any
