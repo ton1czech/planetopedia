@@ -58,11 +58,21 @@ const HotelsGrid = ({ hotels }: HotelsGridProps) => {
             className='bg-zinc-200 p-1 border border-zinc-300/40 w-full mb-5 md:mb-10'
           />
 
-          <div className='grid w-full gap-6 md:grid-cols-2 md:gap-12'>
-            {filteredHotels.map((hotel: any) => (
-              <Hotel hotel={hotel} />
-            ))}
-          </div>
+          {filteredHotels.length === 0 ? (
+            <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center'>
+              {language === 'en' ? (
+                <>No hotels found</>
+              ) : (
+                <>Žádný hotel nenalezen</>
+              )}
+            </h1>
+          ) : (
+            <div className='grid w-full gap-6 md:grid-cols-2 md:gap-12'>
+              {filteredHotels.map((hotel: any) => (
+                <Hotel hotel={hotel} />
+              ))}
+            </div>
+          )}
         </Container>
       </div>
     </div>

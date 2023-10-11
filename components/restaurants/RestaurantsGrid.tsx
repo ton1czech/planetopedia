@@ -58,11 +58,21 @@ const RestaurantsGrid = ({ restaurants }: RestaurantsGridProps) => {
             className='bg-zinc-200 p-1 border border-zinc-300/40 w-full mb-5 md:mb-10'
           />
 
-          <div className='grid gap-6 md:grid-cols-2 md:gap-12'>
-            {filteredRestaurants.map((restaurant: any) => (
-              <Restaurant restaurant={restaurant} />
-            ))}
-          </div>
+          {filteredRestaurants.length === 0 ? (
+            <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center'>
+              {language === 'en' ? (
+                <>No restaurants found</>
+              ) : (
+                <>Žádná restaurace nenalezena</>
+              )}
+            </h1>
+          ) : (
+            <div className='grid gap-6 md:grid-cols-2 md:gap-12'>
+              {filteredRestaurants.map((restaurant: any) => (
+                <Restaurant restaurant={restaurant} />
+              ))}
+            </div>
+          )}
         </Container>
       </div>
     </div>
