@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@/lib/utils'
 import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
 
@@ -266,7 +267,13 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
         </div>
       )}
 
-      <div className='grid items-center justify-center w-full grid-cols-3 gap-14 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6'>
+      <div
+        className={cn(
+          'grid items-center justify-center w-full grid-cols-3 gap-14 md:grid-cols-4 lg:grid-cols-4',
+          !isCompanyPage && 'xl:grid-cols-5 2xl:grid-cols-6',
+          isCompanyPage && 'max-w-3xl mx-auto'
+        )}
+      >
         {logos.map(({ src, label }) => (
           <div className='grid place-content-center'>
             <Image
@@ -280,7 +287,12 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
         ))}
       </div>
 
-      <div className='mt-10 mb-8 md:mt-20'>
+      <div
+        className={cn(
+          'mt-10 mb-8 md:mt-20',
+          isCompanyPage && 'max-w-3xl mx-auto'
+        )}
+      >
         <div className='w-full h-px bg-zinc-400' />
         <p className='mt-2 text-lg md:text-xl text-zinc-600'>
           {language === 'en' ? (
@@ -291,7 +303,13 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
         </p>
       </div>
 
-      <div className='grid items-center justify-center w-full grid-cols-3 gap-14 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6'>
+      <div
+        className={cn(
+          'grid items-center justify-center w-full grid-cols-3 gap-14 md:grid-cols-4 lg:grid-cols-4',
+          !isCompanyPage && 'xl:grid-cols-5 2xl:grid-cols-6',
+          isCompanyPage && 'max-w-3xl mx-auto'
+        )}
+      >
         {czlogos.map(({ src, label }) => (
           <div className='grid place-content-center'>
             <Image
