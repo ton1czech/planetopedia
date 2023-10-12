@@ -33,13 +33,13 @@ const Hero = () => {
         playsInline
         className='absolute inset-0 object-cover object-center w-full h-full'
       >
-        <source src='https://i.imgur.com/GHscp8C.mp4' />
+        <source src='https://i.imgur.com/LcNeI4p.mp4' />
       </video>
 
       <div className='absolute inset-0 w-full h-full pt-24 md:pt-32 services-gradient'>
         <Container className='grid items-center h-full'>
           <h1 className='text-2xl md:text-5xl font-bold uppercase'>
-            {language === 'en' ? <>For Creators</> : <>Pro Tvůrce</>}
+            {language === 'en' ? <>For Hotels</> : <>Pro Hotely</>}
           </h1>
         </Container>
       </div>
