@@ -13,7 +13,7 @@ const Hotel = ({ hotel }: HotelProps) => {
   const { language } = useLanguage(state => state)
 
   return (
-    <Link href={`/blog/hotels/${hotel.slug}`} className='group'>
+    <Link href={`/blog/hotels/${hotel.slug.current}`} className='group'>
       {hotel.image && (
         <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl'>
           <Image
