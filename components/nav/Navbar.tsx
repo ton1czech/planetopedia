@@ -32,7 +32,7 @@ const Navbar = () => {
     <>
       <nav
         className={cn(
-          'z-[9999] w-full h-20  py-5',
+          'z-[999] w-full h-20  py-5',
           black ? 'bg-black/40' : 'bg-white/60 backdrop-blur-lg',
           studio ? 'block' : 'fixed top-0'
         )}
