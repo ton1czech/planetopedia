@@ -5,7 +5,6 @@ import Container from '../Container'
 import Hotel from './Hotel'
 import { Input } from '../ui/input'
 import { useLanguage } from '@/store/useLanguage'
-import { Label } from '../ui/label'
 import { locations } from '@/database/hotelLocations'
 import dynamic from 'next/dynamic'
 const Map = dynamic(() => import('@/components/Map'), { ssr: false })
@@ -34,27 +33,17 @@ const HotelsGrid = ({ hotels }: HotelsGridProps) => {
   const filteredHotels = getFilteredHotels(query)
 
   return (
-    <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
+    <div className='bg-white pb-20 md:pb-32'>
+      <div className='mb-5 md:mb-10 relative'>
+        <Map locations={locations} />
+        <div className='absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-white from-75% z-[999] pointer-events-none' />
+        <div />
+      </div>
       <div className='max-w-5xl mx-auto'>
         <Container>
-          <div className='mb-5 md:mb-10'>
-            <Map locations={locations} />
-          </div>
-
-          <Label className='text-lg md:text-xl lg:text-2xl'>
-            {language === 'en' ? (
-              <>Search for hotels or locations</>
-            ) : (
-              <>Hledej hotely nebo lokace</>
-            )}
-          </Label>
           <Input
             type='text'
-            placeholder={
-              language === 'en'
-                ? 'ritz-carlton, switzerland...'
-                : 'ritz-carlton, švýcarsko...'
-            }
+            placeholder='🔎 Search...'
             onChange={e => setQuery(e.target.value)}
             className='bg-zinc-200 p-1 border border-zinc-300/40 w-full mb-5 md:mb-10'
           />

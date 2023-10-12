@@ -34,27 +34,17 @@ const RestaurantsGrid = ({ restaurants }: RestaurantsGridProps) => {
   const filteredRestaurants = getFilteredRestaurants(query)
 
   return (
-    <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
+    <div className='pb-20 bg-white md:pb-32'>
+      <div className='mb-5 md:mb-10 relative'>
+        <Map locations={locations} />
+        <div className='absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-white from-75% z-[999] pointer-events-none' />
+        <div />
+      </div>
       <div className='max-w-5xl mx-auto'>
         <Container>
-          <div className='mb-5 md:mb-10'>
-            <Map locations={locations} />
-          </div>
-
-          <Label className='text-lg md:text-xl lg:text-2xl'>
-            {language === 'en' ? (
-              <>Search for restaurants or locations</>
-            ) : (
-              <>Hledej restaurace nebo lokace</>
-            )}
-          </Label>
           <Input
             type='text'
-            placeholder={
-              language === 'en'
-                ? "L'ATELIER DE JOEL ROBUCHON, france"
-                : "L'ATELIER DE JOEL ROBUCHON, francie"
-            }
+            placeholder='🔎 Search...'
             onChange={e => setQuery(e.target.value)}
             className='bg-zinc-200 p-1 border border-zinc-300/40 w-full mb-5 md:mb-10'
           />

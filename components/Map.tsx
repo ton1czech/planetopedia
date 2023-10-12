@@ -6,7 +6,6 @@ import 'leaflet/dist/leaflet.css'
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
 import markerIcon from 'leaflet/dist/images/marker-icon.png'
 import markerShadow from 'leaflet/dist/images/marker-shadow.png'
-import { FullscreenControl } from 'react-leaflet-fullscreen'
 import 'react-leaflet-fullscreen/styles.css'
 
 // @ts-ignore
@@ -41,10 +40,10 @@ const Map = ({ locations }: MapProps) => {
       zoom={isDesktop ? 6 : 4}
       scrollWheelZoom={false}
       className='rounded-lg h-[300px] md:h-[500px] relative'
+      zoomControl={false}
+      attributionControl={false}
     >
       <TileLayer url='https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png' />
-      <div className='absolute inset-0 w-full h-full z-[400] map-overlay' />
-      <FullscreenControl />
 
       {locations.map(location => (
         <Marker

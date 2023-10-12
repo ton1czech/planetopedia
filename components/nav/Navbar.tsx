@@ -10,7 +10,7 @@ import ExpandableNavItem from './ExpandableNavItem'
 import { cn } from '@/lib/utils'
 import { usePathname } from 'next/navigation'
 import { useLanguage } from '@/store/useLanguage'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import MobileNav from './MobileNav'
 import { AnimatePresence } from 'framer-motion'
 
@@ -20,21 +20,36 @@ const Navbar = () => {
   const { language } = useLanguage(state => state)
 
   const [isOpen, setIsOpen] = useState(false)
+  const [isTopOfPage, setIsTopOfPage] = useState(false)
 
   const pathname = usePathname()
 
   const black = pathname === '/'
   const studio = pathname.includes('/studio')
+  const blog = pathname === '/blog/hotels' || '/blog/hotels'
 
   const Icon = isOpen ? X : Menu
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsTopOfPage(true)
+      }
+      if (window.scrollY !== 0) setIsTopOfPage(false)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <>
       <nav
         className={cn(
-          'z-[999] w-full h-20  py-5',
+          'z-[1000] w-full h-20  py-5 transition duration-500',
           black ? 'bg-black/40' : 'bg-white/60 backdrop-blur-lg',
-          studio ? 'block' : 'fixed top-0'
+          studio ? 'block' : 'fixed top-0',
+          blog && isTopOfPage && '!bg-transparent !backdrop-blur-none'
         )}
       >
         <Container>
