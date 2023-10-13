@@ -48,7 +48,11 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
           {(restaurant?.overview_en || restaurant?.overview_cz) && (
             <>
               <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl'>
-                restaurant overview
+                {language === 'en' ? (
+                  <>restaurant overview</>
+                ) : (
+                  <>přehled restaurace</>
+                )}
               </h1>
               {language === 'en' && (
                 <div className='pb-6 md:pb-10'>
@@ -85,7 +89,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
           {(restaurant?.menu_en || restaurant?.menu_cz) && (
             <>
               <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl'>
-                menu & food
+                {language === 'en' ? <>menu & food</> : <>jídelníček a jídlo</>}
               </h1>
               {language === 'en' && (
                 <div className='pb-6 md:pb-10'>
@@ -124,7 +128,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
           {(restaurant?.conclusion_en || restaurant?.conclusion_cz) && (
             <>
               <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
-                conclusion
+                {language === 'en' ? <>conclusion</> : <>závěr</>}
               </h1>
               {language === 'en' && (
                 <div className='pb-6 md:pb-10'>
@@ -159,7 +163,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
           )}
 
           <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
-            essential info
+            {language === 'en' ? <>essential info</> : <>nezbytné informace</>}
           </h1>
 
           <iframe
