@@ -29,6 +29,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
           <div>
             {hotel?.intro_images?.map((image: any) => (
               <Image
+                key={image}
                 src={urlForImage(image).url()}
                 alt='intro image'
                 width={900}
@@ -62,6 +63,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
               <div>
                 {hotel?.overview_images?.map((image: any) => (
                   <Image
+                    key={image}
                     src={urlForImage(image).url()}
                     alt='overview image'
                     width={900}
@@ -92,6 +94,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
               <div>
                 {hotel?.rooms_images?.map((image: any) => (
                   <Image
+                    key={image}
                     src={urlForImage(image).url()}
                     alt='rooms image'
                     width={900}
@@ -128,6 +131,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
               <div>
                 {hotel?.services_images?.map((image: any) => (
                   <Image
+                    key={image}
                     src={urlForImage(image).url()}
                     alt='services image'
                     width={900}
@@ -163,6 +167,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
               <div>
                 {hotel?.fitness_images?.map((image: any) => (
                   <Image
+                    key={image}
                     src={urlForImage(image).url()}
                     alt='fitness image'
                     width={900}
@@ -193,6 +198,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
               <div>
                 {hotel?.food_images?.map((image: any) => (
                   <Image
+                    key={image}
                     src={urlForImage(image).url()}
                     alt='food image'
                     width={900}
@@ -208,6 +214,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
             {hotel?.labeled_images?.map((item: any) => (
               <div className='pb-6 md:pb-10'>
                 <Image
+                  key={item.image}
                   src={urlForImage(item.image).url()}
                   alt='food image'
                   width={900}
@@ -243,6 +250,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
               <div>
                 {hotel?.conclusion_images?.map((image: any) => (
                   <Image
+                    key={image}
                     src={urlForImage(image).url()}
                     alt='fitness image'
                     width={900}

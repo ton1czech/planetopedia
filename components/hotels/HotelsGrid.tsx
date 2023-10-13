@@ -59,7 +59,7 @@ const HotelsGrid = ({ hotels }: HotelsGridProps) => {
           ) : (
             <div className='grid w-full gap-6 md:grid-cols-2 md:gap-12'>
               {filteredHotels.map((hotel: any) => (
-                <Hotel hotel={hotel} />
+                <Hotel key={hotel.slug.current} hotel={hotel} />
               ))}
             </div>
           )}

@@ -35,6 +35,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
           <div>
             {restaurant?.intro_images?.map((image: any) => (
               <Image
+                key={image}
                 src={urlForImage(image).url()}
                 alt='intro image'
                 width={900}
@@ -69,6 +70,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
               <div>
                 {restaurant?.overview_images?.map((image: any) => (
                   <Image
+                    key={image}
                     src={urlForImage(image).url()}
                     alt='intro image'
                     width={900}
@@ -106,6 +108,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                 {restaurant?.menu_images?.map((item: any) => (
                   <div className='pb-6 md:pb-10'>
                     <Image
+                      key={item.image}
                       src={urlForImage(item.image).url()}
                       alt='food image'
                       width={900}
@@ -143,6 +146,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
               <div>
                 {restaurant?.conclusion_images?.map((image: any) => (
                   <Image
+                    key={image}
                     src={urlForImage(image).url()}
                     alt='fitness image'
                     width={900}

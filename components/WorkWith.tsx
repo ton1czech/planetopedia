@@ -275,7 +275,7 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
         )}
       >
         {logos.map(({ src, label }) => (
-          <div className='grid place-content-center'>
+          <div key={src} className='grid place-content-center'>
             <Image
               src={src}
               alt={label}
@@ -311,7 +311,7 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
         )}
       >
         {czlogos.map(({ src, label }) => (
-          <div className='grid place-content-center'>
+          <div key={src} className='grid place-content-center'>
             <Image
               src={src}
               alt={label}

@@ -6,7 +6,6 @@ import { Input } from '../ui/input'
 import Restaurant from './Restaurant'
 import { useLanguage } from '@/store/useLanguage'
 import { locations } from '@/database/restaurantLocations'
-import { Label } from '../ui/label'
 import dynamic from 'next/dynamic'
 const Map = dynamic(() => import('@/components/Map'), { ssr: false })
 
@@ -60,7 +59,10 @@ const RestaurantsGrid = ({ restaurants }: RestaurantsGridProps) => {
           ) : (
             <div className='grid gap-6 md:grid-cols-2 md:gap-12'>
               {filteredRestaurants.map((restaurant: any) => (
-                <Restaurant restaurant={restaurant} />
+                <Restaurant
+                  key={restaurant.slug.current}
+                  restaurant={restaurant}
+                />
               ))}
             </div>
           )}
