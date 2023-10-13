@@ -18,31 +18,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
 
   return (
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
-      <Container className='relative'>
-        <div className='fixed flex-col hidden w-full -translate-y-1/2 top-1/2 xl:flex'>
-          <h1 className='text-2xl font-bold'>{restaurant?.name}</h1>
-          {language === 'en' && <p>{restaurant.location_en}</p>}
-          {language === 'cs' && <p>{restaurant.location_cz}</p>}
-          <div className='flex items-center gap-4 mt-3'>
-            {restaurant?.web_link && (
-              <Link href={restaurant.web_link}>
-                <Link2
-                  size={20}
-                  className='transition text-zinc-700 hover:text-black'
-                />
-              </Link>
-            )}
-            {restaurant?.instagram_link && (
-              <Link href={restaurant.instagram_link}>
-                <Instagram
-                  size={20}
-                  className='transition text-zinc-700 hover:text-black'
-                />
-              </Link>
-            )}
-          </div>
-        </div>
-
+      <Container>
         <div className='grid px-3 mx-auto place-content-center md:max-w-screen-md 2xl:max-w-screen-md'>
           <div className='xl:hidden'>
             <h1 className='text-2xl font-bold md:text-3xl'>
