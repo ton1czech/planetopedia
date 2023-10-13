@@ -18,31 +18,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
   return (
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
-      <Container className='relative'>
-        <div className='fixed flex-col hidden w-full -translate-y-1/2 top-1/2 xl:flex'>
-          <h1 className='text-2xl font-bold'>{hotel?.name}</h1>
-          {language === 'en' && <p>{hotel.location_en}</p>}
-          {language === 'cs' && <p>{hotel.location_cz}</p>}
-          <div className='flex items-center gap-4 mt-3'>
-            {hotel?.web_link && (
-              <Link href={hotel.web_link}>
-                <Link2
-                  size={20}
-                  className='transition text-zinc-700 hover:text-black'
-                />
-              </Link>
-            )}
-            {hotel?.instagram_link && (
-              <Link href={hotel.instagram_link}>
-                <Instagram
-                  size={20}
-                  className='transition text-zinc-700 hover:text-black'
-                />
-              </Link>
-            )}
-          </div>
-        </div>
-
+      <Container>
         <div className='grid px-3 mx-auto place-content-center md:max-w-screen-md 2xl:max-w-screen-md'>
           <div className='xl:hidden'>
             <h1 className='text-2xl font-bold md:text-3xl'>{hotel?.name}</h1>
