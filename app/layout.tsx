@@ -2,7 +2,6 @@ import Navbar from '@/components/nav/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
-import ScrollObserver from '@/utils/scroll-observer'
 import Footer from '@/components/footer/Footer'
 import ToasterProvider from '@/providers/ToasterProvider'
 
@@ -20,14 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <ScrollObserver>
-        <body className={`${manrope.className} overflow-x-hidden bg-black`}>
-          <ToasterProvider />
-          <Navbar />
-          {children}
-          <Footer />
-        </body>
-      </ScrollObserver>
+      <body className={`${manrope.className} overflow-x-hidden bg-black`}>
+        <ToasterProvider />
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
