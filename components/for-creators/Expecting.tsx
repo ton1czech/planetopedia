@@ -47,30 +47,6 @@ const Expecting = () => {
           maxime quas accusamus ex earum quibusdam et ratione molestiae magnam
           nisi eaque?
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
-          veritatis blanditiis saepe voluptatum fuga alias excepturi. Quis vel
-          sed esse, provident voluptatum eligendi officia reiciendis. Ab
-          recusandae hic cupiditate dolor quibusdam nemo culpa aliquid magni
-          laudantium saepe et mollitia totam facere quae iusto error nulla
-          earum, odit quod aperiam reiciendis tempora autem debitis. Hic ad non
-          suscipit neque! Iusto a fuga voluptate quis quia iste dolorem
-          explicabo recusandae provident. Molestiae ad saepe minus sed
-          laboriosam, pariatur eaque distinctio ab tenetur enim nemo consectetur
-          exercitationem magnam recusandae vero facere! Eaque quis ipsam id
-          debitis sint minus ex reprehenderit rem praesentium quae, consectetur
-          accusantium omnis quos iste optio amet corrupti voluptas quasi libero
-          architecto molestias cumque explicabo at molestiae. Distinctio dolor
-          explicabo, magnam perferendis accusantium doloribus sit rem,
-          consequatur ipsum repellendus quam in beatae quae laboriosam, fuga
-          molestiae iusto deleniti labore eius totam tenetur earum. Odio quo
-          officiis reiciendis minima aut neque, id, veritatis architecto rem
-          blanditiis expedita. Ducimus fugit repellat vero consequatur
-          accusantium dignissimos qui sed ipsum id at consectetur quisquam
-          deserunt explicabo, expedita recusandae placeat quia velit rerum. Rem
-          neque beatae et, dolore vitae aperiam eos quas nisi nihil commodi qui
-          sed sit ab doloremque quae. Officiis voluptatum aspernatur delectus.
-        </p>
       </Container>
     </div>
   )
