@@ -7,7 +7,7 @@ const Hero = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div className='sticky top-0 w-screen h-screen -z-10'>
+    <div className='sticky top-0 w-screen h-screen bg-white -z-10'>
       <video
         muted
         autoPlay
@@ -15,7 +15,7 @@ const Hero = () => {
         playsInline
         className='absolute inset-0 object-cover object-center w-full h-full'
       >
-        <source src='https://i.imgur.com/LcNeI4p.mp4' />
+        <source src='/services/for-hotels/hero.mp4' />
       </video>
 
       <div className='absolute inset-0 w-full h-full pt-24 md:pt-32 services-gradient'>

@@ -7,7 +7,7 @@ const Hero = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div className='sticky top-0 w-screen h-screen -z-10'>
+    <div className='sticky top-0 w-screen h-screen bg-white -z-10'>
       <video
         muted
         autoPlay
