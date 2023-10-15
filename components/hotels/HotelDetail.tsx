@@ -210,7 +210,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
             </>
           )}
 
-          <div className='grid gap-8 md:grid-cols-2'>
+          <div className='grid gap-x-2 md:gap-x-4 md:grid-cols-2'>
             {hotel?.labeled_images?.map((item: any) => (
               <div className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'>
                 <Image
@@ -221,7 +221,9 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                   height={400}
                 />
                 {item.alt && (
-                  <p className='mt-1 text-center text-zinc-800'>{item.alt}</p>
+                  <p className='mt-1 mb-2 text-center md:mb-4 text-zinc-800'>
+                    {item.alt}
+                  </p>
                 )}
               </div>
             ))}
