@@ -19,8 +19,8 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
   return (
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
       <Container>
-        <div className='grid px-3 mx-auto place-content-center md:max-w-screen-md 2xl:max-w-screen-md'>
-          <div className='xl:hidden'>
+        <div className='grid mx-auto place-content-center md:max-w-screen-md 2xl:max-w-screen-md'>
+          <div>
             <h1 className='text-2xl font-bold md:text-3xl'>{hotel?.name}</h1>
             {language === 'en' && <p className='mb-2'>{hotel.location_en}</p>}
             {language === 'cs' && <p className='mb-2'>{hotel.location_cz}</p>}
@@ -34,7 +34,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                 alt='intro image'
                 width={900}
                 height={400}
-                className='mb-6 md:mb-10'
+                className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
               />
             ))}
           </div>
@@ -68,7 +68,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                     alt='overview image'
                     width={900}
                     height={400}
-                    className='pb-6 md:pb-10'
+                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
                   />
                 ))}
               </div>
@@ -99,7 +99,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                     alt='rooms image'
                     width={900}
                     height={400}
-                    className='pb-6 md:pb-10'
+                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
                   />
                 ))}
               </div>
@@ -136,7 +136,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                     alt='services image'
                     width={900}
                     height={400}
-                    className='pb-6 md:pb-10'
+                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
                   />
                 ))}
               </div>
@@ -172,7 +172,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                     alt='fitness image'
                     width={900}
                     height={400}
-                    className='pb-6 md:pb-10'
+                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
                   />
                 ))}
               </div>
@@ -203,7 +203,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                     alt='food image'
                     width={900}
                     height={400}
-                    className='pb-6 md:pb-10'
+                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
                   />
                 ))}
               </div>
@@ -212,7 +212,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
           <div className='grid gap-8 md:grid-cols-2'>
             {hotel?.labeled_images?.map((item: any) => (
-              <div className='pb-6 md:pb-10'>
+              <div className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'>
                 <Image
                   key={item.image}
                   src={urlForImage(item.image).url()}
@@ -220,7 +220,9 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                   width={900}
                   height={400}
                 />
-                <p className='mt-1 text-center text-zinc-800'>{item.alt}</p>
+                {item.alt && (
+                  <p className='mt-1 text-center text-zinc-800'>{item.alt}</p>
+                )}
               </div>
             ))}
           </div>
@@ -255,7 +257,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                     alt='fitness image'
                     width={900}
                     height={400}
-                    className='pb-6 md:pb-10'
+                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
                   />
                 ))}
               </div>
@@ -268,7 +270,6 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
           <iframe
             src={hotel?.address}
-            scrolling='no'
             referrerPolicy='no-referrer-when-downgrade'
             className='w-full h-80'
           />
