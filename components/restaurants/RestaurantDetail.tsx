@@ -19,8 +19,8 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
   return (
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
       <Container>
-        <div className='grid px-3 mx-auto place-content-center md:max-w-screen-md 2xl:max-w-screen-md'>
-          <div className='xl:hidden'>
+        <div className='grid mx-auto place-content-center md:max-w-screen-md 2xl:max-w-screen-md'>
+          <div>
             <h1 className='text-2xl font-bold md:text-3xl'>
               {restaurant?.name}
             </h1>
@@ -40,7 +40,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                 alt='intro image'
                 width={900}
                 height={400}
-                className='mb-6 md:mb-10'
+                className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
               />
             ))}
           </div>
@@ -79,7 +79,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                     alt='intro image'
                     width={900}
                     height={400}
-                    className='pb-6 md:pb-10'
+                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
                   />
                 ))}
               </div>
@@ -110,7 +110,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
 
               <div className='grid gap-8 md:grid-cols-2'>
                 {restaurant?.menu_images?.map((item: any) => (
-                  <div className='pb-6 md:pb-10'>
+                  <div className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'>
                     <Image
                       key={item.image}
                       src={urlForImage(item.image).url()}
@@ -155,7 +155,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                     alt='fitness image'
                     width={900}
                     height={400}
-                    className='pb-6 md:pb-10'
+                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
                   />
                 ))}
               </div>
@@ -168,7 +168,6 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
 
           <iframe
             src={restaurant?.address}
-            scrolling='no'
             referrerPolicy='no-referrer-when-downgrade'
             className='w-full h-80'
           />
