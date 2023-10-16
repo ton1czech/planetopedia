@@ -1,1 +1,10 @@
-export const locations = [{ lat: 0, lng: 0 }]
+export const locations = [
+  {
+    lat: 43.776990895894194,
+    lng: 11.26636017791056,
+  },
+  {
+    lat: 48.85660014694249,
+    lng: 2.327391519015035,
+  },
+]

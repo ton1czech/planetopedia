@@ -127,15 +127,12 @@ html {
   scrollbar-color: #888 #f1f1f1;
 }
 
+/* GRADIENT */
+
 .services-gradient {
   background: linear-gradient(
     to right,
     rgba(255, 255, 255, 1) 20%,
     transparent
   );
-}
-
-.emoji-icon {
-  width: 28px;
-  height: 28px;
 }
