@@ -20,9 +20,14 @@ const Hero = () => {
 
       <div className='absolute inset-0 w-full h-full pt-24 md:pt-32 services-gradient'>
         <Container className='grid items-center h-full'>
-          <h1 className='text-2xl font-bold uppercase md:text-5xl'>
-            {language === 'en' ? <>For Creators</> : <>Pro Tvůrce</>}
-          </h1>
+          <div>
+            <h1 className='text-2xl font-bold uppercase md:text-5xl'>
+              Join the Team!
+            </h1>
+            <p className='text-lg md:text-3xl'>
+              Let us take your work seriously
+            </p>
+          </div>
         </Container>
       </div>
     </div>
