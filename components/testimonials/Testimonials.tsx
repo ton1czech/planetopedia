@@ -6,7 +6,7 @@ import Review from './Review'
 const Testimonials: React.FC = () => (
   <Carousel className='text-black'>
     {reviews.map((review, index) => (
-      <CarouselItem index={index}>
+      <CarouselItem index={index} key={index}>
         <Review body={review.body} by={review.by} />
       </CarouselItem>
     ))}
