@@ -18,10 +18,10 @@ const Hero = () => {
         <source src='https://cdn.coverr.co/videos/coverr-sunset-in-bali-4090/1080p.mp4' />
       </video>
 
-      <div className='absolute inset-0 w-full h-full pt-24 md:pt-32 services-gradient'>
-        <Container className='grid items-center h-full'>
-          <div>
-            <h1 className='text-2xl font-bold uppercase md:text-5xl'>
+      <div className='absolute bg-black/20 inset-0 w-full h-full pt-24 md:pt-32'>
+        <Container className='grid items-center justify-center h-full w-full'>
+          <div className='text-white text-center'>
+            <h1 className='text-3xl  font-bold uppercase md:text-5xl lg:text-7xl'>
               Join the Team!
             </h1>
             <p className='text-lg md:text-3xl'>
