@@ -1,11 +1,14 @@
-import { reviews } from '@/database/reviews'
 import Carousel from './Carousel'
 import CarouselItem from './CarouselItem'
 import Review from './Review'
 
-const Testimonials: React.FC = () => (
-  <Carousel className='text-black'>
-    {reviews.map((review, index) => (
+interface TestimonialsProps {
+  data: any
+}
+
+const Testimonials = ({ data }: TestimonialsProps) => (
+  <Carousel className='text-black' autoplay>
+    {data.map((review: any, index: any) => (
       <CarouselItem index={index} key={index}>
         <Review body={review.body} by={review.by} />
       </CarouselItem>

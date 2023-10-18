@@ -14,6 +14,7 @@ interface ContextValue {
 interface CarouselProps {
   className?: string
   children: ReactNode
+  autoplay?: boolean
 }
 
 export const CarouselContext = React.createContext<ContextValue>({
@@ -21,15 +22,22 @@ export const CarouselContext = React.createContext<ContextValue>({
   selectedIndex: -1,
 })
 
-const Carousel: React.FC<CarouselProps> = ({ children, className }) => {
+const Carousel: React.FC<CarouselProps> = ({
+  children,
+  className,
+  autoplay,
+}) => {
   const [selectedIndex, setSelectedIndex] = useState(0)
+
+  const emblaFuncs = autoplay ? [ClassNames(), Autoplay()] : [ClassNames()]
+
   const [viewportRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
       align: 'center',
       skipSnaps: false,
     },
-    [ClassNames(), Autoplay()]
+    emblaFuncs
   )
 
   const onSelect = useCallback(() => {

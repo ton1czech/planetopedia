@@ -1,12 +1,4 @@
-export const reviews = [
-  {
-    body: 'Dominik was a pleasure to work with, very professional and great communication. He has a great eye and delivered beautiful photography and content. Looking forward to working on future opportunities together.',
-    by: 'Kirsty Chan / PR Executive at Shangri-La The Shard, London',
-  },
-  {
-    body: 'Dominik has an eye for detail and is a trustworthy partner who can evaluate objectively. He creates very engaging and inspiring content and I can highly recommend a cooperation with him.',
-    by: 'Lars Kliemann / Director of Sales & Marketing, DO&CO Hotel Munich',
-  },
+export const reviewsCreators = [
   {
     body: 'Dominik approached me to do a story on me as a photographer. I was allowed to choose how the whole story should look. He gave me the chance to review it and listened to my revisions. The magazine is an interesting insight into different photographers',
     by: 'Bryce Sieber / Photographer based in Switzerland',
@@ -16,20 +8,8 @@ export const reviews = [
     by: 'George Venios / Photographer based in Greece',
   },
   {
-    body: 'A big Thank You to Planetopedia for visiting Sheraton Grand Salzburg. Very professional collaborating and the photography is amazing. Inspiring people to work with.',
-    by: 'Stephanie Umland / Marketing & Communications Manager, Sheraton Grand Salzburg',
-  },
-  {
     body: 'Great site and magazine with awesome inspirational content. It features a lot of good photographers with a lot of diversity. Dominik is a professional and great guy to work with.',
     by: 'Øyvind Karlsen / Photographer based in Norway',
-  },
-  {
-    body: 'We hosted Dominik for a press stay and his review and picture about the property was amazing, really well done.',
-    by: 'Serena Caputo / Marketing & Communication Specialist',
-  },
-  {
-    body: 'A professional content creator. We had an excellent collaboration, with great content production.',
-    by: 'PR Senior Supervisor at Metaxa Hospitality Group',
   },
   {
     body: 'The magazine is an interesting insight into different photographers. The collaboration with Planetopedia has been pleasant and I am grateful to be able to join this wonderful group...',
@@ -48,16 +28,8 @@ export const reviews = [
     by: 'Chiara Giordano / Photographer based in Italy',
   },
   {
-    body: 'A professional content creator. We had an excellent collaboration, with great content production.',
-    by: 'Elena Skouletaki / PR Senior Supervisor at Metaxa Hospitality Group',
-  },
-  {
     body: 'Nicely created content and it’s great to be part of a growing community.',
     by: 'Markku Hamari / Photographer based in Finland',
-  },
-  {
-    body: 'Thank you so much Dominik Grössl for the amazing photography and article during your stay at Minos Palace Hotel & Suites and Candia Park Village. Lets hope we will cooperate once again next year...',
-    by: 'Elena Michael / Business Development Manager at bluegr Hotels & Resorts',
   },
   {
     body: 'I must say the format you have introducing content creators and places from around the world is very eye-catching and thrilling to watch.',
@@ -70,5 +42,36 @@ export const reviews = [
   {
     body: 'It is a honor for me to be part of your community. Among the profiles you have indicated to me, I recognized many that I have been following for years, I think it is the right spirit and, seeing the content they create, I think you have chosen really talented creators. I’m ready to be part of it too!',
     by: 'Matteo Milocco / Photographer based in Italy',
+  },
+]
+
+export const reviewsBrands = [
+  {
+    body: 'Dominik was a pleasure to work with, very professional and great communication. He has a great eye and delivered beautiful photography and content. Looking forward to working on future opportunities together.',
+    by: 'Kirsty Chan / PR Executive at Shangri-La The Shard, London',
+  },
+  {
+    body: 'Dominik has an eye for detail and is a trustworthy partner who can evaluate objectively. He creates very engaging and inspiring content and I can highly recommend a cooperation with him.',
+    by: 'Lars Kliemann / Director of Sales & Marketing, DO&CO Hotel Munich',
+  },
+  {
+    body: 'A big Thank You to Planetopedia for visiting Sheraton Grand Salzburg. Very professional collaborating and the photography is amazing. Inspiring people to work with.',
+    by: 'Stephanie Umland / Marketing & Communications Manager, Sheraton Grand Salzburg',
+  },
+  {
+    body: 'We hosted Dominik for a press stay and his review and picture about the property was amazing, really well done.',
+    by: 'Serena Caputo / Marketing & Communication Specialist',
+  },
+  {
+    body: 'A professional content creator. We had an excellent collaboration, with great content production.',
+    by: 'PR Senior Supervisor at Metaxa Hospitality Group',
+  },
+  {
+    body: 'A professional content creator. We had an excellent collaboration, with great content production.',
+    by: 'Elena Skouletaki / PR Senior Supervisor at Metaxa Hospitality Group',
+  },
+  {
+    body: 'Thank you so much Dominik Grössl for the amazing photography and article during your stay at Minos Palace Hotel & Suites and Candia Park Village. Lets hope we will cooperate once again next year...',
+    by: 'Elena Michael / Business Development Manager at bluegr Hotels & Resorts',
   },
 ]
