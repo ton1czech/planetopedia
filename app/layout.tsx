@@ -5,7 +5,10 @@ import { Manrope } from 'next/font/google'
 import Footer from '@/components/footer/Footer'
 import ToasterProvider from '@/providers/ToasterProvider'
 
-const manrope = Manrope({ subsets: ['latin'], weight: '400' })
+const manrope = Manrope({
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700', '800'],
+})
 
 export const metadata: Metadata = {
   title: 'Planetopedia | More than an agency',

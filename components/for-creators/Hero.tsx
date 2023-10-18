@@ -21,10 +21,10 @@ const Hero = () => {
       <div className='absolute bg-black/20 inset-0 w-full h-full'>
         <Container className='grid items-center justify-center h-full w-full'>
           <div className='text-white text-center'>
-            <h1 className='text-3xl font-bold uppercase md:text-5xl lg:text-7xl'>
+            <h1 className='text-3xl font-black uppercase md:text-5xl lg:text-7xl'>
               Join the Team!
             </h1>
-            <p className='text-lg md:text-3xl'>
+            <p className='text-lg md:text-3xl lg:text-4xl tracking-wide'>
               Let us take your work seriously
             </p>
           </div>
