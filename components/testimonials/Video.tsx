@@ -7,18 +7,18 @@ interface VideoProps {
 }
 
 const Video = ({ url }: VideoProps) => {
-  const [isActive, setIsActive] = useState<boolean>(false)
+  const [isPlaying, setIsPlaying] = useState<boolean>(false)
 
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const handleOutsideClick = (event: any) => {
       if (
-        isActive &&
+        isPlaying &&
         videoRef.current &&
         !videoRef?.current?.contains(event.target)
       ) {
-        setIsActive(false)
+        videoRef?.current?.pause()
       }
     }
 
@@ -27,16 +27,14 @@ const Video = ({ url }: VideoProps) => {
     return () => {
       document.removeEventListener('click', handleOutsideClick)
     }
-  }, [isActive])
+  }, [isPlaying])
 
-  const mouseLeave = () => {
-    if (isActive) {
+  const handleClick = () => {
+    setIsPlaying(prev => !prev)
+
+    if (isPlaying) {
       videoRef?.current?.pause()
-    }
-  }
-
-  const mouseEnter = () => {
-    if (isActive) {
+    } else {
       videoRef?.current?.play()
     }
   }
@@ -44,11 +42,8 @@ const Video = ({ url }: VideoProps) => {
   return (
     <video
       ref={videoRef}
-      controls
-      className='w-[300px] md:w-[400px] h-full'
-      onMouseLeave={mouseLeave}
-      onMouseEnter={mouseEnter}
-      onClick={() => setIsActive(true)}
+      className='max-w-[200px] sm:max-w-[300px] md:max-w-[400px] h-full mx-3 md:mx-6'
+      onClick={handleClick}
     >
       <source src={url} />
     </video>
