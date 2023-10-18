@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface VideoProps {
   url: string
@@ -10,6 +10,24 @@ const Video = ({ url }: VideoProps) => {
   const [isActive, setIsActive] = useState<boolean>(false)
 
   const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const handleOutsideClick = (event: any) => {
+      if (
+        isActive &&
+        videoRef.current &&
+        !videoRef?.current?.contains(event.target)
+      ) {
+        setIsActive(false)
+      }
+    }
+
+    document.addEventListener('click', handleOutsideClick)
+
+    return () => {
+      document.removeEventListener('click', handleOutsideClick)
+    }
+  }, [isActive])
 
   const mouseLeave = () => {
     if (isActive) {
