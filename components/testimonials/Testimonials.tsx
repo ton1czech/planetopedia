@@ -3,7 +3,10 @@ import CarouselItem from './CarouselItem'
 import Review from './Review'
 
 interface TestimonialsProps {
-  data: any
+  data: {
+    body: string
+    by: string
+  }[]
 }
 
 const Testimonials = ({ data }: TestimonialsProps) => (

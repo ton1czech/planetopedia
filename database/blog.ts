@@ -1,4 +1,4 @@
-export const locations = [
+export const hotelLocations = [
   {
     lat: 51.51597825184493,
     lng: -0.1200959036812352,
@@ -106,5 +106,16 @@ export const locations = [
   {
     lat: 43.77700009501486,
     lng: 11.26635313128373,
+  },
+]
+
+export const restaurantLocations = [
+  {
+    lat: 43.776990895894194,
+    lng: 11.26636017791056,
+  },
+  {
+    lat: 48.85660014694249,
+    lng: 2.327391519015035,
   },
 ]
