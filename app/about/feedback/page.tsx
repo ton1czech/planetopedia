@@ -3,7 +3,7 @@
 import Container from '@/components/Container'
 import Testimonials from '@/components/testimonials/Testimonials'
 import Videos from '@/components/testimonials/Videos'
-import { reviewsCreators, reviewsBrands } from '@/database/reviews'
+import { reviewsBrands } from '@/database/reviews'
 import { videos } from '@/database/videos'
 import { useLanguage } from '@/store/useLanguage'
 
@@ -13,9 +13,7 @@ export default function Feedback() {
   return (
     <div className='pt-24 pb-20 bg-white md:pb-32 md:pt-32'>
       <Container>
-        <Videos data={videos} />
-
-        <h2 className='text-2xl md:text-3xl mb-3 mt-8 md:mt-14'>
+        <h2 className='text-2xl md:text-3xl mb-3'>
           {language === 'en' ? (
             <>
               What our <b>creators </b>say
@@ -26,7 +24,7 @@ export default function Feedback() {
             </>
           )}
         </h2>
-        <Testimonials data={reviewsCreators} />
+        <Videos data={videos} />
 
         <h2 className='text-2xl md:text-3xl mb-3 mt-8 md:mt-14'>
           {language === 'en' ? (
