@@ -9,13 +9,9 @@ interface VideoProps {
 
 const Videos = ({ data }: VideoProps) => {
   return (
-    <Carousel className='text-black h-full'>
+    <Carousel className='text-black'>
       {data.map((url: any, index: any) => (
-        <CarouselItem
-          index={index}
-          key={index}
-          className='grid place-content-center'
-        >
+        <CarouselItem index={index} key={index}>
           <Video url={url} />
         </CarouselItem>
       ))}
