@@ -11,7 +11,7 @@ const Videos = ({ data }: VideoProps) => {
   return (
     <Carousel className='text-black'>
       {data.map((url: any, index: any) => (
-        <CarouselItem index={index} key={index}>
+        <CarouselItem index={index} key={index} isPhone>
           <Video url={url} />
         </CarouselItem>
       ))}

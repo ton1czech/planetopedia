@@ -7,9 +7,15 @@ interface Props {
   index: number
   children: JSX.Element
   className?: string
+  isPhone?: boolean
 }
 
-const CarouselItem: React.FC<Props> = ({ children, index, className }) => {
+const CarouselItem: React.FC<Props> = ({
+  children,
+  index,
+  className,
+  isPhone,
+}) => {
   const { embla: emblaApi, selectedIndex } = useContext(CarouselContext)
   const isActive = selectedIndex === index
 
@@ -20,9 +26,9 @@ const CarouselItem: React.FC<Props> = ({ children, index, className }) => {
 
   return (
     <div
-      className={`slide relative ${
-        isActive ? '!opacity-100' : ''
-      } ${className}`}
+      className={`slide relative ${isActive && '!opacity-100'} ${className} ${
+        !isActive && isPhone && '!scale-75'
+      }`}
       onClick={handleClick}
     >
       {children}
