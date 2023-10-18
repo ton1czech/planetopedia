@@ -136,6 +136,11 @@ const Navbar = () => {
                   ]}
                   black={black}
                 />
+                <NavItem
+                  label={language === 'en' ? 'Case Studies' : 'Case Studies'}
+                  href='/case-studies'
+                  black={black}
+                />
               </ul>
             </div>
 

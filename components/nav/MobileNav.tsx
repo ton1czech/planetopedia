@@ -42,7 +42,7 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
         animate={{ y: 0, opacity: 1, x: '-50%' }}
         transition={{ delay: 0.5 }}
         className={cn(
-          'flex flex-col gap-2 absolute left-1/2 top-60 -translate-x-1/2',
+          'flex flex-col gap-2 absolute left-1/2 top-40 -translate-x-1/2',
           black ? 'text-white' : 'text-black'
         )}
       >
@@ -107,6 +107,12 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
               href: '/services/for-brands',
             },
           ]}
+          black={black}
+          setIsOpen={setIsOpen}
+        />
+        <MobileNavItem
+          label={language === 'en' ? 'Case Studies' : 'Case Studies'}
+          href='/case-studies'
           black={black}
           setIsOpen={setIsOpen}
         />
