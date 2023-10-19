@@ -5,8 +5,20 @@ export default function FarmaHajek() {
     <div className='pt-24 pb-20 bg-white md:pb-32 md:pt-32'>
       <Hero
         img='/case-studies/farma-hajek/thumbnail.webp'
-        servicesCz={['social sites', 'website', 'social content']}
-        servicesEn={['social sites', 'website', 'social content']}
+        servicesEn={[
+          'social media management',
+          'content creation',
+          'brand building',
+          'marketing',
+          'events - strongman akce',
+        ]}
+        servicesCz={[
+          'social media management',
+          'content creation',
+          'brand building',
+          'marketing',
+          'events - strongman akce',
+        ]}
         title='Farma Hájek'
       />
     </div>

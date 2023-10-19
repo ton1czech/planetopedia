@@ -31,14 +31,14 @@ export const caseStudies = [
     title: 'Escape Night',
     categoryCz: 'Pořádání Eventů',
     categoryEn: 'Organizing Events',
-    href: '/case-studies/rozmluv-se',
+    href: '/case-studies/escape-nights',
     image: '/case-studies/rozmluv-se/thumbnail.webp',
   },
   {
     title: 'Heys Luggage',
     categoryCz: 'Influencerská Kampaň',
     categoryEn: 'Influencer Campaign',
-    href: '/case-studies/rozmluv-se',
+    href: '/case-studies/heys-luggage',
     image: '/case-studies/rozmluv-se/thumbnail.webp',
   },
 ]

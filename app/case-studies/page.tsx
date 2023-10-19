@@ -15,7 +15,7 @@ export default function CaseStudies() {
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {caseStudies.map(casestudy => (
             <Link href={casestudy.href} className='group'>
-              <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl'>
+              <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-square group-hover:shadow-lg'>
                 <Image
                   src={casestudy.image}
                   fill
