@@ -136,12 +136,3 @@ html {
     transparent
   );
 }
-
-/* TESTIMONIALS */
-
-.slide {
-  flex: 0 0 auto;
-  max-width: min(70%, 620px);
-  opacity: 0.4;
-  transition: opacity 0.4s;
-}

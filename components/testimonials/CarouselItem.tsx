@@ -26,8 +26,8 @@ const CarouselItem: React.FC<Props> = ({
 
   return (
     <div
-      className={`slide relative select-none flex h-[370px] sm:h-[580px] md:h-[750px] ${
-        isActive && '!opacity-100'
+      className={`transition relative select-none flex h-[370px] sm:h-[580px] md:h-[750px] ${
+        isActive ? 'opacity-100' : 'opacity-40'
       } ${className}`}
       onClick={handleClick}
     >
