@@ -44,6 +44,7 @@ const Video = ({ url }: VideoProps) => {
       ref={videoRef}
       className='!max-w-[200px] sm:!max-w-[300px] md:!max-w-[400px] !h-[370px] sm:!h-[580px] md:!h-[750px]'
       onClick={handleClick}
+      playsInline
     >
       <source src={url} />
     </video>
