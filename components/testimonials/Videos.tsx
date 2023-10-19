@@ -4,7 +4,10 @@ import CarouselItem from './CarouselItem'
 import Video from './Video'
 
 interface VideoProps {
-  data: string[]
+  data: {
+    video: string
+    thumbnail: string
+  }[]
 }
 
 const Videos = ({ data }: VideoProps) => {
