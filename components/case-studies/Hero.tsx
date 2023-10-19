@@ -17,7 +17,7 @@ const Hero = ({ title, servicesCz, servicesEn, img }: HeroProps) => {
   return (
     <Container>
       <div className='flex flex-col md:flex-row justify-between mb-2 md:mb-4'>
-        <h1 className='text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold'>
+        <h1 className='text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold self-end'>
           {title}
         </h1>
         {language === 'en' && (
