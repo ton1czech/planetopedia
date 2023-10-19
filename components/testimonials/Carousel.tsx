@@ -57,7 +57,9 @@ const Carousel: React.FC<CarouselProps> = ({
         ref={viewportRef}
         className={`cursor-grab w-full overflow-hidden ${className}`}
       >
-        <div className='select-none flex'>{children}</div>
+        <div className='select-none flex justify-start items-start'>
+          {children}
+        </div>
       </div>
     </CarouselContext.Provider>
   )
