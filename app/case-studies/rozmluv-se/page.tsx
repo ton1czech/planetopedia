@@ -7,10 +7,10 @@ export default function RozmluvSe() {
         img='/case-studies/rozmluv-se/thumbnail.webp'
         servicesCz={[
           'marketing - privedeni x novych studentu',
-          'content creation',
+          'tvorba obsahu',
         ]}
         servicesEn={[
-          'marketing - privedeni x novych studentu',
+          'marketing - bringing in x new students',
           'content creation',
         ]}
         title='Rozmluv se'

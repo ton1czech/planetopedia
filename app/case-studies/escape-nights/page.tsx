@@ -5,7 +5,7 @@ export default function EscapeNights() {
     <div className='pt-24 pb-20 bg-white md:pb-32 md:pt-32'>
       <Hero
         img='/case-studies/rozmluv-se/thumbnail.webp'
-        servicesCz={['brand building', 'events']}
+        servicesCz={['budování značky', 'akce']}
         servicesEn={['brand building', 'events']}
         title='Escape Nights'
       />

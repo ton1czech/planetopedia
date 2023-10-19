@@ -10,14 +10,16 @@ export default function FarmaHajek() {
           'content creation',
           'brand building',
           'marketing',
-          'events - strongman akce',
+          'events - strongman',
+          'web development',
         ]}
         servicesCz={[
-          'social media management',
-          'content creation',
-          'brand building',
+          'správa sociálních sítí',
+          'tvorba obsahu',
+          'budování značky',
           'marketing',
-          'events - strongman akce',
+          'akce - strongman',
+          'tvorba webu',
         ]}
         title='Farma Hájek'
       />

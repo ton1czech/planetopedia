@@ -6,7 +6,7 @@ export default function FourSeasons() {
       <Hero
         img='/case-studies/farma-hajek/thumbnail.webp'
         servicesEn={['content creation', 'marketing']}
-        servicesCz={['content creation', 'marketing']}
+        servicesCz={['tvorba obsahu', 'marketing']}
         title='Four Seasons'
       />
     </div>

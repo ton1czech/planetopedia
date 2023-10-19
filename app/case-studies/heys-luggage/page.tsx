@@ -5,7 +5,7 @@ export default function HeysLuggage() {
     <div className='pt-24 pb-20 bg-white md:pb-32 md:pt-32'>
       <Hero
         img='/case-studies/rozmluv-se/thumbnail.webp'
-        servicesCz={['influencer campaign', 'marketing', 'content creation']}
+        servicesCz={['influencerská kampaň', 'marketing', 'tvorba obsahu']}
         servicesEn={['influencer campaign', 'marketing', 'content creation']}
         title='Heys Luggage'
       />
