@@ -42,7 +42,7 @@ const Video = ({ url }: VideoProps) => {
   return (
     <video
       ref={videoRef}
-      className='flex max-w-[200px] sm:max-w-[300px] md:max-w-[400px] h-min'
+      className='!max-w-[200px] sm:!max-w-[300px] md:!max-w-[400px] !h-[370px] sm:!h-[580px] md:!h-[750px]'
       onClick={handleClick}
     >
       <source src={url} />
