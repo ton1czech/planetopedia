@@ -26,7 +26,7 @@ export default function Feedback() {
         </h2>
         <Videos data={videos} />
 
-        <h2 className='text-2xl md:text-3xl mb-3 mt-8 md:mt-14'>
+        <h2 className='text-2xl md:text-3xl mb-4 md:mb-8 lg:mb-10 mt-8 md:mt-14'>
           {language === 'en' ? (
             <>
               What our <b>clients </b>say

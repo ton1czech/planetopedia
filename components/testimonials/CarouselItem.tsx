@@ -31,7 +31,7 @@ const CarouselItem: React.FC<Props> = ({
       } ${className}`}
       onClick={handleClick}
     >
-      {children}
+      <div className={`${isPhone && !isActive && '!scale-90'}`}>{children}</div>
     </div>
   )
 }
