@@ -17,7 +17,7 @@ L.Icon.Default.mergeOptions({
 })
 
 const createEmojiIcon = (emoji: string) => {
-  const iconHTML = `<div>${emoji}</div>`
+  const iconHTML = `<div class="text-xs">${emoji}</div>`
   return L.divIcon({
     html: iconHTML,
     className: 'custom-icon',
@@ -48,7 +48,7 @@ const Map = ({ locations }: MapProps) => {
       {locations.map(location => (
         <Marker
           position={[location.lat, location.lng]}
-          icon={createEmojiIcon('◆')}
+          icon={createEmojiIcon('◇')}
         />
       ))}
     </MapContainer>
