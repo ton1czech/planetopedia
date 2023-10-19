@@ -19,15 +19,6 @@ export const caseStudies = [
     ],
   },
   {
-    title: 'Four Seasons',
-    categoryCz: 'Hotelový řetězec',
-    categoryEn: 'Hotel chain',
-    href: '/case-studies/four-seasons',
-    image: '/case-studies/four-seasons/thumbnail.webp',
-    servicesEn: ['content creation', 'marketing'],
-    servicesCz: ['tvorba obsahu', 'marketing'],
-  },
-  {
     title: 'František Hrom',
     categoryCz: 'Slavná Osobnost',
     categoryEn: 'Famous Personality',
@@ -62,5 +53,14 @@ export const caseStudies = [
     image: '/case-studies/rozmluv-se/thumbnail.webp',
     servicesCz: ['influencerská kampaň', 'marketing', 'tvorba obsahu'],
     servicesEn: ['influencer campaign', 'marketing', 'content creation'],
+  },
+  {
+    title: 'Four Seasons',
+    categoryCz: 'Hotelový řetězec',
+    categoryEn: 'Hotel chain',
+    href: '/case-studies/four-seasons',
+    image: '/case-studies/four-seasons/thumbnail.webp',
+    servicesEn: ['content creation', 'marketing'],
+    servicesCz: ['tvorba obsahu', 'marketing'],
   },
 ]
