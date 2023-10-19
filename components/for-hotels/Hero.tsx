@@ -18,11 +18,13 @@ const Hero = () => {
         <source src='/services/for-hotels/hero.mp4' />
       </video>
 
-      <div className='absolute inset-0 w-full h-full pt-24 md:pt-32 services-gradient'>
-        <Container className='grid items-center h-full'>
-          <h1 className='text-2xl font-bold uppercase md:text-5xl'>
-            {language === 'en' ? <>For Hotels</> : <>Pro Hotely</>}
-          </h1>
+      <div className='absolute bg-black/10 inset-0 w-full h-full'>
+        <Container className='grid items-center justify-center h-full w-full'>
+          <div className='text-white text-center'>
+            <h1 className='text-3xl font-black uppercase md:text-5xl lg:text-7xl'>
+              For Hotels
+            </h1>
+          </div>
         </Container>
       </div>
     </div>
