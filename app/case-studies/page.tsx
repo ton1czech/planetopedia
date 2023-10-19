@@ -12,30 +12,42 @@ export default function CaseStudies() {
   return (
     <div className='pt-24 pb-20 bg-white md:pb-32 md:pt-32'>
       <Container>
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='flex gap-14 md:gap-24 flex-col'>
           {caseStudies.map(casestudy => (
-            <Link href={casestudy.href} className='group'>
-              <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-square group-hover:shadow-lg'>
+            <Link href={casestudy.href} className='group grid md:grid-cols-2'>
+              <div className='flex flex-col justify-center'>
+                <h3 className='text-2xl font-black text-center md:text-3xl lg:text-4xl mb-1 md:mb-2 md:text-left'>
+                  {casestudy.title}
+                </h3>
+                <div className='pb-2 md:pb-4 text-center text-zinc-600 text-sm md:text-left'>
+                  {language === 'en' && <p>{casestudy.categoryEn}</p>}
+                  {language === 'cs' && <p>{casestudy.categoryCz}</p>}
+                </div>
+                <div className='text-center text-zinc-800 text-lg md:text-xl md:text-left'>
+                  {language === 'en' && (
+                    <p>
+                      {casestudy.servicesEn.map(service => (
+                        <p>{service}</p>
+                      ))}
+                    </p>
+                  )}
+                  {language === 'cs' && (
+                    <p>
+                      {casestudy.servicesCz.map(service => (
+                        <p>{service}</p>
+                      ))}
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-video group-hover:shadow-lg'>
                 <Image
                   src={casestudy.image}
                   fill
                   alt={casestudy.title}
-                  className='object-cover object-top transition duration-500 group-hover:scale-110'
+                  className='object-cover transition duration-500 group-hover:scale-110'
                 />
               </div>
-              {language === 'en' && (
-                <p className='text-center text-zinc-700'>
-                  {casestudy.categoryEn}
-                </p>
-              )}
-              {language === 'cs' && (
-                <p className='text-center text-zinc-700'>
-                  {casestudy.categoryCz}
-                </p>
-              )}
-              <h3 className='text-xl font-medium text-center md:text-xl'>
-                {casestudy.title}
-              </h3>
             </Link>
           ))}
         </div>
