@@ -6,20 +6,16 @@ export default function FarmaHajek() {
       <Hero
         img='/case-studies/farma-hajek/thumbnail.webp'
         servicesEn={[
-          'social media management',
-          'content creation',
-          'brand building',
           'marketing',
           'events - strongman',
           'web development',
+          'social media management & content creation',
         ]}
         servicesCz={[
-          'správa sociálních sítí',
-          'tvorba obsahu',
-          'budování značky',
           'marketing',
           'akce - strongman',
           'tvorba webu',
+          'správa a tvorba obsahu pro sociální sítě',
         ]}
         title='Farma Hájek'
       />
