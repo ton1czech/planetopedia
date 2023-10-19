@@ -17,10 +17,6 @@ export const reviewsBrands = [
   },
   {
     body: 'A professional content creator. We had an excellent collaboration, with great content production.',
-    by: 'PR Senior Supervisor at Metaxa Hospitality Group',
-  },
-  {
-    body: 'A professional content creator. We had an excellent collaboration, with great content production.',
     by: 'Elena Skouletaki / PR Senior Supervisor at Metaxa Hospitality Group',
   },
   {

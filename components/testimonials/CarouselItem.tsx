@@ -26,12 +26,10 @@ const CarouselItem: React.FC<Props> = ({
 
   return (
     <div
-      className={`transition relative select-none flex h-[370px] sm:h-[580px] md:h-[750px] ${
-        isActive ? 'opacity-100' : 'opacity-40'
-      } ${className}`}
+      className={`slide relative ${isActive ? '!opacity-100' : 'opacity-40'}`}
       onClick={handleClick}
     >
-      <div className={`${!isActive && isPhone && 'scale-75'}`}>{children}</div>
+      {children}
     </div>
   )
 }

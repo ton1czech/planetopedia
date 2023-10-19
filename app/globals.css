@@ -136,3 +136,8 @@ html {
     transparent
   );
 }
+
+.slide {
+  flex: 0 0 auto;
+  max-width: min(70%, 620px);
+}
