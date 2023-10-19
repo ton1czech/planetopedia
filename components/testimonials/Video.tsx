@@ -3,10 +3,11 @@
 import { useEffect, useRef, useState } from 'react'
 
 interface VideoProps {
-  url: string
+  video: string
+  thumbnail: string
 }
 
-const Video = ({ url }: VideoProps) => {
+const Video = ({ video, thumbnail }: VideoProps) => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false)
 
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -45,9 +46,9 @@ const Video = ({ url }: VideoProps) => {
       className='!max-w-[200px] sm:!max-w-[300px] md:!max-w-[400px] !h-[370px] sm:!h-[580px] md:!h-[750px]'
       onClick={handleClick}
       playsInline
-      autoPlay
+      poster={thumbnail}
     >
-      <source src={url} />
+      <source src={video} />
     </video>
   )
 }

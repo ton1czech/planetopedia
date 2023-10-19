@@ -1,14 +1,34 @@
 export const videos = [
-  'https://i.imgur.com/XMPf8em.mp4',
-  'https://i.imgur.com/OjqgRPK.mp4',
-  'https://i.imgur.com/XMPf8em.mp4',
-  'https://i.imgur.com/OjqgRPK.mp4',
-  'https://i.imgur.com/XMPf8em.mp4',
-  'https://i.imgur.com/OjqgRPK.mp4',
-  'https://i.imgur.com/XMPf8em.mp4',
-  'https://i.imgur.com/OjqgRPK.mp4',
-  'https://i.imgur.com/XMPf8em.mp4',
-  'https://i.imgur.com/OjqgRPK.mp4',
-  'https://i.imgur.com/XMPf8em.mp4',
-  'https://i.imgur.com/OjqgRPK.mp4',
+  {
+    video: 'https://i.imgur.com/XMPf8em.mp4',
+    thumbnail: '/feedback/1.webp',
+  },
+  {
+    video: 'https://i.imgur.com/OjqgRPK.mp4',
+    thumbnail: '/feedback/2.webp',
+  },
+  {
+    video: 'https://i.imgur.com/XMPf8em.mp4',
+    thumbnail: '/feedback/1.webp',
+  },
+  {
+    video: 'https://i.imgur.com/OjqgRPK.mp4',
+    thumbnail: '/feedback/2.webp',
+  },
+  {
+    video: 'https://i.imgur.com/XMPf8em.mp4',
+    thumbnail: '/feedback/1.webp',
+  },
+  {
+    video: 'https://i.imgur.com/OjqgRPK.mp4',
+    thumbnail: '/feedback/2.webp',
+  },
+  {
+    video: 'https://i.imgur.com/XMPf8em.mp4',
+    thumbnail: '/feedback/1.webp',
+  },
+  {
+    video: 'https://i.imgur.com/OjqgRPK.mp4',
+    thumbnail: '/feedback/2.webp',
+  },
 ]
