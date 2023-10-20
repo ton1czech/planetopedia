@@ -15,15 +15,17 @@ export default function CaseStudies() {
         <div className='flex gap-14 md:gap-24 flex-col'>
           {caseStudies.map(casestudy => (
             <Link href={casestudy.href} className='group grid md:grid-cols-2'>
-              <div className='flex flex-col justify-center'>
-                <h3 className='text-2xl font-black text-center md:text-3xl lg:text-4xl mb-1 md:mb-2 md:text-left'>
-                  {casestudy.title}
-                </h3>
-                <div className='pb-2 md:pb-4 text-center text-zinc-600 text-sm md:text-left'>
-                  {language === 'en' && <p>{casestudy.categoryEn}</p>}
-                  {language === 'cs' && <p>{casestudy.categoryCz}</p>}
+              <div className='flex flex-col justify-between'>
+                <div>
+                  <h3 className='text-2xl font-black text-center md:text-3xl lg:text-4xl mb-1 md:text-left'>
+                    {casestudy.title}
+                  </h3>
+                  <div className='pb-2 md:pb-4 text-center text-zinc-600 text-sm md:text-left'>
+                    {language === 'en' && <p>{casestudy.categoryEn}</p>}
+                    {language === 'cs' && <p>{casestudy.categoryCz}</p>}
+                  </div>
                 </div>
-                <div className='text-center text-zinc-800 text-lg md:text-xl md:text-left'>
+                <div className='text-center text-zinc-800 md:text-lg md:text-left'>
                   {language === 'en' && (
                     <p>
                       {casestudy.servicesEn.map(service => (
@@ -40,7 +42,7 @@ export default function CaseStudies() {
                   )}
                 </div>
               </div>
-              <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-video group-hover:shadow-lg'>
+              <div className='relative w-full overflow-hidden transition duration-500 aspect-video group-hover:shadow-lg'>
                 <Image
                   src={casestudy.image}
                   fill
