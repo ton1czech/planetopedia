@@ -5,7 +5,6 @@ import Who from '@/components/case-studies/Who'
 import ContentCreation from '@/components/case-studies/farma-hajek/ContentCreation'
 import Events from '@/components/case-studies/farma-hajek/Events'
 import Marketing from '@/components/case-studies/farma-hajek/Marketing'
-import SocialMedia from '@/components/case-studies/farma-hajek/SocialMedia'
 import Web from '@/components/case-studies/farma-hajek/Web'
 
 export default function FarmaHajek() {
@@ -37,9 +36,8 @@ export default function FarmaHajek() {
       />
       <Results>
         <Web />
-        <SocialMedia />
-        <Events />
         <Marketing />
+        <Events />
         <ContentCreation />
       </Results>
     </div>
