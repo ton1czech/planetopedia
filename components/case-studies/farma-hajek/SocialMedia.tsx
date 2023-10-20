@@ -85,7 +85,7 @@ const SocialMedia = () => {
 
   return (
     <div>
-      <h2 className='text-lg md:text-xl'>
+      <h2 className='text-lg md:text-xl mb-4 md:mb-10'>
         {language === 'en' && <>~ Social Media</>}
         {language === 'cs' && <>~ Socialní Sítě</>}
       </h2>

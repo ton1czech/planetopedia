@@ -2,7 +2,6 @@
 
 import { useLanguage } from '@/store/useLanguage'
 import Container from '../Container'
-import { caseStudies } from '@/database/case-studies'
 
 interface ResultsProps {
   children: React.ReactNode
@@ -10,7 +9,6 @@ interface ResultsProps {
 
 const Results = ({ children }: ResultsProps) => {
   const { language } = useLanguage(state => state)
-  const { title } = caseStudies[0]
 
   return (
     <Container>
@@ -18,7 +16,7 @@ const Results = ({ children }: ResultsProps) => {
         {language === 'en' && <>Results</>}
         {language === 'cs' && <>Výsledky</>}
       </h2>
-      {children}
+      <div className='flex flex-col gap-6 md:gap-12 xl:gap-20'>{children}</div>
     </Container>
   )
 }
