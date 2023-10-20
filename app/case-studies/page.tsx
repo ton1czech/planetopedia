@@ -41,6 +41,10 @@ export default function CaseStudies() {
                     </p>
                   )}
                 </div>
+                <button className='ring-2 ring-black rounded-md w-full md:w-1/2 font-bold py-3 hover:text-white hover:bg-black transition'>
+                  {language === 'en' && <>Learn More</>}
+                  {language === 'cz' && <>Dozvědět se více</>}
+                </button>
               </div>
               <div className='relative w-full overflow-hidden transition duration-500 aspect-video group-hover:shadow-lg'>
                 <Image
