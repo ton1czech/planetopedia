@@ -35,7 +35,13 @@ const Hero = () => {
         {language === 'cs' && <>Více než jen agentura</>}
       </motion.p>
 
-      <Earth />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 3 }}
+      >
+        <Earth />
+      </motion.div>
     </Container>
   )
 }
