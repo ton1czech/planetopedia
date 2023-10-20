@@ -6,6 +6,7 @@ import ContentCreation from '@/components/case-studies/farma-hajek/ContentCreati
 import Events from '@/components/case-studies/farma-hajek/Events'
 import Marketing from '@/components/case-studies/farma-hajek/Marketing'
 import Web from '@/components/case-studies/farma-hajek/Web'
+import { caseStudies } from '@/database/case-studies'
 
 export default function FarmaHajek() {
   return (
@@ -27,6 +28,7 @@ export default function FarmaHajek() {
         title='Farma Hájek'
       />
       <Who
+        title={caseStudies[0].title}
         bodyCz='Farma Hájek je českou rodinnou farmou, která se specializuje na celoroční chov kuřat a slepic na volné podestýlce, výrobu čerstvých vajec a pěstování kvalitních brambor. S hrdostí dbají na tradici a kvalitu, a to nejen v chovu zvířat, ale i v moderním designu kurníků, které jsou inspirovány českým lesem. Farma Hájek není jen farmou, ale jsou to vášniví chovatelé a zemědělci, kteří si zakládají na kvalitě a udržitelnosti.'
         bodyEn='Farm Hájek is a Czech family farm specializing in year-round free-range chicken and hen rearing, fresh egg production, and the cultivation of high-quality potatoes. They take pride in upholding tradition and quality, not only in animal husbandry but also in the modern design of coops inspired by the Czech forest. Farm Hájek is not just a farm; they are passionate breeders and farmers who value quality and sustainability.'
       />

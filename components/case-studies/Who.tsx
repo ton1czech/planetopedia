@@ -2,16 +2,15 @@
 
 import { useLanguage } from '@/store/useLanguage'
 import Container from '../Container'
-import { caseStudies } from '@/database/case-studies'
 
 interface WhoProps {
   bodyCz: string
   bodyEn: string
+  title: string
 }
 
-const Who = ({ bodyCz, bodyEn }: WhoProps) => {
+const Who = ({ bodyCz, bodyEn, title }: WhoProps) => {
   const { language } = useLanguage(state => state)
-  const { title } = caseStudies[0]
 
   return (
     <Container>
