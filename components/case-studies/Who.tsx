@@ -5,10 +5,11 @@ import Container from '../Container'
 import { caseStudies } from '@/database/case-studies'
 
 interface WhoProps {
-  children: React.ReactNode
+  bodyCz: string
+  bodyEn: string
 }
 
-const Who = ({ children }: WhoProps) => {
+const Who = ({ bodyCz, bodyEn }: WhoProps) => {
   const { language } = useLanguage(state => state)
   const { title } = caseStudies[0]
 
@@ -18,7 +19,8 @@ const Who = ({ children }: WhoProps) => {
         {language === 'en' && <>Who is {title}</>}
         {language === 'cs' && <>Kdo je {title}</>}
       </h2>
-      {children}
+      {language === 'en' && <p>{bodyEn}</p>}
+      {language === 'cs' && <p>{bodyCz}</p>}
     </Container>
   )
 }

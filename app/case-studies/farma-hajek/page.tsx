@@ -27,32 +27,14 @@ export default function FarmaHajek() {
         ]}
         title='Farma Hájek'
       />
-      <Who>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo quis odit
-        porro quod amet quae eum minima itaque, nisi est quam debitis, dolores
-        quibusdam dolorum neque iure, inventore ab velit in laborum. Voluptatum,
-        maxime odio! Sint tempora repudiandae accusantium nobis, pariatur
-        aspernatur porro ab numquam adipisci dignissimos. Harum animi fugit
-        eaque numquam, error autem deserunt sint sit dolorem laboriosam suscipit
-        recusandae. Distinctio, nesciunt maiores? Itaque voluptas, vero quisquam
-        nisi omnis nobis deleniti illo, odit laudantium aliquid ex explicabo
-        facere! Blanditiis tempora officia libero doloremque nesciunt voluptas
-        est qui ut dolore! Sunt itaque, mollitia illo qui impedit laborum
-        nesciunt nostrum consequuntur.
-      </Who>
-      <What>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus
-        corrupti beatae nulla. Inventore, reprehenderit iste dolores eaque in ea
-        minima, ex similique dicta, dolore cupiditate ipsam sed consequuntur
-        itaque. Quos ducimus expedita, porro odio ut, est sint modi nobis fugiat
-        suscipit excepturi vel facere. Quasi ex unde ad. Qui est, dolorum
-        nostrum perferendis explicabo incidunt sit rerum doloribus adipisci
-        saepe quod velit fuga architecto fugiat sequi facilis aut totam debitis,
-        aperiam dolor. Omnis sit hic voluptatibus in ipsa ipsam ea
-        necessitatibus fuga repellendus rem sunt, earum, eligendi delectus! Est
-        pariatur nemo impedit laborum ut tempora minima at iste quisquam
-        dignissimos.
-      </What>
+      <Who
+        bodyCz='Farma Hájek je českou rodinnou farmou, která se specializuje na celoroční chov kuřat a slepic na volné podestýlce, výrobu čerstvých vajec a pěstování kvalitních brambor. S hrdostí dbají na tradici a kvalitu, a to nejen v chovu zvířat, ale i v moderním designu kurníků, které jsou inspirovány českým lesem. Farma Hájek není jen farmou, ale jsou to vášniví chovatelé a zemědělci, kteří si zakládají na kvalitě a udržitelnosti.'
+        bodyEn='Farm Hájek is a Czech family farm specializing in year-round free-range chicken and hen rearing, fresh egg production, and the cultivation of high-quality potatoes. They take pride in upholding tradition and quality, not only in animal husbandry but also in the modern design of coops inspired by the Czech forest. Farm Hájek is not just a farm; they are passionate breeders and farmers who value quality and sustainability.'
+      />
+      <What
+        bodyCz='Zvýšit podvědomí o značce. Nový, moderní web. Optimalizace reklamních kampaní. Správa sociálních sítí. Budování značky online. Organizace akcí.'
+        bodyEn='To increase brand awareness. Create a new, modern website. Optimize advertising campaigns. Manage social media. Build the brand online. Organize events.'
+      />
       <Results>
         <Web />
         <SocialMedia />

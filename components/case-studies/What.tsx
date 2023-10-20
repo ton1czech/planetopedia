@@ -4,10 +4,11 @@ import { useLanguage } from '@/store/useLanguage'
 import Container from '../Container'
 
 interface WhatProps {
-  children: React.ReactNode
+  bodyCz: string
+  bodyEn: string
 }
 
-const What = ({ children }: WhatProps) => {
+const What = ({ bodyCz, bodyEn }: WhatProps) => {
   const { language } = useLanguage(state => state)
 
   return (
@@ -16,7 +17,8 @@ const What = ({ children }: WhatProps) => {
         {language === 'en' && <>What was the goal</>}
         {language === 'cs' && <>Co bylo cílem</>}
       </h2>
-      {children}
+      {language === 'en' && <p>{bodyEn}</p>}
+      {language === 'cs' && <p>{bodyCz}</p>}
     </Container>
   )
 }
