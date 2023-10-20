@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -26,14 +25,6 @@ ChartJS.register(
 
 const SocialMedia = () => {
   const { language } = useLanguage(state => state)
-  const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'top' as const,
-      },
-    },
-  }
 
   const labels =
     language === 'en'
@@ -66,12 +57,30 @@ const SocialMedia = () => {
     labels,
     datasets: [
       {
-        label: 'Instagram Followers',
-        data: [19, 20, 20, 21, 20, 26, 34, 66, 121, 240],
-        borderColor: 'rgb(82, 89, 162)',
-        backgroundColor: 'rgba(82, 89, 162, 0.5)',
+        data: [19, 20, 20, 21, 20, 21, null, null, null, null],
+        borderColor: 'rgba(128, 128, 128, 0.7)',
+        borderDash: [5, 5],
+        label: 'Před naším zásahem',
+      },
+      {
+        data: [null, null, null, null, null, 21, 34, 66, 121, 240],
+        borderColor: 'rgb(24, 198, 221)',
+        label: 'Po našem zásahu',
       },
     ],
+  }
+
+  const options: any = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Instagram Followers',
+      },
+    },
   }
 
   return (
