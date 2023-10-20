@@ -2,7 +2,11 @@ import Hero from '@/components/case-studies/Hero'
 import Results from '@/components/case-studies/Results'
 import What from '@/components/case-studies/What'
 import Who from '@/components/case-studies/Who'
+import ContentCreation from '@/components/case-studies/farma-hajek/ContentCreation'
+import Events from '@/components/case-studies/farma-hajek/Events'
+import Marketing from '@/components/case-studies/farma-hajek/Marketing'
 import SocialMedia from '@/components/case-studies/farma-hajek/SocialMedia'
+import Web from '@/components/case-studies/farma-hajek/Web'
 
 export default function FarmaHajek() {
   return (
@@ -50,7 +54,11 @@ export default function FarmaHajek() {
         dignissimos.
       </What>
       <Results>
+        <Web />
         <SocialMedia />
+        <Events />
+        <Marketing />
+        <ContentCreation />
       </Results>
     </div>
   )
