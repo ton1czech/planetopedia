@@ -48,7 +48,7 @@ const Navbar = () => {
         className={cn(
           'z-[1000] w-full h-20  py-5 transition duration-500',
           black ? 'bg-black/40' : 'bg-white/60 backdrop-blur-lg',
-          studio ? 'block' : 'fixed top-0',
+          studio ? 'block bg-white' : 'fixed top-0',
           blog && isTopOfPage && '!bg-transparent !backdrop-blur-none'
         )}
       >
