@@ -7,13 +7,13 @@ export const caseStudies = [
     image: '/case-studies/farma-hajek/thumbnail.webp',
     servicesEn: [
       'marketing',
-      'events - strongman',
+      'events',
       'web development',
       'social media management & content creation',
     ],
     servicesCz: [
       'marketing',
-      'akce - strongman',
+      'akce',
       'tvorba webu',
       'správa a tvorba obsahu pro sociální sítě',
     ],
