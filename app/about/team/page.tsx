@@ -19,8 +19,8 @@ export default function Team() {
           }
           body={
             language === 'en'
-              ? 'I am Dominik, founder of Travel Magazine Planetopedia with a focus on digital marketing, content creation and collaborating with luxury brands. In recent years, I have been blessed and given the opportunity to work with many photographers, creators and collaborate with many prestigious and luxurious hotels around the world such as Four Seasons, Shangri-La, Sheraton,.. I have been able to not only turn my dreams of travelling into a reality, but also successfully enter the travel industry throughout social media. Now through all the Planetopedia services I am able to inspire and build an audience in order to provide value to others.'
-              : 'Jsem Dominik, zakladatel cestovního časopisu Planetopedia se zaměřením na digitální marketing, tvorbu obsahu a spolupráci s luxusními značkami. V posledních letech jsem měl požehnání a příležitost pracovat s mnoha fotografy, tvůrci a spolupracovat s mnoha prestižními a luxusními hotely po celém světě, jako jsou Four Seasons, Shangri-La, Sheraton,... Podařilo se mi nejen proměnit své sny o cestování ve skutečnost, ale také úspěšně vstoupit do cestovního průmyslu prostřednictvím sociálních médií. Nyní se mi prostřednictvím všech služeb Planetopedie daří inspirovat a budovat publikum, abych mohl poskytovat hodnotu ostatním.'
+              ? 'Dominik is the founder of Digital Marketing Influencer Agency Planetopedia with a focus on digital marketing, content creation and collaborating with luxury brands. He is a multi-faceted, highly motivated digital marketeer, networker and community builder. In recent years, he has been blessed and given the opportunity to work with many content creators and collaborate with many luxurious hotels around the world such as Four Seasons, Ritz-Carlton, Jumeirah and more. He has been able to not only turn his dreams of travelling into a reality, but also successfully enter the travel industry throughout social media and create high-preforming campaigns. Now through all these services he is able to inspire and build an audience in order to provide value to others.'
+              : 'Dominik je zakladatelem digitální marketingové influencerské agentury Planetopedia se zaměřením na digitální marketing, tvorbu obsahu a spolupráci s luxusními značkami. Je všestranný, vysoce motivovaný digitální markeťák, networker a budovatel komunit. V posledních letech měl požehnanou příležitost pracovat s mnoha tvůrci obsahu a spolupracovat s mnoha luxusními hotely po celém světě, jako jsou Four Seasons, Ritz-Carlton, Jumeirah a další. Podařilo se mu nejen proměnit své sny o cestování ve skutečnost, ale také úspěšně vstoupit do cestovního ruchu napříč sociálními médii a vytvářet vysoce efektivní kampaně. Nyní je díky všem těmto službám schopen inspirovat a budovat publikum, aby mohl poskytovat hodnotu ostatním.'
           }
           links={[
             {
@@ -131,6 +131,40 @@ export default function Team() {
             {
               icon: Linkedin,
               href: 'https://www.linkedin.com/in/drew-peden-438a62172/',
+            },
+          ]}
+          index={3}
+        />
+        <Member
+          src='/team/kacka-kutalkova.webp'
+          name='Kačka Kutálková'
+          role={language === 'en' ? 'Content Creation' : 'Tvorba Obsahu'}
+          body={
+            language === 'en'
+              ? "I'm Kate, a young and ambitious social media manager. I love content creation and engaging with clients. It excites me to discover the thoughts and goals of our clients. Every day, I strive to create content and strategies that resonate with their target audience. My creativity and adaptability are valuable assets in the rapidly changing world of social media."
+              : 'Jsem Kačka, mladá a ambiciozní social media manažerka. Miluji tvorbu obsahu a komunikaci s klienty. Baví mě zjišťovat, jaké mají naši klienti myšlenky a cíle. Každý den se snažím vytvořit obsah a strategie, které osloví jejich cílovou skupinu. Moje kreativita a schopnost adaptace mi pomáhají v rychle se měnícím světě sociálních médií.'
+          }
+          links={[
+            {
+              icon: Instagram,
+              href: 'https://www.instagram.com/ton1czech/',
+            },
+          ]}
+          index={3}
+        />
+        <Member
+          src='https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+          name='Hana Kostolanská'
+          role={language === 'en' ? 'Content Creation' : 'Tvorba Obsahu'}
+          body={
+            language === 'en'
+              ? "I'm Hana, and my job revolves around social media. My ability is to be creative and quickly adapt to new trends. I have a great passion for content creation and interacting with clients. What truly excites me is discovering the thoughts and goals of our clients."
+              : 'Jsem Hana, a moje práce spočívá v tom, že se starám o sociální média. Moje schopnost je být kreativní a rychle se přizpůsobit novým trendům. Mám velkou vášeň pro tvorbu obsahu a interakci s klienty. Co mě opravdu nadchne, je objevovat myšlenky a cíle našich klientů.'
+          }
+          links={[
+            {
+              icon: Instagram,
+              href: 'https://www.instagram.com/hanna_kaa_/',
             },
           ]}
           index={3}

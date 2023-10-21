@@ -46,7 +46,7 @@ const Member = ({
           alt={name}
         />
       </div>
-      <h2 className='pt-4 text-2xl font-semibold sm:text-3xl md:text-2xl lg:text-3xl drop-shadow-lg'>
+      <h2 className='pt-4 text-2xl font-semibold sm:text-3xl md:text-2xl drop-shadow-lg'>
         {name}
       </h2>
       <h5 className='pb-3 text-xl italic text-zinc-500 md:pb-5 drop-shadow-md'>
@@ -55,8 +55,8 @@ const Member = ({
       <p className='text-justify md:text-lg'>{body}</p>
       <div className='flex gap-2 pt-3'>
         {links.map(({ href, icon: Icon }) => (
-          <Link href={href} key={href}>
-            {<Icon className='transition hover:stroke-yellow-700' />}
+          <Link href={href} key={href} target='_blank'>
+            {<Icon className='transition hover:stroke-zinc-600' />}
           </Link>
         ))}
       </div>
