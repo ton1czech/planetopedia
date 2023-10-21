@@ -60,6 +60,23 @@ export default function Team() {
           index={2}
         />
         <Member
+          src='/team/daniel-anthony-baudys.webp'
+          name='Daniel Anthony Baudyš'
+          role={language === 'en' ? 'Web Development' : 'Tvorba Webu'}
+          body={language === 'en' ? 'borec' : 'borec'}
+          links={[
+            {
+              icon: Instagram,
+              href: 'https://www.instagram.com/ton1czech/',
+            },
+            {
+              icon: Linkedin,
+              href: 'https://www.linkedin.com/in/ton1czech/',
+            },
+          ]}
+          index={2}
+        />
+        <Member
           src='/team/felipe-prieto.webp'
           name='Felipe Prieto'
           role={language === 'en' ? 'Community Manager' : 'Manažer Komunity'}
