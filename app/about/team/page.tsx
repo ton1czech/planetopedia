@@ -60,28 +60,6 @@ export default function Team() {
           index={2}
         />
         <Member
-          src='/team/adam-vaughan.webp'
-          name='Adam Vaughan'
-          role={language === 'en' ? 'Sales & Marketing' : 'Prodej a Marketing'}
-          body={
-            language === 'en'
-              ? 'Hi! I’m Adam Vaughan (aka Vonski), a world traveler, history lover, and Star Wars nerd. I appreciate the chance to show you the world through my eyes. Throughout my almost 3 decades of traveling the world, I’ve experienced so many amazing things and nothing would make me happier than inspiring you. After retiring from the US Air Force in 2018, I went to work at Facebook (now Meta) where I am a senior manager and head the product security division. My focus is on travel destinations, luxury hotels, and elevated dining experiences. Let’s all experience something remarkable together!'
-              : 'Ahoj! Jsem Adam Vaughan (alias Vonski), světoběžník, milovník historie a Star Wars. Vážím si možnosti ukázat vám svět svýma očima. Během svých téměř tří desetiletí cestování po světě jsem zažil spoustu úžasných věcí a nic mě neudělá šťastnějším, než když vás budu inspirovat. Po odchodu z amerického letectva v roce 2018 jsem odešel pracovat do společnosti Facebook (nyní Meta), kde zastávám pozici senior manažera a vedu oddělení zabezpečení produktů. Zaměřuji se na cestovatelské destinace, luxusní hotely a nadstandardní gastronomické zážitky. Pojďme všichni společně zažít něco pozoruhodného!'
-          }
-          links={[
-            {
-              icon: Instagram,
-              href: 'https://www.instagram.com/vonski_travels/',
-            },
-            {
-              icon: Linkedin,
-              href: 'https://www.linkedin.com/in/adam-vaughan-93819650/',
-            },
-          ]}
-          imagetop
-          index={3}
-        />
-        <Member
           src='/team/felipe-prieto.webp'
           name='Felipe Prieto'
           role={language === 'en' ? 'Community Manager' : 'Manažer Komunity'}
