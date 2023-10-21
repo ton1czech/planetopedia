@@ -1,4 +1,7 @@
+'use client'
+
 import { urlForImage } from '@/sanity/lib/image'
+import { useLanguage } from '@/store/useLanguage'
 import { Instagram } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -7,13 +10,31 @@ interface CreatorProps {
   src: any
   name: string
   instagram: string
+  categories: any
+  code: string
+  locationCz: string
+  locationEn: string
+  followers: number
 }
 
-const Creator = ({ src, name, instagram }: CreatorProps) => {
+const Creator = ({
+  src,
+  name,
+  instagram,
+  categories,
+  code,
+  locationCz,
+  locationEn,
+  followers,
+}: CreatorProps) => {
+  const { language } = useLanguage(state => state)
+
+  console.log(categories[0])
+
   return (
     <Link
       href={`https://www.instagram.com/${instagram}/`}
-      className='group'
+      className='grid grid-cols-2 group bg-zinc-100'
       target='_blank'
     >
       <div className='relative w-full overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl'>
@@ -32,8 +53,18 @@ const Creator = ({ src, name, instagram }: CreatorProps) => {
         </div>
       </div>
 
-      <h3 className='text-lg font-semibold text-center'>@{instagram}</h3>
-      <p className='text-center text-zinc-600'>{name}</p>
+      <div className='flex flex-col justify-between p-1'>
+        <div>
+          <h3 className='text-lg font-semibold'>@{instagram}</h3>
+          <p>{language === 'en' ? <>{locationEn}</> : <>{locationCz}</>}</p>
+          <p>{followers} followers</p>
+        </div>
+        <div className='text-sm'>
+          {categories.map((category: any) => (
+            <p>- {category}</p>
+          ))}
+        </div>
+      </div>
     </Link>
   )
 }

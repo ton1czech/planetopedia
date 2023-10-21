@@ -8,15 +8,31 @@ interface CreatorsGridProps {
 const CreatorsGrid = ({ creators }: CreatorsGridProps) => {
   return (
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
-      <Container className='grid w-full grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 md:gap-12'>
-        {creators.map(({ image, name, instagram }: any) => (
-          <Creator
-            key={instagram}
-            src={image}
-            name={name}
-            instagram={instagram}
-          />
-        ))}
+      <Container className='grid w-full gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-12'>
+        {creators.map(
+          ({
+            image,
+            name,
+            instagram,
+            categories,
+            code,
+            locationCz,
+            locationEn,
+            followers,
+          }: any) => (
+            <Creator
+              key={instagram}
+              src={image}
+              name={name}
+              instagram={instagram}
+              categories={categories}
+              code={code}
+              locationCz={locationCz}
+              locationEn={locationEn}
+              followers={followers}
+            />
+          )
+        )}
       </Container>
     </div>
   )

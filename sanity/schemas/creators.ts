@@ -23,6 +23,32 @@ export default defineType({
       title: 'Instagram',
       type: 'string',
     }),
+    defineField({
+      name: 'categories',
+      title: 'Categories',
+      type: 'array',
+      of: [{ type: 'string' }],
+    }),
+    defineField({
+      name: 'code',
+      title: 'Country code',
+      type: 'string',
+    }),
+    defineField({
+      name: 'locationCz',
+      title: 'Location 🇨🇿',
+      type: 'string',
+    }),
+    defineField({
+      name: 'locationEn',
+      title: 'Location 🇬🇧',
+      type: 'string',
+    }),
+    defineField({
+      name: 'followers',
+      title: 'Followers',
+      type: 'number',
+    }),
   ],
   preview: {
     select: {
