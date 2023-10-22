@@ -26,7 +26,6 @@ export default function Feedback() {
           )}
           {language === 'de' && (
             <>
-              {' '}
               Was unsere <b>Schöpfer </b>sagen
             </>
           )}

@@ -19,6 +19,7 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
           <h2 className='mb-2 text-xl font-thin md:text-2xl lg:text-3xl text-zinc-600'>
             {language === 'en' && <>Who we work with</>}
             {language === 'cs' && <>S kým spolupracujeme</>}
+            {language === 'de' && <>Mit wem wir arbeiten</>}
           </h2>
           <p className='text-2xl font-semibold text-justify md:text-3xl lg:text-4xl'>
             {language === 'en' && (
@@ -26,6 +27,9 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
             )}
             {language === 'cs' && (
               <>Jsme zde pro lidi, kteří chtějí zůstat ve spojení</>
+            )}
+            {language === 'de' && (
+              <>Wir sind für Menschen da, die in Verbindung bleiben wollen.</>
             )}
           </p>
           <p className='text-lg'>
@@ -44,6 +48,14 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
                 přístup.
               </>
             )}
+            {language === 'de' && (
+              <>
+                Von den größten Hotelunternehmen bis hin zu Marken und
+                weltberühmten Marketingagenturen haben unsere Kunden eines
+                gemeinsam: große Herausforderungen, die einen neuen und anderen
+                Ansatz erfordern.
+              </>
+            )}
           </p>
         </div>
       ) : (
@@ -51,6 +63,7 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
           <h2 className='mb-2 text-xl font-thin md:text-2xl lg:text-3xl text-zinc-600'>
             {language === 'en' && <>Who we work with</>}
             {language === 'cs' && <>S kým spolupracujeme</>}
+            {language === 'de' && <>Mit wem wir arbeiten</>}
           </h2>
           <div className='grid gap-6 md:grid-cols-2 md:gap-12'>
             <p className='text-2xl font-semibold text-justify md:text-3xl lg:text-4xl'>
@@ -59,6 +72,9 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
               )}
               {language === 'cs' && (
                 <>Jsme zde pro lidi, kteří chtějí zůstat ve spojení</>
+              )}
+              {language === 'de' && (
+                <>Wir sind für Menschen da, die in Verbindung bleiben wollen.</>
               )}
             </p>
             <p className='text-lg'>
@@ -75,6 +91,14 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
                   inspirativní marketingových agentur, mají naši klienti
                   společné to, že jsou velcí velké výzvy, které vyžadují nový a
                   odlišný přístup.
+                </>
+              )}
+              {language === 'de' && (
+                <>
+                  Von den größten Hotelunternehmen bis hin zu Marken und
+                  weltberühmten Marketingagenturen haben unsere Kunden eines
+                  gemeinsam: große Herausforderungen, die einen neuen und
+                  anderen Ansatz erfordern.
                 </>
               )}
             </p>
@@ -110,11 +134,9 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
       >
         <div className='w-full h-px bg-zinc-400' />
         <p className='mt-2 text-lg md:text-xl text-zinc-600'>
-          {language === 'en' ? (
-            <>Clients in the Czech republic</>
-          ) : (
-            <>Klienti v České republice</>
-          )}
+          {language === 'en' && <>Clients in the Czech republic</>}
+          {language === 'cs' && <>Klienti v České republice</>}
+          {language === 'de' && <>Kunden in der Tschechischen Republik</>}
         </p>
       </div>
 
