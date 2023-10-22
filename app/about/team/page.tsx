@@ -263,6 +263,35 @@ export default function Team() {
           ]}
           index={3}
         />
+        <Member
+          src='/team/jan-tulis.webp'
+          name='Jan Tulis'
+          role={
+            language === 'en'
+              ? 'Outreach Specialist'
+              : language === 'cs'
+              ? 'Specialista pro práci s veřejností'
+              : language === 'de'
+              ? 'Spezialist für Öffentlichkeitsarbeit'
+              : ''
+          }
+          body={
+            language === 'en'
+              ? "I'm Jan, and my job involves sending emails to potential clients. I offer you our services, which you might not even know you need until you receive our email. My communication skills are crucial for the success of our team."
+              : language === 'cs'
+              ? 'Jsem Jan, a moje práce spočívá v posílání e-mailů potenciálním klientům. Nabízím Vám naše služby, které možná ani nevíte, že potřebujete, dokud Vám nepřijde náš e-mail. Moje komunikativní dovednosti jsou klíčové pro úspěch našeho týmu.'
+              : language === 'de'
+              ? 'Ich bin Jan, und meine Aufgabe ist es, E-Mails an potenzielle Kunden zu schicken. Ich biete ihnen unsere Dienstleistungen an, von denen sie vielleicht gar nicht wissen, dass sie sie brauchen, bis sie unsere E-Mail erhalten. Meine Kommunikationsfähigkeiten sind entscheidend für den Erfolg unseres Teams.'
+              : ''
+          }
+          links={[
+            {
+              icon: Instagram,
+              href: 'https://www.instagram.com/hanna_kaa_/',
+            },
+          ]}
+          index={3}
+        />
       </Container>
     </div>
   )
