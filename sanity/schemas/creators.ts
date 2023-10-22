@@ -45,6 +45,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'locationDe',
+      title: 'Location 🇩🇪',
+      type: 'string',
+    }),
+    defineField({
       name: 'followers',
       title: 'Followers',
       type: 'number',

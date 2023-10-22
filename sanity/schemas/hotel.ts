@@ -26,6 +26,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'location_de',
+      title: 'Location 🇩🇪',
+      type: 'string',
+    }),
+    defineField({
       name: 'minutes',
       title: 'Minutes',
       type: 'number',
@@ -74,6 +79,11 @@ export default defineType({
       type: 'blockContent',
     }),
     defineField({
+      name: 'overview_de',
+      title: 'Overview 🇩🇪',
+      type: 'blockContent',
+    }),
+    defineField({
       name: 'overview_images',
       title: 'Overview Images',
       type: 'array',
@@ -88,6 +98,11 @@ export default defineType({
     defineField({
       name: 'rooms_cz',
       title: 'The Rooms 🇨🇿',
+      type: 'blockContent',
+    }),
+    defineField({
+      name: 'rooms_de',
+      title: 'The Rooms 🇩🇪',
       type: 'blockContent',
     }),
     defineField({
@@ -108,6 +123,11 @@ export default defineType({
       type: 'blockContent',
     }),
     defineField({
+      name: 'services_de',
+      title: 'Services and Facilities 🇩🇪',
+      type: 'blockContent',
+    }),
+    defineField({
       name: 'services_images',
       title: 'Services and Facilities Images',
       type: 'array',
@@ -125,6 +145,11 @@ export default defineType({
       type: 'blockContent',
     }),
     defineField({
+      name: 'fitness_de',
+      title: 'SPA & Fitness 🇩🇪',
+      type: 'blockContent',
+    }),
+    defineField({
       name: 'fitness_images',
       title: 'SPA & Fitness Images',
       type: 'array',
@@ -139,6 +164,11 @@ export default defineType({
     defineField({
       name: 'food_cz',
       title: 'Food & Drinks 🇨🇿',
+      type: 'blockContent',
+    }),
+    defineField({
+      name: 'food_de',
+      title: 'Food & Drinks 🇩🇪',
       type: 'blockContent',
     }),
     defineField({
@@ -182,6 +212,11 @@ export default defineType({
     defineField({
       name: 'conclusion_cz',
       title: 'Conclusion 🇨🇿',
+      type: 'blockContent',
+    }),
+    defineField({
+      name: 'conclusion_de',
+      title: 'Conclusion 🇩🇪',
       type: 'blockContent',
     }),
     defineField({

@@ -26,6 +26,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'location_de',
+      title: 'Location 🇩🇪',
+      type: 'string',
+    }),
+    defineField({
       name: 'minutes',
       title: 'Minutes',
       type: 'number',
@@ -74,6 +79,11 @@ export default defineType({
       type: 'blockContent',
     }),
     defineField({
+      name: 'overview_de',
+      title: 'Overview 🇩🇪',
+      type: 'blockContent',
+    }),
+    defineField({
       name: 'overview_images',
       title: 'Overview Images',
       type: 'array',
@@ -88,6 +98,11 @@ export default defineType({
     defineField({
       name: 'menu_cz',
       title: 'Menu & Food 🇨🇿',
+      type: 'blockContent',
+    }),
+    defineField({
+      name: 'menu_de',
+      title: 'Menu & Food 🇩🇪',
       type: 'blockContent',
     }),
     defineField({
@@ -125,6 +140,11 @@ export default defineType({
     defineField({
       name: 'conclusion_cz',
       title: 'Conclusion 🇨🇿',
+      type: 'blockContent',
+    }),
+    defineField({
+      name: 'conclusion_de',
+      title: 'Conclusion 🇩🇪',
       type: 'blockContent',
     }),
 
