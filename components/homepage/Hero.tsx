@@ -33,6 +33,7 @@ const Hero = () => {
       >
         {language === 'en' && <>More than an agency</>}
         {language === 'cs' && <>Více než jen agentura</>}
+        {language === 'de' && <>Mehr als eine Agentur</>}
       </motion.p>
 
       <motion.div
