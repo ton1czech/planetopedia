@@ -32,13 +32,17 @@ const Restaurant = ({ restaurant }: RestaurantProps) => {
       {language === 'cs' && (
         <p className='text-center text-zinc-700'>{restaurant.location_cz}</p>
       )}
+      {language === 'de' && (
+        <p className='text-center text-zinc-700'>{restaurant.location_de}</p>
+      )}
       <h3 className='text-lg font-medium text-center md:text-xl'>
         {restaurant.name}
       </h3>
       <p className='text-sm text-center text-zinc-600'>
         {restaurant.minutes}
-        {language === 'en' && <> minutes read</>}
-        {language === 'cs' && <> minuty čtení</>}
+        {language === 'en' && <> Minutes read</>}
+        {language === 'cs' && <> Minuty čtení</>}
+        {language === 'de' && <> Minuten gelesen</>}
       </p>
     </Link>
   )

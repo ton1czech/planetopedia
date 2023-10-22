@@ -22,11 +22,15 @@ const RestaurantsGrid = ({ restaurants }: RestaurantsGridProps) => {
     if (!query) return restaurants
 
     return restaurants.filter(
-      (hotel: any) =>
-        hotel.name.toLowerCase().includes(query.toLowerCase()) ||
+      (restaurant: any) =>
+        restaurant.name.toLowerCase().includes(query.toLowerCase()) ||
         (language === 'en'
-          ? hotel.location_en.toLowerCase().includes(query.toLowerCase())
-          : hotel.location_cz.toLowerCase().includes(query.toLowerCase()))
+          ? restaurant.location_en.toLowerCase().includes(query.toLowerCase())
+          : language === 'cs'
+          ? restaurant.location_cz.toLowerCase().includes(query.toLowerCase())
+          : language === 'de'
+          ? restaurant.location_de.toLowerCase().includes(query.toLowerCase())
+          : '')
     )
   }
 

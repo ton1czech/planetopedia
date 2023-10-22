@@ -30,6 +30,9 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
             {language === 'cs' && (
               <p className='mb-2'>{restaurant.location_cz}</p>
             )}
+            {language === 'de' && (
+              <p className='mb-2'>{restaurant.location_de}</p>
+            )}
           </div>
 
           <div>
@@ -45,14 +48,14 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
             ))}
           </div>
 
-          {(restaurant?.overview_en || restaurant?.overview_cz) && (
+          {(restaurant?.overview_en ||
+            restaurant?.overview_cz ||
+            restaurant?.overview_de) && (
             <>
               <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl'>
-                {language === 'en' ? (
-                  <>restaurant overview</>
-                ) : (
-                  <>přehled restaurace</>
-                )}
+                {language === 'en' && <>restaurant overview</>}
+                {language === 'cs' && <>přehled restaurace</>}
+                {language === 'de' && <>Restaurant-Übersicht</>}
               </h1>
               {language === 'en' && (
                 <div className='pb-6 md:pb-10'>
@@ -66,6 +69,14 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                 <div className='pb-6 md:pb-10'>
                   <PortableText
                     value={restaurant?.overview_cz}
+                    components={RichText}
+                  />
+                </div>
+              )}
+              {language === 'de' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={restaurant?.overview_de}
                     components={RichText}
                   />
                 </div>
@@ -86,10 +97,14 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
             </>
           )}
 
-          {(restaurant?.menu_en || restaurant?.menu_cz) && (
+          {(restaurant?.menu_en ||
+            restaurant?.menu_cz ||
+            restaurant?.menu_de) && (
             <>
               <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl'>
-                {language === 'en' ? <>menu & food</> : <>jídelníček a jídlo</>}
+                {language === 'en' && <>food & drinks</>}
+                {language === 'cs' && <>jídlo a nápoje</>}
+                {language === 'de' && <>Essen & Trinken</>}
               </h1>
               {language === 'en' && (
                 <div className='pb-6 md:pb-10'>
@@ -103,6 +118,14 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                 <div className='pb-6 md:pb-10'>
                   <PortableText
                     value={restaurant?.menu_cz}
+                    components={RichText}
+                  />
+                </div>
+              )}
+              {language === 'de' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={restaurant?.menu_de}
                     components={RichText}
                   />
                 </div>
@@ -129,11 +152,14 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
             </>
           )}
 
-          {(restaurant?.conclusion_en || restaurant?.conclusion_cz) && (
+          {(restaurant?.conclusion_en ||
+            restaurant?.conclusion_cz ||
+            restaurant?.conclusion_de) && (
             <>
-              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
-                {language === 'en' ? <>conclusion</> : <>závěr</>}
-              </h1>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'></h1>
+              {language === 'en' && <>conclusion</>}
+              {language === 'cs' && <>závěr</>}
+              {language === 'de' && <>Schlussfolgerung</>}
               {language === 'en' && (
                 <div className='pb-6 md:pb-10'>
                   <PortableText
@@ -146,6 +172,14 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                 <div className='pb-6 md:pb-10'>
                   <PortableText
                     value={restaurant?.conclusion_cz}
+                    components={RichText}
+                  />
+                </div>
+              )}
+              {language === 'de' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={restaurant?.conclusion_de}
                     components={RichText}
                   />
                 </div>
@@ -167,7 +201,9 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
           )}
 
           <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
-            {language === 'en' ? <>essential info</> : <>nezbytné informace</>}
+            {language === 'en' && <>essential info</>}
+            {language === 'cs' && <>základní informace</>}
+            {language === 'de' && <>wichtige Infos</>}
           </h1>
 
           <iframe

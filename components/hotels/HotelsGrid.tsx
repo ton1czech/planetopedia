@@ -26,7 +26,11 @@ const HotelsGrid = ({ hotels }: HotelsGridProps) => {
         hotel.name.toLowerCase().includes(query.toLowerCase()) ||
         (language === 'en'
           ? hotel.location_en.toLowerCase().includes(query.toLowerCase())
-          : hotel.location_cz.toLowerCase().includes(query.toLowerCase()))
+          : language === 'cs'
+          ? hotel.location_cz.toLowerCase().includes(query.toLowerCase())
+          : language === 'de'
+          ? hotel.location_de.toLowerCase().includes(query.toLowerCase())
+          : '')
     )
   }
 
