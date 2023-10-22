@@ -22,6 +22,10 @@ const languages = [
     value: 'cs',
     src: '/flags/cs.webp',
   },
+  {
+    value: 'de',
+    src: '/flags/de.webp',
+  },
 ]
 
 interface LanguageSelectorProps {
