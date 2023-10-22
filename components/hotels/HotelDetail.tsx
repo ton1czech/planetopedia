@@ -24,6 +24,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
             <h1 className='text-2xl font-bold md:text-3xl'>{hotel?.name}</h1>
             {language === 'en' && <p className='mb-2'>{hotel.location_en}</p>}
             {language === 'cs' && <p className='mb-2'>{hotel.location_cz}</p>}
+            {language === 'de' && <p className='mb-2'>{hotel.location_de}</p>}
           </div>
 
           <div>
@@ -39,10 +40,12 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
             ))}
           </div>
 
-          {(hotel?.overview_en || hotel?.overview_cz) && (
+          {(hotel?.overview_en || hotel?.overview_cz || hotel?.overview_de) && (
             <>
               <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
-                hotel overview
+                {language === 'en' && <>hotel overview</>}
+                {language === 'cs' && <>přehled hotelů</>}
+                {language === 'de' && <>Hotelübersicht</>}
               </h1>
               {language === 'en' && (
                 <div className='pb-6 md:pb-10'>
@@ -56,6 +59,14 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                 <div className='pb-6 md:pb-10'>
                   <PortableText
                     value={hotel?.overview_cz}
+                    components={RichText}
+                  />
+                </div>
+              )}
+              {language === 'de' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={hotel?.overview_de}
                     components={RichText}
                   />
                 </div>
@@ -75,10 +86,12 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
             </>
           )}
 
-          {(hotel?.rooms_en || hotel?.rooms_cz) && (
+          {(hotel?.rooms_en || hotel?.rooms_cz || hotel?.rooms_de) && (
             <>
               <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
-                the rooms
+                {language === 'en' && <>the rooms</>}
+                {language === 'cs' && <>pokoje</>}
+                {language === 'de' && <>die Räume</>}
               </h1>
               {language === 'en' && (
                 <div className='pb-6 md:pb-10'>
@@ -88,6 +101,11 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
               {language === 'cs' && (
                 <div className='pb-6 md:pb-10'>
                   <PortableText value={hotel?.rooms_cz} components={RichText} />
+                </div>
+              )}
+              {language === 'de' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText value={hotel?.rooms_de} components={RichText} />
                 </div>
               )}
 
@@ -106,10 +124,12 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
             </>
           )}
 
-          {(hotel?.services_en || hotel?.services_cz) && (
+          {(hotel?.services_en || hotel?.services_cz || hotel?.services_de) && (
             <>
               <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
-                services and facilities
+                {language === 'en' && <>services and facilities</>}
+                {language === 'cs' && <>služby a zařízení</>}
+                {language === 'de' && <>Dienstleistungen und Einrichtungen</>}
               </h1>
               {language === 'en' && (
                 <div className='pb-6 md:pb-10'>
@@ -123,6 +143,14 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                 <div className='pb-6 md:pb-10'>
                   <PortableText
                     value={hotel?.services_cz}
+                    components={RichText}
+                  />
+                </div>
+              )}
+              {language === 'de' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={hotel?.services_de}
                     components={RichText}
                   />
                 </div>
@@ -143,10 +171,12 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
             </>
           )}
 
-          {(hotel?.fitness_en || hotel?.fitness_cz) && (
+          {(hotel?.fitness_en || hotel?.fitness_cz || hotel?.fitness_de) && (
             <>
               <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
-                spa & fitness
+                {language === 'en' && <>spa & fitness</>}
+                {language === 'cs' && <>lázně a fitness</>}
+                {language === 'de' && <>Wellness & Fitness</>}
               </h1>
               {language === 'en' && (
                 <div className='pb-6 md:pb-10'>
@@ -160,6 +190,14 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                 <div className='pb-6 md:pb-10'>
                   <PortableText
                     value={hotel?.fitness_cz}
+                    components={RichText}
+                  />
+                </div>
+              )}
+              {language === 'de' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={hotel?.fitness_de}
                     components={RichText}
                   />
                 </div>
@@ -179,10 +217,12 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
             </>
           )}
 
-          {(hotel?.food_en || hotel?.food_cz) && (
+          {(hotel?.food_en || hotel?.food_cz || hotel?.food_de) && (
             <>
               <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
-                food & drinks
+                {language === 'en' && <>food & drinks</>}
+                {language === 'cs' && <>jídlo a nápoje</>}
+                {language === 'de' && <>Essen & Trinken</>}
               </h1>
               {language === 'en' && (
                 <div className='pb-6 md:pb-10'>
@@ -192,6 +232,11 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
               {language === 'cs' && (
                 <div className='pb-6 md:pb-10'>
                   <PortableText value={hotel?.food_cz} components={RichText} />
+                </div>
+              )}
+              {language === 'de' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText value={hotel?.food_en} components={RichText} />
                 </div>
               )}
 
@@ -229,10 +274,14 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
             ))}
           </div>
 
-          {(hotel?.conclusion_en || hotel?.conclusion_cz) && (
+          {(hotel?.conclusion_en ||
+            hotel?.conclusion_cz ||
+            hotel?.conclusion_de) && (
             <>
               <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
-                conclusion
+                {language === 'en' && <>conclusion</>}
+                {language === 'cs' && <>závěr</>}
+                {language === 'de' && <>Schlussfolgerung</>}
               </h1>
               {language === 'en' && (
                 <div className='pb-6 md:pb-10'>
@@ -246,6 +295,14 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                 <div className='pb-6 md:pb-10'>
                   <PortableText
                     value={hotel?.conclusion_cz}
+                    components={RichText}
+                  />
+                </div>
+              )}
+              {language === 'de' && (
+                <div className='pb-6 md:pb-10'>
+                  <PortableText
+                    value={hotel?.conclusion_de}
                     components={RichText}
                   />
                 </div>
@@ -267,7 +324,9 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
           )}
 
           <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
-            essential info
+            {language === 'en' && <>essential info</>}
+            {language === 'cs' && <>základní informace</>}
+            {language === 'de' && <>wichtige Infos</>}
           </h1>
 
           <iframe

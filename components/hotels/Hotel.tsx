@@ -30,13 +30,17 @@ const Hotel = ({ hotel }: HotelProps) => {
       {language === 'cs' && (
         <p className='text-center text-zinc-700'>{hotel.location_cz}</p>
       )}
+      {language === 'de' && (
+        <p className='text-center text-zinc-700'>{hotel.location_de}</p>
+      )}
       <h3 className='text-xl font-medium text-center md:text-xl'>
         {hotel.name}
       </h3>
       <p className='text-sm text-center text-zinc-600'>
         {hotel.minutes}
-        {language === 'en' && <> minutes read</>}
-        {language === 'cs' && <> minuty čtení</>}
+        {language === 'en' && <> Minutes read</>}
+        {language === 'cs' && <> Minuty čtení</>}
+        {language === 'de' && <> Minuten gelesen</>}
       </p>
     </Link>
   )

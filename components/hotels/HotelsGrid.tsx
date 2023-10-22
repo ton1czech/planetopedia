@@ -50,11 +50,9 @@ const HotelsGrid = ({ hotels }: HotelsGridProps) => {
 
           {filteredHotels.length === 0 ? (
             <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center'>
-              {language === 'en' ? (
-                <>No hotels found</>
-              ) : (
-                <>Žádný hotel nenalezen</>
-              )}
+              {language === 'en' && <>No hotels found</>}
+              {language === 'cs' && <>Žádný hotel nenalezen</>}
+              {language === 'de' && <>Keine Hotels gefunden</>}
             </h1>
           ) : (
             <div className='grid w-full gap-6 md:grid-cols-2 md:gap-12'>
