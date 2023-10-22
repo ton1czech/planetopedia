@@ -10,17 +10,11 @@ interface ItemProps {
   text: string
   millions?: boolean
   delay?: number
-  margin?: boolean
 }
 
-const Item = ({ num, text, millions, delay, margin }: ItemProps) => {
+const Item = ({ num, text, millions, delay }: ItemProps) => {
   return (
-    <div
-      className={cn(
-        'text-white rounded-md'
-        // margin && 'ml-0 lg:ml-6 xl:ml-7'
-      )}
-    >
+    <div className={cn('text-white rounded-md')}>
       <CountUp
         start={0}
         end={num}
@@ -56,7 +50,15 @@ const About = () => {
     >
       <Item
         num={45}
-        text={language === 'en' ? 'Notable Clients' : 'Významných Klientů'}
+        text={
+          language === 'en'
+            ? 'Notable Clients'
+            : language === 'cs'
+            ? 'Významných Klientů'
+            : language === 'de'
+            ? 'Bemerkenswerte Kunden'
+            : ''
+        }
         delay={2}
       />
       <Item
@@ -64,16 +66,27 @@ const About = () => {
         text={
           language === 'en'
             ? 'Instagram Followers'
-            : 'Sledujících na Instagramu'
+            : language === 'cs'
+            ? 'Sledujících na Instagramu'
+            : language === 'de'
+            ? 'Instagram Follower'
+            : ''
         }
         millions
         delay={2.3}
       />
       <Item
         num={250}
-        text={language === 'en' ? 'Creators Worldwide' : 'Tvůrců Celosvětově'}
+        text={
+          language === 'en'
+            ? 'Creators Worldwide'
+            : language === 'cs'
+            ? 'Tvůrců Celosvětově'
+            : language === 'de'
+            ? 'Schöpfer weltweit'
+            : ''
+        }
         delay={2.6}
-        margin
       />
     </motion.div>
   )
