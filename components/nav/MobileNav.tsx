@@ -47,7 +47,15 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
         )}
       >
         <MobileNavItem
-          label={language === 'en' ? 'Our Creators' : 'Naši Tvůrci'}
+          label={
+            language === 'en'
+              ? 'Our Creators'
+              : language === 'cs'
+              ? 'Naši Tvůrci'
+              : language === 'de'
+              ? 'Unsere Schöpfer'
+              : ''
+          }
           href='/creators'
           black={black}
           setIsOpen={setIsOpen}
@@ -56,12 +64,25 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
           label='Blog'
           links={[
             {
-              label: language === 'en' ? 'Luxury Hotels' : 'Luxusní Hotely',
               href: '/blog/hotels',
+              label:
+                language === 'en'
+                  ? 'Luxury Hotels'
+                  : language === 'cs'
+                  ? 'Luxusní Hotely'
+                  : language === 'de'
+                  ? 'Luxushotels'
+                  : '',
             },
             {
               label:
-                language === 'en' ? 'Luxury Restaurant' : 'Luxusní Restaurace',
+                language === 'en'
+                  ? 'Luxury Restaurant'
+                  : language === 'cs'
+                  ? 'Luxusní Restaurace'
+                  : language === 'de'
+                  ? 'Luxuriöses Restaurant'
+                  : '',
               href: '/blog/restaurants',
             },
           ]}
@@ -69,22 +90,58 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
           setIsOpen={setIsOpen}
         />
         <MobileExpandableNavItem
-          label={language === 'en' ? 'About' : 'O Nás'}
+          label={
+            language === 'en'
+              ? 'About'
+              : language === 'cs'
+              ? 'O Nás'
+              : language === 'de'
+              ? 'Über'
+              : ''
+          }
           links={[
             {
-              label: language === 'en' ? 'Team' : 'Tým',
+              label:
+                language === 'en'
+                  ? 'Team'
+                  : language === 'cs'
+                  ? 'Tým'
+                  : language === 'de'
+                  ? 'Team'
+                  : '',
               href: '/about/team',
             },
             {
-              label: language === 'en' ? 'Company' : 'Společnost',
+              label:
+                language === 'en'
+                  ? 'Company'
+                  : language === 'cs'
+                  ? 'Společnost'
+                  : language === 'de'
+                  ? 'Unternehmen'
+                  : '',
               href: '/about/company',
             },
             {
-              label: language === 'en' ? 'Clients' : 'Klienti',
+              label:
+                language === 'en'
+                  ? 'Clients'
+                  : language === 'cs'
+                  ? 'Klienti'
+                  : language === 'de'
+                  ? 'Kunden'
+                  : '',
               href: '/about/clients',
             },
             {
-              label: language === 'en' ? 'Feedback' : 'Zpětná Vazba',
+              label:
+                language === 'en'
+                  ? 'Feedback'
+                  : language === 'cs'
+                  ? 'Zpětná Vazba'
+                  : language === 'de'
+                  ? 'Rückmeldung'
+                  : '',
               href: '/about/feedback',
             },
           ]}
@@ -92,18 +149,47 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
           setIsOpen={setIsOpen}
         />
         <MobileExpandableNavItem
-          label={language === 'en' ? 'Services' : 'Služby'}
+          label={
+            language === 'en'
+              ? 'Services'
+              : language === 'cs'
+              ? 'Služby'
+              : language === 'de'
+              ? 'Dienstleistungen'
+              : ''
+          }
           links={[
             {
-              label: language === 'en' ? 'For Creators' : 'Pro Tvůrce',
+              label:
+                language === 'en'
+                  ? 'For Creators'
+                  : language === 'cs'
+                  ? 'Pro Tvůrce'
+                  : language === 'de'
+                  ? 'Für Schöpfer'
+                  : '',
               href: '/services/for-creators',
             },
             {
-              label: language === 'en' ? 'For Hotels' : 'Pro Hotely',
+              label:
+                language === 'en'
+                  ? 'For Hotels'
+                  : language === 'cs'
+                  ? 'Pro Hotely'
+                  : language === 'de'
+                  ? 'Für Hotels'
+                  : '',
               href: '/services/for-hotels',
             },
             {
-              label: language === 'en' ? 'For Brands' : 'Pro Značky',
+              label:
+                language === 'en'
+                  ? 'For Brands'
+                  : language === 'cs'
+                  ? 'Pro Značky'
+                  : language === 'de'
+                  ? 'Für Marken'
+                  : '',
               href: '/services/for-brands',
             },
           ]}
@@ -111,7 +197,15 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
           setIsOpen={setIsOpen}
         />
         <MobileNavItem
-          label={language === 'en' ? 'Case Studies' : 'Case Studies'}
+          label={
+            language === 'en'
+              ? 'Case Studies'
+              : language === 'cs'
+              ? 'Případové studie'
+              : language === 'de'
+              ? 'Fallstudien'
+              : ''
+          }
           href='/case-studies'
           black={black}
           setIsOpen={setIsOpen}
