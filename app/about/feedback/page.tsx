@@ -14,26 +14,39 @@ export default function Feedback() {
     <div className='pt-24 pb-20 bg-white md:pb-32 md:pt-32'>
       <Container>
         <h2 className='text-2xl md:text-3xl mb-3'>
-          {language === 'en' ? (
+          {language === 'en' && (
             <>
               What our <b>creators </b>say
             </>
-          ) : (
+          )}
+          {language === 'cs' && (
             <>
               Co říkají naši <b>tvůrci</b>
+            </>
+          )}
+          {language === 'de' && (
+            <>
+              {' '}
+              Was unsere <b>Schöpfer </b>sagen
             </>
           )}
         </h2>
         <Videos data={videos} />
 
         <h2 className='text-2xl md:text-3xl mb-4 md:mb-8 lg:mb-10 mt-8 md:mt-14'>
-          {language === 'en' ? (
+          {language === 'en' && (
             <>
               What our <b>clients </b>say
             </>
-          ) : (
+          )}
+          {language === 'cs' && (
             <>
               Co říkají naši <b>klienti</b>
+            </>
+          )}
+          {language === 'de' && (
+            <>
+              Was unsere <b>Kunden </b>sagen
             </>
           )}
         </h2>
