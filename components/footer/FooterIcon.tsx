@@ -9,7 +9,7 @@ interface FooterIconProps {
 const FooterIcon = ({ icon: Icon, href }: FooterIconProps) => {
   return (
     <Link href={href}>
-      <Icon className='w-5 h-5 md:w-7 md:h-7 lg:w-8 lg:h-8 stroke-white hover:stroke-zinc-300 transition' />
+      <Icon className='w-6 h-6 stroke-white hover:stroke-zinc-300 transition' />
     </Link>
   )
 }
