@@ -34,16 +34,19 @@ const Creator = ({
   return (
     <Link
       href={`https://www.instagram.com/${instagram}/`}
-      className='grid grid-cols-2 group bg-zinc-100'
+      className='grid grid-cols-2 group bg-zinc-50 border border-zinc-600/10 shadow-xl hover:shadow-2xl transition duration-500 rounded-xl'
       target='_blank'
     >
-      <div className='relative w-full overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl'>
+      <div className='relative w-full overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl rounded-tl-xl rounded-bl-xl'>
         <Image
           src={urlForImage(src).url()}
           fill
           alt={name}
-          className='object-cover transition duration-500 group-hover:scale-110'
+          className='object-cover transition duration-500 group-hover:scale-110 rounded-tl-xl rounded-bl-xl'
         />
+        <div className='absolute bottom-0 left-1/2 -translate-x-1/2'>
+          <h3 className='text-lg font-semibold'>@{instagram}</h3>
+        </div>
 
         <div className='absolute inset-0 grid transition duration-500 bg-transparent group-hover:bg-black/50 place-content-center'>
           <Instagram
@@ -53,15 +56,16 @@ const Creator = ({
         </div>
       </div>
 
-      <div className='flex flex-col justify-between p-1'>
+      <div className='grid grid-rows-2 justify-center p-1 text-center'>
         <div>
-          <h3 className='text-lg font-semibold'>@{instagram}</h3>
-          <p>{language === 'en' ? <>{locationEn}</> : <>{locationCz}</>}</p>
-          <p>{followers} followers</p>
+          <p className='text-sm'>
+            {language === 'en' ? <>{locationEn}</> : <>{locationCz}</>}
+          </p>
+          <p className='font-medium'>{followers} followers</p>
         </div>
         <div className='text-sm'>
           {categories.map((category: any) => (
-            <p>- {category}</p>
+            <p>{category}</p>
           ))}
         </div>
       </div>
