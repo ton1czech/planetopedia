@@ -14,7 +14,7 @@ const What = ({ bodyCz, bodyEn, bodyDe }: WhatProps) => {
 
   return (
     <Container>
-      <h2 className='text-2xl md:text-3xl lg:text-4xl font-semibold pt-6 md:pt-12 xl:pt-20'>
+      <h2 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold pt-6 md:pt-12 xl:pt-20'>
         {language === 'en' && <>What was the goal</>}
         {language === 'cs' && <>Co bylo cílem</>}
         {language === 'de' && <>Was war das Ziel?</>}

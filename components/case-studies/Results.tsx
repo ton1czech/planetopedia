@@ -12,7 +12,7 @@ const Results = ({ children }: ResultsProps) => {
 
   return (
     <Container>
-      <h2 className='text-2xl md:text-3xl lg:text-4xl font-semibold pt-6 md:pt-12 xl:pt-20'>
+      <h2 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold pt-6 md:pt-12 xl:pt-20'>
         {language === 'en' && <>Results</>}
         {language === 'cs' && <>Výsledky</>}
         {language === 'de' && <>Ergebnisse</>}

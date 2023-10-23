@@ -11,10 +11,10 @@ const BrandBuilding = () => {
 
   return (
     <div>
-      <h2 className='text-lg md:text-xl'>
-        {language === 'en' && <>~ Brand Building</>}
-        {language === 'cs' && <>~ Budování Značky</>}
-        {language === 'de' && <>~ Markenbildung</>}
+      <h2 className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-4 md:mb-10'>
+        {language === 'en' && <>/ Brand Building</>}
+        {language === 'cs' && <>/ Budování Značky</>}
+        {language === 'de' && <>/ Markenbildung</>}
       </h2>
 
       <ReactCompareSlider

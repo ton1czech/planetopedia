@@ -11,10 +11,10 @@ const Web = () => {
 
   return (
     <div>
-      <h2 className='text-lg md:text-xl mb-4 md:mb-10'>
-        {language === 'en' && <>~ Web Development</>}
-        {language === 'cs' && <>~ Tvorba Webu</>}
-        {language === 'de' && <>~ Web-Entwicklung</>}
+      <h2 className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-4 md:mb-10'>
+        {language === 'en' && <>/ Web Development</>}
+        {language === 'cs' && <>/ Tvorba Webu</>}
+        {language === 'de' && <>/ Web-Entwicklung</>}
       </h2>
 
       <ReactCompareSlider

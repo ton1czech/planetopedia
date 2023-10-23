@@ -14,10 +14,10 @@ const Marketing = () => {
 
   return (
     <div>
-      <h2 className='text-lg md:text-xl'>
-        {language === 'en' && <>~ Marketing Results</>}
-        {language === 'cs' && <>~ Marketingové Výsledky</>}
-        {language === 'de' && <>~ Marketing-Ergebnisse</>}
+      <h2 className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-4 md:mb-10'>
+        {language === 'en' && <>/ Marketing Results</>}
+        {language === 'cs' && <>/ Marketingové Výsledky</>}
+        {language === 'de' && <>/ Marketing-Ergebnisse</>}
       </h2>
 
       <div className='grid lg:grid-cols-3 gap-2 lg:gap-8 mt-4 mb-2'>
