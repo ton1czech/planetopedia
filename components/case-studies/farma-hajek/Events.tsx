@@ -11,7 +11,7 @@ const Events = () => {
       <h2 className='text-lg md:text-xl'>
         {language === 'en' && <>~ Events</>}
         {language === 'cs' && <>~ Akce</>}
-        {language === 'en' && <>~ Veranstaltungen</>}
+        {language === 'de' && <>~ Veranstaltungen</>}
       </h2>
       <p className='mb-4'>
         {language === 'en' && (
