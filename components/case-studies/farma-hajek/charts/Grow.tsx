@@ -121,7 +121,6 @@ const Grow = () => {
     },
     scales: {
       y: {
-        beginAtZero: true,
         ticks: {
           callback: function (value: any) {
             return value + '%'
