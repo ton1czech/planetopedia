@@ -119,7 +119,18 @@ const Grow = () => {
         position: 'top',
       },
     },
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: {
+          callback: function (value: any) {
+            return value + '%'
+          },
+        },
+      },
+    },
   }
+
   return (
     <div>
       <Line data={data} options={options} />

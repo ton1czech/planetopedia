@@ -71,6 +71,26 @@ const Marketing = () => {
       {chart === 'followers' && <Followers />}
       {chart === 'grow' && <Grow />}
       {chart === 'imprese' && <Imprese />}
+      <p className='italic mt-1'>
+        {language === 'en' ? (
+          <>
+            The results to date have been positively influenced by: influencer
+            campaign, marketing campaigns on Seznam.cz / Google.com, organizing
+            events.
+          </>
+        ) : language === 'cs' ? (
+          <>
+            Dosavadní výsledky pozitivně ovlivnilo: influencer kampaň,
+            marketingové kampaně na Seznam.cz / Google.com, pořádání eventů.
+          </>
+        ) : language === 'de' ? (
+          <>
+            Die bisherigen Ergebnisse wurden positiv beeinflusst durch:
+            Influencer Influencer-Kampagne, Marketing-Kampagnen auf Seznam.cz /
+            Google.com, Organisation von Veranstaltungen.
+          </>
+        ) : null}
+      </p>
     </div>
   )
 }

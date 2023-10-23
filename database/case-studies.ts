@@ -73,12 +73,18 @@ export const caseStudies = [
       'Marketing - Gewinnung von x neuen Studenten',
       'Erstellung von Inhalten',
     ],
-    whoEn: '',
-    whoCz: '',
-    whoDe: '',
-    whatEn: '',
-    whatCz: '',
-    whatDe: '',
+    whoEn:
+      'The language studio Rozmluv focuses on creating optimal conditions for rapid learning and mastering of foreign languages. They specialize in offering various language courses, including both commonly spoken languages and less common ones. In addition to traditional courses in English, German, and Russian, Rozmluv also provides instruction in Czech for foreigners, as well as Chinese and Vietnamese.',
+    whoCz:
+      'Jazykové studio Rozmluv se zaměřuje na vytváření optimálních podmínek pro rychlé učení a zvládnutí cizího jazyka. Specializují se na nabízení různých jazykových kurzů, zahrnující jak světové jazyky, tak i méně obvyklé jazyky. Kromě tradičních kurzů angličtiny, němčiny a ruštiny. Rozmluvse také poskytuje výuku češtiny pro cizince, včetně čínštiny a vietnamštiny.',
+    whoDe:
+      'Das Sprachstudio Rozmluv konzentriert sich darauf, optimale Bedingungen für das schnelle Erlernen und Beherrschen von Fremdsprachen zu schaffen. Das Studio ist darauf spezialisiert, verschiedene Sprachkurse anzubieten, darunter sowohl häufig gesprochene als auch weniger verbreitete Sprachen. Neben den traditionellen Kursen in Englisch, Deutsch und Russisch bietet Rozmluv auch Unterricht in Tschechisch für Ausländer sowie in Chinesisch und Vietnamesisch an.',
+    whatEn:
+      'Increase in the number of students - customers. Interaction with the audience. Optimization and improvement of social media. Creative content creation. Content strategy and planning.',
+    whatCz:
+      'Zvýšení počtu studentů - zákazníků. Interakce s publikem. Optimalizace a zlepšení sociálních sítí. Kreativní tvorba obsahu. Strategie a plánování obsahu.',
+    whatDe:
+      'Erhöhung der Zahl der Studenten - Kunden. Interaktion mit dem Publikum. Optimierung und Verbesserung der sozialen Medien. Kreative Erstellung von Inhalten. Strategie und Planung von Inhalten.',
   },
   {
     title: 'Escape Nights',
