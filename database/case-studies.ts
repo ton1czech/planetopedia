@@ -92,7 +92,7 @@ export const caseStudies = [
     categoryCz: 'Pořádání Eventů',
     categoryDe: 'Organisieren von Veranstaltungen',
     href: '/case-studies/escape-nights',
-    image: '/case-studies/rozmluv-se/thumbnail.webp',
+    image: '/case-studies/escape-nights/thumbnail.webp',
     servicesEn: ['brand building', 'events'],
     servicesCz: ['budování značky', 'akce'],
     servicesDe: ['Markenbildung', 'Veranstaltungen'],
