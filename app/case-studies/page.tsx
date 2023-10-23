@@ -23,6 +23,7 @@ export default function CaseStudies() {
                   <div className='text-sm text-center text-zinc-600 md:text-left'>
                     {language === 'en' && <p>{casestudy.categoryEn}</p>}
                     {language === 'cs' && <p>{casestudy.categoryCz}</p>}
+                    {language === 'de' && <p>{casestudy.categoryDe}</p>}
                   </div>
                 </div>
                 <div className='text-center text-zinc-800 md:text-lg md:text-left'>
@@ -40,10 +41,18 @@ export default function CaseStudies() {
                       ))}
                     </p>
                   )}
+                  {language === 'de' && (
+                    <p>
+                      {casestudy.servicesDe.map(service => (
+                        <p>{service}</p>
+                      ))}
+                    </p>
+                  )}
                 </div>
                 <button className='px-4 py-2 text-sm transition rounded-md w-min h-min ring-1 ring-black hover:text-white hover:bg-black whitespace-nowrap'>
                   {language === 'en' && <>Learn More</>}
                   {language === 'cs' && <>Dozvědět se více</>}
+                  {language === 'de' && <>Mehr erfahren</>}
                 </button>
               </div>
               <div className='relative w-full overflow-hidden transition duration-500 aspect-video group-hover:shadow-lg'>

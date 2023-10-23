@@ -29,12 +29,14 @@ export default function FarmaHajek() {
       />
       <Who
         title={caseStudies[0].title}
-        bodyCz='Farma Hájek je českou rodinnou farmou, která se specializuje na celoroční chov kuřat a slepic na volné podestýlce, výrobu čerstvých vajec a pěstování kvalitních brambor. S hrdostí dbají na tradici a kvalitu, a to nejen v chovu zvířat, ale i v moderním designu kurníků, které jsou inspirovány českým lesem. Farma Hájek není jen farmou, ale jsou to vášniví chovatelé a zemědělci, kteří si zakládají na kvalitě a udržitelnosti.'
-        bodyEn='Farm Hájek is a Czech family farm specializing in year-round free-range chicken and hen rearing, fresh egg production, and the cultivation of high-quality potatoes. They take pride in upholding tradition and quality, not only in animal husbandry but also in the modern design of coops inspired by the Czech forest. Farm Hájek is not just a farm; they are passionate breeders and farmers who value quality and sustainability.'
+        bodyEn={caseStudies[0].whoEn!}
+        bodyCz={caseStudies[0].whoCz!}
+        bodyDe={caseStudies[0].whoDe!}
       />
       <What
-        bodyCz='Zvýšit podvědomí o značce. Nový, moderní web. Optimalizace reklamních kampaní. Správa sociálních sítí. Budování značky online. Organizace akcí.'
-        bodyEn='To increase brand awareness. Create a new, modern website. Optimize advertising campaigns. Manage social media. Build the brand online. Organize events.'
+        bodyEn={caseStudies[0].whatEn!}
+        bodyCz={caseStudies[0].whatCz!}
+        bodyDe={caseStudies[0].whatDe!}
       />
       <Results>
         <Web />
