@@ -18,6 +18,7 @@ const CreatorsGrid = ({ creators }: CreatorsGridProps) => {
             code,
             locationCz,
             locationEn,
+            locationDe,
             followers,
           }: any) => (
             <Creator
@@ -29,6 +30,7 @@ const CreatorsGrid = ({ creators }: CreatorsGridProps) => {
               code={code}
               locationCz={locationCz}
               locationEn={locationEn}
+              locationDe={locationDe}
               followers={followers}
             />
           )
