@@ -14,6 +14,8 @@ const CreatorsGrid = ({ creators }: CreatorsGridProps) => {
   const { language } = useLanguage(state => state)
 
   const [countryCode, setCountryCode] = useState<string>('')
+  const [followers, setFollowers] = useState<number | undefined>(undefined)
+  const [categories, setCategories] = useState<any>(undefined)
 
   const getFilteredClients = (countryCode: string) => {
     if (!countryCode) return creators
@@ -24,8 +26,6 @@ const CreatorsGrid = ({ creators }: CreatorsGridProps) => {
   }
 
   const filteredClients = getFilteredClients(countryCode)
-
-  console.log(filteredClients)
 
   return (
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>

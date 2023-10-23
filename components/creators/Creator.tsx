@@ -77,32 +77,33 @@ const Creator = ({
           </p>
         </div>
         <div className='text-sm flex gap-x-2'>
-          {categories.map((category: any) => (
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  {category === 'Photographer' && (
-                    <>
-                      <Camera className='stroke-zinc-700' />
-                    </>
-                  )}
-                  {category === 'Videographer' && (
-                    <>
-                      <Video className='stroke-zinc-700' />
-                    </>
-                  )}
-                  {category === 'Influencer' && (
-                    <>
-                      <LineChart className='stroke-zinc-700' />
-                    </>
-                  )}
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{category}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-          ))}
+          {categories &&
+            categories.map((category: any) => (
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    {category === 'Photographer' && (
+                      <>
+                        <Camera className='stroke-zinc-700' />
+                      </>
+                    )}
+                    {category === 'Videographer' && (
+                      <>
+                        <Video className='stroke-zinc-700' />
+                      </>
+                    )}
+                    {category === 'Influencer' && (
+                      <>
+                        <LineChart className='stroke-zinc-700' />
+                      </>
+                    )}
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{category}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            ))}
         </div>
       </div>
     </Link>
