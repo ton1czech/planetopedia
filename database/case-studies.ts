@@ -81,7 +81,7 @@ export const caseStudies = [
     whatDe: '',
   },
   {
-    title: 'Escape Night',
+    title: 'Escape Nights',
     categoryEn: 'Organizing Events',
     categoryCz: 'Pořádání Eventů',
     categoryDe: 'Organisieren von Veranstaltungen',
