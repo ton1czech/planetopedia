@@ -6,16 +6,30 @@ import BrandBuilding from '@/components/case-studies/frantisek-hrom/BrandBuildin
 import { caseStudies } from '@/database/case-studies'
 
 export default function FrantisekHrom() {
+  const {
+    title,
+    servicesEn,
+    servicesCz,
+    servicesDe,
+    whoEn,
+    whoCz,
+    whoDe,
+    whatEn,
+    whatCz,
+    whatDe,
+  } = caseStudies.filter((data: any) => data.title === 'František Hrom')[0]
+
   return (
     <div className='pt-24 pb-20 bg-white md:pb-32 md:pt-32'>
       <Hero
         img='/case-studies/frantisek-hrom/hero.webp'
-        servicesCz={['budování značky', 'marketing']}
-        servicesEn={['brand building', 'marketing']}
-        title='František hrom'
+        servicesEn={servicesEn}
+        servicesCz={servicesCz}
+        servicesDe={servicesDe}
+        title={title}
       />
-      <Who title={caseStudies[1].title} bodyCz='borec' bodyEn='borec' />
-      <What bodyCz='borec' bodyEn='borec' />
+      <Who title={title} bodyEn={whoEn} bodyCz={whoCz} bodyDe={whoDe} />
+      <What bodyEn={whatEn} bodyCz={whatCz} bodyDe={whatDe} />
 
       <Results>
         <BrandBuilding />

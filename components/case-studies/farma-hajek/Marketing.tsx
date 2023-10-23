@@ -40,7 +40,8 @@ const Marketing = () => {
           'September',
           'October',
         ]
-      : [
+      : language === 'cs'
+      ? [
           'Leden',
           'Únor',
           'Březen',
@@ -52,6 +53,20 @@ const Marketing = () => {
           'Září',
           'Říjen',
         ]
+      : language === 'de'
+      ? [
+          'Januar',
+          'Februar',
+          'März',
+          'April',
+          'Mai',
+          'Juni',
+          'Juli',
+          'August',
+          'September',
+          'Oktober',
+        ]
+      : []
 
   const data = {
     labels,
@@ -88,6 +103,7 @@ const Marketing = () => {
       <h2 className='text-lg md:text-xl'>
         {language === 'en' && <>~ Marketing Results</>}
         {language === 'cs' && <>~ Marketingové Výsledky</>}
+        {language === 'en' && <>~ Marketing-Ergebnisse</>}
       </h2>
 
       <Line data={data} options={options} />

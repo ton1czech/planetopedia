@@ -11,6 +11,7 @@ const Events = () => {
       <h2 className='text-lg md:text-xl'>
         {language === 'en' && <>~ Events</>}
         {language === 'cs' && <>~ Akce</>}
+        {language === 'en' && <>~ Veranstaltungen</>}
       </h2>
       <p className='mb-4'>
         {language === 'en' && (
@@ -28,6 +29,16 @@ const Events = () => {
             vytrvalosti a zábavy, která se odehrává v srdci českého venkova.
             Tyto akce přinášejí nejen vzrušující sportovní výzvy, ale také
             umožňují účastníkům prožít pravé zemědělské prostředí Farmy Hájek.
+          </>
+        )}
+        {language === 'de' && (
+          <>
+            Die Strongman-Veranstaltungen auf der Farm Hájek sind eine
+            einzigartige Mischung aus Kraft, Ausdauer und Unterhaltung, die im
+            Herzen der tschechischen Landschaft. Diese Veranstaltungen bieten
+            nicht nur aufregende sportliche Herausforderungen, sondern bieten
+            den Teilnehmern auch die Möglichkeit, in die in die authentische
+            landwirtschaftliche Umgebung des Bauernhofs Hájek einzutauchen.
           </>
         )}
       </p>

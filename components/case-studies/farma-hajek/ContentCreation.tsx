@@ -10,6 +10,7 @@ const ContentCreation = () => {
       <h2 className='text-lg md:text-xl'>
         {language === 'en' && <>~ Content Creation</>}
         {language === 'cs' && <>~ Tvorba Obsahu</>}
+        {language === 'de' && <>~ Erstellung von Inhalten</>}
       </h2>
     </div>
   )

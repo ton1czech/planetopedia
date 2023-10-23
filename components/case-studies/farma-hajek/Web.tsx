@@ -14,6 +14,7 @@ const Web = () => {
       <h2 className='text-lg md:text-xl mb-4 md:mb-10'>
         {language === 'en' && <>~ Web Development</>}
         {language === 'cs' && <>~ Tvorba Webu</>}
+        {language === 'en' && <>~ Web-Entwicklung</>}
       </h2>
 
       <ReactCompareSlider
@@ -22,12 +23,20 @@ const Web = () => {
             src={
               language === 'en'
                 ? '/case-studies/farma-hajek/old-web-en.webp'
-                : '/case-studies/farma-hajek/old-web-cz.webp'
+                : language === 'cs'
+                ? '/case-studies/farma-hajek/old-web-cz.webp'
+                : language === 'de'
+                ? '/case-studies/farma-hajek/old-web-en.webp'
+                : ''
             }
             srcSet={
               language === 'en'
                 ? '/case-studies/farma-hajek/old-web-en.webp'
-                : '/case-studies/farma-hajek/old-web-cz.webp'
+                : language === 'cs'
+                ? '/case-studies/farma-hajek/old-web-cz.webp'
+                : language === 'de'
+                ? '/case-studies/farma-hajek/old-web-en.webp'
+                : ''
             }
             alt='old web'
           />
@@ -37,12 +46,20 @@ const Web = () => {
             src={
               language === 'en'
                 ? '/case-studies/farma-hajek/new-web-en.webp'
-                : '/case-studies/farma-hajek/new-web-cz.webp'
+                : language === 'cs'
+                ? '/case-studies/farma-hajek/new-web-cz.webp'
+                : language === 'de'
+                ? '/case-studies/farma-hajek/new-web-en.webp'
+                : ''
             }
             srcSet={
               language === 'en'
                 ? '/case-studies/farma-hajek/new-web-en.webp'
-                : '/case-studies/farma-hajek/new-web-cz.webp'
+                : language === 'cs'
+                ? '/case-studies/farma-hajek/new-web-cz.webp'
+                : language === 'de'
+                ? '/case-studies/farma-hajek/new-web-en.webp'
+                : ''
             }
             alt='new web'
           />
@@ -51,32 +68,45 @@ const Web = () => {
       />
 
       <ul className='mt-4 md:mt-10'>
-        <li>{language === 'en' ? <>- Modern UI</> : <>- Moderní UI</>}</li>
         <li>
-          {language === 'en' ? (
-            <>- Newest technology</>
-          ) : (
-            <>- Nejnovější technologie</>
-          )}
+          {language === 'en' && <>- Modern UI</>}
+          {language === 'cs' && <>- Moderní UI</>}
+          {language === 'de' && <>- Moderne UI</>}
         </li>
-        <li>{language === 'en' ? <>- Otimization</> : <>- Optimalizace</>}</li>
-        <li>{language === 'en' ? <>- SEO</> : <>- SEO</>}</li>
         <li>
-          {language === 'en' ? (
-            <>- Mobile Responsive</>
-          ) : (
-            <>- Responzivní na mobilních zařízení</>
-          )}
+          {language === 'en' && <>- Newest technology</>}
+          {language === 'cs' && <>- Nejnovější technologie</>}
+          {language === 'de' && <>- Die neueste Technologie</>}
         </li>
-        <li>{language === 'en' ? <>- Newsletter</> : <>- Newsletter</>}</li>
-        <li>{language === 'en' ? <>- Email Form</> : <>- Email Formulář</>}</li>
-        <li>{language === 'en' ? <>- EmailForm</> : <>- Email Formulář</>}</li>
         <li>
-          {language === 'en' ? (
-            <>- Multilingual (cz, en ,de)</>
-          ) : (
-            <>- Vícejazyčný (cz, en, de)</>
-          )}
+          {language === 'en' && <>- Otimization</>}
+          {language === 'cs' && <>- Optimalizace</>}
+          {language === 'de' && <>- Otimierung</>}
+        </li>
+        <li>
+          {language === 'en' && <>- SEO</>}
+          {language === 'cs' && <>- SEO</>}
+          {language === 'de' && <>- SEO</>}
+        </li>
+        <li>
+          {language === 'en' && <>- Mobile Responsive</>}
+          {language === 'cs' && <>- Responzivní na mobilních zařízení</>}
+          {language === 'de' && <>- Mobil ansprechbar</>}
+        </li>
+        <li>
+          {language === 'en' && <>- Newsletter</>}
+          {language === 'cs' && <>- Newsletter</>}
+          {language === 'de' && <>- Newsletter</>}
+        </li>
+        <li>
+          {language === 'en' && <>- Email Form</>}
+          {language === 'cs' && <>- Email Formulář</>}
+          {language === 'de' && <>- E-Mail-Formular</>}
+        </li>
+        <li>
+          {language === 'en' && <>- Multilingual (cz, en ,de)</>}
+          {language === 'cs' && <>- Vícejazyčný (cz, en, de)</>}
+          {language === 'de' && <>- Mehrsprachig (cz, en ,de)</>}
         </li>
       </ul>
     </div>

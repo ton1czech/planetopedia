@@ -9,9 +9,16 @@ interface HeroProps {
   img: string
   servicesCz: string[]
   servicesEn: string[]
+  servicesDe: string[]
 }
 
-const Hero = ({ title, servicesCz, servicesEn, img }: HeroProps) => {
+const Hero = ({
+  title,
+  servicesCz,
+  servicesEn,
+  servicesDe,
+  img,
+}: HeroProps) => {
   const { language } = useLanguage(state => state)
 
   return (
@@ -35,6 +42,18 @@ const Hero = ({ title, servicesCz, servicesEn, img }: HeroProps) => {
         {language === 'cs' && (
           <div>
             {servicesCz.map(service => (
+              <p
+                key={service}
+                className='text-zinc-700 text-lg md:text-xl text-right'
+              >
+                {service}
+              </p>
+            ))}
+          </div>
+        )}
+        {language === 'de' && (
+          <div>
+            {servicesDe.map(service => (
               <p
                 key={service}
                 className='text-zinc-700 text-lg md:text-xl text-right'

@@ -15,6 +15,7 @@ const Results = ({ children }: ResultsProps) => {
       <h2 className='text-2xl md:text-3xl lg:text-4xl font-semibold pt-6 md:pt-12 xl:pt-20'>
         {language === 'en' && <>Results</>}
         {language === 'cs' && <>Výsledky</>}
+        {language === 'de' && <>Ergebnisse</>}
       </h2>
       <div className='flex flex-col gap-6 md:gap-12 xl:gap-20'>{children}</div>
     </Container>

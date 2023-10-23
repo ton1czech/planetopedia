@@ -47,6 +47,18 @@ export const caseStudies = [
     servicesCz: ['budování značky', 'marketing'],
     servicesEn: ['brand building', 'marketing'],
     servicesDe: ['Markenbildung', 'Marketing'],
+    whoEn:
+      'František Hrom is an influencer and entertainer. A character created in order to create entertainment and successfully reach the vast majority of target groups throughout the Czech Republic & Slovakia.',
+    whoCz:
+      'František Hrom je influencer a bavič. Postava vytvořená za účelem vytvářet zábavu a úspěšně oslovit drtivou většinu cílových skupin po celé ČR a SR.',
+    whoDe:
+      'František Hrom ist ein Influencer und Entertainer. Eine Figur, die geschaffen wurde, um Unterhaltung zu schaffen und die große Mehrheit der Zielgruppen in der Tschechischen Republik und der Slowakei erfolgreich zu erreichen.',
+    whatEn:
+      'To create a well-known and viral persona together with Lukáš Duchek - an actor and founder of the LuMi cafe. A character reflecting a Czech citizen and Czech humor, suitable for most marketing campaigns.',
+    whatCz:
+      'Vytvořit známou a virální personu společně s Lukášem Duchkem - herec a zakladatel LuMi kavárny. Charakter reflektující českého občana a český humor, vhodný pro většinu marketingových kampaní.',
+    whatDe:
+      'Zusammen mit Lukáš Duchek - einem Schauspieler und Gründer des Cafés LuMi - eine bekannte und virale Persona zu schaffen. Eine Figur, die einen tschechischen Bürger und tschechischen Humor widerspiegelt und für die meisten Marketingkampagnen geeignet ist.',
   },
   {
     title: 'Rozmluv se',
@@ -61,6 +73,12 @@ export const caseStudies = [
       'Marketing - Gewinnung von x neuen Studenten',
       'Erstellung von Inhalten',
     ],
+    whoEn: '',
+    whoCz: '',
+    whoDe: '',
+    whatEn: '',
+    whatCz: '',
+    whatDe: '',
   },
   {
     title: 'Escape Night',
@@ -72,6 +90,12 @@ export const caseStudies = [
     servicesEn: ['brand building', 'events'],
     servicesCz: ['budování značky', 'akce'],
     servicesDe: ['Markenbildung', 'Veranstaltungen'],
+    whoEn: '',
+    whoCz: '',
+    whoDe: '',
+    whatEn: '',
+    whatCz: '',
+    whatDe: '',
   },
   {
     title: 'Heys Luggage',
@@ -83,6 +107,12 @@ export const caseStudies = [
     servicesEn: ['influencer campaign', 'marketing', 'content creation'],
     servicesCz: ['influencerská kampaň', 'marketing', 'tvorba obsahu'],
     servicesDe: ['Influencer-Kampagne', 'Marketing', 'Erstellung von Inhalten'],
+    whoEn: '',
+    whoCz: '',
+    whoDe: '',
+    whatEn: '',
+    whatCz: '',
+    whatDe: '',
   },
   {
     title: 'Four Seasons',
@@ -94,5 +124,11 @@ export const caseStudies = [
     servicesEn: ['content creation', 'marketing'],
     servicesCz: ['tvorba obsahu', 'marketing'],
     servicesDe: ['Erstellung von Inhalten', 'Marketing'],
+    whoEn: '',
+    whoCz: '',
+    whoDe: '',
+    whatEn: '',
+    whatCz: '',
+    whatDe: '',
   },
 ]
