@@ -15,7 +15,7 @@ const Who = ({ bodyCz, bodyEn, bodyDe, title }: WhoProps) => {
 
   return (
     <Container>
-      <h2 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold pt-6 md:pt-12 xl:pt-20'>
+      <h2 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold pt-6 md:pt-12 xl:pt-20 mb-2'>
         {language === 'en' && <>Who is {title}</>}
         {language === 'cs' && <>Kdo je {title}</>}
         {language === 'de' && <>Wer ist {title}</>}
