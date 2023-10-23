@@ -17,7 +17,6 @@ interface CreatorProps {
   name: string
   instagram: string
   categories: any
-  code: string
   locationCz: string
   locationEn: string
   locationDe: string
@@ -29,7 +28,6 @@ const Creator = ({
   name,
   instagram,
   categories,
-  code,
   locationCz,
   locationEn,
   locationDe,
@@ -67,7 +65,16 @@ const Creator = ({
             {language === 'cs' && <>{locationCz}</>}
             {language === 'de' && <>{locationDe}</>}
           </p>
-          <p className='font-medium text-zinc-800'>{followers} followers</p>
+          <p className='font-medium text-zinc-800'>
+            {followers}{' '}
+            {language === 'en'
+              ? 'followers'
+              : language === 'cs'
+              ? 'sledujících'
+              : language === 'de'
+              ? 'Anhänger'
+              : ''}
+          </p>
         </div>
         <div className='text-sm flex gap-x-2'>
           {categories.map((category: any) => (
