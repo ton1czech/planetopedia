@@ -91,11 +91,11 @@ export default function Team() {
           }
           body={
             language === 'en'
-              ? 'borec'
+              ? 'Daniel Anthony Baudyš is self-taught in design and programming. He has been working in design and photography since 2015 and programming since 2019. During this time he has created dozens of projects, both for himself and for clients. His portfolio includes graphic design for inflation in the Czech Republic, automation applications, websites for regional entrepreneurs, and several projects for the Pilsen Region Authority. He has also given several educational lectures for children, mainly in Minecraft. Currently, his main focus is web development using the latest technologies, of which he is developing his knowledge every day. It is also important to mention that he successfully passed the Microsoft Office Specialist exams in PowerPoint and Word at the Bett 2023 event in London.'
               : language === 'cs'
-              ? 'borec'
+              ? 'Daniel Anthony Baudyš je samouk v oblasti designu a programování. Designu a fotografování se věnuje již od roku 2015, programování následně od roku 2019. Za tuto dobu stihl vytvořit desítky projektů, ať už sám pro sebe, tak i pro klienty. Jeho portfolia zahrnuje grafické zpracování inflace v České republice, automatizační aplikace, webové stránky pro regionální podnikatele, a několik projektů pro úřad Plzeňského kraje. Také vedl několik výukových přednášek pro děti, především v Minecraftu. V současné době je jeho hlavním zaměřením tvorba webových stránek pomocí nejnovějších technologií, o kterých svou znalost rozvíjí každý den. Důležité je také zmínit, že úspěšně absolvoval Microsoft Office Specialist zkoušky z PowerPointu a Wordu na akci Bett 2023 v Londýně.'
               : language === 'de'
-              ? 'borec'
+              ? 'Daniel Anthony Baudyš ist Autodidakt in Design und Programmierung. Er arbeitet seit 2015 im Bereich Design und Fotografie und seit 2019 im Bereich Programmierung. In dieser Zeit hat er Dutzende von Projekten sowohl für sich selbst als auch für Kunden erstellt. Sein Portfolio umfasst Grafikdesign für die Inflation in der Tschechischen Republik, Automatisierungsanwendungen, Websites für regionale Unternehmer und mehrere Projekte für die Behörde der Region Pilsen. Er hat auch mehrere pädagogische Vorlesungen für Kinder gehalten, hauptsächlich in Minecraft. Gegenwärtig liegt sein Schwerpunkt auf der Webentwicklung mit den neuesten Technologien, deren Kenntnisse er täglich erweitert. Es ist auch wichtig zu erwähnen, dass er die Prüfungen zum Microsoft Office Specialist in PowerPoint und Word auf der Veranstaltung Bett 2023 in London erfolgreich abgelegt hat.'
               : ''
           }
           links={[
