@@ -3,6 +3,7 @@ import Results from '@/components/case-studies/Results'
 import What from '@/components/case-studies/What'
 import Who from '@/components/case-studies/Who'
 import BrandBuilding from '@/components/case-studies/frantisek-hrom/BrandBuilding'
+import Marketing from '@/components/case-studies/frantisek-hrom/Marketing'
 import { caseStudies } from '@/database/case-studies'
 
 export default function FrantisekHrom() {
@@ -33,6 +34,7 @@ export default function FrantisekHrom() {
 
       <Results>
         <BrandBuilding />
+        <Marketing />
       </Results>
     </div>
   )

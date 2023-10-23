@@ -14,6 +14,7 @@ const BrandBuilding = () => {
       <h2 className='text-lg md:text-xl'>
         {language === 'en' && <>~ Brand Building</>}
         {language === 'cs' && <>~ Budování Značky</>}
+        {language === 'de' && <>~ Markenbildung</>}
       </h2>
 
       <ReactCompareSlider
