@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Check, ChevronsUpDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
@@ -6,13 +6,15 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover'
-import { Command, CommandGroup, CommandItem } from '@/components/ui/command'
+import { Command, CommandGroup } from '@/components/ui/command'
+import { useLanguage } from '@/store/useLanguage'
 
 interface FollowersProps {
   setFollowers: any
 }
 
 export function Followers({ setFollowers }: FollowersProps) {
+  const { language } = useLanguage(state => state)
   const [open, setOpen] = useState(false)
   const [selectedRange, setSelectedRange] = useState<{
     min: number
@@ -27,9 +29,8 @@ export function Followers({ setFollowers }: FollowersProps) {
   ]
 
   useEffect(() => {
-    // Při prvním načtení zobraz všechny tvůrce
     setFollowers({ min: 0, max: Infinity })
-  }, []) // useEffect se spustí pouze jednou po prvním renderu
+  }, [])
 
   const applyFilter = (min: number, max: number) => {
     setFollowers({ min, max })
@@ -47,7 +48,13 @@ export function Followers({ setFollowers }: FollowersProps) {
         >
           {selectedRange
             ? `${selectedRange.min} - ${selectedRange.max}`
-            : 'Select followers range...'}
+            : language === 'en'
+            ? 'Select followers range...'
+            : language === 'cs'
+            ? 'Vyberte rozsah sledujících'
+            : language === 'de'
+            ? 'Anhängerbereich auswählen...'
+            : ''}
           <ChevronsUpDown className='ml-2 h-4 w-4 shrink-0 opacity-50' />
         </Button>
       </PopoverTrigger>
@@ -68,7 +75,7 @@ export function Followers({ setFollowers }: FollowersProps) {
                     selectedRange?.max === max
                   ) {
                     setSelectedRange(null)
-                    applyFilter(0, Infinity) // Nastavíme rozsah na všechny hodnoty
+                    applyFilter(0, Infinity)
                   } else {
                     setSelectedRange({ min, max })
                     applyFilter(min, max)
