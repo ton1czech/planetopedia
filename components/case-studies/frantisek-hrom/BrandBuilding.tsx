@@ -12,9 +12,9 @@ const BrandBuilding = () => {
   return (
     <div>
       <h2 className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'>
-        {language === 'en' && <>/ Brand Building</>}
-        {language === 'cs' && <>/ Budování Značky</>}
-        {language === 'de' && <>/ Markenbildung</>}
+        {language === 'en' && <>/ From 0 to 100,000 in a month</>}
+        {language === 'cs' && <>/ Z 0 na 100.000 za měsíc</>}
+        {language === 'de' && <>/ Von 0 bis 100.000 pro Monat</>}
       </h2>
 
       <ReactCompareSlider

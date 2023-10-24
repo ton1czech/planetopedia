@@ -41,9 +41,9 @@ const Marketing = () => {
   return (
     <div>
       <h2 className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'>
-        {language === 'en' && <>/ From 0 to 100,000 in a month</>}
-        {language === 'cs' && <>/ Z 0 na 100.000 za měsíc</>}
-        {language === 'de' && <>/ Von 0 bis 100.000 pro Monat</>}
+        {language === 'en' && <>/ In the last 30 days</>}
+        {language === 'cs' && <>/ Za posledních 30 dní</>}
+        {language === 'de' && <>/ Für die letzten 30 Tage</>}
       </h2>
 
       <div className='flex flex-col md:flex-row  items-center gap-2 md:gap-8 md:justify-between'>
