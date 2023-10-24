@@ -36,6 +36,14 @@ export const caseStudies = [
       'Zvýšit podvědomí o značce. Nový, moderní web. Optimalizace reklamních kampaní. Správa sociálních sítí. Budování značky online. Organizace akcí.',
     whatDe:
       'Steigerung der Markenbekanntheit. Eine neue, moderne Website erstellen. Optimieren von Werbekampagnen. Soziale Medien verwalten. Die Marke online aufbauen. Veranstaltungen organisieren.',
+    contentSrcs: [
+      '/case-studies/farma-hajek/content/1.webp',
+      '/case-studies/farma-hajek/content/2.webp',
+      '/case-studies/farma-hajek/content/3.webp',
+      '/case-studies/farma-hajek/content/4.webp',
+      '/case-studies/farma-hajek/content/5.webp',
+      '/case-studies/farma-hajek/content/6.webp',
+    ],
   },
   {
     title: 'František Hrom',

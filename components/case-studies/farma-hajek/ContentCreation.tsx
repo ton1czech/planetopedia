@@ -1,8 +1,13 @@
 'use client'
 
 import { useLanguage } from '@/store/useLanguage'
+import Image from 'next/image'
 
-const ContentCreation = () => {
+interface ContentCreation {
+  images: string[] | undefined
+}
+
+const ContentCreation = ({ images }: ContentCreation) => {
   const { language } = useLanguage(state => state)
 
   return (
@@ -12,6 +17,18 @@ const ContentCreation = () => {
         {language === 'cs' && <>/ Tvorba Obsahu</>}
         {language === 'de' && <>/ Erstellung von Inhalten</>}
       </h2>
+
+      <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4'>
+        {images?.map(image => (
+          <Image
+            src={image}
+            alt='content creation'
+            width={450}
+            height={450}
+            className='aspect-square object-cover -rotate-90'
+          />
+        ))}
+      </div>
     </div>
   )
 }

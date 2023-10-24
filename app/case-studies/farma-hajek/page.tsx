@@ -20,6 +20,7 @@ export default function FarmaHajek() {
     whatEn,
     whatCz,
     whatDe,
+    contentSrcs,
   } = caseStudies.filter((data: any) => data.title === 'Farma Hájek')[0]
 
   return (
@@ -37,7 +38,7 @@ export default function FarmaHajek() {
         <Web />
         <Marketing />
         <Events />
-        <ContentCreation />
+        <ContentCreation images={contentSrcs} />
       </Results>
     </div>
   )
