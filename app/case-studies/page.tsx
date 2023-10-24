@@ -29,7 +29,7 @@ export default function CaseStudies() {
                     {language === 'de' && <p>{casestudy.categoryDe}</p>}
                   </div>
                 </div>
-                <div className='text-right text-zinc-800 md:text-lg md:text-left'>
+                <div className='text-right text-zinc-800 md:text-lg md:text-left uppercase'>
                   {language === 'en' && (
                     <p>
                       {casestudy.servicesEn.map(service => (
