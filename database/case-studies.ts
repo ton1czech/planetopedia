@@ -44,6 +44,24 @@ export const caseStudies = [
       '/case-studies/farma-hajek/content/5.webp',
       '/case-studies/farma-hajek/content/6.webp',
     ],
+    links: [
+      {
+        site: 'web',
+        url: 'https://www.farmahajek.cz',
+      },
+      {
+        site: 'instagram',
+        url: 'https://www.instagram.com/farmahajek/',
+      },
+      {
+        site: 'tiktok',
+        url: 'https://www.tiktok.com/@farmahajek',
+      },
+      {
+        site: 'facebook',
+        url: 'https://www.facebook.com/profile.php?id=100092479713291',
+      },
+    ],
   },
   {
     title: 'František Hrom',

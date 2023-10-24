@@ -1,4 +1,5 @@
 import Hero from '@/components/case-studies/Hero'
+import Links from '@/components/case-studies/Links'
 import Results from '@/components/case-studies/Results'
 import What from '@/components/case-studies/What'
 import Who from '@/components/case-studies/Who'
@@ -21,6 +22,7 @@ export default function FarmaHajek() {
     whatCz,
     whatDe,
     contentSrcs,
+    links,
   } = caseStudies.filter((data: any) => data.title === 'Farma Hájek')[0]
 
   return (
@@ -40,6 +42,7 @@ export default function FarmaHajek() {
         <Events />
         <ContentCreation images={contentSrcs} />
       </Results>
+      <Links links={links} />
     </div>
   )
 }
