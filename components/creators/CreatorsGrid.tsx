@@ -6,6 +6,7 @@ import Creator from './Creator'
 import { Country } from './filters/Country'
 import { useLanguage } from '@/store/useLanguage'
 import { Skills } from './filters/Skills'
+import Followers from './filters/Followers'
 
 interface CreatorsGridProps {
   creators: any
@@ -26,7 +27,11 @@ const CreatorsGrid = ({ creators }: CreatorsGridProps) => {
     creators[0].code.toLowerCase().includes(countryCode.toLowerCase())
   )
 
-  const getFilteredClients = (countryCode: string, skill: string) => {
+  const getFilteredClients = (
+    countryCode: string,
+    skill: string,
+    followers: number | undefined
+  ) => {
     if (!countryCode) return creators
 
     return creators.filter(
@@ -36,13 +41,14 @@ const CreatorsGrid = ({ creators }: CreatorsGridProps) => {
     )
   }
 
-  const filteredClients = getFilteredClients(countryCode, skill)
+  const filteredClients = getFilteredClients(countryCode, skill, followers)
 
   return (
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
       <Container className='grid w-full gap-4 lg:grid-cols-3 lg:gap-12'>
         <Country setCountryCode={setCountryCode} />
         <Skills setSkill={setSkill} />
+        <Followers setFollowers={setFollowers} />
       </Container>
       <Container>
         <div className='w-full h-px bg-zinc-600/30 my-4 lg:my-8' />
