@@ -66,7 +66,7 @@ const Creator = ({
             {language === 'de' && <>{locationDe}</>}
           </p>
           <p className='font-medium text-zinc-800'>
-            {followers}{' '}
+            {followers.toLocaleString()}{' '}
             {language === 'en'
               ? 'followers'
               : language === 'cs'
