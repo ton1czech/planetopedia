@@ -5,6 +5,7 @@ import Container from '../Container'
 import Creator from './Creator'
 import { Country } from './filters/Country'
 import { useLanguage } from '@/store/useLanguage'
+import { Skills } from './filters/Skills'
 
 interface CreatorsGridProps {
   creators: any
@@ -15,22 +16,33 @@ const CreatorsGrid = ({ creators }: CreatorsGridProps) => {
 
   const [countryCode, setCountryCode] = useState<string>('')
   const [followers, setFollowers] = useState<number | undefined>(undefined)
-  const [categories, setCategories] = useState<any>(undefined)
+  const [skill, setSkill] = useState<string>('')
 
-  const getFilteredClients = (countryCode: string) => {
+  console.log(skill)
+  console.log(creators[0].categories)
+  console.log('skills', creators[0].categories.includes(skill))
+  console.log(
+    'countries',
+    creators[0].code.toLowerCase().includes(countryCode.toLowerCase())
+  )
+
+  const getFilteredClients = (countryCode: string, skill: string) => {
     if (!countryCode) return creators
 
-    return creators.filter((creator: any) =>
-      creator.code.toLowerCase().includes(countryCode.toLowerCase())
+    return creators.filter(
+      (creator: any) =>
+        creator.code.toLowerCase().includes(countryCode.toLowerCase()) &&
+        creator.categories.toLowerCase().includes(skill.toLowerCase())
     )
   }
 
-  const filteredClients = getFilteredClients(countryCode)
+  const filteredClients = getFilteredClients(countryCode, skill)
 
   return (
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
-      <Container className='grid w-full gap-6 lg:grid-cols-3 md:gap-12'>
+      <Container className='grid w-full gap-4 lg:grid-cols-3 lg:gap-12'>
         <Country setCountryCode={setCountryCode} />
+        <Skills setSkill={setSkill} />
       </Container>
       <Container>
         <div className='w-full h-px bg-zinc-600/30 my-4 lg:my-8' />
