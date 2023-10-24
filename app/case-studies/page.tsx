@@ -15,7 +15,7 @@ export default function CaseStudies() {
         <div className='flex flex-col gap-14 md:gap-24'>
           {caseStudies.map(casestudy => (
             <Link href={casestudy.href} className='grid group md:grid-cols-2'>
-              <div className='flex flex-col justify-between'>
+              <div className='flex flex-col justify-between order-2 md:order-1 gap-4'>
                 <div>
                   <h3 className='mb-1 text-2xl font-black text-center md:text-3xl lg:text-4xl md:text-left'>
                     {casestudy.title}
@@ -49,7 +49,7 @@ export default function CaseStudies() {
                     </p>
                   )}
                 </div>
-                <button className='px-4 py-2 text-sm transition rounded-md w-min h-min ring-1 ring-black hover:text-white hover:bg-black whitespace-nowrap'>
+                <button className='px-4 py-2 text-sm transition rounded-md w-full md:w-min h-min ring-1 ring-black hover:text-white hover:bg-black whitespace-nowrap'>
                   {language === 'en' && <>Learn More</>}
                   {language === 'cs' && <>Dozvědět se více</>}
                   {language === 'de' && <>Mehr erfahren</>}
