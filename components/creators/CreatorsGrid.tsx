@@ -6,7 +6,7 @@ import Creator from './Creator'
 import { Country } from './filters/Country'
 import { useLanguage } from '@/store/useLanguage'
 import { Skills } from './filters/Skills'
-import Followers from './filters/Followers'
+import { Followers } from './filters/Followers'
 
 interface CreatorsGridProps {
   creators: any
@@ -16,24 +16,34 @@ const CreatorsGrid = ({ creators }: CreatorsGridProps) => {
   const { language } = useLanguage(state => state)
 
   const [countryCode, setCountryCode] = useState<string>('')
-  const [followers, setFollowers] = useState<number | undefined>(undefined)
+  const [followers, setFollowers] = useState<any>({
+    min: undefined,
+    max: undefined,
+  })
   const [skill, setSkill] = useState<string>('')
 
   const getFilteredClients = (
     countryCode: string,
     skill: string,
-    followers: number | undefined
+    followers: { min: number; max: number } | undefined
   ) => {
-    let filteredCreators = creators.filter((creator: any) => {
+    if (!countryCode && !skill && !followers) {
+      return creators
+    }
+
+    const filteredCreators = creators.filter((creator: any) => {
       const matchesCountry =
-        creator.code &&
-        creator.code.toLowerCase().includes(countryCode.toLowerCase())
+        !countryCode ||
+        (creator.code &&
+          creator.code.toLowerCase().includes(countryCode.toLowerCase()))
 
-      const matchesSkill = skill
-        ? creator.categories && creator.categories.includes(skill)
-        : true
+      const matchesSkill =
+        !skill || (creator.categories && creator.categories.includes(skill))
 
-      const matchesFollowers = followers ? creator.followers >= followers : true
+      const matchesFollowers =
+        !followers ||
+        (creator.followers >= followers.min &&
+          creator.followers <= followers.max)
 
       return matchesCountry && matchesSkill && matchesFollowers
     })

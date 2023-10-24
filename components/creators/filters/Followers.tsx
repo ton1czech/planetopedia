@@ -1,18 +1,89 @@
+import React, { useState, useEffect } from 'react'
+import { Check, ChevronsUpDown } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover'
+import { Command, CommandGroup, CommandItem } from '@/components/ui/command'
+
 interface FollowersProps {
   setFollowers: any
 }
 
-// 1 - 1.000
-// 1.001 - 10.000
-// 10.000 - 100.000
-// 100.000+
+export function Followers({ setFollowers }: FollowersProps) {
+  const [open, setOpen] = useState(false)
+  const [selectedRange, setSelectedRange] = useState<{
+    min: number
+    max: number
+  } | null>(null)
 
-const Followers = ({ setFollowers }: FollowersProps) => {
+  const followerRanges = [
+    { label: '1 - 1,000', min: 1, max: 1000 },
+    { label: '1,001 - 10,000', min: 1001, max: 10000 },
+    { label: '10,001 - 100,000', min: 10001, max: 100000 },
+    { label: '100,001+', min: 100001, max: Infinity },
+  ]
+
+  useEffect(() => {
+    // Při prvním načtení zobraz všechny tvůrce
+    setFollowers({ min: 0, max: Infinity })
+  }, []) // useEffect se spustí pouze jednou po prvním renderu
+
+  const applyFilter = (min: number, max: number) => {
+    setFollowers({ min, max })
+    setOpen(false)
+  }
+
   return (
-    <div>
-      <p>followers</p>
-    </div>
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
+        <Button
+          variant='outline'
+          role='combobox'
+          aria-expanded={open}
+          className='justify-between'
+        >
+          {selectedRange
+            ? `${selectedRange.min} - ${selectedRange.max}`
+            : 'Select followers range...'}
+          <ChevronsUpDown className='ml-2 h-4 w-4 shrink-0 opacity-50' />
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className='p-0'>
+        <Command>
+          <CommandGroup>
+            {followerRanges.map(({ label, min, max }) => (
+              <div
+                key={label}
+                className={`cursor-default hover:bg-gray-100 relative flex select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none aria-selected:bg-accent aria-selected:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 ${
+                  selectedRange?.min === min && selectedRange?.max === max
+                    ? 'bg-gray-100'
+                    : ''
+                }`}
+                onClick={() => {
+                  if (
+                    selectedRange?.min === min &&
+                    selectedRange?.max === max
+                  ) {
+                    setSelectedRange(null)
+                    applyFilter(0, Infinity) // Nastavíme rozsah na všechny hodnoty
+                  } else {
+                    setSelectedRange({ min, max })
+                    applyFilter(min, max)
+                  }
+                }}
+              >
+                {selectedRange?.min === min && selectedRange?.max === max && (
+                  <Check className='mr-2 h-4 w-4' />
+                )}
+                {label}
+              </div>
+            ))}
+          </CommandGroup>
+        </Command>
+      </PopoverContent>
+    </Popover>
   )
 }
-
-export default Followers

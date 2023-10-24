@@ -41,6 +41,7 @@ export default function FrantisekHrom() {
         <Marketing />
         <Collaboration logos={logos} />
       </Results>
+
       <Links links={links} />
     </div>
   )
