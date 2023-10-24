@@ -36,8 +36,9 @@ const CreatorsGrid = ({ creators }: CreatorsGridProps) => {
 
     return creators.filter(
       (creator: any) =>
-        creator.code.toLowerCase().includes(countryCode.toLowerCase()) &&
-        creator.categories.toLowerCase().includes(skill.toLowerCase())
+        creator.code &&
+        creator.code.toLowerCase().includes(countryCode.toLowerCase())
+      // creator.categories.toLowerCase().includes(skill.toLowerCase())
     )
   }
 

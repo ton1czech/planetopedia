@@ -63,6 +63,127 @@ export function Country({ setCountryCode }: CountryProps) {
           : '',
       value: 'de',
     },
+    {
+      label:
+        language === 'en'
+          ? '🇮🇹 Italy'
+          : language === 'cs'
+          ? '🇮🇹 Itálie'
+          : language === 'de'
+          ? '🇮🇹 Italien'
+          : '',
+      value: 'it',
+    },
+    {
+      label:
+        language === 'en'
+          ? '🇫🇷 France'
+          : language === 'cs'
+          ? '🇫🇷 Francie'
+          : language === 'de'
+          ? '🇫🇷 Frankreich'
+          : '',
+      value: 'fr',
+    },
+    {
+      label:
+        language === 'en'
+          ? '🇬🇪 Georgia'
+          : language === 'cs'
+          ? '🇬🇪 Georgia'
+          : language === 'de'
+          ? '🇬🇪 Georgie'
+          : '',
+      value: 'ge',
+    },
+    {
+      label:
+        language === 'en'
+          ? '🇮🇳 India'
+          : language === 'cs'
+          ? '🇮🇳 Indie'
+          : language === 'de'
+          ? '🇮🇳 Indien'
+          : '',
+      value: 'ind',
+    },
+    {
+      label:
+        language === 'en'
+          ? '🇬🇧 Great Britain'
+          : language === 'cs'
+          ? '🇬🇧 Velká Británie'
+          : language === 'de'
+          ? '🇬🇧 Großbritannien'
+          : '',
+      value: 'gb',
+    },
+    {
+      label:
+        language === 'en'
+          ? '🇮🇨 Canary Islands'
+          : language === 'cs'
+          ? '🇮🇨 Kanárské ostrovy'
+          : language === 'de'
+          ? '🇮🇨 Kanarische Inseln'
+          : '',
+      value: 'esp',
+    },
+    {
+      label:
+        language === 'en'
+          ? '🇳🇱 Netherlands'
+          : language === 'cs'
+          ? '🇳🇱 Nizozemsko'
+          : language === 'de'
+          ? '🇳🇱 Netherlands'
+          : '',
+      value: 'nz',
+    },
+    {
+      label:
+        language === 'en'
+          ? '🇨🇭 Switzerland'
+          : language === 'cs'
+          ? '🇨🇭 Švýcarsko'
+          : language === 'de'
+          ? '🇨🇭 Schweiz'
+          : '',
+      value: 'ch',
+    },
+    {
+      label:
+        language === 'en'
+          ? '🇫🇮 Finland'
+          : language === 'cs'
+          ? '🇫🇮 Finsko'
+          : language === 'de'
+          ? '🇫🇮 Finnland'
+          : '',
+      value: 'fin',
+    },
+    {
+      label:
+        language === 'en'
+          ? '🇲🇾 Malaysia'
+          : language === 'cs'
+          ? '🇲🇾 Malajsie'
+          : language === 'de'
+          ? '🇲🇾 Malaysia'
+          : '',
+      value: 'my',
+    },
+    {
+      label:
+        language === 'en'
+          ? '🇵🇹 Portugal'
+          : language === 'cs'
+          ? '🇵🇹 Portugalsko'
+          : language === 'de'
+          ? '🇵🇹 Portugal'
+          : '',
+      value: 'pt',
+    },
   ]
 
   return (
