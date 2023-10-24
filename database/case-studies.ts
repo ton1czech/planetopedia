@@ -158,15 +158,62 @@ export const caseStudies = [
     categoryDe: 'Influencer-Kampagne',
     href: '/case-studies/heys-luggage',
     image: '/case-studies/rozmluv-se/thumbnail.webp',
-    servicesEn: ['influencer campaign', 'marketing', 'content creation'],
-    servicesCz: ['influencerská kampaň', 'marketing', 'tvorba obsahu'],
-    servicesDe: ['Influencer-Kampagne', 'Marketing', 'Erstellung von Inhalten'],
-    whoEn: '',
-    whoCz: '',
-    whoDe: '',
-    whatEn: '',
-    whatCz: '',
-    whatDe: '',
+    servicesEn: [
+      'strategy',
+      'marketing',
+      'content creation',
+      'social media influencer campaign',
+    ],
+    servicesCz: [
+      'strategie',
+      'marketing',
+      'tvorba obsahu',
+      'influencerská kampaň na sociálních sítích',
+    ],
+    servicesDe: [
+      'Strategie',
+      'Marketing',
+      'Erstellung von Inhalten',
+      'Social-Media-Influencer-Kampagne',
+    ],
+    whoEn:
+      'Established in 1986 in the suburbs of Toronto, Heys International Ltd has become a global leader in luggage design, and is synonymous with luxury, fashionable, lightweight luggage with high standard of excellence in workmanship and quality.',
+    whoCz:
+      'Společnost Heys International Ltd, založená v roce 1986 na předměstí Toronta, se stala globálním lídrem v designu zavazadel a je synonymem pro luxusní, módní, lehká zavazadla s vysokým standardem dokonalosti ve zpracování a kvalitě.',
+    whoDe:
+      'Heys International Ltd. wurde 1986 in einem Vorort von Toronto gegründet und hat sich zu einem weltweit führenden Unternehmen im Bereich Gepäckdesign entwickelt. Heys International Ltd. ist ein Synonym für luxuriöses, modisches und leichtes Reisegepäck mit einem hohen Standard an hervorragender Verarbeitung und Qualität.',
+    whatEn:
+      'Heys Luggage joined forces with five talented Planetopedia creators from five countries, delivering resounding success and reaching new heights on social media. Together, we brought the world to life, inspiring audiences worldwide.',
+    whatCz:
+      'Heys Luggage hat sich mit fünf talentierten Planetopedia-Machern aus fünf Ländern zusammengetan, um einen durchschlagenden Erfolg zu erzielen und in den sozialen Medien neue Höhen zu erreichen. Gemeinsam haben wir die Welt zum Leben erweckt und das Publikum weltweit inspiriert.',
+    whatDe:
+      'Heys Luggage spojili své síly s pěti talentovanými Planetopedia tvůrci z pěti zemí, dosáhli obrovského úspěchu a dosáhli nových výšin na sociálních sítích. Společně jsme inspirovali publikum po celém světě.',
+    links: [
+      {
+        site: 'web',
+        url: 'https://us.heys.com/',
+      },
+      {
+        site: 'instagram',
+        url: 'https://www.instagram.com/heysluggage/',
+      },
+      {
+        site: 'tiktok',
+        url: 'https://www.tiktok.com/@heysluggage',
+      },
+      {
+        site: 'youtube',
+        url: 'https://www.youtube.com/user/HeysLuggage',
+      },
+      {
+        site: 'facebook',
+        url: 'https://www.facebook.com/HeysIuggage',
+      },
+      {
+        site: 'pinterest',
+        url: 'https://www.pinterest.ca/HeysLuggage/',
+      },
+    ],
   },
   {
     title: 'Four Seasons',

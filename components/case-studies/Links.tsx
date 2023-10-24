@@ -9,7 +9,7 @@ import {
   Youtube,
 } from 'lucide-react'
 import Link from 'next/link'
-import { FaTiktok } from 'react-icons/fa'
+import { FaPinterest, FaTiktok } from 'react-icons/fa'
 import Container from '../Container'
 
 interface LinksProps {
@@ -56,6 +56,9 @@ const Links = ({ links }: LinksProps) => {
             )}
             {link.site === 'eshop' && (
               <ShoppingCart className='h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10' />
+            )}
+            {link.site === 'pinterest' && (
+              <FaPinterest className='h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10' />
             )}
           </Link>
         ))}
