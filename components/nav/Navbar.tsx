@@ -65,7 +65,7 @@ const Navbar = () => {
               PLANETOPEDIA
             </Link>
 
-            <div className='items-center hidden gap-12 md:flex'>
+            <div className='items-center hidden gap-12 lg:flex'>
               <LanguageSelector black={black} />
               <ul
                 className={cn(
@@ -235,7 +235,7 @@ const Navbar = () => {
               </ul>
             </div>
 
-            <div className='flex items-center gap-3 md:hidden'>
+            <div className='flex items-center gap-3 lg:hidden'>
               <LanguageSelector black={black} />
               <Icon
                 onClick={() => setIsOpen(prev => !prev)}
