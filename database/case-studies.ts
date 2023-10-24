@@ -61,6 +61,14 @@ export const caseStudies = [
         site: 'facebook',
         url: 'https://www.facebook.com/profile.php?id=100092479713291',
       },
+      {
+        site: 'youtube',
+        url: 'https://www.youtube.com/@miloslavpolak4880',
+      },
+      {
+        site: 'eshop',
+        url: 'https://www.eshop-farmahajek.cz/',
+      },
     ],
   },
   {
@@ -85,6 +93,37 @@ export const caseStudies = [
       'Vytvořit známou a virální personu společně s Lukášem Duchkem - herec a zakladatel LuMi kavárny. Charakter reflektující českého občana a český humor, vhodný pro většinu marketingových kampaní.',
     whatDe:
       'Zusammen mit Lukáš Duchek - einem Schauspieler und Gründer des Cafés LuMi - eine bekannte und virale Persona zu schaffen. Eine Figur, die einen tschechischen Bürger und tschechischen Humor widerspiegelt und für die meisten Marketingkampagnen geeignet ist.',
+    links: [
+      {
+        site: 'instagram',
+        url: 'https://www.instagram.com/frantisekhrom/',
+      },
+      {
+        site: 'tiktok',
+        url: 'https://www.tiktok.com/@frantisekhrom',
+      },
+      {
+        site: 'youtube',
+        url: 'https://www.youtube.com/@frantisekhrom',
+      },
+      {
+        site: 'facebook',
+        url: 'https://www.facebook.com/profile.php?id=100090109252762',
+      },
+    ],
+    logos: [
+      '/case-studies/frantisek-hrom/logos/oktagon.webp',
+      '/case-studies/frantisek-hrom/logos/redbull.webp',
+      '/case-studies/frantisek-hrom/logos/zoot.webp',
+      '/case-studies/frantisek-hrom/logos/mercedes.webp',
+      '/case-studies/frantisek-hrom/logos/msi.webp',
+      '/case-studies/frantisek-hrom/logos/rybizak.webp',
+      '/case-studies/frantisek-hrom/logos/maddera.webp',
+      '/case-studies/frantisek-hrom/logos/camppass.webp',
+      '/case-studies/frantisek-hrom/logos/farmahajek.webp',
+      '/case-studies/frantisek-hrom/logos/portmonka.webp',
+      '/case-studies/frantisek-hrom/logos/tackera.webp',
+    ],
   },
   {
     title: 'Rozmluv se',

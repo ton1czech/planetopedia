@@ -1,7 +1,13 @@
 'use client'
 
 import { useLanguage } from '@/store/useLanguage'
-import { Facebook, Instagram, LinkIcon } from 'lucide-react'
+import {
+  Facebook,
+  Instagram,
+  LinkIcon,
+  ShoppingCart,
+  Youtube,
+} from 'lucide-react'
 import Link from 'next/link'
 import { FaTiktok } from 'react-icons/fa'
 import Container from '../Container'
@@ -44,6 +50,12 @@ const Links = ({ links }: LinksProps) => {
             )}
             {link.site === 'tiktok' && (
               <FaTiktok className='h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10' />
+            )}
+            {link.site === 'youtube' && (
+              <Youtube className='h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10' />
+            )}
+            {link.site === 'eshop' && (
+              <ShoppingCart className='h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10' />
             )}
           </Link>
         ))}
