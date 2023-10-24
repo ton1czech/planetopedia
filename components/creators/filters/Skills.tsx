@@ -214,6 +214,7 @@ export function Skills({ setSkill }: SkillsProps) {
                 value={skill.value}
                 onSelect={currentValue => {
                   setValue(currentValue === value ? '' : currentValue)
+                  //   setSkill(currentValue === value ? '' : currentValue)
                   setSkill(
                     currentValue === 'photographer'
                       ? 'Photographer'

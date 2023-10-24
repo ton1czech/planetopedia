@@ -2,7 +2,7 @@
 
 import { urlForImage } from '@/sanity/lib/image'
 import { useLanguage } from '@/store/useLanguage'
-import { Camera, Instagram, LineChart, Video } from 'lucide-react'
+import { Camera, Home, Instagram, Video } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
@@ -84,17 +84,17 @@ const Creator = ({
                   <TooltipTrigger>
                     {category === 'Photographer' && (
                       <>
-                        <Camera className='stroke-zinc-700' />
+                        <Camera className='stroke-zinc-700 w-6 h-6' />
                       </>
                     )}
                     {category === 'Videographer' && (
                       <>
-                        <Video className='stroke-zinc-700' />
+                        <Video className='stroke-zinc-700 w-6 h-6' />
                       </>
                     )}
-                    {category === 'Influencer' && (
+                    {category === 'Hotels/Resorts' && (
                       <>
-                        <LineChart className='stroke-zinc-700' />
+                        <Home className='stroke-zinc-700 w-6 h-6' />
                       </>
                     )}
                   </TooltipTrigger>

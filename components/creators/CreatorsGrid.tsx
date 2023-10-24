@@ -19,27 +19,26 @@ const CreatorsGrid = ({ creators }: CreatorsGridProps) => {
   const [followers, setFollowers] = useState<number | undefined>(undefined)
   const [skill, setSkill] = useState<string>('')
 
-  console.log(skill)
-  console.log(creators[0].categories)
-  console.log('skills', creators[0].categories.includes(skill))
-  console.log(
-    'countries',
-    creators[0].code.toLowerCase().includes(countryCode.toLowerCase())
-  )
-
   const getFilteredClients = (
     countryCode: string,
     skill: string,
     followers: number | undefined
   ) => {
-    if (!countryCode) return creators
-
-    return creators.filter(
-      (creator: any) =>
+    let filteredCreators = creators.filter((creator: any) => {
+      const matchesCountry =
         creator.code &&
         creator.code.toLowerCase().includes(countryCode.toLowerCase())
-      // creator.categories.toLowerCase().includes(skill.toLowerCase())
-    )
+
+      const matchesSkill = skill
+        ? creator.categories && creator.categories.includes(skill)
+        : true
+
+      const matchesFollowers = followers ? creator.followers >= followers : true
+
+      return matchesCountry && matchesSkill && matchesFollowers
+    })
+
+    return filteredCreators
   }
 
   const filteredClients = getFilteredClients(countryCode, skill, followers)
