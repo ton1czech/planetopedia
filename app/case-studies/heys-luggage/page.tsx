@@ -4,6 +4,7 @@ import Results from '@/components/case-studies/Results'
 import What from '@/components/case-studies/What'
 import Who from '@/components/case-studies/Who'
 import ContentCreation from '@/components/case-studies/heys-luggage/ContentCreation'
+import Creators from '@/components/case-studies/heys-luggage/Creators'
 import { caseStudies } from '@/database/case-studies'
 
 export default function HeysLuggage() {
@@ -34,6 +35,7 @@ export default function HeysLuggage() {
       <What bodyEn={whatEn} bodyCz={whatCz} bodyDe={whatDe} />
 
       <Results>
+        <Creators />
         <ContentCreation images={contentSrcs} />
       </Results>
 
