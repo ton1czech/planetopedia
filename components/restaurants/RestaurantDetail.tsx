@@ -8,6 +8,8 @@ import { RichText } from '../RichText'
 import { Instagram, Link2 } from 'lucide-react'
 import Link from 'next/link'
 import Container from '../Container'
+import { useEffect, useState } from 'react'
+import { Skeleton } from '../ui/skeleton'
 
 interface RestaurantDetailProps {
   restaurant: any
@@ -15,6 +17,12 @@ interface RestaurantDetailProps {
 
 const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
   const { language } = useLanguage(state => state)
+
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setIsLoading(false)
+  }, [])
 
   return (
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
@@ -37,14 +45,20 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
 
           <div>
             {restaurant?.intro_images?.map((image: any) => (
-              <Image
-                key={image}
-                src={urlForImage(image).url()}
-                alt='intro image'
-                width={900}
-                height={400}
-                className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-              />
+              <>
+                {isLoading ? (
+                  <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
+                ) : (
+                  <Image
+                    key={image}
+                    src={urlForImage(image).url()}
+                    alt='intro image'
+                    width={900}
+                    height={400}
+                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                  />
+                )}
+              </>
             ))}
           </div>
 
@@ -84,14 +98,20 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
 
               <div>
                 {restaurant?.overview_images?.map((image: any) => (
-                  <Image
-                    key={image}
-                    src={urlForImage(image).url()}
-                    alt='intro image'
-                    width={900}
-                    height={400}
-                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                  />
+                  <>
+                    {isLoading ? (
+                      <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
+                    ) : (
+                      <Image
+                        key={image}
+                        src={urlForImage(image).url()}
+                        alt='intro image'
+                        width={900}
+                        height={400}
+                        className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                      />
+                    )}
+                  </>
                 ))}
               </div>
             </>
@@ -187,14 +207,20 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
 
               <div>
                 {restaurant?.conclusion_images?.map((image: any) => (
-                  <Image
-                    key={image}
-                    src={urlForImage(image).url()}
-                    alt='fitness image'
-                    width={900}
-                    height={400}
-                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                  />
+                  <>
+                    {isLoading ? (
+                      <Skeleton className='w-full h-[400px] sm:h-[750px] md:h-[450px]' />
+                    ) : (
+                      <Image
+                        key={image}
+                        src={urlForImage(image).url()}
+                        alt='fitness image'
+                        width={900}
+                        height={400}
+                        className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                      />
+                    )}
+                  </>
                 ))}
               </div>
             </>

@@ -8,6 +8,8 @@ import { RichText } from '../RichText'
 import { Instagram, Link2 } from 'lucide-react'
 import Link from 'next/link'
 import Container from '../Container'
+import { useEffect, useState } from 'react'
+import { Skeleton } from '../ui/skeleton'
 
 interface HotelDetailProps {
   hotel: any
@@ -15,6 +17,12 @@ interface HotelDetailProps {
 
 const HotelDetail = ({ hotel }: HotelDetailProps) => {
   const { language } = useLanguage(state => state)
+
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setIsLoading(false)
+  }, [])
 
   return (
     <div className='pt-24 pb-20 bg-white md:pt-32 md:pb-32'>
@@ -29,14 +37,20 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
           <div>
             {hotel?.intro_images?.map((image: any) => (
-              <Image
-                key={image}
-                src={urlForImage(image).url()}
-                alt='intro image'
-                width={900}
-                height={400}
-                className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-              />
+              <>
+                {isLoading ? (
+                  <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
+                ) : (
+                  <Image
+                    key={image}
+                    src={urlForImage(image).url()}
+                    alt='intro image'
+                    width={900}
+                    height={400}
+                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                  />
+                )}
+              </>
             ))}
           </div>
 
@@ -73,14 +87,20 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
               )}
               <div>
                 {hotel?.overview_images?.map((image: any) => (
-                  <Image
-                    key={image}
-                    src={urlForImage(image).url()}
-                    alt='overview image'
-                    width={900}
-                    height={400}
-                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                  />
+                  <>
+                    {isLoading ? (
+                      <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
+                    ) : (
+                      <Image
+                        key={image}
+                        src={urlForImage(image).url()}
+                        alt='overview image'
+                        width={900}
+                        height={400}
+                        className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                      />
+                    )}
+                  </>
                 ))}
               </div>
             </>
@@ -111,14 +131,20 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
               <div>
                 {hotel?.rooms_images?.map((image: any) => (
-                  <Image
-                    key={image}
-                    src={urlForImage(image).url()}
-                    alt='rooms image'
-                    width={900}
-                    height={400}
-                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                  />
+                  <>
+                    {isLoading ? (
+                      <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
+                    ) : (
+                      <Image
+                        key={image}
+                        src={urlForImage(image).url()}
+                        alt='rooms image'
+                        width={900}
+                        height={400}
+                        className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                      />
+                    )}
+                  </>
                 ))}
               </div>
             </>
@@ -158,14 +184,20 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
               <div>
                 {hotel?.services_images?.map((image: any) => (
-                  <Image
-                    key={image}
-                    src={urlForImage(image).url()}
-                    alt='services image'
-                    width={900}
-                    height={400}
-                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                  />
+                  <>
+                    {isLoading ? (
+                      <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
+                    ) : (
+                      <Image
+                        key={image}
+                        src={urlForImage(image).url()}
+                        alt='services image'
+                        width={900}
+                        height={400}
+                        className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                      />
+                    )}
+                  </>
                 ))}
               </div>
             </>
@@ -204,14 +236,20 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
               )}
               <div>
                 {hotel?.fitness_images?.map((image: any) => (
-                  <Image
-                    key={image}
-                    src={urlForImage(image).url()}
-                    alt='fitness image'
-                    width={900}
-                    height={400}
-                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                  />
+                  <>
+                    {isLoading ? (
+                      <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
+                    ) : (
+                      <Image
+                        key={image}
+                        src={urlForImage(image).url()}
+                        alt='fitness image'
+                        width={900}
+                        height={400}
+                        className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                      />
+                    )}
+                  </>
                 ))}
               </div>
             </>
@@ -242,14 +280,20 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
               <div>
                 {hotel?.food_images?.map((image: any) => (
-                  <Image
-                    key={image}
-                    src={urlForImage(image).url()}
-                    alt='food image'
-                    width={900}
-                    height={400}
-                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                  />
+                  <>
+                    {isLoading ? (
+                      <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
+                    ) : (
+                      <Image
+                        key={image}
+                        src={urlForImage(image).url()}
+                        alt='food image'
+                        width={900}
+                        height={400}
+                        className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                      />
+                    )}
+                  </>
                 ))}
               </div>
             </>
@@ -258,18 +302,24 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
           <div className='grid gap-x-2 md:gap-x-4 md:grid-cols-2'>
             {hotel?.labeled_images?.map((item: any) => (
               <div className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'>
-                <Image
-                  key={item.image}
-                  src={urlForImage(item.image).url()}
-                  alt='food image'
-                  width={900}
-                  height={400}
-                />
-                {item.alt && (
-                  <p className='mt-1 mb-2 text-center md:mb-4 text-zinc-800'>
-                    {item.alt}
-                  </p>
-                )}
+                <>
+                  {isLoading ? (
+                    <Skeleton className='w-full h-[400px] sm:h-[750px] md:h-[450px]' />
+                  ) : (
+                    <Image
+                      key={item.image}
+                      src={urlForImage(item.image).url()}
+                      alt='food image'
+                      width={900}
+                      height={400}
+                    />
+                  )}
+                  {item.alt && (
+                    <p className='mt-1 mb-2 text-center md:mb-4 text-zinc-800'>
+                      {item.alt}
+                    </p>
+                  )}
+                </>
               </div>
             ))}
           </div>
@@ -310,14 +360,20 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
               <div>
                 {hotel?.conclusion_images?.map((image: any) => (
-                  <Image
-                    key={image}
-                    src={urlForImage(image).url()}
-                    alt='fitness image'
-                    width={900}
-                    height={400}
-                    className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                  />
+                  <>
+                    {isLoading ? (
+                      <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
+                    ) : (
+                      <Image
+                        key={image}
+                        src={urlForImage(image).url()}
+                        alt='fitness image'
+                        width={900}
+                        height={400}
+                        className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                      />
+                    )}
+                  </>
                 ))}
               </div>
             </>

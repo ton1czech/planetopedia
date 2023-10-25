@@ -1,12 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Container from '../Container'
 import { Input } from '../ui/input'
 import Restaurant from './Restaurant'
 import { useLanguage } from '@/store/useLanguage'
 import dynamic from 'next/dynamic'
 import { restaurantLocations } from '@/database/blog'
+import { Skeleton } from '../ui/skeleton'
 const Map = dynamic(() => import('@/components/Map'), { ssr: false })
 
 interface RestaurantsGridProps {
@@ -17,6 +18,11 @@ const RestaurantsGrid = ({ restaurants }: RestaurantsGridProps) => {
   const { language } = useLanguage(state => state)
 
   const [query, setQuery] = useState<string>('')
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setIsLoading(false)
+  }, [])
 
   const getFilteredRestaurants = (query: string) => {
     if (!query) return restaurants
@@ -39,7 +45,11 @@ const RestaurantsGrid = ({ restaurants }: RestaurantsGridProps) => {
   return (
     <div className='pb-20 bg-white md:pb-32'>
       <div className='mb-5 md:mb-10 relative'>
-        <Map locations={restaurantLocations} />
+        {isLoading ? (
+          <Skeleton className='w-full h-[300px] md:h-[500px]' />
+        ) : (
+          <Map locations={restaurantLocations} />
+        )}
         <div className='absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-white from-75% z-[999] pointer-events-none' />
         <div />
       </div>
