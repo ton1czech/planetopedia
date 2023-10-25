@@ -309,5 +309,34 @@ export const caseStudies = [
         thumbnail: '',
       },
     ],
+    contentSrcs: [
+      '/case-studies/four-seasons/media/1.webp',
+      '/case-studies/four-seasons/media/2.webp',
+      '/case-studies/four-seasons/media/3.webp',
+      '/case-studies/four-seasons/media/4.webp',
+      '/case-studies/four-seasons/media/5.webp',
+      '/case-studies/four-seasons/media/6.webp',
+      '/case-studies/four-seasons/media/7.webp',
+      '/case-studies/four-seasons/media/8.webp',
+      '/case-studies/four-seasons/media/9.webp',
+    ],
+    links: [
+      {
+        site: 'web',
+        url: 'https://www.fourseasons.com/',
+      },
+      {
+        site: 'instagram',
+        url: 'https://www.instagram.com/fourseasons/',
+      },
+      {
+        site: 'youtube',
+        url: 'https://www.youtube.com/fourseasons',
+      },
+      {
+        site: 'facebook',
+        url: 'https://www.facebook.com/FourSeasons',
+      },
+    ],
   },
 ]

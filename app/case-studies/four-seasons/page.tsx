@@ -1,8 +1,10 @@
 import Hero from '@/components/case-studies/Hero'
+import Links from '@/components/case-studies/Links'
 import Results from '@/components/case-studies/Results'
 import What from '@/components/case-studies/What'
 import Who from '@/components/case-studies/Who'
 import ContentCreation from '@/components/case-studies/four-seasons/ContentCreation'
+import Marketing from '@/components/case-studies/four-seasons/Marketing'
 import { caseStudies } from '@/database/case-studies'
 
 export default function FourSeasons() {
@@ -18,6 +20,8 @@ export default function FourSeasons() {
     whatCz,
     whatDe,
     content,
+    contentSrcs,
+    links,
   } = caseStudies.filter((data: any) => data.title === 'Four Seasons')[0]
 
   return (
@@ -33,8 +37,11 @@ export default function FourSeasons() {
       <What bodyEn={whatEn} bodyCz={whatCz} bodyDe={whatDe} />
 
       <Results>
-        <ContentCreation content={content} />
+        <Marketing content={content} />
+        <ContentCreation images={contentSrcs} />
       </Results>
+
+      <Links links={links} />
     </div>
   )
 }

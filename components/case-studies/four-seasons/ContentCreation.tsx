@@ -1,14 +1,22 @@
 'use client'
 
+import { Skeleton } from '@/components/ui/skeleton'
 import { useLanguage } from '@/store/useLanguage'
-import Items from './carousel/Items'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 interface ContentCreation {
-  content: { src: string; thumbnail: string }[] | undefined
+  images: string[] | undefined
 }
 
-const ContentCreation = ({ content }: ContentCreation) => {
+const ContentCreation = ({ images }: ContentCreation) => {
   const { language } = useLanguage(state => state)
+
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setIsLoading(false)
+  }, [])
 
   return (
     <div>
@@ -18,7 +26,23 @@ const ContentCreation = ({ content }: ContentCreation) => {
         {language === 'de' && <>/ Erstellung von Inhalten</>}
       </h2>
 
-      <Items data={content!} />
+      <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4'>
+        {images?.map(image => (
+          <>
+            {isLoading ? (
+              <Skeleton className='w-full aspect-square' />
+            ) : (
+              <Image
+                src={image}
+                alt='content creation'
+                width={650}
+                height={650}
+                className='aspect-square object-cover w-full'
+              />
+            )}
+          </>
+        ))}
+      </div>
     </div>
   )
 }
