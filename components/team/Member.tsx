@@ -5,6 +5,8 @@ import { LucideIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { Skeleton } from '../ui/skeleton'
 
 interface MemberProps {
   src: string
@@ -16,18 +18,15 @@ interface MemberProps {
     href: string
   }[]
   imagetop?: boolean
-  index: number
 }
 
-const Member = ({
-  src,
-  name,
-  body,
-  links,
-  role,
-  imagetop,
-  index,
-}: MemberProps) => {
+const Member = ({ src, name, body, links, role, imagetop }: MemberProps) => {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setIsLoading(false)
+  }, [])
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -36,15 +35,19 @@ const Member = ({
       transition={{ duration: 0.3 }}
     >
       <div className='relative w-full aspect-square'>
-        <Image
-          src={src}
-          fill
-          className={cn(
-            'object-cover',
-            imagetop ? 'object-top' : 'object-center'
-          )}
-          alt={name}
-        />
+        {isLoading ? (
+          <Skeleton className='w-full h-full absolute left-0 top-0' />
+        ) : (
+          <Image
+            src={src}
+            fill
+            className={cn(
+              'object-cover',
+              imagetop ? 'object-top' : 'object-center'
+            )}
+            alt={name}
+          />
+        )}
       </div>
       <h2 className='pt-4 text-2xl font-semibold sm:text-3xl md:text-2xl drop-shadow-lg'>
         {name}

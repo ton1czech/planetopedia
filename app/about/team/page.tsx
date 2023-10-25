@@ -42,7 +42,6 @@ export default function Team() {
               href: 'https://www.linkedin.com/in/dominik-gr%C3%B6ssl/',
             },
           ]}
-          index={1}
         />
         <Member
           src='/team/fabian-dagostin.webp'
@@ -75,7 +74,6 @@ export default function Team() {
               href: 'https://www.linkedin.com/in/fabiandagostin/',
             },
           ]}
-          index={2}
         />
         <Member
           src='/team/daniel-anthony-baudys.webp'
@@ -108,7 +106,6 @@ export default function Team() {
               href: 'https://www.linkedin.com/in/ton1czech/',
             },
           ]}
-          index={2}
         />
         <Member
           src='/team/felipe-prieto.webp'
@@ -141,7 +138,6 @@ export default function Team() {
               href: 'https://www.felipeprietofineart.com/',
             },
           ]}
-          index={1}
         />
         <Member
           src='/team/francesco-de-franco.webp'
@@ -170,7 +166,6 @@ export default function Team() {
               href: 'https://www.instagram.com/ergodyne/',
             },
           ]}
-          index={2}
         />
         <Member
           src='/team/drew-peden.webp'
@@ -203,7 +198,6 @@ export default function Team() {
               href: 'https://www.linkedin.com/in/drew-peden-438a62172/',
             },
           ]}
-          index={3}
         />
         <Member
           src='/team/kacka-kutalkova.webp'
@@ -232,7 +226,6 @@ export default function Team() {
               href: 'https://www.instagram.com/ton1czech/',
             },
           ]}
-          index={3}
         />
         <Member
           src='https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
@@ -261,7 +254,6 @@ export default function Team() {
               href: 'https://www.instagram.com/hanna_kaa_/',
             },
           ]}
-          index={3}
         />
         <Member
           src='/team/jan-tulis.webp'
@@ -290,7 +282,6 @@ export default function Team() {
               href: 'https://www.instagram.com/hanna_kaa_/',
             },
           ]}
-          index={3}
         />
       </Container>
     </div>
