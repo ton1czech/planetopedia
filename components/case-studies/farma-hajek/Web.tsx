@@ -26,42 +26,42 @@ const Web = () => {
       </h2>
 
       <ul className='mb-4 md:mb-10 grid grid-cols-2 lg:grid-cols-4 gap-4'>
-        <li className='text-center bg-zinc-50 rounded-md ring-1 ring-zinc-600/20 py-2 px-4 text-zinc-700'>
+        <li className='text-center bg-zinc-100 rounded-md py-2 px-4 text-zinc-700'>
           {language === 'en' && <>Modern</>}
           {language === 'cs' && <>Moderní</>}
           {language === 'de' && <>Moderne</>}
         </li>
-        <li className='text-center bg-zinc-50 rounded-md ring-1 ring-zinc-600/20 py-2 px-4 text-zinc-700'>
+        <li className='text-center bg-zinc-100 rounded-md py-2 px-4 text-zinc-700'>
           {language === 'en' && <>Otimization</>}
           {language === 'cs' && <>Optimalizace</>}
           {language === 'de' && <>Otimierung</>}
         </li>
-        <li className='text-center bg-zinc-50 rounded-md ring-1 ring-zinc-600/20 py-2 px-4 text-zinc-700'>
+        <li className='text-center bg-zinc-100 rounded-md py-2 px-4 text-zinc-700'>
           {language === 'en' && <>SEO</>}
           {language === 'cs' && <>SEO</>}
           {language === 'de' && <>SEO</>}
         </li>
-        <li className='text-center bg-zinc-50 rounded-md ring-1 ring-zinc-600/20 py-2 px-4 text-zinc-700'>
+        <li className='text-center bg-zinc-100 rounded-md py-2 px-4 text-zinc-700'>
           {language === 'en' && <>Mobile</>}
           {language === 'cs' && <>Mobilní</>}
           {language === 'de' && <>Mobil</>}
         </li>
-        <li className='text-center bg-zinc-50 rounded-md ring-1 ring-zinc-600/20 py-2 px-4 text-zinc-700'>
+        <li className='text-center bg-zinc-100 rounded-md py-2 px-4 text-zinc-700'>
           {language === 'en' && <>Newsletter</>}
           {language === 'cs' && <>Newsletter</>}
           {language === 'de' && <>Newsletter</>}
         </li>
-        <li className='text-center bg-zinc-50 rounded-md ring-1 ring-zinc-600/20 py-2 px-4 text-zinc-700'>
+        <li className='text-center bg-zinc-100 rounded-md py-2 px-4 text-zinc-700'>
           {language === 'en' && <>Email Form</>}
           {language === 'cs' && <>Email Formulář</>}
           {language === 'de' && <>E-Mail-Formular</>}
         </li>
-        <li className='text-center bg-zinc-50 rounded-md ring-1 ring-zinc-600/20 py-2 px-4 text-zinc-700'>
+        <li className='text-center bg-zinc-100 rounded-md py-2 px-4 text-zinc-700'>
           {language === 'en' && <>Multilingual</>}
           {language === 'cs' && <>Vícejazyčný</>}
           {language === 'de' && <>Mehrsprachig</>}
         </li>
-        <li className='text-center bg-zinc-50 rounded-md ring-1 ring-zinc-600/20 py-2 px-4 text-zinc-700'>
+        <li className='text-center bg-zinc-100 rounded-md py-2 px-4 text-zinc-700'>
           {language === 'en' && <>Interactive</>}
           {language === 'cs' && <>Interaktivní</>}
           {language === 'de' && <>Interaktiv</>}

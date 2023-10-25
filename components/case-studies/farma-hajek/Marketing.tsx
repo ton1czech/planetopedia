@@ -76,7 +76,7 @@ const Marketing = () => {
       </div>
 
       {isLoading ? (
-        <Skeleton className='w-full h-[230px] sm:h-[350px] md:h-[400px] lg:h-[540px] 2xl:h-[660px]' />
+        <Skeleton className='w-full h-[500px]' />
       ) : (
         <>
           <>{chart === 'followers' && <Followers />}</>
@@ -84,7 +84,7 @@ const Marketing = () => {
           <>{chart === 'imprese' && <Imprese />}</>
         </>
       )}
-      <p className='italic mt-1'>
+      <p className='italic mt-1 text-justify sm:text-left'>
         {language === 'en' ? (
           <>
             The results to date have been positively influenced by: influencer

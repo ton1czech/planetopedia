@@ -36,9 +36,11 @@ const Who = ({
         {language === 'cs' && <>{boldCz}</>}
         {language === 'de' && <>{boldDe}</>}
       </h5>
-      {language === 'en' && <p>{bodyEn}</p>}
-      {language === 'cs' && <p>{bodyCz}</p>}
-      {language === 'de' && <p>{bodyDe}</p>}
+      <p className='text-justify'>
+        {language === 'en' && <>{bodyEn}</>}
+        {language === 'cs' && <>{bodyCz}</>}
+        {language === 'de' && <>{bodyDe}</>}
+      </p>
     </Container>
   )
 }

@@ -19,9 +19,11 @@ const What = ({ bodyCz, bodyEn, bodyDe }: WhatProps) => {
         {language === 'cs' && <>Co bylo cílem</>}
         {language === 'de' && <>Was war das Ziel?</>}
       </h2>
-      {language === 'en' && <p>{bodyEn}</p>}
-      {language === 'cs' && <p>{bodyCz}</p>}
-      {language === 'de' && <p>{bodyDe}</p>}
+      <p className='text-justify'>
+        {language === 'en' && <>{bodyEn}</>}
+        {language === 'cs' && <>{bodyCz}</>}
+        {language === 'de' && <>{bodyDe}</>}
+      </p>
     </Container>
   )
 }

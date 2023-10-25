@@ -128,11 +128,12 @@ const Grow = () => {
         },
       },
     },
+    maintainAspectRatio: false,
   }
 
   return (
     <div>
-      <Line data={data} options={options} />
+      <Line data={data} options={options} className='w-full h-[500px]' />
     </div>
   )
 }

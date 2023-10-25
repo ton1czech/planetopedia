@@ -51,10 +51,10 @@ const Map = () => {
         }}
       >
         <Popup>
-          <h3 className='text-xl md:text-2xl font-bold -mb-4'>
+          <h3 className='text-xl md:text-2xl font-bold -mb-6'>
             Alexandra Leica
           </h3>
-          <p>
+          <p className='md:text-lg font-medium'>
             {language === 'en'
               ? '🇨🇭 Switzerland'
               : language === 'cs'
@@ -81,8 +81,8 @@ const Map = () => {
         }}
       >
         <Popup>
-          <h3 className='text-xl md:text-2xl font-bold -mb-4'>Aamalia Roman</h3>
-          <p>
+          <h3 className='text-xl md:text-2xl font-bold -mb-6'>Aamalia Roman</h3>
+          <p className='md:text-lg font-medium'>
             {language === 'en'
               ? '🇷🇴 Romania'
               : language === 'cs'
@@ -106,8 +106,8 @@ const Map = () => {
         }}
       >
         <Popup>
-          <h3 className='text-xl md:text-2xl font-bold -mb-4'>Carmen Niscov</h3>
-          <p>
+          <h3 className='text-xl md:text-2xl font-bold -mb-6'>Carmen Niscov</h3>
+          <p className='md:text-lg font-medium'>
             {language === 'en'
               ? '🇺🇸 USA'
               : language === 'cs'
@@ -131,10 +131,10 @@ const Map = () => {
         }}
       >
         <Popup>
-          <h3 className='text-xl md:text-2xl font-bold -mb-4'>
+          <h3 className='text-xl md:text-2xl font-bold -mb-6'>
             Dominik Grossl
           </h3>
-          <p>
+          <p className='md:text-lg font-medium'>
             {language === 'en'
               ? '🇨🇿 Czech republic'
               : language === 'cs'
@@ -156,8 +156,8 @@ const Map = () => {
         }}
       >
         <Popup>
-          <h3 className='text-xl md:text-2xl font-bold -mb-4'>Senad Dziho</h3>
-          <p>
+          <h3 className='text-xl md:text-2xl font-bold -mb-6'>Senad Dziho</h3>
+          <p className='md:text-lg font-medium'>
             {language === 'en'
               ? '🇮🇹 Italy'
               : language === 'cs'
