@@ -25,16 +25,11 @@ const Web = () => {
         {language === 'de' && <>/ Web-Entwicklung</>}
       </h2>
 
-      <ul className='mb-4 md:mb-10 grid grid-cols-2 md:grid-cols-3 gap-4'>
+      <ul className='mb-4 md:mb-10 grid grid-cols-2 lg:grid-cols-4 gap-4'>
         <li className='text-center bg-zinc-50 rounded-md ring-1 ring-zinc-600/20 py-2 px-4 text-zinc-700'>
-          {language === 'en' && <>Modern UI</>}
-          {language === 'cs' && <>Moderní UI</>}
-          {language === 'de' && <>Moderne UI</>}
-        </li>
-        <li className='text-center bg-zinc-50 rounded-md ring-1 ring-zinc-600/20 py-2 px-4 text-zinc-700'>
-          {language === 'en' && <>Newest technology</>}
-          {language === 'cs' && <>Nejnovější technologie</>}
-          {language === 'de' && <>Die neueste Technologie</>}
+          {language === 'en' && <>Modern</>}
+          {language === 'cs' && <>Moderní</>}
+          {language === 'de' && <>Moderne</>}
         </li>
         <li className='text-center bg-zinc-50 rounded-md ring-1 ring-zinc-600/20 py-2 px-4 text-zinc-700'>
           {language === 'en' && <>Otimization</>}
@@ -47,9 +42,9 @@ const Web = () => {
           {language === 'de' && <>SEO</>}
         </li>
         <li className='text-center bg-zinc-50 rounded-md ring-1 ring-zinc-600/20 py-2 px-4 text-zinc-700'>
-          {language === 'en' && <>Mobile Responsive</>}
-          {language === 'cs' && <>Responzivní na mobilních zařízení</>}
-          {language === 'de' && <>Mobil ansprechbar</>}
+          {language === 'en' && <>Mobile</>}
+          {language === 'cs' && <>Mobilní</>}
+          {language === 'de' && <>Mobil</>}
         </li>
         <li className='text-center bg-zinc-50 rounded-md ring-1 ring-zinc-600/20 py-2 px-4 text-zinc-700'>
           {language === 'en' && <>Newsletter</>}
@@ -62,9 +57,9 @@ const Web = () => {
           {language === 'de' && <>E-Mail-Formular</>}
         </li>
         <li className='text-center bg-zinc-50 rounded-md ring-1 ring-zinc-600/20 py-2 px-4 text-zinc-700'>
-          {language === 'en' && <>Multilingual (CZ, EN, DE)</>}
-          {language === 'cs' && <>Vícejazyčný (CZ, EN, DE)</>}
-          {language === 'de' && <>Mehrsprachig (CZ, EN, DE)</>}
+          {language === 'en' && <>Multilingual</>}
+          {language === 'cs' && <>Vícejazyčný</>}
+          {language === 'de' && <>Mehrsprachig</>}
         </li>
         <li className='text-center bg-zinc-50 rounded-md ring-1 ring-zinc-600/20 py-2 px-4 text-zinc-700'>
           {language === 'en' && <>Interactive</>}
