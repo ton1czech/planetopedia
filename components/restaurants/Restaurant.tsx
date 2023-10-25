@@ -3,6 +3,8 @@
 import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import { Skeleton } from '../ui/skeleton'
 
 interface RestaurantProps {
   restaurant: any
@@ -11,6 +13,12 @@ interface RestaurantProps {
 const Restaurant = ({ restaurant }: RestaurantProps) => {
   const { language } = useLanguage(state => state)
 
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setIsLoading(false)
+  }, [])
+
   return (
     <Link
       href={`/blog/restaurants/${restaurant.slug.current}`}
@@ -18,12 +26,16 @@ const Restaurant = ({ restaurant }: RestaurantProps) => {
     >
       {restaurant.image && (
         <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl'>
-          <Image
-            src={restaurant.image}
-            fill
-            alt={restaurant.name}
-            className='object-cover transition duration-500 group-hover:scale-110'
-          />
+          {isLoading ? (
+            <Skeleton className='aspect-square w-[320px] sm:w-[600px] md:w-[345px] lg:w-[470px]' />
+          ) : (
+            <Image
+              src={restaurant.image}
+              fill
+              alt={restaurant.name}
+              className='object-cover transition duration-500 group-hover:scale-110'
+            />
+          )}
         </div>
       )}
       {language === 'en' && (
