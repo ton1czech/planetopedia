@@ -61,7 +61,12 @@ const CreatorsGrid = ({ creators }: CreatorsGridProps) => {
         <Followers setFollowers={setFollowers} />
       </Container>
       <Container>
-        <div className='w-full h-px bg-zinc-600/30 my-4 lg:my-8' />
+        <div className='my-4 lg:my-8'>
+          <div className='w-full h-px bg-zinc-600/30' />
+          <p className='text-zinc-700/90 text-sm'>
+            {filteredClients.length} creators
+          </p>
+        </div>
       </Container>
 
       {filteredClients.length === 0 && (
