@@ -10,19 +10,22 @@ export const caseStudies = [
       'marketing',
       'events',
       'web development',
-      'social media management & content creation',
+      'content creation',
+      'social media management',
     ],
     servicesCz: [
       'marketing',
       'akce',
       'tvorba webu',
-      'správa a tvorba obsahu pro sociální sítě',
+      'tvorba obsahu',
+      'správa sociálních sítí',
     ],
     servicesDe: [
       'Marketing',
       'Veranstaltungen',
       'Web-Entwicklung',
-      'Verwaltung sozialer Medien und Erstellung von Inhalten',
+      'Erstellung von Inhalten',
+      'Verwaltung sozialer Medien',
     ],
     whoEn:
       'Farm Hájek is a Czech family farm specializing in year-round free-range chicken and hen rearing, fresh egg production, and the cultivation of high-quality potatoes. They take pride in upholding tradition and quality, not only in animal husbandry but also in the modern design of coops inspired by the Czech forest. Farm Hájek is not just a farm; they are passionate breeders and farmers who value quality and sustainability.',
@@ -185,6 +188,9 @@ export const caseStudies = [
       'Společnost Heys International Ltd, založená v roce 1986 na předměstí Toronta, se stala globálním lídrem v designu zavazadel a je synonymem pro luxusní, módní, lehká zavazadla s vysokým standardem dokonalosti ve zpracování a kvalitě.',
     whoDe:
       'Heys International Ltd. wurde 1986 in einem Vorort von Toronto gegründet und hat sich zu einem weltweit führenden Unternehmen im Bereich Gepäckdesign entwickelt. Heys International Ltd. ist ein Synonym für luxuriöses, modisches und leichtes Reisegepäck mit einem hohen Standard an hervorragender Verarbeitung und Qualität.',
+    boldEn: 'Target: 20-35 y.o. female audience from Europe / USA',
+    boldDe: 'Zielgruppe: 20-35 jährige Frauen aus Europa / USA',
+    boldCz: 'Cílová skupina: ženské publikum ve věku 20-35 let z Evropy / USA',
     whatEn:
       'Heys Luggage joined forces with five talented Planetopedia creators from five countries, delivering resounding success and reaching new heights on social media. Together, we brought the world to life, inspiring audiences worldwide.',
     whatCz:
@@ -236,14 +242,72 @@ export const caseStudies = [
     categoryDe: 'Hotelkette',
     href: '/case-studies/four-seasons',
     image: '/case-studies/four-seasons/thumbnail.webp',
-    servicesEn: ['content creation', 'marketing'],
-    servicesCz: ['tvorba obsahu', 'marketing'],
-    servicesDe: ['Erstellung von Inhalten', 'Marketing'],
-    whoEn: '',
-    whoCz: '',
-    whoDe: '',
-    whatEn: '',
-    whatCz: '',
-    whatDe: '',
+    servicesEn: [
+      'content creation',
+      'strategy',
+      'marketing',
+      'social media',
+      'management',
+    ],
+    servicesCz: [
+      'tvorba obsahu',
+      'strategie',
+      'marketing',
+      'sociální média',
+      'management',
+    ],
+    servicesDe: [
+      'Erstellung von Inhalten',
+      'Strategie',
+      'Marketing',
+      'Soziale Medien',
+      'Verwaltung',
+    ],
+    whoEn:
+      "Four Seasons Hotels and Resorts is a world-renowned luxury hospitality brand known for its exceptional service and opulent accommodations. With properties in diverse global destinations, Four Seasons offers a seamless blend of elegance, comfort, and personalized experiences. Guests can expect exquisite dining, spa facilities, and a commitment to creating unforgettable moments in every season. It's a top choice for travelers seeking unparalleled luxury and relaxation.",
+    whoCz:
+      'Four Seasons Hotels and Resorts je světoznámá luxusní hotelová značka známá svým vynikajícím servisem a nádhernými ubytovacími možnostmi. S nemovitostmi v různých světových destinacích nabízí Four Seasons dokonalou kombinaci elegance, komfortu a personalizovaných zážitků. Hosté se mohou těšit na lahodné restaurace, wellness zařízení a závazek vytvářet nezapomenutelné okamžiky v každém ročním období. Je to nejlepší volba pro cestovatele hledající nepřekonatelný luxus a odpočinek.',
+    whoDe:
+      'Four Seasons Hotels and Resorts ist eine weltbekannte Marke der Luxusgastronomie, die für ihren außergewöhnlichen Service und ihre opulenten Unterkünfte bekannt ist. Mit Häusern an verschiedenen globalen Standorten bietet Four Seasons eine nahtlose Mischung aus Eleganz, Komfort und persönlichen Erfahrungen. Die Gäste können sich auf exquisite Restaurants, Spa-Einrichtungen und ein Engagement für unvergessliche Momente zu jeder Jahreszeit freuen. Es ist die erste Wahl für Reisende, die unvergleichlichen Luxus und Entspannung suchen.',
+    whatEn:
+      "During our visits to various hotels, our main goal was to create attention-grabbing content. These Press/Media visits demonstrated our knack for crafting eye-catching material for social media and driving successful marketing efforts, boosting our client's brand visibility and engagement.",
+    whatCz:
+      'Během našich návštěv různých hotelů bylo naším hlavním cílem vytvářet poutavý obsah. Tyto návštěvy prokázaly naši dovednost vytvářet materiál pro sociální media a úspěšně uskutečňovat marketingové výsledky, což zvýšilo viditelnost značky našeho klienta.',
+    whatDe:
+      'Bei unseren Besuchen in verschiedenen Hotels bestand unser Hauptziel darin, aufmerksamkeitsstarke Inhalte zu erstellen. Bei diesen Presse-/Medienbesuchen haben wir unser Talent für die Erstellung von aufmerksamkeitsstarkem Material für die sozialen Medien unter Beweis gestellt und erfolgreiche Marketingmaßnahmen eingeleitet, die die Sichtbarkeit und das Engagement der Marke unseres Kunden steigern.',
+    content: [
+      {
+        src: 'https://i.imgur.com/dRu3IOJ.mp4',
+        thumbnail: '/case-studies/four-seasons/content/thumbnails/1.webp',
+      },
+      {
+        src: '/case-studies/four-seasons/content/1.webp',
+        thumbnail: '',
+      },
+      {
+        src: 'https://i.imgur.com/yMrctIB.mp4',
+        thumbnail: '/case-studies/four-seasons/content/thumbnails/3.webp',
+      },
+      {
+        src: '/case-studies/four-seasons/content/2.webp',
+        thumbnail: '',
+      },
+      {
+        src: 'https://i.imgur.com/dRu3IOJ.mp4',
+        thumbnail: '/case-studies/four-seasons/content/thumbnails/1.webp',
+      },
+      {
+        src: '/case-studies/four-seasons/content/1.webp',
+        thumbnail: '',
+      },
+      {
+        src: 'https://i.imgur.com/yMrctIB.mp4',
+        thumbnail: '/case-studies/four-seasons/content/thumbnails/3.webp',
+      },
+      {
+        src: '/case-studies/four-seasons/content/2.webp',
+        thumbnail: '',
+      },
+    ],
   },
 ]

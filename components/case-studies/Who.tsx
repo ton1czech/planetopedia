@@ -4,13 +4,24 @@ import { useLanguage } from '@/store/useLanguage'
 import Container from '../Container'
 
 interface WhoProps {
-  bodyCz: string
   bodyEn: string
+  bodyCz: string
   bodyDe: string
   title: string
+  boldEn?: string
+  boldCz?: string
+  boldDe?: string
 }
 
-const Who = ({ bodyCz, bodyEn, bodyDe, title }: WhoProps) => {
+const Who = ({
+  bodyCz,
+  bodyEn,
+  bodyDe,
+  title,
+  boldCz,
+  boldDe,
+  boldEn,
+}: WhoProps) => {
   const { language } = useLanguage(state => state)
 
   return (
@@ -20,6 +31,11 @@ const Who = ({ bodyCz, bodyEn, bodyDe, title }: WhoProps) => {
         {language === 'cs' && <>Kdo je {title}</>}
         {language === 'de' && <>Wer ist {title}</>}
       </h2>
+      <h5 className='font-bold text-lg'>
+        {language === 'en' && <>{boldEn}</>}
+        {language === 'cs' && <>{boldCz}</>}
+        {language === 'de' && <>{boldDe}</>}
+      </h5>
       {language === 'en' && <p>{bodyEn}</p>}
       {language === 'cs' && <p>{bodyCz}</p>}
       {language === 'de' && <p>{bodyDe}</p>}

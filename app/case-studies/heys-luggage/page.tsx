@@ -21,6 +21,9 @@ export default function HeysLuggage() {
     whatDe,
     links,
     contentSrcs,
+    boldCz,
+    boldDe,
+    boldEn,
   } = caseStudies.filter((data: any) => data.title === 'Heys Luggage')[0]
   return (
     <div className='pt-24 pb-20 bg-white md:pb-32 md:pt-32'>
@@ -31,7 +34,15 @@ export default function HeysLuggage() {
         servicesDe={servicesDe}
         title={title}
       />
-      <Who title={title} bodyEn={whoEn} bodyCz={whoCz} bodyDe={whoDe} />
+      <Who
+        title={title}
+        bodyEn={whoEn}
+        bodyCz={whoCz}
+        bodyDe={whoDe}
+        boldCz={boldCz}
+        boldDe={boldDe}
+        boldEn={boldEn}
+      />
       <What bodyEn={whatEn} bodyCz={whatCz} bodyDe={whatDe} />
 
       <Results>
