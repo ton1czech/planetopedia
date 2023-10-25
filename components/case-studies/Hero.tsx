@@ -3,6 +3,8 @@
 import Image from 'next/image'
 import Container from '../Container'
 import { useLanguage } from '@/store/useLanguage'
+import { useEffect, useState } from 'react'
+import { Skeleton } from '../ui/skeleton'
 
 interface HeroProps {
   title: string
@@ -20,6 +22,12 @@ const Hero = ({
   img,
 }: HeroProps) => {
   const { language } = useLanguage(state => state)
+
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setIsLoading(false)
+  }, [])
 
   return (
     <Container>
@@ -65,7 +73,11 @@ const Hero = ({
         )}
       </div>
       <div className='relative w-full h-[300px] lg:h-[500px]'>
-        <Image src={img} alt={title} fill className='object-cover' />
+        {isLoading ? (
+          <Skeleton className='h-[300px] lg:h-[500px] w-full' />
+        ) : (
+          <Image src={img} alt={title} fill className='object-cover' />
+        )}
       </div>
     </Container>
   )

@@ -1,13 +1,21 @@
 'use client'
 
 import Container from '@/components/Container'
+import { Skeleton } from '@/components/ui/skeleton'
 import { caseStudies } from '@/database/case-studies'
 import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 export default function CaseStudies() {
   const { language } = useLanguage(state => state)
+
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setIsLoading(false)
+  }, [])
 
   return (
     <div className='pt-24 pb-20 bg-white md:pb-32 md:pt-32'>
@@ -59,12 +67,16 @@ export default function CaseStudies() {
                 </button>
               </div>
               <div className='relative w-full overflow-hidden transition duration-500 aspect-video group-hover:shadow-lg order-1 md:order-2'>
-                <Image
-                  src={casestudy.image}
-                  fill
-                  alt={casestudy.title}
-                  className='object-cover transition duration-500 group-hover:scale-110'
-                />
+                {isLoading ? (
+                  <Skeleton className='w-full h-full' />
+                ) : (
+                  <Image
+                    src={casestudy.image}
+                    fill
+                    alt={casestudy.title}
+                    className='object-cover transition duration-500 group-hover:scale-110'
+                  />
+                )}
               </div>
             </Link>
           ))}

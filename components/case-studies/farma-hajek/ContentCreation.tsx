@@ -1,7 +1,9 @@
 'use client'
 
+import { Skeleton } from '@/components/ui/skeleton'
 import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 interface ContentCreation {
   images: string[] | undefined
@@ -9,6 +11,12 @@ interface ContentCreation {
 
 const ContentCreation = ({ images }: ContentCreation) => {
   const { language } = useLanguage(state => state)
+
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setIsLoading(false)
+  }, [])
 
   return (
     <div>
@@ -20,13 +28,19 @@ const ContentCreation = ({ images }: ContentCreation) => {
 
       <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4'>
         {images?.map(image => (
-          <Image
-            src={image}
-            alt='content creation'
-            width={650}
-            height={650}
-            className='aspect-square object-cover -rotate-90 w-full'
-          />
+          <>
+            {isLoading ? (
+              <Skeleton className='w-full aspect-square' />
+            ) : (
+              <Image
+                src={image}
+                alt='content creation'
+                width={650}
+                height={650}
+                className='aspect-square object-cover -rotate-90 w-full'
+              />
+            )}
+          </>
         ))}
       </div>
     </div>
