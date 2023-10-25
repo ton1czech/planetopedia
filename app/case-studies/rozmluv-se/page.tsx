@@ -1,6 +1,8 @@
 import Hero from '@/components/case-studies/Hero'
+import Results from '@/components/case-studies/Results'
 import What from '@/components/case-studies/What'
 import Who from '@/components/case-studies/Who'
+import Review from '@/components/case-studies/rozmluv-se/Review'
 import { caseStudies } from '@/database/case-studies'
 
 export default function RozmluvSe() {
@@ -28,6 +30,10 @@ export default function RozmluvSe() {
       />
       <Who title={title} bodyEn={whoEn} bodyCz={whoCz} bodyDe={whoDe} />
       <What bodyEn={whatEn} bodyCz={whatCz} bodyDe={whatDe} />
+
+      <Results>
+        <Review />
+      </Results>
     </div>
   )
 }
