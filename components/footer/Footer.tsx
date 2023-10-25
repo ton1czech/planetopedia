@@ -36,7 +36,11 @@ const Footer = () => {
         <p className='mb-4 text-xs text-center text-zinc-500'>
           {language === 'en' && <> earth model by </>}
           {language === 'cs' && <> model planety od </>}
-          <Link href='https://sketchfab.com/3d-models/earth-c2e4294c32ea4d8b850e152fc26aeeb4'>
+          <Link
+            href='https://sketchfab.com/3d-models/earth-c2e4294c32ea4d8b850e152fc26aeeb4'
+            target='_blank'
+            className='underline'
+          >
             @Abdullrahman
           </Link>
         </p>
@@ -44,7 +48,11 @@ const Footer = () => {
           &copy;{new Date().getFullYear()} Planetopedia.
           {language === 'en' && <> All rights reserved. Created by </>}
           {language === 'cs' && <> Všechna práva vyhrazena. Vytvořil </>}
-          <Link href='https://github.com/ton1czech' className='underline'>
+          <Link
+            href='https://github.com/ton1czech'
+            target='_blank'
+            className='underline'
+          >
             Daniel Anthony Baudyš
           </Link>
         </p>
