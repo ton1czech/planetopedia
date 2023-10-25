@@ -25,7 +25,7 @@ const ContentCreation = ({ images }: ContentCreation) => {
             alt='content creation'
             width={650}
             height={650}
-            className='aspect-square object-cover -rotate-90 w-full'
+            className='aspect-square object-cover w-full'
           />
         ))}
       </div>

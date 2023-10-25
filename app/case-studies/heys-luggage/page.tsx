@@ -3,6 +3,7 @@ import Links from '@/components/case-studies/Links'
 import Results from '@/components/case-studies/Results'
 import What from '@/components/case-studies/What'
 import Who from '@/components/case-studies/Who'
+import ContentCreation from '@/components/case-studies/heys-luggage/ContentCreation'
 import { caseStudies } from '@/database/case-studies'
 
 export default function HeysLuggage() {
@@ -18,11 +19,12 @@ export default function HeysLuggage() {
     whatCz,
     whatDe,
     links,
+    contentSrcs,
   } = caseStudies.filter((data: any) => data.title === 'Heys Luggage')[0]
   return (
     <div className='pt-24 pb-20 bg-white md:pb-32 md:pt-32'>
       <Hero
-        img='/case-studies/rozmluv-se/thumbnail.webp'
+        img='/case-studies/heys-luggage/hero.webp'
         servicesEn={servicesEn}
         servicesCz={servicesCz}
         servicesDe={servicesDe}
@@ -31,7 +33,9 @@ export default function HeysLuggage() {
       <Who title={title} bodyEn={whoEn} bodyCz={whoCz} bodyDe={whoDe} />
       <What bodyEn={whatEn} bodyCz={whatCz} bodyDe={whatDe} />
 
-      <Results>zdar</Results>
+      <Results>
+        <ContentCreation images={contentSrcs} />
+      </Results>
 
       <Links links={links} />
     </div>

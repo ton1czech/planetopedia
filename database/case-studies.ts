@@ -43,6 +43,9 @@ export const caseStudies = [
       '/case-studies/farma-hajek/content/4.webp',
       '/case-studies/farma-hajek/content/5.webp',
       '/case-studies/farma-hajek/content/6.webp',
+      '/case-studies/farma-hajek/content/7.webp',
+      '/case-studies/farma-hajek/content/8.webp',
+      '/case-studies/farma-hajek/content/9.webp',
     ],
     links: [
       {
@@ -157,7 +160,7 @@ export const caseStudies = [
     categoryCz: 'Influencerská Kampaň',
     categoryDe: 'Influencer-Kampagne',
     href: '/case-studies/heys-luggage',
-    image: '/case-studies/rozmluv-se/thumbnail.webp',
+    image: '/case-studies/heys-luggage/thumbnail.webp',
     servicesEn: [
       'strategy',
       'marketing',
@@ -188,6 +191,17 @@ export const caseStudies = [
       'Heys Luggage hat sich mit fünf talentierten Planetopedia-Machern aus fünf Ländern zusammengetan, um einen durchschlagenden Erfolg zu erzielen und in den sozialen Medien neue Höhen zu erreichen. Gemeinsam haben wir die Welt zum Leben erweckt und das Publikum weltweit inspiriert.',
     whatDe:
       'Heys Luggage spojili své síly s pěti talentovanými Planetopedia tvůrci z pěti zemí, dosáhli obrovského úspěchu a dosáhli nových výšin na sociálních sítích. Společně jsme inspirovali publikum po celém světě.',
+    contentSrcs: [
+      '/case-studies/heys-luggage/content/1.webp',
+      '/case-studies/heys-luggage/content/2.webp',
+      '/case-studies/heys-luggage/content/3.webp',
+      '/case-studies/heys-luggage/content/4.webp',
+      '/case-studies/heys-luggage/content/5.webp',
+      '/case-studies/heys-luggage/content/6.webp',
+      '/case-studies/heys-luggage/content/7.webp',
+      '/case-studies/heys-luggage/content/8.webp',
+      '/case-studies/heys-luggage/content/9.webp',
+    ],
     links: [
       {
         site: 'web',
