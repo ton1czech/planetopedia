@@ -36,7 +36,7 @@ const Member = ({ src, name, body, links, role, imagetop }: MemberProps) => {
     >
       <div className='relative w-full aspect-square'>
         {isLoading ? (
-          <Skeleton className='w-full h-full absolute left-0 top-0' />
+          <Skeleton className='aspect-square w-[320px] sm:w-[600px] md:w-[340px] lg:w-[460px] xl:w-[290px] 2xl:w-[375px]' />
         ) : (
           <Image
             src={src}
