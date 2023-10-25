@@ -11,6 +11,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '../ui/tooltip'
+import { useEffect, useState } from 'react'
+import { Skeleton } from '../ui/skeleton'
 
 interface CreatorProps {
   src: any
@@ -35,6 +37,12 @@ const Creator = ({
 }: CreatorProps) => {
   const { language } = useLanguage(state => state)
 
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setIsLoading(false)
+  }, [])
+
   return (
     <Link
       href={`https://www.instagram.com/${instagram}/`}
@@ -42,12 +50,16 @@ const Creator = ({
       target='_blank'
     >
       <div className='relative w-36 h-40 overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl rounded-tl-xl rounded-bl-xl'>
-        <Image
-          src={urlForImage(src).url()}
-          fill
-          alt={name}
-          className='object-cover transition duration-500 group-hover:scale-110 rounded-tl-xl rounded-bl-xl'
-        />
+        {isLoading ? (
+          <Skeleton className='w-36 h-40 aspect-square' />
+        ) : (
+          <Image
+            src={urlForImage(src).url()}
+            fill
+            alt={name}
+            className='object-cover transition duration-500 group-hover:scale-110 rounded-tl-xl rounded-bl-xl'
+          />
+        )}
 
         <div className='absolute inset-0 grid transition duration-500 bg-transparent group-hover:bg-black/50 place-content-center'>
           <Instagram
