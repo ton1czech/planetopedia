@@ -78,7 +78,7 @@ const Contact = () => {
   }
 
   return (
-    <div className='sticky top-0 z-20 bg-zinc-200 pt-32 snap-start scroll-mt-20 w-screen'>
+    <div className='sticky top-0 z-30 bg-zinc-200 pt-32 snap-start scroll-mt-20 w-screen'>
       <Container>
         <h2 className='mb-5 text-2xl md:text-3xl lg:text-4xl'>
           Be <span className='font-bold'> part of our community </span>and get

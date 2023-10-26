@@ -26,12 +26,12 @@ const Item = ({ heading, text, multi }: ItemProps) => {
 
 const Benefits = () => {
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[90vh] z-0 bg-black'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[90vh] z-20 bg-black'>
       <Container className='py-10 text-white text-center'>
         <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold'>
           Main Benefits
         </h1>
-        <ul className='mt-16 md:mt-20 space-y-6 md:space-y-10'>
+        <ul className='mt-10 md:mt-20 space-y-6 md:space-y-10'>
           <Item
             heading='1. Instagram connection'
             text="Let's group together on instagram!"
