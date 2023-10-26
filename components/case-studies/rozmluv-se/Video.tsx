@@ -41,9 +41,9 @@ const Video = () => {
       className='!max-w-[200px] md:!max-w-[300px] xl:!max-w-[350px] 2xl:!max-w-[400px] !h-[370px] sm:!h-[580px] md:!h-[750px] flex justify-center items-center'
       onClick={handleClick}
       playsInline
-      poster='/feedback/1.webp'
+      poster='/feedback/3.webp'
     >
-      <source src='https://i.imgur.com/XMPf8em.mp4' />
+      <source src='https://i.imgur.com/csDbpN5.mp4' />
     </video>
   )
 }
