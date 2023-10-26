@@ -12,39 +12,33 @@ import Container from '../Container'
 import { Label } from '../ui/label'
 import { Checkbox } from '../ui/checkbox'
 import { Button } from '../ui/button'
+import { Textarea } from '../ui/textarea'
 
 const Contact = () => {
   const { language } = useLanguage(state => state)
 
   const schema = z.object({
-    instagram: z
-      .string()
-      .min(1)
-      .startsWith('@', {
-        message:
-          language === 'en'
-            ? "Username must start with '@'"
-            : 'uživatelské jméno musí začínat "@"',
-      }),
+    name: z.string().min(1),
     email: z.string().email({
       message:
         language === 'en' ? 'Not a valid email' : 'E-mail nesplňuje požadavky',
     }),
-    checkbox_creator: z.boolean(),
-    checkbox_whatsapp: z.boolean(),
-    checkbox_platform: z.boolean(),
-    checkbox_engagement: z.boolean(),
+    hotel: z.string().min(1),
+
+    checkbox_content: z.boolean(),
+    checkbox_spot: z.boolean(),
+    checkbox_press: z.boolean(),
   })
 
   const form = useForm<z.infer<typeof schema>>({
     resolver: zodResolver(schema),
     defaultValues: {
-      instagram: '',
+      name: '',
       email: '',
-      checkbox_creator: false,
-      checkbox_whatsapp: false,
-      checkbox_platform: false,
-      checkbox_engagement: false,
+      hotel: '',
+      checkbox_content: false,
+      checkbox_spot: false,
+      checkbox_press: false,
     },
   })
 
@@ -80,20 +74,33 @@ const Contact = () => {
   return (
     <div className='sticky top-0 z-20 bg-zinc-200 pt-32 snap-start scroll-mt-20 w-screen'>
       <Container>
-        <h2 className='mb-5 text-2xl md:text-3xl lg:text-4xl'>
-          Be <span className='font-bold'> part of our community </span>and get
-          your creation among the target group!
+        <h2 className='mb-5 text-2xl md:text-3xl lg:text-4xl font-bold'>
+          Let's create together
         </h2>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <FormField
-              name='instagram'
+              name='name'
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
                     <>
-                      <Label>Instagram Account *</Label>
-                      <Input placeholder='@username' {...field} />
+                      <Label>Full Name *</Label>
+                      <Input placeholder='john doe' {...field} />
+                    </>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              name='hotel'
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <>
+                      <Label>Hotel Name *</Label>
+                      <Input placeholder='Four seasons' {...field} />
                     </>
                   </FormControl>
                   <FormMessage />
@@ -107,7 +114,7 @@ const Contact = () => {
                   <FormControl>
                     <>
                       <Label>E-Mail *</Label>
-                      <Input placeholder='email@email.com' {...field} />
+                      <Input placeholder='fourseasons@gmail.com' {...field} />
                     </>
                   </FormControl>
                   <FormMessage />
@@ -117,7 +124,7 @@ const Contact = () => {
 
             <div className='grid gap-3 my-3'>
               <FormField
-                name='checkbox_creator'
+                name='checkbox_content'
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
@@ -127,7 +134,7 @@ const Contact = () => {
                           onCheckedChange={field.onChange}
                           {...field}
                         />
-                        <Label>To become the creator of Planetopedia</Label>
+                        <Label>Content Creation for social media</Label>
                       </div>
                     </FormControl>
                     <FormMessage />
@@ -135,7 +142,7 @@ const Contact = () => {
                 )}
               />
               <FormField
-                name='checkbox_whatsapp'
+                name='checkbox_spot'
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
@@ -145,7 +152,9 @@ const Contact = () => {
                           onCheckedChange={field.onChange}
                           {...field}
                         />
-                        <Label>Access to our WhatsApp group</Label>
+                        <Label>
+                          Professional short 4K spot for your Hotel or Resort
+                        </Label>
                       </div>
                     </FormControl>
                     <FormMessage />
@@ -153,7 +162,7 @@ const Contact = () => {
                 )}
               />
               <FormField
-                name='checkbox_platform'
+                name='checkbox_press'
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
@@ -163,25 +172,7 @@ const Contact = () => {
                           onCheckedChange={field.onChange}
                           {...field}
                         />
-                        <Label>Access to our platform</Label>
-                      </div>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                name='checkbox_engagement'
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <div className='flex items-center gap-2'>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                          {...field}
-                        />
-                        <Label>Engagement Group</Label>
+                        <Label>Press + Media Trips</Label>
                       </div>
                     </FormControl>
                     <FormMessage />
@@ -189,6 +180,21 @@ const Contact = () => {
                 )}
               />
             </div>
+
+            <FormField
+              name='message'
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <>
+                      <Label>Message</Label>
+                      <Textarea placeholder='write a message...' {...field} />
+                    </>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
             <Button type='submit' className='mt-4'>
               {language === 'en' ? <>Submit</> : <>Odeslat</>}
