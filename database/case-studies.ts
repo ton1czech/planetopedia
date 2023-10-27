@@ -338,5 +338,31 @@ export const caseStudies = [
         url: 'https://www.facebook.com/FourSeasons',
       },
     ],
+    blogPosts: [
+      {
+        title: 'FOUR SEASONS HAMPSHIRE',
+        locationEn: 'Hampshire, England',
+        locationCz: 'Hampshire, Anglie',
+        locationDe: 'Hampshire, England',
+        slug: '/blog/hotels/overview-four-seasons-hampshire',
+        src: '/case-studies/four-seasons/blog/1.webp',
+      },
+      {
+        title: 'FOUR SEASONS TEN TRINITY SQUARE',
+        locationEn: 'London, England',
+        locationCz: 'Londýn, Anglie',
+        locationDe: 'London, England',
+        slug: '/blog/hotels/overview-four-seasons-ten-trinity-square',
+        src: '/case-studies/four-seasons/blog/2.webp',
+      },
+      {
+        title: 'FOUR SEASONS FIRENZE',
+        locationEn: 'Florence, Italy',
+        locationCz: 'Florencie, Itálie',
+        locationDe: 'Florence, Italy',
+        slug: '/blog/hotels/overview-four-seasons-firenze',
+        src: '/case-studies/four-seasons/blog/3.webp',
+      },
+    ],
   },
 ]
