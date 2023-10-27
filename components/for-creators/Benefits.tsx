@@ -124,27 +124,27 @@ const Benefits = () => {
             </ul>
           </div>
 
-          <div className='lg:flex overflow-hidden hidden justify-center items-center'>
+          <div className='lg:block overflow-hidden hidden'>
             <Image
               src='/services/for-creators/1.webp'
               alt='heys luggage mockup'
               width={300}
               height={500}
-              className='w-[11vw] mb-16'
+              className='w-[17vw] absolute left-[48%] top-[6rem]'
             />
             <Image
               src='/services/for-creators/2.webp'
               alt='heys luggage mockup'
               width={300}
               height={500}
-              className='w-[11vw]'
+              className='w-[17vw] absolute left-[58%] top-[9rem]'
             />
             <Image
               src='/services/for-creators/3.webp'
               alt='heys luggage mockup'
               width={300}
               height={500}
-              className='w-[11vw] mt-16'
+              className='w-[17vw] absolute left-[68%] top-[12rem]'
             />
           </div>
         </div>
