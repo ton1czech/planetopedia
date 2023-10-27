@@ -18,12 +18,36 @@ const Contact = () => {
   const { language } = useLanguage(state => state)
 
   const schema = z.object({
-    name: z.string().min(1),
+    name: z.string().min(1, {
+      message:
+        language === 'en'
+          ? 'Name is required.'
+          : language === 'cs'
+          ? 'Jméno je povinné.'
+          : language === 'de'
+          ? 'Name ist erforderlich.'
+          : '',
+    }),
     email: z.string().email({
       message:
-        language === 'en' ? 'Not a valid email' : 'E-mail nesplňuje požadavky',
+        language === 'en'
+          ? 'Not a valid email'
+          : language === 'cs'
+          ? 'E-mail nesplňuje požadavky'
+          : language === 'de'
+          ? 'Keine gültige E-Mail'
+          : '',
     }),
-    brand: z.string().min(1),
+    brand: z.string().min(1, {
+      message:
+        language === 'en'
+          ? 'Brand name is required.'
+          : language === 'cs'
+          ? 'Jméno značky je povinné.'
+          : language === 'de'
+          ? 'Name ist erforderlich.'
+          : '',
+    }),
     checkbox_creation: z.boolean(),
     checkbox_influencer: z.boolean(),
     checkbox_managment: z.boolean(),
@@ -55,7 +79,13 @@ const Contact = () => {
       //   console.log(emailResponse)
 
       toast.success(
-        language === 'en' ? 'Sent Successfully.' : 'Úspěšně odesláno.'
+        language === 'en'
+          ? 'Sent Successfully.'
+          : language === 'cs'
+          ? 'Úspěšně odesláno.'
+          : language === 'de'
+          ? 'Erfolgreich gesendet.'
+          : ''
       )
     } catch (error) {
       console.log('Error sending email:', error)
@@ -63,7 +93,11 @@ const Contact = () => {
       toast.error(
         language === 'en'
           ? 'Something went wrong, please try again later.'
-          : 'Něco se pokazilo, zkuste to prosím později.'
+          : language === 'cs'
+          ? 'Něco se pokazilo, zkuste to prosím později.'
+          : language === 'de'
+          ? 'Es ist ein Fehler aufgetreten, bitte versuchen Sie es später noch einmal.'
+          : ''
       )
     } finally {
       form.reset()
@@ -74,7 +108,13 @@ const Contact = () => {
     <div className='sticky top-0 z-20 bg-zinc-200 pt-32 snap-start scroll-mt-20 w-screen'>
       <Container>
         <h2 className='mb-5 text-2xl md:text-3xl lg:text-4xl font-bold'>
-          Let's create together
+          {language === 'en' ? (
+            <>Let's create together</>
+          ) : language === 'cs' ? (
+            <>Pojďme tvořit spolu</>
+          ) : language === 'de' ? (
+            <>Lassen Sie uns gemeinsam etwas schaffen</>
+          ) : null}
         </h2>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -84,7 +124,15 @@ const Contact = () => {
                 <FormItem>
                   <FormControl>
                     <>
-                      <Label>Full Name *</Label>
+                      <Label>
+                        {language === 'en' ? (
+                          <>Full Name *</>
+                        ) : language === 'cs' ? (
+                          <>Celé jméno *</>
+                        ) : language === 'de' ? (
+                          <>Vollständiger Name *</>
+                        ) : null}
+                      </Label>
                       <Input placeholder='john doe' {...field} />
                     </>
                   </FormControl>
@@ -98,7 +146,15 @@ const Contact = () => {
                 <FormItem>
                   <FormControl>
                     <>
-                      <Label>Brand / Company Name *</Label>
+                      <Label>
+                        {language === 'en' ? (
+                          <>Brand / Company Name *</>
+                        ) : language === 'cs' ? (
+                          <>Název Společnosti / Značky *</>
+                        ) : language === 'de' ? (
+                          <>Markename / Firmenname *</>
+                        ) : null}
+                      </Label>
                       <Input placeholder='Four seasons' {...field} />
                     </>
                   </FormControl>
@@ -133,7 +189,15 @@ const Contact = () => {
                           onCheckedChange={field.onChange}
                           {...field}
                         />
-                        <Label>Content Creation for social media</Label>
+                        <Label>
+                          {language === 'en' ? (
+                            <>Content Creation for social media</>
+                          ) : language === 'cs' ? (
+                            <>Tvorba obsahu pro sociální sítě</>
+                          ) : language === 'de' ? (
+                            <>Erstellung von Inhalten für soziale Medien</>
+                          ) : null}
+                        </Label>
                       </div>
                     </FormControl>
                     <FormMessage />
@@ -152,7 +216,15 @@ const Contact = () => {
                           {...field}
                         />
                         <Label>
-                          Social Media Influencer Marketing Campaigns
+                          {language === 'en' ? (
+                            <>Social Media Influencer Marketing Campaigns</>
+                          ) : language === 'cs' ? (
+                            <>Marketingové kampaně na sociální sítích</>
+                          ) : language === 'de' ? (
+                            <>
+                              Influencer-Marketing-Kampagnen für soziale Medien
+                            </>
+                          ) : null}
                         </Label>
                       </div>
                     </FormControl>
@@ -171,7 +243,15 @@ const Contact = () => {
                           onCheckedChange={field.onChange}
                           {...field}
                         />
-                        <Label>Social Media Managment / Takeovers</Label>
+                        <Label>
+                          {language === 'en' ? (
+                            <>Social Media Managment / Takeovers</>
+                          ) : language === 'cs' ? (
+                            <>Správa Sociálních Médií / Převzetí</>
+                          ) : language === 'de' ? (
+                            <>Social Media Management / Übernahmen</>
+                          ) : null}
+                        </Label>
                       </div>
                     </FormControl>
                     <FormMessage />
@@ -186,8 +266,27 @@ const Contact = () => {
                 <FormItem>
                   <FormControl>
                     <>
-                      <Label>Message</Label>
-                      <Textarea placeholder='write a message...' {...field} />
+                      <Label>
+                        {language === 'en' ? (
+                          <>Message</>
+                        ) : language === 'cs' ? (
+                          <>Zpráva</>
+                        ) : language === 'de' ? (
+                          <>Nachricht</>
+                        ) : null}
+                      </Label>
+                      <Textarea
+                        placeholder={
+                          language === 'en'
+                            ? 'Write a message...'
+                            : language === 'cs'
+                            ? 'Napište zprávu...'
+                            : language === 'de'
+                            ? 'Schreiben Sie eine Nachricht...'
+                            : ''
+                        }
+                        {...field}
+                      />
                     </>
                   </FormControl>
                   <FormMessage />
@@ -196,7 +295,13 @@ const Contact = () => {
             />
 
             <Button type='submit' className='mt-4'>
-              {language === 'en' ? <>Submit</> : <>Odeslat</>}
+              {language === 'en' ? (
+                <>Submit</>
+              ) : language === 'cs' ? (
+                <>Odeslat</>
+              ) : language === 'de' ? (
+                <>Einreichen</>
+              ) : null}
             </Button>
           </form>
         </Form>

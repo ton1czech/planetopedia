@@ -30,7 +30,7 @@ const Item = ({
   const { language } = useLanguage(state => state)
   return (
     <li>
-      <h3 className='text-xl md:text-2xl lg:text-3xl font-semibold'>
+      <h3 className='text-xl lg:text-2xl font-semibold'>
         {language === 'en' ? (
           <>{headingEn}</>
         ) : language === 'cs' ? (
@@ -83,7 +83,7 @@ const Benefits = () => {
       <Container className='py-10 text-white'>
         <div className='grid lg:grid-cols-2 gap-8'>
           <div>
-            <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold'>
+            <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold'>
               Main Benefits
             </h1>
             <ul className='mt-10 md:mt-20 space-y-6 md:space-y-10'>
@@ -124,32 +124,32 @@ const Benefits = () => {
             </ul>
           </div>
 
-          <div className='hidden lg:block'>
+          <div className='lg:flex overflow-hidden hidden justify-center items-center'>
             <Image
               src='/services/for-creators/1.webp'
               alt='heys luggage mockup'
               width={300}
               height={500}
-              className='absolute bottom-20 left-1/2 w-[16vw]'
+              className='w-[11vw] mb-16'
             />
             <Image
               src='/services/for-creators/2.webp'
               alt='heys luggage mockup'
               width={300}
               height={500}
-              className='absolute bottom-48 left-[65%] w-[16vw]'
+              className='w-[11vw]'
             />
             <Image
               src='/services/for-creators/3.webp'
               alt='heys luggage mockup'
               width={300}
               height={500}
-              className='absolute bottom-64 left-[80%] w-[16vw]'
+              className='w-[11vw] mt-16'
             />
           </div>
         </div>
 
-        <p className='text-sm text-zinc-400 pt-14 md:pt-20 text-center'>
+        <p className='text-sm text-zinc-400 text-center absolute bottom-10 left-1/2 -translate-x-1/2'>
           #planetopedia Team
         </p>
       </Container>

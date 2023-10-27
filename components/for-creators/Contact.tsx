@@ -27,7 +27,7 @@ const Contact = () => {
             : language === 'cs'
             ? 'Uživatelské jméno musí začínat "@"'
             : language === 'de'
-            ? ''
+            ? "Der Benutzername muss mit '@' beginnen"
             : '',
       }),
     email: z.string().email({
@@ -37,7 +37,7 @@ const Contact = () => {
           : language === 'cs'
           ? 'E-mail nesplňuje požadavky'
           : language === 'de'
-          ? ''
+          ? 'Keine gültige E-Mail'
           : '',
     }),
     checkbox_creator: z.boolean(),
@@ -77,7 +77,7 @@ const Contact = () => {
           : language === 'cs'
           ? 'Úspěšně odesláno.'
           : language === 'de'
-          ? ''
+          ? 'Erfolgreich gesendet.'
           : ''
       )
     } catch (error) {
@@ -89,7 +89,7 @@ const Contact = () => {
           : language === 'cs'
           ? 'Něco se pokazilo, zkuste to prosím později.'
           : language === 'de'
-          ? ''
+          ? 'Es ist ein Fehler aufgetreten, bitte versuchen Sie es später noch einmal.'
           : ''
       )
     } finally {
@@ -112,7 +112,11 @@ const Contact = () => {
               dostaň svojí tvorbu mezi cílovou skupinu!
             </>
           ) : language === 'de' ? (
-            <></>
+            <>
+              Werden Sie{' '}
+              <span className='font-bold'> Teil unserer Gemeinschaft </span>und
+              bringen Sie Ihre Kreation in die Zielgruppe!
+            </>
           ) : null}
         </h2>
         <Form {...form}>
@@ -127,9 +131,9 @@ const Contact = () => {
                         {language === 'en' ? (
                           <>Instagram Account *</>
                         ) : language === 'cs' ? (
-                          <></>
+                          <>Instagram Účet*</>
                         ) : language === 'de' ? (
-                          <></>
+                          <>Instagram-Account *</>
                         ) : null}
                       </Label>
                       <Input placeholder='@username' {...field} />
@@ -170,9 +174,9 @@ const Contact = () => {
                           {language === 'en' ? (
                             <>To become the creator of Planetopedia</>
                           ) : language === 'cs' ? (
-                            <></>
+                            <>Stát se tvůrcem Planetopedie</>
                           ) : language === 'de' ? (
-                            <></>
+                            <>Der Schöpfer von Planetopedia werden</>
                           ) : null}
                         </Label>
                       </div>
@@ -196,9 +200,9 @@ const Contact = () => {
                           {language === 'en' ? (
                             <>Access to our WhatsApp group</>
                           ) : language === 'cs' ? (
-                            <></>
+                            <>Přístup do naší skupiny WhatsApp</>
                           ) : language === 'de' ? (
-                            <></>
+                            <>Zugang zu unserer WhatsApp-Gruppe</>
                           ) : null}
                         </Label>
                       </div>
@@ -222,9 +226,9 @@ const Contact = () => {
                           {language === 'en' ? (
                             <>Access to our platform</>
                           ) : language === 'cs' ? (
-                            <></>
+                            <>Přístup k naší platformě</>
                           ) : language === 'de' ? (
-                            <></>
+                            <>Zugang zu unserer Plattform</>
                           ) : null}
                         </Label>
                       </div>
@@ -248,9 +252,9 @@ const Contact = () => {
                           {language === 'en' ? (
                             <>Engagement Group</>
                           ) : language === 'cs' ? (
-                            <></>
+                            <>Engagement Group</>
                           ) : language === 'de' ? (
-                            <></>
+                            <>Gruppe Engagement</>
                           ) : null}
                         </Label>
                       </div>
@@ -267,7 +271,7 @@ const Contact = () => {
               ) : language === 'cs' ? (
                 <>Odeslat</>
               ) : language === 'de' ? (
-                <></>
+                <>Einreichen</>
               ) : null}
             </Button>
           </form>

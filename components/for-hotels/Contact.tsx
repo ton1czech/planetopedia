@@ -25,7 +25,7 @@ const Contact = () => {
           : language === 'cs'
           ? 'Jméno je povinné.'
           : language === 'de'
-          ? ''
+          ? 'Name ist erforderlich.'
           : '',
     }),
     email: z.string().email({
@@ -35,7 +35,7 @@ const Contact = () => {
           : language === 'cs'
           ? 'Uživatelské jméno musí začínat "@"'
           : language === 'de'
-          ? ''
+          ? "Der Benutzername muss mit '@' beginnen"
           : '',
     }),
     hotel: z.string().min(1, {
@@ -45,7 +45,7 @@ const Contact = () => {
           : language === 'cs'
           ? 'Jméno hotelu je povinné.'
           : language === 'de'
-          ? ''
+          ? 'Der Hotelname ist erforderlich.'
           : '',
     }),
 
@@ -85,7 +85,7 @@ const Contact = () => {
           : language === 'cs'
           ? 'Úspěšně odesláno.'
           : language === 'de'
-          ? ''
+          ? 'Erfolgreich gesendet.'
           : ''
       )
     } catch (error) {
@@ -97,7 +97,7 @@ const Contact = () => {
           : language === 'cs'
           ? 'Něco se pokazilo, zkuste to prosím později.'
           : language === 'de'
-          ? ''
+          ? 'Es ist ein Fehler aufgetreten, bitte versuchen Sie es später noch einmal.'
           : ''
       )
     } finally {
@@ -112,9 +112,9 @@ const Contact = () => {
           {language === 'en' ? (
             <>Let's create together</>
           ) : language === 'cs' ? (
-            <>Pojďme vytvářet spolu</>
+            <>Pojďme tvořit spolu</>
           ) : language === 'de' ? (
-            <></>
+            <>Lassen Sie uns gemeinsam etwas schaffen</>
           ) : null}
         </h2>
         <Form {...form}>
@@ -125,7 +125,15 @@ const Contact = () => {
                 <FormItem>
                   <FormControl>
                     <>
-                      <Label>Full Name *</Label>
+                      <Label>
+                        {language === 'en' ? (
+                          <>Full Name *</>
+                        ) : language === 'cs' ? (
+                          <>Celé jméno *</>
+                        ) : language === 'de' ? (
+                          <>Vollständiger Name *</>
+                        ) : null}
+                      </Label>
                       <Input placeholder='john doe' {...field} />
                     </>
                   </FormControl>
@@ -139,7 +147,15 @@ const Contact = () => {
                 <FormItem>
                   <FormControl>
                     <>
-                      <Label>Hotel Name *</Label>
+                      <Label>
+                        {language === 'en' ? (
+                          <>Hotel Name *</>
+                        ) : language === 'cs' ? (
+                          <>Název Hotelu *</>
+                        ) : language === 'de' ? (
+                          <>Hotelname *</>
+                        ) : null}
+                      </Label>
                       <Input placeholder='Four seasons' {...field} />
                     </>
                   </FormControl>
@@ -174,7 +190,15 @@ const Contact = () => {
                           onCheckedChange={field.onChange}
                           {...field}
                         />
-                        <Label>Content Creation for social media</Label>
+                        <Label>
+                          {language === 'en' ? (
+                            <>Content Creation for social media</>
+                          ) : language === 'cs' ? (
+                            <>Tvorba obsahu pro sociální sítě</>
+                          ) : language === 'de' ? (
+                            <>Erstellung von Inhalten für soziale Medien</>
+                          ) : null}
+                        </Label>
                       </div>
                     </FormControl>
                     <FormMessage />
@@ -193,7 +217,22 @@ const Contact = () => {
                           {...field}
                         />
                         <Label>
-                          Professional short 4K spot for your Hotel or Resort
+                          {language === 'en' ? (
+                            <>
+                              Professional short 4K spot for your Hotel or
+                              Resort
+                            </>
+                          ) : language === 'cs' ? (
+                            <>
+                              Profesionální krátký spot ve 4K pro váš hotel nebo
+                              resort
+                            </>
+                          ) : language === 'de' ? (
+                            <>
+                              Professioneller kurzer 4K-Spot für Ihr Hotel oder
+                              Resort
+                            </>
+                          ) : null}
                         </Label>
                       </div>
                     </FormControl>
@@ -212,7 +251,15 @@ const Contact = () => {
                           onCheckedChange={field.onChange}
                           {...field}
                         />
-                        <Label>Press + Media Trips</Label>
+                        <Label>
+                          {language === 'en' ? (
+                            <>Press + Media Trips</>
+                          ) : language === 'cs' ? (
+                            <>Výlety pro Novináře a Média</>
+                          ) : language === 'de' ? (
+                            <>Presse und Medienreisen</>
+                          ) : null}
+                        </Label>
                       </div>
                     </FormControl>
                     <FormMessage />
@@ -227,8 +274,27 @@ const Contact = () => {
                 <FormItem>
                   <FormControl>
                     <>
-                      <Label>Message</Label>
-                      <Textarea placeholder='write a message...' {...field} />
+                      <Label>
+                        {language === 'en' ? (
+                          <>Message</>
+                        ) : language === 'cs' ? (
+                          <>Zpráva</>
+                        ) : language === 'de' ? (
+                          <>Nachricht</>
+                        ) : null}
+                      </Label>
+                      <Textarea
+                        placeholder={
+                          language === 'en'
+                            ? 'Write a message...'
+                            : language === 'cs'
+                            ? 'Napište zprávu...'
+                            : language === 'de'
+                            ? 'Schreiben Sie eine Nachricht...'
+                            : ''
+                        }
+                        {...field}
+                      />
                     </>
                   </FormControl>
                   <FormMessage />
@@ -242,7 +308,7 @@ const Contact = () => {
               ) : language === 'cs' ? (
                 <>Odeslat</>
               ) : language === 'de' ? (
-                <></>
+                <>Einreichen</>
               ) : null}
             </Button>
           </form>
