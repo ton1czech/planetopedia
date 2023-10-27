@@ -29,7 +29,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
       <Container>
         <div className='grid mx-auto place-content-center md:max-w-screen-md 2xl:max-w-screen-md'>
           <div>
-            <h1 className='text-2xl font-bold md:text-3xl'>
+            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
               {restaurant?.name}
             </h1>
             {language === 'en' && (
@@ -66,7 +66,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
             restaurant?.overview_cz ||
             restaurant?.overview_de) && (
             <>
-              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl'>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                 {language === 'en' && <>restaurant overview</>}
                 {language === 'cs' && <>přehled restaurace</>}
                 {language === 'de' && <>Restaurant-Übersicht</>}
@@ -121,7 +121,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
             restaurant?.menu_cz ||
             restaurant?.menu_de) && (
             <>
-              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl'>
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                 {language === 'en' && <>food & drinks</>}
                 {language === 'cs' && <>jídlo a nápoje</>}
                 {language === 'de' && <>Essen & Trinken</>}
@@ -176,10 +176,11 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
             restaurant?.conclusion_cz ||
             restaurant?.conclusion_de) && (
             <>
-              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'></h1>
-              {language === 'en' && <>conclusion</>}
-              {language === 'cs' && <>závěr</>}
-              {language === 'de' && <>Schlussfolgerung</>}
+              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
+                {language === 'en' && <>conclusion</>}
+                {language === 'cs' && <>závěr</>}
+                {language === 'de' && <>Schlussfolgerung</>}
+              </h1>
               {language === 'en' && (
                 <div className='pb-6 md:pb-10'>
                   <PortableText
