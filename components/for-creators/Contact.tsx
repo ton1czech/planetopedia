@@ -24,11 +24,21 @@ const Contact = () => {
         message:
           language === 'en'
             ? "Username must start with '@'"
-            : 'uživatelské jméno musí začínat "@"',
+            : language === 'cs'
+            ? 'Uživatelské jméno musí začínat "@"'
+            : language === 'de'
+            ? ''
+            : '',
       }),
     email: z.string().email({
       message:
-        language === 'en' ? 'Not a valid email' : 'E-mail nesplňuje požadavky',
+        language === 'en'
+          ? 'Not a valid email'
+          : language === 'cs'
+          ? 'E-mail nesplňuje požadavky'
+          : language === 'de'
+          ? ''
+          : '',
     }),
     checkbox_creator: z.boolean(),
     checkbox_whatsapp: z.boolean(),
@@ -62,7 +72,13 @@ const Contact = () => {
       //   console.log(emailResponse)
 
       toast.success(
-        language === 'en' ? 'Sent Successfully.' : 'Úspěšně odesláno.'
+        language === 'en'
+          ? 'Sent Successfully.'
+          : language === 'cs'
+          ? 'Úspěšně odesláno.'
+          : language === 'de'
+          ? ''
+          : ''
       )
     } catch (error) {
       console.log('Error sending email:', error)
@@ -70,7 +86,11 @@ const Contact = () => {
       toast.error(
         language === 'en'
           ? 'Something went wrong, please try again later.'
-          : 'Něco se pokazilo, zkuste to prosím později.'
+          : language === 'cs'
+          ? 'Něco se pokazilo, zkuste to prosím později.'
+          : language === 'de'
+          ? ''
+          : ''
       )
     } finally {
       form.reset()
@@ -81,8 +101,19 @@ const Contact = () => {
     <div className='sticky top-0 z-30 bg-zinc-200 pt-32 snap-start scroll-mt-20 w-screen'>
       <Container>
         <h2 className='mb-5 text-2xl md:text-3xl lg:text-4xl'>
-          Be <span className='font-bold'> part of our community </span>and get
-          your creation among the target group!
+          {language === 'en' ? (
+            <>
+              Be <span className='font-bold'> part of our community </span>and
+              get your creation among the target group!
+            </>
+          ) : language === 'cs' ? (
+            <>
+              Staň se<span className='font-bold'> členem komunity </span> a
+              dostaň svojí tvorbu mezi cílovou skupinu!
+            </>
+          ) : language === 'de' ? (
+            <></>
+          ) : null}
         </h2>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -92,7 +123,15 @@ const Contact = () => {
                 <FormItem>
                   <FormControl>
                     <>
-                      <Label>Instagram Account *</Label>
+                      <Label>
+                        {language === 'en' ? (
+                          <>Instagram Account *</>
+                        ) : language === 'cs' ? (
+                          <></>
+                        ) : language === 'de' ? (
+                          <></>
+                        ) : null}
+                      </Label>
                       <Input placeholder='@username' {...field} />
                     </>
                   </FormControl>
@@ -127,7 +166,15 @@ const Contact = () => {
                           onCheckedChange={field.onChange}
                           {...field}
                         />
-                        <Label>To become the creator of Planetopedia</Label>
+                        <Label>
+                          {language === 'en' ? (
+                            <>To become the creator of Planetopedia</>
+                          ) : language === 'cs' ? (
+                            <></>
+                          ) : language === 'de' ? (
+                            <></>
+                          ) : null}
+                        </Label>
                       </div>
                     </FormControl>
                     <FormMessage />
@@ -145,7 +192,15 @@ const Contact = () => {
                           onCheckedChange={field.onChange}
                           {...field}
                         />
-                        <Label>Access to our WhatsApp group</Label>
+                        <Label>
+                          {language === 'en' ? (
+                            <>Access to our WhatsApp group</>
+                          ) : language === 'cs' ? (
+                            <></>
+                          ) : language === 'de' ? (
+                            <></>
+                          ) : null}
+                        </Label>
                       </div>
                     </FormControl>
                     <FormMessage />
@@ -163,7 +218,15 @@ const Contact = () => {
                           onCheckedChange={field.onChange}
                           {...field}
                         />
-                        <Label>Access to our platform</Label>
+                        <Label>
+                          {language === 'en' ? (
+                            <>Access to our platform</>
+                          ) : language === 'cs' ? (
+                            <></>
+                          ) : language === 'de' ? (
+                            <></>
+                          ) : null}
+                        </Label>
                       </div>
                     </FormControl>
                     <FormMessage />
@@ -181,7 +244,15 @@ const Contact = () => {
                           onCheckedChange={field.onChange}
                           {...field}
                         />
-                        <Label>Engagement Group</Label>
+                        <Label>
+                          {language === 'en' ? (
+                            <>Engagement Group</>
+                          ) : language === 'cs' ? (
+                            <></>
+                          ) : language === 'de' ? (
+                            <></>
+                          ) : null}
+                        </Label>
                       </div>
                     </FormControl>
                     <FormMessage />
@@ -191,7 +262,13 @@ const Contact = () => {
             </div>
 
             <Button type='submit' className='mt-4'>
-              {language === 'en' ? <>Submit</> : <>Odeslat</>}
+              {language === 'en' ? (
+                <>Submit</>
+              ) : language === 'cs' ? (
+                <>Odeslat</>
+              ) : language === 'de' ? (
+                <></>
+              ) : null}
             </Button>
           </form>
         </Form>

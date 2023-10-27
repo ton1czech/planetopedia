@@ -22,10 +22,22 @@ const Hero = () => {
         <Container className='grid items-center justify-center h-full w-full'>
           <div className='text-white text-center'>
             <h1 className='text-3xl font-black uppercase md:text-5xl lg:text-7xl'>
-              Join the Team!
+              {language === 'en' ? (
+                <>Join the Team!</>
+              ) : language === 'cs' ? (
+                <>Připoj se do Týmu!</>
+              ) : language === 'de' ? (
+                <></>
+              ) : null}
             </h1>
             <p className='text-lg md:text-3xl lg:text-4xl tracking-wide'>
-              Let us take your work seriously
+              {language === 'en' ? (
+                <>Let us take your work seriously</>
+              ) : language === 'cs' ? (
+                <></>
+              ) : language === 'de' ? (
+                <></>
+              ) : null}
             </p>
           </div>
         </Container>

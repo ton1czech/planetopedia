@@ -18,12 +18,36 @@ const Contact = () => {
   const { language } = useLanguage(state => state)
 
   const schema = z.object({
-    name: z.string().min(1),
+    name: z.string().min(1, {
+      message:
+        language === 'en'
+          ? 'Name is required.'
+          : language === 'cs'
+          ? 'Jméno je povinné.'
+          : language === 'de'
+          ? ''
+          : '',
+    }),
     email: z.string().email({
       message:
-        language === 'en' ? 'Not a valid email' : 'E-mail nesplňuje požadavky',
+        language === 'en'
+          ? "Username must start with '@'"
+          : language === 'cs'
+          ? 'Uživatelské jméno musí začínat "@"'
+          : language === 'de'
+          ? ''
+          : '',
     }),
-    hotel: z.string().min(1),
+    hotel: z.string().min(1, {
+      message:
+        language === 'en'
+          ? 'Hotel name is required.'
+          : language === 'cs'
+          ? 'Jméno hotelu je povinné.'
+          : language === 'de'
+          ? ''
+          : '',
+    }),
 
     checkbox_content: z.boolean(),
     checkbox_spot: z.boolean(),
@@ -56,7 +80,13 @@ const Contact = () => {
       //   console.log(emailResponse)
 
       toast.success(
-        language === 'en' ? 'Sent Successfully.' : 'Úspěšně odesláno.'
+        language === 'en'
+          ? 'Sent Successfully.'
+          : language === 'cs'
+          ? 'Úspěšně odesláno.'
+          : language === 'de'
+          ? ''
+          : ''
       )
     } catch (error) {
       console.log('Error sending email:', error)
@@ -64,7 +94,11 @@ const Contact = () => {
       toast.error(
         language === 'en'
           ? 'Something went wrong, please try again later.'
-          : 'Něco se pokazilo, zkuste to prosím později.'
+          : language === 'cs'
+          ? 'Něco se pokazilo, zkuste to prosím později.'
+          : language === 'de'
+          ? ''
+          : ''
       )
     } finally {
       form.reset()
@@ -75,7 +109,13 @@ const Contact = () => {
     <div className='sticky top-0 z-20 bg-zinc-200 pt-32 snap-start scroll-mt-20 w-screen'>
       <Container>
         <h2 className='mb-5 text-2xl md:text-3xl lg:text-4xl font-bold'>
-          Let's create together
+          {language === 'en' ? (
+            <>Let's create together</>
+          ) : language === 'cs' ? (
+            <>Pojďme vytvářet spolu</>
+          ) : language === 'de' ? (
+            <></>
+          ) : null}
         </h2>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -197,7 +237,13 @@ const Contact = () => {
             />
 
             <Button type='submit' className='mt-4'>
-              {language === 'en' ? <>Submit</> : <>Odeslat</>}
+              {language === 'en' ? (
+                <>Submit</>
+              ) : language === 'cs' ? (
+                <>Odeslat</>
+              ) : language === 'de' ? (
+                <></>
+              ) : null}
             </Button>
           </form>
         </Form>

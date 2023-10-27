@@ -22,7 +22,13 @@ const Hero = () => {
         <Container className='grid items-center justify-center h-full w-full'>
           <div className='text-white text-center'>
             <h1 className='text-3xl font-black uppercase md:text-5xl lg:text-7xl'>
-              For Brands
+              {language === 'en' ? (
+                <>For Brands</>
+              ) : language === 'cs' ? (
+                <></>
+              ) : language === 'de' ? (
+                <></>
+              ) : null}
             </h1>
           </div>
         </Container>
