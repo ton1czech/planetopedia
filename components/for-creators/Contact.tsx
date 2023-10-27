@@ -40,10 +40,6 @@ const Contact = () => {
           ? 'Keine gültige E-Mail'
           : '',
     }),
-    checkbox_creator: z.boolean(),
-    checkbox_whatsapp: z.boolean(),
-    checkbox_platform: z.boolean(),
-    checkbox_engagement: z.boolean(),
   })
 
   const form = useForm<z.infer<typeof schema>>({
@@ -51,10 +47,6 @@ const Contact = () => {
     defaultValues: {
       instagram: '',
       email: '',
-      checkbox_creator: false,
-      checkbox_whatsapp: false,
-      checkbox_platform: false,
-      checkbox_engagement: false,
     },
   })
 
@@ -100,23 +92,13 @@ const Contact = () => {
   return (
     <div className='sticky top-0 z-30 bg-zinc-200 pt-32 snap-start scroll-mt-20 w-screen'>
       <Container>
-        <h2 className='mb-5 text-2xl md:text-3xl lg:text-4xl'>
+        <h2 className='mb-5 text-2xl md:text-3xl lg:text-4xl font-bold'>
           {language === 'en' ? (
-            <>
-              Be <span className='font-bold'> part of our community </span>and
-              get your creation among the target group!
-            </>
+            <>A new era begins with Planetopedia.</>
           ) : language === 'cs' ? (
-            <>
-              Staň se<span className='font-bold'> členem komunity </span> a
-              dostaň svojí tvorbu mezi cílovou skupinu!
-            </>
+            <>Nová éra začíná s Planetopedia</>
           ) : language === 'de' ? (
-            <>
-              Werden Sie{' '}
-              <span className='font-bold'> Teil unserer Gemeinschaft </span>und
-              bringen Sie Ihre Kreation in die Zielgruppe!
-            </>
+            <>Eine neue Ära beginnt mit Planetopedia.</>
           ) : null}
         </h2>
         <Form {...form}>
@@ -157,113 +139,6 @@ const Contact = () => {
                 </FormItem>
               )}
             />
-
-            <div className='grid gap-3 my-3'>
-              <FormField
-                name='checkbox_creator'
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <div className='flex items-center gap-2'>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                          {...field}
-                        />
-                        <Label>
-                          {language === 'en' ? (
-                            <>To become the creator of Planetopedia</>
-                          ) : language === 'cs' ? (
-                            <>Stát se tvůrcem Planetopedie</>
-                          ) : language === 'de' ? (
-                            <>Der Schöpfer von Planetopedia werden</>
-                          ) : null}
-                        </Label>
-                      </div>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                name='checkbox_whatsapp'
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <div className='flex items-center gap-2'>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                          {...field}
-                        />
-                        <Label>
-                          {language === 'en' ? (
-                            <>Access to our WhatsApp group</>
-                          ) : language === 'cs' ? (
-                            <>Přístup do naší skupiny WhatsApp</>
-                          ) : language === 'de' ? (
-                            <>Zugang zu unserer WhatsApp-Gruppe</>
-                          ) : null}
-                        </Label>
-                      </div>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                name='checkbox_platform'
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <div className='flex items-center gap-2'>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                          {...field}
-                        />
-                        <Label>
-                          {language === 'en' ? (
-                            <>Access to our platform</>
-                          ) : language === 'cs' ? (
-                            <>Přístup k naší platformě</>
-                          ) : language === 'de' ? (
-                            <>Zugang zu unserer Plattform</>
-                          ) : null}
-                        </Label>
-                      </div>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                name='checkbox_engagement'
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <div className='flex items-center gap-2'>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                          {...field}
-                        />
-                        <Label>
-                          {language === 'en' ? (
-                            <>Engagement Group</>
-                          ) : language === 'cs' ? (
-                            <>Engagement Group</>
-                          ) : language === 'de' ? (
-                            <>Gruppe Engagement</>
-                          ) : null}
-                        </Label>
-                      </div>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
 
             <Button type='submit' className='mt-4'>
               {language === 'en' ? (
