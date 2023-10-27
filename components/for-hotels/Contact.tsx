@@ -52,6 +52,7 @@ const Contact = () => {
     checkbox_content: z.boolean(),
     checkbox_spot: z.boolean(),
     checkbox_press: z.boolean(),
+    checkbox_blog: z.boolean(),
   })
 
   const form = useForm<z.infer<typeof schema>>({
@@ -63,6 +64,7 @@ const Contact = () => {
       checkbox_content: false,
       checkbox_spot: false,
       checkbox_press: false,
+      checkbox_blog: false,
     },
   })
 
@@ -270,6 +272,32 @@ const Contact = () => {
                             <>Výlety pro Novináře a Média</>
                           ) : language === 'de' ? (
                             <>Presse und Medienreisen</>
+                          ) : null}
+                        </Label>
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                name='checkbox_blog'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <div className='flex items-center gap-2'>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                          {...field}
+                        />
+                        <Label>
+                          {language === 'en' ? (
+                            <>Blog Post / Instagram feature</>
+                          ) : language === 'cs' ? (
+                            <>Příspěvek na blogu / Funkce Instagramu</>
+                          ) : language === 'de' ? (
+                            <>Blogbeitrag / Instagram-Funktion</>
                           ) : null}
                         </Label>
                       </div>
