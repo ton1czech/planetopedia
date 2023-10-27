@@ -5,7 +5,7 @@ export default function ForBrands() {
   return (
     <section>
       <Hero />
-      <div className='pb-20 bg-zinc-200 md:pb-32'>
+      <div>
         {/* <Benefits />
         <Expecting />
         <Test /> */}

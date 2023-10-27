@@ -106,9 +106,9 @@ const Contact = () => {
   }
 
   return (
-    <div className='sticky top-0 z-20 bg-zinc-200 pt-32 snap-start scroll-mt-20 w-screen'>
-      <Container>
-        <h2 className='mb-5 text-2xl md:text-3xl lg:text-4xl font-bold'>
+    <div className='sticky z-20 bg-white snap-start scroll-mt-20 w-screen h-[90vh]'>
+      <Container className='h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-80 w-[35%]'>
+        <h2 className='mb-5 text-2xl md:text-3xl 2xl:text-4xl font-bold text-center'>
           {language === 'en' ? (
             <>Let's create together</>
           ) : language === 'cs' ? (
@@ -134,7 +134,11 @@ const Contact = () => {
                           <>Vollständiger Name *</>
                         ) : null}
                       </Label>
-                      <Input placeholder='john doe' {...field} />
+                      <Input
+                        placeholder='john doe'
+                        {...field}
+                        className='border-black'
+                      />
                     </>
                   </FormControl>
                   <FormMessage />
@@ -156,7 +160,11 @@ const Contact = () => {
                           <>Hotelname *</>
                         ) : null}
                       </Label>
-                      <Input placeholder='Four seasons' {...field} />
+                      <Input
+                        placeholder='Four seasons'
+                        {...field}
+                        className='border-black'
+                      />
                     </>
                   </FormControl>
                   <FormMessage />
@@ -170,7 +178,11 @@ const Contact = () => {
                   <FormControl>
                     <>
                       <Label>E-Mail *</Label>
-                      <Input placeholder='fourseasons@gmail.com' {...field} />
+                      <Input
+                        placeholder='fourseasons@gmail.com'
+                        {...field}
+                        className='border-black'
+                      />
                     </>
                   </FormControl>
                   <FormMessage />
@@ -293,6 +305,8 @@ const Contact = () => {
                             ? 'Schreiben Sie eine Nachricht...'
                             : ''
                         }
+                        rows={7}
+                        className='border-black resize-none'
                         {...field}
                       />
                     </>

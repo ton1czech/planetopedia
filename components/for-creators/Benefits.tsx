@@ -89,36 +89,54 @@ const Benefits = () => {
             <ul className='mt-10 md:mt-20 space-y-6 md:space-y-10'>
               <Item
                 headingEn='1. Instagram connection'
-                headingCz=''
-                headingDe=''
+                headingCz='1. Připojení k Instagramu'
+                headingDe='1. Instagram-Verbindung'
                 textEn="Let's group together on instagram!"
+                textCz='Pojďme se společně sdružit na instagramu!'
+                textDe='Lass uns auf Instagram zusammenarbeiten!'
               />
               <Item
                 headingEn='2. Meet the community'
-                headingCz=''
-                headingDe=''
+                headingCz='2. Setkání s komunitou'
+                headingDe='2. Treffen mit der Gemeinschaft'
                 textEn='Meet and connect with our creators around the world.'
+                textCz='Seznamte se s našimi tvůrci po celém světě a navažte s nimi kontakt.'
+                textDe='Treffen Sie unsere Schöpfer auf der ganzen Welt und treten Sie mit ihnen in Kontakt.'
               />
               <Item
                 headingEn='3. Work together'
-                headingCz=''
-                headingDe=''
+                headingCz='3. Pracujte společně'
+                headingDe='3. Gemeinsam arbeiten'
                 textEn='Unlock success through our social media influencer campaigns.'
+                textCz='Odemkněte si úspěch prostřednictvím našich kampaní pro influencery na sociálních sítích.'
+                textDe='Erschließen Sie sich den Erfolg durch unsere Social-Media-Influencer-Kampagnen.'
               />
               <Item
                 headingEn='4. Whatsapp Group'
-                headingCz=''
-                headingDe=''
+                headingCz='4. Skupina Whatsapp'
+                headingDe='4. Whatsapp-Gruppe'
                 textEn='Vote in polls / Give feedback / Platform News'
+                textCz='Hlasování v anketách / Poskytněte zpětnou vazbu / Novinky z platformy'
+                textDe='An Umfragen teilnehmen / Feedback geben / Plattform News'
               />
               <Item
                 headingEn='5. Engagement Groups'
-                headingCz=''
-                headingDe=''
+                headingCz='5. Skupiny pro zapojení'
+                headingDe='5. Engagement-Gruppen'
                 multiEn={[
                   'a) Luxury Travel Support Group',
                   'b) Photographers Support Group',
                   'c) Travel Tips Support Group',
+                ]}
+                multiCz={[
+                  'a) Skupina pro podporu luxusního cestování',
+                  'b) Podpůrná skupina fotografů',
+                  'c) Podpůrná skupina pro cestovní tipy',
+                ]}
+                multiDe={[
+                  'a) Unterstützungsgruppe für Luxusreisen',
+                  'b) Selbsthilfegruppe für Fotografen',
+                  'c) Selbsthilfegruppe Reisetipps',
                 ]}
               />
             </ul>
@@ -126,7 +144,7 @@ const Benefits = () => {
 
           <div className='lg:block overflow-hidden hidden'>
             <Image
-              src='/services/for-creators/1.webp'
+              src='/services/for-creators/3.webp'
               alt='heys luggage mockup'
               width={300}
               height={500}
@@ -140,7 +158,7 @@ const Benefits = () => {
               className='w-[17vw] absolute left-[58%] top-[9rem]'
             />
             <Image
-              src='/services/for-creators/3.webp'
+              src='/services/for-creators/1.webp'
               alt='heys luggage mockup'
               width={300}
               height={500}

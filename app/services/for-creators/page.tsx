@@ -7,7 +7,7 @@ export default function ForCreators() {
   return (
     <section>
       <Hero />
-      <div className='bg-zinc-200 pb-20 md:pb-32'>
+      <div>
         <Expecting />
         <Benefits />
         <Contact />

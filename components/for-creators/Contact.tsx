@@ -10,7 +10,6 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from '../ui/form'
 import { Input } from '../ui/input'
 import Container from '../Container'
 import { Label } from '../ui/label'
-import { Checkbox } from '../ui/checkbox'
 import { Button } from '../ui/button'
 
 const Contact = () => {
@@ -90,9 +89,9 @@ const Contact = () => {
   }
 
   return (
-    <div className='sticky top-0 z-30 bg-zinc-200 pt-32 snap-start scroll-mt-20 w-screen'>
-      <Container>
-        <h2 className='mb-5 text-2xl md:text-3xl lg:text-4xl font-bold'>
+    <div className='sticky bg-white snap-start scroll-mt-20 w-screen h-[90vh] z-40'>
+      <Container className='h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-28 w-[35%]'>
+        <h2 className='mb-5 text-2xl md:text-3xl 2xl:text-4xl font-bold text-center'>
           {language === 'en' ? (
             <>A new era begins with Planetopedia.</>
           ) : language === 'cs' ? (
@@ -118,7 +117,11 @@ const Contact = () => {
                           <>Instagram-Account *</>
                         ) : null}
                       </Label>
-                      <Input placeholder='@username' {...field} />
+                      <Input
+                        placeholder='@username'
+                        {...field}
+                        className='border-black'
+                      />
                     </>
                   </FormControl>
                   <FormMessage />
@@ -132,7 +135,11 @@ const Contact = () => {
                   <FormControl>
                     <>
                       <Label>E-Mail *</Label>
-                      <Input placeholder='email@email.com' {...field} />
+                      <Input
+                        placeholder='email@email.com'
+                        {...field}
+                        className='border-black'
+                      />
                     </>
                   </FormControl>
                   <FormMessage />
