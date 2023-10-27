@@ -306,6 +306,58 @@ const Contact = () => {
                   </FormItem>
                 )}
               />
+              <FormField
+                name='checkbox_web'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <div className='flex items-center gap-2'>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                          {...field}
+                        />
+                        <Label>
+                          {language === 'en' ? (
+                            <>Web Development</>
+                          ) : language === 'cs' ? (
+                            <>Tvorba Webu</>
+                          ) : language === 'de' ? (
+                            <>Web-Entwicklung</>
+                          ) : null}
+                        </Label>
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                name='checkbox_media'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <div className='flex items-center gap-2'>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                          {...field}
+                        />
+                        <Label>
+                          {language === 'en' ? (
+                            <>Social Media Development</>
+                          ) : language === 'cs' ? (
+                            <>Vývoj sociálních médií</>
+                          ) : language === 'de' ? (
+                            <>Entwicklung sozialer Medien</>
+                          ) : null}
+                        </Label>
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
             </div>
 
             <FormField
@@ -333,7 +385,7 @@ const Contact = () => {
                             ? 'Schreiben Sie eine Nachricht...'
                             : ''
                         }
-                        rows={7}
+                        rows={6}
                         className='border-black resize-none'
                         {...field}
                       />

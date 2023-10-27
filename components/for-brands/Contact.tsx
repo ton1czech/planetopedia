@@ -297,7 +297,7 @@ const Contact = () => {
                             ? 'Schreiben Sie eine Nachricht...'
                             : ''
                         }
-                        rows={7}
+                        rows={6}
                         className='border-black resize-none'
                         {...field}
                       />
