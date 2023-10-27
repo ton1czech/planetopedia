@@ -1,15 +1,17 @@
 'use client'
 
 import { Skeleton } from '@/components/ui/skeleton'
+import { cn } from '@/lib/utils'
 import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 interface ContentCreation {
   images: string[] | undefined
+  rotate?: boolean
 }
 
-const ContentCreation = ({ images }: ContentCreation) => {
+const ContentCreation = ({ images, rotate }: ContentCreation) => {
   const { language } = useLanguage(state => state)
 
   const [isLoading, setIsLoading] = useState(true)
@@ -26,7 +28,7 @@ const ContentCreation = ({ images }: ContentCreation) => {
         {language === 'de' && <>/ Erstellung von Inhalten</>}
       </h2>
 
-      <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4'>
+      <div className='grid md:grid-cols-2 gap-4'>
         {images?.map(image => (
           <>
             {isLoading ? (
@@ -37,7 +39,10 @@ const ContentCreation = ({ images }: ContentCreation) => {
                 alt='content creation'
                 width={650}
                 height={650}
-                className='aspect-square object-cover w-full'
+                className={cn(
+                  'aspect-square object-cover w-full',
+                  rotate && '-rotate-90'
+                )}
               />
             )}
           </>

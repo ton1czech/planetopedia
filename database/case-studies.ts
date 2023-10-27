@@ -49,6 +49,7 @@ export const caseStudies = [
       '/case-studies/farma-hajek/content/7.webp',
       '/case-studies/farma-hajek/content/8.webp',
       '/case-studies/farma-hajek/content/9.webp',
+      '/case-studies/farma-hajek/content/10.webp',
     ],
     links: [
       {
@@ -207,6 +208,7 @@ export const caseStudies = [
       '/case-studies/heys-luggage/content/7.webp',
       '/case-studies/heys-luggage/content/8.webp',
       '/case-studies/heys-luggage/content/9.webp',
+      '/case-studies/heys-luggage/content/10.webp',
     ],
     links: [
       {
@@ -319,6 +321,7 @@ export const caseStudies = [
       '/case-studies/four-seasons/media/7.webp',
       '/case-studies/four-seasons/media/8.webp',
       '/case-studies/four-seasons/media/9.webp',
+      '/case-studies/four-seasons/media/10.webp',
     ],
     links: [
       {

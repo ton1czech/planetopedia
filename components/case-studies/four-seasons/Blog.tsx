@@ -24,7 +24,7 @@ const Blog = ({ posts }: BlogProps) => {
       <h2 className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'>
         / Blog
       </h2>
-      <div className='grid grid-cols-3 gap-6 md:gap-12'>
+      <div className='grid lg:grid-cols-3 gap-4'>
         {posts?.map(post => (
           <Link href={post.slug} className='group'>
             {post.src && (

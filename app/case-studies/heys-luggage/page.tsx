@@ -1,9 +1,9 @@
+import ContentCreation from '@/components/case-studies/ContentCreation'
 import Hero from '@/components/case-studies/Hero'
 import Links from '@/components/case-studies/Links'
 import Results from '@/components/case-studies/Results'
 import What from '@/components/case-studies/What'
 import Who from '@/components/case-studies/Who'
-import ContentCreation from '@/components/case-studies/heys-luggage/ContentCreation'
 import Creators from '@/components/case-studies/heys-luggage/Creators'
 import { caseStudies } from '@/database/case-studies'
 
