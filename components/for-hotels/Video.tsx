@@ -14,12 +14,14 @@ const Video = () => {
           hotels, resorts and rental properties.
         </p>
 
-        <iframe
-          src='https://www.youtube.com/embed/6FVQmdEMA3o?si=g37RNrek6Y-5PlpY'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-          allowFullScreen
-          className='w-full mt-4 md:mt-10 h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px]'
-        />
+        <div className='ring-2 ring-white white-shadow'>
+          <iframe
+            src='https://www.youtube.com/embed/6FVQmdEMA3o?si=g37RNrek6Y-5PlpY'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+            allowFullScreen
+            className='w-full mt-4 md:mt-10 h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px]'
+          />
+        </div>
       </Container>
     </div>
   )

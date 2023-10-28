@@ -108,9 +108,9 @@ const Contact = () => {
   }
 
   return (
-    <div className='sticky z-20 bg-white snap-start scroll-mt-20 w-screen h-[90vh]'>
-      <Container className='h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-80 w-[35%]'>
-        <h2 className='mb-5 text-2xl md:text-3xl 2xl:text-4xl font-bold text-center'>
+    <div className='sticky z-40 bg-black snap-start scroll-mt-20 w-screen h-[90vh]'>
+      <Container className='h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-80 w-full lg:w-[35%]'>
+        <h2 className='mb-5 text-2xl md:text-3xl 2xl:text-4xl font-bold text-center text-white'>
           {language === 'en' ? (
             <>Let's create together</>
           ) : language === 'cs' ? (
@@ -127,7 +127,7 @@ const Contact = () => {
                 <FormItem>
                   <FormControl>
                     <>
-                      <Label>
+                      <Label className='text-zinc-300'>
                         {language === 'en' ? (
                           <>Full Name *</>
                         ) : language === 'cs' ? (
@@ -137,9 +137,9 @@ const Contact = () => {
                         ) : null}
                       </Label>
                       <Input
+                        className='bg-black placeholder:text-zinc-400'
                         placeholder='john doe'
                         {...field}
-                        className='border-black'
                       />
                     </>
                   </FormControl>
@@ -153,7 +153,7 @@ const Contact = () => {
                 <FormItem>
                   <FormControl>
                     <>
-                      <Label>
+                      <Label className='text-zinc-300'>
                         {language === 'en' ? (
                           <>Hotel Name *</>
                         ) : language === 'cs' ? (
@@ -163,9 +163,9 @@ const Contact = () => {
                         ) : null}
                       </Label>
                       <Input
+                        className='bg-black placeholder:text-zinc-400'
                         placeholder='Four seasons'
                         {...field}
-                        className='border-black'
                       />
                     </>
                   </FormControl>
@@ -179,11 +179,11 @@ const Contact = () => {
                 <FormItem>
                   <FormControl>
                     <>
-                      <Label>E-Mail *</Label>
+                      <Label className='text-zinc-300'>E-Mail *</Label>
                       <Input
+                        className='bg-black placeholder:text-zinc-400'
                         placeholder='fourseasons@gmail.com'
                         {...field}
-                        className='border-black'
                       />
                     </>
                   </FormControl>
@@ -192,7 +192,7 @@ const Contact = () => {
               )}
             />
 
-            <div className='grid gap-3 my-3'>
+            <div className='grid gap-3 my-3 text-white'>
               <FormField
                 name='checkbox_content'
                 render={({ field }) => (
@@ -203,6 +203,7 @@ const Contact = () => {
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           {...field}
+                          className='border-white'
                         />
                         <Label>
                           {language === 'en' ? (
@@ -229,6 +230,7 @@ const Contact = () => {
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           {...field}
+                          className='border-white'
                         />
                         <Label>
                           {language === 'en' ? (
@@ -264,6 +266,7 @@ const Contact = () => {
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           {...field}
+                          className='border-white'
                         />
                         <Label>
                           {language === 'en' ? (
@@ -290,6 +293,7 @@ const Contact = () => {
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           {...field}
+                          className='border-white'
                         />
                         <Label>
                           {language === 'en' ? (
@@ -316,6 +320,7 @@ const Contact = () => {
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           {...field}
+                          className='border-white'
                         />
                         <Label>
                           {language === 'en' ? (
@@ -342,6 +347,7 @@ const Contact = () => {
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           {...field}
+                          className='border-white'
                         />
                         <Label>
                           {language === 'en' ? (
@@ -366,7 +372,7 @@ const Contact = () => {
                 <FormItem>
                   <FormControl>
                     <>
-                      <Label>
+                      <Label className='text-zinc-300'>
                         {language === 'en' ? (
                           <>Message</>
                         ) : language === 'cs' ? (
@@ -385,8 +391,8 @@ const Contact = () => {
                             ? 'Schreiben Sie eine Nachricht...'
                             : ''
                         }
-                        rows={6}
-                        className='border-black resize-none'
+                        rows={4}
+                        className='bg-black placeholder:text-zinc-400 resize-none'
                         {...field}
                       />
                     </>
@@ -396,7 +402,10 @@ const Contact = () => {
               )}
             />
 
-            <Button type='submit' className='mt-4'>
+            <Button
+              type='submit'
+              className='mt-4 text-white bg-black hover:bg-white hover:text-black border border-white'
+            >
               {language === 'en' ? (
                 <>Submit</>
               ) : language === 'cs' ? (

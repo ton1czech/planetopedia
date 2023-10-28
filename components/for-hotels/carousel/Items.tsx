@@ -9,7 +9,6 @@ import CarouselItem from '@/components/testimonials/CarouselItem'
 interface ItemsProps {
   data: {
     src: string
-    thumbnail: string
   }[]
 }
 

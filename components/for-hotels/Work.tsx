@@ -7,6 +7,7 @@ import { useLanguage } from '@/store/useLanguage'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { Skeleton } from '../ui/skeleton'
+import { cn } from '@/lib/utils'
 
 const Work = () => {
   const { language } = useLanguage(state => state)
@@ -30,9 +31,14 @@ const Work = () => {
         </p>
 
         {forHotels.map(hotels => (
-          <div className='grid items-center justify-center w-full grid-cols-3 gap-14 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-6 mt-10'>
+          <div className='grid items-center justify-center w-full grid-cols-3 gap-14 lg:grid-cols-6 mt-10'>
             {hotels.logos.map(hotel => (
-              <div className='grid place-content-center'>
+              <div
+                className={cn(
+                  'grid place-content-center',
+                  hotel.noPhone && 'hidden md:grid'
+                )}
+              >
                 <Image
                   src={hotel.src}
                   alt='hotel'
@@ -45,13 +51,16 @@ const Work = () => {
           </div>
         ))}
 
-        <div className='grid lg:grid-cols-3 gap-4 mt-20'>
+        <div className='grid lg:grid-cols-3 gap-4 mt-10 lg:mt-20'>
           {forHotels.map(hotel => (
             <>
               {hotel.posts?.map(post => (
-                <Link href={post.slug} className='group'>
+                <Link
+                  href={post.slug}
+                  className={cn('group', post.noPhone && 'hidden md:block')}
+                >
                   {post.src && (
-                    <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl'>
+                    <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-video md:aspect-square group-hover:shadow-2xl'>
                       {isLoading ? (
                         <Skeleton className='aspect-square w-[320px] sm:w-[600px] md:w-[345px] lg:w-[470px]' />
                       ) : (
@@ -79,7 +88,7 @@ const Work = () => {
                       {post.locationDe}
                     </p>
                   )}
-                  <h3 className='text-xl font-medium text-center md:text-xl'>
+                  <h3 className='text-xl font-medium text-center md:text-xl text-black'>
                     {post.title}
                   </h3>
                 </Link>

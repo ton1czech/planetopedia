@@ -12,12 +12,15 @@ export const forHotels = [
       },
       {
         src: '/logos/theluxurycollection.webp',
+        noPhone: true,
       },
       {
         src: '/logos/jumeirah.webp',
+        noPhone: true,
       },
       {
         src: '/logos/shangrila.webp',
+        noPhone: true,
       },
     ],
     posts: [
@@ -36,6 +39,7 @@ export const forHotels = [
         locationDe: 'Genf, Schweiz',
         slug: '/blog/hotels/overview-ritz-carlton-geneva',
         src: '/services/for-hotels/blog/2.webp',
+        noPhone: true,
       },
       {
         title: 'ANANTARA VILLA PADIERNA',
@@ -44,6 +48,33 @@ export const forHotels = [
         locationDe: 'Marbella, Spanien',
         slug: '/blog/hotels/overview-anantara-villa-padierna',
         src: '/services/for-hotels/blog/3.webp',
+        noPhone: true,
+      },
+    ],
+    feedbacks: [
+      {
+        src: 'https://i.imgur.com/VTpsyIr.mp4',
+      },
+      {
+        src: 'https://i.imgur.com/2LhDfGb.mp4',
+      },
+      {
+        src: 'https://i.imgur.com/eaya4PX.mp4',
+      },
+      {
+        src: '/services/for-hotels/feedbacks/1.webp',
+      },
+      {
+        src: 'https://i.imgur.com/VTpsyIr.mp4',
+      },
+      {
+        src: 'https://i.imgur.com/2LhDfGb.mp4',
+      },
+      {
+        src: 'https://i.imgur.com/eaya4PX.mp4',
+      },
+      {
+        src: '/services/for-hotels/feedbacks/1.webp',
       },
     ],
   },
