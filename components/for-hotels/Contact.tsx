@@ -109,7 +109,7 @@ const Contact = () => {
 
   return (
     <div className='sticky z-40 bg-black snap-start scroll-mt-20 w-screen h-[90vh]'>
-      <Container className='h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-80 w-full lg:w-[35%]'>
+      <Container className='h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-80 w-full sm:w-[60%] lg:w-[35%]'>
         <h2 className='mb-5 text-2xl md:text-3xl 2xl:text-4xl font-bold text-center text-white'>
           {language === 'en' ? (
             <>Let's create together</>
@@ -137,7 +137,7 @@ const Contact = () => {
                         ) : null}
                       </Label>
                       <Input
-                        className='bg-black placeholder:text-zinc-400'
+                        className='bg-black placeholder:text-zinc-400 text-white'
                         placeholder='john doe'
                         {...field}
                       />
@@ -163,7 +163,7 @@ const Contact = () => {
                         ) : null}
                       </Label>
                       <Input
-                        className='bg-black placeholder:text-zinc-400'
+                        className='bg-black placeholder:text-zinc-400 text-white'
                         placeholder='Four seasons'
                         {...field}
                       />
@@ -181,7 +181,7 @@ const Contact = () => {
                     <>
                       <Label className='text-zinc-300'>E-Mail *</Label>
                       <Input
-                        className='bg-black placeholder:text-zinc-400'
+                        className='bg-black placeholder:text-zinc-400 text-white'
                         placeholder='fourseasons@gmail.com'
                         {...field}
                       />
@@ -392,7 +392,7 @@ const Contact = () => {
                             : ''
                         }
                         rows={4}
-                        className='bg-black placeholder:text-zinc-400 resize-none'
+                        className='bg-black placeholder:text-zinc-400 resize-none text-white'
                         {...field}
                       />
                     </>

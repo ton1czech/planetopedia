@@ -19,7 +19,7 @@ const Video = () => {
             src='https://www.youtube.com/embed/6FVQmdEMA3o?si=g37RNrek6Y-5PlpY'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
             allowFullScreen
-            className='w-full mt-4 md:mt-10 h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px]'
+            className='w-full mt-4 md:mt-10 h-[350px] sm:h-[380px] md:h-[430px] lg:h-[480px] xl:h-[520px]'
           />
         </div>
       </Container>
