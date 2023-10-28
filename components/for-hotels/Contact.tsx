@@ -351,11 +351,11 @@ const Contact = () => {
                         />
                         <Label>
                           {language === 'en' ? (
-                            <>Social Media Development</>
+                            <>Social Media Managment</>
                           ) : language === 'cs' ? (
-                            <>Vývoj sociálních médií</>
+                            <>Řízení sociálních médií</>
                           ) : language === 'de' ? (
-                            <>Entwicklung sozialer Medien</>
+                            <>Verwaltung der sozialen Medien</>
                           ) : null}
                         </Label>
                       </div>
