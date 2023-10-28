@@ -23,7 +23,7 @@ const Work = () => {
         <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center'>
           Who We Work With
         </h1>
-        <p className='text-zinc-700 text-center w-[80ch] mx-auto'>
+        <p className='text-zinc-700 text-center max-w-[80ch] mx-auto'>
           From the biggest hotel companies to brands and world-inspiring
           marketing agencies, our clients have the same thing in common: big
           challenges that require a fresh & different approach.
