@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { Skeleton } from '../ui/skeleton'
 import { cn } from '@/lib/utils'
+import { ArrowRight } from 'lucide-react'
 
 const Work = () => {
   const { language } = useLanguage(state => state)
@@ -51,7 +52,7 @@ const Work = () => {
           </div>
         ))}
 
-        <div className='grid lg:grid-cols-3 gap-4 mt-10 lg:mt-20'>
+        <div className='grid lg:grid-cols-3 gap-4 mt-10'>
           {forHotels.map(hotel => (
             <>
               {hotel.posts?.map(post => (
@@ -93,6 +94,15 @@ const Work = () => {
                   </h3>
                 </Link>
               ))}
+              <Link
+                href='/blog/luxury-hotels'
+                className='flex gap-2 items-center text-black underline'
+              >
+                {language === 'en' && <>See all posts</>}
+                {language === 'cs' && <>Zobrazit všechny příspěvky</>}
+                {language === 'de' && <>Alle Beiträge anzeigen</>}
+                <ArrowRight className='w-3 h-3' />
+              </Link>
             </>
           ))}
         </div>
