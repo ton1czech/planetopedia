@@ -106,7 +106,7 @@ const Contact = () => {
 
   return (
     <div className='sticky z-20 bg-white snap-start scroll-mt-20 w-screen h-[90vh]'>
-      <Container className='h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-80 w-[35%]'>
+      <Container className='h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-80 w-full sm:w-[60%] lg:w-[35%]'>
         <h2 className='mb-5 text-2xl md:text-3xl 2xl:text-4xl font-bold text-center'>
           {language === 'en' ? (
             <>Let's create together</>
