@@ -33,7 +33,7 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
         },
       }}
       className={cn(
-        'fixed inset-0 w-screen h-screen z-40 grid justify-between origin-top',
+        'fixed inset-0 w-screen h-screen z-[99999] grid justify-between origin-top',
         black ? 'bg-black' : 'bg-white'
       )}
     >
