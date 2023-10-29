@@ -63,7 +63,7 @@ const CreatorsGrid = ({ creators }: CreatorsGridProps) => {
       <Container>
         <div className='my-4 lg:my-8'>
           <div className='w-full h-px bg-zinc-600/30' />
-          <p className='text-zinc-700/90 text-sm'>
+          <p className='text-sm text-zinc-700/90'>
             {filteredClients.length} creators
           </p>
         </div>
@@ -71,7 +71,7 @@ const CreatorsGrid = ({ creators }: CreatorsGridProps) => {
 
       {filteredClients.length === 0 && (
         <Container>
-          <h1 className='text-center text-2xl md:text-3xl lg:text-4xl font-bold'>
+          <h1 className='text-2xl font-bold text-center md:text-3xl lg:text-4xl'>
             {language === 'en' ? (
               <>No Results Found.</>
             ) : language === 'cs' ? (

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Check, ChevronsUpDown } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
@@ -17,11 +17,21 @@ interface SkillsProps {
   setSkill: any
 }
 
+const skillLabels: { [key: string]: string } = {
+  photographer: 'Photographer',
+  videographer: 'Videographer',
+  'hotels/resorts': 'Hotels/Resorts',
+}
+
 export function Skills({ setSkill }: SkillsProps) {
   const { language } = useLanguage(state => state)
 
   const [open, setOpen] = useState(false)
   const [value, setValue] = useState('')
+
+  useEffect(() => {
+    setSkill(skillLabels[value] || '')
+  }, [value, setSkill])
 
   const skills = [
     {
@@ -77,7 +87,7 @@ export function Skills({ setSkill }: SkillsProps) {
             : language === 'de'
             ? 'Fähigkeit auswählen...'
             : ''}
-          <ChevronsUpDown className='ml-2 h-4 w-4 shrink-0 opacity-50' />
+          <ChevronsUpDown className='w-4 h-4 ml-2 opacity-50 shrink-0' />
         </Button>
       </PopoverTrigger>
       <PopoverContent className='p-0'>
@@ -89,15 +99,16 @@ export function Skills({ setSkill }: SkillsProps) {
                 value={skill.value}
                 onSelect={currentValue => {
                   setValue(currentValue === value ? '' : currentValue)
-                  setSkill(
-                    currentValue === 'photographer'
-                      ? 'Photographer'
-                      : currentValue === 'videographer'
-                      ? 'Videographer'
-                      : currentValue === 'hotels/resorts'
-                      ? 'Hotels/Resorts'
-                      : ''
-                  )
+                  //   setSkill(
+                  //     currentValue === 'photographer'
+                  //       ? 'Photographer'
+                  //       : currentValue === 'videographer'
+                  //       ? 'Videographer'
+                  //       : currentValue === 'hotels/resorts'
+                  //       ? 'Hotels/Resorts'
+                  //       : ''
+                  //   )
+                  setSkill(skillLabels[currentValue] || '') // Použijte mapovací objekt pro získání odpovídající textové značky
                   setOpen(false)
                 }}
               >
