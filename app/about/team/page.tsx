@@ -228,7 +228,7 @@ export default function Team() {
           ]}
         />
         <Member
-          src='https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+          src='/team/hanka-kostolanska.webp'
           name='Hana Kostolanská'
           role={
             language === 'en'
