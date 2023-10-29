@@ -50,7 +50,8 @@ const Contact = () => {
     }),
     checkbox_creation: z.boolean(),
     checkbox_influencer: z.boolean(),
-    checkbox_managment: z.boolean(),
+    checkbox_management: z.boolean(),
+    checkbox_web: z.boolean(),
   })
 
   const form = useForm<z.infer<typeof schema>>({
@@ -61,7 +62,8 @@ const Contact = () => {
       email: '',
       checkbox_creation: false,
       checkbox_influencer: false,
-      checkbox_managment: false,
+      checkbox_management: false,
+      checkbox_web: false,
     },
   })
 
@@ -107,7 +109,7 @@ const Contact = () => {
   return (
     <div className='sticky z-20 bg-white snap-start scroll-mt-20 w-screen h-[90vh]'>
       <Container className='h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-80 w-full sm:w-[60%] lg:w-[35%]'>
-        <h2 className='mb-5 text-2xl md:text-3xl 2xl:text-4xl font-bold text-center'>
+        <h2 className='mb-5 text-2xl font-bold text-center md:text-3xl 2xl:text-4xl'>
           {language === 'en' ? (
             <>Let's create together</>
           ) : language === 'cs' ? (
@@ -191,6 +193,32 @@ const Contact = () => {
 
             <div className='grid gap-3 my-3'>
               <FormField
+                name='checkbox_management'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <div className='flex items-center gap-2'>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                          {...field}
+                        />
+                        <Label>
+                          {language === 'en' ? (
+                            <>Social Media Managment</>
+                          ) : language === 'cs' ? (
+                            <>Správa Sociálních Médií</>
+                          ) : language === 'de' ? (
+                            <>Social Media Management</>
+                          ) : null}
+                        </Label>
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
                 name='checkbox_creation'
                 render={({ field }) => (
                   <FormItem>
@@ -203,9 +231,9 @@ const Contact = () => {
                         />
                         <Label>
                           {language === 'en' ? (
-                            <>Content Creation for social media</>
+                            <>Content Creation for Social Media</>
                           ) : language === 'cs' ? (
-                            <>Tvorba obsahu pro sociální sítě</>
+                            <>Tvorba Obsahu pro Sociální Sítě</>
                           ) : language === 'de' ? (
                             <>Erstellung von Inhalten für soziale Medien</>
                           ) : null}
@@ -257,11 +285,92 @@ const Contact = () => {
                         />
                         <Label>
                           {language === 'en' ? (
-                            <>Social Media Managment / Takeovers</>
+                            <>Social Media Managment</>
                           ) : language === 'cs' ? (
-                            <>Správa Sociálních Médií / Převzetí</>
+                            <>Správa Sociálních Médií</>
                           ) : language === 'de' ? (
-                            <>Social Media Management / Übernahmen</>
+                            <>Social Media Management</>
+                          ) : null}
+                        </Label>
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                name='checkbox_web'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <div className='flex items-center gap-2'>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                          {...field}
+                          className='border-white'
+                        />
+                        <Label>
+                          {language === 'en' ? (
+                            <>Web Development</>
+                          ) : language === 'cs' ? (
+                            <>Tvorba Webu</>
+                          ) : language === 'de' ? (
+                            <>Web-Entwicklung</>
+                          ) : null}
+                        </Label>
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                name='checkbox_4k'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <div className='flex items-center gap-2'>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                          {...field}
+                          className='border-white'
+                        />
+                        <Label>
+                          {language === 'en' ? (
+                            <>Professional Short 4K Spot</>
+                          ) : language === 'cs' ? (
+                            <>Profesionální Krátký Spot 4K</>
+                          ) : language === 'de' ? (
+                            <>Professioneller kurzer 4K-Spot</>
+                          ) : null}
+                        </Label>
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                name='checkbox_event'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <div className='flex items-center gap-2'>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                          {...field}
+                          className='border-white'
+                        />
+                        <Label>
+                          {language === 'en' ? (
+                            <></>
+                          ) : language === 'cs' ? (
+                            <></>
+                          ) : language === 'de' ? (
+                            <></>
                           ) : null}
                         </Label>
                       </div>

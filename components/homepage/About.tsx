@@ -76,7 +76,7 @@ const About = () => {
         delay={2.3}
       />
       <Item
-        num={250}
+        num={200}
         text={
           language === 'en'
             ? 'Creators Worldwide'
