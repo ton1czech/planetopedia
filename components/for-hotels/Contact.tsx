@@ -110,7 +110,7 @@ const Contact = () => {
   return (
     <div className='sticky z-40 bg-black snap-start scroll-mt-20 w-screen h-[90vh]'>
       <Container className='h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-80 w-full sm:w-[60%] lg:w-[35%]'>
-        <h2 className='mb-5 text-2xl md:text-3xl 2xl:text-4xl font-bold text-center text-white'>
+        <h2 className='mb-5 text-2xl font-bold text-center text-white md:text-3xl 2xl:text-4xl'>
           {language === 'en' ? (
             <>Let's create together</>
           ) : language === 'cs' ? (
@@ -137,7 +137,7 @@ const Contact = () => {
                         ) : null}
                       </Label>
                       <Input
-                        className='bg-black placeholder:text-zinc-400 text-white'
+                        className='text-white bg-black placeholder:text-zinc-400'
                         placeholder='john doe'
                         {...field}
                       />
@@ -163,7 +163,7 @@ const Contact = () => {
                         ) : null}
                       </Label>
                       <Input
-                        className='bg-black placeholder:text-zinc-400 text-white'
+                        className='text-white bg-black placeholder:text-zinc-400'
                         placeholder='Four seasons'
                         {...field}
                       />
@@ -181,7 +181,7 @@ const Contact = () => {
                     <>
                       <Label className='text-zinc-300'>E-Mail *</Label>
                       <Input
-                        className='bg-black placeholder:text-zinc-400 text-white'
+                        className='text-white bg-black placeholder:text-zinc-400'
                         placeholder='fourseasons@gmail.com'
                         {...field}
                       />
@@ -351,7 +351,7 @@ const Contact = () => {
                         />
                         <Label>
                           {language === 'en' ? (
-                            <>Social Media Managment</>
+                            <>Social Media Management</>
                           ) : language === 'cs' ? (
                             <>Řízení sociálních médií</>
                           ) : language === 'de' ? (
@@ -392,7 +392,7 @@ const Contact = () => {
                             : ''
                         }
                         rows={4}
-                        className='bg-black placeholder:text-zinc-400 resize-none text-white'
+                        className='text-white bg-black resize-none placeholder:text-zinc-400'
                         {...field}
                       />
                     </>
@@ -404,7 +404,7 @@ const Contact = () => {
 
             <Button
               type='submit'
-              className='mt-4 text-white bg-black hover:bg-white hover:text-black border border-white'
+              className='mt-4 text-white bg-black border border-white hover:bg-white hover:text-black'
             >
               {language === 'en' ? (
                 <>Submit</>
