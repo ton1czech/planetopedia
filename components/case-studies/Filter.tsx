@@ -36,8 +36,19 @@ const Item = ({
   return (
     <p
       onClick={handleClick}
+      //   className={cn(
+      //     'px-4 py-2 text-center rounded-md cursor-pointer hover:underline bg-zinc-100 hover:bg-zinc-300 grid place-content-center',
+      //     service ===
+      //       (language === 'en'
+      //         ? labelEn
+      //         : language === 'cs'
+      //         ? labelCz
+      //         : language === 'de'
+      //         ? labelDe
+      //         : '') && 'bg-zinc-300 ring-1 ring-zinc-400'
+      //   )}
       className={cn(
-        'px-4 py-2 text-center rounded-md cursor-pointer hover:underline bg-zinc-100 hover:bg-zinc-300 grid place-content-center',
+        'px-4 py-2 text-center rounded-md cursor-pointer ring-1 ring-black/40 hover:bg-zinc-300 grid place-content-center',
         service ===
           (language === 'en'
             ? labelEn
@@ -45,7 +56,7 @@ const Item = ({
             ? labelCz
             : language === 'de'
             ? labelDe
-            : '') && 'bg-zinc-300 ring-1 ring-zinc-400'
+            : '') && 'bg-zinc-300 ring-zinc-400'
       )}
     >
       {language === 'en' && <>{labelEn}</>}
@@ -62,7 +73,7 @@ interface FilterProps {
 
 const Filter = ({ setService, service }: FilterProps) => {
   return (
-    <div className='grid grid-cols-2 gap-x-4 gap-y-2 md:grid-cols-3 md:gap-x-8 md:gap-y-4 lg:grid-cols-4'>
+    <div className='grid grid-cols-2 p-1 gap-x-4 gap-y-2 md:grid-cols-3 md:gap-x-8 md:gap-y-4 lg:grid-cols-4'>
       <Item
         labelEn='marketing'
         labelCz='marketing'
@@ -116,20 +127,6 @@ const Filter = ({ setService, service }: FilterProps) => {
         labelEn='social media influencer campaign'
         labelCz='influencerská kampaň na sociálních sítích'
         labelDe='social-media-influencer-kampagne'
-        setService={setService}
-        service={service}
-      />
-      <Item
-        labelEn='social media'
-        labelCz='sociální média'
-        labelDe='soziale medien'
-        setService={setService}
-        service={service}
-      />
-      <Item
-        labelEn='management'
-        labelCz='management'
-        labelDe='verwaltung'
         setService={setService}
         service={service}
       />

@@ -2,6 +2,12 @@
 
 import Container from '@/components/Container'
 import Filter from '@/components/case-studies/Filter'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
 import { Skeleton } from '@/components/ui/skeleton'
 import { caseStudies } from '@/database/case-studies'
 import { useLanguage } from '@/store/useLanguage'
@@ -39,12 +45,21 @@ export default function CaseStudies() {
 
   const filteredCaseStudies = getFilteredCaseStudies(service)
 
-  console.log('service: ', service)
-
   return (
     <div className='pt-24 pb-20 bg-white md:pb-32 md:pt-32'>
       <Container>
-        <Filter setService={setService} service={service} />
+        <Accordion type='single' collapsible>
+          <AccordionItem value='item-1'>
+            <AccordionTrigger>
+              {language === 'en' && <>Filter</>}
+              {language === 'cs' && <>Filtrovat</>}
+              {language === 'de' && <>Filter</>}
+            </AccordionTrigger>
+            <AccordionContent>
+              <Filter setService={setService} service={service} />
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
 
         <div className='flex flex-col mt-10 md:mt-20 gap-14 md:gap-24'>
           {filteredCaseStudies.map(casestudy => (

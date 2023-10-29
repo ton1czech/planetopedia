@@ -85,9 +85,9 @@ export const caseStudies = [
     categoryDe: 'Berühmte Persönlichkeiten',
     href: '/case-studies/frantisek-hrom',
     image: '/case-studies/frantisek-hrom/thumbnail.webp',
-    servicesEn: ['marketing', 'brand building'],
-    servicesCz: ['marketing', 'budování značky'],
-    servicesDe: ['marketing', 'markenbildung'],
+    servicesEn: ['marketing', 'brand building', 'social media management'],
+    servicesCz: ['marketing', 'budování značky', 'správa sociálních sítí'],
+    servicesDe: ['marketing', 'markenbildung', 'verwaltung sozialer medien'],
     whoEn:
       'František Hrom is an influencer and entertainer. A character created in order to create entertainment and successfully reach the vast majority of target groups throughout the Czech Republic & Slovakia.',
     whoCz:
@@ -139,9 +139,13 @@ export const caseStudies = [
     categoryDe: 'Sprachschule',
     href: '/case-studies/rozmluv-se',
     image: '/case-studies/rozmluv-se/thumbnail.webp',
-    servicesEn: ['marketing', 'content creation'],
-    servicesCz: ['marketing', 'tvorba obsahu'],
-    servicesDe: ['marketing', 'erstellung von Inhalten'],
+    servicesEn: ['marketing', 'content creation', 'social media management'],
+    servicesCz: ['marketing', 'tvorba obsahu', 'správa sociálních sítí'],
+    servicesDe: [
+      'marketing',
+      'erstellung von Inhalten',
+      'verwaltung sozialer medien',
+    ],
     whoEn:
       'The language studio Rozmluv focuses on creating optimal conditions for rapid learning and mastering of foreign languages. They specialize in offering various language courses, including both commonly spoken languages and less common ones. In addition to traditional courses in English, German, and Russian, Rozmluv also provides instruction in Czech for foreigners, as well as Chinese and Vietnamese.',
     whoCz:
@@ -241,27 +245,9 @@ export const caseStudies = [
     categoryDe: 'Hotelkette',
     href: '/case-studies/four-seasons',
     image: '/case-studies/four-seasons/thumbnail.webp',
-    servicesEn: [
-      'strategy',
-      'marketing',
-      'management',
-      'social media',
-      'content creation',
-    ],
-    servicesCz: [
-      'strategie',
-      'marketing',
-      'management',
-      'sociální média',
-      'tvorba obsahu',
-    ],
-    servicesDe: [
-      'strategie',
-      'marketing',
-      'verwaltung',
-      'soziale medien',
-      'erstellung von inhalten',
-    ],
+    servicesEn: ['strategy', 'marketing', 'content creation'],
+    servicesCz: ['strategie', 'marketing', 'tvorba obsahu'],
+    servicesDe: ['strategie', 'marketing', 'erstellung von inhalten'],
     whoEn:
       "Four Seasons Hotels and Resorts is a world-renowned luxury hospitality brand known for its exceptional service and opulent accommodations. With properties in diverse global destinations, Four Seasons offers a seamless blend of elegance, comfort, and personalized experiences. Guests can expect exquisite dining, spa facilities, and a commitment to creating unforgettable moments in every season. It's a top choice for travelers seeking unparalleled luxury and relaxation.",
     whoCz:
