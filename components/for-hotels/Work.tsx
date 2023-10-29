@@ -94,18 +94,19 @@ const Work = () => {
                   </h3>
                 </Link>
               ))}
-              <Link
-                href='/blog/luxury-hotels'
-                className='flex gap-2 items-center text-black underline'
-              >
-                {language === 'en' && <>See all posts</>}
-                {language === 'cs' && <>Zobrazit všechny příspěvky</>}
-                {language === 'de' && <>Alle Beiträge anzeigen</>}
-                <ArrowRight className='w-3 h-3' />
-              </Link>
             </>
           ))}
         </div>
+
+        <Link
+          href='/blog/luxury-hotels'
+          className='flex gap-2 items-center text-black underline text-center mx-auto w-full justify-center'
+        >
+          {language === 'en' && <>See all posts</>}
+          {language === 'cs' && <>Zobrazit všechny příspěvky</>}
+          {language === 'de' && <>Alle Beiträge anzeigen</>}
+          <ArrowRight className='w-3 h-3' />
+        </Link>
       </Container>
     </div>
   )
