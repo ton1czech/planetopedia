@@ -12,7 +12,7 @@ export const videos = [
     thumbnail: '/feedback/2.webp',
   },
   {
-    video: 'https://i.imgur.com/a/suadEcs.mp4',
+    video: 'https://i.imgur.com/O25pqPd.mp4',
     thumbnail: '/feedback/4.webp',
   },
   {
@@ -28,7 +28,7 @@ export const videos = [
     thumbnail: '/feedback/2.webp',
   },
   {
-    video: 'https://i.imgur.com/a/suadEcs.mp4',
+    video: 'https://i.imgur.com/O25pqPd.mp4',
     thumbnail: '/feedback/4.webp',
   },
 ]
