@@ -11,7 +11,7 @@ const Expecting = () => {
   return (
     <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[90vh] z-10 bg-white'>
       <Container className='grid place-content-center h-[80vh]'>
-        <h2 className='text-2xl md:text-3xl mt-28 text-black text-center'>
+        <h2 className='text-2xl text-center text-black md:text-3xl mt-36'>
           {language === 'en' && (
             <>
               What our <b>creators </b>say
