@@ -1,14 +1,10 @@
 'use client'
 
 import Container from '../Container'
-import { forHotels } from '@/database/for-hotels'
 import Image from 'next/image'
 import { useLanguage } from '@/store/useLanguage'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { Skeleton } from '../ui/skeleton'
 import { cn } from '@/lib/utils'
-import { ArrowRight } from 'lucide-react'
 import { forBrands } from '@/database/for-brands'
 import Numbers from './Numbers'
 
@@ -24,7 +20,7 @@ const Work = () => {
   return (
     <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[90vh] z-20 bg-white'>
       <Container className='py-10 text-white'>
-        <h1 className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl'>
+        <h1 className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl mb-5'>
           Who We Work With
         </h1>
         <p className='text-zinc-700 text-center max-w-[80ch] mx-auto'>
@@ -54,6 +50,14 @@ const Work = () => {
           </div>
         ))}
 
+        <h1 className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl mb-5 mt-16 md:mt-28'>
+          Our social media impact
+        </h1>
+        <p className='text-zinc-700 text-center max-w-[80ch] mx-auto'>
+          Planetopedia specializes in creating branded content and launching
+          social media campaigns. To do so, our team uses eye-catching
+          techniques, which resonate with our clients and your readers.
+        </p>
         <Numbers />
       </Container>
     </div>

@@ -13,7 +13,11 @@ interface ItemProps {
 
 const Item = ({ num, text, millions, delay }: ItemProps) => {
   return (
-    <div className={cn('text-black')}>
+    <div
+      className={cn(
+        'text-black text-center ring-1 ring-black/10 p-5 rounded-lg shadow-xl'
+      )}
+    >
       <CountUp
         start={0}
         end={num}
@@ -24,13 +28,13 @@ const Item = ({ num, text, millions, delay }: ItemProps) => {
         decimal=','
         suffix={millions ? 'M+' : '+'}
         className={
-          'font-bold text-4xl lg:text-5xl xl:text-6xl text-center md:text-left'
+          'font-black text-4xl lg:text-5xl xl:text-6xl text-center md:text-left'
         }
         enableScrollSpy
         scrollSpyOnce
         delay={delay}
       />
-      <p className='text-2xl text-center whitespace-nowrap lg:text-3xl xl:text-4xl md:text-left'>
+      <p className='text-xl text-center whitespace-nowrap lg:text-2xl xl:text-3xl'>
         {text}
       </p>
     </div>
@@ -41,14 +45,8 @@ const Numbers = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div>
-      <h2 className='mt-20 mb-2 text-lg font-semibold md:mt-36 md:text-xl lg:text-2xl xl:text-3xl'>
-        {language === 'en' && <>/ In the last 30 days</>}
-        {language === 'cs' && <>/ Za posledních 30 dní</>}
-        {language === 'de' && <>/ Für die letzten 30 Tage</>}
-      </h2>
-
-      <div className='flex flex-col items-center gap-2 md:flex-row md:gap-8 md:justify-between'>
+    <div className='mt-6 md:mt-12'>
+      <div className='grid lg:grid-cols-3 gap-4 lg:gap-8'>
         <Item
           num={45}
           text={
