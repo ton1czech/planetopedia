@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+
 import Container from '../Container'
 import { useLanguage } from '@/store/useLanguage'
 
