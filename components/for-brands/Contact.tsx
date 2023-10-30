@@ -308,7 +308,6 @@ const Contact = () => {
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           {...field}
-                          className='border-white'
                         />
                         <Label>
                           {language === 'en' ? (
@@ -335,7 +334,6 @@ const Contact = () => {
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           {...field}
-                          className='border-white'
                         />
                         <Label>
                           {language === 'en' ? (
