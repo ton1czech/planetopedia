@@ -1,11 +1,8 @@
 'use client'
 
-import { useLanguage } from '@/store/useLanguage'
 import { useEffect, useRef, useState } from 'react'
 
 const Cz = () => {
-  const { language } = useLanguage(state => state)
-
   const [isPlaying, setIsPlaying] = useState<boolean>(false)
 
   const videoRef = useRef<HTMLVideoElement>(null)

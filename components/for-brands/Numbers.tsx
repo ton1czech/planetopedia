@@ -60,7 +60,7 @@ const Numbers = () => {
               ? 'Bemerkenswerte Kunden'
               : ''
           }
-          delay={2}
+          delay={0.2}
         />
         <Item
           num={10}
@@ -74,7 +74,7 @@ const Numbers = () => {
               : ''
           }
           millions
-          delay={2.3}
+          delay={0.6}
         />
         <Item
           num={200}
@@ -87,7 +87,7 @@ const Numbers = () => {
               ? 'Schöpfer weltweit'
               : ''
           }
-          delay={2.6}
+          delay={0.4}
         />
       </div>
     </div>
