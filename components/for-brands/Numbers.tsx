@@ -28,13 +28,13 @@ const Item = ({ num, text, millions, delay }: ItemProps) => {
         decimal=','
         suffix={millions ? 'M+' : '+'}
         className={
-          'font-black text-4xl lg:text-5xl xl:text-6xl text-center md:text-left'
+          'font-black text-3xl lg:text-5xl xl:text-6xl text-center md:text-left'
         }
         enableScrollSpy
         scrollSpyOnce
         delay={delay}
       />
-      <p className='text-xl text-center whitespace-nowrap lg:text-2xl xl:text-3xl'>
+      <p className='text-xs sm:text-base text-center lg:text-2xl xl:text-3xl'>
         {text}
       </p>
     </div>
@@ -46,7 +46,7 @@ const Numbers = () => {
 
   return (
     <div className='mt-6 md:mt-12'>
-      <div className='grid lg:grid-cols-3 gap-4 lg:gap-8'>
+      <div className='grid grid-cols-3 gap-4 lg:gap-8'>
         <Item
           num={45}
           text={

@@ -17,26 +17,24 @@ const Video = () => {
         <p className='text-zinc-700 text-center max-w-[80ch] mx-auto'>
           {language === 'en' && (
             <>
-              Because our team is spread worldwide, we can reach many of the
-              most beautiful locations on Earth to successfully capture your
-              products/services at its best and realize the goal you want to
-              achieve as a brand.
+              Planetopedia specializes in creating eye-catching photography,
+              video production and social media campaigns for the World’s
+              leading luxury hotels, resorts and rental properties.
             </>
           )}
           {language === 'cs' && (
             <>
-              Protože je náš tým rozprostřen po celém světě, můžeme oslovit
-              mnoho z nich. nejkrásnějších míst na Zemi, abychom úspěšně
-              zachytili váš produkty/služby v tom nejlepším světle a realizovat
-              cíl, který chcete dosáhnout. dosáhnout jako značka.
+              Planetopedia se specializuje na tvorbu poutavých fotografií, videí
+              a videí. a kampaně v sociálních médiích pro přední světové luxusní
+              společnosti. hotelů, resortů a pronájmů.
             </>
           )}
           {language === 'de' && (
             <>
-              Planetopedia ist auf die Erstellung von Markeninhalten und die
-              Durchführung von Social-Media-Kampagnen. Dazu verwendet unser Team
-              aufmerksamkeitsstarke Techniken, die bei unseren Kunden und Ihren
-              Lesern gut ankommen.
+              Planetopedia ist spezialisiert auf die Erstellung
+              aufmerksamkeitsstarker Fotografie-, Video Videoproduktion und
+              Social-Media-Kampagnen für die weltweit führenden Luxushotels
+              Hotels, Resorts und Mietobjekte.
             </>
           )}
         </p>

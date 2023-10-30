@@ -19,8 +19,8 @@ const Work = () => {
 
   return (
     <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-white h-[calc(100vh-80px)]'>
-      <Container className='py-10 text-white'>
-        <h1 className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl mb-5'>
+      <Container className='py-10 text-white grid place-content-center'>
+        <h1 className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl mb-5 mt-10'>
           {language === 'en' && <>Our social media impact</>}
           {language === 'cs' && <>Náš vliv na sociální média</>}
           {language === 'de' && <>Unser Einfluss auf die sozialen Medien</>}
@@ -52,7 +52,7 @@ const Work = () => {
         </p>
         <Numbers />
 
-        <h1 className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl mb-5  mt-16 md:mt-28'>
+        <h1 className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl mb-5 mt-8 md:mt-16'>
           {language === 'en' && <>Who We Work With</>}
           {language === 'cs' && <>S kým spolupracujeme</>}
           {language === 'de' && <>Mit wem wir arbeiten</>}
