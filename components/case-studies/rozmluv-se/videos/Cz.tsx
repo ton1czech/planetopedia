@@ -1,8 +1,11 @@
 'use client'
 
+import { useLanguage } from '@/store/useLanguage'
 import { useEffect, useRef, useState } from 'react'
 
-const Video = () => {
+const Cz = () => {
+  const { language } = useLanguage(state => state)
+
   const [isPlaying, setIsPlaying] = useState<boolean>(false)
 
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -41,11 +44,11 @@ const Video = () => {
       className='!max-w-[200px] md:!max-w-[300px] xl:!max-w-[350px] 2xl:!max-w-[400px] !h-[370px] sm:!h-[580px] md:!h-[750px] flex justify-center items-center'
       onClick={handleClick}
       playsInline
-      poster='/feedback/3.webp'
+      poster='/feedback/7.webp'
     >
-      <source src='https://i.imgur.com/csDbpN5.mp4' />
+      <source src='https://i.imgur.com/AYnKqwJ.mp4' />
     </video>
   )
 }
 
-export default Video
+export default Cz

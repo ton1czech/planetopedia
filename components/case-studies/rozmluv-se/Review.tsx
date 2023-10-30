@@ -1,9 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Video from './Video'
 import { useLanguage } from '@/store/useLanguage'
 import { Skeleton } from '@/components/ui/skeleton'
+import Cz from './videos/Cz'
+import En from './videos/En'
 
 const Review = () => {
   const { language } = useLanguage(state => state)
@@ -25,7 +26,17 @@ const Review = () => {
         {isLoading ? (
           <Skeleton className='!h-[370px] sm:!h-[580px] md:!h-[750px]' />
         ) : (
-          <Video />
+          <>
+            {language === 'cs' ? (
+              <>
+                <Cz />
+              </>
+            ) : (
+              <>
+                <En />
+              </>
+            )}
+          </>
         )}
       </div>
     </div>
