@@ -25,9 +25,9 @@ const Hero = () => {
               {language === 'en' ? (
                 <>For Hotels</>
               ) : language === 'cs' ? (
-                <></>
+                <>Pro Hotely</>
               ) : language === 'de' ? (
-                <></>
+                <>Für Hotels</>
               ) : null}
             </h1>
           </div>

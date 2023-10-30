@@ -27,16 +27,16 @@ const Hero = () => {
               ) : language === 'cs' ? (
                 <>Připoj se do Týmu!</>
               ) : language === 'de' ? (
-                <></>
+                <>Treten Sie dem Team bei!</>
               ) : null}
             </h1>
             <p className='text-lg md:text-3xl lg:text-4xl tracking-wide'>
               {language === 'en' ? (
                 <>Let us take your work seriously</>
               ) : language === 'cs' ? (
-                <></>
+                <>Vezmeme vaši práci vážně</>
               ) : language === 'de' ? (
-                <></>
+                <>Lassen Sie uns Ihre Arbeit ernst nehmen</>
               ) : null}
             </p>
           </div>
