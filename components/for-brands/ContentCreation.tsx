@@ -7,7 +7,7 @@ import Container from '../Container'
 
 const ContentCreation = () => {
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[90vh] z-20 bg-black flex items-center'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)] z-20 bg-black flex items-center'>
       <Container>
         <div className='grid grid-cols-4 gap-4'>
           {forBrands.map(item => (

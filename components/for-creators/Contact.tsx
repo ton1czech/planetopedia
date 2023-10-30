@@ -89,7 +89,7 @@ const Contact = () => {
   }
 
   return (
-    <div className='sticky bg-white snap-start scroll-mt-20 w-screen h-[90vh] z-40'>
+    <div className='sticky bg-white snap-start scroll-mt-20 w-screen z-40 h-[calc(100vh-80px)]'>
       <Container className='h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-28 w-full sm:w-[60%] lg:w-[35%]'>
         <h2 className='mb-5 text-2xl md:text-3xl 2xl:text-4xl font-bold text-center'>
           {language === 'en' ? (

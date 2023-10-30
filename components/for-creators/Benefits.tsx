@@ -79,7 +79,7 @@ const Item = ({
 
 const Benefits = () => {
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[90vh] z-20 bg-black'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-black h-[calc(100vh-80px)]'>
       <Container className='py-10 text-white'>
         <div className='grid lg:grid-cols-2 gap-8'>
           <div>

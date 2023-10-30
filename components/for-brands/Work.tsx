@@ -18,7 +18,7 @@ const Work = () => {
   }, [])
 
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[90vh] z-20 bg-white'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-white h-[calc(100vh-80px)]'>
       <Container className='py-10 text-white'>
         <h1 className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl mb-5'>
           {language === 'en' && <>Who We Work With</>}

@@ -9,7 +9,7 @@ const Expecting = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[90vh] z-10 bg-white'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-10 bg-white h-[calc(100vh-80px)]'>
       <Container className='grid place-content-center h-[80vh]'>
         <h2 className='text-2xl text-center text-black md:text-3xl mt-36'>
           {language === 'en' && (

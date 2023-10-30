@@ -20,7 +20,7 @@ const Work = () => {
   }, [])
 
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[90vh] z-20 bg-white'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-white h-[calc(100vh-80px)]'>
       <Container className='py-10 text-white'>
         <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center'>
           {language === 'en' && <>Who We Work With</>}
