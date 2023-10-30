@@ -9,9 +9,9 @@ const Feedback = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-white flex items-center h-[calc(100vh-80px)]'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-black flex items-center h-[calc(100vh-80px)]'>
       <Container>
-        <h2 className='text-2xl text-center text-black md:text-3xl mt-20 mb-8'>
+        <h2 className='text-2xl text-center text-white md:text-3xl mt-20 mb-8'>
           {language === 'en' && (
             <>
               What our <b>clients </b>say

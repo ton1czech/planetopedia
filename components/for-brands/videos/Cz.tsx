@@ -37,7 +37,7 @@ const Cz = () => {
 
   return (
     <div>
-      <h4 className='text-center md:text-lg xl:text-xl'>
+      <h4 className='text-center md:text-lg xl:text-xl text-zinc-200'>
         Ondřej Plic / Grundstein s. r. o.
       </h4>
       <video

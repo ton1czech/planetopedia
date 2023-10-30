@@ -37,7 +37,7 @@ const En = () => {
 
   return (
     <div>
-      <h4 className='text-center md:text-lg xl:text-xl'>
+      <h4 className='text-center md:text-lg xl:text-xl text-zinc-200'>
         Barbora Špádová / Rozmluv se s. r. o.
       </h4>
       <video

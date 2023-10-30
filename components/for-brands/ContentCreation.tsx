@@ -10,9 +10,9 @@ const ContentCreation = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)] z-20 bg-black flex items-center'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)] z-20 bg-white flex items-center'>
       <Container>
-        <p className='text-white text-center max-w-[90ch] mx-auto mb-6'>
+        <p className='text-black text-center max-w-[90ch] mx-auto mb-6'>
           {language === 'en' && (
             <>
               Because our team is spread <b>worldwide</b>, we can reach many of

@@ -7,14 +7,14 @@ const Video = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-white flex items-center h-[calc(100vh-80px)]'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-black flex items-center h-[calc(100vh-80px)]'>
       <Container className='py-10 w-full'>
-        <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold text-center text-black'>
+        <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white'>
           {language === 'en' && <>More than an Agency.</>}
           {language === 'cs' && <>Více než jen Agentura.</>}
           {language === 'de' && <>Mehr als eine Agentur.</>}
         </h1>
-        <p className='text-zinc-700 text-center max-w-[80ch] mx-auto'>
+        <p className='text-zinc-300 text-center max-w-[80ch] mx-auto'>
           {language === 'en' && (
             <>
               Planetopedia specializes in creating eye-catching photography,
@@ -39,7 +39,7 @@ const Video = () => {
           )}
         </p>
 
-        <div className='shadow-2xl'>
+        <div className='ring-2 ring-white white-shadow'>
           <iframe
             src='https://www.youtube.com/embed/6FVQmdEMA3o?si=g37RNrek6Y-5PlpY'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
