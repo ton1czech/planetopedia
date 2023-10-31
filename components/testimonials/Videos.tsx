@@ -1,10 +1,6 @@
-'use client'
-
-import { useEffect, useState } from 'react'
 import Carousel from './Carousel'
 import CarouselItem from './CarouselItem'
 import Video from './Video'
-import { Skeleton } from '../ui/skeleton'
 
 interface VideoProps {
   data: {
@@ -14,12 +10,6 @@ interface VideoProps {
 }
 
 const Videos = ({ data }: VideoProps) => {
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setIsLoading(false)
-  }, [])
-
   return (
     <Carousel className='!h-[370px] sm:!h-[580px] md:!h-[750px]'>
       {data.map((item: any, index: any) => (
@@ -29,11 +19,7 @@ const Videos = ({ data }: VideoProps) => {
           isPhone
           className='!h-[370px] sm:!h-[580px] md:!h-[750px]'
         >
-          {isLoading ? (
-            <Skeleton className='!h-[370px] sm:!h-[580px] md:!h-[750px]' />
-          ) : (
-            <Video video={item.video} thumbnail={item.thumbnail} />
-          )}
+          <Video video={item.video} thumbnail={item.thumbnail} />
         </CarouselItem>
       ))}
     </Carousel>

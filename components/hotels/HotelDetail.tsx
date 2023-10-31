@@ -9,7 +9,6 @@ import { Instagram, Link2 } from 'lucide-react'
 import Link from 'next/link'
 import Container from '../Container'
 import { useEffect, useState } from 'react'
-import { Skeleton } from '../ui/skeleton'
 
 interface HotelDetailProps {
   hotel: any
@@ -27,17 +26,13 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
   return (
     <div className='bg-white'>
       <div className='relative w-full h-[300px] md:h-[400px]'>
-        {isLoading ? (
-          <Skeleton className='w-full h-[300px] md:h-[400px]' />
-        ) : (
-          hotel.banner && (
-            <Image
-              src={urlForImage(hotel.banner).url()}
-              alt='banner'
-              fill
-              className='object-cover'
-            />
-          )
+        {hotel.banner && (
+          <Image
+            src={urlForImage(hotel.banner).url()}
+            alt='banner'
+            fill
+            className='object-cover'
+          />
         )}
         <h1 className='text-2xl font-bold md:text-3xl absolute bottom-1/2 translate-y-1/2 left-1/2 -translate-x-1/2'>
           {hotel?.name}
@@ -60,24 +55,18 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
       </div>
 
       <div className='pt-10 pb-20 bg-white md:pt-20 md:pb-32'>
-        <Container className=''>
+        <Container>
           <div className='grid mx-auto place-content-center md:max-w-screen-md 2xl:max-w-screen-md'>
             <div>
               {hotel?.intro_images?.map((image: any) => (
-                <>
-                  {isLoading ? (
-                    <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
-                  ) : (
-                    <Image
-                      key={image}
-                      src={urlForImage(image).url()}
-                      alt='intro image'
-                      width={900}
-                      height={400}
-                      className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                    />
-                  )}
-                </>
+                <Image
+                  key={image}
+                  src={urlForImage(image).url()}
+                  alt='intro image'
+                  width={900}
+                  height={400}
+                  className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                />
               ))}
             </div>
 
@@ -116,20 +105,14 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                 )}
                 <div>
                   {hotel?.overview_images?.map((image: any) => (
-                    <>
-                      {isLoading ? (
-                        <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
-                      ) : (
-                        <Image
-                          key={image}
-                          src={urlForImage(image).url()}
-                          alt='overview image'
-                          width={900}
-                          height={400}
-                          className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                        />
-                      )}
-                    </>
+                    <Image
+                      key={image}
+                      src={urlForImage(image).url()}
+                      alt='overview image'
+                      width={900}
+                      height={400}
+                      className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                    />
                   ))}
                 </div>
               </>
@@ -169,20 +152,14 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
                 <div>
                   {hotel?.rooms_images?.map((image: any) => (
-                    <>
-                      {isLoading ? (
-                        <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
-                      ) : (
-                        <Image
-                          key={image}
-                          src={urlForImage(image).url()}
-                          alt='rooms image'
-                          width={900}
-                          height={400}
-                          className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                        />
-                      )}
-                    </>
+                    <Image
+                      key={image}
+                      src={urlForImage(image).url()}
+                      alt='rooms image'
+                      width={900}
+                      height={400}
+                      className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                    />
                   ))}
                 </div>
               </>
@@ -224,20 +201,14 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
                 <div>
                   {hotel?.services_images?.map((image: any) => (
-                    <>
-                      {isLoading ? (
-                        <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
-                      ) : (
-                        <Image
-                          key={image}
-                          src={urlForImage(image).url()}
-                          alt='services image'
-                          width={900}
-                          height={400}
-                          className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                        />
-                      )}
-                    </>
+                    <Image
+                      key={image}
+                      src={urlForImage(image).url()}
+                      alt='services image'
+                      width={900}
+                      height={400}
+                      className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                    />
                   ))}
                 </div>
               </>
@@ -276,20 +247,14 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                 )}
                 <div>
                   {hotel?.fitness_images?.map((image: any) => (
-                    <>
-                      {isLoading ? (
-                        <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
-                      ) : (
-                        <Image
-                          key={image}
-                          src={urlForImage(image).url()}
-                          alt='fitness image'
-                          width={900}
-                          height={400}
-                          className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                        />
-                      )}
-                    </>
+                    <Image
+                      key={image}
+                      src={urlForImage(image).url()}
+                      alt='fitness image'
+                      width={900}
+                      height={400}
+                      className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                    />
                   ))}
                 </div>
               </>
@@ -329,20 +294,14 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
                 <div>
                   {hotel?.food_images?.map((image: any) => (
-                    <>
-                      {isLoading ? (
-                        <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
-                      ) : (
-                        <Image
-                          key={image}
-                          src={urlForImage(image).url()}
-                          alt='food image'
-                          width={900}
-                          height={400}
-                          className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                        />
-                      )}
-                    </>
+                    <Image
+                      key={image}
+                      src={urlForImage(image).url()}
+                      alt='food image'
+                      width={900}
+                      height={400}
+                      className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                    />
                   ))}
                 </div>
               </>
@@ -352,17 +311,14 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
               {hotel?.labeled_images?.map((item: any) => (
                 <div className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'>
                   <>
-                    {isLoading ? (
-                      <Skeleton className='w-full h-[400px] sm:h-[750px] md:h-[450px]' />
-                    ) : (
-                      <Image
-                        key={item.image}
-                        src={urlForImage(item.image).url()}
-                        alt='food image'
-                        width={900}
-                        height={400}
-                      />
-                    )}
+                    <Image
+                      key={item.image}
+                      src={urlForImage(item.image).url()}
+                      alt='food image'
+                      width={900}
+                      height={400}
+                    />
+
                     {item.alt && (
                       <p className='mt-1 mb-2 text-center md:mb-4 text-zinc-800'>
                         {item.alt}
@@ -409,20 +365,14 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
 
                 <div>
                   {hotel?.conclusion_images?.map((image: any) => (
-                    <>
-                      {isLoading ? (
-                        <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
-                      ) : (
-                        <Image
-                          key={image}
-                          src={urlForImage(image).url()}
-                          alt='fitness image'
-                          width={900}
-                          height={400}
-                          className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                        />
-                      )}
-                    </>
+                    <Image
+                      key={image}
+                      src={urlForImage(image).url()}
+                      alt='fitness image'
+                      width={900}
+                      height={400}
+                      className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                    />
                   ))}
                 </div>
               </>

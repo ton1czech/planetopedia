@@ -5,7 +5,6 @@ import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { Skeleton } from '../ui/skeleton'
 
 interface HotelProps {
   hotel: any
@@ -14,26 +13,16 @@ interface HotelProps {
 const Hotel = ({ hotel }: HotelProps) => {
   const { language } = useLanguage(state => state)
 
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setIsLoading(false)
-  }, [])
-
   return (
     <Link href={`/blog/hotels/${hotel.slug.current}`} className='group'>
       {hotel.image && (
         <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl'>
-          {isLoading ? (
-            <Skeleton className='aspect-square w-[320px] sm:w-[600px] md:w-[345px] lg:w-[470px]' />
-          ) : (
-            <Image
-              src={urlForImage(hotel.image).url()}
-              fill
-              alt={hotel.name}
-              className='object-cover transition duration-500 group-hover:scale-110'
-            />
-          )}
+          <Image
+            src={urlForImage(hotel.image).url()}
+            fill
+            alt={hotel.name}
+            className='object-cover transition duration-500 group-hover:scale-110'
+          />
         </div>
       )}
       {language === 'en' && (

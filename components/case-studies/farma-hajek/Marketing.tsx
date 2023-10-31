@@ -1,23 +1,17 @@
 'use client'
 
 import { useLanguage } from '@/store/useLanguage'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Followers from './charts/Followers'
 import Grow from './charts/Grow'
 import Imprese from './charts/Imprese'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { Skeleton } from '@/components/ui/skeleton'
 
 const Marketing = () => {
   const { language } = useLanguage(state => state)
 
   const [chart, setChart] = useState('followers')
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setIsLoading(false)
-  }, [])
 
   return (
     <div>
@@ -75,15 +69,10 @@ const Marketing = () => {
         </Button>
       </div>
 
-      {isLoading ? (
-        <Skeleton className='w-full h-[500px]' />
-      ) : (
-        <>
-          <>{chart === 'followers' && <Followers />}</>
-          <>{chart === 'grow' && <Grow />}</>
-          <>{chart === 'imprese' && <Imprese />}</>
-        </>
-      )}
+      {chart === 'followers' && <Followers />}
+      {chart === 'grow' && <Grow />}
+      {chart === 'imprese' && <Imprese />}
+
       <p className='italic mt-1 text-justify sm:text-left'>
         {language === 'en' ? (
           <>

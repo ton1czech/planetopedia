@@ -1,10 +1,8 @@
 'use client'
 
-import { Skeleton } from '@/components/ui/skeleton'
 import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
 
 interface BlogProps {
   posts: any[] | undefined
@@ -12,12 +10,6 @@ interface BlogProps {
 
 const Blog = ({ posts }: BlogProps) => {
   const { language } = useLanguage(state => state)
-
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setIsLoading(false)
-  }, [])
 
   return (
     <div>
@@ -29,16 +21,12 @@ const Blog = ({ posts }: BlogProps) => {
           <Link href={post.slug} className='group'>
             {post.src && (
               <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl'>
-                {isLoading ? (
-                  <Skeleton className='aspect-square w-[320px] sm:w-[600px] md:w-[345px] lg:w-[470px]' />
-                ) : (
-                  <Image
-                    src={post.src}
-                    fill
-                    alt={post.title}
-                    className='object-cover transition duration-500 group-hover:scale-110'
-                  />
-                )}
+                <Image
+                  src={post.src}
+                  fill
+                  alt={post.title}
+                  className='object-cover transition duration-500 group-hover:scale-110'
+                />
               </div>
             )}
             {language === 'en' && (

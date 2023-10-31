@@ -5,7 +5,6 @@ import { cn } from '@/lib/utils'
 import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import { Skeleton } from './ui/skeleton'
 
 interface WorkWithProps {
   isCompanyPage?: boolean
@@ -13,12 +12,6 @@ interface WorkWithProps {
 
 const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
   const { language } = useLanguage(state => state)
-
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setIsLoading(false)
-  }, [])
 
   return (
     <div>
@@ -123,17 +116,13 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
       >
         {logosEN.map(({ src, label }) => (
           <div key={src} className='grid place-content-center'>
-            {isLoading ? (
-              <Skeleton className='aspect-square w-[65px] sm:w-[112px] md:w-[128px]' />
-            ) : (
-              <Image
-                src={src}
-                alt={label}
-                width={100}
-                height={50}
-                className='w-full'
-              />
-            )}
+            <Image
+              src={src}
+              alt={label}
+              width={100}
+              height={50}
+              className='w-full'
+            />
           </div>
         ))}
       </div>
@@ -161,17 +150,13 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
       >
         {logosCZ.map(({ src, label }) => (
           <div key={src} className='grid place-content-center'>
-            {isLoading ? (
-              <Skeleton className='aspect-square w-[65px] sm:w-[112px] md:w-[128px]' />
-            ) : (
-              <Image
-                src={src}
-                alt={label}
-                width={100}
-                height={50}
-                className='w-full'
-              />
-            )}
+            <Image
+              src={src}
+              alt={label}
+              width={100}
+              height={50}
+              className='w-full'
+            />
           </div>
         ))}
       </div>

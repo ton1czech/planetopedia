@@ -8,8 +8,6 @@ import { RichText } from '../RichText'
 import { Instagram, Link2 } from 'lucide-react'
 import Link from 'next/link'
 import Container from '../Container'
-import { useEffect, useState } from 'react'
-import { Skeleton } from '../ui/skeleton'
 
 interface RestaurantDetailProps {
   restaurant: any
@@ -18,27 +16,17 @@ interface RestaurantDetailProps {
 const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
   const { language } = useLanguage(state => state)
 
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setIsLoading(false)
-  }, [])
-
   return (
     <div className='bg-white'>
       <div className='relative w-full h-[300px] md:h-[400px]'>
-        {isLoading ? (
-          <Skeleton className='w-full h-[300px] md:h-[400px]' />
-        ) : (
-          restaurant.banner && (
-            <Image
-              src={urlForImage(restaurant.banner).url()}
-              alt='banner'
-              fill
-              className='object-cover'
-            />
-          )
-        )}
+        restaurant.banner && (
+        <Image
+          src={urlForImage(restaurant.banner).url()}
+          alt='banner'
+          fill
+          className='object-cover'
+        />
+        )
         <h1 className='text-2xl font-bold md:text-3xl absolute bottom-1/2 translate-y-1/2 left-1/2 -translate-x-1/2'>
           {restaurant?.name}
         </h1>
@@ -78,20 +66,14 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
 
             <div>
               {restaurant?.intro_images?.map((image: any) => (
-                <>
-                  {isLoading ? (
-                    <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
-                  ) : (
-                    <Image
-                      key={image}
-                      src={urlForImage(image).url()}
-                      alt='intro image'
-                      width={900}
-                      height={400}
-                      className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                    />
-                  )}
-                </>
+                <Image
+                  key={image}
+                  src={urlForImage(image).url()}
+                  alt='intro image'
+                  width={900}
+                  height={400}
+                  className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                />
               ))}
             </div>
 
@@ -131,20 +113,14 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
 
                 <div>
                   {restaurant?.overview_images?.map((image: any) => (
-                    <>
-                      {isLoading ? (
-                        <Skeleton className='w-full h-[425px] sm:h-[750px] md:h-[900px]' />
-                      ) : (
-                        <Image
-                          key={image}
-                          src={urlForImage(image).url()}
-                          alt='intro image'
-                          width={900}
-                          height={400}
-                          className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                        />
-                      )}
-                    </>
+                    <Image
+                      key={image}
+                      src={urlForImage(image).url()}
+                      alt='intro image'
+                      width={900}
+                      height={400}
+                      className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                    />
                   ))}
                 </div>
               </>
@@ -241,20 +217,14 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
 
                 <div>
                   {restaurant?.conclusion_images?.map((image: any) => (
-                    <>
-                      {isLoading ? (
-                        <Skeleton className='w-full h-[400px] sm:h-[750px] md:h-[450px]' />
-                      ) : (
-                        <Image
-                          key={image}
-                          src={urlForImage(image).url()}
-                          alt='fitness image'
-                          width={900}
-                          height={400}
-                          className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
-                        />
-                      )}
-                    </>
+                    <Image
+                      key={image}
+                      src={urlForImage(image).url()}
+                      alt='fitness image'
+                      width={900}
+                      height={400}
+                      className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
+                    />
                   ))}
                 </div>
               </>

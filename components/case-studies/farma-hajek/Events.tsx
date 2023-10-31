@@ -1,18 +1,10 @@
 'use client'
 
-import { Skeleton } from '@/components/ui/skeleton'
 import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
 
 const Events = () => {
   const { language } = useLanguage(state => state)
-
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setIsLoading(false)
-  }, [])
 
   return (
     <div>
@@ -54,16 +46,12 @@ const Events = () => {
           )}
         </p>
         <div className='relative w-full aspect-square h-[300px] sm:h-[400px] lg:h-[500px]'>
-          {isLoading ? (
-            <Skeleton className='w-full h-[230px] sm:h-[350px] md:h-[400px] lg:h-[540px] 2xl:h-[660px]' />
-          ) : (
-            <Image
-              src='/case-studies/farma-hajek/strongman.webp'
-              alt='strongman'
-              fill
-              className='object-cover object-center'
-            />
-          )}
+          <Image
+            src='/case-studies/farma-hajek/strongman.webp'
+            alt='strongman'
+            fill
+            className='object-cover object-center'
+          />
         </div>
       </div>
     </div>

@@ -1,9 +1,7 @@
 'use client'
 
-import { Skeleton } from '@/components/ui/skeleton'
 import { useLanguage } from '@/store/useLanguage'
 import dynamic from 'next/dynamic'
-import { useEffect, useState } from 'react'
 const Map = dynamic(
   () => import('@/components/case-studies/heys-luggage/Map'),
   { ssr: false }
@@ -11,12 +9,6 @@ const Map = dynamic(
 
 const Creators = () => {
   const { language } = useLanguage(state => state)
-
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setIsLoading(false)
-  }, [])
 
   return (
     <div>
@@ -26,11 +18,7 @@ const Creators = () => {
         {language === 'de' && <>/ Schöpfer</>}
       </h2>
 
-      {isLoading ? (
-        <Skeleton className='w-full h-[300px] md:h-[500px]' />
-      ) : (
-        <Map />
-      )}
+      <Map />
     </div>
   )
 }

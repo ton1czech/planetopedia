@@ -1,19 +1,11 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { useLanguage } from '@/store/useLanguage'
-import { Skeleton } from '@/components/ui/skeleton'
 import Cz from './videos/Cz'
 import En from './videos/En'
 
 const Review = () => {
   const { language } = useLanguage(state => state)
-
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setIsLoading(false)
-  }, [])
 
   return (
     <div>
@@ -23,21 +15,17 @@ const Review = () => {
         {language === 'de' && <>/ Überprüfung</>}
       </h2>
       <div className='flex justify-center items-center'>
-        {isLoading ? (
-          <Skeleton className='!h-[370px] sm:!h-[580px] md:!h-[750px]' />
-        ) : (
-          <>
-            {language === 'cs' ? (
-              <>
-                <Cz />
-              </>
-            ) : (
-              <>
-                <En />
-              </>
-            )}
-          </>
-        )}
+        <>
+          {language === 'cs' ? (
+            <>
+              <Cz />
+            </>
+          ) : (
+            <>
+              <En />
+            </>
+          )}
+        </>
       </div>
     </div>
   )

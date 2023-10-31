@@ -1,13 +1,12 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Container from '../Container'
 import Hotel from './Hotel'
 import { Input } from '../ui/input'
 import { useLanguage } from '@/store/useLanguage'
 import dynamic from 'next/dynamic'
 import { hotelLocations } from '@/database/blog'
-import { Skeleton } from '../ui/skeleton'
 const Map = dynamic(() => import('@/components/Map'), { ssr: false })
 
 interface HotelsGridProps {
@@ -18,11 +17,6 @@ const HotelsGrid = ({ hotels }: HotelsGridProps) => {
   const { language } = useLanguage(state => state)
 
   const [query, setQuery] = useState<string>('')
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setIsLoading(false)
-  }, [])
 
   const getFilteredHotels = (query: string) => {
     if (!query) return hotels
@@ -45,11 +39,7 @@ const HotelsGrid = ({ hotels }: HotelsGridProps) => {
   return (
     <div className='bg-white pb-20 md:pb-32'>
       <div className='mb-5 md:mb-10 relative'>
-        {isLoading ? (
-          <Skeleton className='w-full h-[300px] md:h-[500px]' />
-        ) : (
-          <Map locations={hotelLocations} />
-        )}
+        <Map locations={hotelLocations} />
         <div className='absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-white from-75% z-[999] pointer-events-none' />
         <div />
       </div>
