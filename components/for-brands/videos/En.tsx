@@ -42,7 +42,7 @@ const En = () => {
       </h4>
       <video
         ref={videoRef}
-        className='!max-w-[250px] md:!max-w-[300px] xl:!max-w-[330px] 2xl:!max-w-[370px] !h-[400px] sm:!h-[520px] md:!h-[630px] flex justify-center items-center'
+        className='!max-w-[250px] md:!max-w-[300px] xl:!max-w-[330px] 2xl:!max-w-[370px] !h-[400px] sm:!h-[520px] md:!h-[630px] flex justify-center items-center mx-auto'
         onClick={handleClick}
         playsInline
         poster='/feedback/10.webp'
