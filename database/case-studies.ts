@@ -159,6 +159,28 @@ export const caseStudies = [
       'Zvýšení počtu studentů - zákazníků. Interakce s publikem. Optimalizace a zlepšení sociálních sítí. Kreativní tvorba obsahu. Strategie a plánování obsahu.',
     whatDe:
       'Erhöhung der Zahl der Studenten - Kunden. Interaktion mit dem Publikum. Optimierung und Verbesserung der sozialen Medien. Kreative Erstellung von Inhalten. Strategie und Planung von Inhalten.',
+    links: [
+      {
+        site: 'web',
+        url: 'https://rozmluv.se/',
+      },
+      {
+        site: 'instagram',
+        url: 'https://www.instagram.com/rozmluv.se/',
+      },
+      {
+        site: 'tiktok',
+        url: 'https://www.tiktok.com/@rozmluv.se',
+      },
+      {
+        site: 'linkedin',
+        url: 'https://www.linkedin.com/company/rozmluv-se/',
+      },
+      {
+        site: 'facebook',
+        url: 'https://www.facebook.com/rozmluv.se',
+      },
+    ],
   },
   {
     title: 'Heys Luggage',

@@ -5,6 +5,7 @@ import {
   Facebook,
   Instagram,
   LinkIcon,
+  Linkedin,
   ShoppingCart,
   Youtube,
 } from 'lucide-react'
@@ -69,6 +70,9 @@ const Links = ({ links }: LinksProps) => {
             )}
             {link.site === 'pinterest' && (
               <FaPinterest className='h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10' />
+            )}
+            {link.site === 'linkedin' && (
+              <Linkedin className='h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10' />
             )}
           </Link>
         ))}

@@ -1,4 +1,5 @@
 import Hero from '@/components/case-studies/Hero'
+import Links from '@/components/case-studies/Links'
 import Results from '@/components/case-studies/Results'
 import What from '@/components/case-studies/What'
 import Who from '@/components/case-studies/Who'
@@ -17,6 +18,7 @@ export default function RozmluvSe() {
     whatEn,
     whatCz,
     whatDe,
+    links,
   } = caseStudies.filter((data: any) => data.title === 'Rozmluv se')[0]
 
   return (
@@ -34,6 +36,8 @@ export default function RozmluvSe() {
       <Results>
         <Review />
       </Results>
+
+      <Links links={links} />
     </div>
   )
 }
