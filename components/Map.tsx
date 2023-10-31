@@ -47,6 +47,7 @@ const Map = ({ locations }: MapProps) => {
 
       {locations.map(location => (
         <Marker
+          key={location.lat + location.lng}
           position={[location.lat, location.lng]}
           icon={createEmojiIcon('◇')}
         />

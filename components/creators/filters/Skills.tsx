@@ -99,16 +99,7 @@ export function Skills({ setSkill }: SkillsProps) {
                 value={skill.value}
                 onSelect={currentValue => {
                   setValue(currentValue === value ? '' : currentValue)
-                  //   setSkill(
-                  //     currentValue === 'photographer'
-                  //       ? 'Photographer'
-                  //       : currentValue === 'videographer'
-                  //       ? 'Videographer'
-                  //       : currentValue === 'hotels/resorts'
-                  //       ? 'Hotels/Resorts'
-                  //       : ''
-                  //   )
-                  setSkill(skillLabels[currentValue] || '') // Použijte mapovací objekt pro získání odpovídající textové značky
+                  setSkill(skillLabels[currentValue] || '')
                   setOpen(false)
                 }}
               >

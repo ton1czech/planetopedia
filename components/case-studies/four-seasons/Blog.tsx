@@ -18,7 +18,7 @@ const Blog = ({ posts }: BlogProps) => {
       </h2>
       <div className='grid lg:grid-cols-3 gap-4'>
         {posts?.map(post => (
-          <Link href={post.slug} className='group'>
+          <Link href={post.slug} className='group' key={post.slug}>
             {post.src && (
               <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl'>
                 <Image

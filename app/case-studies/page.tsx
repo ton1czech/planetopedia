@@ -58,6 +58,7 @@ export default function CaseStudies() {
         <div className='flex flex-col mt-10 md:mt-20 gap-14 md:gap-24'>
           {filteredCaseStudies.map(casestudy => (
             <Link
+              key={casestudy.href}
               href={casestudy.href}
               className='grid gap-4 group md:grid-cols-2'
             >
@@ -76,21 +77,21 @@ export default function CaseStudies() {
                   {language === 'en' && (
                     <p>
                       {casestudy.servicesEn.map(service => (
-                        <p>{service}</p>
+                        <p key={service}>{service}</p>
                       ))}
                     </p>
                   )}
                   {language === 'cs' && (
                     <p>
                       {casestudy.servicesCz.map(service => (
-                        <p>{service}</p>
+                        <p key={service}>{service}</p>
                       ))}
                     </p>
                   )}
                   {language === 'de' && (
                     <p>
                       {casestudy.servicesDe.map(service => (
-                        <p>{service}</p>
+                        <p key={service}>{service}</p>
                       ))}
                     </p>
                   )}

@@ -80,7 +80,7 @@ const Creator = ({
           <div className='text-sm flex gap-x-2'>
             {categories &&
               categories.map((category: any) => (
-                <TooltipProvider>
+                <TooltipProvider key={category}>
                   <Tooltip>
                     <TooltipTrigger>
                       {category === 'Photographer' && (

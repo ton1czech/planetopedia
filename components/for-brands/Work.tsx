@@ -87,6 +87,7 @@ const Work = () => {
           <div className='grid items-center justify-center w-full grid-cols-3 mt-10 gap-14 lg:grid-cols-6'>
             {brands.logos.map(brand => (
               <div
+                key={brand.src}
                 className={cn(
                   'grid place-content-center',
                   brand.noPhone && 'hidden md:grid'

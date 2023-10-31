@@ -23,6 +23,7 @@ const ContentCreation = ({ images, rotate }: ContentCreation) => {
       <div className='grid md:grid-cols-2 gap-4'>
         {images?.map(image => (
           <Image
+            key={image}
             src={image}
             alt='content creation'
             width={650}

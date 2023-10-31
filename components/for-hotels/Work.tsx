@@ -5,19 +5,11 @@ import { forHotels } from '@/database/for-hotels'
 import Image from 'next/image'
 import { useLanguage } from '@/store/useLanguage'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import { Skeleton } from '../ui/skeleton'
 import { cn } from '@/lib/utils'
 import { ArrowRight } from 'lucide-react'
 
 const Work = () => {
   const { language } = useLanguage(state => state)
-
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setIsLoading(false)
-  }, [])
 
   return (
     <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-white h-[calc(100vh-80px)]'>
@@ -61,6 +53,7 @@ const Work = () => {
                   'grid place-content-center',
                   hotel.noPhone && 'hidden md:grid'
                 )}
+                key={hotel.src}
               >
                 <Image
                   src={hotel.src}
@@ -81,19 +74,16 @@ const Work = () => {
                 <Link
                   href={post.slug}
                   className={cn('group', post.noPhone && 'hidden md:block')}
+                  key={post.slug}
                 >
                   {post.src && (
                     <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-video md:aspect-square group-hover:shadow-2xl'>
-                      {isLoading ? (
-                        <Skeleton className='aspect-square w-[320px] sm:w-[600px] md:w-[345px] lg:w-[470px]' />
-                      ) : (
-                        <Image
-                          src={post.src}
-                          fill
-                          alt={post.title}
-                          className='object-cover transition duration-500 group-hover:scale-110'
-                        />
-                      )}
+                      <Image
+                        src={post.src}
+                        fill
+                        alt={post.title}
+                        className='object-cover transition duration-500 group-hover:scale-110'
+                      />
                     </div>
                   )}
                   {language === 'en' && (

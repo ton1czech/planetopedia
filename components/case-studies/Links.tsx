@@ -35,6 +35,7 @@ const Links = ({ links }: LinksProps) => {
       <div className='flex gap-4'>
         {links?.map(link => (
           <Link
+            key={link.url}
             href={link.url}
             className='hover:scale-95 transition'
             target='_blank'

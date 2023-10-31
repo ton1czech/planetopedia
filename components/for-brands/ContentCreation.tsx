@@ -48,6 +48,7 @@ const ContentCreation = () => {
                   width={600}
                   height={650}
                   className='object-cover w-full aspect-square'
+                  key={image}
                 />
               ))}
             </>
