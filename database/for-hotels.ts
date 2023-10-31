@@ -56,25 +56,37 @@ export const forHotels = [
         src: 'https://i.imgur.com/VTpsyIr.mp4',
       },
       {
+        src: '/services/for-hotels/feedbacks/1.webp',
+      },
+      {
         src: 'https://i.imgur.com/2LhDfGb.mp4',
+      },
+      {
+        src: '/services/for-hotels/feedbacks/2.webp',
       },
       {
         src: 'https://i.imgur.com/eaya4PX.mp4',
       },
       {
-        src: '/services/for-hotels/feedbacks/1.webp',
+        src: '/services/for-hotels/feedbacks/3.webp',
       },
       {
         src: 'https://i.imgur.com/VTpsyIr.mp4',
       },
       {
+        src: '/services/for-hotels/feedbacks/1.webp',
+      },
+      {
         src: 'https://i.imgur.com/2LhDfGb.mp4',
+      },
+      {
+        src: '/services/for-hotels/feedbacks/2.webp',
       },
       {
         src: 'https://i.imgur.com/eaya4PX.mp4',
       },
       {
-        src: '/services/for-hotels/feedbacks/1.webp',
+        src: '/services/for-hotels/feedbacks/3.webp',
       },
     ],
   },
