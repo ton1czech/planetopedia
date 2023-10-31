@@ -22,7 +22,7 @@ const Charts = () => {
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className='text-2xl text-center text-white md:text-3xl mt-10 mb-8'
+          className='text-2xl text-center text-black md:text-3xl mt-10 mb-8'
         >
           {language === 'en' && <>Social Media Management - Results</>}
           {language === 'cs' && <>Správa Sociálních Sítí - Výsledky</>}
