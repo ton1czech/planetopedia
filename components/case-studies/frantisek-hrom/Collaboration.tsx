@@ -17,9 +17,9 @@ const Collaboration = ({ logos }: CollaborationProps) => {
       whileInView={{ y: 0, opacity: 1 }}
     >
       <h2 className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'>
-        {language === 'en' && <>/ Collaboration</>}
+        {language === 'en' && <>/ Collaborations</>}
         {language === 'cs' && <>/ Spolupráce</>}
-        {language === 'de' && <>/ Zusammenarbeit</>}
+        {language === 'de' && <>/ Zusammenarbeiten</>}
       </h2>
 
       <div className='grid items-center justify-center w-full grid-cols-3 gap-14 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6'>
