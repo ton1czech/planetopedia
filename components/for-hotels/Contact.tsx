@@ -13,6 +13,7 @@ import { Label } from '../ui/label'
 import { Checkbox } from '../ui/checkbox'
 import { Button } from '../ui/button'
 import { Textarea } from '../ui/textarea'
+import { motion } from 'framer-motion'
 
 const Contact = () => {
   const { language } = useLanguage(state => state)
@@ -110,7 +111,12 @@ const Contact = () => {
   return (
     <div className='sticky z-40 bg-black snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)]'>
       <Container className='h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-80 w-full sm:w-[60%] lg:w-[35%]'>
-        <h2 className='mb-5 text-2xl font-bold text-center text-white md:text-3xl 2xl:text-4xl'>
+        <motion.h2
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className='mb-5 text-2xl font-bold text-center text-white md:text-3xl 2xl:text-4xl'
+        >
           {language === 'en' ? (
             <>Let's create together</>
           ) : language === 'cs' ? (
@@ -118,9 +124,14 @@ const Contact = () => {
           ) : language === 'de' ? (
             <>Lassen Sie uns gemeinsam etwas schaffen</>
           ) : null}
-        </h2>
+        </motion.h2>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)}>
+          <motion.form
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            onSubmit={form.handleSubmit(onSubmit)}
+          >
             <FormField
               name='name'
               render={({ field }) => (
@@ -414,7 +425,7 @@ const Contact = () => {
                 <>Einreichen</>
               ) : null}
             </Button>
-          </form>
+          </motion.form>
         </Form>
       </Container>
     </div>

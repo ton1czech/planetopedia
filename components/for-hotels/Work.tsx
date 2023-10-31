@@ -7,6 +7,7 @@ import { useLanguage } from '@/store/useLanguage'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { ArrowRight } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const Work = () => {
   const { language } = useLanguage(state => state)
@@ -14,12 +15,22 @@ const Work = () => {
   return (
     <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-white h-[calc(100vh-80px)]'>
       <Container className='py-10 text-white'>
-        <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center'>
+        <motion.h1
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className='text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center'
+        >
           {language === 'en' && <>Who We Work With</>}
           {language === 'cs' && <>S kým spolupracujeme</>}
           {language === 'de' && <>Mit wem wir arbeiten</>}
-        </h1>
-        <p className='text-zinc-700 text-center max-w-[80ch] mx-auto'>
+        </motion.h1>
+        <motion.p
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className='text-zinc-700 text-center max-w-[80ch] mx-auto'
+        >
           {language === 'en' && (
             <>
               From the biggest hotel companies to brands and world-inspiring
@@ -43,10 +54,15 @@ const Work = () => {
               Ansatz erfordern.
             </>
           )}
-        </p>
+        </motion.p>
 
         {forHotels.map(hotels => (
-          <div className='grid items-center justify-center w-full grid-cols-3 gap-14 lg:grid-cols-6 mt-10'>
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className='grid items-center justify-center w-full grid-cols-3 gap-14 lg:grid-cols-6 mt-10'
+          >
             {hotels.logos.map(hotel => (
               <div
                 className={cn(
@@ -64,10 +80,15 @@ const Work = () => {
                 />
               </div>
             ))}
-          </div>
+          </motion.div>
         ))}
 
-        <div className='grid lg:grid-cols-3 gap-4 mt-10'>
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className='grid lg:grid-cols-3 gap-4 mt-10'
+        >
           {forHotels.map(hotel => (
             <>
               {hotel.posts?.map(post => (
@@ -108,17 +129,23 @@ const Work = () => {
               ))}
             </>
           ))}
-        </div>
+        </motion.div>
 
-        <Link
-          href='/blog/luxury-hotels'
-          className='flex gap-2 items-center text-black underline text-center mx-auto w-full justify-center'
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
         >
-          {language === 'en' && <>See all posts</>}
-          {language === 'cs' && <>Zobrazit všechny příspěvky</>}
-          {language === 'de' && <>Alle Beiträge anzeigen</>}
-          <ArrowRight className='w-3 h-3' />
-        </Link>
+          <Link
+            href='/blog/luxury-hotels'
+            className='flex gap-2 items-center text-black underline text-center mx-auto w-full justify-center'
+          >
+            {language === 'en' && <>See all posts</>}
+            {language === 'cs' && <>Zobrazit všechny příspěvky</>}
+            {language === 'de' && <>Alle Beiträge anzeigen</>}
+            <ArrowRight className='w-3 h-3' />
+          </Link>
+        </motion.div>
       </Container>
     </div>
   )
