@@ -21,7 +21,7 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow.src,
 })
 
-const createImageIcon = (src: string) => {
+function createImageIcon(src: string) {
   const iconHTML = `<img src=${src} class="w-10 h-10 rounded-lg" />`
   return L.divIcon({
     html: iconHTML,
@@ -38,7 +38,7 @@ const Map = () => {
       center={[42.02713014229293, -24.48832239315049] as L.LatLngExpression}
       zoom={isDesktop ? 5 : 2}
       scrollWheelZoom={false}
-      className='h-[280px] md:h-[420px] relative'
+      className='h-[250px] 2xl:h-[390px] relative'
       attributionControl={false}
     >
       <TileLayer url='https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png' />

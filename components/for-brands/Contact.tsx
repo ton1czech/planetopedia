@@ -216,7 +216,7 @@ const Contact = () => {
                         />
                         <Label>
                           {language === 'en' ? (
-                            <>Social Media Managment</>
+                            <>Social Media Management</>
                           ) : language === 'cs' ? (
                             <>Správa Sociálních Médií</>
                           ) : language === 'de' ? (
@@ -390,7 +390,7 @@ const Contact = () => {
                             ? 'Schreiben Sie eine Nachricht...'
                             : ''
                         }
-                        rows={6}
+                        rows={4}
                         className='border-black resize-none'
                         {...field}
                       />

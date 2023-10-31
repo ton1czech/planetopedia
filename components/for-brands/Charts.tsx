@@ -18,6 +18,17 @@ const Charts = () => {
   return (
     <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-white h-[calc(100vh-80px)] grid place-content-center'>
       <Container>
+        <motion.h2
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className='text-2xl text-center text-white md:text-3xl mt-10 mb-8'
+        >
+          {language === 'en' && <>Social Media Management - Results</>}
+          {language === 'cs' && <>Správa Sociálních Sítí - Výsledky</>}
+          {language === 'de' && <>Social Media Management - Ergebnisse</>}
+        </motion.h2>
+
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}

@@ -13,12 +13,12 @@ const Work = () => {
 
   return (
     <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-0 bg-white h-[calc(100vh-80px)]'>
-      <Container className='py-10 text-white grid place-content-center'>
+      <Container className='py-10 text-white grid place-content-center h-full'>
         <motion.h1
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl mb-5 mt-10'
+          className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl mb-5'
         >
           {language === 'en' && <>Our social media impact</>}
           {language === 'cs' && <>Náš vliv na sociální média</>}

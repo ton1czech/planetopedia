@@ -17,7 +17,7 @@ const Review = () => {
         transition={{ delay: 0.5 }}
       >
         <Container className='h-[80vh] grid place-content-center'>
-          <h2 className='text-2xl md:text-3xl mt-28 text-black text-center'>
+          <h2 className='text-2xl md:text-3xl mt-28 mb-4 text-black text-center'>
             {language === 'en' && (
               <>
                 <b>Maximizing</b> Your Social Media Presence

@@ -30,7 +30,7 @@ const Web = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <Image src={src} alt='website' width={1300} height={750} />
+        <Image src={src} alt='website' width={1200} height={700} />
       </motion.div>
     </div>
   )

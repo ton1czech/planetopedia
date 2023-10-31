@@ -91,7 +91,7 @@ const Benefits = () => {
             <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold'>
               Main Benefits
             </h1>
-            <ul className='mt-10 md:mt-20 space-y-6 md:space-y-10'>
+            <ul className='mt-10 md:mt-12 2xl:mt-20 space-y-6 md:space-y-10'>
               <Item
                 headingEn='1. Instagram connection'
                 headingCz='1. Připojení k Instagramu'
