@@ -11,6 +11,7 @@ import { Input } from '../ui/input'
 import Container from '../Container'
 import { Label } from '../ui/label'
 import { Button } from '../ui/button'
+import { motion } from 'framer-motion'
 
 const Contact = () => {
   const { language } = useLanguage(state => state)
@@ -90,75 +91,81 @@ const Contact = () => {
 
   return (
     <div className='sticky bg-white snap-start scroll-mt-20 w-screen z-40 h-[calc(100vh-80px)]'>
-      <Container className='h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-28 w-full sm:w-[60%] lg:w-[35%]'>
-        <h2 className='mb-5 text-2xl md:text-3xl 2xl:text-4xl font-bold text-center'>
-          {language === 'en' ? (
-            <>A new era begins with Planetopedia.</>
-          ) : language === 'cs' ? (
-            <>Nová éra začíná s Planetopedia</>
-          ) : language === 'de' ? (
-            <>Eine neue Ära beginnt mit Planetopedia.</>
-          ) : null}
-        </h2>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)}>
-            <FormField
-              name='instagram'
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <>
-                      <Label>
-                        {language === 'en' ? (
-                          <>Instagram Account *</>
-                        ) : language === 'cs' ? (
-                          <>Instagram Účet*</>
-                        ) : language === 'de' ? (
-                          <>Instagram-Account *</>
-                        ) : null}
-                      </Label>
-                      <Input
-                        placeholder='@username'
-                        {...field}
-                        className='border-black'
-                      />
-                    </>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              name='email'
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <>
-                      <Label>E-Mail *</Label>
-                      <Input
-                        placeholder='email@email.com'
-                        {...field}
-                        className='border-black'
-                      />
-                    </>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.7 }}
+      >
+        <Container className='h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-28 w-full sm:w-[60%] lg:w-[35%]'>
+          <h2 className='mb-5 text-2xl md:text-3xl 2xl:text-4xl font-bold text-center'>
+            {language === 'en' ? (
+              <>A new era begins with Planetopedia.</>
+            ) : language === 'cs' ? (
+              <>Nová éra začíná s Planetopedia</>
+            ) : language === 'de' ? (
+              <>Eine neue Ära beginnt mit Planetopedia.</>
+            ) : null}
+          </h2>
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)}>
+              <FormField
+                name='instagram'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <>
+                        <Label>
+                          {language === 'en' ? (
+                            <>Instagram Account *</>
+                          ) : language === 'cs' ? (
+                            <>Instagram Účet*</>
+                          ) : language === 'de' ? (
+                            <>Instagram-Account *</>
+                          ) : null}
+                        </Label>
+                        <Input
+                          placeholder='@username'
+                          {...field}
+                          className='border-black'
+                        />
+                      </>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                name='email'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <>
+                        <Label>E-Mail *</Label>
+                        <Input
+                          placeholder='email@email.com'
+                          {...field}
+                          className='border-black'
+                        />
+                      </>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
-            <Button type='submit' className='mt-4'>
-              {language === 'en' ? (
-                <>Submit</>
-              ) : language === 'cs' ? (
-                <>Odeslat</>
-              ) : language === 'de' ? (
-                <>Einreichen</>
-              ) : null}
-            </Button>
-          </form>
-        </Form>
-      </Container>
+              <Button type='submit' className='mt-4'>
+                {language === 'en' ? (
+                  <>Submit</>
+                ) : language === 'cs' ? (
+                  <>Odeslat</>
+                ) : language === 'de' ? (
+                  <>Einreichen</>
+                ) : null}
+              </Button>
+            </form>
+          </Form>
+        </Container>
+      </motion.div>
     </div>
   )
 }

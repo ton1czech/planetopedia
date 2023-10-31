@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Container from '../Container'
 import { useLanguage } from '@/store/useLanguage'
+import { motion } from 'framer-motion'
 
 interface ItemProps {
   headingEn: string
@@ -82,7 +83,11 @@ const Benefits = () => {
     <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-black h-[calc(100vh-80px)]'>
       <Container className='py-10 text-white'>
         <div className='grid lg:grid-cols-2 gap-8'>
-          <div>
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5 }}
+          >
             <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold'>
               Main Benefits
             </h1>
@@ -140,30 +145,48 @@ const Benefits = () => {
                 ]}
               />
             </ul>
-          </div>
+          </motion.div>
 
           <div className='lg:block overflow-hidden hidden'>
-            <Image
-              src='/services/for-creators/3.webp'
-              alt='heys luggage mockup'
-              width={300}
-              height={500}
-              className='w-[17vw] absolute left-[48%] top-[6rem]'
-            />
-            <Image
-              src='/services/for-creators/2.webp'
-              alt='heys luggage mockup'
-              width={300}
-              height={500}
-              className='w-[17vw] absolute left-[58%] top-[9rem]'
-            />
-            <Image
-              src='/services/for-creators/1.webp'
-              alt='heys luggage mockup'
-              width={300}
-              height={500}
-              className='w-[17vw] absolute left-[68%] top-[12rem]'
-            />
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.7 }}
+            >
+              <Image
+                src='/services/for-creators/3.webp'
+                alt='heys luggage mockup'
+                width={300}
+                height={500}
+                className='w-[17vw] absolute left-[48%] top-[6rem]'
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.9 }}
+            >
+              <Image
+                src='/services/for-creators/2.webp'
+                alt='heys luggage mockup'
+                width={300}
+                height={500}
+                className='w-[17vw] absolute left-[58%] top-[9rem]'
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 1.1 }}
+            >
+              <Image
+                src='/services/for-creators/1.webp'
+                alt='heys luggage mockup'
+                width={300}
+                height={500}
+                className='w-[17vw] absolute left-[68%] top-[12rem]'
+              />
+            </motion.div>
           </div>
         </div>
 
