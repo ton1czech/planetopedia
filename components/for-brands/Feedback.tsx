@@ -48,7 +48,7 @@ const Feedback = () => {
             )}
           </div>
 
-          <div className='lg:grid grid-cols-2 hidden'>
+          <div className='lg:grid grid-cols-2 hidden gap-8'>
             <Cz />
             <En />
           </div>

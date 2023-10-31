@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 
 const SocialMedia = () => {
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)] z-10 bg-black grid place-content-center'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)] z-10 bg-black grid place-content-center mt-8'>
       <motion.div
         initial={{ x: 50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
