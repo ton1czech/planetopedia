@@ -5,6 +5,7 @@ import Container from '../Container'
 import dynamic from 'next/dynamic'
 import { useLanguage } from '@/store/useLanguage'
 const Map = dynamic(() => import('@/components/for-brands/Map'), { ssr: false })
+import { motion } from 'framer-motion'
 
 const Campaign = () => {
   const { language } = useLanguage(state => state)
@@ -12,7 +13,12 @@ const Campaign = () => {
   return (
     <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)] z-30 bg-black flex items-center'>
       <Container className='grid md:grid-cols-[3fr_2fr] gap-14'>
-        <div className='flex flex-col justify-between gap-10 md:gap-0'>
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className='flex flex-col justify-between gap-10 md:gap-0'
+        >
           <div>
             <p className='uppercase text-lg text-justify text-zinc-200'>
               {language === 'en' && <>social media influencer campaign</>}
@@ -54,14 +60,20 @@ const Campaign = () => {
             </p>
           </div>
           <Map />
-        </div>
-        <Image
-          width={700}
-          height={1000}
-          alt='heys luggage campaign'
-          src='/services/for-brands/heysluggage.jpg'
-          className='hidden md:block'
-        />
+        </motion.div>
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          <Image
+            width={700}
+            height={1000}
+            alt='heys luggage campaign'
+            src='/services/for-brands/heysluggage.jpg'
+            className='hidden md:block'
+          />
+        </motion.div>
       </Container>
     </div>
   )

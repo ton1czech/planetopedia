@@ -8,6 +8,7 @@ import Imprese from './charts/Imprese'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import Container from '../Container'
+import { motion } from 'framer-motion'
 
 const Charts = () => {
   const { language } = useLanguage(state => state)
@@ -17,7 +18,12 @@ const Charts = () => {
   return (
     <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-white h-[calc(100vh-80px)] grid place-content-center'>
       <Container>
-        <div className='grid lg:grid-cols-3 gap-2 lg:gap-8 mt-4 mb-2'>
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className='grid lg:grid-cols-3 gap-2 lg:gap-8 mt-4 mb-2'
+        >
           <Button
             onClick={() => setChart('followers')}
             className={cn(
@@ -63,13 +69,24 @@ const Charts = () => {
               <>Importe</>
             ) : null}
           </Button>
-        </div>
+        </motion.div>
 
-        {chart === 'followers' && <Followers />}
-        {chart === 'grow' && <Grow />}
-        {chart === 'imprese' && <Imprese />}
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          {chart === 'followers' && <Followers />}
+          {chart === 'grow' && <Grow />}
+          {chart === 'imprese' && <Imprese />}
+        </motion.div>
 
-        <p className='italic mt-1 text-justify sm:text-left'>
+        <motion.p
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className='italic mt-1 text-justify sm:text-left'
+        >
           {language === 'en' ? (
             <>
               The results to date have been positively influenced by: influencer
@@ -88,7 +105,7 @@ const Charts = () => {
               / Google.com, Organisation von Veranstaltungen.
             </>
           ) : null}
-        </p>
+        </motion.p>
       </Container>
     </div>
   )

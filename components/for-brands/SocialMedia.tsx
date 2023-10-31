@@ -1,7 +1,9 @@
-import React from 'react'
+'use client'
+
 import Container from '../Container'
 import { forBrands } from '@/database/for-brands'
 import Items from './carousel/Items'
+import { motion } from 'framer-motion'
 
 const SocialMedia = () => {
   return (

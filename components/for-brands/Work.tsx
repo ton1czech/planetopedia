@@ -6,6 +6,7 @@ import { useLanguage } from '@/store/useLanguage'
 import { cn } from '@/lib/utils'
 import { forBrands } from '@/database/for-brands'
 import Numbers from './Numbers'
+import { motion } from 'framer-motion'
 
 const Work = () => {
   const { language } = useLanguage(state => state)
@@ -13,12 +14,22 @@ const Work = () => {
   return (
     <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-0 bg-white h-[calc(100vh-80px)]'>
       <Container className='py-10 text-white grid place-content-center'>
-        <h1 className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl mb-5 mt-10'>
+        <motion.h1
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl mb-5 mt-10'
+        >
           {language === 'en' && <>Our social media impact</>}
           {language === 'cs' && <>Náš vliv na sociální média</>}
           {language === 'de' && <>Unser Einfluss auf die sozialen Medien</>}
-        </h1>
-        <p className='text-zinc-700 text-center max-w-[80ch] mx-auto'>
+        </motion.h1>
+        <motion.p
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className='text-zinc-700 text-center max-w-[80ch] mx-auto'
+        >
           {language === 'en' && (
             <>
               Planetopedia specializes in creating branded content and launching
@@ -42,15 +53,32 @@ const Work = () => {
               Lesern gut ankommen.
             </>
           )}
-        </p>
-        <Numbers />
+        </motion.p>
 
-        <h1 className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl mb-5 mt-8 md:mt-16'>
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          <Numbers />
+        </motion.div>
+
+        <motion.h1
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl mb-5 mt-8 md:mt-16'
+        >
           {language === 'en' && <>Who We Work With</>}
           {language === 'cs' && <>S kým spolupracujeme</>}
           {language === 'de' && <>Mit wem wir arbeiten</>}
-        </h1>
-        <p className='text-zinc-700 text-center max-w-[80ch] mx-auto'>
+        </motion.h1>
+        <motion.p
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className='text-zinc-700 text-center max-w-[80ch] mx-auto'
+        >
           {language === 'en' && (
             <>
               From the biggest hotel companies to brands and world-inspiring
@@ -74,10 +102,15 @@ const Work = () => {
               Ansatz erfordern.
             </>
           )}
-        </p>
+        </motion.p>
 
         {forBrands.map(brands => (
-          <div className='grid items-center justify-center w-full grid-cols-3 mt-10 gap-14 lg:grid-cols-6'>
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className='grid items-center justify-center w-full grid-cols-3 mt-10 gap-14 lg:grid-cols-6'
+          >
             {brands.logos.map(brand => (
               <div
                 key={brand.src}
@@ -95,7 +128,7 @@ const Work = () => {
                 />
               </div>
             ))}
-          </div>
+          </motion.div>
         ))}
       </Container>
     </div>
