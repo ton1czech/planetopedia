@@ -1,5 +1,6 @@
 'use client'
 
+import { urlForImage } from '@/sanity/lib/image'
 import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -19,7 +20,7 @@ const Restaurant = ({ restaurant }: RestaurantProps) => {
       {restaurant.image && (
         <div className='relative w-full mb-3 overflow-hidden transition duration-500 aspect-square group-hover:shadow-2xl'>
           <Image
-            src={restaurant.image}
+            src={urlForImage(restaurant.image).url()}
             fill
             alt={restaurant.name}
             className='object-cover transition duration-500 group-hover:scale-110'

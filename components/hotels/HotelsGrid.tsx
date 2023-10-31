@@ -8,6 +8,7 @@ import { useLanguage } from '@/store/useLanguage'
 import dynamic from 'next/dynamic'
 import { hotelLocations } from '@/database/blog'
 const Map = dynamic(() => import('@/components/Map'), { ssr: false })
+import { motion } from 'framer-motion'
 
 interface HotelsGridProps {
   hotels: any
@@ -38,12 +39,23 @@ const HotelsGrid = ({ hotels }: HotelsGridProps) => {
 
   return (
     <div className='bg-white pb-20 md:pb-32'>
-      <div className='mb-5 md:mb-10 relative'>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+        className='mb-5 md:mb-10 relative'
+      >
         <Map locations={hotelLocations} />
         <div className='absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-white from-75% z-[999] pointer-events-none' />
         <div />
-      </div>
-      <div className='max-w-5xl mx-auto'>
+      </motion.div>
+
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.8 }}
+        className='max-w-5xl mx-auto'
+      >
         <Container>
           <Input
             type='text'
@@ -66,7 +78,7 @@ const HotelsGrid = ({ hotels }: HotelsGridProps) => {
             </div>
           )}
         </Container>
-      </div>
+      </motion.div>
     </div>
   )
 }

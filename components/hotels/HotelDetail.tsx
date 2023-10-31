@@ -8,7 +8,7 @@ import { RichText } from '../RichText'
 import { Instagram, Link2 } from 'lucide-react'
 import Link from 'next/link'
 import Container from '../Container'
-import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 interface HotelDetailProps {
   hotel: any
@@ -16,12 +16,6 @@ interface HotelDetailProps {
 
 const HotelDetail = ({ hotel }: HotelDetailProps) => {
   const { language } = useLanguage(state => state)
-
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setIsLoading(false)
-  }, [])
 
   return (
     <div className='bg-white'>
@@ -57,7 +51,10 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
       <div className='pt-10 pb-20 bg-white md:pt-20 md:pb-32'>
         <Container>
           <div className='grid mx-auto place-content-center md:max-w-screen-md 2xl:max-w-screen-md'>
-            <div>
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+            >
               {hotel?.intro_images?.map((image: any) => (
                 <Image
                   key={image}
@@ -68,12 +65,15 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                   className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
                 />
               ))}
-            </div>
+            </motion.div>
 
             {(hotel?.overview_en ||
               hotel?.overview_cz ||
               hotel?.overview_de) && (
-              <>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+              >
                 <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                   {language === 'en' && <>hotel overview</>}
                   {language === 'cs' && <>přehled hotelů</>}
@@ -115,11 +115,14 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                     />
                   ))}
                 </div>
-              </>
+              </motion.div>
             )}
 
             {(hotel?.rooms_en || hotel?.rooms_cz || hotel?.rooms_de) && (
-              <>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+              >
                 <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                   {language === 'en' && <>the rooms</>}
                   {language === 'cs' && <>pokoje</>}
@@ -162,13 +165,16 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                     />
                   ))}
                 </div>
-              </>
+              </motion.div>
             )}
 
             {(hotel?.services_en ||
               hotel?.services_cz ||
               hotel?.services_de) && (
-              <>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+              >
                 <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                   {language === 'en' && <>services and facilities</>}
                   {language === 'cs' && <>služby a zařízení</>}
@@ -211,11 +217,14 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                     />
                   ))}
                 </div>
-              </>
+              </motion.div>
             )}
 
             {(hotel?.fitness_en || hotel?.fitness_cz || hotel?.fitness_de) && (
-              <>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+              >
                 <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                   {language === 'en' && <>spa & fitness</>}
                   {language === 'cs' && <>lázně a fitness</>}
@@ -257,11 +266,14 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                     />
                   ))}
                 </div>
-              </>
+              </motion.div>
             )}
 
             {(hotel?.food_en || hotel?.food_cz || hotel?.food_de) && (
-              <>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+              >
                 <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                   {language === 'en' && <>food & drinks</>}
                   {language === 'cs' && <>jídlo a nápoje</>}
@@ -304,10 +316,14 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                     />
                   ))}
                 </div>
-              </>
+              </motion.div>
             )}
 
-            <div className='grid gap-x-2 md:gap-x-4 md:grid-cols-2'>
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              className='grid gap-x-2 md:gap-x-4 md:grid-cols-2'
+            >
               {hotel?.labeled_images?.map((item: any) => (
                 <div className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'>
                   <>
@@ -327,12 +343,15 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                   </>
                 </div>
               ))}
-            </div>
+            </motion.div>
 
             {(hotel?.conclusion_en ||
               hotel?.conclusion_cz ||
               hotel?.conclusion_de) && (
-              <>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+              >
                 <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                   {language === 'en' && <>conclusion</>}
                   {language === 'cs' && <>závěr</>}
@@ -375,22 +394,32 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                     />
                   ))}
                 </div>
-              </>
+              </motion.div>
             )}
 
-            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
+            <motion.h1
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'
+            >
               {language === 'en' && <>essential info</>}
               {language === 'cs' && <>základní informace</>}
               {language === 'de' && <>wichtige Infos</>}
-            </h1>
+            </motion.h1>
 
-            <iframe
+            <motion.iframe
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               src={hotel?.address}
               referrerPolicy='no-referrer-when-downgrade'
               className='w-full h-80'
             />
 
-            <div className='flex items-center justify-center gap-4 mt-4 md:mt-6'>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className='flex items-center justify-center gap-4 mt-4 md:mt-6'
+            >
               {hotel?.web_link && (
                 <Link href={hotel.web_link}>
                   <Link2
@@ -407,7 +436,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
                   />
                 </Link>
               )}
-            </div>
+            </motion.div>
           </div>
         </Container>
       </div>

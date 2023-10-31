@@ -4,7 +4,6 @@ import { urlForImage } from '@/sanity/lib/image'
 import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
 
 interface HotelProps {
   hotel: any

@@ -8,6 +8,7 @@ import { RichText } from '../RichText'
 import { Instagram, Link2 } from 'lucide-react'
 import Link from 'next/link'
 import Container from '../Container'
+import { motion } from 'framer-motion'
 
 interface RestaurantDetailProps {
   restaurant: any
@@ -19,14 +20,14 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
   return (
     <div className='bg-white'>
       <div className='relative w-full h-[300px] md:h-[400px]'>
-        restaurant.banner && (
-        <Image
-          src={urlForImage(restaurant.banner).url()}
-          alt='banner'
-          fill
-          className='object-cover'
-        />
-        )
+        {restaurant.banner && (
+          <Image
+            src={urlForImage(restaurant.banner).url()}
+            alt='banner'
+            fill
+            className='object-cover'
+          />
+        )}
         <h1 className='text-2xl font-bold md:text-3xl absolute bottom-1/2 translate-y-1/2 left-1/2 -translate-x-1/2'>
           {restaurant?.name}
         </h1>
@@ -49,22 +50,10 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
       <div className='pt-10 pb-20 bg-white md:pt-20 md:pb-32'>
         <Container>
           <div className='grid mx-auto place-content-center md:max-w-screen-md 2xl:max-w-screen-md'>
-            <div>
-              <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
-                {restaurant?.name}
-              </h1>
-              {language === 'en' && (
-                <p className='mb-2'>{restaurant.location_en}</p>
-              )}
-              {language === 'cs' && (
-                <p className='mb-2'>{restaurant.location_cz}</p>
-              )}
-              {language === 'de' && (
-                <p className='mb-2'>{restaurant.location_de}</p>
-              )}
-            </div>
-
-            <div>
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+            >
               {restaurant?.intro_images?.map((image: any) => (
                 <Image
                   key={image}
@@ -75,12 +64,15 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                   className='mb-2 last:mb-6 last:md:mb-10 md:mb-4'
                 />
               ))}
-            </div>
+            </motion.div>
 
             {(restaurant?.overview_en ||
               restaurant?.overview_cz ||
               restaurant?.overview_de) && (
-              <>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+              >
                 <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                   {language === 'en' && <>restaurant overview</>}
                   {language === 'cs' && <>přehled restaurace</>}
@@ -123,13 +115,16 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                     />
                   ))}
                 </div>
-              </>
+              </motion.div>
             )}
 
             {(restaurant?.menu_en ||
               restaurant?.menu_cz ||
               restaurant?.menu_de) && (
-              <>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+              >
                 <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                   {language === 'en' && <>food & drinks</>}
                   {language === 'cs' && <>jídlo a nápoje</>}
@@ -178,13 +173,16 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                     </div>
                   ))}
                 </div>
-              </>
+              </motion.div>
             )}
 
             {(restaurant?.conclusion_en ||
               restaurant?.conclusion_cz ||
               restaurant?.conclusion_de) && (
-              <>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+              >
                 <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                   {language === 'en' && <>conclusion</>}
                   {language === 'cs' && <>závěr</>}
@@ -227,22 +225,32 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                     />
                   ))}
                 </div>
-              </>
+              </motion.div>
             )}
 
-            <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
+            <motion.h1
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'
+            >
               {language === 'en' && <>essential info</>}
               {language === 'cs' && <>základní informace</>}
               {language === 'de' && <>wichtige Infos</>}
-            </h1>
+            </motion.h1>
 
-            <iframe
+            <motion.iframe
               src={restaurant?.address}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               referrerPolicy='no-referrer-when-downgrade'
               className='w-full h-80'
             />
 
-            <div className='flex items-center justify-center gap-4 mt-4 md:mt-6'>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className='flex items-center justify-center gap-4 mt-4 md:mt-6'
+            >
               {restaurant?.web_link && (
                 <Link href={restaurant.web_link}>
                   <Link2
@@ -259,10 +267,10 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                   />
                 </Link>
               )}
-            </div>
+            </motion.div>
           </div>
         </Container>
-      </div>{' '}
+      </div>
     </div>
   )
 }
