@@ -2,6 +2,7 @@
 
 import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 interface CollaborationProps {
   logos: string[] | undefined
@@ -11,7 +12,10 @@ const Collaboration = ({ logos }: CollaborationProps) => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div>
+    <motion.div
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+    >
       <h2 className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'>
         {language === 'en' && <>/ Collaboration</>}
         {language === 'cs' && <>/ Spolupráce</>}
@@ -31,7 +35,7 @@ const Collaboration = ({ logos }: CollaborationProps) => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   )
 }
 

@@ -5,19 +5,28 @@ import {
   ReactCompareSlider,
   ReactCompareSliderImage,
 } from 'react-compare-slider'
+import { motion } from 'framer-motion'
 
 const Web = () => {
   const { language } = useLanguage(state => state)
 
   return (
     <div>
-      <h2 className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'>
+      <motion.h2
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'
+      >
         {language === 'en' && <>/ Web Development</>}
         {language === 'cs' && <>/ Tvorba Webu</>}
         {language === 'de' && <>/ Web-Entwicklung</>}
-      </h2>
+      </motion.h2>
 
-      <ul className='mb-4 md:mb-10 grid grid-cols-2 lg:grid-cols-4 gap-4'>
+      <motion.ul
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        className='mb-4 md:mb-10 grid grid-cols-2 lg:grid-cols-4 gap-4'
+      >
         <li className='text-center bg-zinc-100 rounded-md py-2 px-4 text-zinc-700'>
           {language === 'en' && <>Modern</>}
           {language === 'cs' && <>Moderní</>}
@@ -58,57 +67,62 @@ const Web = () => {
           {language === 'cs' && <>Interaktivní</>}
           {language === 'de' && <>Interaktiv</>}
         </li>
-      </ul>
+      </motion.ul>
 
-      <ReactCompareSlider
-        itemOne={
-          <ReactCompareSliderImage
-            src={
-              language === 'en'
-                ? '/case-studies/farma-hajek/old-web-en.webp'
-                : language === 'cs'
-                ? '/case-studies/farma-hajek/old-web-cz.webp'
-                : language === 'de'
-                ? '/case-studies/farma-hajek/old-web-en.webp'
-                : ''
-            }
-            srcSet={
-              language === 'en'
-                ? '/case-studies/farma-hajek/old-web-en.webp'
-                : language === 'cs'
-                ? '/case-studies/farma-hajek/old-web-cz.webp'
-                : language === 'de'
-                ? '/case-studies/farma-hajek/old-web-en.webp'
-                : ''
-            }
-            alt='old web'
-          />
-        }
-        itemTwo={
-          <ReactCompareSliderImage
-            src={
-              language === 'en'
-                ? '/case-studies/farma-hajek/new-web-en.webp'
-                : language === 'cs'
-                ? '/case-studies/farma-hajek/new-web-cz.webp'
-                : language === 'de'
-                ? '/case-studies/farma-hajek/new-web-en.webp'
-                : ''
-            }
-            srcSet={
-              language === 'en'
-                ? '/case-studies/farma-hajek/new-web-en.webp'
-                : language === 'cs'
-                ? '/case-studies/farma-hajek/new-web-cz.webp'
-                : language === 'de'
-                ? '/case-studies/farma-hajek/new-web-en.webp'
-                : ''
-            }
-            alt='new web'
-          />
-        }
-        className='relative'
-      />
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+      >
+        <ReactCompareSlider
+          itemOne={
+            <ReactCompareSliderImage
+              src={
+                language === 'en'
+                  ? '/case-studies/farma-hajek/old-web-en.webp'
+                  : language === 'cs'
+                  ? '/case-studies/farma-hajek/old-web-cz.webp'
+                  : language === 'de'
+                  ? '/case-studies/farma-hajek/old-web-en.webp'
+                  : ''
+              }
+              srcSet={
+                language === 'en'
+                  ? '/case-studies/farma-hajek/old-web-en.webp'
+                  : language === 'cs'
+                  ? '/case-studies/farma-hajek/old-web-cz.webp'
+                  : language === 'de'
+                  ? '/case-studies/farma-hajek/old-web-en.webp'
+                  : ''
+              }
+              alt='old web'
+            />
+          }
+          itemTwo={
+            <ReactCompareSliderImage
+              src={
+                language === 'en'
+                  ? '/case-studies/farma-hajek/new-web-en.webp'
+                  : language === 'cs'
+                  ? '/case-studies/farma-hajek/new-web-cz.webp'
+                  : language === 'de'
+                  ? '/case-studies/farma-hajek/new-web-en.webp'
+                  : ''
+              }
+              srcSet={
+                language === 'en'
+                  ? '/case-studies/farma-hajek/new-web-en.webp'
+                  : language === 'cs'
+                  ? '/case-studies/farma-hajek/new-web-cz.webp'
+                  : language === 'de'
+                  ? '/case-studies/farma-hajek/new-web-en.webp'
+                  : ''
+              }
+              alt='new web'
+            />
+          }
+          className='relative'
+        />
+      </motion.div>
     </div>
   )
 }

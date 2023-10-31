@@ -2,18 +2,27 @@
 
 import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const Events = () => {
   const { language } = useLanguage(state => state)
 
   return (
     <div>
-      <h2 className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'>
+      <motion.h2
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'
+      >
         {language === 'en' && <>/ Events</>}
         {language === 'cs' && <>/ Akce</>}
         {language === 'de' && <>/ Veranstaltungen</>}
-      </h2>
-      <div className='grid md:grid-cols-[4fr_6fr] gap-6'>
+      </motion.h2>
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        className='grid md:grid-cols-[4fr_6fr] gap-6'
+      >
         <p className='text-justify'>
           {language === 'en' && (
             <>
@@ -53,7 +62,7 @@ const Events = () => {
             className='object-cover object-center'
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

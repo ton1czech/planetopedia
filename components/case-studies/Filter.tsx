@@ -2,6 +2,7 @@
 
 import { cn } from '@/lib/utils'
 import { useLanguage } from '@/store/useLanguage'
+import { motion } from 'framer-motion'
 
 interface ItemProps {
   labelEn: string
@@ -36,17 +37,6 @@ const Item = ({
   return (
     <p
       onClick={handleClick}
-      //   className={cn(
-      //     'px-4 py-2 text-center rounded-md cursor-pointer hover:underline bg-zinc-100 hover:bg-zinc-300 grid place-content-center',
-      //     service ===
-      //       (language === 'en'
-      //         ? labelEn
-      //         : language === 'cs'
-      //         ? labelCz
-      //         : language === 'de'
-      //         ? labelDe
-      //         : '') && 'bg-zinc-300 ring-1 ring-zinc-400'
-      //   )}
       className={cn(
         'px-4 py-2 text-center rounded-md cursor-pointer ring-1 ring-black/40 hover:bg-zinc-300 grid place-content-center',
         service ===
@@ -73,7 +63,11 @@ interface FilterProps {
 
 const Filter = ({ setService, service }: FilterProps) => {
   return (
-    <div className='grid grid-cols-2 p-1 gap-x-4 gap-y-2 md:grid-cols-3 md:gap-x-8 md:gap-y-4 lg:grid-cols-4'>
+    <motion.div
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      className='grid grid-cols-2 p-1 gap-x-4 gap-y-2 md:grid-cols-3 md:gap-x-8 md:gap-y-4 lg:grid-cols-4'
+    >
       <Item
         labelEn='marketing'
         labelCz='marketing'
@@ -130,7 +124,7 @@ const Filter = ({ setService, service }: FilterProps) => {
         setService={setService}
         service={service}
       />
-    </div>
+    </motion.div>
   )
 }
 

@@ -7,6 +7,7 @@ import Grow from './charts/Grow'
 import Imprese from './charts/Imprese'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import { motion } from 'framer-motion'
 
 const Marketing = () => {
   const { language } = useLanguage(state => state)
@@ -15,13 +16,21 @@ const Marketing = () => {
 
   return (
     <div>
-      <h2 className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'>
+      <motion.h2
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'
+      >
         {language === 'en' && <>/ Marketing Results</>}
         {language === 'cs' && <>/ Marketingové Výsledky</>}
         {language === 'de' && <>/ Marketing-Ergebnisse</>}
-      </h2>
+      </motion.h2>
 
-      <div className='grid lg:grid-cols-3 gap-2 lg:gap-8 mt-4 mb-2'>
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        className='grid lg:grid-cols-3 gap-2 lg:gap-8 mt-4 mb-2'
+      >
         <Button
           onClick={() => setChart('followers')}
           className={cn(
@@ -67,13 +76,22 @@ const Marketing = () => {
             <>Importe</>
           ) : null}
         </Button>
-      </div>
+      </motion.div>
 
-      {chart === 'followers' && <Followers />}
-      {chart === 'grow' && <Grow />}
-      {chart === 'imprese' && <Imprese />}
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+      >
+        {chart === 'followers' && <Followers />}
+        {chart === 'grow' && <Grow />}
+        {chart === 'imprese' && <Imprese />}
+      </motion.div>
 
-      <p className='italic mt-1 text-justify sm:text-left'>
+      <motion.p
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        className='italic mt-1 text-justify sm:text-left'
+      >
         {language === 'en' ? (
           <>
             The results to date have been positively influenced by: influencer
@@ -92,7 +110,7 @@ const Marketing = () => {
             Google.com, Organisation von Veranstaltungen.
           </>
         ) : null}
-      </p>
+      </motion.p>
     </div>
   )
 }

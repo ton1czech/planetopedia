@@ -3,12 +3,16 @@
 import { useLanguage } from '@/store/useLanguage'
 import Cz from './videos/Cz'
 import En from './videos/En'
+import { motion } from 'framer-motion'
 
 const Review = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div>
+    <motion.div
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+    >
       <h2 className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'>
         {language === 'en' && <>/ Review</>}
         {language === 'cs' && <>/ Hodnocení</>}
@@ -27,7 +31,7 @@ const Review = () => {
           )}
         </>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

@@ -11,6 +11,7 @@ import {
 import Link from 'next/link'
 import { FaPinterest, FaTiktok } from 'react-icons/fa'
 import Container from '../Container'
+import { motion } from 'framer-motion'
 
 interface LinksProps {
   links:
@@ -26,13 +27,21 @@ const Links = ({ links }: LinksProps) => {
 
   return (
     <Container>
-      <h2 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold pt-6 md:pt-12 xl:pt-20 mb-2'>
+      <motion.h2
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold pt-6 md:pt-12 xl:pt-20 mb-2'
+      >
         {language === 'en' && <>Links</>}
         {language === 'cs' && <>Odkazy</>}
         {language === 'de' && <>Resultate</>}
-      </h2>
+      </motion.h2>
 
-      <div className='flex gap-4'>
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        className='flex gap-4'
+      >
         {links?.map(link => (
           <Link
             key={link.url}
@@ -63,7 +72,7 @@ const Links = ({ links }: LinksProps) => {
             )}
           </Link>
         ))}
-      </div>
+      </motion.div>
     </Container>
   )
 }

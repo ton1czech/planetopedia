@@ -23,8 +23,6 @@ const Member = ({ src, name, body, links, role, imagetop }: MemberProps) => {
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.3 }}
     >
       <div className='relative w-full aspect-square'>
         <Image

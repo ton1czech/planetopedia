@@ -5,12 +5,16 @@ import Link from 'next/link'
 import FooterIcon from './FooterIcon'
 import { Instagram, Linkedin, Youtube } from 'lucide-react'
 import Container from '../Container'
+import { motion } from 'framer-motion'
 
 const Footer = () => {
   const { language } = useLanguage()
 
   return (
-    <footer>
+    <motion.footer
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+    >
       <Container className='py-20'>
         <div className='grid md:grid-cols-2 mb-10 md:mb-20 gap-y-4'>
           <h2 className='uppercase text-2xl font-black text-white text-center md:text-left'>
@@ -57,7 +61,7 @@ const Footer = () => {
           </Link>
         </p>
       </Container>
-    </footer>
+    </motion.footer>
   )
 }
 

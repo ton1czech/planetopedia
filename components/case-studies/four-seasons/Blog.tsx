@@ -3,6 +3,7 @@
 import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 interface BlogProps {
   posts: any[] | undefined
@@ -13,10 +14,18 @@ const Blog = ({ posts }: BlogProps) => {
 
   return (
     <div>
-      <h2 className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'>
+      <motion.h2
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'
+      >
         / Blog
-      </h2>
-      <div className='grid lg:grid-cols-3 gap-4'>
+      </motion.h2>
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        className='grid lg:grid-cols-3 gap-4'
+      >
         {posts?.map(post => (
           <Link href={post.slug} className='group' key={post.slug}>
             {post.src && (
@@ -43,7 +52,7 @@ const Blog = ({ posts }: BlogProps) => {
             </h3>
           </Link>
         ))}
-      </div>
+      </motion.div>
     </div>
   )
 }

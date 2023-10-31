@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Container from '../Container'
 import { useLanguage } from '@/store/useLanguage'
+import { motion } from 'framer-motion'
 
 interface HeroProps {
   title: string
@@ -23,7 +24,11 @@ const Hero = ({
 
   return (
     <Container>
-      <div className='flex flex-col md:flex-row justify-between mb-2 md:mb-4'>
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        className='flex flex-col md:flex-row justify-between mb-2 md:mb-4'
+      >
         <h1 className='text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold md:self-end'>
           {title}
         </h1>
@@ -63,10 +68,14 @@ const Hero = ({
             ))}
           </div>
         )}
-      </div>
-      <div className='relative w-full h-[300px] lg:h-[500px]'>
+      </motion.div>
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        className='relative w-full h-[300px] lg:h-[500px]'
+      >
         <Image src={img} alt={title} fill className='object-cover' />
-      </div>
+      </motion.div>
     </Container>
   )
 }

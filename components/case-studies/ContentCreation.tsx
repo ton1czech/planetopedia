@@ -3,6 +3,7 @@
 import { cn } from '@/lib/utils'
 import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 interface ContentCreation {
   images: string[] | undefined
@@ -13,7 +14,10 @@ const ContentCreation = ({ images, rotate }: ContentCreation) => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div>
+    <motion.div
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+    >
       <h2 className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'>
         {language === 'en' && <>/ Content Creation</>}
         {language === 'cs' && <>/ Tvorba Obsahu</>}
@@ -35,7 +39,7 @@ const ContentCreation = ({ images, rotate }: ContentCreation) => {
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   )
 }
 
