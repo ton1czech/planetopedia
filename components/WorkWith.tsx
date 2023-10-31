@@ -4,7 +4,7 @@ import { logosCZ, logosEN } from '@/database/logos'
 import { cn } from '@/lib/utils'
 import { useLanguage } from '@/store/useLanguage'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 interface WorkWithProps {
   isCompanyPage?: boolean
@@ -17,12 +17,20 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
     <div>
       {isCompanyPage ? (
         <div className='mb-12 flex flex-col gap-5 max-w-3xl mx-auto text-justify'>
-          <h2 className='mb-2 text-xl font-thin md:text-2xl lg:text-3xl text-zinc-600'>
+          <motion.h2
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            className='mb-2 text-xl font-thin md:text-2xl lg:text-3xl text-zinc-600'
+          >
             {language === 'en' && <>Who we work with</>}
             {language === 'cs' && <>S kým spolupracujeme</>}
             {language === 'de' && <>Mit wem wir arbeiten</>}
-          </h2>
-          <p className='text-2xl font-semibold text-justify md:text-3xl lg:text-4xl'>
+          </motion.h2>
+          <motion.p
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            className='text-2xl font-semibold text-justify md:text-3xl lg:text-4xl'
+          >
             {language === 'en' && (
               <>We are here for people who want to stay connected.</>
             )}
@@ -32,8 +40,12 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
             {language === 'de' && (
               <>Wir sind für Menschen da, die in Verbindung bleiben wollen.</>
             )}
-          </p>
-          <p className='text-lg'>
+          </motion.p>
+          <motion.p
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            className='text-lg'
+          >
             {language === 'en' && (
               <>
                 From the biggest hotel companies to brands and world-inspiring
@@ -57,10 +69,14 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
                 Ansatz erfordern.
               </>
             )}
-          </p>
+          </motion.p>
         </div>
       ) : (
-        <div className='mb-12'>
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          className='mb-12'
+        >
           <h2 className='mb-2 text-xl font-thin md:text-2xl lg:text-3xl text-zinc-600'>
             {language === 'en' && <>Who we work with</>}
             {language === 'cs' && <>S kým spolupracujeme</>}
@@ -104,10 +120,12 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
               )}
             </p>
           </div>
-        </div>
+        </motion.div>
       )}
 
-      <div
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
         className={cn(
           'grid items-center justify-center w-full grid-cols-3 gap-14 md:grid-cols-4 lg:grid-cols-4',
           !isCompanyPage && 'xl:grid-cols-5 2xl:grid-cols-6',
@@ -125,9 +143,11 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
             />
           </div>
         ))}
-      </div>
+      </motion.div>
 
-      <div
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
         className={cn(
           'mt-10 mb-8 md:mt-20',
           isCompanyPage && 'max-w-3xl mx-auto'
@@ -139,9 +159,11 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
           {language === 'cs' && <>Klienti v České republice</>}
           {language === 'de' && <>Kunden in der Tschechischen Republik</>}
         </p>
-      </div>
+      </motion.div>
 
-      <div
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
         className={cn(
           'grid items-center justify-center w-full grid-cols-3 gap-14 md:grid-cols-4 lg:grid-cols-4',
           !isCompanyPage && 'xl:grid-cols-5 2xl:grid-cols-6',
@@ -159,7 +181,7 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
             />
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   )
 }
