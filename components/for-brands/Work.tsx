@@ -3,7 +3,6 @@
 import Container from '../Container'
 import Image from 'next/image'
 import { useLanguage } from '@/store/useLanguage'
-import { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
 import { forBrands } from '@/database/for-brands'
 import Numbers from './Numbers'
@@ -11,14 +10,8 @@ import Numbers from './Numbers'
 const Work = () => {
   const { language } = useLanguage(state => state)
 
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setIsLoading(false)
-  }, [])
-
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-white h-[calc(100vh-80px)]'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-0 bg-white h-[calc(100vh-80px)]'>
       <Container className='py-10 text-white grid place-content-center'>
         <h1 className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl mb-5 mt-10'>
           {language === 'en' && <>Our social media impact</>}

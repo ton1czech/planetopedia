@@ -10,7 +10,7 @@ const Campaign = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)] z-20 bg-black flex items-center'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)] z-30 bg-black flex items-center'>
       <Container className='grid md:grid-cols-[3fr_2fr] gap-14'>
         <div className='flex flex-col justify-between gap-10 md:gap-0'>
           <div>

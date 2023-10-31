@@ -7,7 +7,7 @@ const Video = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-black flex items-center h-[calc(100vh-80px)]'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-50 bg-black flex items-center h-[calc(100vh-80px)]'>
       <Container className='py-10 w-full'>
         <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white'>
           {language === 'en' && <>More than an Agency.</>}
