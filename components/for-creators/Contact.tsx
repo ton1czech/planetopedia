@@ -92,8 +92,8 @@ const Contact = () => {
   return (
     <div className='sticky bg-white snap-start scroll-mt-20 w-screen z-40 h-[calc(100vh-80px)]'>
       <motion.div
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
         <Container className='h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-28 w-full sm:w-[60%] lg:w-[35%]'>
