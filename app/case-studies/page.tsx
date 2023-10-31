@@ -72,7 +72,7 @@ export default function CaseStudies() {
                     <h3 className='-mb-1 text-2xl font-black md:mb-1 md:text-3xl lg:text-4xl'>
                       {casestudy.title}
                     </h3>
-                    <div className='mb-2 text-sm text-zinc-600'>
+                    <div className='mtext-sm text-zinc-600'>
                       {language === 'en' && <p>{casestudy.categoryEn}</p>}
                       {language === 'cs' && <p>{casestudy.categoryCz}</p>}
                       {language === 'de' && <p>{casestudy.categoryDe}</p>}

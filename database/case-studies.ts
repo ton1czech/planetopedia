@@ -130,6 +130,7 @@ export const caseStudies = [
       '/case-studies/frantisek-hrom/logos/farmahajek.webp',
       '/case-studies/frantisek-hrom/logos/portmonka.webp',
       '/case-studies/frantisek-hrom/logos/tackera.webp',
+      '/case-studies/frantisek-hrom/logos/balistas.webp',
     ],
   },
   {
