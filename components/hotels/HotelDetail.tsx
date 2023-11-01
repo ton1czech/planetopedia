@@ -32,17 +32,17 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
           {hotel?.name}
         </h1>
         {language === 'en' && (
-          <p className='absolute bottom-1/3 -translate-y-[100%] left-1/2 -translate-x-1/2'>
+          <p className='absolute bottom-1/3 translate-y-[100%] lg:-translate-y-[100%] left-1/2 -translate-x-1/2'>
             {hotel.location_en}
           </p>
         )}
         {language === 'cs' && (
-          <p className='absolute bottom-1/3 -translate-y-[100%] left-1/2 -translate-x-1/2'>
+          <p className='absolute bottom-1/3 translate-y-[100%] lg:-translate-y-[100%] left-1/2 -translate-x-1/2'>
             {hotel.location_cz}
           </p>
         )}
         {language === 'de' && (
-          <p className='absolute bottom-1/3 -translate-y-[100%] left-1/2 -translate-x-1/2'>
+          <p className='absolute bottom-1/3 translate-y-[100%] lg:-translate-y-[100%] left-1/2 -translate-x-1/2'>
             {hotel.location_de}
           </p>
         )}
