@@ -28,24 +28,12 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
             className='object-cover'
           />
         )}
-        <h1 className='text-2xl font-bold md:text-3xl absolute bottom-1/2 translate-y-1/2 left-1/2 -translate-x-1/2'>
-          {restaurant?.name}
-        </h1>
-        {language === 'en' && (
-          <p className='absolute bottom-1/3 translate-y-[100%] lg:-translate-y-[100%] left-1/2 -translate-x-1/2'>
-            {restaurant.location_en}
-          </p>
-        )}
-        {language === 'cs' && (
-          <p className='absolute bottom-1/3 translate-y-[100%] lg:-translate-y-[100%] left-1/2 -translate-x-1/2'>
-            {restaurant.location_cz}
-          </p>
-        )}
-        {language === 'de' && (
-          <p className='absolute bottom-1/3 translate-y-[100%] lg:-translate-y-[100%] left-1/2 -translate-x-1/2'>
-            {restaurant.location_de}
-          </p>
-        )}
+        <div className='absolute bottom-1/2 translate-y-1/2 left-1/2 -translate-x-1/2 text-center'>
+          <h1 className='text-2xl font-bold md:text-3xl'>{restaurant?.name}</h1>
+          {language === 'en' && <p>{restaurant.location_en}</p>}
+          {language === 'cs' && <p>{restaurant.location_cz}</p>}
+          {language === 'de' && <p>{restaurant.location_de}</p>}
+        </div>
       </div>
       <div className='pt-10 pb-20 bg-white md:pt-20 md:pb-32'>
         <Container>

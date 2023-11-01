@@ -28,24 +28,12 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
             className='object-cover'
           />
         )}
-        <h1 className='text-2xl font-bold md:text-3xl absolute bottom-1/2 translate-y-1/2 left-1/2 -translate-x-1/2'>
-          {hotel?.name}
-        </h1>
-        {language === 'en' && (
-          <p className='absolute bottom-1/3 translate-y-[100%] lg:-translate-y-[100%] left-1/2 -translate-x-1/2'>
-            {hotel.location_en}
-          </p>
-        )}
-        {language === 'cs' && (
-          <p className='absolute bottom-1/3 translate-y-[100%] lg:-translate-y-[100%] left-1/2 -translate-x-1/2'>
-            {hotel.location_cz}
-          </p>
-        )}
-        {language === 'de' && (
-          <p className='absolute bottom-1/3 translate-y-[100%] lg:-translate-y-[100%] left-1/2 -translate-x-1/2'>
-            {hotel.location_de}
-          </p>
-        )}
+        <div className='absolute bottom-1/2 translate-y-1/2 left-1/2 -translate-x-1/2 text-center'>
+          <h1 className='text-2xl font-bold md:text-3xl'>{hotel?.name}</h1>
+          {language === 'en' && <p>{hotel.location_en}</p>}
+          {language === 'cs' && <p>{hotel.location_cz}</p>}
+          {language === 'de' && <p>{hotel.location_de}</p>}
+        </div>
       </div>
 
       <div className='pt-10 pb-20 bg-white md:pt-20 md:pb-32'>
