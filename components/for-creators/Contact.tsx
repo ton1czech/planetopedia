@@ -54,14 +54,14 @@ const Contact = () => {
     console.log(data)
 
     try {
-      //   const emailResponse = await emailjs.send(
-      //     process.env.NEXT_PUBLIC_SERVICE_ID!,
-      //     process.env.NEXT_PUBLIC_TEMPLATE_ID!,
-      //     data,
-      //     process.env.NEXT_PUBLIC_PUBLIC_API!
-      //   )
+      const emailResponse = await emailjs.send(
+        process.env.NEXT_PUBLIC_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID_CREATORS!,
+        data,
+        process.env.NEXT_PUBLIC_PUBLIC_API!
+      )
 
-      //   console.log(emailResponse)
+      console.log(emailResponse)
 
       toast.success(
         language === 'en'
