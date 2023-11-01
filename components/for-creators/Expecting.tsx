@@ -17,7 +17,7 @@ const Expecting = () => {
         transition={{ delay: 0.5 }}
       >
         <Container className='h-[80vh] grid place-content-center'>
-          <h2 className='text-2xl text-center text-black md:text-3xl mt-40 md:-mb-14 2xl:-mb-4'>
+          <h2 className='text-2xl text-center text-black md:text-3xl mt-12 md:mt-40 md:-mb-14 2xl:-mb-4'>
             {language === 'en' && (
               <>
                 What our <b>creators </b>say
