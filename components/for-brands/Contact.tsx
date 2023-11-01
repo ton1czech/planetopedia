@@ -49,10 +49,12 @@ const Contact = () => {
           ? 'Name ist erforderlich.'
           : '',
     }),
+    checkbox_management: z.boolean(),
     checkbox_creation: z.boolean(),
     checkbox_influencer: z.boolean(),
-    checkbox_management: z.boolean(),
+    checkbox_spot: z.boolean(),
     checkbox_web: z.boolean(),
+    message: z.string().optional(),
   })
 
   const form = useForm<z.infer<typeof schema>>({
@@ -61,10 +63,12 @@ const Contact = () => {
       name: '',
       brand: '',
       email: '',
+      checkbox_management: false,
       checkbox_creation: false,
       checkbox_influencer: false,
-      checkbox_management: false,
+      checkbox_spot: false,
       checkbox_web: false,
+      message: '',
     },
   })
 
@@ -284,7 +288,7 @@ const Contact = () => {
                 )}
               />
               <FormField
-                name='checkbox_4k'
+                name='checkbox_spot'
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
@@ -327,34 +331,6 @@ const Contact = () => {
                             <>Tvorba Webu</>
                           ) : language === 'de' ? (
                             <>Web-Entwicklung</>
-                          ) : null}
-                        </Label>
-                      </div>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                name='checkbox_event'
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <div className='flex items-center gap-2'>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                          {...field}
-                          className='border-white'
-                        />
-                        <Label>
-                          {language === 'en' ? (
-                            <></>
-                          ) : language === 'cs' ? (
-                            <></>
-                          ) : language === 'de' ? (
-                            <></>
                           ) : null}
                         </Label>
                       </div>

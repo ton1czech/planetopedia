@@ -32,11 +32,11 @@ const Contact = () => {
     email: z.string().email({
       message:
         language === 'en'
-          ? "Username must start with '@'"
+          ? 'Not a valid email'
           : language === 'cs'
-          ? 'Uživatelské jméno musí začínat "@"'
+          ? 'E-mail nesplňuje požadavky'
           : language === 'de'
-          ? "Der Benutzername muss mit '@' beginnen"
+          ? 'Keine gültige E-Mail'
           : '',
     }),
     hotel: z.string().min(1, {
@@ -54,6 +54,9 @@ const Contact = () => {
     checkbox_spot: z.boolean(),
     checkbox_press: z.boolean(),
     checkbox_blog: z.boolean(),
+    checkbox_web: z.boolean(),
+    checkbox_management: z.boolean(),
+    message: z.string().optional(),
   })
 
   const form = useForm<z.infer<typeof schema>>({
@@ -66,6 +69,9 @@ const Contact = () => {
       checkbox_spot: false,
       checkbox_press: false,
       checkbox_blog: false,
+      checkbox_web: false,
+      checkbox_management: false,
+      message: '',
     },
   })
 
@@ -73,14 +79,14 @@ const Contact = () => {
     console.log(data)
 
     try {
-      //   const emailResponse = await emailjs.send(
-      //     process.env.NEXT_PUBLIC_SERVICE_ID!,
-      //     process.env.NEXT_PUBLIC_TEMPLATE_ID!,
-      //     data,
-      //     process.env.NEXT_PUBLIC_PUBLIC_API!
-      //   )
+      const emailResponse = await emailjs.send(
+        process.env.NEXT_PUBLIC_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID_BRANDS_HOTELS!,
+        data,
+        process.env.NEXT_PUBLIC_PUBLIC_API!
+      )
 
-      //   console.log(emailResponse)
+      console.log(emailResponse)
 
       toast.success(
         language === 'en'
@@ -349,7 +355,7 @@ const Contact = () => {
                 )}
               />
               <FormField
-                name='checkbox_media'
+                name='checkbox_management'
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
