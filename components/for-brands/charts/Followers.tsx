@@ -127,7 +127,7 @@ const Followers = () => {
       <Line
         data={data}
         options={options}
-        className='w-full h-[400px] md:h-[500px]'
+        className='w-full h-[350px] sm:h-[400px] md:h-[500px]'
       />
     </div>
   )

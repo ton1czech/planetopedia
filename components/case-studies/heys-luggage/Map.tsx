@@ -35,8 +35,8 @@ const Map = () => {
 
   return (
     <MapContainer
-      center={[45.49316567534966, 15.318831262429292] as L.LatLngExpression}
-      zoom={isDesktop ? 5 : 3}
+      center={[42.02713014229293, -24.48832239315049] as L.LatLngExpression}
+      zoom={2}
       scrollWheelZoom={false}
       className='h-[300px] md:h-[500px] relative'
       attributionControl={false}

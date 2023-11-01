@@ -20,7 +20,7 @@ const Campaign = () => {
           className='flex flex-col justify-between gap-10 md:gap-0'
         >
           <div>
-            <p className='uppercase text-lg text-justify text-zinc-200'>
+            <p className='uppercase md:text-lg text-justify text-zinc-200'>
               {language === 'en' && <>social media influencer campaign</>}
               {language === 'cs' && (
                 <>influencerská kampaň na sociálních sítích</>
