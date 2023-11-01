@@ -4,6 +4,10 @@ export const videos = [
     thumbnail: '/feedback/5.webp',
   },
   {
+    video: 'https://i.imgur.com/qWtGh0V.mp4',
+    thumbnail: '/feedback/13.webp',
+  },
+  {
     video: 'https://i.imgur.com/XMPf8em.mp4',
     thumbnail: '/feedback/1.webp',
   },
