@@ -6,6 +6,7 @@ import React from 'react'
 import Container from '../Container'
 import { useLanguage } from '@/store/useLanguage'
 import { motion } from 'framer-motion'
+import { cn } from '@/lib/utils'
 
 const ContentCreation = () => {
   const { language } = useLanguage(state => state)
@@ -48,18 +49,21 @@ const ContentCreation = () => {
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className='grid grid-cols-3 lg:grid-cols-4 gap-4'
+          className='grid grid-cols-3 lg:grid-cols-4 gap-1'
         >
           {forBrands.map(item => (
             <>
               {item.content.map(image => (
                 <Image
-                  src={image}
+                  src={image.src}
                   alt='content creation'
                   width={600}
                   height={650}
-                  className='object-cover w-full aspect-square'
-                  key={image}
+                  className={cn(
+                    'object-cover w-full aspect-square',
+                    image.noPhone && 'hidden lg:block'
+                  )}
+                  key={image.src}
                 />
               ))}
             </>

@@ -24,14 +24,32 @@ export const forBrands = [
       },
     ],
     content: [
-      '/services/for-brands/content/1.webp',
-      '/services/for-brands/content/2.webp',
-      '/services/for-brands/content/3.webp',
-      '/services/for-brands/content/4.webp',
-      '/services/for-brands/content/5.webp',
-      '/services/for-brands/content/6.webp',
-      '/services/for-brands/content/7.webp',
-      '/services/for-brands/content/8.webp',
+      {
+        src: '/services/for-brands/content/1.webp',
+      },
+      {
+        src: '/services/for-brands/content/2.webp',
+      },
+      {
+        src: '/services/for-brands/content/3.webp',
+      },
+      {
+        src: '/services/for-brands/content/4.webp',
+      },
+      {
+        src: '/services/for-brands/content/5.webp',
+      },
+      {
+        src: '/services/for-brands/content/6.webp',
+      },
+      {
+        src: '/services/for-brands/content/7.webp',
+        noPhone: true,
+      },
+      {
+        src: '/services/for-brands/content/8.webp',
+        noPhone: true,
+      },
     ],
     socials: [
       {
