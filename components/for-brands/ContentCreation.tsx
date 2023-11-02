@@ -12,13 +12,13 @@ const ContentCreation = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)] z-40 bg-white flex items-center'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)] z-40 bg-white grid place-content-center'>
       <Container>
         <motion.p
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className='text-black text-center max-w-[90ch] mx-auto mb-6'
+          className='text-black text-justify lg:text-center max-w-[90ch] mx-auto mb-6'
         >
           {language === 'en' && (
             <>
@@ -49,7 +49,7 @@ const ContentCreation = () => {
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className='grid grid-cols-3 lg:grid-cols-4 gap-1'
+          className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1'
         >
           {forBrands.map(item => (
             <>

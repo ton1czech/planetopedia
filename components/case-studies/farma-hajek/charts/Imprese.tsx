@@ -136,7 +136,11 @@ const Imprese = () => {
 
   return (
     <div>
-      <Line data={data} options={options} className='w-full h-[500px]' />
+      <Line
+        data={data}
+        options={options}
+        className='w-screen h-[300px] md:h-[500px]'
+      />
     </div>
   )
 }
