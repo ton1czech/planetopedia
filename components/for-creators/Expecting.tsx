@@ -10,14 +10,14 @@ const Expecting = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-10 bg-white h-[calc(100vh-80px)]'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-10 bg-white h-[calc(100vh-80px)] grid place-content-center'>
       <motion.div
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
         <Container className='h-[80vh] grid place-content-center'>
-          <h2 className='text-2xl text-center text-black md:text-3xl mt-12 md:mt-40 md:-mb-14 2xl:-mb-4'>
+          <h2 className='text-2xl text-center text-black md:text-3xl lg:mt-20 lg:-mb-12 2xl:mt-0 2xl:-mb-0'>
             {language === 'en' && (
               <>
                 What our <b>creators </b>say
