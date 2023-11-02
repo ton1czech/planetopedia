@@ -34,16 +34,15 @@ export default function HeysLuggage() {
         servicesDe={servicesDe}
         title={title}
       />
-      <Who
-        title={title}
-        bodyEn={whoEn}
-        bodyCz={whoCz}
-        bodyDe={whoDe}
+      <Who title={title} bodyEn={whoEn} bodyCz={whoCz} bodyDe={whoDe} />
+      <What
+        bodyEn={whatEn}
+        bodyCz={whatCz}
+        bodyDe={whatDe}
         boldCz={boldCz}
         boldDe={boldDe}
         boldEn={boldEn}
       />
-      <What bodyEn={whatEn} bodyCz={whatCz} bodyDe={whatDe} />
 
       <Results>
         <Creators />

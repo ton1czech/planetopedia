@@ -9,20 +9,9 @@ interface WhoProps {
   bodyCz: string
   bodyDe: string
   title: string
-  boldEn?: string
-  boldCz?: string
-  boldDe?: string
 }
 
-const Who = ({
-  bodyCz,
-  bodyEn,
-  bodyDe,
-  title,
-  boldCz,
-  boldDe,
-  boldEn,
-}: WhoProps) => {
+const Who = ({ bodyCz, bodyEn, bodyDe, title }: WhoProps) => {
   const { language } = useLanguage(state => state)
 
   return (
@@ -36,11 +25,6 @@ const Who = ({
           {language === 'cs' && <>Kdo je {title}</>}
           {language === 'de' && <>Wer ist {title}</>}
         </h2>
-        <h5 className='font-bold text-lg'>
-          {language === 'en' && <>{boldEn}</>}
-          {language === 'cs' && <>{boldCz}</>}
-          {language === 'de' && <>{boldDe}</>}
-        </h5>
         <p className='text-justify'>
           {language === 'en' && <>{bodyEn}</>}
           {language === 'cs' && <>{bodyCz}</>}
