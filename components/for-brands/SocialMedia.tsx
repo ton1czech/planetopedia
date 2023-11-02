@@ -16,7 +16,7 @@ const SocialMedia = () => {
         transition={{ delay: 0.5 }}
       >
         <Container className='h-[60vh] grid place-content-center'>
-          <h2 className='text-2xl text-center text-white md:text-3xl mt-28 mb-4'>
+          <h2 className='text-2xl text-center text-white md:text-3xl lg:mt-28 2xl:mt-0 mb-4'>
             {language === 'en' && <>our impact on social media</>}
             {language === 'cs' && <>náš vliv na sociální média</>}
             {language === 'de' && <>unser Einfluss auf die sozialen Medien</>}
