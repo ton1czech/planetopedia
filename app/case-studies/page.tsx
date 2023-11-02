@@ -72,13 +72,13 @@ export default function CaseStudies() {
                     <h3 className='-mb-1 text-2xl font-black md:mb-1 md:text-3xl lg:text-4xl'>
                       {casestudy.title}
                     </h3>
-                    <div className='mtext-sm text-zinc-600'>
+                    <div className='text-sm text-zinc-600'>
                       {language === 'en' && <p>{casestudy.categoryEn}</p>}
                       {language === 'cs' && <p>{casestudy.categoryCz}</p>}
                       {language === 'de' && <p>{casestudy.categoryDe}</p>}
                     </div>
                   </div>
-                  <div className='text-right uppercase text-zinc-800 md:text-lg md:text-left'>
+                  <div className='uppercase text-zinc-800 md:text-lg mt-4 lg:mt-0'>
                     {language === 'en' && (
                       <p>
                         {casestudy.servicesEn.map(service => (
@@ -101,7 +101,7 @@ export default function CaseStudies() {
                       </p>
                     )}
                   </div>
-                  <button className='w-full px-4 py-2 mt-4 text-sm transition rounded-md md:w-min h-min ring-1 ring-black hover:text-white hover:bg-black whitespace-nowrap md:mt-0'>
+                  <button className='w-full px-4 py-2 mt-4 text-sm transition rounded-md md:w-min h-min ring-1 ring-black hover:text-white hover:bg-black whitespace-nowrap lg:mt-0'>
                     {language === 'en' && <>Learn More</>}
                     {language === 'cs' && <>Dozvědět se více</>}
                     {language === 'de' && <>Mehr erfahren</>}
