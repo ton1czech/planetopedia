@@ -78,7 +78,7 @@ const Followers = () => {
         borderDash: [5, 5],
         label:
           language === 'en'
-            ? 'Before cooperation'
+            ? 'Before collaboration'
             : language === 'cs'
             ? 'Před spoluprací'
             : language === 'de'
@@ -90,7 +90,7 @@ const Followers = () => {
         borderColor: 'rgb(229, 169, 29)',
         label:
           language === 'en'
-            ? 'The beginning of the cooperation'
+            ? 'The beginning of the collaboration'
             : language === 'cs'
             ? 'Začátek splupráce'
             : language === 'de'
@@ -102,7 +102,7 @@ const Followers = () => {
         borderColor: 'rgb(13, 229, 17)',
         label:
           language === 'en'
-            ? 'The course of cooperation'
+            ? 'The course of collaboration'
             : language === 'cs'
             ? 'Průběh spolupráce'
             : language === 'de'
