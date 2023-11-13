@@ -9,6 +9,7 @@ import Container from '../Container'
 const srcs = [
   '/services/for-brands/web/1.webp',
   '/services/for-brands/web/2.webp',
+  '/services/for-brands/web/3.webp',
 ]
 
 const Web = () => {

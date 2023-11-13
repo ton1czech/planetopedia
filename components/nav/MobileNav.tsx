@@ -114,11 +114,11 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
             {
               label:
                 language === 'en'
-                  ? 'Company'
+                  ? 'Our Story'
                   : language === 'cs'
-                  ? 'Společnost'
+                  ? 'Náš Příběh'
                   : language === 'de'
-                  ? 'Unternehmen'
+                  ? 'Unsere Geschichte'
                   : '',
               href: '/about/company',
             },

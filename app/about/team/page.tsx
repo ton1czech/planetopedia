@@ -16,11 +16,11 @@ export default function Team() {
           name='Dominik Grössl'
           role={
             language === 'en'
-              ? 'Founder & CEO'
+              ? 'Founder'
               : language === 'cs'
-              ? 'Zakladatel a Výkonný Ředitel'
+              ? 'Zakladatel'
               : language === 'de'
-              ? 'Gründer & CEO'
+              ? 'Gründer'
               : ''
           }
           body={
@@ -199,7 +199,7 @@ export default function Team() {
             },
           ]}
         />
-        <Member
+        {/* <Member
           src='/team/kacka-kutalkova.webp'
           name='Kačka Kutálková'
           role={
@@ -282,7 +282,7 @@ export default function Team() {
               href: 'https://www.instagram.com/hanna_kaa_/',
             },
           ]}
-        />
+        /> */}
       </Container>
     </div>
   )
