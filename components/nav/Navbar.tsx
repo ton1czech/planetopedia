@@ -210,7 +210,7 @@ const Navbar = () => {
                         language === 'en'
                           ? 'For Brands'
                           : language === 'cs'
-                          ? 'Pro Značky'
+                          ? 'Pro Firmy'
                           : language === 'de'
                           ? 'Für Marken'
                           : '',

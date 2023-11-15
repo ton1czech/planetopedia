@@ -186,7 +186,7 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
                 language === 'en'
                   ? 'For Brands'
                   : language === 'cs'
-                  ? 'Pro Značky'
+                  ? 'Pro Firmy'
                   : language === 'de'
                   ? 'Für Marken'
                   : '',
@@ -215,7 +215,7 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
         initial={{ opacity: 0, y: 50, x: '-50%' }}
         animate={{ opacity: 1, y: 0, x: '-50%' }}
         transition={{ duration: 0.4, delay: 0.7 }}
-        className='flex gap-5 items-center absolute left-1/2 bottom-56 -translate-x-1/2'
+        className='absolute flex items-center gap-5 -translate-x-1/2 left-1/2 bottom-56'
       >
         <Instagram
           className={cn('', black ? 'text-white' : 'text-black')}

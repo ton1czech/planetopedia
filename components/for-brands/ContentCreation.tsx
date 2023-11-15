@@ -30,18 +30,19 @@ const ContentCreation = () => {
           )}
           {language === 'cs' && (
             <>
-              Because our team is spread <b>worldwide</b>, we can reach many of
-              the most beautiful locations on Earth to successfully capture
-              <b> your products/services </b>at its best and realize the
-              <b> goal </b>you want <b> to achieve </b>as a brand.
+              Protože je náš tým rozšířen <b>po celém světě</b>, můžeme se
+              dostat na mnoho nejkrásnějších míst na Zemi, abychom úspěšně
+              zachytili<b> vaše produkty/služby </b>v tom nejlepším světle a
+              realizovali <b>cíl,</b> kterého chcete jako značka dosáhnout.
             </>
           )}
           {language === 'de' && (
             <>
-              Because our team is spread <b>worldwide</b>, we can reach many of
-              the most beautiful locations on Earth to successfully capture
-              <b> your products/services </b>at its best and realize the
-              <b> goal </b>you want <b> to achieve </b>as a brand.
+              Da unser Team <b>weltweit </b>verteilt ist, können wir viele der
+              schönsten Orte der Welt erreichen, um
+              <b> Ihre Produkte/Dienstleistungen </b>von ihrer besten Seite zu
+              zeigen und das <b>Ziel</b>, das Sie als Marke erreichen wollen, zu
+              verwirklichen.
             </>
           )}
         </motion.p>
@@ -49,7 +50,7 @@ const ContentCreation = () => {
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1'
+          className='grid grid-cols-2 gap-1 sm:grid-cols-3 lg:grid-cols-4'
         >
           {forBrands.map(item => (
             <>
