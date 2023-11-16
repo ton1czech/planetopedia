@@ -15,7 +15,8 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL('https://planetopedia.agency'),
   title: 'Planetopedia | More than an agency',
-  description: '',
+  description:
+    "Planetopedia is an innovative marketing digital agency focused on marketing solutions and eye-catching content production. Since most people in the world watch social media on their smartphones, we have adapted to this and learned how to create high engagement content for today's target groups.",
   applicationName: 'Planetopedia',
   authors: [
     { name: 'Daniel Anthony Baudyš', url: 'https://github.com/ton1czech' },
