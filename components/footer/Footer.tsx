@@ -32,9 +32,24 @@ const Footer = () => {
             />
           </div>
         </div>
+
+        <div className='flex justify-center items-center text-zinc-300 gap-10 mb-20'>
+          <Link href='/personal-data-protection'>
+            {language === 'en' && <>Personal data protection</>}
+            {language === 'cs' && <>Ochrana osobních údajů</>}
+            {language === 'de' && <>Schutz personenbezogener Daten</>}
+          </Link>
+          <Link href='/terms-and-conditions'>
+            {language === 'en' && <>Obchodní podmínky</>}
+            {language === 'cs' && <>Terms and conditions</>}
+            {language === 'de' && <>Bedingungen und Konditionen</>}
+          </Link>
+        </div>
+
         <p className='mb-4 text-xs text-center text-zinc-500'>
           {language === 'en' && <> earth model by </>}
           {language === 'cs' && <> model planety od </>}
+          {language === 'cs' && <> Erdmodell von </>}
           <Link
             href='https://sketchfab.com/3d-models/earth-c2e4294c32ea4d8b850e152fc26aeeb4'
             target='_blank'
@@ -43,10 +58,12 @@ const Footer = () => {
             @Abdullrahman
           </Link>
         </p>
+
         <p className='text-sm text-center text-white'>
           &copy;{new Date().getFullYear()} Planetopedia.
           {language === 'en' && <> All rights reserved. Created by </>}
           {language === 'cs' && <> Všechna práva vyhrazena. Vytvořil </>}
+          {language === 'de' && <> Alle Rechte vorbehalten. Erstellt von </>}
           <Link
             href='https://github.com/ton1czech'
             target='_blank'
