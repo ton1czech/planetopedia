@@ -9,7 +9,12 @@ export default function Page() {
           <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
             Privacy Policy of Planetopedia
           </h2>
-          <p>
+          <p className='mb-4'>
+            Your personal data are carefully administered by Dominik Grössl, ID
+            No.: 14184397, Němčice 26, Post Code 345 06, Czech Republic.
+          </p>
+
+          <p className='mb-4'>
             Planetopedia operates the{' '}
             <Link href='https://planetopedia.agency' className='underline'>
               {' '}
@@ -18,13 +23,30 @@ export default function Page() {
             website, which provides the SERVICE.
           </p>
 
-          <p>
+          <p className='mb-4'>
+            These personal data protection principles tell you when and how we
+            will handle your personal data and what rights you have with respect
+            to your personal data. If you have any questions concerning the
+            processing of personal data, please contact us at
+            support@planetopedia.agency.
+          </p>
+
+          <p className='mb-4'>
+            We always process your personal data in compliance with the
+            regulations, within the meaning of Regulation (EU) 2016/679 of the
+            European Parliament and of the Council on the protection of natural
+            persons with regard to the processing of personal data and on the
+            free movement of such data, and repealing Directive 95/46/EC
+            (General Data Protection Regulation) ("Regulation").
+          </p>
+
+          <p className='mb-4'>
             This page is used to inform website visitors regarding our policies
             with the collection, use, and disclosure of Personal Information if
             anyone decided to use our Service, the Planetopedia website.
           </p>
 
-          <p>
+          <p className='mb-4'>
             If you choose to use our Service, then you agree to the collection
             and use of information in relation with this policy. The Personal
             Information that we collect are used for providing and improving the
