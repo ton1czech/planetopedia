@@ -13,10 +13,10 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://farmahajek.cz'),
+  metadataBase: new URL('https://planetopedia.agency'),
   title: 'Planetopedia | More than an agency',
   description: '',
-  applicationName: 'Farma Hájek',
+  applicationName: 'Planetopedia',
   authors: [
     { name: 'Daniel Anthony Baudyš', url: 'https://github.com/ton1czech' },
   ],
