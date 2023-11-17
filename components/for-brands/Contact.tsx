@@ -403,7 +403,11 @@ const Contact = () => {
                 <>
                   Durch Anklicken von Einreichen stimme ich der Verarbeitung
                   personenbezogener Daten Daten. Lesen Sie die{' '}
-                  <Link href='/gdpr' className='underline' target='_blank'>
+                  <Link
+                    href='/personal-data-protection'
+                    className='underline'
+                    target='_blank'
+                  >
                     GDPR
                   </Link>{' '}
                   für weitere Informationen.

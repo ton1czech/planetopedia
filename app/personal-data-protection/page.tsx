@@ -60,7 +60,7 @@ export default function Page() {
                 we will handle your personal data and what rights you have with
                 respect to your personal data. If you have any questions
                 concerning the processing of personal data, please contact us at
-                support@planetopedia.agency.
+                info@planetopedia.agency.
               </>
             )}
             {language === 'cs' && (
@@ -69,7 +69,7 @@ export default function Page() {
                 budeme nakládat s vašimi osobními údaji a jaká máte práva v
                 souvislosti s jejich zpracováním. s vašimi osobními údaji. Pokud
                 máte jakékoli dotazy týkající se zpracování osobních údajů,
-                kontaktujte nás na adrese support@planetopedia.agency.
+                kontaktujte nás na adrese info@planetopedia.agency.
               </>
             )}
             {language === 'de' && (
@@ -79,7 +79,7 @@ export default function Page() {
                 Rechte Sie in Bezug auf Ihre in Bezug auf Ihre personenbezogenen
                 Daten haben. Wenn Sie Fragen haben bezüglich der Verarbeitung
                 personenbezogener Daten haben, kontaktieren Sie uns bitte unter
-                support@planetopedia.agency.
+                info@planetopedia.agency.
               </>
             )}
           </p>
@@ -704,7 +704,6 @@ export default function Page() {
             {language === 'de' && <>Verarbeitete Daten</>}
           </h2>
           <ul className='list-disc ml-6'>
-            Instagram-Account
             <li>
               {language === 'en' && <>Instagram Account</>}
               {language === 'cs' && <>Účet na Instagramu</>}
