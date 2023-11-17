@@ -151,9 +151,12 @@ const Footer = () => {
           >
             Daniel Anthony Baudyš
           </Link>
-          {language === 'en' && <> / earth model by </>}
-          {language === 'cs' && <> / model planety od </>}
-          {language === 'de' && <> / Erdmodell von </>}
+
+          <br />
+
+          {language === 'en' && <>earth model by </>}
+          {language === 'cs' && <>model planety od </>}
+          {language === 'de' && <>Erdmodell von </>}
           <Link
             href='https://sketchfab.com/3d-models/earth-c2e4294c32ea4d8b850e152fc26aeeb4'
             target='_blank'
