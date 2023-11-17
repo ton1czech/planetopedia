@@ -4,7 +4,7 @@ import { Montserrat } from 'next/font/google'
 import Container from '../Container'
 import LanguageSelector from './LanguageSelector'
 import NavItem from './NavItem'
-import { Menu, X } from 'lucide-react'
+import { Menu } from 'lucide-react'
 import Link from 'next/link'
 import ExpandableNavItem from './ExpandableNavItem'
 import { cn } from '@/lib/utils'
@@ -27,8 +27,6 @@ const Navbar = () => {
   const black = pathname === '/'
   const studio = pathname.includes('/studio')
   const blog = pathname === '/blog/hotels' || '/blog/hotels'
-
-  const Icon = isOpen ? X : Menu
 
   useEffect(() => {
     const handleScroll = () => {
@@ -237,8 +235,8 @@ const Navbar = () => {
 
             <div className='flex items-center gap-3 lg:hidden'>
               <LanguageSelector black={black} />
-              <Icon
-                onClick={() => setIsOpen(prev => !prev)}
+              <Menu
+                onClick={() => setIsOpen(true)}
                 className={cn('', black ? 'text-white' : 'text-black')}
               />
             </div>

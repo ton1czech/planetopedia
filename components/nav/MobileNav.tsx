@@ -3,9 +3,10 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '@/store/useLanguage'
 import { cn } from '@/lib/utils'
-import { Facebook, Instagram, Linkedin } from 'lucide-react'
+import { Facebook, Instagram, Linkedin, X } from 'lucide-react'
 import MobileExpandableNavItem from './MobileExpandableNavItem'
 import MobileNavItem from './MobileNavItem'
+import Link from 'next/link'
 
 interface MobileNavProps {
   black?: boolean
@@ -37,6 +38,10 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
         black ? 'bg-black' : 'bg-white'
       )}
     >
+      <X
+        className='absolute top-5 right-5 text-white'
+        onClick={() => setIsOpen(false)}
+      />
       <motion.ul
         initial={{ y: 50, opacity: 0, x: '-50%' }}
         animate={{ y: 0, opacity: 1, x: '-50%' }}
@@ -217,18 +222,31 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
         transition={{ duration: 0.4, delay: 0.7 }}
         className='absolute flex items-center gap-5 -translate-x-1/2 left-1/2 bottom-56'
       >
-        <Instagram
-          className={cn('', black ? 'text-white' : 'text-black')}
-          size={30}
-        />
-        <Facebook
-          className={cn('', black ? 'text-white' : 'text-black')}
-          size={30}
-        />
-        <Linkedin
-          className={cn('', black ? 'text-white' : 'text-black')}
-          size={30}
-        />
+        <Link href='https://www.instagram.com/planetopedia/' target='_blank'>
+          <Instagram
+            className={cn('', black ? 'text-white' : 'text-black')}
+            size={30}
+          />
+        </Link>
+        <Link
+          href='https://www.linkedin.com/company/planetopedia/'
+          target='_blank'
+        >
+          <Facebook
+            className={cn('', black ? 'text-white' : 'text-black')}
+            size={30}
+          />
+        </Link>
+
+        <Link
+          href='https://www.youtube.com/@myplanetopedia/videos'
+          target='_blank'
+        >
+          <Linkedin
+            className={cn('', black ? 'text-white' : 'text-black')}
+            size={30}
+          />
+        </Link>
       </motion.div>
     </motion.div>
   )
