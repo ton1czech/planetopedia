@@ -137,7 +137,7 @@ const Work = () => {
           transition={{ delay: 0.5 }}
         >
           <Link
-            href='/blog/luxury-hotels'
+            href='/blog/hotels'
             className='flex gap-2 items-center text-black underline text-center mx-auto w-full justify-center'
           >
             {language === 'en' && <>See all posts</>}
