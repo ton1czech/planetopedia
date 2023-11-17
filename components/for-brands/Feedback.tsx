@@ -18,7 +18,7 @@ const Feedback = () => {
           transition={{ delay: 0.5 }}
           className='mx-auto'
         >
-          <h2 className='text-2xl text-center text-white md:text-3xl mt-10 mb-8'>
+          <h2 className='text-2xl text-center text-white md:text-3xl mt-10 mb-2'>
             {language === 'en' && (
               <>
                 What our <b>clients </b>say

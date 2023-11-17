@@ -38,9 +38,11 @@ export const forBrands = [
       },
       {
         src: '/services/for-brands/content/5.webp',
+        noPhone: true,
       },
       {
         src: '/services/for-brands/content/6.webp',
+        noPhone: true,
       },
       {
         src: '/services/for-brands/content/7.webp',
