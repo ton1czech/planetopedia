@@ -5,16 +5,17 @@ export default function Page() {
   return (
     <div className='bg-white'>
       <Container className='pt-24 pb-20 md:pt-32 md:pb-32'>
-        <h2>TERMS AND CONDITIONS</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            AGREEMENT TO OUR LEGAL TERMS
+          </h2>
 
-        <div>
-          <h2>AGREEMENT TO OUR LEGAL TERMS</h2>
-          <p>
+          <p className='mb-4'>
             We are Dominik Grössl ("Company," "we," "us," "our"), a company
             registered in Czechia at Němčice 26, Němčice 34506. Our VAT number
             is 14184397.
           </p>
-          <p>
+          <p className='mb-4'>
             We operate the website{' '}
             <Link href='https://www.planetopedia.agency/' className='underline'>
               https://www.planetopedia.agency/
@@ -23,12 +24,12 @@ export default function Page() {
             that refer or link to these legal terms (the "Legal Terms")
             (collectively, the "Services").
           </p>
-          <p>
+          <p className='mb-4'>
             You can contact us by phone at +420 739 830 034, email at
             info@planetopedia.agency, or by mail to Němčice 26, Němčice 34506,
             Czechia.
           </p>
-          <p>
+          <p className='mb-4'>
             These Legal Terms constitute a legally binding agreement made
             between you, whether personally or on behalf of an entity ("you"),
             and Dominik Grössl, concerning your access to and use of the
@@ -38,7 +39,7 @@ export default function Page() {
             EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST
             DISCONTINUE USE IMMEDIATELY.
           </p>
-          <p>
+          <p className='mb-4'>
             Supplemental terms and conditions or documents that may be posted on
             the Services from time to time are hereby expressly incorporated
             herein by reference. We reserve the right, in our sole discretion,
@@ -52,7 +53,7 @@ export default function Page() {
             revised Legal Terms by your continued use of the Services after the
             date such revised Legal Terms are posted.
           </p>
-          <p>
+          <p className='mb-4'>
             The Services are intended for users who are at least 13 years of
             age. All users who are minors in the jurisdiction in which they
             reside (generally under the age of 18) must have the permission of,
@@ -66,10 +67,12 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>1. OUR SERVICES</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            1. OUR SERVICES
+          </h2>
 
-          <p>
+          <p className='mb-4'>
             The information provided when using the Services is not intended for
             distribution to or use by any person or entity in any jurisdiction
             or country where such distribution or use would be contrary to law
@@ -90,12 +93,16 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>2. INTELLECTUAL PROPERTY RIGHTS</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            2. INTELLECTUAL PROPERTY RIGHTS
+          </h2>
 
-          <h4>Our intellectual property</h4>
+          <h4 className='mt-1 font-semibold text-lg md:text-xl lg:text-2xl'>
+            Our intellectual property
+          </h4>
 
-          <p>
+          <p className='mb-4'>
             We are the owner or the licensee of all intellectual property rights
             in our Services, including all source code, databases,
             functionality, software, website designs, audio, video, text,
@@ -104,27 +111,30 @@ export default function Page() {
             contained therein (the "Marks").
           </p>
 
-          <p>
+          <p className='mb-4'>
             Our Content and Marks are protected by copyright and trademark laws
             (and various other intellectual property rights and unfair
             competition laws) and treaties in the United States and around the
             world.
           </p>
 
-          <p>
+          <p className='mb-4'>
             The Content and Marks are provided in or through the Services "AS
             IS" for your personal, non-commercial use or internal business
             purpose only.
           </p>
 
-          <h4>Your use of our Services</h4>
+          <h4 className='font-semibold text-lg md:text-xl lg:text-2xl'>
+            Your use of our Services
+          </h4>
 
           <p>
             Subject to your compliance with these Legal Terms, including the
             "PROHIBITED ACTIVITIES" section below, we grant you a non-exclusive,
             non-transferable, revocable license to:
           </p>
-          <ul>
+
+          <ul className='list-disc ml-6 mb-4'>
             <li>access the Services; and</li>
             <li>
               download or print a copy of any portion of the Content to which
@@ -132,12 +142,12 @@ export default function Page() {
             </li>
           </ul>
 
-          <p>
+          <p className='mb-4'>
             solely for your personal, non-commercial use or internal business
             purpose.
           </p>
 
-          <p>
+          <p className='mb-4'>
             Except as set out in this section or elsewhere in our Legal Terms,
             no part of the Services and no Content or Marks may be copied,
             reproduced, aggregated, republished, uploaded, posted, publicly
@@ -146,7 +156,7 @@ export default function Page() {
             whatsoever, without our express prior written permission.
           </p>
 
-          <p>
+          <p className='mb-4'>
             If you wish to make any use of the Services, Content, or Marks other
             than as set out in this section or elsewhere in our Legal Terms,
             please address your request to: info@planetopedia.agency. If we ever
@@ -157,27 +167,29 @@ export default function Page() {
             reproducing, or displaying our Content.
           </p>
 
-          <p>
+          <p className='mb-4'>
             We reserve all rights not expressly granted to you in and to the
             Services, Content, and Marks.
           </p>
 
-          <p>
+          <p className='mb-4'>
             Any breach of these Intellectual Property Rights will constitute a
             material breach of our Legal Terms and your right to use our
             Services will terminate immediately.
           </p>
 
-          <h4>Your submissions</h4>
+          <h4 className='font-semibold text-lg md:text-xl lg:text-2xl'>
+            Your submissions
+          </h4>
 
-          <p>
+          <p className='mb-4'>
             Please review this section and the "PROHIBITED ACTIVITIES" section
             carefully prior to using our Services to understand the (a) rights
             you give us and (b) obligations you have when you post or upload any
             content through the Services.
           </p>
 
-          <p>
+          <p className='mb-4'>
             Submissions: By directly sending us any question, comment,
             suggestion, idea, feedback, or other information about the Services
             ("Submissions"), you agree to assign to us all intellectual property
@@ -191,7 +203,8 @@ export default function Page() {
             You are responsible for what you post or upload: By sending us
             Submissions through any part of the Services you:
           </p>
-          <ul>
+
+          <ul className='list-disc ml-6'>
             <li>
               confirm that you have read and agree with our "PROHIBITED
               ACTIVITIES" and will not post, send, publish, upload, or transmit
@@ -223,10 +236,12 @@ export default function Page() {
           </ul>
         </div>
 
-        <div>
-          <h2>3. USER REPRESENTATIONS</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            3. USER REPRESENTATIONS
+          </h2>
 
-          <p>
+          <p className='mb-4'>
             By using the Services, you represent and warrant that: (1) you have
             the legal capacity and you agree to comply with these Legal Terms;
             (2) you are not under the age of 13; (3) you are not a minor in the
@@ -246,12 +261,14 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>4. PURCHASES AND PAYMENT</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            4. PURCHASES AND PAYMENT
+          </h2>
 
-          <p>We accept the following forms of payment:</p>
+          <p className='mb-4'>We accept the following forms of payment:</p>
 
-          <p>
+          <p className='mb-4'>
             You agree to provide current, complete, and accurate purchase and
             account information for all purchases made via the Services. You
             further agree to promptly update account and payment information,
@@ -262,7 +279,7 @@ export default function Page() {
             be in __________.
           </p>
 
-          <p>
+          <p className='mb-4'>
             You agree to pay all charges at the prices then in effect for your
             purchases and any applicable shipping fees, and you authorize us to
             charge your chosen payment provider for any such amounts upon
@@ -283,18 +300,21 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>5. PROHIBITED ACTIVITIES</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            5. PROHIBITED ACTIVITIES
+          </h2>
 
-          <p>
+          <p className='mb-4'>
             You may not access or use the Services for any purpose other than
             that for which we make the Services available. The Services may not
             be used in connection with any commercial endeavors except those
             that are specifically endorsed or approved by us.
           </p>
 
-          <ul>
-            <li>As a user of the Services, you agree not to:</li>
+          <p>As a user of the Services, you agree not to:</p>
+
+          <ul className='list-disc ml-6'>
             <li>
               Systematically retrieve data or other content from the Services to
               create or compile, directly or indirectly, a collection,
@@ -408,8 +428,10 @@ export default function Page() {
           </ul>
         </div>
 
-        <div>
-          <h2>6. USER GENERATED CONTRIBUTIONS</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            6. USER GENERATED CONTRIBUTIONS
+          </h2>
 
           <p>
             The Services does not offer users to submit or post content. We may
@@ -425,7 +447,7 @@ export default function Page() {
             any Contributions, you thereby represent and warrant that:
           </p>
 
-          <ul>
+          <ul className='list-disc ml-6'>
             <li>
               The creation, distribution, transmission, public display, or
               performance, and the accessing, downloading, or copying of your
@@ -501,16 +523,18 @@ export default function Page() {
           </ul>
         </div>
 
-        <div>
-          <h2>7. CONTRIBUTION LICENSE</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            7. CONTRIBUTION LICENSE
+          </h2>
 
-          <p>
+          <p className='mb-4'>
             You and Services agree that we may access, store, process, and use
             any information and personal data that you provide following the
             terms of the Privacy Policy and your choices (including settings).
           </p>
 
-          <p>
+          <p className='mb-4'>
             By submitting suggestions or other feedback regarding the Services,
             you agree that we can use and share such feedback for any purpose
             without compensation to you.
@@ -529,8 +553,10 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>8. THIRD-PARTY WEBSITES AND CONTENT</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            8. THIRD-PARTY WEBSITES AND CONTENT
+          </h2>
 
           <p>
             The Services may contain (or you may be sent via the Site) links to
@@ -569,8 +595,10 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>9. SERVICES MANAGEMENT</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            9. SERVICES MANAGEMENT
+          </h2>
 
           <p>
             We reserve the right, but not the obligation, to: (1) monitor the
@@ -590,8 +618,10 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>10. PRIVACY POLICY</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            10. PRIVACY POLICY
+          </h2>
 
           <p>
             We care about data privacy and security. Please review our Privacy
@@ -614,10 +644,12 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>11. TERM AND TERMINATION</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            11. TERM AND TERMINATION
+          </h2>
 
-          <p>
+          <p className='mb-4'>
             These Legal Terms shall remain in full force and effect while you
             use the Services. WITHOUT LIMITING ANY OTHER PROVISION OF THESE
             LEGAL TERMS, WE RESERVE THE RIGHT TO, IN OUR SOLE DISCRETION AND
@@ -642,10 +674,12 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>12. MODIFICATIONS AND INTERRUPTIONS</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            12. MODIFICATIONS AND INTERRUPTIONS
+          </h2>
 
-          <p>
+          <p className='mb-4'>
             We reserve the right to change, modify, or remove the contents of
             the Services at any time or for any reason at our sole discretion
             without notice. However, we have no obligation to update any
@@ -672,8 +706,10 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>13. GOVERNING LAW</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            13. GOVERNING LAW
+          </h2>
 
           <p>
             These Legal Terms are governed by and interpreted following the laws
@@ -690,10 +726,14 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>14. DISPUTE RESOLUTION</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            14. DISPUTE RESOLUTION
+          </h2>
 
-          <h4>Informal Negotiations</h4>
+          <h4 className='mt-1 font-semibold text-lg md:text-xl lg:text-2xl'>
+            Informal Negotiations
+          </h4>
 
           <p>
             To expedite resolution and control the cost of any dispute,
@@ -707,7 +747,9 @@ export default function Page() {
             other Party.
           </p>
 
-          <h4>Binding Arbitration</h4>
+          <h4 className='font-semibold text-lg md:text-xl lg:text-2xl'>
+            Binding Arbitration
+          </h4>
 
           <p>
             Any dispute arising out of or in connection with these Legal Terms,
@@ -723,7 +765,9 @@ export default function Page() {
             substantive law of __________.
           </p>
 
-          <h4>Restrictions</h4>
+          <h4 className='font-semibold text-lg md:text-xl lg:text-2xl'>
+            Restrictions
+          </h4>
 
           <p>
             The Parties agree that any arbitration shall be limited to the
@@ -736,7 +780,9 @@ export default function Page() {
             the general public or any other persons.
           </p>
 
-          <h4>Exceptions to Informal Negotiations and Arbitration</h4>
+          <h4 className='font-semibold text-lg md:text-xl lg:text-2xl'>
+            Exceptions to Informal Negotiations and Arbitration
+          </h4>
 
           <p>
             The Parties agree that the following Disputes are not subject to the
@@ -755,8 +801,10 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>15. CORRECTIONS</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            15. CORRECTIONS
+          </h2>
 
           <p>
             There may be information on the Services that contains typographical
@@ -768,8 +816,10 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>16. DISCLAIMER</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            16. DISCLAIMER
+          </h2>
 
           <p>
             THE SERVICES ARE PROVIDED ON AN AS-IS AND AS-AVAILABLE BASIS. YOU
@@ -806,8 +856,10 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>17. LIMITATIONS OF LIABILITY</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            17. LIMITATIONS OF LIABILITY
+          </h2>
 
           <p>
             IN NO EVENT WILL WE OR OUR DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE
@@ -819,8 +871,11 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>18. INDEMNIFICATION</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            18. INDEMNIFICATION
+          </h2>
+
           <p>
             You agree to defend, indemnify, and hold us harmless, including our
             subsidiaries, affiliates, and all of our respective officers,
@@ -842,8 +897,10 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>19. USER DATA</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            19. USER DATA
+          </h2>
 
           <p>
             We will maintain certain data that you transmit to the Services for
@@ -858,8 +915,10 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>20. ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            20. ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES
+          </h2>
 
           <p>
             Visiting the Services, sending us emails, and completing online
@@ -879,8 +938,10 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>21. CALIFORNIA USERS AND RESIDENTS</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            21. CALIFORNIA USERS AND RESIDENTS
+          </h2>
 
           <p>
             If any complaint with us is not satisfactorily resolved, you can
@@ -891,8 +952,10 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>22. MISCELLANEOUS</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            22. MISCELLANEOUS
+          </h2>
 
           <p>
             These Legal Terms and any policies or operating rules posted by us
@@ -918,8 +981,10 @@ export default function Page() {
           </p>
         </div>
 
-        <div>
-          <h2>23. CONTACT US</h2>
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            23. CONTACT US
+          </h2>
 
           <p>
             In order to resolve a complaint regarding the Services or to receive
@@ -927,7 +992,7 @@ export default function Page() {
             at:
           </p>
 
-          <ul>
+          <ul className='list-disc ml-6'>
             <li>Dominik Grössl</li>
             <li>Němčice 26</li>
             <li>Němčice 34506</li>
