@@ -63,12 +63,12 @@ const Footer = () => {
           </p>
 
           <div className='flex gap-10 text-zinc-400 mt-14 lg:mt-0 text-center'>
-            <Link href='/personal-data-protection'>
+            <Link href='/personal-data-protection' className='hover:underline'>
               {language === 'en' && <>Personal data protection</>}
               {language === 'cs' && <>Ochrana osobních údajů</>}
               {language === 'de' && <>Schutz personenbezogener Daten</>}
             </Link>
-            <Link href='/terms-and-conditions'>
+            <Link href='/terms-and-conditions' className='hover:underline'>
               {language === 'en' && <>Terms and conditions</>}
               {language === 'cs' && <>Obchodní podmínky</>}
               {language === 'de' && <>Bedingungen und Konditionen</>}
