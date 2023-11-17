@@ -14,6 +14,7 @@ import { Checkbox } from '../ui/checkbox'
 import { Button } from '../ui/button'
 import { Textarea } from '../ui/textarea'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const Contact = () => {
   const { language } = useLanguage(state => state)
@@ -377,7 +378,40 @@ const Contact = () => {
               )}
             />
 
-            <Button type='submit' className='mt-4'>
+            <p className='text-zinc-600 text-sm block mt-4'>
+              {language === 'en' && (
+                <>
+                  By clicking on Submit I agree to the processing of personal
+                  data. Read the{' '}
+                  <Link href='/gdpr' target='_blank' className='underline'>
+                    GDPR
+                  </Link>{' '}
+                  for more information.
+                </>
+              )}
+              {language === 'cs' && (
+                <>
+                  Kliknutím na Odeslat souhlasím se zpracováním osobních údajů.
+                  Přečtěte si{' '}
+                  <Link href='/gdpr' target='_blank' className='underline'>
+                    GDPR
+                  </Link>{' '}
+                  pro více informací.
+                </>
+              )}
+              {language === 'de' && (
+                <>
+                  Durch Anklicken von Einreichen stimme ich der Verarbeitung
+                  personenbezogener Daten Daten. Lesen Sie die{' '}
+                  <Link href='/gdpr' className='underline' target='_blank'>
+                    GDPR
+                  </Link>{' '}
+                  für weitere Informationen.
+                </>
+              )}
+            </p>
+
+            <Button type='submit' className='mt-1'>
               {language === 'en' ? (
                 <>Submit</>
               ) : language === 'cs' ? (
