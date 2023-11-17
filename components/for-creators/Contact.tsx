@@ -18,19 +18,7 @@ const Contact = () => {
   const { language } = useLanguage(state => state)
 
   const schema = z.object({
-    instagram: z
-      .string()
-      .min(1)
-      .startsWith('@', {
-        message:
-          language === 'en'
-            ? "Username must start with '@'"
-            : language === 'cs'
-            ? 'Uživatelské jméno musí začínat "@"'
-            : language === 'de'
-            ? "Der Benutzername muss mit '@' beginnen"
-            : '',
-      }),
+    instagram: z.string().min(1),
     email: z.string().email({
       message:
         language === 'en'
