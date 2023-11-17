@@ -68,11 +68,16 @@ const Footer = () => {
               {language === 'cs' && <>Ochrana osobních údajů</>}
               {language === 'de' && <>Schutz personenbezogener Daten</>}
             </Link>
-            <Link href='/terms-and-conditions' className='hover:underline'>
+            {/* <Link href='/terms-and-conditions' className='hover:underline'>
               {language === 'en' && <>Terms and conditions</>}
               {language === 'cs' && <>Obchodní podmínky</>}
               {language === 'de' && <>Bedingungen und Konditionen</>}
-            </Link>
+            </Link> */}
+            <p>
+              {language === 'en' && <>Terms and conditions</>}
+              {language === 'cs' && <>Obchodní podmínky</>}
+              {language === 'de' && <>Bedingungen und Konditionen</>}
+            </p>
           </div>
         </div>
 
@@ -133,11 +138,16 @@ const Footer = () => {
             {language === 'cs' && <>Ochrana osobních údajů</>}
             {language === 'de' && <>Schutz personenbezogener Daten</>}
           </Link>
-          <Link href='/terms-and-conditions' className='hover:underline'>
+          {/* <Link href='/terms-and-conditions' className='hover:underline'>
             {language === 'en' && <>Terms and conditions</>}
             {language === 'cs' && <>Obchodní podmínky</>}
             {language === 'de' && <>Bedingungen und Konditionen</>}
-          </Link>
+          </Link> */}
+          <p>
+            {language === 'en' && <>Terms and conditions</>}
+            {language === 'cs' && <>Obchodní podmínky</>}
+            {language === 'de' && <>Bedingungen und Konditionen</>}
+          </p>
         </div>
 
         <p className='text-sm text-zinc-400 mb-7 text-center lg:text-left'>

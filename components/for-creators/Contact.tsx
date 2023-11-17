@@ -147,7 +147,11 @@ const Contact = () => {
                   <>
                     By clicking on Submit I agree to the processing of personal
                     data. Read the{' '}
-                    <Link href='/gdpr' target='_blank' className='underline'>
+                    <Link
+                      href='/personal-data-protection'
+                      target='_blank'
+                      className='underline'
+                    >
                       GDPR
                     </Link>{' '}
                     for more information.
@@ -157,7 +161,11 @@ const Contact = () => {
                   <>
                     Kliknutím na Odeslat souhlasím se zpracováním osobních
                     údajů. Přečtěte si{' '}
-                    <Link href='/gdpr' target='_blank' className='underline'>
+                    <Link
+                      href='/personal-data-protection'
+                      target='_blank'
+                      className='underline'
+                    >
                       GDPR
                     </Link>{' '}
                     pro více informací.
