@@ -17,7 +17,7 @@ const Footer = () => {
     >
       <Container className='py-20'>
         <div className='flex justify-between items-center lg:items-start mb-14 flex-col lg:flex-row gap-y-14'>
-          <div>
+          <div className='order-2 lg:order-1'>
             <p className='text-zinc-100'>
               Dominik Grössl, Němčice 26, 34506 Němčice, Czech Republic
             </p>
@@ -32,7 +32,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className='flex gap-x-2 md:gap-x-4 items-center md:justify-end justify-center'>
+          <div className='flex gap-x-2 md:gap-x-4 items-center md:justify-end justify-center order-1 lg:order-2'>
             <FooterIcon
               icon={Instagram}
               href='https://www.instagram.com/planetopedia/'
@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
 
         <div className='flex justify-center items-center lg:justify-between lg:items-start flex-col lg:flex-row'>
-          <p className='text-white'>
+          <p className='text-white order'>
             &copy;{new Date().getFullYear()} Planetopedia,{' '}
             {language === 'en' && (
               <>founder Dominik Grössl. All rights reserved.</>
@@ -60,28 +60,6 @@ const Footer = () => {
             {language === 'de' && (
               <>Gründer Dominik Grössl. Alle Rechte vorbehalten.</>
             )}
-            <p className='text-sm text-zinc-400 mt-14 lg:mt-2 text-center lg:text-left'>
-              {language === 'en' && <>website created by </>}
-              {language === 'cs' && <>webové stránky vytvořil </>}
-              {language === 'de' && <>Website erstellt von </>}
-              <Link
-                href='https://github.com/ton1czech'
-                target='_blank'
-                className='underline'
-              >
-                Daniel Anthony Baudyš
-              </Link>{' '}
-              / {language === 'en' && <>earth model by </>}
-              {language === 'cs' && <>model planety od </>}
-              {language === 'de' && <>Erdmodell von </>}
-              <Link
-                href='https://sketchfab.com/3d-models/earth-c2e4294c32ea4d8b850e152fc26aeeb4'
-                target='_blank'
-                className='underline'
-              >
-                @Abdullrahman
-              </Link>
-            </p>
           </p>
 
           <div className='flex gap-10 text-zinc-400 mt-14 lg:mt-0 text-center'>
@@ -97,6 +75,30 @@ const Footer = () => {
             </Link>
           </div>
         </div>
+
+        <p className='text-sm text-zinc-400 mt-14 lg:mt-2 text-center lg:text-left'>
+          {language === 'en' && <>website created by </>}
+          {language === 'cs' && <>webové stránky vytvořil </>}
+          {language === 'de' && <>Website erstellt von </>}
+          <Link
+            href='https://github.com/ton1czech'
+            target='_blank'
+            className='underline'
+          >
+            Daniel Anthony Baudyš /
+          </Link>
+          <br className='lg:hidden' />
+          {language === 'en' && <> earth model by </>}
+          {language === 'cs' && <> model planety od </>}
+          {language === 'de' && <> Erdmodell von </>}
+          <Link
+            href='https://sketchfab.com/3d-models/earth-c2e4294c32ea4d8b850e152fc26aeeb4'
+            target='_blank'
+            className='underline'
+          >
+            @Abdullrahman
+          </Link>
+        </p>
       </Container>
     </motion.footer>
   )
