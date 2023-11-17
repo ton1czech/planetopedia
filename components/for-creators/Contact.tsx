@@ -84,8 +84,9 @@ const Contact = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
+        className='h-full'
       >
-        <Container className='h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-28 w-full sm:w-[60%] lg:w-[45%]'>
+        <Container className='grid place-content-center h-full w-full sm:w-[60%] lg:w-[45%]'>
           <h2 className='mb-5 text-2xl md:text-3xl 2xl:text-4xl font-bold text-center'>
             {language === 'en' ? (
               <>A new era begins with Planetopedia.</>
