@@ -136,7 +136,7 @@ const Grow = () => {
       <Line
         data={data}
         options={options}
-        className='w-screen h-[300px] sm:h-[400px] md:h-[500px]'
+        className='h-[300px] sm:h-[400px] md:h-[500px] w-full'
       />
     </div>
   )
