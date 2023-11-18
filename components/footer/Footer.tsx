@@ -42,7 +42,7 @@ const Footer = () => {
             </p>
             <p className='flex gap-2 items-center text-zinc-400'>
               <Mail className='w-4 h-4' />
-              dominik@planetopedia.agency
+              info@planetopedia.agency
             </p>
           </div>
 
@@ -145,7 +145,7 @@ const Footer = () => {
           </p>
           <p className='flex gap-2 items-center text-zinc-100'>
             <Mail className='w-4 h-4' />
-            dominik@planetopedia.agency
+            info@planetopedia.agency
           </p>
         </div>
 
