@@ -12,11 +12,9 @@ export default function Page() {
       <Container className='pt-24 pb-20 md:pt-32 md:pb-32'>
         <div className='mb-10'>
           <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Privacy Policy of Planetopedia</>}
-            {language === 'cs' && (
-              <>Zásady ochrany osobních údajů společnosti Planetopedia</>
-            )}
-            {language === 'de' && <>Datenschutzrichtlinie von Planetopedia</>}
+            {language === 'en' && <>Privacy Policy</>}
+            {language === 'cs' && <>Zásady ochrany osobních údajů</>}
+            {language === 'de' && <>Datenschutzrichtlinie</>}
           </h2>
           <p className='mb-4'>
             {language === 'en' && (
