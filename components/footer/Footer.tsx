@@ -19,9 +19,23 @@ const Footer = () => {
         <div className='flex justify-between items-center lg:items-start mb-14 gap-y-14'>
           <div>
             <p className='text-zinc-100'>
-              Dominik Grössl, Němčice 26, 34506 Němčice, Czech Republic
+              {language === 'en' && (
+                <>Dominik Grössl, Němčice 26, 34506 Němčice, Czech Republic</>
+              )}
+              {language === 'cs' && (
+                <>Dominik Grössl, Němčice 26, 34506 Němčice, Česká Republika</>
+              )}
+              {language === 'de' && (
+                <>
+                  Dominik Grössl, Němčice 26, 34506 Němčice, Tsechische Republik
+                </>
+              )}
             </p>
-            <p className='text-zinc-100'>ID No.: 14184397</p>
+            <p className='text-zinc-100'>
+              {language === 'en' && <>ID No.: 14184397</>}
+              {language === 'cs' && <>IČO: 14184397</>}
+              {language === 'de' && <>ID No.: 14184397</>}
+            </p>
             <p className='flex gap-2 items-center mt-2 text-zinc-400'>
               <Phone className='w-4 h-4' />
               +420 739 830 034
