@@ -2,7 +2,6 @@
 
 import Container from '@/components/Container'
 import { useLanguage } from '@/store/useLanguage'
-import Link from 'next/link'
 
 export default function Page() {
   const { language } = useLanguage(state => state)
@@ -10,74 +9,51 @@ export default function Page() {
   return (
     <div className='bg-white'>
       <Container className='pt-24 pb-20 md:pt-32 md:pb-32'>
+        <h2 className='text-3xl md:text-4xl font-semibold lg:text-5xl mb-10'>
+          {language === 'en' && <>Privacy Policy</>}
+          {language === 'cs' && <>Zásady ochrany osobních údajů</>}
+          {language === 'de' && <>Datenschutzrichtlinie</>}
+        </h2>
+
         <div className='mb-10'>
           <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Privacy Policy</>}
-            {language === 'cs' && <>Zásady ochrany osobních údajů</>}
-            {language === 'de' && <>Datenschutzrichtlinie</>}
+            {language === 'en' && <>Basic provisions</>}
+            {language === 'cs' && <>Základní ustanovení</>}
+            {language === 'de' && <>Grundlegende Bestimmungen</>}
           </h2>
           <p className='mb-4'>
             {language === 'en' && (
               <>
-                Your personal data are carefully administered by Dominik Grössl,
-                ID No.: 14184397, Němčice 26, Post Code 345 06, Czech Republic.
+                We take data protection very seriously. Below you will find all
+                the information about what data we hold and how we handle it.
+                Data protection is governed by the GDPR (formally Regulation
+                (EC) No 2016/679 of the European Parliament and of the Council
+                of 27 April 2016 on the protection of natural persons with
+                regard to the processing of personal data and on the free
+                movement of such data, and repealing Directive 95/46/EC).
               </>
             )}
             {language === 'cs' && (
               <>
-                Vaše osobní údaje pečlivě spravuje Dominik Grössl, ID Č.:
-                14184397, Němčice 26, PSČ 345 06, Česká republika.
+                Ochranu osobních údajů bereme velmi vážně. Níže najdete veškeré
+                informace o tom, jaké údaje máme k dispozici a jak s nimi
+                nakládáme. Ochrana osobních údajů se řídí nařízením GDPR
+                (formálně nařízení Evropského parlamentu Rady č. 2016/679 ze dne
+                27. 4. 2016 o ochraně fyzických osob v souvislosti se
+                zpracováním osobních údajů a o volném pohybu těchto údajů a o
+                zrušení směrnice 95/46/ES).
               </>
             )}
             {language === 'de' && (
               <>
-                Ihre persönlichen Daten werden sorgfältig verwaltet von Dominik
-                Grössl, ID Nr.: 14184397, Němčice 26, Postleitzahl 345 06,
-                Tschechische Republik.
-              </>
-            )}
-          </p>
-
-          <p className='mb-4'>
-            {language === 'en' && <>Planetopedia operates the</>}
-            {language === 'cs' && <>Planetopedia provozuje</>}
-            {language === 'de' && <>Planetopedia betreibt die</>}
-            <Link href='https://planetopedia.agency' className='underline'>
-              {' '}
-              https://planetopedia.agency{' '}
-            </Link>
-            {language === 'en' && <>website, which provides the SERVICE.</>}
-            {language === 'cs' && <>webové stránky, které poskytují službu.</>}
-            {language === 'de' && <>Website, die den SERVICE bietet.</>}
-          </p>
-
-          <p className='mb-4'>
-            {language === 'en' && (
-              <>
-                These personal data protection principles tell you when and how
-                we will handle your personal data and what rights you have with
-                respect to your personal data. If you have any questions
-                concerning the processing of personal data, please contact us at
-                info@planetopedia.agency.
-              </>
-            )}
-            {language === 'cs' && (
-              <>
-                V těchto zásadách ochrany osobních údajů se dozvíte, kdy a jak.
-                budeme nakládat s vašimi osobními údaji a jaká máte práva v
-                souvislosti s jejich zpracováním. s vašimi osobními údaji. Pokud
-                máte jakékoli dotazy týkající se zpracování osobních údajů,
-                kontaktujte nás na adrese info@planetopedia.agency.
-              </>
-            )}
-            {language === 'de' && (
-              <>
-                Diese Grundsätze zum Schutz personenbezogener Daten sagen Ihnen,
-                wann und wie wir mit Ihren persönlichen Daten umgehen und welche
-                Rechte Sie in Bezug auf Ihre in Bezug auf Ihre personenbezogenen
-                Daten haben. Wenn Sie Fragen haben bezüglich der Verarbeitung
-                personenbezogener Daten haben, kontaktieren Sie uns bitte unter
-                info@planetopedia.agency.
+                Wir nehmen den Datenschutz sehr ernst. Nachstehend finden Sie
+                alle Informationen darüber, welche Daten wir speichern und wie
+                wir sie behandeln. Der Datenschutz wird durch die DSGVO geregelt
+                (formell die Verordnung (EG) Nr. 2016/679 des Europäischen
+                Parlaments und des Rates vom 27. April 2016 zum Schutz
+                natürlicher Personen bei der Verarbeitung personenbezogener
+                Daten, zum freien Datenverkehr und zur Aufhebung der Richtlinie
+                95/46/EG).
               </>
             )}
           </p>
@@ -85,135 +61,39 @@ export default function Page() {
           <p className='mb-4'>
             {language === 'en' && (
               <>
-                We always process your personal data in compliance with the
-                regulations, within the meaning of Regulation (EU) 2016/679 of
-                the European Parliament and of the Council on the protection of
-                natural persons with regard to the processing of personal data
-                and on the free movement of such data, and repealing Directive
-                95/46/EC (General Data Protection Regulation) ("Regulation").
+                Personal data means any information about an identified or
+                identifiable natural person; an identifiable natural person is a
+                natural person who can be identified, directly or indirectly, in
+                particular by reference to an identifier such as a name, an
+                identification number, location data, a network identifier or to
+                one or more specific elements of the physical, physiological,
+                genetic, mental, economic, cultural or social identity of that
+                natural person.
               </>
             )}
             {language === 'cs' && (
               <>
-                Vaše osobní údaje vždy zpracováváme v souladu se zákonem o
-                ochraně osobních údajů. předpisy ve smyslu nařízení (EU)
-                2016/679. Evropského parlamentu a Rady o ochraně fyzických osob
-                v souvislosti se zpracováním osobních údajů. osob v souvislosti
-                se zpracováním osobních údajů a o ochraně osobních údajů. volném
-                pohybu těchto údajů a o zrušení směrnice 95/46/ES. (obecné
-                nařízení o ochraně osobních údajů) (dále jen "nařízení").
+                Osobními údaji se rozumí veškeré informace o identifikované nebo
+                identifikovatelné fyzické osobě; identifikovatelnou fyzickou
+                osobou je fyzická osoba, kterou lze přímo či nepřímo
+                identifikovat, zejména odkazem na určitý identifikátor,
+                například jméno, identifikační číslo, lokační údaje, síťový
+                identifikátor nebo na jeden či více zvláštních prvků fyzické,
+                fyziologické, genetické, psychické, ekonomické, kulturní nebo
+                společenské identity této fyzické osoby.
               </>
             )}
             {language === 'de' && (
               <>
-                Wir verarbeiten Ihre personenbezogenen Daten stets in
-                Übereinstimmung mit den Vorschriften im Sinne der Verordnung
-                (EU) 2016/679 des Europäischen Parlaments und des Rates zum
-                Schutz natürlicher Personen bei der Personen bei der
-                Verarbeitung personenbezogener Daten und zum freien und zum
-                freien Datenverkehr und zur Aufhebung der Richtlinie 95/46/EG
-                (Allgemeine Datenschutzverordnung) ("Verordnung").
-              </>
-            )}
-          </p>
-
-          <p className='mb-4'>
-            {language === 'en' && (
-              <>
-                This page is used to inform website visitors regarding our
-                policies with the collection, use, and disclosure of Personal
-                Information if anyone decided to use our Service, the
-                Planetopedia website.
-              </>
-            )}
-            {language === 'cs' && (
-              <>
-                Tato stránka slouží k informování návštěvníků webových stránek o
-                našich zásadách. se shromažďováním, používáním a zveřejňováním
-                osobních údajů, pokud se někdo rozhodl používat naši službu,
-                webové stránky Planetopedia.
-              </>
-            )}
-            {language === 'de' && (
-              <>
-                Diese Seite dient dazu, die Besucher unserer Website über unsere
-                Richtlinien mit der Sammlung, Verwendung und Offenlegung von
-                persönlichen Informationen, wenn jemand beschlossen hat, unseren
-                Service, die Planetopedia-Website, zu nutzen.
-              </>
-            )}
-          </p>
-
-          <p className='mb-4'>
-            {language === 'en' && (
-              <>
-                If you choose to use our Service, then you agree to the
-                collection and use of information in relation with this policy.
-                The Personal Information that we collect are used for providing
-                and improving the Service. We will not use or share your
-                information with anyone except as described in this Privacy
-                Policy.
-              </>
-            )}
-            {language === 'cs' && (
-              <>
-                Pokud se rozhodnete používat naši službu, souhlasíte se
-                shromažďováním a používání informací v souladu s těmito
-                zásadami. Osobní Informace, které shromažďujeme, jsou používány
-                k poskytování a zlepšování služeb. Služby. Vaše údaje nebudeme
-                používat ani s nikým sdílet. s výjimkou případů popsaných v
-                těchto Zásadách ochrany osobních údajů.
-              </>
-            )}
-            {language === 'de' && (
-              <>
-                Wenn Sie sich entscheiden, unseren Dienst zu nutzen, erklären
-                Sie sich mit der Sammlung und der Verwendung von Informationen
-                in Verbindung mit dieser Richtlinie zu. Die persönlichen
-                Informationen, die wir sammeln, werden für die Bereitstellung
-                und Verbesserung des Dienstes. Wir werden Ihre Informationen
-                nicht verwenden oder an Dritte weitergeben außer wie in dieser
-                Datenschutzrichtlinie beschrieben.
-              </>
-            )}
-          </p>
-
-          <p>
-            {language === 'en' && (
-              <>
-                The terms used in this Privacy Policy have the same meanings as
-                in our Terms and Conditions, which is accessible at{' '}
-              </>
-            )}
-            {language === 'cs' && (
-              <>
-                Pojmy použité v těchto Zásadách ochrany osobních údajů mají
-                stejný význam jako v těchto Zásadách. v našich smluvních
-                podmínkách, které jsou k dispozici na adrese{' '}
-              </>
-            )}
-            {language === 'de' && (
-              <>
-                Die in dieser Datenschutzrichtlinie verwendeten Begriffe haben
-                die gleiche Bedeutung wie in unseren Allgemeinen
-                Geschäftsbedingungen, die unter folgender Adresse abrufbar sind{' '}
-              </>
-            )}
-            <Link href='https://planetopedia.agency' className='underline'>
-              https://planetopedia.agency
-            </Link>
-            {language === 'en' && (
-              <>, unless otherwise defined in this Privacy Policy.</>
-            )}
-            {language === 'cs' && (
-              <>
-                , pokud není v těchto Zásadách ochrany osobních údajů definováno
-                jinak.
-              </>
-            )}
-            {language === 'de' && (
-              <>
-                sofern in dieser Datenschutzrichtlinie nicht anders definiert.
+                Personenbezogene Daten sind alle Informationen über eine
+                bestimmte oder bestimmbare natürliche Person; als bestimmbar
+                wird eine natürliche Person angesehen, die direkt oder indirekt
+                identifiziert werden kann, insbesondere durch Zuordnung zu einer
+                Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten,
+                zu einer Netzkennung oder zu einem oder mehreren besonderen
+                Merkmalen der physischen, physiologischen, genetischen,
+                psychischen, wirtschaftlichen, kulturellen oder sozialen
+                Identität dieser natürlichen Person.
               </>
             )}
           </p>
@@ -221,39 +101,41 @@ export default function Page() {
 
         <div className='mb-10'>
           <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Information Collection and Use</>}
-            {language === 'cs' && <>Shromažďování a používání informací</>}
+            {language === 'en' && <>Who we are and how to contact us</>}
+            {language === 'cs' && <>Kdo jsme a jak nás kontaktovat</>}
             {language === 'de' && (
-              <>Sammlung und Verwendung von Informationen</>
+              <>Wer wir sind und wie Sie uns kontaktieren können</>
             )}
           </h2>
           <p>
             {language === 'en' && (
               <>
-                For a better experience while using our Service, we may require
-                you to provide us with certain personally identifiable
-                information, including but not limited to your name, phone
-                number, and postal address. The information that we collect will
-                be used to contact or identify you.
+                Your personal data is carefully managed by Dominik Grössl, ID
+                No.: 14184397, Němčice 26, Postal Code 345 06, Czech Republic
+                (hereinafter: "Controller").
+                <br />
+                Email: info@planetopedia.agency
+                <br />
+                Phone: +420 739 830 034
               </>
             )}
             {language === 'cs' && (
               <>
-                Pro lepší zážitek z používání naší služby můžeme požadovat.
-                abyste nám poskytli určité osobní údaje, mimo jiné vaše jméno,
-                telefonní číslo a poštovní adresu. adresu. Informace, které
-                shromažďujeme, budou použity ke kontaktování nebo k vaší
-                identifikaci.
+                Vaše osobní údaje pečlivě spravuje Dominik Grössl, IČO:
+                14184397, Němčice 26, PSČ 345 06, Česká republika (dále jen:
+                „správce“).
+                <br />
+                Email: info@planetopedia.agency
+                <br />
+                Telefon: +420 739 830 034
               </>
             )}
             {language === 'de' && (
               <>
-                Um Ihnen die Nutzung unseres Dienstes zu erleichtern, können wir
-                Sie auffordern bestimmte persönlich identifizierbare
-                Informationen zu übermitteln, einschließlich, aber nicht
-                beschränkt auf Ihren Namen, Telefonnummer und Postanschrift
-                Adresse. Die von uns gesammelten Informationen werden verwendet,
-                um Sie zu kontaktieren oder Sie zu identifizieren.
+                Ihre personenbezogenen Daten werden von Dominik Grössl, ID-Nr.:
+                14184397, Němčice 26, Postleitzahl 345 06, Tschechische Republik
+                (im Folgenden: "Verantwortlicher") sorgfältig verwaltet. E-Mail:
+                info@planetopedia.agency Telefon: +420 739 830 034
               </>
             )}
           </p>
@@ -261,447 +143,18 @@ export default function Page() {
 
         <div className='mb-10'>
           <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Log Data</>}
-            {language === 'cs' && <>Data protokolu</>}
-            {language === 'de' && <>Protokolldaten</>}
-          </h2>
-          <p>
-            {language === 'en' && (
-              <>
-                We want to inform you that whenever you visit our Service, we
-                collect information that your browser sends to us that is called
-                Log Data. This Log Data may include information such as your
-                computer's Internet Protocol ("IP") address, browser version,
-                pages of our Service that you visit, the time and date of your
-                visit, the time spent on those pages, and other statistics.
-              </>
-            )}
-            {language === 'cs' && (
-              <>
-                Rádi bychom vás informovali, že kdykoli navštívíte naši službu.
-                shromažďujeme informace, které nám váš prohlížeč odesílá a které
-                se nazývají protokoly. Data. Tato data protokolu mohou obsahovat
-                informace, jako je například číslo vašeho počítače. adresa
-                internetového protokolu ("IP"), verze prohlížeče, stránky našeho
-                webu. služby, které jste navštívili, čas a datum vaší návštěvy,
-                čas strávené na těchto stránkách a další statistiky.
-              </>
-            )}
+            {language === 'en' && <>We process the following personal data</>}
+            {language === 'cs' && <>Zpracováváme tyto osobní údaje</>}
             {language === 'de' && (
-              <>
-                Wir möchten Sie darüber informieren, dass wir jedes Mal, wenn
-                Sie unseren Dienst besuchen Informationen sammeln, die Ihr
-                Browser an uns sendet und die als Log Daten. Diese
-                Protokolldaten können Informationen enthalten wie die
-                Internet-Protokoll-Adresse ("IP") Ihres Computers,
-                Browser-Version, besuchte Seiten unseres Seiten unseres
-                Dienstes, die Sie besuchen, die Zeit und das Datum Ihres
-                Besuchs, die Zeit, die Sie auf diesen Seiten verbracht haben,
-                und andere Statistiken.
-              </>
+              <>Wir verarbeiten die folgenden personenbezogenen Daten</>
             )}
-          </p>
-        </div>
-
-        <div className='mb-10'>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Cookies</>}
-            {language === 'cs' && <>Soubory cookie</>}
-            {language === 'de' && <>Cookies</>}
-          </h2>
-          <p className='mb-4'>
-            {language === 'en' && (
-              <>
-                Cookies are files with small amount of data that is commonly
-                used an anonymous unique identifier. These are sent to your
-                browser from the website that you visit and are stored on your
-                computer's hard drive.
-              </>
-            )}
-            {language === 'cs' && (
-              <>
-                Soubory cookie jsou soubory s malým množstvím dat, které se
-                běžně používají. anonymní jedinečný identifikátor. Jsou
-                odesílány do vašeho prohlížeče z webové stránky, kterou
-                navštívíte, a ukládají se na pevný disk vašeho počítače.
-              </>
-            )}
-            {language === 'de' && (
-              <>
-                Cookies sind Dateien mit kleinen Datenmengen, die in der Regel
-                als anonyme eindeutige Kennung. Sie werden von der besuchten
-                Website an Ihren Browser gesendet Website, die Sie besuchen, an
-                Ihren Browser gesendet und auf der Festplatte Ihres Computers
-                gespeichert.
-              </>
-            )}
-          </p>
-
-          <p>
-            {language === 'en' && (
-              <>
-                Our website uses these "cookies" to collection information and
-                to improve our Service. You have the option to either accept or
-                refuse these cookies, and know when a cookie is being sent to
-                your computer. If you choose to refuse our cookies, you may not
-                be able to use some portions of our Service.
-              </>
-            )}
-            {language === 'cs' && (
-              <>
-                Naše webové stránky používají tyto "soubory cookie" ke
-                shromažďování informací a k. zlepšování našich služeb. Máte
-                možnost je přijmout nebo odmítnout. tyto soubory cookie a vědět,
-                kdy jsou soubory cookie odesílány na váš počítač. počítači.
-                Pokud se rozhodnete naše soubory cookie odmítnout, je možné, že
-                nebudete moci používat některé části naší služby.
-              </>
-            )}
-            {language === 'de' && (
-              <>
-                Unsere Website verwendet diese "Cookies" zur Sammlung von
-                Informationen und zur unseren Service zu verbessern. Sie haben
-                die Möglichkeit, diese Cookies entweder zu akzeptieren oder
-                abzulehnen Sie haben die Möglichkeit, diese Cookies zu
-                akzeptieren oder abzulehnen und zu wissen, wenn ein Cookie an
-                Ihren Computer gesendet wird. Computer gesendet wird. Wenn Sie
-                sich dafür entscheiden, unsere Cookies abzulehnen, können Sie
-                möglicherweise nicht einige Teile unseres Dienstes nicht nutzen
-                können.
-              </>
-            )}
-          </p>
-        </div>
-
-        <div className='mb-10'>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Service Providers</>}
-            {language === 'cs' && <>Poskytovatelé služeb</>}
-            {language === 'de' && <>Anbieter von Dienstleistungen</>}
-          </h2>
-          <p>
-            {language === 'en' && (
-              <>
-                We may employ third-party companies and individuals due to the
-                following reasons:
-              </>
-            )}
-            {language === 'cs' && (
-              <>
-                Můžeme zaměstnávat společnosti a jednotlivce třetích stran z
-                důvodu z následujících důvodů:
-              </>
-            )}
-            {language === 'de' && (
-              <>
-                Wir können Drittunternehmen und Einzelpersonen aus folgenden
-                Gründen beschäftigen folgenden Gründen:
-              </>
-            )}
-          </p>
-
-          <ul className='list-decimal ml-6'>
-            <li>
-              {language === 'en' && <>To facilitate our Service;</>}
-              {language === 'cs' && <>Pro usnadnění našich služeb;</>}
-              {language === 'de' && <>Um unseren Service zu erleichtern;</>}
-            </li>
-            <li>
-              {language === 'en' && <>To provide the Service on our behalf;</>}
-              {language === 'cs' && <>Poskytování služby naším jménem;</>}
-              {language === 'de' && (
-                <>Zur Bereitstellung des Dienstes in unserem Namen;</>
-              )}
-            </li>
-            <li>
-              {language === 'en' && (
-                <>To perform Service-related services; or</>
-              )}
-              {language === 'cs' && (
-                <>Provádění služeb souvisejících se službou nebo</>
-              )}
-              {language === 'de' && (
-                <>um dienstbezogene Dienstleistungen zu erbringen; oder</>
-              )}
-            </li>
-            <li>
-              {language === 'en' && (
-                <>To assist us in analyzing how our Service is used.</>
-              )}
-              {language === 'cs' && (
-                <>Aby nám pomohly analyzovat, jak je naše služba využívána.</>
-              )}
-              {language === 'de' && (
-                <>
-                  Um uns bei der Analyse der Nutzung unseres Dienstes zu
-                  unterstützen.
-                </>
-              )}
-            </li>
-            <li>
-              {language === 'en' && (
-                <>
-                  We want to inform our Service users that these third parties
-                  have access to your Personal Information. The reason is to
-                  perform the tasks assigned to them on our behalf. However,
-                  they are obligated not to disclose or use the information for
-                  any other purpose.
-                </>
-              )}
-              {language === 'cs' && (
-                <>
-                  Chceme informovat uživatele našich služeb, že tyto třetí
-                  strany mají přístup k vašim osobním údajům. Důvodem je
-                  provádění úkolů, které jim byly naším jménem přiděleny. Jsou
-                  však povinny tyto informace nezveřejňovat ani nepoužívat k
-                  jiným účelům.
-                </>
-              )}
-              {language === 'de' && (
-                <>
-                  Wir möchten die Nutzer unseres Dienstes darüber informieren,
-                  dass diese Drittparteien Zugang zu Ihren persönlichen
-                  Informationen haben. Der Grund dafür ist die Erfüllung der
-                  Aufgaben zu erfüllen, die ihnen in unserem Namen übertragen
-                  wurden. Sie sind jedoch verpflichtet die Informationen nicht
-                  für andere Zwecke weiterzugeben oder zu verwenden.
-                </>
-              )}
-            </li>
-          </ul>
-        </div>
-
-        <div className='mb-10'>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Security</>}
-            {language === 'cs' && <>Zabezpečení</>}
-            {language === 'de' && <>Sicherheit</>}
-          </h2>
-          <p>
-            {language === 'en' && (
-              <>
-                We value your trust in providing us your Personal Information,
-                thus we are striving to use commercially acceptable means of
-                protecting it. But remember that no method of transmission over
-                the internet, or method of electronic storage is 100% secure and
-                reliable, and we cannot guarantee its absolute security.
-              </>
-            )}
-            {language === 'cs' && (
-              <>
-                Vážíme si vaší důvěry, s níž nám poskytujete své osobní údaje, a
-                proto. se snažíme používat komerčně přijatelné prostředky
-                ochrany. jejich ochrany. Pamatujte však, že žádný způsob přenosu
-                přes internet, ani způsob elektronického ukládání není
-                stoprocentně bezpečný a spolehlivý a my nemůžeme zaručit jejich
-                absolutní bezpečnost.
-              </>
-            )}
-            {language === 'de' && (
-              <>
-                Wir schätzen Ihr Vertrauen in die Bereitstellung Ihrer
-                persönlichen Daten, daher sind wir bestrebt, kommerziell
-                akzeptable Mittel zum Schutz sie zu schützen. Bedenken Sie
-                jedoch, dass keine Methode der Übertragung über das Internet
-                oder elektronische Speichermethode 100% sicher und zuverlässig
-                ist, und wir keine absolute Sicherheit garantieren können.
-              </>
-            )}
-          </p>
-        </div>
-
-        <div className='mb-10'>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Links to Other Sites</>}
-            {language === 'cs' && <>Odkazy na jiné stránky</>}
-            {language === 'de' && <>Links zu anderen Seiten</>}
-          </h2>
-          <p>
-            {language === 'en' && (
-              <>
-                Our Service may contain links to other sites. If you click on a
-                third-party link, you will be directed to that site. Note that
-                these external sites are not operated by us. Therefore, we
-                strongly advise you to review the Privacy Policy of these
-                websites. We have no control over, and assume no responsibility
-                for the content, privacy policies, or practices of any
-                third-party sites or services.
-              </>
-            )}
-            {language === 'cs' && (
-              <>
-                Naše služba může obsahovat odkazy na jiné stránky. Pokud
-                kliknete na na odkaz třetí strany, budete přesměrováni na tuto
-                stránku. Upozorňujeme, že tyto externí stránky neprovozujeme.
-                Proto důrazně doporučujeme abyste se seznámili se zásadami
-                ochrany osobních údajů těchto webových stránek. Nemáme žádné
-                kontrolu a nepřebíráme žádnou zodpovědnost za obsah, soukromí a
-                ochranu osobních údajů na těchto stránkách. zásady ochrany
-                osobních údajů nebo postupy jakýchkoli webových stránek nebo
-                služeb třetích stran.
-              </>
-            )}
-            {language === 'de' && (
-              <>
-                Unser Service kann Links zu anderen Websites enthalten. Wenn Sie
-                auf einen Link eines Drittanbieters klicken, werden Sie auf
-                diese Seite weitergeleitet. Beachten Sie, dass diese externen
-                Seiten nicht von uns betrieben werden. Wir empfehlen Ihnen daher
-                dringend Wir empfehlen Ihnen daher dringend, die
-                Datenschutzrichtlinien dieser Websites zu lesen. Wir haben keine
-                keine Kontrolle über und übernehmen keine Verantwortung für die
-                Inhalte, Datenschutz Datenschutzrichtlinien oder Praktiken von
-                Websites oder Diensten Dritter.
-              </>
-            )}
-          </p>
-        </div>
-
-        <div className='mb-10'>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Children's Privacy</>}
-            {language === 'cs' && <>Soukromí dětí</>}
-            {language === 'de' && <>Datenschutz für Kinder</>}
-          </h2>
-          <p>
-            {language === 'en' && (
-              <>
-                Our Services do not address anyone under the age of 13. We do
-                not knowingly collect personal identifiable information from
-                children under 13. In the case we discover that a child under 13
-                has provided us with personal information, we immediately delete
-                this from our servers. If you are a parent or guardian and you
-                are aware that your child has provided us with personal
-                information, please contact us so that we will be able to do
-                necessary actions.
-              </>
-            )}
-            {language === 'cs' && (
-              <>
-                Naše služby nejsou určeny osobám mladším 13 let. Nepoužíváme
-                vědomě neshromažďujeme osobní identifikační údaje od dětí
-                mladších 13 let. V případě, že zjistíme, že dítě mladší 13 let
-                poskytlo nám poskytlo osobní údaje, okamžitě je z našich stránek
-                odstraníme. serverů. Pokud jste rodič nebo opatrovník a jste si
-                vědomi toho, že váš nám vaše dítě poskytlo osobní údaje,
-                kontaktujte nás, prosím. abychom mohli učinit potřebné kroky.
-              </>
-            )}
-            {language === 'de' && (
-              <>
-                Unsere Dienste richten sich nicht an Personen unter 13 Jahren.
-                Wir sammeln nicht sammeln wissentlich keine personenbezogenen
-                Daten von Kindern unter 13 Jahren. Sollten wir feststellen, dass
-                ein Kind unter 13 Jahren uns uns persönliche Daten zur Verfügung
-                gestellt hat, löschen wir diese sofort von unseren Servern. Wenn
-                Sie ein Elternteil oder Erziehungsberechtigter sind und wissen,
-                dass Ihr Kind uns personenbezogene Daten zur Verfügung gestellt
-                hat, kontaktieren Sie uns bitte damit wir die notwendigen
-                Maßnahmen ergreifen können.
-              </>
-            )}
-          </p>
-        </div>
-
-        <div className='mb-10'>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Changes to This Privacy Policy</>}
-            {language === 'cs' && (
-              <>Změny těchto zásad ochrany osobních údajů</>
-            )}
-            {language === 'de' && (
-              <>Änderungen an dieser Datenschutzrichtlinie</>
-            )}
-          </h2>
-          <p className='mb-4'>
-            {language === 'en' && (
-              <>
-                We may update our Privacy Policy from time to time. Thus, we
-                advise you to review this page periodically for any changes. We
-                will notify you of any changes by posting the new Privacy Policy
-                on this page. These changes are effective immediately, after
-                they are posted on this page.
-              </>
-            )}
-            {language === 'cs' && (
-              <>
-                Naše zásady ochrany osobních údajů můžeme čas od času
-                aktualizovat. Proto doporučujeme abyste tuto stránku pravidelně
-                kontrolovali, zda nedošlo ke změnám. Budeme informovat o všech
-                změnách zveřejněním nových Zásad ochrany osobních údajů na této
-                stránce. Tyto změny nabývají účinnosti okamžitě po jejich
-                zveřejnění na této stránce.
-              </>
-            )}
-            {language === 'de' && (
-              <>
-                Wir können unsere Datenschutzrichtlinie von Zeit zu Zeit
-                aktualisieren. Wir empfehlen Ihnen daher dass Sie diese Seite
-                regelmäßig auf Änderungen überprüfen. Wir werden Sie Wir werden
-                Sie über alle Änderungen informieren, indem wir die neue
-                Datenschutzrichtlinie auf dieser Seite veröffentlichen. Diese
-                Änderungen treten sofort in Kraft, nachdem sie auf dieser Seite
-                veröffentlicht wurden. dieser Seite.
-              </>
-            )}
-          </p>
-          <p>
-            {language === 'en' && (
-              <>
-                Our Privacy Policy was created with the help of the Privacy
-                Policy Template.
-              </>
-            )}
-            {language === 'cs' && (
-              <>
-                Naše Zásady ochrany osobních údajů byly vytvořeny s pomocí Zásad
-                ochrany osobních údajů. Šablony.
-              </>
-            )}
-            {language === 'de' && (
-              <>
-                Unsere Datenschutzrichtlinie wurde mit Hilfe der
-                Datenschutzrichtlinie Vorlage.
-              </>
-            )}
-          </p>
-        </div>
-
-        <div className='mb-10'>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Contact Us</>}
-            {language === 'cs' && <>Kontaktujte nás</>}
-            {language === 'de' && <>Kontakt</>}
-          </h2>
-          <p>
-            {language === 'en' && (
-              <>
-                If you have any questions or suggestions about our Privacy
-                Policy, do not hesitate to contact us.
-              </>
-            )}
-            {language === 'cs' && (
-              <>
-                Máte-li jakékoli dotazy nebo připomínky k našim zásadám ochrany
-                osobních údajů, neváhejte nás kontaktovat.
-              </>
-            )}
-            {language === 'de' && (
-              <>
-                Wenn Sie Fragen oder Anregungen zu unserer Datenschutzpolitik
-                haben, zögern Sie nicht, uns zu kontaktieren.
-              </>
-            )}
-          </p>
-        </div>
-
-        <div>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Processed data</>}
-            {language === 'cs' && <>Zpracované údaje</>}
-            {language === 'de' && <>Verarbeitete Daten</>}
           </h2>
           <ul className='list-disc ml-6'>
+            <li>
+              {language === 'en' && <>Full Name</>}
+              {language === 'cs' && <>Celé jméno</>}
+              {language === 'de' && <>Vollständiger Name</>}
+            </li>
             <li>
               {language === 'en' && <>Instagram Account</>}
               {language === 'cs' && <>Účet na Instagramu</>}
@@ -713,21 +166,483 @@ export default function Page() {
               {language === 'de' && <>E-Mail Adresse</>}
             </li>
             <li>
-              {language === 'en' && <>Full Name</>}
-              {language === 'cs' && <>Celé jméno</>}
-              {language === 'de' && <>Vollständiger Name</>}
-            </li>
-            <li>
-              {language === 'en' && <>Hotel Name</>}
-              {language === 'cs' && <>Název hotelu</>}
-              {language === 'de' && <>Hotel Name</>}
-            </li>
-            <li>
               {language === 'en' && <>Brand Name</>}
               {language === 'cs' && <>Název firmy</>}
               {language === 'de' && <>Markenname</>}
             </li>
           </ul>
+        </div>
+
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            {language === 'en' && <>Purpose and duration of processing</>}
+            {language === 'cs' && <>Účel a doba zpracování</>}
+            {language === 'de' && <>Zweck und Dauer der Verarbeitung</>}
+          </h2>
+          <p>
+            {language === 'en' && (
+              <>
+                We process personal data for the purpose of processing your
+                enquiry. The processing time varies according to the purpose.
+                For the purpose of processing your enquiry, we store the data
+                for 1 year and if you become our client, we store the data for
+                the duration of the cooperation.{' '}
+              </>
+            )}
+            {language === 'cs' && (
+              <>
+                Osobní údaje zpracováváme za účelem vyřízení Vaší poptávky. Doba
+                zpracování se liší podle účelu. Pro účel vyřízení Vaší poptávky
+                archivujeme data po dobu 1 roku a v případě, že se stanete naším
+                klientem, uchováváme data po dobu trvání spolupráce. 
+              </>
+            )}
+            {language === 'de' && (
+              <>
+                Wir verarbeiten personenbezogene Daten zum Zweck der Bearbeitung
+                Ihrer Anfrage. Die Dauer der Verarbeitung variiert je nach
+                Zweck. Zum Zwecke der Bearbeitung Ihrer Anfrage speichern wir
+                die Daten für 1 Jahr und wenn Sie unser Kunde werden, speichern
+                wir die Daten für die Dauer der Zusammenarbeit.
+              </>
+            )}
+          </p>
+        </div>
+
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            {language === 'en' && <>Processors</>}
+            {language === 'cs' && <>Zpracovatelé</>}
+            {language === 'de' && <>Prozessoren</>}
+          </h2>
+          <p>
+            {language === 'en' && (
+              <>
+                We use third-party services to offer you superior service. Below
+                you will find a nominal list of them.
+              </>
+            )}
+            {language === 'cs' && (
+              <>
+                Abychom vám nabízeli špičkové služby, využíváme služby třetích
+                stran. Níže najdete jejich jmenovitý seznam.
+              </>
+            )}
+            {language === 'de' && (
+              <>
+                Wir nutzen Dienste Dritter, um Ihnen einen besseren Service zu
+                bieten. Nachstehend finden Sie eine Liste dieser Dienste.
+              </>
+            )}
+          </p>
+
+          <ul className='list-disc ml-6'>
+            <li>
+              {language === 'en' && <>EmailJS (https://www.emailjs.com)</>}
+              {language === 'cs' && <>EmailJS (https://www.emailjs.com)</>}
+              {language === 'de' && <>EmailJS (https://www.emailjs.com)</>}
+            </li>
+            <li>
+              {language === 'en' && <>Software provider Google LLC.</>}
+              {language === 'cs' && <>Poskytovatel softwaru Google LLC.</>}
+              {language === 'de' && <>Software-Anbieter Google LLC.</>}
+            </li>
+          </ul>
+        </div>
+
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            {language === 'en' && <>Google Analytics / Cookies</>}
+            {language === 'cs' && <>Služba Google Analytics / Cookies</>}
+            {language === 'de' && <>Google Analytics / Cookies</>}
+          </h2>
+          <p>
+            {language === 'en' && (
+              <>
+                We also use analytical cookies on the website. If you consent,
+                this website uses Google Analytics, provided by Google, Inc.
+                Google Analytics uses cookies to enable analysis of how users
+                use this website. The information generated by the cookie about
+                your use of the site (including your IP address) will be
+                transmitted to and stored by Google on servers in the United
+                States. Google will use this information for the purposes of
+                evaluating your use of the website and compiling reports on
+                website activity for website operators and for the provision of
+                other services relating to website activity and internet usage
+                in general. Google may also disclose this information to third
+                parties if required to do so by law or if such third parties
+                process this information for Google. Google will not associate
+                your IP address with any other data in its possession.
+              </>
+            )}
+            {language === 'cs' && (
+              <>
+                Na webových stránkách využíváme také analytické cookies. V
+                případě Vašeho souhlasu využívá tato stránka službu Google
+                Analytics, poskytovanou společností Google, Inc. Služba Google
+                Analytics používá souborů cookies umožňující analýzu způsobu
+                užívání této stránky jejími uživateli. Informace vygenerované
+                souborem cookie o užívání stránky (včetně Vaší IP adresy) bude
+                společností Google přenesena a uložena na serverech ve Spojených
+                státech. Google bude užívat těchto informací pro účely
+                vyhodnocování užívání stránky a vytváření zpráv o její aktivitě,
+                určených pro její provozovatele, a pro poskytování dalších
+                služeb týkajících se činností na stránce a užívání internetu
+                vůbec. Google může také poskytnout tyto informace třetím osobám,
+                bude-li to požadováno zákonem nebo budou-li takovéto třetí osoby
+                zpracovávat tyto informace pro Google. Google nebude spojovat
+                Vaší IP adresu s jakýmikoli jinými daty, která má k dispozici.
+              </>
+            )}
+            {language === 'de' && (
+              <>
+                Wir verwenden auch analytische Cookies auf der Website. Wenn Sie
+                zustimmen, verwendet diese Website Google Analytics,
+                bereitgestellt von Google Inc. Google Analytics verwendet
+                Cookies, um zu analysieren, wie die Nutzer diese Website nutzen.
+                Die durch den Cookie erzeugten Informationen über Ihre Benutzung
+                dieser Website (einschließlich Ihrer IP-Adresse) werden an einen
+                Server von Google in den Vereinigten Staaten übertragen und dort
+                gespeichert. Google wird diese Informationen benutzen, um Ihre
+                Nutzung der Website auszuwerten, um Reports über die
+                Websiteaktivitäten für die Websitebetreiber zusammenzustellen
+                und um weitere mit der Websitenutzung und der Internetnutzung
+                verbundene Dienstleistungen zu erbringen. Auch wird Google diese
+                Informationen gegebenenfalls an Dritte übertragen, sofern dies
+                gesetzlich vorgeschrieben oder soweit Dritte diese Daten im
+                Auftrag von Google verarbeiten. Google wird in keinem Fall Ihre
+                IP-Adresse mit anderen Daten, die sich in seinem Besitz
+                befinden, in Verbindung bringen.
+              </>
+            )}
+          </p>
+        </div>
+
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            {language === 'en' && <>Security and protection of personal data</>}
+            {language === 'cs' && <>Zabezpečení a ochrana osobních údajů</>}
+            {language === 'de' && (
+              <>Sicherheit und Schutz von personenbezogenen Daten</>
+            )}
+          </h2>
+          <p className='mb-4'>
+            {language === 'en' && (
+              <>
+                The controller declares that it has taken all appropriate
+                technical and organisational measures to safeguard personal
+                data.
+              </>
+            )}
+            {language === 'cs' && (
+              <>
+                Správce prohlašuje, že přijal veškerá vhodná technická a
+                organizační opatření k zabezpečení osobních údajů.
+              </>
+            )}
+            {language === 'de' && (
+              <>
+                Der für die Verarbeitung Verantwortliche erklärt, dass er alle
+                geeigneten technischen und organisatorischen Maßnahmen zum
+                Schutz personenbezogener Daten getroffen hat.
+              </>
+            )}
+          </p>
+          <p className='mb-4'>
+            {language === 'en' && (
+              <>
+                The controller has taken technical measures to secure data
+                storage and storage of personal data in paper form.
+              </>
+            )}
+            {language === 'cs' && (
+              <>
+                Správce přijal technická opatření k zabezpečení datových úložišť
+                a úložišť osobních údajů v listinné podobě.
+              </>
+            )}
+            {language === 'de' && (
+              <>
+                Der für die Verarbeitung Verantwortliche hat technische
+                Maßnahmen zur Sicherung der Datenspeicherung und der Speicherung
+                personenbezogener Daten in Papierform getroffen.
+              </>
+            )}
+          </p>
+          <p>
+            {language === 'en' && (
+              <>
+                We protect all electronic data stored with a secure protocol
+                (HTTPS encrypted with TLS) that protects the connection between
+                your web browser and our server from eavesdropping and data
+                spoofing.
+              </>
+            )}
+            {language === 'cs' && (
+              <>
+                Veškerá elektronická data uložená chráníme zabezpečeným
+                protokolem (HTTPS šifrovaný pomocí TLS), který chrání spojení
+                vašeho webového prohlížeče a našeho serveru před
+                odposloucháváním a podvrhy dat.
+              </>
+            )}
+            {language === 'de' && (
+              <>
+                Wir schützen alle elektronisch gespeicherten Daten mit einem
+                sicheren Protokoll (HTTPS verschlüsselt mit TLS), das die
+                Verbindung zwischen Ihrem Webbrowser und unserem Server vor
+                Abhören und Datenmissbrauch schützt.
+              </>
+            )}
+          </p>
+        </div>
+
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            {language === 'en' && <>Your rights</>}
+            {language === 'cs' && <>Vaše práva</>}
+            {language === 'de' && <>Ihre Rechte</>}
+          </h2>
+          <p>
+            {language === 'en' && <>Under the terms of the GDPR, you have</>}
+            {language === 'cs' && <>Za podmínek stanovených v GDPR máte:</>}
+            {language === 'de' && (
+              <>
+                Nach den Bestimmungen der Datenschutz-Grundverordnung haben Sie
+              </>
+            )}
+          </p>
+          <ul className='list-disc ml-6 mb-4'>
+            <li>
+              {language === 'en' && (
+                <>
+                  the right of access to your personal data under Article 15
+                  GDPR,
+                </>
+              )}
+              {language === 'cs' && (
+                <>právo na přístup ke svým osobním údajům dle čl. 15 GDPR,</>
+              )}
+              {language === 'de' && (
+                <>
+                  das Recht auf Zugang zu Ihren personenbezogenen Daten gemäß
+                  Artikel 15 der Datenschutzgrundverordnung,
+                </>
+              )}
+            </li>
+            <li>
+              {language === 'en' && (
+                <>
+                  the right to rectification of personal data pursuant to
+                  Article 16 GDPR or restriction of processing pursuant to
+                  Article 18 GDPR.
+                </>
+              )}
+              {language === 'cs' && (
+                <>
+                  právo opravu osobních údajů dle čl. 16 GDPR, popřípadě omezení
+                  zpracování dle čl. 18 GDPR.
+                </>
+              )}
+              {language === 'de' && (
+                <>
+                  das Recht auf Berichtigung personenbezogener Daten gemäß
+                  Artikel 16 DSGVO oder auf Einschränkung der Verarbeitung gemäß
+                  Artikel 18 DSGVO.
+                </>
+              )}
+            </li>
+            <li>
+              {language === 'en' && (
+                <>
+                  the right to erasure of personal data pursuant to Article 17
+                  GDPR.
+                </>
+              )}
+              {language === 'cs' && (
+                <>právo na výmaz osobních údajů dle čl. 17 GDPR.</>
+              )}
+              {language === 'de' && (
+                <>
+                  das Recht auf Löschung der personenbezogenen Daten gemäß
+                  Artikel 17 DSGVO.
+                </>
+              )}
+            </li>
+            <li>
+              {language === 'en' && (
+                <>
+                  the right to object to processing under Article 21 of the
+                  GDPR; and
+                </>
+              )}
+              {language === 'cs' && (
+                <>právo vznést námitku proti zpracování dle čl. 21 GDPR a</>
+              )}
+              {language === 'de' && (
+                <>
+                  das Recht auf Widerspruch gegen die Verarbeitung gemäß Artikel
+                  21 DSGVO; und
+                </>
+              )}
+            </li>
+            <li>
+              {language === 'en' && (
+                <>the right to data portability under Article 20 GDPR.</>
+              )}
+              {language === 'cs' && (
+                <>právo na přenositelnost údajů dle čl. 20 GDPR.</>
+              )}
+              {language === 'de' && (
+                <>
+                  das Recht auf Datenübertragbarkeit gemäß Artikel 20 der
+                  Datenschutz-Grundverordnung.
+                </>
+              )}
+            </li>
+            <li>
+              {language === 'en' && (
+                <>
+                  the right to withdraw consent to processing in writing or
+                  electronically to the following address or email:
+                  info@planetopedia.agency
+                </>
+              )}
+              {language === 'cs' && (
+                <>
+                  právo odvolat souhlas se zpracováním písemně nebo elektronicky
+                  na adresu nebo email: info@planetopedia.agency
+                </>
+              )}
+              {language === 'de' && (
+                <>
+                  das Recht, die Zustimmung zur Verarbeitung schriftlich oder
+                  elektronisch an die folgende Adresse oder E-Mail zu
+                  widerrufen: info@planetopedia.agency
+                </>
+              )}
+            </li>
+          </ul>
+          <p>
+            {language === 'en' && (
+              <>
+                You also have the right to file a complaint with the Office for
+                Personal Data Protection if you believe that your right to
+                personal data protection has been violated.
+              </>
+            )}
+            {language === 'cs' && (
+              <>
+                Dále máte právo podat stížnost u Úřadu pro ochranu osobních
+                údajů v případě, že se domníváte, že bylo porušeno Vaší právo na
+                ochranu osobních údajů.
+              </>
+            )}
+            {language === 'de' && (
+              <>
+                Sie haben auch das Recht, eine Beschwerde beim Amt für den
+                Schutz personenbezogener Daten einzureichen, wenn Sie der
+                Meinung sind, dass Ihr Recht auf Schutz personenbezogener Daten
+                verletzt wurde.
+              </>
+            )}
+          </p>
+        </div>
+
+        <div className='mb-10'>
+          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+            {language === 'en' && <>Final provisions</>}
+            {language === 'cs' && <>Závěrečná ustanovení</>}
+            {language === 'de' && <>Schlussbestimmungen</>}
+          </h2>
+          <p className='mb-4'>
+            {language === 'en' && (
+              <>
+                By submitting your enquiry via the online form, you confirm that
+                you are aware of the privacy policy and that you accept it in
+                its entirety.
+              </>
+            )}
+            {language === 'cs' && (
+              <>
+                Odesláním poptávky prostřednictvím internetového formuláře
+                potvrzujete, že jste seznámen/a s podmínkami ochrany osobních
+                údajů a že je v celém rozsahu přijímáte.
+              </>
+            )}
+            {language === 'de' && (
+              <>
+                Indem Sie Ihre Anfrage über das Online-Formular abschicken,
+                bestätigen Sie, dass Sie die Datenschutzbestimmungen zur
+                Kenntnis genommen haben und sie in vollem Umfang akzeptieren.
+              </>
+            )}
+          </p>
+          <p className='mb-4'>
+            {language === 'en' && (
+              <>
+                You agree to these terms and conditions by clicking "Submit" via
+                the online form. By clicking on "Submit" you confirm that you
+                have read the privacy policy and that you accept it in its
+                entirety.
+              </>
+            )}
+            {language === 'cs' && (
+              <>
+                S těmito podmínkami souhlasíte kliknutím na „Odeslat“
+                prostřednictvím internetového formuláře. Kliknutím na „Odeslat“
+                potvrzujete, že jste seznámen/a s podmínkami ochrany osobních
+                údajů a že je v celém rozsahu přijímáte.
+              </>
+            )}
+            {language === 'de' && (
+              <>
+                Indem Sie im Online-Formular auf "Absenden" klicken, erklären
+                Sie sich mit diesen Bestimmungen und Bedingungen einverstanden.
+                Indem Sie auf "Absenden" klicken, bestätigen Sie, dass Sie die
+                Datenschutzbestimmungen gelesen haben und diese in vollem Umfang
+                akzeptieren.
+              </>
+            )}
+          </p>
+          <p className='mb-4'>
+            {language === 'en' && (
+              <>
+                The administrator is entitled to change these conditions. It
+                will publish the new version of the Privacy Policy on its
+                website or send you a new version of the Privacy Policy to the
+                email address you have provided to the Controller.
+              </>
+            )}
+            {language === 'cs' && (
+              <>
+                Správce je oprávněn tyto podmínky změnit. Novou verzi podmínek
+                ochrany osobních údajů zveřejní na svých internetových
+                stránkách, případně Vám zašle novou verzi těchto podmínek na
+                e-mailovou adresu, kterou jste správci poskytl/a.
+              </>
+            )}
+            {language === 'de' && (
+              <>
+                Der Verwalter ist berechtigt, diese Bedingungen zu ändern. Er
+                wird die neue Version der Datenschutzbestimmungen auf seiner
+                Website veröffentlichen oder Ihnen eine neue Version der
+                Datenschutzbestimmungen an die E-Mail-Adresse senden, die Sie
+                dem für die Verarbeitung Verantwortlichen mitgeteilt haben.
+              </>
+            )}
+          </p>
+          <p>
+            {language === 'en' && (
+              <>These conditions shall take effect on 15 November 2023.</>
+            )}
+            {language === 'cs' && (
+              <>Tyto podmínky nabývají účinnosti dnem 15. 11. 2023.</>
+            )}
+            {language === 'de' && (
+              <>Diese Bedingungen treten am 15. November 2023 in Kraft.</>
+            )}
+          </p>
         </div>
       </Container>
     </div>
