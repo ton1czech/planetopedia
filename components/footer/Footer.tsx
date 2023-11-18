@@ -36,14 +36,17 @@ const Footer = () => {
             <FooterIcon
               icon={Instagram}
               href='https://www.instagram.com/planetopedia/'
+              name='instagram'
             />
             <FooterIcon
               icon={Linkedin}
               href='https://www.linkedin.com/company/planetopedia/'
+              name='linkedin'
             />
             <FooterIcon
               icon={Youtube}
               href='https://www.youtube.com/@myplanetopedia/videos'
+              name='youtube'
             />
           </div>
         </div>
@@ -180,14 +183,17 @@ const Footer = () => {
           <FooterIcon
             icon={Instagram}
             href='https://www.instagram.com/planetopedia/'
+            name='instagram'
           />
           <FooterIcon
             icon={Linkedin}
             href='https://www.linkedin.com/company/planetopedia/'
+            name='linkedin'
           />
           <FooterIcon
             icon={Youtube}
             href='https://www.youtube.com/@myplanetopedia/videos'
+            name='youtube'
           />
         </div>
       </Container>
