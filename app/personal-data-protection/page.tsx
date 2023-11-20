@@ -156,9 +156,9 @@ export default function Page() {
               {language === 'de' && <>Vollständiger Name</>}
             </li>
             <li>
-              {language === 'en' && <>Instagram Account</>}
-              {language === 'cs' && <>Účet na Instagramu</>}
-              {language === 'de' && <>Instagram-Account</>}
+              {language === 'en' && <>Instagram Username</>}
+              {language === 'cs' && <>Uživatelské Instagram jméno</>}
+              {language === 'de' && <>Instagram-Benutzername</>}
             </li>
             <li>
               {language === 'en' && <>Email address</>}
