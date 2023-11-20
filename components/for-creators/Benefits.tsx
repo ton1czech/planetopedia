@@ -95,7 +95,7 @@ const Benefits = () => {
             <ul className='mt-4 md:mt-10 2xl:mt-12 space-y-6 md:space-y-10'>
               <Item
                 headingEn='1. Instagram connection'
-                headingCz='1. Připojení k Instagramu'
+                headingCz='1. Spojení na Instagramu'
                 headingDe='1. Instagram-Verbindung'
                 textEn="Let's group together on instagram!"
                 textCz='Pojďme se společně sdružit na instagramu!'
@@ -111,7 +111,7 @@ const Benefits = () => {
               />
               <Item
                 headingEn='3. Work together'
-                headingCz='3. Pracujte společně'
+                headingCz='3. Pracujme společně'
                 headingDe='3. Gemeinsam arbeiten'
                 textEn='Unlock success through our social media influencer campaigns.'
                 textCz='Odemkněte si úspěch prostřednictvím našich kampaní pro influencery na sociálních sítích.'
@@ -119,15 +119,15 @@ const Benefits = () => {
               />
               <Item
                 headingEn='4. Whatsapp Group'
-                headingCz='4. Skupina Whatsapp'
+                headingCz='4. Whatsapp Skupina'
                 headingDe='4. Whatsapp-Gruppe'
-                textEn='Vote in polls / Give feedback / Platform News'
-                textCz='Hlasování v anketách / Poskytněte zpětnou vazbu / Novinky z platformy'
-                textDe='An Umfragen teilnehmen / Feedback geben / Plattform News'
+                textEn='Discussion & Entertainment'
+                textCz='Diskuze & Zábava'
+                textDe='Diskussion und Unterhaltung'
               />
               <Item
                 headingEn='5. Engagement Groups'
-                headingCz='5. Skupiny pro zapojení'
+                headingCz='5. Engagement Skupiny'
                 headingDe='5. Engagement-Gruppen'
                 multiEn={[
                   'a) Luxury Travel Support Group',
@@ -135,9 +135,9 @@ const Benefits = () => {
                   'c) Travel Tips Support Group',
                 ]}
                 multiCz={[
-                  'a) Skupina pro podporu luxusního cestování',
-                  'b) Podpůrná skupina fotografů',
-                  'c) Podpůrná skupina pro cestovní tipy',
+                  'a) Luxury Travel Support Skupina',
+                  'b) Photographers Support Skupina',
+                  'c) Travel Tips Support Skupina',
                 ]}
                 multiDe={[
                   'a) Unterstützungsgruppe für Luxusreisen',
