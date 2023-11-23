@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://planetopedia.eu/sitemap.xml
+Sitemap: https://planetopedia.agency/sitemap.xml
