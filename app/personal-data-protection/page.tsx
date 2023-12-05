@@ -9,14 +9,14 @@ export default function Page() {
   return (
     <div className='bg-white'>
       <Container className='pt-24 pb-20 md:pt-32 md:pb-32'>
-        <h2 className='text-3xl md:text-4xl font-semibold lg:text-5xl mb-10'>
+        <h2 className='mb-10 text-3xl font-semibold md:text-4xl lg:text-5xl'>
           {language === 'en' && <>Privacy Policy</>}
           {language === 'cs' && <>Zásady ochrany osobních údajů</>}
           {language === 'de' && <>Datenschutzrichtlinie</>}
         </h2>
 
         <div className='mb-10'>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
             {language === 'en' && <>Basic provisions</>}
             {language === 'cs' && <>Základní ustanovení</>}
             {language === 'de' && <>Grundlegende Bestimmungen</>}
@@ -36,8 +36,8 @@ export default function Page() {
             {language === 'cs' && (
               <>
                 Ochranu osobních údajů bereme velmi vážně. Níže najdete veškeré
-                informace o tom, jaké údaje máme k dispozici a jak s nimi
-                nakládáme. Ochrana osobních údajů se řídí nařízením GDPR
+                informace o tom, jaké údaje máme k dispozici a jak s nimi
+                nakládáme. Ochrana osobních údajů se řídí nařízením GDPR
                 (formálně nařízení Evropského parlamentu Rady č. 2016/679 ze dne
                 27. 4. 2016 o ochraně fyzických osob v souvislosti se
                 zpracováním osobních údajů a o volném pohybu těchto údajů a o
@@ -58,7 +58,7 @@ export default function Page() {
             )}
           </p>
 
-          <p className='mb-4'>
+          <p>
             {language === 'en' && (
               <>
                 Personal data means any information about an identified or
@@ -100,12 +100,12 @@ export default function Page() {
         </div>
 
         <div className='mb-10'>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Who we are and how to contact us</>}
-            {language === 'cs' && <>Kdo jsme a jak nás kontaktovat</>}
-            {language === 'de' && (
-              <>Wer wir sind und wie Sie uns kontaktieren können</>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
+            {language === 'en' && <></>}
+            {language === 'cs' && (
+              <>Kdo jsme a jak nás kontaktovat - správce osobních údajů</>
             )}
+            {language === 'de' && <></>}
           </h2>
           <p>
             {language === 'en' && (
@@ -142,14 +142,19 @@ export default function Page() {
         </div>
 
         <div className='mb-10'>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
             {language === 'en' && <>We process the following personal data</>}
             {language === 'cs' && <>Zpracováváme tyto osobní údaje</>}
             {language === 'de' && (
               <>Wir verarbeiten die folgenden personenbezogenen Daten</>
             )}
           </h2>
-          <ul className='list-disc ml-6'>
+          <p>
+            {language === 'en' && <></>}
+            {language === 'cs' && <>Správce zpracovává tyto údaje:</>}
+            {language === 'de' && <></>}
+          </p>
+          <ul className='ml-6 list-disc'>
             <li>
               {language === 'en' && <>Full Name</>}
               {language === 'cs' && <>Celé jméno</>}
@@ -170,16 +175,25 @@ export default function Page() {
               {language === 'cs' && <>Název firmy</>}
               {language === 'de' && <>Markenname</>}
             </li>
+            <li>
+              {language === 'en' && <></>}
+              {language === 'cs' && (
+                <>
+                  Identifikační údaje obsažené ve smlouvě o poskytování služeb
+                </>
+              )}
+              {language === 'de' && <></>}
+            </li>
           </ul>
         </div>
 
         <div className='mb-10'>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
             {language === 'en' && <>Purpose and duration of processing</>}
-            {language === 'cs' && <>Účel a doba zpracování</>}
+            {language === 'cs' && <>Účel zpracování</>}
             {language === 'de' && <>Zweck und Dauer der Verarbeitung</>}
           </h2>
-          <p>
+          <p className='mb-4'>
             {language === 'en' && (
               <>
                 We process personal data for the purpose of processing your
@@ -191,10 +205,8 @@ export default function Page() {
             )}
             {language === 'cs' && (
               <>
-                Osobní údaje zpracováváme za účelem vyřízení Vaší poptávky. Doba
-                zpracování se liší podle účelu. Pro účel vyřízení Vaší poptávky
-                archivujeme data po dobu 1 roku a v případě, že se stanete naším
-                klientem, uchováváme data po dobu trvání spolupráce. 
+                Osobní údaje zpracováváme za účelem plnění všech svých právních
+                a smluvních povinností souvisejících s vyřízení Vaší poptávky.
               </>
             )}
             {language === 'de' && (
@@ -207,350 +219,448 @@ export default function Page() {
               </>
             )}
           </p>
+          <p>
+            {language === 'en' && <></>}
+            {language === 'cs' && (
+              <>Zákonným důvodem zpracování osobních údajů je</>
+            )}
+            {language === 'de' && <></>}
+          </p>
+          <ul className='mb-4 ml-6 list-disc'>
+            <li>
+              {language === 'en' && <></>}
+              {language === 'cs' && (
+                <>
+                  plnění smlouvy mezi Vámi a správcem podle čl. 6 odst. 1 písm.
+                  b) GDPR,
+                </>
+              )}
+              {language === 'de' && <></>}
+            </li>
+          </ul>
+          <p>
+            {language === 'en' && <></>}
+            {language === 'cs' && <>Účelem zpracování osobních údajů je</>}
+            {language === 'de' && <></>}
+          </p>
+          <ul className='ml-6 list-disc'>
+            <li>
+              {language === 'en' && <></>}
+              {language === 'cs' && (
+                <>
+                  vyřízení Vaší poptávky a výkon práv a povinností vyplývajících
+                  ze smluvního vztahu mezi Vámi a správcem; při objednávce jsou
+                  vyžadovány osobní údaje, které jsou nutné pro úspěšné vyřízení
+                  objednávky (jméno a adresa, kontakt), poskytnutí osobních
+                  údajů je nutným požadavkem pro uzavření a plnění smlouvy, bez
+                  poskytnutí osobních údajů není možné smlouvu uzavřít či jí ze
+                  strany správce plnit,
+                </>
+              )}
+              {language === 'de' && <></>}
+            </li>
+          </ul>
         </div>
 
         <div className='mb-10'>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Processors</>}
-            {language === 'cs' && <>Zpracovatelé</>}
-            {language === 'de' && <>Prozessoren</>}
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
+            {language === 'en' && <></>}
+            {language === 'cs' && <>Právní základ zpracování</>}
+            {language === 'de' && <></>}
           </h2>
-          <p>
-            {language === 'en' && (
+
+          <ul className='ml-6 list-disc'>
+            <li>
+              {language === 'en' && <></>}
+              {language === 'cs' && (
+                <>
+                  Správce zpracovává osobní údaje z důvodu plnění všech svých
+                  právních a smluvních povinností. Dalším právním důvodem jsou
+                  oprávněné zájmy správce jako např.: ochrana majetku správce a
+                  osob či vymáhání právních nároků správce.
+                </>
+              )}
+              {language === 'de' && <></>}
+            </li>
+            <li>
+              {language === 'en' && <></>}
+              {language === 'cs' && (
+                <>
+                  Účetní a daňové doklady, na základě kterých je poskytnuta péči
+                  vyúčtovávána, obsahují některé osobní údaje (jméno a příjmení
+                  klienta, typ a rozsah poskytnuté služby). Tyto doklady
+                  uchováváme pouze pro účely splnění povinností stanovených
+                  relevantními účetními a daňovými právními předpisy, po dobu
+                  uloženou těmito předpisy.
+                </>
+              )}
+              {language === 'de' && <></>}
+            </li>
+          </ul>
+        </div>
+
+        <div className='mb-10'>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
+            {language === 'en' && <></>}
+            {language === 'cs' && <>Doba zpracování</>}
+            {language === 'de' && <></>}
+          </h2>
+          <p className='mb-4'>
+            {language === 'en' && <></>}
+            {language === 'cs' && (
               <>
-                We use third-party services to offer you superior service. Below
-                you will find a nominal list of them.
+                Správce osobní údaje zpracovává od okamžiku, kdy mu je klient
+                poskytl či poskytl svůj souhlas ke zpracovávání.
               </>
             )}
+            {language === 'de' && <></>}
+          </p>
+          <p className='mb-4'>
+            {language === 'en' && <></>}
+            {language === 'cs' && (
+              <>
+                Osobní údaje jsou uloženy dle platných právních předpisů či do
+                odvolání souhlasu, na základě kterého byly pro daný účel
+                poskytnuty.
+              </>
+            )}
+            {language === 'de' && <></>}
+          </p>
+          <p className='mb-4'>
+            {language === 'en' && <></>}
+            {language === 'cs' && (
+              <>
+                Správce uchovává osobní údaje po dobu nezbytnou k výkonu práv a
+                povinností vyplývajících ze smluvního vztahu mezi Vámi a
+                správcem a uplatňování nároků z těchto smluvních vztahů (po dobu
+                10 let od ukončení smluvního vztahu).
+              </>
+            )}
+            {language === 'de' && <></>}
+          </p>
+          <p className='mb-4'>
+            {language === 'en' && <></>}
+            {language === 'cs' && (
+              <>
+                Po uplynutí doby uchovávání osobních údajů správce osobní údaje
+                vymaže.
+              </>
+            )}
+            {language === 'de' && <></>}
+          </p>
+          <p className='mb-4'>
+            {language === 'en' && <></>}
+            {language === 'cs' && (
+              <>
+                A v případě, že se stanete naším klientem, uchováváme data po
+                dobu trvání spolupráce.
+              </>
+            )}
+            {language === 'de' && <></>}
+          </p>
+        </div>
+
+        <div className='mb-10'>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
+            {language === 'en' && <>Security and protection of personal data</>}
+            {language === 'cs' && <>Příjemci osobních údajů</>}
+            {language === 'de' && (
+              <>Sicherheit und Schutz von personenbezogenen Daten</>
+            )}
+          </h2>
+          <p className='mb-4'>
+            {language === 'en' && <></>}
+            {language === 'cs' && (
+              <>
+                Příjemci osobních údajů mohou v souladu s ustanoveními právních
+                předpisů v konkrétních případech být, kromě klienta, správce,
+                jím pověření zaměstnanci a orgány veřejné moci v mezích
+                stanovených právními předpisy. Příjemci osobních údajů dále
+                mohou být osoby:
+              </>
+            )}
+            {language === 'de' && <></>}
+          </p>
+
+          <ul className='ml-6 list-disc'>
+            <li>
+              {language === 'en' && <></>}
+              {language === 'cs' && (
+                <>
+                  podílející se na realizaci služeb/realizaci plateb na základě
+                  smlouvy,
+                </>
+              )}
+              {language === 'de' && <></>}
+            </li>
+            <li>
+              {language === 'en' && <></>}
+              {language === 'cs' && (
+                <>podílející se na zajištění provozu služeb,</>
+              )}
+              {language === 'de' && <></>}
+            </li>
+          </ul>
+
+          <p className='mb-4'>
+            {language === 'en' && <></>}
+            {language === 'cs' && (
+              <>
+                Osobní údaje mohou být pro zajištění podpůrné činnosti správce
+                (např. vymáhání pohledávek či právní služby) zpracovávány vedle
+                správce také zpracovateli, a to na základě smluv o zpracování
+                osobních údajů uzavřených v souladu s obecným nařízením o
+                ochraně osobních údajů. Zpracovatelům jsou předávány pouze
+                osobní údaje nezbytné pro daný účel, a to pouze údaje těch
+                klientů, kterých se konkrétní podpůrná činnost týká.
+                Zpracovatelé osobních údajů zajišťující výše uvedené činnosti
+                jsou pečlivě vybíráni.
+              </>
+            )}
+            {language === 'de' && <></>}
+          </p>
+
+          <p>
+            {language === 'en' && <></>}
+            {language === 'cs' && <>Úmysl předat údaje do třetí země: není</>}
+            {language === 'de' && <></>}
+          </p>
+        </div>
+
+        <div className='mb-10'>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
+            {language === 'en' && <></>}
+            {language === 'cs' && <>Zpracovatelé</>}
+            {language === 'de' && <></>}
+          </h2>
+          <p>
+            {language === 'en' && <></>}
             {language === 'cs' && (
               <>
                 Abychom vám nabízeli špičkové služby, využíváme služby třetích
                 stran. Níže najdete jejich jmenovitý seznam.
               </>
             )}
-            {language === 'de' && (
-              <>
-                Wir nutzen Dienste Dritter, um Ihnen einen besseren Service zu
-                bieten. Nachstehend finden Sie eine Liste dieser Dienste.
-              </>
-            )}
+            {language === 'de' && <></>}
           </p>
-
-          <ul className='list-disc ml-6'>
+          <ul className='mb-4 ml-6 list-disc'>
             <li>
               {language === 'en' && <>EmailJS (https://www.emailjs.com)</>}
               {language === 'cs' && <>EmailJS (https://www.emailjs.com)</>}
               {language === 'de' && <>EmailJS (https://www.emailjs.com)</>}
             </li>
-            <li>
-              {language === 'en' && <>Software provider Google LLC.</>}
-              {language === 'cs' && <>Poskytovatel softwaru Google LLC.</>}
-              {language === 'de' && <>Software-Anbieter Google LLC.</>}
-            </li>
           </ul>
         </div>
 
         <div className='mb-10'>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Google Analytics / Cookies</>}
-            {language === 'cs' && <>Služba Google Analytics / Cookies</>}
-            {language === 'de' && <>Google Analytics / Cookies</>}
-          </h2>
-          <p>
-            {language === 'en' && (
-              <>
-                We also use analytical cookies on the website. If you consent,
-                this website uses Google Analytics, provided by Google, Inc.
-                Google Analytics uses cookies to enable analysis of how users
-                use this website. The information generated by the cookie about
-                your use of the site (including your IP address) will be
-                transmitted to and stored by Google on servers in the United
-                States. Google will use this information for the purposes of
-                evaluating your use of the website and compiling reports on
-                website activity for website operators and for the provision of
-                other services relating to website activity and internet usage
-                in general. Google may also disclose this information to third
-                parties if required to do so by law or if such third parties
-                process this information for Google. Google will not associate
-                your IP address with any other data in its possession.
-              </>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
+            {language === 'en' && <></>}
+            {language === 'cs' && (
+              <>Zdroje a kategorie zpracovávaných osobních údajů</>
             )}
+            {language === 'de' && <></>}
+          </h2>
+          <p className='mb-4'>
+            {language === 'en' && <></>}
+            {language === 'cs' && (
+              <>Správce získává osobní údaje pouze od daného klienta.</>
+            )}
+            {language === 'de' && <></>}
+          </p>
+          <p className='mb-4'>
+            {language === 'en' && <></>}
             {language === 'cs' && (
               <>
-                Na webových stránkách využíváme také analytické cookies. V
-                případě Vašeho souhlasu využívá tato stránka službu Google
-                Analytics, poskytovanou společností Google, Inc. Služba Google
-                Analytics používá souborů cookies umožňující analýzu způsobu
-                užívání této stránky jejími uživateli. Informace vygenerované
-                souborem cookie o užívání stránky (včetně Vaší IP adresy) bude
-                společností Google přenesena a uložena na serverech ve Spojených
-                státech. Google bude užívat těchto informací pro účely
-                vyhodnocování užívání stránky a vytváření zpráv o její aktivitě,
-                určených pro její provozovatele, a pro poskytování dalších
-                služeb týkajících se činností na stránce a užívání internetu
-                vůbec. Google může také poskytnout tyto informace třetím osobám,
-                bude-li to požadováno zákonem nebo budou-li takovéto třetí osoby
-                zpracovávat tyto informace pro Google. Google nebude spojovat
-                Vaší IP adresu s jakýmikoli jinými daty, která má k dispozici.
+                Správce zpracovává osobní údaje, které jste mu poskytli nebo
+                osobní údaje, které správce získal na základě plnění Vaší
+                poptávky.
               </>
             )}
-            {language === 'de' && (
+            {language === 'de' && <></>}
+          </p>
+          <p>
+            {language === 'en' && <></>}
+            {language === 'cs' && (
               <>
-                Wir verwenden auch analytische Cookies auf der Website. Wenn Sie
-                zustimmen, verwendet diese Website Google Analytics,
-                bereitgestellt von Google Inc. Google Analytics verwendet
-                Cookies, um zu analysieren, wie die Nutzer diese Website nutzen.
-                Die durch den Cookie erzeugten Informationen über Ihre Benutzung
-                dieser Website (einschließlich Ihrer IP-Adresse) werden an einen
-                Server von Google in den Vereinigten Staaten übertragen und dort
-                gespeichert. Google wird diese Informationen benutzen, um Ihre
-                Nutzung der Website auszuwerten, um Reports über die
-                Websiteaktivitäten für die Websitebetreiber zusammenzustellen
-                und um weitere mit der Websitenutzung und der Internetnutzung
-                verbundene Dienstleistungen zu erbringen. Auch wird Google diese
-                Informationen gegebenenfalls an Dritte übertragen, sofern dies
-                gesetzlich vorgeschrieben oder soweit Dritte diese Daten im
-                Auftrag von Google verarbeiten. Google wird in keinem Fall Ihre
-                IP-Adresse mit anderen Daten, die sich in seinem Besitz
-                befinden, in Verbindung bringen.
+                Správce zpracovává Vaše identifikační a kontaktní údaje a údaje
+                nezbytné pro plnění smlouvy.
               </>
             )}
+            {language === 'de' && <></>}
           </p>
         </div>
 
         <div className='mb-10'>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Security and protection of personal data</>}
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
+            {language === 'en' && <></>}
             {language === 'cs' && <>Zabezpečení a ochrana osobních údajů</>}
-            {language === 'de' && (
-              <>Sicherheit und Schutz von personenbezogenen Daten</>
-            )}
+            {language === 'de' && <></>}
           </h2>
           <p className='mb-4'>
-            {language === 'en' && (
+            {language === 'en' && <></>}
+            {language === 'cs' && (
               <>
-                The controller declares that it has taken all appropriate
-                technical and organisational measures to safeguard personal
-                data.
+                Správce prohlašuje, že veškeré zpracování osobních údajů
+                klienta, popřípadě jejich nezbytné předávání, je prováděno plně
+                s ohledem na soukromí klienta a v souladu s platnými právními
+                předpisy.
               </>
             )}
+            {language === 'de' && <></>}
+          </p>
+          <p className='mb-4'>
+            {language === 'en' && <></>}
+            {language === 'cs' && (
+              <>
+                Správce k osobním údajům přistupuje jako k vlastnictví klientů,
+                které je oprávněn používat zejména pro své účely vyjmenované v
+                tomto opatření.
+              </>
+            )}
+            {language === 'de' && <></>}
+          </p>
+          <p className='mb-4'>
+            {language === 'en' && <></>}
             {language === 'cs' && (
               <>
                 Správce prohlašuje, že přijal veškerá vhodná technická a
                 organizační opatření k zabezpečení osobních údajů.
               </>
             )}
-            {language === 'de' && (
-              <>
-                Der für die Verarbeitung Verantwortliche erklärt, dass er alle
-                geeigneten technischen und organisatorischen Maßnahmen zum
-                Schutz personenbezogener Daten getroffen hat.
-              </>
-            )}
+            {language === 'de' && <></>}
           </p>
           <p className='mb-4'>
-            {language === 'en' && (
-              <>
-                The controller has taken technical measures to secure data
-                storage and storage of personal data in paper form.
-              </>
-            )}
+            {language === 'en' && <></>}
             {language === 'cs' && (
               <>
                 Správce přijal technická opatření k zabezpečení datových úložišť
                 a úložišť osobních údajů v listinné podobě.
               </>
             )}
-            {language === 'de' && (
-              <>
-                Der für die Verarbeitung Verantwortliche hat technische
-                Maßnahmen zur Sicherung der Datenspeicherung und der Speicherung
-                personenbezogener Daten in Papierform getroffen.
-              </>
-            )}
+            {language === 'de' && <></>}
           </p>
           <p>
-            {language === 'en' && (
-              <>
-                We protect all electronic data stored with a secure protocol
-                (HTTPS encrypted with TLS) that protects the connection between
-                your web browser and our server from eavesdropping and data
-                spoofing.
-              </>
-            )}
+            {language === 'en' && <></>}
             {language === 'cs' && (
               <>
                 Veškerá elektronická data uložená chráníme zabezpečeným
                 protokolem (HTTPS šifrovaný pomocí TLS), který chrání spojení
-                vašeho webového prohlížeče a našeho serveru před
+                vašeho webového prohlížeče a našeho serveru před
                 odposloucháváním a podvrhy dat.
               </>
             )}
-            {language === 'de' && (
-              <>
-                Wir schützen alle elektronisch gespeicherten Daten mit einem
-                sicheren Protokoll (HTTPS verschlüsselt mit TLS), das die
-                Verbindung zwischen Ihrem Webbrowser und unserem Server vor
-                Abhören und Datenmissbrauch schützt.
-              </>
-            )}
+            {language === 'de' && <></>}
           </p>
         </div>
 
         <div className='mb-10'>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
-            {language === 'en' && <>Your rights</>}
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
+            {language === 'en' && <></>}
             {language === 'cs' && <>Vaše práva</>}
-            {language === 'de' && <>Ihre Rechte</>}
+            {language === 'de' && <></>}
           </h2>
           <p>
-            {language === 'en' && <>Under the terms of the GDPR, you have</>}
+            {language === 'en' && <></>}
             {language === 'cs' && <>Za podmínek stanovených v GDPR máte:</>}
-            {language === 'de' && (
-              <>
-                Nach den Bestimmungen der Datenschutz-Grundverordnung haben Sie
-              </>
-            )}
+            {language === 'de' && <></>}
           </p>
-          <ul className='list-disc ml-6 mb-4'>
+          <ul className='mb-4 ml-6 list-disc'>
             <li>
-              {language === 'en' && (
-                <>
-                  the right of access to your personal data under Article 15
-                  GDPR,
-                </>
-              )}
+              {language === 'en' && <></>}
               {language === 'cs' && (
                 <>právo na přístup ke svým osobním údajům dle čl. 15 GDPR,</>
               )}
-              {language === 'de' && (
-                <>
-                  das Recht auf Zugang zu Ihren personenbezogenen Daten gemäß
-                  Artikel 15 der Datenschutzgrundverordnung,
-                </>
-              )}
+              {language === 'de' && <></>}
             </li>
             <li>
-              {language === 'en' && (
+              {language === 'en' && <></>}
+              {language === 'cs' && (
                 <>
-                  the right to rectification of personal data pursuant to
-                  Article 16 GDPR or restriction of processing pursuant to
-                  Article 18 GDPR.
+                  právo k vyžádání si kopie zpracovávaných osobních údajů dle
+                  čl. 15 GDPR,
                 </>
               )}
+              {language === 'de' && <></>}
+            </li>
+            <li>
+              {language === 'en' && <></>}
               {language === 'cs' && (
                 <>
                   právo opravu osobních údajů dle čl. 16 GDPR, popřípadě omezení
-                  zpracování dle čl. 18 GDPR.
+                  zpracování dle čl. 18 GDPR,
                 </>
               )}
-              {language === 'de' && (
-                <>
-                  das Recht auf Berichtigung personenbezogener Daten gemäß
-                  Artikel 16 DSGVO oder auf Einschränkung der Verarbeitung gemäß
-                  Artikel 18 DSGVO.
-                </>
-              )}
+              {language === 'de' && <></>}
             </li>
             <li>
-              {language === 'en' && (
-                <>
-                  the right to erasure of personal data pursuant to Article 17
-                  GDPR.
-                </>
-              )}
+              {language === 'en' && <></>}
               {language === 'cs' && (
-                <>právo na výmaz osobních údajů dle čl. 17 GDPR.</>
+                <>právo na výmaz osobních údajů dle čl. 17 GDPR,</>
               )}
-              {language === 'de' && (
-                <>
-                  das Recht auf Löschung der personenbezogenen Daten gemäß
-                  Artikel 17 DSGVO.
-                </>
-              )}
+              {language === 'de' && <></>}
             </li>
             <li>
-              {language === 'en' && (
-                <>
-                  the right to object to processing under Article 21 of the
-                  GDPR; and
-                </>
-              )}
+              {language === 'en' && <></>}
               {language === 'cs' && (
                 <>právo vznést námitku proti zpracování dle čl. 21 GDPR a</>
               )}
-              {language === 'de' && (
-                <>
-                  das Recht auf Widerspruch gegen die Verarbeitung gemäß Artikel
-                  21 DSGVO; und
-                </>
-              )}
+              {language === 'de' && <></>}
             </li>
             <li>
-              {language === 'en' && (
-                <>the right to data portability under Article 20 GDPR.</>
-              )}
+              {language === 'en' && <></>}
               {language === 'cs' && (
                 <>právo na přenositelnost údajů dle čl. 20 GDPR.</>
               )}
-              {language === 'de' && (
-                <>
-                  das Recht auf Datenübertragbarkeit gemäß Artikel 20 der
-                  Datenschutz-Grundverordnung.
-                </>
-              )}
+              {language === 'de' && <></>}
             </li>
             <li>
-              {language === 'en' && (
-                <>
-                  the right to withdraw consent to processing in writing or
-                  electronically to the following address or email:
-                  info@planetopedia.agency
-                </>
-              )}
+              {language === 'en' && <></>}
               {language === 'cs' && (
                 <>
                   právo odvolat souhlas se zpracováním písemně nebo elektronicky
                   na adresu nebo email: info@planetopedia.agency
                 </>
               )}
-              {language === 'de' && (
-                <>
-                  das Recht, die Zustimmung zur Verarbeitung schriftlich oder
-                  elektronisch an die folgende Adresse oder E-Mail zu
-                  widerrufen: info@planetopedia.agency
-                </>
-              )}
+              {language === 'de' && <></>}
             </li>
           </ul>
           <p>
-            {language === 'en' && (
-              <>
-                You also have the right to file a complaint with the Office for
-                Personal Data Protection if you believe that your right to
-                personal data protection has been violated.
-              </>
-            )}
+            {language === 'en' && <></>}
             {language === 'cs' && (
               <>
                 Dále máte právo podat stížnost u Úřadu pro ochranu osobních
-                údajů v případě, že se domníváte, že bylo porušeno Vaší právo na
-                ochranu osobních údajů.
+                údajů, v případě, že se domníváte, že bylo porušeno Vaší právo
+                na ochranu osobních údajů. Klient tímto bere na vědomí, že u
+                správce nedochází k automatizovanému rozhodování, vč.
+                profilování.
               </>
             )}
-            {language === 'de' && (
-              <>
-                Sie haben auch das Recht, eine Beschwerde beim Amt für den
-                Schutz personenbezogener Daten einzureichen, wenn Sie der
-                Meinung sind, dass Ihr Recht auf Schutz personenbezogener Daten
-                verletzt wurde.
-              </>
-            )}
+            {language === 'de' && <></>}
           </p>
         </div>
 
         <div className='mb-10'>
-          <h2 className='text-2xl md:text-3xl font-semibold lg:text-4xl'>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
+            {language === 'en' && <></>}
+            {language === 'cs' && <>Kontaktní údaje</>}
+            {language === 'de' && <></>}
+          </h2>
+          <p>
+            {language === 'en' && <></>}
+            {language === 'cs' && (
+              <>
+                V případě jakýchkoli nejasností, či dotazů ohledně zpracovávání
+                Vašich osobních údajů se na nás můžete kdykoli obrátit písemně
+                na adrese: Dominik Grössl, Němčice 26, PSČ 345 06, Česká
+                republika.
+              </>
+            )}
+            {language === 'de' && <></>}
+          </p>
+        </div>
+
+        <div className='mb-10'>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
             {language === 'en' && <>Final provisions</>}
             {language === 'cs' && <>Závěrečná ustanovení</>}
             {language === 'de' && <>Schlussbestimmungen</>}
