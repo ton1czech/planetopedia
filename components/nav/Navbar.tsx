@@ -26,7 +26,7 @@ const Navbar = () => {
 
   const black = pathname === '/'
   const studio = pathname.includes('/studio')
-  const blog = pathname === '/blog/hotels' || '/blog/hotels'
+  const blog = pathname === '/blog/hotels' || '/blog/restaurants'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +44,7 @@ const Navbar = () => {
     <>
       <nav
         className={cn(
-          'z-[1000] w-full h-20  py-5 transition duration-500',
+          'z-[1000] w-full h-20 py-5 transition duration-500',
           black ? 'bg-black/40' : 'bg-white/60 backdrop-blur-lg',
           studio ? 'block bg-white' : 'fixed top-0',
           blog && isTopOfPage && '!bg-transparent !backdrop-blur-none'
