@@ -1,7 +1,6 @@
 'use client'
 
 import { create } from 'zustand'
-import { persist, createJSONStorage } from 'zustand/middleware'
 
 interface LanguageStore {
   language: string
@@ -9,21 +8,10 @@ interface LanguageStore {
   setLanguage: (value: string) => void
 }
 
-export const useLanguage = create(
-  persist<LanguageStore>(
-    set => ({
-      language:
-        typeof localStorage !== 'undefined'
-          ? localStorage.getItem('language-storage') || 'en'
-          : 'en',
-      imgSrc: lang => `/flags/${lang}.webp`,
-      setLanguage: value => {
-        set({ language: value })
-      },
-    }),
-    {
-      name: 'language-storage',
-      storage: createJSONStorage(() => localStorage),
-    }
-  )
-)
+export const useLanguage = create<LanguageStore>(set => ({
+  language: 'en',
+  imgSrc: lang => `/flags/${lang}.webp`,
+  setLanguage: value => {
+    set({ language: value })
+  },
+}))
