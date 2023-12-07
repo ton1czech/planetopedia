@@ -15,8 +15,8 @@ const Footer = () => {
       initial={{ y: 50, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
     >
-      <Container className='py-20 hidden lg:block'>
-        <div className='flex justify-between items-center lg:items-start mb-14 gap-y-14'>
+      <Container className='hidden py-20 lg:block'>
+        <div className='flex items-center justify-between lg:items-start mb-14 gap-y-14'>
           <div>
             <p className='text-zinc-100'>
               {language === 'en' && (
@@ -36,17 +36,17 @@ const Footer = () => {
               {language === 'cs' && <>IČO: 14184397</>}
               {language === 'de' && <>ID No.: 14184397</>}
             </p>
-            <p className='flex gap-2 items-center mt-2 text-zinc-400'>
+            <p className='flex items-center gap-2 mt-2 text-zinc-400'>
               <Phone className='w-4 h-4' />
               +420 739 830 034
             </p>
-            <p className='flex gap-2 items-center text-zinc-400'>
+            <p className='flex items-center gap-2 text-zinc-400'>
               <Mail className='w-4 h-4' />
               info@planetopedia.agency
             </p>
           </div>
 
-          <div className='flex gap-x-2 md:gap-x-4 items-center justify-center'>
+          <div className='flex items-center justify-center gap-x-2 md:gap-x-4'>
             <FooterIcon
               icon={Instagram}
               href='https://www.instagram.com/planetopedia/'
@@ -65,7 +65,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='flex justify-center lg:justify-between items-start flex-row'>
+        <div className='flex flex-row items-start justify-center lg:justify-between'>
           <p className='text-white'>
             &copy;{new Date().getFullYear()} Planetopedia,{' '}
             {language === 'en' && (
@@ -79,26 +79,17 @@ const Footer = () => {
             )}
           </p>
 
-          <div className='flex gap-10 text-zinc-400 mt-0 text-center'>
-            <Link href='/personal-data-protection' className='hover:underline'>
-              {language === 'en' && <>Personal data protection</>}
-              {language === 'cs' && <>Ochrana osobních údajů</>}
-              {language === 'de' && <>Schutz personenbezogener Daten</>}
-            </Link>
-            {/* <Link href='/terms-and-conditions' className='hover:underline'>
-              {language === 'en' && <>Terms and conditions</>}
-              {language === 'cs' && <>Obchodní podmínky</>}
-              {language === 'de' && <>Bedingungen und Konditionen</>}
-            </Link> */}
-            <p>
-              {language === 'en' && <>Terms and conditions</>}
-              {language === 'cs' && <>Obchodní podmínky</>}
-              {language === 'de' && <>Bedingungen und Konditionen</>}
-            </p>
-          </div>
+          <Link
+            href='/personal-data-protection'
+            className='text-center hover:underline text-zinc-400'
+          >
+            {language === 'en' && <>Personal data protection</>}
+            {language === 'cs' && <>Ochrana osobních údajů</>}
+            {language === 'de' && <>Schutz personenbezogener Daten</>}
+          </Link>
         </div>
 
-        <p className='text-sm text-zinc-400 mt-2 text-center lg:text-left'>
+        <p className='mt-2 text-sm text-center text-zinc-400 lg:text-left'>
           {language === 'en' && <>website created by </>}
           {language === 'cs' && <>webové stránky vytvořil </>}
           {language === 'de' && <>Website erstellt von </>}
@@ -123,7 +114,7 @@ const Footer = () => {
       </Container>
 
       <Container className='py-20 lg:hidden'>
-        <p className='text-white text-center mb-7 text-sm'>
+        <p className='text-sm text-center text-white mb-7'>
           {language === 'en' && <>All rights reserved</>}
           {language === 'cs' && <>Všechna práva vyhrazena.</>}
           {language === 'de' && <>Alle Rechte vorbehalten.</>}
@@ -134,22 +125,22 @@ const Footer = () => {
           {language === 'de' && <>Gründer Dominik Grössl.</>}
         </p>
 
-        <div className='mb-7 text-sm'>
+        <div className='text-sm mb-7'>
           <p className='text-zinc-100'>
             Dominik Grössl, Němčice 26, 34506 Němčice, Czech Republic
           </p>
           <p className='text-zinc-100'>ID No.: 14184397</p>
-          <p className='flex gap-2 items-center mt-2 text-zinc-100'>
+          <p className='flex items-center gap-2 mt-2 text-zinc-100'>
             <Phone className='w-4 h-4' />
             +420 739 830 034
           </p>
-          <p className='flex gap-2 items-center text-zinc-100'>
+          <p className='flex items-center gap-2 text-zinc-100'>
             <Mail className='w-4 h-4' />
             info@planetopedia.agency
           </p>
         </div>
 
-        <div className='flex gap-10 text-zinc-400 mb-7 text-center text-xs items-center justify-center'>
+        <div className='flex items-center justify-center gap-10 text-xs text-center text-zinc-400 mb-7'>
           <Link href='/personal-data-protection' className='hover:underline'>
             {language === 'en' && <>Personal data protection</>}
             {language === 'cs' && <>Ochrana osobních údajů</>}
@@ -167,7 +158,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <p className='text-sm text-zinc-400 mb-7 text-center lg:text-left'>
+        <p className='text-sm text-center text-zinc-400 mb-7 lg:text-left'>
           {language === 'en' && <>website created by </>}
           {language === 'cs' && <>webové stránky vytvořil </>}
           {language === 'de' && <>Website erstellt von </>}
@@ -193,7 +184,7 @@ const Footer = () => {
           </Link>
         </p>
 
-        <div className='flex gap-x-2 md:gap-x-4 items-center justify-center'>
+        <div className='flex items-center justify-center gap-x-2 md:gap-x-4'>
           <FooterIcon
             icon={Instagram}
             href='https://www.instagram.com/planetopedia/'
