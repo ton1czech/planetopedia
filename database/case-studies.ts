@@ -189,23 +189,13 @@ export const caseStudies = [
     categoryDe: 'Influencer-Kampagne',
     href: '/case-studies/heys-luggage',
     image: '/case-studies/heys-luggage/thumbnail.webp',
-    servicesEn: [
-      'strategy',
-      'marketing',
-      'content creation',
-      'social media influencer campaign',
-    ],
-    servicesCz: [
-      'strategie',
-      'marketing',
-      'tvorba obsahu',
-      'influencerská kampaň na sociálních sítích',
-    ],
+    servicesEn: ['strategy', 'marketing', 'content creation', 'our creators'],
+    servicesCz: ['strategie', 'marketing', 'tvorba obsahu', 'naši tvůrci'],
     servicesDe: [
       'strategie',
       'marketing',
       'erstellung von inhalten',
-      'social-media-influencer-kampagne',
+      'unsere schöpfer',
     ],
     whoEn:
       'Established in 1986 in the suburbs of Toronto, Heys International Ltd has become a global leader in luggage design, and is synonymous with luxury, fashionable, lightweight luggage with high standard of excellence in workmanship and quality.',
@@ -217,11 +207,11 @@ export const caseStudies = [
     boldDe: 'Zielgruppe: 20-35 jährige Frauen aus Europa / USA',
     boldCz: 'Cílová skupina: ženské publikum ve věku 20-35 let z Evropy / USA',
     whatEn:
-      'Heys Luggage joined forces with five talented Planetopedia creators from five countries, delivering resounding success and reaching new heights on social media. Together, we brought the world to life, inspiring audiences worldwide.',
+      'Heys Luggage joined forces with five talented creators from five countries, delivering resounding success and reaching new heights on social media. Together, we brought the world to life, inspiring audiences worldwide.',
     whatCz:
-      'Heys Luggage hat sich mit fünf talentierten Planetopedia-Machern aus fünf Ländern zusammengetan, um einen durchschlagenden Erfolg zu erzielen und in den sozialen Medien neue Höhen zu erreichen. Gemeinsam haben wir die Welt zum Leben erweckt und das Publikum weltweit inspiriert.',
+      'Společnost Heys Luggage spojila síly s pěti talentovanými tvůrci z pěti zemí, dosáhla obrovského úspěchu a nových výšin na sociálních sítích. Společně jsme oživili svět a inspirovali publikum po celém světě.',
     whatDe:
-      'Heys Luggage spojili své síly s pěti talentovanými Planetopedia tvůrci z pěti zemí, dosáhli obrovského úspěchu a dosáhli nových výšin na sociálních sítích. Společně jsme inspirovali publikum po celém světě.',
+      'Heys Luggage hat sich mit fünf talentierten Künstlern aus fünf Ländern zusammengetan, um einen durchschlagenden Erfolg zu erzielen und in den sozialen Medien neue Maßstäbe zu setzen. Gemeinsam haben wir die Welt zum Leben erweckt und das Publikum weltweit inspiriert.',
     contentSrcs: [
       '/case-studies/heys-luggage/content/1.webp',
       '/case-studies/heys-luggage/content/2.webp',

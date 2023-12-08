@@ -273,13 +273,11 @@ const Contact = () => {
                         />
                         <Label>
                           {language === 'en' ? (
-                            <>Social Media Influencer Marketing Campaigns</>
+                            <>Instagram feature</>
                           ) : language === 'cs' ? (
-                            <>Marketingové kampaně na sociální sítích</>
+                            <>Sdílení na našem Instagramu</>
                           ) : language === 'de' ? (
-                            <>
-                              Influencer-Marketing-Kampagnen für soziale Medien
-                            </>
+                            <>Instagram-Funktion</>
                           ) : null}
                         </Label>
                       </div>
@@ -378,7 +376,7 @@ const Contact = () => {
               )}
             />
 
-            <p className='text-zinc-600 text-sm block mt-4'>
+            <p className='block mt-4 text-sm text-zinc-600'>
               {language === 'en' && (
                 <>
                   By clicking on Submit I agree to the processing of personal

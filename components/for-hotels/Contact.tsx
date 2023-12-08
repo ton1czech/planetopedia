@@ -317,7 +317,9 @@ const Contact = () => {
                           {language === 'en' ? (
                             <>Blog Post / Instagram feature</>
                           ) : language === 'cs' ? (
-                            <>Příspěvek na blogu / Funkce Instagramu</>
+                            <>
+                              Příspěvek na blogu / Sdílení na našem Instagramu
+                            </>
                           ) : language === 'de' ? (
                             <>Blogbeitrag / Instagram-Funktion</>
                           ) : null}
@@ -420,7 +422,7 @@ const Contact = () => {
               )}
             />
 
-            <p className='text-zinc-400 text-sm block mt-4'>
+            <p className='block mt-4 text-sm text-zinc-400'>
               {language === 'en' && (
                 <>
                   By clicking on Submit I agree to the processing of personal

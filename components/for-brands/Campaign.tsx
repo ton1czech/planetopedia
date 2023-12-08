@@ -20,39 +20,36 @@ const Campaign = () => {
           className='flex flex-col justify-between gap-10 md:gap-0'
         >
           <div>
-            <p className='uppercase md:text-lg text-justify text-zinc-200'>
-              {language === 'en' && <>social media influencer campaign</>}
-              {language === 'cs' && (
-                <>influencerská kampaň na sociálních sítích</>
-              )}
-              {language === 'de' && <>social-media-influencer-kampagne</>}
+            <p className='text-justify uppercase md:text-lg text-zinc-200'>
+              {language === 'en' && <>we are everywhere</>}
+              {language === 'cs' && <>jsme všude</>}
+              {language === 'de' && <>wir sind überall</>}
             </p>
-            <h1 className='font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-2'>
+            <h1 className='mb-2 text-3xl font-bold text-white md:text-4xl lg:text-5xl'>
               Heys Luggage
             </h1>
             <p className='text-zinc-300'>
               {language === 'en' && (
                 <>
-                  Heys Luggage joined forces with five talented Planetopedia
-                  creators from five countries, delivering resounding success
-                  and reaching new heights on social media. Together, we brought
-                  the world to life, inspiring audiences worldwide.
+                  Heys Luggage joined forces with five talented creators from
+                  five countries, delivering resounding success and reaching new
+                  heights on social media. Together, we brought the world to
+                  life, inspiring audiences worldwide.
                 </>
               )}
               {language === 'cs' && (
                 <>
                   Společnost Heys Luggage spojila síly s pěti talentovanými
-                  pracovníky Planetopedia tvůrců z pěti zemí, kteří dosáhli
-                  obrovského úspěchu a a dosáhli nových výšin na sociálních
-                  sítích. Společně jsme přinesli svět k životu a inspirovali
+                  tvůrci z pěti zemí, dosáhla obrovského úspěchu a nových výšin
+                  na sociálních sítích. Společně jsme oživili svět a inspirovali
                   publikum po celém světě.
                 </>
               )}
               {language === 'de' && (
                 <>
-                  Heys Luggage hat sich mit fünf talentierten Planetopedia aus
-                  fünf Ländern zusammen, um einen durchschlagenden Erfolg zu
-                  erzielen und neue Höhen in den sozialen Medien zu erreichen.
+                  Heys Luggage hat sich mit fünf talentierten Künstlern aus fünf
+                  Ländern zusammengetan, um einen durchschlagenden Erfolg zu
+                  erzielen und in den sozialen Medien neue Maßstäbe zu setzen.
                   Gemeinsam haben wir die Welt zum Leben erweckt und das
                   Publikum weltweit inspiriert.
                 </>

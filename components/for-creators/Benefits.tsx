@@ -31,7 +31,7 @@ const Item = ({
   const { language } = useLanguage(state => state)
   return (
     <li>
-      <h3 className='text-xl lg:text-2xl font-semibold'>
+      <h3 className='text-xl font-semibold lg:text-2xl'>
         {language === 'en' ? (
           <>{headingEn}</>
         ) : language === 'cs' ? (
@@ -81,18 +81,18 @@ const Item = ({
 const Benefits = () => {
   return (
     <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-black h-[calc(100vh-80px)]'>
-      <Container className='py-10 text-white h-full'>
-        <div className='grid lg:grid-cols-2 gap-8 h-full place-content-center'>
+      <Container className='h-full py-10 text-white'>
+        <div className='grid h-full gap-8 lg:grid-cols-2 place-content-center'>
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5 }}
             className='mb-12'
           >
-            <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold'>
+            <h1 className='text-2xl font-bold md:text-3xl lg:text-4xl'>
               Main Benefits
             </h1>
-            <ul className='mt-4 md:mt-10 2xl:mt-12 space-y-6 md:space-y-10'>
+            <ul className='mt-4 space-y-6 md:mt-10 2xl:mt-12 md:space-y-10'>
               <Item
                 headingEn='1. Instagram connection'
                 headingCz='1. Spojení na Instagramu'
@@ -113,9 +113,9 @@ const Benefits = () => {
                 headingEn='3. Work together'
                 headingCz='3. Pracujme společně'
                 headingDe='3. Gemeinsam arbeiten'
-                textEn='Unlock success through our social media influencer campaigns.'
-                textCz='Odemkněte si úspěch prostřednictvím našich kampaní pro influencery na sociálních sítích.'
-                textDe='Erschließen Sie sich den Erfolg durch unsere Social-Media-Influencer-Kampagnen.'
+                textEn='Unlock success through our community.'
+                textCz='Odemkněte si úspěch prostřednictvím naší komunity.'
+                textDe='Erschließen Sie sich den Erfolg durch unsere Gemeinschaft.'
               />
               <Item
                 headingEn='4. Whatsapp Group'
@@ -148,7 +148,7 @@ const Benefits = () => {
             </ul>
           </motion.div>
 
-          <div className='lg:block overflow-hidden hidden'>
+          <div className='hidden overflow-hidden lg:block'>
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -191,7 +191,7 @@ const Benefits = () => {
           </div>
         </div>
 
-        <p className='text-sm text-zinc-400 text-center absolute bottom-10 left-1/2 -translate-x-1/2'>
+        <p className='absolute text-sm text-center -translate-x-1/2 text-zinc-400 bottom-10 left-1/2'>
           #planetopedia Team
         </p>
       </Container>

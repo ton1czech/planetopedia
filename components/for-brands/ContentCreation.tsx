@@ -22,24 +22,25 @@ const ContentCreation = () => {
         >
           {language === 'en' && (
             <>
-              Because our team is spread <b>worldwide</b>, we can reach many of
-              the most beautiful locations on Earth to successfully capture
+              Because our community is spread <b>worldwide</b>, we can reach
+              many of the most beautiful locations on Earth to successfully
+              capture
               <b> your products/services </b>at its best and realize the
               <b> goal </b>you want <b> to achieve </b>as a brand.
             </>
           )}
           {language === 'cs' && (
             <>
-              Protože je náš tým rozšířen <b>po celém světě</b>, můžeme se
-              dostat na mnoho nejkrásnějších míst na Zemi, abychom úspěšně
+              Protože je náše komunita rozšířena <b>po celém světě</b>, můžeme
+              se dostat na mnoho nejkrásnějších míst na Zemi, abychom úspěšně
               zachytili<b> vaše produkty/služby </b>v tom nejlepším světle a
               realizovali <b>cíl,</b> kterého chcete jako značka dosáhnout.
             </>
           )}
           {language === 'de' && (
             <>
-              Da unser Team <b>weltweit </b>verteilt ist, können wir viele der
-              schönsten Orte der Welt erreichen, um
+              Da unser Gemeinschaft <b>weltweit </b>verteilt ist, können wir
+              viele der schönsten Orte der Welt erreichen, um
               <b> Ihre Produkte/Dienstleistungen </b>von ihrer besten Seite zu
               zeigen und das <b>Ziel</b>, das Sie als Marke erreichen wollen, zu
               verwirklichen.
