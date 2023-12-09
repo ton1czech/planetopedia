@@ -118,9 +118,9 @@ const Filter = ({ setService, service }: FilterProps) => {
         service={service}
       />
       <Item
-        labelEn='our creators'
-        labelCz='naši tvůrci'
-        labelDe='unsere schöpfer'
+        labelEn='social media influencer campaign'
+        labelCz='influencerská kampaň na sociálních sítích'
+        labelDe='social-media-influencer-kampagne'
         setService={setService}
         service={service}
       />
