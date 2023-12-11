@@ -39,8 +39,11 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
       )}
     >
       <X
-        className='absolute text-white top-5 right-5'
         onClick={() => setIsOpen(false)}
+        className={cn(
+          'absolute top-5 right-5',
+          black ? 'text-white' : 'text-black'
+        )}
       />
       <motion.ul
         initial={{ y: 50, opacity: 0, x: '-50%' }}
