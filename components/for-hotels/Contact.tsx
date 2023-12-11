@@ -427,11 +427,7 @@ const Contact = () => {
                 <>
                   By clicking on Submit I agree to the processing of personal
                   data. Read the{' '}
-                  <Link
-                    href='/personal-data-protection'
-                    target='_blank'
-                    className='underline'
-                  >
+                  <Link href='/personal-data-protection' className='underline'>
                     GDPR
                   </Link>{' '}
                   for more information.
@@ -441,11 +437,7 @@ const Contact = () => {
                 <>
                   Kliknutím na Odeslat souhlasím se zpracováním osobních údajů.
                   Přečtěte si{' '}
-                  <Link
-                    href='/personal-data-protection'
-                    target='_blank'
-                    className='underline'
-                  >
+                  <Link href='/personal-data-protection' className='underline'>
                     GDPR
                   </Link>{' '}
                   pro více informací.
@@ -455,11 +447,7 @@ const Contact = () => {
                 <>
                   Durch Anklicken von Einreichen stimme ich der Verarbeitung
                   personenbezogener Daten Daten. Lesen Sie die{' '}
-                  <Link
-                    href='/personal-data-protection'
-                    className='underline'
-                    target='_blank'
-                  >
+                  <Link href='/personal-data-protection' className='underline'>
                     GDPR
                   </Link>{' '}
                   für weitere Informationen.

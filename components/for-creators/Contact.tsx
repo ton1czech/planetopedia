@@ -87,7 +87,7 @@ const Contact = () => {
         className='h-full'
       >
         <Container className='grid place-content-center h-full w-full sm:w-[60%] lg:w-[45%]'>
-          <h2 className='mb-5 text-2xl md:text-3xl 2xl:text-4xl font-bold text-center'>
+          <h2 className='mb-5 text-2xl font-bold text-center md:text-3xl 2xl:text-4xl'>
             {language === 'en' ? (
               <>A new era begins with Planetopedia.</>
             ) : language === 'cs' ? (
@@ -143,14 +143,13 @@ const Contact = () => {
                 )}
               />
 
-              <p className='text-zinc-600 text-sm block mt-4'>
+              <p className='block mt-4 text-sm text-zinc-600'>
                 {language === 'en' && (
                   <>
                     By clicking on Submit I agree to the processing of personal
                     data. Read the{' '}
                     <Link
                       href='/personal-data-protection'
-                      target='_blank'
                       className='underline'
                     >
                       GDPR
@@ -164,7 +163,6 @@ const Contact = () => {
                     údajů. Přečtěte si{' '}
                     <Link
                       href='/personal-data-protection'
-                      target='_blank'
                       className='underline'
                     >
                       GDPR
@@ -179,7 +177,6 @@ const Contact = () => {
                     <Link
                       href='/perosnal-data-protection'
                       className='underline'
-                      target='_blank'
                     >
                       GDPR
                     </Link>{' '}
