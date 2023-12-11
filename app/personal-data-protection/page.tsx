@@ -62,13 +62,13 @@ export default function Page() {
             {language === 'en' && (
               <>
                 Personal data means any information about an identified or
-                identifiable natural person; an identifiable natural person is a
-                natural person who can be identified, directly or indirectly, in
-                particular by reference to an identifier such as a name, an
-                identification number, location data, a network identifier or to
-                one or more specific elements of the physical, physiological,
-                genetic, mental, economic, cultural or social identity of that
-                natural person.
+                identifiable natural person; an identifiable natural person
+                refers to a natural person who can be directly or indirectly
+                identified, in particular, using a specific identifier such as a
+                name, an identification number, location data, a network
+                identifier or one or more particular elements of the physical,
+                physiological, genetic, mental, economic, cultural or social
+                identity of such natural person.
               </>
             )}
             {language === 'cs' && (
@@ -101,7 +101,9 @@ export default function Page() {
 
         <div className='mb-10'>
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>Who we are and how to contact us - data controller</>
+            )}
             {language === 'cs' && (
               <>Kdo jsme a jak nás kontaktovat - správce osobních údajů</>
             )}
@@ -110,11 +112,11 @@ export default function Page() {
           <p>
             {language === 'en' && (
               <>
-                Your personal data is carefully managed by Dominik Grössl, ID
-                No.: 14184397, Němčice 26, Postal Code 345 06, Czech Republic
-                (hereinafter: "Controller").
+                Your personal data is carefully managed by Dominik Grössl,
+                Company Reg. No.: 14184397, Němčice 26, Postal Code 345 06,
+                Czech Republic (hereinafter referred to as the “Controller”).
                 <br />
-                Email: info@planetopedia.agency
+                E-mail: info@planetopedia.agency
                 <br />
                 Phone: +420 739 830 034
               </>
@@ -150,33 +152,37 @@ export default function Page() {
             )}
           </h2>
           <p>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>The Controller processes the following data:</>
+            )}
             {language === 'cs' && <>Správce zpracovává tyto údaje:</>}
             {language === 'de' && <></>}
           </p>
-          <ul className='ml-6 list-disc'>
+          <ul className='mb-4 ml-6 list-disc'>
             <li>
-              {language === 'en' && <>Full Name</>}
+              {language === 'en' && <>Full name</>}
               {language === 'cs' && <>Celé jméno</>}
               {language === 'de' && <>Vollständiger Name</>}
             </li>
             <li>
-              {language === 'en' && <>Instagram Username</>}
+              {language === 'en' && <>Instagram username</>}
               {language === 'cs' && <>Uživatelské Instagram jméno</>}
               {language === 'de' && <>Instagram-Benutzername</>}
             </li>
             <li>
-              {language === 'en' && <>Email address</>}
+              {language === 'en' && <>E-mail address</>}
               {language === 'cs' && <>E-mailová adresa</>}
               {language === 'de' && <>E-Mail Adresse</>}
             </li>
             <li>
-              {language === 'en' && <>Brand Name</>}
+              {language === 'en' && <>Company name</>}
               {language === 'cs' && <>Název firmy</>}
               {language === 'de' && <>Markenname</>}
             </li>
             <li>
-              {language === 'en' && <></>}
+              {language === 'en' && (
+                <>Identification data contained in the service contract.</>
+              )}
               {language === 'cs' && (
                 <>
                   Identifikační údaje obsažené ve smlouvě o poskytování služeb
@@ -185,22 +191,36 @@ export default function Page() {
               {language === 'de' && <></>}
             </li>
           </ul>
+
+          <p>
+            {language === 'en' && (
+              <>
+                We collect the aforementioned data to the extent necessary to
+                identify you as our Client; we do not process your other
+                personal data.
+              </>
+            )}
+            {language === 'cs' && (
+              <>
+                Tyto údaje sbíráme v rozsahu nezbytném pro Vaši identifikaci,
+                jakožto našeho klienta, jiné Vaše osobní údaje nezpracováváme.
+              </>
+            )}
+            {language === 'de' && <></>}
+          </p>
         </div>
 
         <div className='mb-10'>
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
-            {language === 'en' && <>Purpose and duration of processing</>}
+            {language === 'en' && <>Purpose of processing</>}
             {language === 'cs' && <>Účel zpracování</>}
             {language === 'de' && <>Zweck und Dauer der Verarbeitung</>}
           </h2>
           <p className='mb-4'>
             {language === 'en' && (
               <>
-                We process personal data for the purpose of processing your
-                enquiry. The processing time varies according to the purpose.
-                For the purpose of processing your enquiry, we store the data
-                for 1 year and if you become our client, we store the data for
-                the duration of the cooperation.{' '}
+                We process your personal data to fulfil all our legal and
+                contractual obligations related to processing your enquiry.
               </>
             )}
             {language === 'cs' && (
@@ -220,7 +240,9 @@ export default function Page() {
             )}
           </p>
           <p>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>Our legal basis for processing personal data is:</>
+            )}
             {language === 'cs' && (
               <>Zákonným důvodem zpracování osobních údajů je</>
             )}
@@ -228,7 +250,12 @@ export default function Page() {
           </p>
           <ul className='mb-4 ml-6 list-disc'>
             <li>
-              {language === 'en' && <></>}
+              {language === 'en' && (
+                <>
+                  The performance of a contract between you and the Controller
+                  pursuant to Article 6(1)(b) of the GDPR
+                </>
+              )}
               {language === 'cs' && (
                 <>
                   plnění smlouvy mezi Vámi a správcem podle čl. 6 odst. 1 písm.
@@ -239,13 +266,26 @@ export default function Page() {
             </li>
           </ul>
           <p>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>The purpose of the processing of personal data is to</>
+            )}
             {language === 'cs' && <>Účelem zpracování osobních údajů je</>}
             {language === 'de' && <></>}
           </p>
           <ul className='ml-6 list-disc'>
             <li>
-              {language === 'en' && <></>}
+              {language === 'en' && (
+                <>
+                  Process your enquiry and exercise the rights and obligations
+                  arising from the contractual relationship between you and the
+                  Controller. When you place an order, we need to obtain
+                  personal data to successfully process it (name and address,
+                  contact details). The provision of personal data is necessary
+                  for the conclusion and performance of the contract; without
+                  your personal data, the Controller cannot conclude or perform
+                  the contract.
+                </>
+              )}
               {language === 'cs' && (
                 <>
                   vyřízení Vaší poptávky a výkon práv a povinností vyplývajících
@@ -264,14 +304,22 @@ export default function Page() {
 
         <div className='mb-10'>
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
-            {language === 'en' && <></>}
+            {language === 'en' && <>Legal grounds for processing</>}
             {language === 'cs' && <>Právní základ zpracování</>}
             {language === 'de' && <></>}
           </h2>
 
           <ul className='ml-6 list-disc'>
             <li>
-              {language === 'en' && <></>}
+              {language === 'en' && (
+                <>
+                  The Controller processes personal data to fulfil all his legal
+                  and contractual obligations. Another legal ground comprises
+                  the Controller’s legitimate interests, such as protecting the
+                  Controller’s property and persons or enforcing the
+                  Controller’s legal claims.
+                </>
+              )}
               {language === 'cs' && (
                 <>
                   Správce zpracovává osobní údaje z důvodu plnění všech svých
@@ -283,7 +331,16 @@ export default function Page() {
               {language === 'de' && <></>}
             </li>
             <li>
-              {language === 'en' && <></>}
+              {language === 'en' && (
+                <>
+                  The accounting and tax documents used to bill for the services
+                  provided contain some personal data (name and surname of the
+                  Client, type and scope of the service provided). We keep such
+                  documents only to comply with the obligations imposed by the
+                  relevant accounting and tax legislation for the period
+                  required by such legislation.
+                </>
+              )}
               {language === 'cs' && (
                 <>
                   Účetní a daňové doklady, na základě kterých je poskytnuta péči
@@ -301,12 +358,18 @@ export default function Page() {
 
         <div className='mb-10'>
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
-            {language === 'en' && <></>}
+            {language === 'en' && <>Processing period</>}
             {language === 'cs' && <>Doba zpracování</>}
             {language === 'de' && <></>}
           </h2>
           <p className='mb-4'>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                The Controller starts processing personal data when the Client
+                has provided it to the Controller or has consented to the
+                processing.
+              </>
+            )}
             {language === 'cs' && (
               <>
                 Správce osobní údaje zpracovává od okamžiku, kdy mu je klient
@@ -316,7 +379,13 @@ export default function Page() {
             {language === 'de' && <></>}
           </p>
           <p className='mb-4'>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                The personal data is stored in compliance with the applicable
+                legal regulations or until the consent granted for the purpose
+                is withdrawn.
+              </>
+            )}
             {language === 'cs' && (
               <>
                 Osobní údaje jsou uloženy dle platných právních předpisů či do
@@ -327,7 +396,16 @@ export default function Page() {
             {language === 'de' && <></>}
           </p>
           <p className='mb-4'>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                The Controller shall retain personal data for the period
+                necessary to exercise the rights and obligations arising from
+                the contractual relationship between you and the Controller and
+                to assert claims arising from such contractual relationship (for
+                ten (10) years from the termination of the contractual
+                relationship).
+              </>
+            )}
             {language === 'cs' && (
               <>
                 Správce uchovává osobní údaje po dobu nezbytnou k výkonu práv a
@@ -339,7 +417,12 @@ export default function Page() {
             {language === 'de' && <></>}
           </p>
           <p className='mb-4'>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                The Controller shall delete the personal data after the expiry
+                of the retention period.
+              </>
+            )}
             {language === 'cs' && (
               <>
                 Po uplynutí doby uchovávání osobních údajů správce osobní údaje
@@ -349,7 +432,12 @@ export default function Page() {
             {language === 'de' && <></>}
           </p>
           <p className='mb-4'>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                If you become our Client, we shall retain your data for the
+                duration of our cooperation.
+              </>
+            )}
             {language === 'cs' && (
               <>
                 A v případě, že se stanete naším klientem, uchováváme data po
@@ -362,14 +450,23 @@ export default function Page() {
 
         <div className='mb-10'>
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
-            {language === 'en' && <>Security and protection of personal data</>}
+            {language === 'en' && <>Personal data recipients</>}
             {language === 'cs' && <>Příjemci osobních údajů</>}
             {language === 'de' && (
               <>Sicherheit und Schutz von personenbezogenen Daten</>
             )}
           </h2>
           <p className='mb-4'>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                In addition to the Client, the recipients of the personal data
+                may include, in accordance with the provisions of the
+                legislation, the Controller, employees authorised by the
+                Controller and public authorities within the limits set by the
+                legislation. The recipients of personal data may also include
+                the following persons:
+              </>
+            )}
             {language === 'cs' && (
               <>
                 Příjemci osobních údajů mohou v souladu s ustanoveními právních
@@ -384,7 +481,12 @@ export default function Page() {
 
           <ul className='ml-6 list-disc'>
             <li>
-              {language === 'en' && <></>}
+              {language === 'en' && (
+                <>
+                  Participating in the implementation of services/payments under
+                  the contract,
+                </>
+              )}
               {language === 'cs' && (
                 <>
                   podílející se na realizaci služeb/realizaci plateb na základě
@@ -394,7 +496,9 @@ export default function Page() {
               {language === 'de' && <></>}
             </li>
             <li>
-              {language === 'en' && <></>}
+              {language === 'en' && (
+                <>Involved in the operation of the services:</>
+              )}
               {language === 'cs' && (
                 <>podílející se na zajištění provozu služeb,</>
               )}
@@ -403,7 +507,19 @@ export default function Page() {
           </ul>
 
           <p className='mb-4'>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                In addition to the Controller, personal data may be processed by
+                processors to support the Controller’s activities (e.g.,
+                collection of receivables or legal services) based on data
+                processing contracts concluded in accordance with the General
+                Data Protection Regulation. The processors shall only be
+                provided with the personal data necessary for the purpose and
+                only with the data of those clients to whom the specific support
+                activity relates. The data processors providing the above
+                activities are carefully selected.
+              </>
+            )}
             {language === 'cs' && (
               <>
                 Osobní údaje mohou být pro zajištění podpůrné činnosti správce
@@ -421,7 +537,9 @@ export default function Page() {
           </p>
 
           <p>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>Intention to transfer data to a third country: None</>
+            )}
             {language === 'cs' && <>Úmysl předat údaje do třetí země: není</>}
             {language === 'de' && <></>}
           </p>
@@ -429,12 +547,17 @@ export default function Page() {
 
         <div className='mb-10'>
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
-            {language === 'en' && <></>}
+            {language === 'en' && <>Processors</>}
             {language === 'cs' && <>Zpracovatelé</>}
             {language === 'de' && <></>}
           </h2>
           <p>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                We use third parties to offer you a superior service. Below you
+                will find their directory.
+              </>
+            )}
             {language === 'cs' && (
               <>
                 Abychom vám nabízeli špičkové služby, využíváme služby třetích
@@ -454,21 +577,34 @@ export default function Page() {
 
         <div className='mb-10'>
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>Sources and categories of personal data processed</>
+            )}
             {language === 'cs' && (
               <>Zdroje a kategorie zpracovávaných osobních údajů</>
             )}
             {language === 'de' && <></>}
           </h2>
           <p className='mb-4'>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                The Controller shall only obtain personal data from the Client
+                in question.
+              </>
+            )}
             {language === 'cs' && (
               <>Správce získává osobní údaje pouze od daného klienta.</>
             )}
             {language === 'de' && <></>}
           </p>
           <p className='mb-4'>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                The Controller shall process personal data provided by you or
+                personal data obtained by the Controller as a result of the
+                fulfilment of your enquiry.
+              </>
+            )}
             {language === 'cs' && (
               <>
                 Správce zpracovává osobní údaje, které jste mu poskytli nebo
@@ -479,7 +615,12 @@ export default function Page() {
             {language === 'de' && <></>}
           </p>
           <p>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                The Controller shall process your identification and contact
+                data and data necessary for the performance of the contract.
+              </>
+            )}
             {language === 'cs' && (
               <>
                 Správce zpracovává Vaše identifikační a kontaktní údaje a údaje
@@ -492,12 +633,19 @@ export default function Page() {
 
         <div className='mb-10'>
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
-            {language === 'en' && <></>}
+            {language === 'en' && <>Security and protection of personal data</>}
             {language === 'cs' && <>Zabezpečení a ochrana osobních údajů</>}
             {language === 'de' && <></>}
           </h2>
           <p className='mb-4'>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                The Controller declares that all processing of the Client’s
+                personal data, or any necessary transfer thereof, shall be
+                conducted with full respect for the Client’s privacy and in
+                accordance with applicable law.
+              </>
+            )}
             {language === 'cs' && (
               <>
                 Správce prohlašuje, že veškeré zpracování osobních údajů
@@ -509,7 +657,13 @@ export default function Page() {
             {language === 'de' && <></>}
           </p>
           <p className='mb-4'>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                The Controller shall treat personal data as the property of the
+                Clients and shall be entitled to use it in particular for its
+                purposes as listed in this measure.
+              </>
+            )}
             {language === 'cs' && (
               <>
                 Správce k osobním údajům přistupuje jako k vlastnictví klientů,
@@ -520,7 +674,12 @@ export default function Page() {
             {language === 'de' && <></>}
           </p>
           <p className='mb-4'>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                The Controller declares he has taken all appropriate technical
+                and organisational measures to secure the personal data.
+              </>
+            )}
             {language === 'cs' && (
               <>
                 Správce prohlašuje, že přijal veškerá vhodná technická a
@@ -530,7 +689,12 @@ export default function Page() {
             {language === 'de' && <></>}
           </p>
           <p className='mb-4'>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                The Controller has taken technical measures to secure data
+                storage and storage of personal data in paper form.
+              </>
+            )}
             {language === 'cs' && (
               <>
                 Správce přijal technická opatření k zabezpečení datových úložišť
@@ -540,7 +704,14 @@ export default function Page() {
             {language === 'de' && <></>}
           </p>
           <p>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                We protect all electronic data stored by a secure protocol
+                (HTTPS encrypted with TLS), which covers the connection between
+                your web browser and our server from eavesdropping and data
+                fraud.
+              </>
+            )}
             {language === 'cs' && (
               <>
                 Veškerá elektronická data uložená chráníme zabezpečeným
@@ -555,25 +726,37 @@ export default function Page() {
 
         <div className='mb-10'>
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
-            {language === 'en' && <></>}
+            {language === 'en' && <>Your rights</>}
             {language === 'cs' && <>Vaše práva</>}
             {language === 'de' && <></>}
           </h2>
           <p>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>Under the terms and conditions set out in the GDPR, you have:</>
+            )}
             {language === 'cs' && <>Za podmínek stanovených v GDPR máte:</>}
             {language === 'de' && <></>}
           </p>
           <ul className='mb-4 ml-6 list-disc'>
             <li>
-              {language === 'en' && <></>}
+              {language === 'en' && (
+                <>
+                  The right of access to your personal data under Article 15 of
+                  the GDPR,
+                </>
+              )}
               {language === 'cs' && (
                 <>právo na přístup ke svým osobním údajům dle čl. 15 GDPR,</>
               )}
               {language === 'de' && <></>}
             </li>
             <li>
-              {language === 'en' && <></>}
+              {language === 'en' && (
+                <>
+                  The right to request a copy of the personal data processed
+                  pursuant to Article 15 GDPR,
+                </>
+              )}
               {language === 'cs' && (
                 <>
                   právo k vyžádání si kopie zpracovávaných osobních údajů dle
@@ -583,7 +766,13 @@ export default function Page() {
               {language === 'de' && <></>}
             </li>
             <li>
-              {language === 'en' && <></>}
+              {language === 'en' && (
+                <>
+                  The right to rectification of personal data pursuant to
+                  Article 16 GDPR, or restriction of processing pursuant to
+                  Article 18 GDPR,
+                </>
+              )}
               {language === 'cs' && (
                 <>
                   právo opravu osobních údajů dle čl. 16 GDPR, popřípadě omezení
@@ -593,28 +782,45 @@ export default function Page() {
               {language === 'de' && <></>}
             </li>
             <li>
-              {language === 'en' && <></>}
+              {language === 'en' && (
+                <>
+                  The right to the erasure of personal data pursuant to Article
+                  17 GDPR,
+                </>
+              )}
               {language === 'cs' && (
                 <>právo na výmaz osobních údajů dle čl. 17 GDPR,</>
               )}
               {language === 'de' && <></>}
             </li>
             <li>
-              {language === 'en' && <></>}
+              {language === 'en' && (
+                <>
+                  The right to object to processing under Article 21 GDPR; and
+                </>
+              )}
               {language === 'cs' && (
                 <>právo vznést námitku proti zpracování dle čl. 21 GDPR a</>
               )}
               {language === 'de' && <></>}
             </li>
             <li>
-              {language === 'en' && <></>}
+              {language === 'en' && (
+                <>The right to data portability under Article 20 GDPR.</>
+              )}
               {language === 'cs' && (
                 <>právo na přenositelnost údajů dle čl. 20 GDPR.</>
               )}
               {language === 'de' && <></>}
             </li>
             <li>
-              {language === 'en' && <></>}
+              {language === 'en' && (
+                <>
+                  The right to withdraw consent to processing in writing or
+                  electronically to the following address or e-mail:
+                  info@planetopedia.agency
+                </>
+              )}
               {language === 'cs' && (
                 <>
                   právo odvolat souhlas se zpracováním písemně nebo elektronicky
@@ -625,7 +831,15 @@ export default function Page() {
             </li>
           </ul>
           <p>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                You also have the right to lodge a complaint with the Data
+                Protection Authority if you believe your data protection rights
+                have been violated. The Client hereby acknowledges that the
+                Controller does not engage in automated decision-making,
+                including profiling.
+              </>
+            )}
             {language === 'cs' && (
               <>
                 Dále máte právo podat stížnost u Úřadu pro ochranu osobních
@@ -641,12 +855,19 @@ export default function Page() {
 
         <div className='mb-10'>
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
-            {language === 'en' && <></>}
+            {language === 'en' && <>Contact details</>}
             {language === 'cs' && <>Kontaktní údaje</>}
             {language === 'de' && <></>}
           </h2>
           <p>
-            {language === 'en' && <></>}
+            {language === 'en' && (
+              <>
+                In case of any uncertainties or questions regarding processing
+                your personal data, please feel free to contact us in writing at
+                any time at Dominik Grössl, Němčice 26, Postal Code 345 06,
+                Czech Republic.
+              </>
+            )}
             {language === 'cs' && (
               <>
                 V případě jakýchkoli nejasností, či dotazů ohledně zpracovávání
@@ -661,7 +882,7 @@ export default function Page() {
 
         <div className='mb-10'>
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
-            {language === 'en' && <>Final provisions</>}
+            {language === 'en' && <>Concluding provisions</>}
             {language === 'cs' && <>Závěrečná ustanovení</>}
             {language === 'de' && <>Schlussbestimmungen</>}
           </h2>
@@ -669,8 +890,8 @@ export default function Page() {
             {language === 'en' && (
               <>
                 By submitting your enquiry via the online form, you confirm that
-                you are aware of the privacy policy and that you accept it in
-                its entirety.
+                you are aware of the terms and conditions of the Privacy Policy
+                and that you accept them in their entirety.
               </>
             )}
             {language === 'cs' && (
@@ -691,10 +912,10 @@ export default function Page() {
           <p className='mb-4'>
             {language === 'en' && (
               <>
-                You agree to these terms and conditions by clicking "Submit" via
-                the online form. By clicking on "Submit" you confirm that you
-                have read the privacy policy and that you accept it in its
-                entirety.
+                You agree to the terms and conditions specified in this document
+                by clicking “Submit” online. By clicking on “Submit”, you
+                confirm that you have read the Privacy Policy and accept it in
+                its entirety.
               </>
             )}
             {language === 'cs' && (
@@ -718,10 +939,10 @@ export default function Page() {
           <p className='mb-4'>
             {language === 'en' && (
               <>
-                The administrator is entitled to change these conditions. It
-                will publish the new version of the Privacy Policy on its
-                website or send you a new version of the Privacy Policy to the
-                email address you have provided to the Controller.
+                The Controller is entitled to change the present terms and
+                conditions. He shall publish the new version of the Privacy
+                Policy on his website or send you a new version to the e-mail
+                address you provided to the Controller.
               </>
             )}
             {language === 'cs' && (
@@ -744,7 +965,10 @@ export default function Page() {
           </p>
           <p>
             {language === 'en' && (
-              <>These conditions shall take effect on 15 November 2023.</>
+              <>
+                The present terms and conditions will take effect on November
+                15th, 2023.
+              </>
             )}
             {language === 'cs' && (
               <>Tyto podmínky nabývají účinnosti dnem 15. 11. 2023.</>
