@@ -74,14 +74,14 @@ const Navbar = () => {
                 <NavItem
                   label={
                     language === 'en'
-                      ? 'Our Creators'
+                      ? 'Community'
                       : language === 'cs'
-                      ? 'Naši Tvůrci'
+                      ? 'Komunita'
                       : language === 'de'
-                      ? 'Unsere Schöpfer'
+                      ? 'Gemeinschaft'
                       : ''
                   }
-                  href='/creators'
+                  href='/community'
                   black={black}
                 />
                 <ExpandableNavItem

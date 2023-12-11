@@ -39,7 +39,7 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
       )}
     >
       <X
-        className='absolute top-5 right-5 text-white'
+        className='absolute text-white top-5 right-5'
         onClick={() => setIsOpen(false)}
       />
       <motion.ul
@@ -54,14 +54,14 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
         <MobileNavItem
           label={
             language === 'en'
-              ? 'Our Creators'
+              ? 'Community'
               : language === 'cs'
-              ? 'Naši Tvůrci'
+              ? 'Komunita'
               : language === 'de'
-              ? 'Unsere Schöpfer'
+              ? 'Gemeinschaft'
               : ''
           }
-          href='/creators'
+          href='/community'
           black={black}
           setIsOpen={setIsOpen}
         />
