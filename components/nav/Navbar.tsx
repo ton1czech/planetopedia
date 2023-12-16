@@ -71,7 +71,7 @@ const Navbar = () => {
                   black ? 'text-white' : 'text-black'
                 )}
               >
-                <NavItem
+                {/* <NavItem
                   label={
                     language === 'en'
                       ? 'Community'
@@ -83,7 +83,7 @@ const Navbar = () => {
                   }
                   href='/community'
                   black={black}
-                />
+                /> */}
                 <ExpandableNavItem
                   label='Blog'
                   links={[

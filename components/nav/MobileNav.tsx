@@ -54,7 +54,7 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
           black ? 'text-white' : 'text-black'
         )}
       >
-        <MobileNavItem
+        {/* <MobileNavItem
           label={
             language === 'en'
               ? 'Community'
@@ -67,7 +67,7 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
           href='/community'
           black={black}
           setIsOpen={setIsOpen}
-        />
+        /> */}
         <MobileExpandableNavItem
           label='Blog'
           links={[
