@@ -2,6 +2,7 @@ import Campaign from '@/components/for-brands/Campaign'
 import Charts from '@/components/for-brands/Charts'
 import Contact from '@/components/for-brands/Contact'
 import ContentCreation from '@/components/for-brands/ContentCreation'
+import Email from '@/components/for-brands/Email'
 import Feedback from '@/components/for-brands/Feedback'
 import Hero from '@/components/for-brands/Hero'
 import SocialMedia from '@/components/for-brands/SocialMedia'
@@ -22,7 +23,8 @@ export default function ForBrands() {
         <Video />
         <Web />
         <Feedback />
-        <Contact />
+        {/* <Contact /> */}
+        <Email />
       </div>
     </section>
   )
