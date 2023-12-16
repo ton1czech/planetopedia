@@ -17,7 +17,7 @@ const Footer = () => {
     >
       <Container className='hidden py-20 lg:block'>
         <div className='flex items-center justify-between lg:items-start mb-14 gap-y-14'>
-          <div>
+          <div className='text-sm'>
             <p className='text-zinc-100'>
               {language === 'en' && (
                 <>Dominik Grössl, Němčice 26, 34506 Němčice, Czech Republic</>
@@ -65,7 +65,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='flex flex-row items-start justify-center lg:justify-between'>
+        <div className='flex flex-row items-start justify-center lg:justify-between text-sm'>
           <p className='text-white'>
             &copy;{new Date().getFullYear()} Planetopedia,{' '}
             {language === 'en' && (
@@ -89,7 +89,7 @@ const Footer = () => {
           </Link>
         </div>
 
-        <p className='mt-2 text-sm text-center text-zinc-400 lg:text-left'>
+        <p className='mt-2 text-xs text-center text-zinc-400 lg:text-left'>
           {language === 'en' && <>website created by </>}
           {language === 'cs' && <>webové stránky vytvořil </>}
           {language === 'de' && <>Website erstellt von </>}
