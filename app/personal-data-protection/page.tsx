@@ -547,36 +547,6 @@ export default function Page() {
 
         <div className='mb-10'>
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
-            {language === 'en' && <>Processors</>}
-            {language === 'cs' && <>Zpracovatelé</>}
-            {language === 'de' && <></>}
-          </h2>
-          <p>
-            {language === 'en' && (
-              <>
-                We use third parties to offer you a superior service. Below you
-                will find their directory.
-              </>
-            )}
-            {language === 'cs' && (
-              <>
-                Abychom vám nabízeli špičkové služby, využíváme služby třetích
-                stran. Níže najdete jejich jmenovitý seznam.
-              </>
-            )}
-            {language === 'de' && <></>}
-          </p>
-          <ul className='mb-4 ml-6 list-disc'>
-            <li>
-              {language === 'en' && <>EmailJS (https://www.emailjs.com)</>}
-              {language === 'cs' && <>EmailJS (https://www.emailjs.com)</>}
-              {language === 'de' && <>EmailJS (https://www.emailjs.com)</>}
-            </li>
-          </ul>
-        </div>
-
-        <div className='mb-10'>
-          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
             {language === 'en' && (
               <>Sources and categories of personal data processed</>
             )}
@@ -833,20 +803,21 @@ export default function Page() {
           <p>
             {language === 'en' && (
               <>
-                You also have the right to lodge a complaint with the Data
-                Protection Authority if you believe your data protection rights
-                have been violated. The Client hereby acknowledges that the
-                Controller does not engage in automated decision-making,
-                including profiling.
+                You also have the right to lodge a complaint with the Office for
+                Personal Data Protection, located at Pplk. Sochora 27, 170 00
+                Prague 7, if you believe that your right to personal data
+                protection has been violated. The Client hereby acknowledges
+                that no automated decision-making, including profiling, takes
+                place at the controller.
               </>
             )}
             {language === 'cs' && (
               <>
                 Dále máte právo podat stížnost u Úřadu pro ochranu osobních
-                údajů, v případě, že se domníváte, že bylo porušeno Vaší právo
-                na ochranu osobních údajů. Klient tímto bere na vědomí, že u
-                správce nedochází k automatizovanému rozhodování, vč.
-                profilování.
+                údajů, se sídlem Pplk. Sochora 27, 170 00 Praha 7, v případě, že
+                se domníváte, že bylo porušeno Vaší právo na ochranu osobních
+                údajů. Klient tímto bere na vědomí, že u správce nedochází k
+                automatizovanému rozhodování, vč. profilování.
               </>
             )}
             {language === 'de' && <></>}
@@ -889,52 +860,20 @@ export default function Page() {
           <p className='mb-4'>
             {language === 'en' && (
               <>
-                By submitting your enquiry via the online form, you confirm that
-                you are aware of the terms and conditions of the Privacy Policy
-                and that you accept them in their entirety.
+                By sending your enquiry to the email address
+                info@planetopedia.agency you confirm that you are aware of the
+                terms and conditions of personal data protection and that you
+                accept them in their entirety.
               </>
             )}
             {language === 'cs' && (
               <>
-                Odesláním poptávky prostřednictvím internetového formuláře
+                Odesláním poptávky na emailovou adresu info@planetopedia.agency
                 potvrzujete, že jste seznámen/a s podmínkami ochrany osobních
                 údajů a že je v celém rozsahu přijímáte.
               </>
             )}
-            {language === 'de' && (
-              <>
-                Indem Sie Ihre Anfrage über das Online-Formular abschicken,
-                bestätigen Sie, dass Sie die Datenschutzbestimmungen zur
-                Kenntnis genommen haben und sie in vollem Umfang akzeptieren.
-              </>
-            )}
-          </p>
-          <p className='mb-4'>
-            {language === 'en' && (
-              <>
-                You agree to the terms and conditions specified in this document
-                by clicking “Submit” online. By clicking on “Submit”, you
-                confirm that you have read the Privacy Policy and accept it in
-                its entirety.
-              </>
-            )}
-            {language === 'cs' && (
-              <>
-                S těmito podmínkami souhlasíte kliknutím na „Odeslat“
-                prostřednictvím internetového formuláře. Kliknutím na „Odeslat“
-                potvrzujete, že jste seznámen/a s podmínkami ochrany osobních
-                údajů a že je v celém rozsahu přijímáte.
-              </>
-            )}
-            {language === 'de' && (
-              <>
-                Indem Sie im Online-Formular auf "Absenden" klicken, erklären
-                Sie sich mit diesen Bestimmungen und Bedingungen einverstanden.
-                Indem Sie auf "Absenden" klicken, bestätigen Sie, dass Sie die
-                Datenschutzbestimmungen gelesen haben und diese in vollem Umfang
-                akzeptieren.
-              </>
-            )}
+            {language === 'de' && <></>}
           </p>
           <p className='mb-4'>
             {language === 'en' && (
@@ -962,6 +901,15 @@ export default function Page() {
                 dem für die Verarbeitung Verantwortlichen mitgeteilt haben.
               </>
             )}
+          </p>
+          <p className='mb-4'>
+            {language === 'en' && (
+              <>The controller has not appointed a data protection officer.</>
+            )}
+            {language === 'cs' && (
+              <>Správce nejmenoval pověřence pro ochranu osobních údajů.</>
+            )}
+            {language === 'de' && <></>}
           </p>
           <p>
             {language === 'en' && (
