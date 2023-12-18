@@ -100,7 +100,7 @@ const Marketing = () => {
           </>
         ) : language === 'cs' ? (
           <>
-            Dosavadní výsledky pozitivně ovlivnilo: influencer kampaň,
+            Dosavadní výsledky pozitivně ovlivnili: influencer kampaně,
             marketingové kampaně na Seznam.cz / Google.com, pořádání eventů.
           </>
         ) : language === 'de' ? (

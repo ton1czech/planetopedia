@@ -41,7 +41,7 @@ const Work = () => {
           {language === 'cs' && (
             <>
               Od největších hotelových společností až po značky a světově
-              inspirativní marketingové agentury, naši klienti mají společnéj
+              inspirativní marketingové agentury, naši klienti mají společné
               jedno: velké výzvy, které vyžadují nový a odlišný přístup.
             </>
           )}
