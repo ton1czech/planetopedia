@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 
-const Cz = () => {
+const CzBarbora = () => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false)
 
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -53,4 +53,4 @@ const Cz = () => {
   )
 }
 
-export default Cz
+export default CzBarbora

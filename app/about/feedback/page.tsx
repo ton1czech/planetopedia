@@ -1,8 +1,9 @@
 'use client'
 
 import Container from '@/components/Container'
-import Cz from '@/components/feedback/Cz'
-import En from '@/components/feedback/En'
+import CzBarbora from '@/components/feedback/barbora/CzBarbora'
+import EnBarbora from '@/components/feedback/barbora/EnBarbora'
+import CzOndrej from '@/components/feedback/ondrej/CzOndrej'
 import Testimonials from '@/components/testimonials/Testimonials'
 import Videos from '@/components/testimonials/Videos'
 import { reviewsBrands } from '@/database/reviews'
@@ -56,22 +57,30 @@ export default function Feedback() {
               </>
             )}
           </h2>
+
           <div className='lg:hidden'>
             {language === 'cs' ? (
               <>
-                <Cz />
+                <CzOndrej />
               </>
             ) : (
               <>
-                <En />
+                <EnBarbora />
               </>
             )}
           </div>
 
-          <div className='lg:grid grid-cols-2 hidden gap-8 mb-20'>
-            <Cz />
-            <En />
-          </div>
+          {language === 'cs' ? (
+            <div className='lg:grid grid-cols-2 hidden gap-8 mb-20'>
+              <CzBarbora />
+              <CzOndrej />
+            </div>
+          ) : (
+            <div className='lg:grid grid-cols-2 hidden gap-8 mb-20'>
+              <CzOndrej />
+              <CzBarbora />
+            </div>
+          )}
           <Testimonials data={reviewsBrands} />
         </Container>
       </motion.div>
