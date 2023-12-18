@@ -22,16 +22,16 @@ const Charts = () => {
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className='text-2xl text-center text-black md:text-3xl mb-6'
+          className='text-2xl text-center text-black md:text-3xl mb-6 font-bold'
         >
           {language === 'en' && (
-            <>Social Media Management - Results Farma Hájek</>
+            <>Social Media Management - Our Client's Results</>
           )}
           {language === 'cs' && (
-            <>Správa Sociálních Sítí - Výsledky Farma Hájek</>
+            <>Správa Sociálních Sítí - Výsledky Našeho Klienta</>
           )}
           {language === 'de' && (
-            <>Social Media Management - Ergebnisse Farma Hájek</>
+            <>Social Media Management - Die Ergebnisse unseres Kunden</>
           )}
         </motion.h2>
 
