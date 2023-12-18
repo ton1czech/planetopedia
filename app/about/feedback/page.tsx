@@ -40,7 +40,7 @@ export default function Feedback() {
           </h2>
           <Videos data={videos} />
 
-          <h2 className='text-2xl md:text-3xl mt-8 md:mt-14 text-center mb-3'>
+          <h2 className='text-2xl md:text-3xl mt-8 md:mt-14 text-center mb-8'>
             {language === 'en' && (
               <>
                 What our <b>clients </b>say
@@ -71,12 +71,12 @@ export default function Feedback() {
           </div>
 
           {language === 'cs' ? (
-            <div className='lg:grid grid-cols-2 hidden gap-8 mb-16'>
+            <div className='lg:flex justify-center gap-20 hidden mb-16'>
               <CzBarbora />
               <CzOndrej />
             </div>
           ) : (
-            <div className='lg:grid grid-cols-2 hidden gap-8 mb-16'>
+            <div className='lg:flex justify-center hidden gap-20 mb-16'>
               <CzOndrej />
               <EnBarbora />
             </div>
