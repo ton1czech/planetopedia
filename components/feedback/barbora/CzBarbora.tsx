@@ -36,18 +36,18 @@ const CzBarbora = () => {
   }
 
   return (
-    <div>
+    <div className='grid place-content-center'>
       <h4 className='text-center md:text-lg xl:text-xl text-zinc-800'>
-        Ondřej Plic / Grundstein s. r. o.
+        Barbora Špádová / Rozmluv se s. r. o.
       </h4>
       <video
         ref={videoRef}
-        className='!max-w-[250px] md:!max-w-[300px] xl:!max-w-[310px] 2xl:!max-w-[370px] !h-[400px] sm:!h-[520px] md:!h-[580px] flex justify-center items-center mx-auto'
+        className='!max-w-[230px] md:!max-w-[330px] xl:!max-w-[380px] 2xl:!max-w-[450px] !h-[420px] sm:!h-[630px] md:!h-[800px]'
         onClick={handleClick}
         playsInline
         poster='/about/feedback/cz.webp'
       >
-        <source src='https://i.imgur.com/Zv9PPqv.mp4' />
+        <source src='' />
       </video>
     </div>
   )

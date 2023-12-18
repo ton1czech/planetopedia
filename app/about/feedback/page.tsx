@@ -71,12 +71,12 @@ export default function Feedback() {
           </div>
 
           {language === 'cs' ? (
-            <div className='lg:grid grid-cols-2 hidden gap-8 mb-20'>
+            <div className='lg:grid grid-cols-2 hidden gap-8 mb-16'>
               <CzBarbora />
               <CzOndrej />
             </div>
           ) : (
-            <div className='lg:grid grid-cols-2 hidden gap-8 mb-20'>
+            <div className='lg:grid grid-cols-2 hidden gap-8 mb-16'>
               <CzOndrej />
               <CzBarbora />
             </div>
