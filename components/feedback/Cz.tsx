@@ -45,9 +45,9 @@ const Cz = () => {
         className='!max-w-[250px] md:!max-w-[300px] xl:!max-w-[310px] 2xl:!max-w-[370px] !h-[400px] sm:!h-[520px] md:!h-[580px] flex justify-center items-center mx-auto'
         onClick={handleClick}
         playsInline
-        poster='/feedback/3.webp'
+        poster='/about/feedback/cz.webp'
       >
-        <source src='https://i.imgur.com/rKI6iYe.mp4' />
+        <source src='https://i.imgur.com/Zv9PPqv.mp4' />
       </video>
     </div>
   )

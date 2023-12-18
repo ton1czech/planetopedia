@@ -31,7 +31,7 @@ const Video = () => {
             {language === 'cs' && (
               <>
                 Planetopedia se specializuje na tvorbu poutavých fotografií,
-                video produkci a kampaně v sociálních sítích pro přední světové
+                video produkci a kampaně na sociálních sítích pro přední světové
                 luxusní společnosti, hotely, resorty.
               </>
             )}
