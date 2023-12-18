@@ -1,8 +1,8 @@
 'use client'
 
 import Container from '@/components/Container'
-import Cz from '@/components/for-brands/videos/Cz'
-import En from '@/components/for-brands/videos/En'
+import Cz from '@/components/feedback/Cz'
+import En from '@/components/feedback/En'
 import Testimonials from '@/components/testimonials/Testimonials'
 import Videos from '@/components/testimonials/Videos'
 import { reviewsBrands } from '@/database/reviews'
@@ -39,7 +39,7 @@ export default function Feedback() {
           </h2>
           <Videos data={videos} />
 
-          <h2 className='text-2xl md:text-3xl mb-4 md:mb-8 lg:mb-10 mt-8 md:mt-14'>
+          <h2 className='text-2xl md:text-3xl mt-8 md:mt-14 text-center'>
             {language === 'en' && (
               <>
                 What our <b>clients </b>say
@@ -68,7 +68,7 @@ export default function Feedback() {
             )}
           </div>
 
-          <div className='lg:grid grid-cols-2 hidden gap-8'>
+          <div className='lg:grid grid-cols-2 hidden gap-8 mb-20'>
             <Cz />
             <En />
           </div>
