@@ -78,7 +78,7 @@ export default function Feedback() {
           ) : (
             <div className='lg:grid grid-cols-2 hidden gap-8 mb-16'>
               <CzOndrej />
-              <CzBarbora />
+              <EnBarbora />
             </div>
           )}
           <Testimonials data={reviewsBrands} />

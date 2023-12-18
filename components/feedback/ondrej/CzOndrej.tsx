@@ -42,12 +42,12 @@ const CzOndrej = () => {
       </h4>
       <video
         ref={videoRef}
-        className='!max-w-[230px] md:!max-w-[330px] xl:!max-w-[380px] 2xl:!max-w-[450px] !h-[420px] sm:!h-[630px] md:!h-[800px]'
+        className='!max-w-[230px] md:!max-w-[330px] xl:!max-w-[380px] 2xl:!max-w-[450px] !h-[420px] sm:!h-[630px] md:!h-[720px]'
         onClick={handleClick}
         playsInline
-        poster='/about/feedback/cz.webp'
+        poster='/about/feedback/ondrej/cz.webp'
       >
-        <source src='' />
+        <source src='https://i.imgur.com/1kUzjAA.mp4' />
       </video>
     </div>
   )
