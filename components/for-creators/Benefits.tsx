@@ -29,6 +29,7 @@ const Item = ({
   multiEn,
 }: ItemProps) => {
   const { language } = useLanguage(state => state)
+
   return (
     <li>
       <h3 className='text-xl font-semibold lg:text-2xl'>
@@ -79,6 +80,8 @@ const Item = ({
 }
 
 const Benefits = () => {
+  const { language } = useLanguage(state => state)
+
   return (
     <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-black h-[calc(100vh-80px)]'>
       <Container className='h-full py-10 text-white'>
@@ -90,7 +93,9 @@ const Benefits = () => {
             className='mb-12'
           >
             <h1 className='text-2xl font-bold md:text-3xl lg:text-4xl'>
-              Main Benefits
+              {language === 'en' && 'Main Benefits'}
+              {language === 'cs' && 'Hlavní Výhody'}
+              {language === 'de' && 'Main Benefits'}
             </h1>
             <ul className='mt-4 space-y-6 md:mt-10 2xl:mt-12 md:space-y-10'>
               <Item
