@@ -45,9 +45,9 @@ const En = () => {
         className='!max-w-[250px] md:!max-w-[300px] xl:!max-w-[310px] 2xl:!max-w-[370px] !h-[400px] sm:!h-[520px] md:!h-[580px] flex justify-center items-center mx-auto'
         onClick={handleClick}
         playsInline
-        poster='/feedback/10.webp'
+        poster='/about/feedback/en.webp'
       >
-        <source src='https://i.imgur.com/hlARRzd.mp4' />
+        <source src='https://i.imgur.com/00ezrhJ.mp4' />
       </video>
     </div>
   )

@@ -39,7 +39,7 @@ export default function Feedback() {
           </h2>
           <Videos data={videos} />
 
-          <h2 className='text-2xl md:text-3xl mt-8 md:mt-14 text-center'>
+          <h2 className='text-2xl md:text-3xl mt-8 md:mt-14 text-center mb-3'>
             {language === 'en' && (
               <>
                 What our <b>clients </b>say
