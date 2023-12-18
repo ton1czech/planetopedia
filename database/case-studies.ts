@@ -193,19 +193,14 @@ export const caseStudies = [
       'strategy',
       'marketing',
       'content creation',
-      'social media influencer campaign',
+      'community of creators',
     ],
-    servicesCz: [
-      'strategie',
-      'marketing',
-      'tvorba obsahu',
-      'influencerská kampaň na sociálních sítích',
-    ],
+    servicesCz: ['strategie', 'marketing', 'tvorba obsahu', 'komunita tvůrců'],
     servicesDe: [
       'strategie',
       'marketing',
       'erstellung von inhalten',
-      'social-media-influencer-kampagne',
+      'Gemeinschaft der Schöpfer',
     ],
     whoEn:
       'Established in 1986 in the suburbs of Toronto, Heys International Ltd has become a global leader in luggage design, and is synonymous with luxury, fashionable, lightweight luggage with high standard of excellence in workmanship and quality.',

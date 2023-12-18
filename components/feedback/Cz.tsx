@@ -47,7 +47,7 @@ const Cz = () => {
         playsInline
         poster='/feedback/3.webp'
       >
-        <source src='https://i.imgur.com/nCUCUio.mp4' />
+        <source src='https://i.imgur.com/rKI6iYe.mp4' />
       </video>
     </div>
   )
