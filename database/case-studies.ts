@@ -148,9 +148,9 @@ export const caseStudies = [
       'verwaltung sozialer medien',
     ],
     whoEn:
-      'The language studio Rozmluv focuses on creating optimal conditions for rapid learning and mastering of foreign languages. They specialize in offering various language courses, including both commonly spoken languages and less common ones. In addition to traditional courses in English, German, and Russian, Rozmluv also provides instruction in Czech for foreigners, as well as Chinese and Vietnamese.',
+      'The language studio Rozmluv se focuses on creating optimal conditions for rapid learning and mastering of foreign languages. They specialize in offering various language courses, including both commonly spoken languages and less common ones. In addition to traditional courses in English, German, and Russian, Rozmluv se also provides instruction in Czech for foreigners, as well as Chinese and Vietnamese.',
     whoCz:
-      'Jazykové studio Rozmluv se zaměřuje na vytváření optimálních podmínek pro rychlé učení a zvládnutí cizího jazyka. Specializují se na nabízení různých jazykových kurzů, zahrnující jak světové jazyky, tak i méně obvyklé jazyky. Kromě tradičních kurzů angličtiny, němčiny a ruštiny. Rozmluvse také poskytuje výuku češtiny pro cizince, včetně čínštiny a vietnamštiny.',
+      'Jazykové studio Rozmluv se se zaměřuje na vytváření optimálních podmínek pro rychlé učení a zvládnutí cizího jazyka. Specializují se na nabízení různých jazykových kurzů, zahrnující jak světové jazyky, tak i méně obvyklé jazyky. Kromě tradičních kurzů angličtiny, němčiny a ruštiny. Rozmluv se také poskytuje výuku češtiny pro cizince, včetně čínštiny a vietnamštiny.',
     whoDe:
       'Das Sprachstudio Rozmluv konzentriert sich darauf, optimale Bedingungen für das schnelle Erlernen und Beherrschen von Fremdsprachen zu schaffen. Das Studio ist darauf spezialisiert, verschiedene Sprachkurse anzubieten, darunter sowohl häufig gesprochene als auch weniger verbreitete Sprachen. Neben den traditionellen Kursen in Englisch, Deutsch und Russisch bietet Rozmluv auch Unterricht in Tschechisch für Ausländer sowie in Chinesisch und Vietnamesisch an.',
     whatEn:

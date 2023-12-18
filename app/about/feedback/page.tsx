@@ -1,6 +1,8 @@
 'use client'
 
 import Container from '@/components/Container'
+import Cz from '@/components/for-brands/videos/Cz'
+import En from '@/components/for-brands/videos/En'
 import Testimonials from '@/components/testimonials/Testimonials'
 import Videos from '@/components/testimonials/Videos'
 import { reviewsBrands } from '@/database/reviews'
@@ -54,6 +56,22 @@ export default function Feedback() {
               </>
             )}
           </h2>
+          <div className='lg:hidden'>
+            {language === 'cs' ? (
+              <>
+                <Cz />
+              </>
+            ) : (
+              <>
+                <En />
+              </>
+            )}
+          </div>
+
+          <div className='lg:grid grid-cols-2 hidden gap-8'>
+            <Cz />
+            <En />
+          </div>
           <Testimonials data={reviewsBrands} />
         </Container>
       </motion.div>

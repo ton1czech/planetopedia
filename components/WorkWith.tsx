@@ -56,9 +56,8 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
             {language === 'cs' && (
               <>
                 Od největších hotelových společností až po značky a světově
-                inspirativní marketingových agentur, mají naši klienti společné
-                to, že jsou velcí velké výzvy, které vyžadují nový a odlišný
-                přístup.
+                inspirativní marketingové agentury, naši klienti mají společnéj
+                jedno: velké výzvy, které vyžadují nový a odlišný přístup.
               </>
             )}
             {language === 'de' && (
