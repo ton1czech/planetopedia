@@ -21,7 +21,7 @@ const Work = () => {
           className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl mb-5'
         >
           {language === 'en' && <>Our social media impact</>}
-          {language === 'cs' && <>Náš vliv na sociální média</>}
+          {language === 'cs' && <>Náš vliv na sociální sítě</>}
           {language === 'de' && <>Unser Einfluss auf die sozialen Medien</>}
         </motion.h1>
         <motion.p
@@ -39,10 +39,10 @@ const Work = () => {
           )}
           {language === 'cs' && (
             <>
-              Společnost Planetopedia se specializuje na vytváření značkového
-              obsahu a uvádění na trh kampaně v sociálních médiích. K tomu náš
-              tým používá poutavé techniky, které mají ohlas u našich klientů i
-              vašich čtenářů.
+              Planetopedia se specializuje na vytváření značkového obsahu a
+              zajištuje marketingové kampaně. K tomu náš tým používá poutavé
+              techniky, které mají ohlas u našich klientů i Vašich diváků a
+              zákazníků.
             </>
           )}
           {language === 'de' && (
@@ -89,9 +89,8 @@ const Work = () => {
           {language === 'cs' && (
             <>
               Od největších hotelových společností až po značky a světově
-              inspirativní marketingových agentur, mají naši klienti společné
-              to, že jsou velcí velké výzvy, které vyžadují nový a odlišný
-              přístup.
+              inspirativní marketingové agentury, naši klienti mají společnéj
+              jedno: velké výzvy, které vyžadují nový a odlišný přístup.
             </>
           )}
           {language === 'de' && (

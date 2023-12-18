@@ -25,7 +25,7 @@ const Review = () => {
             )}
             {language === 'cs' && (
               <>
-                <b>Maximalizace</b> vaší přítomnosti na sociálních sítích
+                <b>Maximalizace</b> Vaší přítomnosti na sociálních sítích
               </>
             )}
             {language === 'de' && (

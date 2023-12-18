@@ -36,7 +36,7 @@ const Web = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          <h2 className='text-2xl text-center text-black md:text-3xl mb-4'>
+          <h2 className='text-2xl text-center text-black md:text-3xl mb-4 font-bold'>
             {language === 'en' && <>Web Development</>}
             {language === 'cs' && <>Tvorba Webu</>}
             {language === 'de' && <>Web-Entwicklung</>}

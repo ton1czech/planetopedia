@@ -51,7 +51,7 @@ const Charts = () => {
             {language === 'en' ? (
               <>Followers</>
             ) : language === 'cs' ? (
-              <>Sledujících</>
+              <>Sledující</>
             ) : language === 'de' ? (
               <>Follower</>
             ) : null}
@@ -112,7 +112,7 @@ const Charts = () => {
             </>
           ) : language === 'cs' ? (
             <>
-              Dosavadní výsledky pozitivně ovlivnilo: influencer kampaň,
+              Dosavadní výsledky pozitivně ovlivnili: influencer kampaně,
               marketingové kampaně na Seznam.cz / Google.com, pořádání eventů.
             </>
           ) : language === 'de' ? (

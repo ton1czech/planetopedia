@@ -93,7 +93,7 @@ const Followers = () => {
           language === 'en'
             ? 'The beginning of the collaboration'
             : language === 'cs'
-            ? 'Začátek splupráce'
+            ? 'Začátek spolupráce'
             : language === 'de'
             ? 'Der Beginn der Zusammenarbeit'
             : '',

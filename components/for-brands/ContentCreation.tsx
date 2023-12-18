@@ -31,8 +31,8 @@ const ContentCreation = () => {
           )}
           {language === 'cs' && (
             <>
-              Protože je náše komunita rozšířena <b>po celém světě</b>, můžeme
-              se dostat na mnoho nejkrásnějších míst na Zemi, abychom úspěšně
+              Protože je naše komunita rozšířena <b>po celém světě</b>, můžeme
+              se dostat na mnoho krásných míst na Zemi, tak abychom úspěšně
               zachytili<b> vaše produkty/služby </b>v tom nejlepším světle a
               realizovali <b>cíl,</b> kterého chcete jako značka dosáhnout.
             </>
