@@ -42,7 +42,7 @@ const EnBarbora = () => {
       </h4>
       <video
         ref={videoRef}
-        className='!max-w-[230px] md:!max-w-[330px] xl:!max-w-[380px] 2xl:!max-w-[450px] !h-[420px] sm:!h-[630px] md:!h-[720px]'
+        className='!max-w-[230px] md:!max-w-[330px] xl:!max-w-[380px] 2xl:!max-w-[450px] !h-[420px] sm:!h-[630px] md:!h-[720px] mx-auto'
         onClick={handleClick}
         playsInline
         poster='/about/feedback/barbora/en.webp'
