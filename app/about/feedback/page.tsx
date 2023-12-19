@@ -58,7 +58,7 @@ export default function Feedback() {
             )}
           </h2>
 
-          <div className='lg:hidden'>
+          <div className='lg:hidden mb-10'>
             {language === 'cs' ? (
               <>
                 <CzOndrej />
@@ -71,7 +71,7 @@ export default function Feedback() {
           </div>
 
           {language === 'cs' ? (
-            <div className='lg:flex justify-center gap-20 hidden mb-16'>
+            <div className='lg:flex justify-center hidden gap-20 mb-16'>
               <CzBarbora />
               <CzOndrej />
             </div>
@@ -81,6 +81,7 @@ export default function Feedback() {
               <EnBarbora />
             </div>
           )}
+
           <Testimonials data={reviewsBrands} />
         </Container>
       </motion.div>
