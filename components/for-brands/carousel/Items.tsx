@@ -10,13 +10,13 @@ interface ItemsProps {
 
 const Items = ({ data }: ItemsProps) => {
   return (
-    <Carousel className='!h-[370px] sm:!h-[580px] md:!h-[750px]'>
+    <Carousel className='!h-[420px] sm:!h-[580px] md:!h-[750px]'>
       {data.map((item: any, index: any) => (
         <CarouselItem
           index={index}
           key={index}
           isPhone
-          className='!h-[370px] sm:!h-[580px] md:!h-[750px]'
+          className='!h-[420px] sm:!h-[580px] md:!h-[750px]'
         >
           <Item src={item.src} thumbnail={item.thumbnail} />
         </CarouselItem>

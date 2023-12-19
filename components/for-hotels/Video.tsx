@@ -9,7 +9,7 @@ const Video = () => {
 
   return (
     <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-black flex items-center h-[calc(100vh-80px)]'>
-      <Container className='py-10 w-full'>
+      <Container className='w-full'>
         <motion.h1
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -24,7 +24,7 @@ const Video = () => {
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className='text-zinc-300 text-center max-w-[80ch] mx-auto'
+          className='text-zinc-300 text-center max-w-[80ch] mx-auto mb-10 lg:mb-4'
         >
           {language === 'en' && (
             <>
