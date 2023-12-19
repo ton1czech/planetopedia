@@ -1,4 +1,3 @@
-import Container from '@/components/Container'
 import { useLanguage } from '@/store/useLanguage'
 import {
   Chart as ChartJS,
@@ -39,6 +38,7 @@ const Followers = () => {
           'September',
           'October',
           'November',
+          'December',
         ]
       : language === 'cs'
       ? [
@@ -53,6 +53,7 @@ const Followers = () => {
           'Září',
           'Říjen',
           'Listopad',
+          'Prosinec',
         ]
       : language === 'de'
       ? [
@@ -67,6 +68,7 @@ const Followers = () => {
           'September',
           'Oktober',
           'November',
+          'Dezember',
         ]
       : []
 
@@ -74,7 +76,7 @@ const Followers = () => {
     labels,
     datasets: [
       {
-        data: [0, 0, 0, 0, 0, null, null, null, null, null, null],
+        data: [0, 0, 0, 0, 0, null, null, null, null, null, null, null],
         borderColor: 'rgba(128, 128, 128, 0.7)',
         borderDash: [5, 5],
         label:
@@ -87,19 +89,45 @@ const Followers = () => {
             : '',
       },
       {
-        data: [null, null, null, null, 0, 72, null, null, null, null, null],
+        data: [
+          null,
+          null,
+          null,
+          null,
+          0,
+          72,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+        ],
         borderColor: 'rgb(229, 169, 29)',
         label:
           language === 'en'
             ? 'The beginning of the collaboration'
             : language === 'cs'
-            ? 'Začátek spolupráce'
+            ? 'Začátek splupráce'
             : language === 'de'
             ? 'Der Beginn der Zusammenarbeit'
             : '',
       },
       {
-        data: [null, null, null, null, null, 72, 212, 504, 756, 963, 1240],
+        data: [
+          null,
+          null,
+          null,
+          null,
+          null,
+          72,
+          212,
+          504,
+          756,
+          963,
+          1240,
+          1460,
+        ],
         borderColor: 'rgb(13, 229, 17)',
         label:
           language === 'en'

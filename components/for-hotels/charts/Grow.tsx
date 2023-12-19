@@ -38,6 +38,7 @@ const Grow = () => {
           'September',
           'October',
           'November',
+          'December',
         ]
       : language === 'cs'
       ? [
@@ -52,6 +53,7 @@ const Grow = () => {
           'Září',
           'Říjen',
           'Listopad',
+          'Prosinec',
         ]
       : language === 'de'
       ? [
@@ -66,6 +68,7 @@ const Grow = () => {
           'September',
           'Oktober',
           'November',
+          'Dezember',
         ]
       : []
 
@@ -73,7 +76,20 @@ const Grow = () => {
     labels,
     datasets: [
       {
-        data: [100, 100, 100, 100, 100, null, null, null, null, null, null],
+        data: [
+          100,
+          100,
+          100,
+          100,
+          100,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+        ],
         borderColor: 'rgba(128, 128, 128, 0.7)',
         borderDash: [5, 5],
         label:
@@ -86,19 +102,32 @@ const Grow = () => {
             : '',
       },
       {
-        data: [null, null, null, null, 100, 108, null, null, null, null, null],
+        data: [
+          null,
+          null,
+          null,
+          null,
+          100,
+          108,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+        ],
         borderColor: 'rgb(229, 169, 29)',
         label:
           language === 'en'
             ? 'The beginning of the collaboration'
             : language === 'cs'
-            ? 'Začátek spolupráce'
+            ? 'Začátek splupráce'
             : language === 'de'
             ? 'Der Beginn der Zusammenarbeit'
             : '',
       },
       {
-        data: [null, null, null, null, null, 108, 113, 119, 123, 128, 132],
+        data: [null, null, null, null, null, 108, 113, 119, 123, 128, 132, 140],
         borderColor: 'rgb(13, 229, 17)',
         label:
           language === 'en'
