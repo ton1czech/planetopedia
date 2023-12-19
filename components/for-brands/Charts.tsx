@@ -25,13 +25,13 @@ const Charts = () => {
           className='text-2xl text-center text-black md:text-3xl mb-6 font-bold'
         >
           {language === 'en' && (
-            <>Social Media Management - Results Farma Hájek</>
+            <>Social Media Management - Results Farma Hájek (2023)</>
           )}
           {language === 'cs' && (
-            <>Správa Sociálních Sítí - Výsledky Farma Hájek</>
+            <>Správa Sociálních Sítí - Výsledky Farma Hájek (2023)</>
           )}
           {language === 'de' && (
-            <>Social Media Management - Ergebnisse Farma Hájek</>
+            <>Social Media Management - Ergebnisse Farma Hájek (2023)</>
           )}
         </motion.h2>
 

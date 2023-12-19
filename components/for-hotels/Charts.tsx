@@ -25,13 +25,13 @@ const Charts = () => {
           className='text-2xl text-center text-black md:text-3xl mb-6 font-bold'
         >
           {language === 'en' && (
-            <>Social Media Management - Our Client's Results</>
+            <>Social Media Management - Our Client's Results (2023)</>
           )}
           {language === 'cs' && (
-            <>Správa Sociálních Sítí - Výsledky Našeho Klienta</>
+            <>Správa Sociálních Sítí - Výsledky Našeho Klienta (2023)</>
           )}
           {language === 'de' && (
-            <>Social Media Management - Die Ergebnisse unseres Kunden</>
+            <>Social Media Management - Die Ergebnisse unseres Kunden (2023)</>
           )}
         </motion.h2>
 
