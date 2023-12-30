@@ -34,7 +34,7 @@ const Hero = () => {
               {language === 'en' ? (
                 <>Let us take your work seriously</>
               ) : language === 'cs' ? (
-                <>Vezmeme vaši práci vážně</>
+                <>Vezmeme Vaši práci vážně</>
               ) : language === 'de' ? (
                 <>Lassen Sie uns Ihre Arbeit ernst nehmen</>
               ) : null}

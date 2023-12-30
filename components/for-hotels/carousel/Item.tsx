@@ -7,10 +7,10 @@ interface ItemProps {
 
 const Item = ({ src, thumbnail }: ItemProps) => {
   return (
-    <div className='!max-w-[200px] md:!max-w-[300px] xl:!max-w-[350px] 2xl:!max-w-[400px] !h-[370px] sm:!h-[580px] md:!h-[750px]'>
+    <div className='!max-w-[240px] md:!max-w-[300px] xl:!max-w-[350px] 2xl:!max-w-[400px] !h-[370px] sm:!h-[580px] md:!h-[750px]'>
       {src.includes('.mp4') ? (
         <video
-          className='!max-w-[200px] md:!max-w-[300px] xl:!max-w-[350px] 2xl:!max-w-[400px]'
+          className='!max-w-[240px] md:!max-w-[300px] xl:!max-w-[350px] 2xl:!max-w-[400px]'
           playsInline
           autoPlay
           muted
@@ -20,7 +20,7 @@ const Item = ({ src, thumbnail }: ItemProps) => {
           <source src={src} />
         </video>
       ) : (
-        <div className='!max-w-[200px] md:!max-w-[300px] xl:!max-w-[350px] 2xl:!max-w-[400px]'>
+        <div className='!max-w-[240px] md:!max-w-[300px] xl:!max-w-[350px] 2xl:!max-w-[400px]'>
           <img src={src} alt='mockup' />
         </div>
       )}

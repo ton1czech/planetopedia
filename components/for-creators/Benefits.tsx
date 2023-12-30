@@ -103,7 +103,7 @@ const Benefits = () => {
                 headingCz='1. Spojení na Instagramu'
                 headingDe='1. Instagram-Verbindung'
                 textEn="Let's group together on instagram!"
-                textCz='Pojďme se společně sdružit na instagramu!'
+                textCz='Pojďme se společně spojit na instagramu!'
                 textDe='Lass uns auf Instagram zusammenarbeiten!'
               />
               <Item

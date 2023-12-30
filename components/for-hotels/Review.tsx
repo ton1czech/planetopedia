@@ -20,12 +20,12 @@ const Review = () => {
           <h2 className='text-2xl md:text-3xl mb-4 text-black text-center lg:mt-28 2xl:mt-0'>
             {language === 'en' && (
               <>
-                <b>Maximizing</b> Your Social Media Presence
+                <b>Maximizing</b> Your <br /> Social Media Presence
               </>
             )}
             {language === 'cs' && (
               <>
-                <b>Maximalizace</b> vaší přítomnosti na sociálních sítích
+                <b>Maximalizace</b> Vaší přítomnosti na sociálních sítích
               </>
             )}
             {language === 'de' && (

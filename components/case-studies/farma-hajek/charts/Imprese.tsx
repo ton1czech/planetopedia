@@ -38,6 +38,7 @@ const Imprese = () => {
           'September',
           'October',
           'November',
+          'December',
         ]
       : language === 'cs'
       ? [
@@ -52,6 +53,7 @@ const Imprese = () => {
           'Září',
           'Říjen',
           'Listopad',
+          'Prosinec',
         ]
       : language === 'de'
       ? [
@@ -66,6 +68,7 @@ const Imprese = () => {
           'September',
           'Oktober',
           'November',
+          'Dezember',
         ]
       : []
 
@@ -73,7 +76,7 @@ const Imprese = () => {
     labels,
     datasets: [
       {
-        data: [0, 0, 0, 0, 0, null, null, null, null, null, null],
+        data: [0, 0, 0, 0, 0, null, null, null, null, null, null, null],
         borderColor: 'rgba(128, 128, 128, 0.7)',
         borderDash: [5, 5],
         label:
@@ -86,7 +89,20 @@ const Imprese = () => {
             : '',
       },
       {
-        data: [null, null, null, null, 0, 25403, null, null, null, null, null],
+        data: [
+          null,
+          null,
+          null,
+          null,
+          0,
+          25403,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+        ],
         borderColor: 'rgb(229, 169, 29)',
         label:
           language === 'en'
@@ -110,6 +126,7 @@ const Imprese = () => {
           71924,
           82573,
           83843,
+          85194,
         ],
         borderColor: 'rgb(13, 229, 17)',
         label:

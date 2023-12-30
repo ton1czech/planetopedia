@@ -16,7 +16,7 @@ const Charts = () => {
   const [chart, setChart] = useState('followers')
 
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 z-20 bg-white h-[calc(100vh-80px)] grid place-content-center'>
+    <div className='sticky top-0 snap-start scroll-mt-20 z-[70] bg-white h-[calc(100vh-80px)] grid place-content-center'>
       <Container>
         <motion.h2
           initial={{ y: 50, opacity: 0 }}
@@ -25,13 +25,13 @@ const Charts = () => {
           className='text-2xl text-center text-black md:text-3xl mb-6 font-bold'
         >
           {language === 'en' && (
-            <>Social Media Management - Results Farma Hájek (2023)</>
+            <>Social Media Management - Our Client's Results (2023)</>
           )}
           {language === 'cs' && (
-            <>Správa Sociálních Sítí - Výsledky Farma Hájek (2023)</>
+            <>Správa Sociálních Sítí - Výsledky Našeho Klienta (2023)</>
           )}
           {language === 'de' && (
-            <>Social Media Management - Ergebnisse Farma Hájek (2023)</>
+            <>Social Media Management - Die Ergebnisse unseres Kunden (2023)</>
           )}
         </motion.h2>
 

@@ -21,9 +21,9 @@ const Marketing = () => {
         whileInView={{ y: 0, opacity: 1 }}
         className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'
       >
-        {language === 'en' && <>/ Marketing Results</>}
-        {language === 'cs' && <>/ Marketingové Výsledky</>}
-        {language === 'de' && <>/ Marketing-Ergebnisse</>}
+        {language === 'en' && <>/ Marketing Results (2023)</>}
+        {language === 'cs' && <>/ Marketingové Výsledky (2023)</>}
+        {language === 'de' && <>/ Marketing-Ergebnisse (2023)</>}
       </motion.h2>
 
       <motion.div
@@ -100,7 +100,7 @@ const Marketing = () => {
           </>
         ) : language === 'cs' ? (
           <>
-            Dosavadní výsledky pozitivně ovlivnilo: influencer kampaň,
+            Dosavadní výsledky pozitivně ovlivnili: influencer kampaně,
             marketingové kampaně na Seznam.cz / Google.com, pořádání eventů.
           </>
         ) : language === 'de' ? (

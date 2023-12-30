@@ -1,5 +1,7 @@
+import Charts from '@/components/for-hotels/Charts'
 import Contact from '@/components/for-hotels/Contact'
 import Email from '@/components/for-hotels/Email'
+import Feedback from '@/components/for-hotels/Feedback'
 import Hero from '@/components/for-hotels/Hero'
 import Review from '@/components/for-hotels/Review'
 import Video from '@/components/for-hotels/Video'
@@ -13,6 +15,8 @@ export default function ForHotels() {
         <Work />
         <Video />
         <Review />
+        <Feedback />
+        <Charts />
         {/* <Contact /> */}
         <Email />
       </div>

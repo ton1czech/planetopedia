@@ -1,6 +1,9 @@
 'use client'
 
 import Container from '@/components/Container'
+import CzBarbora from '@/components/feedback/barbora/CzBarbora'
+import EnBarbora from '@/components/feedback/barbora/EnBarbora'
+import CzOndrej from '@/components/feedback/ondrej/CzOndrej'
 import Testimonials from '@/components/testimonials/Testimonials'
 import Videos from '@/components/testimonials/Videos'
 import { reviewsBrands } from '@/database/reviews'
@@ -37,7 +40,7 @@ export default function Feedback() {
           </h2>
           <Videos data={videos} />
 
-          <h2 className='text-2xl md:text-3xl mb-4 md:mb-8 lg:mb-10 mt-8 md:mt-14'>
+          <h2 className='text-2xl md:text-3xl mt-8 md:mt-14 text-center mb-8'>
             {language === 'en' && (
               <>
                 What our <b>clients </b>say
@@ -54,6 +57,31 @@ export default function Feedback() {
               </>
             )}
           </h2>
+
+          <div className='lg:hidden mb-10'>
+            {language === 'cs' ? (
+              <>
+                <CzOndrej />
+              </>
+            ) : (
+              <>
+                <EnBarbora />
+              </>
+            )}
+          </div>
+
+          {language === 'cs' ? (
+            <div className='lg:flex justify-center hidden gap-20 mb-16'>
+              <CzBarbora />
+              <CzOndrej />
+            </div>
+          ) : (
+            <div className='lg:flex justify-center hidden gap-20 mb-16'>
+              <CzOndrej />
+              <EnBarbora />
+            </div>
+          )}
+
           <Testimonials data={reviewsBrands} />
         </Container>
       </motion.div>
