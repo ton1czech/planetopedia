@@ -43,7 +43,7 @@ const Video = ({ video, thumbnail }: VideoProps) => {
   return (
     <video
       ref={videoRef}
-      className='!max-w-[200px] md:!max-w-[300px] xl:!max-w-[350px] 2xl:!max-w-[400px] !h-[370px] sm:!h-[580px] md:!h-[750px]'
+      className='!max-w-[200px] md:!max-w-[300px] xl:!max-w-[350px] 2xl:!max-w-[400px] !h-[370px] sm:!h-[580px] lg:!h-[620px] 2xl:!h-[750px]'
       onClick={handleClick}
       playsInline
       poster={thumbnail}

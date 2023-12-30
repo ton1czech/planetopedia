@@ -11,13 +11,13 @@ interface VideoProps {
 
 const Videos = ({ data }: VideoProps) => {
   return (
-    <Carousel className='!h-[370px] sm:!h-[580px] md:!h-[750px]'>
+    <Carousel className='!h-[370px] sm:!h-[580px] lg:!h-[620px] 2xl:!h-[750px]'>
       {data.map((item: any, index: any) => (
         <CarouselItem
           index={index}
           key={index}
           isPhone
-          className='!h-[370px] sm:!h-[580px] md:!h-[750px]'
+          className='!h-[370px] sm:!h-[580px] lg:!h-[620px] 2xl:!h-[750px]'
         >
           <Video video={item.video} thumbnail={item.thumbnail} />
         </CarouselItem>
