@@ -131,8 +131,8 @@ const Benefits = () => {
                 textDe='Diskussion und Unterhaltung'
               />
               <Item
-                headingEn='5. Engagement Groups'
-                headingCz='5. Engagement Skupiny'
+                headingEn='5. Support Groups'
+                headingCz='5. Support Skupiny'
                 headingDe='5. Engagement-Gruppen'
                 multiEn={[
                   'a) Luxury Travel Support Group',
