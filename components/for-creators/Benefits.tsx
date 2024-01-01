@@ -107,48 +107,31 @@ const Benefits = () => {
                 textDe='Lass uns auf Instagram zusammenarbeiten!'
               />
               <Item
-                headingEn='2. Meet the community'
-                headingCz='2. Setkání s komunitou'
-                headingDe='2. Treffen mit der Gemeinschaft'
+                headingEn='2. Join our Groups'
+                headingCz='2. Připojte se k našim skupinám'
+                headingDe='2. Unseren Gruppen beitreten'
+                multiEn={['a) Communication IG Group', 'b) Support IG Group']}
+                multiCz={['a) Komunikační skupina IG', 'b) Podpora skupiny IG']}
+                multiDe={[
+                  'a) IG-Gruppe Kommunikation',
+                  'b) IG-Fraktion unterstützen',
+                ]}
+              />
+              <Item
+                headingEn='3. Meet the community'
+                headingCz='3. Setkání s komunitou'
+                headingDe='3. Treffen mit der Gemeinschaft'
                 textEn='Meet and connect with our creators around the world.'
                 textCz='Seznamte se s našimi tvůrci po celém světě a navažte s nimi kontakt.'
                 textDe='Treffen Sie unsere Schöpfer auf der ganzen Welt und treten Sie mit ihnen in Kontakt.'
               />
               <Item
-                headingEn='3. Work together'
-                headingCz='3. Pracujme společně'
-                headingDe='3. Gemeinsam arbeiten'
+                headingEn='4. Work together'
+                headingCz='4. Pracujme společně'
+                headingDe='4. Gemeinsam arbeiten'
                 textEn='Unlock success through our community.'
                 textCz='Odemkněte si úspěch prostřednictvím naší komunity.'
                 textDe='Erschließen Sie sich den Erfolg durch unsere Gemeinschaft.'
-              />
-              <Item
-                headingEn='4. Whatsapp Group'
-                headingCz='4. Whatsapp Skupina'
-                headingDe='4. Whatsapp-Gruppe'
-                textEn='Discussion & Entertainment'
-                textCz='Diskuze & Zábava'
-                textDe='Diskussion und Unterhaltung'
-              />
-              <Item
-                headingEn='5. Support Groups'
-                headingCz='5. Support Skupiny'
-                headingDe='5. Engagement-Gruppen'
-                multiEn={[
-                  'a) Luxury Travel Support Group',
-                  'b) Photographers Support Group',
-                  'c) Travel Tips Support Group',
-                ]}
-                multiCz={[
-                  'a) Luxury Travel Support Skupina',
-                  'b) Photographers Support Skupina',
-                  'c) Travel Tips Support Skupina',
-                ]}
-                multiDe={[
-                  'a) Unterstützungsgruppe für Luxusreisen',
-                  'b) Selbsthilfegruppe für Fotografen',
-                  'c) Selbsthilfegruppe Reisetipps',
-                ]}
               />
             </ul>
           </motion.div>
