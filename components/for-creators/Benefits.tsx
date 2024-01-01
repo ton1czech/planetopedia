@@ -111,7 +111,10 @@ const Benefits = () => {
                 headingCz='2. Připojte se k našim skupinám'
                 headingDe='2. Unseren Gruppen beitreten'
                 multiEn={['a) Communication IG Group', 'b) Support IG Group']}
-                multiCz={['a) Komunikační skupina IG', 'b) Podpora skupiny IG']}
+                multiCz={[
+                  'a) IG skupina pro komunikaci',
+                  'b) IG support skupina',
+                ]}
                 multiDe={[
                   'a) IG-Gruppe Kommunikation',
                   'b) IG-Fraktion unterstützen',
