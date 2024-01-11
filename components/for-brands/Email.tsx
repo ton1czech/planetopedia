@@ -21,7 +21,7 @@ const Email = () => {
 
   return (
     <div className='sticky z-[80] bg-white snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)]'>
-      <Container className='grid place-content-center w-full h-full'>
+      <Container className='grid w-full h-full place-content-center'>
         <div>
           <p>
             {language === 'en' && 'contact us at'}
@@ -33,7 +33,7 @@ const Email = () => {
               setClicked(true)
               navigator.clipboard.writeText('info@planetopedia.agency')
             }}
-            className='font-bold text-2xl md:text-4xl lg:text-5xl xl:text-6xl hover:scale-105 transition cursor-pointer'
+            className='text-2xl font-bold transition cursor-pointer md:text-4xl lg:text-5xl xl:text-6xl hover:scale-105'
           >
             info@planetopedia.agency
           </h4>

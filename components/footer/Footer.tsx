@@ -6,14 +6,23 @@ import FooterIcon from './FooterIcon'
 import { Instagram, Linkedin, Mail, Phone, Youtube } from 'lucide-react'
 import Container from '../Container'
 import { motion } from 'framer-motion'
+import { usePathname } from 'next/navigation'
+import { cn } from '@/lib/utils'
 
 const Footer = () => {
+  const pathname = usePathname()
   const { language } = useLanguage()
+
+  const services = pathname.includes('services')
 
   return (
     <motion.footer
-      initial={{ y: 50, opacity: 0 }}
+      initial={{ y: services ? 0 : 50, opacity: services ? 1 : 0 }}
       whileInView={{ y: 0, opacity: 1 }}
+      className={cn(
+        '',
+        services && 'sticky z-[120] snap-start scroll-mt-20 h-screen bg-black'
+      )}
     >
       <Container className='hidden py-20 lg:block'>
         <div className='flex items-center justify-between lg:items-start mb-14 gap-y-14'>
@@ -65,7 +74,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='flex flex-row items-start justify-center lg:justify-between text-sm'>
+        <div className='flex flex-row items-start justify-center text-sm lg:justify-between'>
           <p className='text-white'>
             &copy;{new Date().getFullYear()} Planetopedia,{' '}
             {language === 'en' && (

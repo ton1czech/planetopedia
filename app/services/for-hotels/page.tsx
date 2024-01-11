@@ -1,3 +1,4 @@
+import Footer from '@/components/footer/Footer'
 import Charts from '@/components/for-hotels/Charts'
 import Contact from '@/components/for-hotels/Contact'
 import Email from '@/components/for-hotels/Email'
@@ -19,6 +20,7 @@ export default function ForHotels() {
         <Charts />
         {/* <Contact /> */}
         <Email />
+        <Footer />
       </div>
     </section>
   )
