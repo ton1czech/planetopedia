@@ -182,80 +182,80 @@ export const caseStudies = [
       },
     ],
   },
-  {
-    title: 'Heys Luggage',
-    categoryEn: 'Our Creators',
-    categoryCz: 'Naši Tvůrci',
-    categoryDe: 'Unsere Schöpfer',
-    href: '/case-studies/heys-luggage',
-    image: '/case-studies/heys-luggage/thumbnail.webp',
-    servicesEn: [
-      'strategy',
-      'marketing',
-      'content creation',
-      'community of creators',
-    ],
-    servicesCz: ['strategie', 'marketing', 'tvorba obsahu', 'komunita tvůrců'],
-    servicesDe: [
-      'strategie',
-      'marketing',
-      'erstellung von inhalten',
-      'Gemeinschaft der Schöpfer',
-    ],
-    whoEn:
-      'Established in 1986 in the suburbs of Toronto, Heys International Ltd has become a global leader in luggage design, and is synonymous with luxury, fashionable, lightweight luggage with high standard of excellence in workmanship and quality.',
-    whoCz:
-      'Společnost Heys International Ltd, založená v roce 1986 na předměstí Toronta, se stala globálním lídrem v designu zavazadel a je synonymem pro luxusní, módní, lehká zavazadla s vysokým standardem dokonalosti ve zpracování a kvalitě.',
-    whoDe:
-      'Heys International Ltd. wurde 1986 in einem Vorort von Toronto gegründet und hat sich zu einem weltweit führenden Unternehmen im Bereich Gepäckdesign entwickelt. Heys International Ltd. ist ein Synonym für luxuriöses, modisches und leichtes Reisegepäck mit einem hohen Standard an hervorragender Verarbeitung und Qualität.',
-    boldEn: 'Target: 20-35 y.o. female audience from Europe / USA',
-    boldDe: 'Zielgruppe: 20-35 jährige Frauen aus Europa / USA',
-    boldCz: 'Cílová skupina: ženské publikum ve věku 20-35 let z Evropy / USA',
-    whatEn:
-      'Heys Luggage joined forces with five talented creators from five countries, delivering resounding success and reaching new heights on social media. Together, we brought the world to life, inspiring audiences worldwide.',
-    whatCz:
-      'Společnost Heys Luggage spojila síly s pěti talentovanými tvůrci z pěti zemí, dosáhla obrovského úspěchu a nových výšin na sociálních sítích. Společně jsme oživili svět a inspirovali publikum po celém světě.',
-    whatDe:
-      'Heys Luggage hat sich mit fünf talentierten Künstlern aus fünf Ländern zusammengetan, um einen durchschlagenden Erfolg zu erzielen und in den sozialen Medien neue Maßstäbe zu setzen. Gemeinsam haben wir die Welt zum Leben erweckt und das Publikum weltweit inspiriert.',
-    contentSrcs: [
-      '/case-studies/heys-luggage/content/1.webp',
-      '/case-studies/heys-luggage/content/2.webp',
-      '/case-studies/heys-luggage/content/3.webp',
-      '/case-studies/heys-luggage/content/4.webp',
-      '/case-studies/heys-luggage/content/5.webp',
-      '/case-studies/heys-luggage/content/6.webp',
-      '/case-studies/heys-luggage/content/7.webp',
-      '/case-studies/heys-luggage/content/8.webp',
-      '/case-studies/heys-luggage/content/9.webp',
-      '/case-studies/heys-luggage/content/10.webp',
-    ],
-    links: [
-      {
-        site: 'web',
-        url: 'https://us.heys.com/',
-      },
-      {
-        site: 'instagram',
-        url: 'https://www.instagram.com/heysluggage/',
-      },
-      {
-        site: 'tiktok',
-        url: 'https://www.tiktok.com/@heysluggage',
-      },
-      {
-        site: 'youtube',
-        url: 'https://www.youtube.com/user/HeysLuggage',
-      },
-      {
-        site: 'facebook',
-        url: 'https://www.facebook.com/HeysIuggage',
-      },
-      {
-        site: 'pinterest',
-        url: 'https://www.pinterest.ca/HeysLuggage/',
-      },
-    ],
-  },
+  //   {
+  //     title: 'Heys Luggage',
+  //     categoryEn: 'Our Creators',
+  //     categoryCz: 'Naši Tvůrci',
+  //     categoryDe: 'Unsere Schöpfer',
+  //     href: '/case-studies/heys-luggage',
+  //     image: '/case-studies/heys-luggage/thumbnail.webp',
+  //     servicesEn: [
+  //       'strategy',
+  //       'marketing',
+  //       'content creation',
+  //       'community of creators',
+  //     ],
+  //     servicesCz: ['strategie', 'marketing', 'tvorba obsahu', 'komunita tvůrců'],
+  //     servicesDe: [
+  //       'strategie',
+  //       'marketing',
+  //       'erstellung von inhalten',
+  //       'Gemeinschaft der Schöpfer',
+  //     ],
+  //     whoEn:
+  //       'Established in 1986 in the suburbs of Toronto, Heys International Ltd has become a global leader in luggage design, and is synonymous with luxury, fashionable, lightweight luggage with high standard of excellence in workmanship and quality.',
+  //     whoCz:
+  //       'Společnost Heys International Ltd, založená v roce 1986 na předměstí Toronta, se stala globálním lídrem v designu zavazadel a je synonymem pro luxusní, módní, lehká zavazadla s vysokým standardem dokonalosti ve zpracování a kvalitě.',
+  //     whoDe:
+  //       'Heys International Ltd. wurde 1986 in einem Vorort von Toronto gegründet und hat sich zu einem weltweit führenden Unternehmen im Bereich Gepäckdesign entwickelt. Heys International Ltd. ist ein Synonym für luxuriöses, modisches und leichtes Reisegepäck mit einem hohen Standard an hervorragender Verarbeitung und Qualität.',
+  //     boldEn: 'Target: 20-35 y.o. female audience from Europe / USA',
+  //     boldDe: 'Zielgruppe: 20-35 jährige Frauen aus Europa / USA',
+  //     boldCz: 'Cílová skupina: ženské publikum ve věku 20-35 let z Evropy / USA',
+  //     whatEn:
+  //       'Heys Luggage joined forces with five talented creators from five countries, delivering resounding success and reaching new heights on social media. Together, we brought the world to life, inspiring audiences worldwide.',
+  //     whatCz:
+  //       'Společnost Heys Luggage spojila síly s pěti talentovanými tvůrci z pěti zemí, dosáhla obrovského úspěchu a nových výšin na sociálních sítích. Společně jsme oživili svět a inspirovali publikum po celém světě.',
+  //     whatDe:
+  //       'Heys Luggage hat sich mit fünf talentierten Künstlern aus fünf Ländern zusammengetan, um einen durchschlagenden Erfolg zu erzielen und in den sozialen Medien neue Maßstäbe zu setzen. Gemeinsam haben wir die Welt zum Leben erweckt und das Publikum weltweit inspiriert.',
+  //     contentSrcs: [
+  //       '/case-studies/heys-luggage/content/1.webp',
+  //       '/case-studies/heys-luggage/content/2.webp',
+  //       '/case-studies/heys-luggage/content/3.webp',
+  //       '/case-studies/heys-luggage/content/4.webp',
+  //       '/case-studies/heys-luggage/content/5.webp',
+  //       '/case-studies/heys-luggage/content/6.webp',
+  //       '/case-studies/heys-luggage/content/7.webp',
+  //       '/case-studies/heys-luggage/content/8.webp',
+  //       '/case-studies/heys-luggage/content/9.webp',
+  //       '/case-studies/heys-luggage/content/10.webp',
+  //     ],
+  //     links: [
+  //       {
+  //         site: 'web',
+  //         url: 'https://us.heys.com/',
+  //       },
+  //       {
+  //         site: 'instagram',
+  //         url: 'https://www.instagram.com/heysluggage/',
+  //       },
+  //       {
+  //         site: 'tiktok',
+  //         url: 'https://www.tiktok.com/@heysluggage',
+  //       },
+  //       {
+  //         site: 'youtube',
+  //         url: 'https://www.youtube.com/user/HeysLuggage',
+  //       },
+  //       {
+  //         site: 'facebook',
+  //         url: 'https://www.facebook.com/HeysIuggage',
+  //       },
+  //       {
+  //         site: 'pinterest',
+  //         url: 'https://www.pinterest.ca/HeysLuggage/',
+  //       },
+  //     ],
+  //   },
   {
     title: 'Four Seasons',
     categoryEn: 'Hotel chain',
