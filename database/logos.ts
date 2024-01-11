@@ -23,22 +23,22 @@ export const logosEN = [
     src: '/logos/ritzcarlton.webp',
     label: 'Ritz Carlton',
   },
-  {
-    src: '/logos/dji.webp',
-    label: 'DJI',
-  },
-  {
-    src: '/logos/samsonite.webp',
-    label: 'Samsonite',
-  },
-  {
-    src: '/logos/sony.webp',
-    label: 'Sony',
-  },
-  {
-    src: '/logos/vans.webp',
-    label: 'Vans',
-  },
+  //   {
+  //     src: '/logos/dji.webp',
+  //     label: 'DJI',
+  //   },
+  //   {
+  //     src: '/logos/samsonite.webp',
+  //     label: 'Samsonite',
+  //   },
+  //   {
+  //     src: '/logos/sony.webp',
+  //     label: 'Sony',
+  //   },
+  //   {
+  //     src: '/logos/vans.webp',
+  //     label: 'Vans',
+  //   },
   {
     src: '/logos/anantara.webp',
     label: '',
