@@ -18,8 +18,8 @@ export default function ForBrands() {
         <Work />
         <SocialMedia />
         <Charts />
-        <Campaign />
-        <ContentCreation />
+        {/* <Campaign /> */}
+        {/* <ContentCreation /> */}
         <Video />
         <Web />
         <Feedback />
