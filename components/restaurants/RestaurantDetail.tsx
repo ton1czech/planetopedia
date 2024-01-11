@@ -28,7 +28,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
             className='object-cover'
           />
         )}
-        <div className='absolute bottom-1/2 translate-y-1/2 left-1/2 -translate-x-1/2 text-center'>
+        <div className='absolute text-center -translate-x-1/2 translate-y-1/2 bottom-1/2 left-1/2'>
           <h1 className='text-2xl font-bold md:text-3xl'>{restaurant?.name}</h1>
           {language === 'en' && <p>{restaurant.location_en}</p>}
           {language === 'cs' && <p>{restaurant.location_cz}</p>}
@@ -237,23 +237,31 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className='flex items-center justify-center gap-4 mt-4 md:mt-6'
+              className='mt-8 space-y-3 md:mt-12'
             >
               {restaurant?.web_link && (
-                <Link href={restaurant.web_link}>
-                  <Link2
-                    size={30}
-                    className='transition text-zinc-700 hover:text-black'
-                  />
-                </Link>
+                <p>
+                  <span className='text-zinc-600'>Web: </span>
+                  <Link
+                    href={restaurant.web_link}
+                    className='underline'
+                    target='_blank'
+                  >
+                    {restaurant.web_link}
+                  </Link>
+                </p>
               )}
               {restaurant?.instagram_link && (
-                <Link href={restaurant.instagram_link}>
-                  <Instagram
-                    size={30}
-                    className='transition text-zinc-700 hover:text-black'
-                  />
-                </Link>
+                <p>
+                  <span className='text-zinc-600'>Instagram: </span>
+                  <Link
+                    href={restaurant.instagram_link}
+                    className='underline'
+                    target='_blank'
+                  >
+                    {restaurant.instagram_link}
+                  </Link>
+                </p>
               )}
             </motion.div>
           </div>

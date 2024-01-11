@@ -28,7 +28,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
             className='object-cover'
           />
         )}
-        <div className='absolute bottom-1/2 translate-y-1/2 left-1/2 -translate-x-1/2 text-center'>
+        <div className='absolute text-center -translate-x-1/2 translate-y-1/2 bottom-1/2 left-1/2'>
           <h1 className='text-2xl font-bold md:text-3xl'>{hotel?.name}</h1>
           {language === 'en' && <p>{hotel.location_en}</p>}
           {language === 'cs' && <p>{hotel.location_cz}</p>}
@@ -406,23 +406,31 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className='flex items-center justify-center gap-4 mt-4 md:mt-6'
+              className='mt-8 space-y-3 md:mt-12'
             >
               {hotel?.web_link && (
-                <Link href={hotel.web_link}>
-                  <Link2
-                    size={30}
-                    className='transition text-zinc-700 hover:text-black'
-                  />
-                </Link>
+                <p>
+                  <span className='text-zinc-600'>Web: </span>
+                  <Link
+                    href={hotel.web_link}
+                    className='underline'
+                    target='_blank'
+                  >
+                    {hotel.web_link}
+                  </Link>
+                </p>
               )}
               {hotel?.instagram_link && (
-                <Link href={hotel.instagram_link}>
-                  <Instagram
-                    size={30}
-                    className='transition text-zinc-700 hover:text-black'
-                  />
-                </Link>
+                <p>
+                  <span className='text-zinc-600'>Instagram: </span>
+                  <Link
+                    href={hotel.instagram_link}
+                    className='underline'
+                    target='_blank'
+                  >
+                    {hotel.instagram_link}
+                  </Link>
+                </p>
               )}
             </motion.div>
           </div>
