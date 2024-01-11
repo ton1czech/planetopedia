@@ -1,4 +1,3 @@
-import Footer from '@/components/footer/Footer'
 import Benefits from '@/components/for-creators/Benefits'
 import Contact from '@/components/for-creators/Contact'
 import Email from '@/components/for-creators/Email'
@@ -14,7 +13,6 @@ export default function ForCreators() {
         <Benefits />
         {/* <Contact /> */}
         <Email />
-        <Footer />
       </div>
     </section>
   )

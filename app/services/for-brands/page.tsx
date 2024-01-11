@@ -1,4 +1,3 @@
-import Footer from '@/components/footer/Footer'
 import Campaign from '@/components/for-brands/Campaign'
 import Charts from '@/components/for-brands/Charts'
 import Contact from '@/components/for-brands/Contact'
@@ -26,7 +25,6 @@ export default function ForBrands() {
         <Feedback />
         {/* <Contact /> */}
         <Email />
-        <Footer />
       </div>
     </section>
   )
