@@ -403,6 +403,11 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
               className='w-full h-80'
             />
 
+            <motion.p className='mt-8 md:mt-12 text-zinc-800'>
+              All imagery above is owned and produced by Planetopedia. This
+              hotel review is part of barter collaboration.
+            </motion.p>
+
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
