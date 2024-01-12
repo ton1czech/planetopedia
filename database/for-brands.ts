@@ -8,18 +8,18 @@ export const forBrands = [
         src: '/logos/farmahajek.webp',
       },
       {
-        src: '/logos/dji.webp',
+        src: '/logos/jumeirah.webp',
       },
       {
         src: '/logos/niceface.webp',
         noPhone: true,
       },
       {
-        src: '/logos/samsonite.webp',
+        src: '/logos/ritzcarlton.webp',
         noPhone: true,
       },
       {
-        src: '/logos/vans.webp',
+        src: '/logos/rozmluvse.webp',
         noPhone: true,
       },
     ],
