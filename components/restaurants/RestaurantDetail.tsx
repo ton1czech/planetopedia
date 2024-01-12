@@ -5,7 +5,6 @@ import { urlForImage } from '@/sanity/lib/image'
 import { useLanguage } from '@/store/useLanguage'
 import { PortableText } from '@portabletext/react'
 import { RichText } from '../RichText'
-import { Instagram, Link2 } from 'lucide-react'
 import Link from 'next/link'
 import Container from '../Container'
 import { motion } from 'framer-motion'
@@ -226,18 +225,43 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
               {language === 'de' && <>wichtige Infos</>}
             </motion.h1>
 
+            <motion.p className='text-zinc-800'>
+              {language === 'en' && (
+                <>All imagery above is owned and produced by Planetopedia.</>
+              )}
+              {language === 'cs' && (
+                <>
+                  Všechny výše uvedené obrázky jsou majetkem společnosti
+                  Planetopedia.
+                </>
+              )}
+              {language === 'de' && (
+                <>
+                  Alle oben genannten Bilder sind Eigentum von Planetopedia und
+                  wurden von ihr produziert.
+                </>
+              )}
+            </motion.p>
+
+            <motion.p className='text-zinc-800'>
+              {language === 'en' && (
+                <>This restaurant review is part of barter collaboration.</>
+              )}
+              {language === 'cs' && (
+                <>Tato recenze restaurace je součástí barterové spolupráce.</>
+              )}
+              {language === 'de' && (
+                <>Diese Restaurantkritik ist Teil einer Tauschgemeinschaft.</>
+              )}
+            </motion.p>
+
             <motion.iframe
               src={restaurant?.address}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               referrerPolicy='no-referrer-when-downgrade'
-              className='w-full h-80'
+              className='w-full mt-6 h-80 md:mt-10'
             />
-
-            <motion.p className='mt-8 md:mt-12 text-zinc-800'>
-              All imagery above is owned and produced by Planetopedia. This
-              restaurant review is part of barter collaboration.
-            </motion.p>
 
             <motion.div
               initial={{ opacity: 0 }}
