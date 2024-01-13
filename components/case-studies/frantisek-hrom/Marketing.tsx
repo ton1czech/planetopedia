@@ -13,7 +13,7 @@ interface ItemProps {
 
 const Item = ({ num, text, delay }: ItemProps) => {
   return (
-    <div className={cn('text-black')}>
+    <div className={cn('text-black flex flex-col justify-center')}>
       <CountUp
         start={0}
         end={num}
@@ -29,7 +29,7 @@ const Item = ({ num, text, delay }: ItemProps) => {
         scrollSpyOnce
         delay={delay}
       />
-      <p className='whitespace-nowrap text-2xl lg:text-3xl xl:text-4xl text-center md:text-left'>
+      <p className='text-2xl text-center whitespace-nowrap lg:text-3xl xl:text-4xl md:text-left'>
         {text}
       </p>
     </div>
@@ -44,13 +44,13 @@ const Marketing = () => {
       initial={{ y: 50, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
     >
-      <h2 className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'>
+      <h2 className='mb-2 text-lg font-semibold md:text-xl lg:text-2xl xl:text-3xl'>
         {language === 'en' && <>/ In the last 30 days</>}
         {language === 'cs' && <>/ Za posledních 30 dní</>}
         {language === 'de' && <>/ Für die letzten 30 Tage</>}
       </h2>
 
-      <div className='flex flex-col md:flex-row  items-center gap-2 md:gap-8 md:justify-between'>
+      <div className='flex flex-col items-center gap-2 md:flex-row md:gap-8 md:justify-between'>
         <Item
           num={400000}
           text={
