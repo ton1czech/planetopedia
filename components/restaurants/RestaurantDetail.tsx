@@ -230,10 +230,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                 <>All imagery above is owned and produced by Planetopedia.</>
               )}
               {language === 'cs' && (
-                <>
-                  Všechny výše uvedené obrázky jsou majetkem společnosti
-                  Planetopedia.
-                </>
+                <>Všechny výše uvedené obrázky jsou majetkem Planetopedia.</>
               )}
               {language === 'de' && (
                 <>
