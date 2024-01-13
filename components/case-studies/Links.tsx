@@ -1,16 +1,7 @@
 'use client'
 
 import { useLanguage } from '@/store/useLanguage'
-import {
-  Facebook,
-  Instagram,
-  LinkIcon,
-  Linkedin,
-  ShoppingCart,
-  Youtube,
-} from 'lucide-react'
 import Link from 'next/link'
-import { FaPinterest, FaTiktok } from 'react-icons/fa'
 import Container from '../Container'
 import { motion } from 'framer-motion'
 
@@ -31,7 +22,7 @@ const Links = ({ links }: LinksProps) => {
       <motion.h2
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold pt-6 md:pt-12 xl:pt-20 mb-2'
+        className='pt-6 mb-2 text-2xl font-semibold md:text-3xl lg:text-4xl xl:text-5xl md:pt-12 xl:pt-20'
       >
         {language === 'en' && <>Links</>}
         {language === 'cs' && <>Odkazy</>}
@@ -41,40 +32,19 @@ const Links = ({ links }: LinksProps) => {
       <motion.div
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        className='flex gap-4'
+        className='space-y-2'
       >
         {links?.map(link => (
-          <Link
-            key={link.url}
-            href={link.url}
-            className='hover:scale-95 transition'
-            target='_blank'
-          >
-            {link.site === 'web' && (
-              <LinkIcon className='h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10' />
-            )}
-            {link.site === 'instagram' && (
-              <Instagram className='h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10' />
-            )}
-            {link.site === 'facebook' && (
-              <Facebook className='h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10' />
-            )}
-            {link.site === 'tiktok' && (
-              <FaTiktok className='h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10' />
-            )}
-            {link.site === 'youtube' && (
-              <Youtube className='h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10' />
-            )}
-            {link.site === 'eshop' && (
-              <ShoppingCart className='h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10' />
-            )}
-            {link.site === 'pinterest' && (
-              <FaPinterest className='h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10' />
-            )}
-            {link.site === 'linkedin' && (
-              <Linkedin className='h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10' />
-            )}
-          </Link>
+          <p>
+            <span className='capitalize text-zinc-800'>{link.site}: </span>
+            <Link
+              href={link.url}
+              className='underline text-zinc-600'
+              target='_blank'
+            >
+              {link.url}
+            </Link>
+          </p>
         ))}
       </motion.div>
     </Container>
