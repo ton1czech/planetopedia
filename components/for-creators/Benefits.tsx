@@ -124,17 +124,17 @@ const Benefits = () => {
                 headingEn='3. Meet the community'
                 headingCz='3. Setkání s komunitou'
                 headingDe='3. Treffen mit der Gemeinschaft'
-                textEn='Meet and connect with our creators around the world.'
-                textCz='Seznamte se s našimi tvůrci po celém světě a navažte s nimi kontakt.'
-                textDe='Treffen Sie unsere Schöpfer auf der ganzen Welt und treten Sie mit ihnen in Kontakt.'
+                textEn='Our community is a place for fun, communication with other like-minded people and to form long-lasting friendships.'
+                textCz='Naše komunita je místem zábavy, komunikace s podobně smýšlejícími lidmi a navazování dlouhodobých přátelství.'
+                textDe='Unsere Gemeinschaft ist ein Ort, an dem man Spaß haben, sich mit anderen Gleichgesinnten austauschen und dauerhafte Freundschaften schließen kann.'
               />
               <Item
                 headingEn='4. Work together'
                 headingCz='4. Pracujme společně'
                 headingDe='4. Gemeinsam arbeiten'
-                textEn='Unlock success through our community.'
-                textCz='Odemkněte si úspěch prostřednictvím naší komunity.'
-                textDe='Erschließen Sie sich den Erfolg durch unsere Gemeinschaft.'
+                textEn='Be shared in our Planetopedia IG feed among others.'
+                textCz='Buďte sdíleni na Planetopedia IG mezi ostatními.'
+                textDe='Wird unter anderem in unserem Planetopedia IG-Feed geteilt.'
               />
             </ul>
           </motion.div>
@@ -146,7 +146,7 @@ const Benefits = () => {
               transition={{ delay: 0.7 }}
             >
               <Image
-                src='/services/for-creators/3.webp'
+                src='/services/for-creators/8.webp'
                 alt='heys luggage mockup'
                 width={300}
                 height={500}
@@ -159,7 +159,7 @@ const Benefits = () => {
               transition={{ delay: 0.9 }}
             >
               <Image
-                src='/services/for-creators/2.webp'
+                src='/services/for-creators/9.webp'
                 alt='heys luggage mockup'
                 width={300}
                 height={500}
@@ -172,7 +172,7 @@ const Benefits = () => {
               transition={{ delay: 1.1 }}
             >
               <Image
-                src='/services/for-creators/1.webp'
+                src='/services/for-creators/10.webp'
                 alt='heys luggage mockup'
                 width={300}
                 height={500}
@@ -183,7 +183,9 @@ const Benefits = () => {
         </div>
 
         <p className='absolute text-sm text-center -translate-x-1/2 text-zinc-400 bottom-10 left-1/2'>
-          #planetopedia Team
+          {language === 'en' && 'No fees, pure passion.'}
+          {language === 'cs' && 'Žádné poplatky, jen čistá vášeň.'}
+          {language === 'de' && 'Keine Gebühren, reine Leidenschaft.'}
         </p>
       </Container>
     </div>
