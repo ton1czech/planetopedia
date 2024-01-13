@@ -146,7 +146,7 @@ const Benefits = () => {
               transition={{ delay: 0.7 }}
             >
               <Image
-                src='/services/for-creators/8.webp'
+                src='/services/for-creators/1.webp'
                 alt='heys luggage mockup'
                 width={300}
                 height={500}
@@ -159,7 +159,7 @@ const Benefits = () => {
               transition={{ delay: 0.9 }}
             >
               <Image
-                src='/services/for-creators/9.webp'
+                src='/services/for-creators/2.webp'
                 alt='heys luggage mockup'
                 width={300}
                 height={500}
@@ -172,7 +172,7 @@ const Benefits = () => {
               transition={{ delay: 1.1 }}
             >
               <Image
-                src='/services/for-creators/10.webp'
+                src='/services/for-creators/3.webp'
                 alt='heys luggage mockup'
                 width={300}
                 height={500}
