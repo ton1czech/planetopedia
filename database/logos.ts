@@ -23,6 +23,10 @@ export const logosEN = [
     src: '/logos/ritzcarlton.webp',
     label: 'Ritz Carlton',
   },
+  {
+    src: '/logos/sorores.webp',
+    label: 'Sorores',
+  },
   //   {
   //     src: '/logos/dji.webp',
   //     label: 'DJI',

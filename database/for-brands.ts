@@ -8,7 +8,7 @@ export const forBrands = [
         src: '/logos/farmahajek.webp',
       },
       {
-        src: '/logos/jumeirah.webp',
+        src: '/logos/sorores.webp',
       },
       {
         src: '/logos/niceface.webp',
