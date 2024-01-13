@@ -60,22 +60,22 @@ export const caseStudies = [
         site: 'instagram',
         url: 'https://www.instagram.com/farmahajek/',
       },
-      {
-        site: 'tiktok',
-        url: 'https://www.tiktok.com/@farmahajek',
-      },
-      {
-        site: 'facebook',
-        url: 'https://www.facebook.com/profile.php?id=100092479713291',
-      },
-      {
-        site: 'youtube',
-        url: 'https://www.youtube.com/@miloslavpolak4880',
-      },
-      {
-        site: 'eshop',
-        url: 'https://www.eshop-farmahajek.cz/',
-      },
+      //   {
+      //     site: 'tiktok',
+      //     url: 'https://www.tiktok.com/@farmahajek',
+      //   },
+      //   {
+      //     site: 'facebook',
+      //     url: 'https://www.facebook.com/profile.php?id=100092479713291',
+      //   },
+      //   {
+      //     site: 'youtube',
+      //     url: 'https://www.youtube.com/@miloslavpolak4880',
+      //   },
+      //   {
+      //     site: 'eshop',
+      //     url: 'https://www.eshop-farmahajek.cz/',
+      //   },
     ],
   },
   {
@@ -109,14 +109,14 @@ export const caseStudies = [
         site: 'tiktok',
         url: 'https://www.tiktok.com/@frantisekhrom',
       },
-      {
-        site: 'youtube',
-        url: 'https://www.youtube.com/@frantisekhrom',
-      },
-      {
-        site: 'facebook',
-        url: 'https://www.facebook.com/profile.php?id=100090109252762',
-      },
+      //   {
+      //     site: 'youtube',
+      //     url: 'https://www.youtube.com/@frantisekhrom',
+      //   },
+      //   {
+      //     site: 'facebook',
+      //     url: 'https://www.facebook.com/profile.php?id=100090109252762',
+      //   },
     ],
     logos: [
       '/case-studies/frantisek-hrom/logos/oktagon.webp',
@@ -168,18 +168,18 @@ export const caseStudies = [
         site: 'instagram',
         url: 'https://www.instagram.com/rozmluv.se/',
       },
-      {
-        site: 'tiktok',
-        url: 'https://www.tiktok.com/@rozmluv.se',
-      },
-      {
-        site: 'linkedin',
-        url: 'https://www.linkedin.com/company/rozmluv-se/',
-      },
-      {
-        site: 'facebook',
-        url: 'https://www.facebook.com/rozmluv.se',
-      },
+      //   {
+      //     site: 'tiktok',
+      //     url: 'https://www.tiktok.com/@rozmluv.se',
+      //   },
+      //   {
+      //     site: 'linkedin',
+      //     url: 'https://www.linkedin.com/company/rozmluv-se/',
+      //   },
+      //   {
+      //     site: 'facebook',
+      //     url: 'https://www.facebook.com/rozmluv.se',
+      //   },
     ],
   },
   //   {
@@ -333,14 +333,14 @@ export const caseStudies = [
         site: 'instagram',
         url: 'https://www.instagram.com/fourseasons/',
       },
-      {
-        site: 'youtube',
-        url: 'https://www.youtube.com/fourseasons',
-      },
-      {
-        site: 'facebook',
-        url: 'https://www.facebook.com/FourSeasons',
-      },
+      //   {
+      //     site: 'youtube',
+      //     url: 'https://www.youtube.com/fourseasons',
+      //   },
+      //   {
+      //     site: 'facebook',
+      //     url: 'https://www.facebook.com/FourSeasons',
+      //   },
     ],
     blogPosts: [
       {
