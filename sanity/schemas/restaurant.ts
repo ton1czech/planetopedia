@@ -149,6 +149,22 @@ export default defineType({
     }),
 
     defineField({
+      name: 'credits_en',
+      title: 'Credits 🇬🇧',
+      type: 'string',
+    }),
+    defineField({
+      name: 'credits_cz',
+      title: 'Credits 🇨🇿',
+      type: 'string',
+    }),
+    defineField({
+      name: 'credits_de',
+      title: 'Credits 🇩🇪',
+      type: 'string',
+    }),
+
+    defineField({
       name: 'address',
       title: 'Address',
       type: 'string',
