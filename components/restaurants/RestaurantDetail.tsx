@@ -225,20 +225,15 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
               {language === 'de' && <>wichtige Infos</>}
             </motion.h1>
 
-            <motion.p className='text-zinc-800'>
-              {language === 'en' && (
-                <>All imagery above is owned and produced by Planetopedia.</>
+            {restaurant.credits_en &&
+              restaurant.credits_cz &&
+              restaurant.credits_de && (
+                <motion.p className='text-zinc-800'>
+                  {language === 'en' && restaurant.credits_en}
+                  {language === 'cs' && restaurant.credits_cz}
+                  {language === 'de' && restaurant.credits_de}
+                </motion.p>
               )}
-              {language === 'cs' && (
-                <>Všechny výše uvedené obrázky jsou majetkem Planetopedia.</>
-              )}
-              {language === 'de' && (
-                <>
-                  Alle oben genannten Bilder sind Eigentum von Planetopedia und
-                  wurden von ihr produziert.
-                </>
-              )}
-            </motion.p>
 
             <motion.p className='text-zinc-800'>
               {language === 'en' && (

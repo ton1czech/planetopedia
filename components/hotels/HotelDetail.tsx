@@ -394,20 +394,13 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
               {language === 'de' && <>wichtige Infos</>}
             </motion.h1>
 
-            <motion.p className='text-zinc-800'>
-              {language === 'en' && (
-                <>All imagery above is owned and produced by Planetopedia.</>
-              )}
-              {language === 'cs' && (
-                <>Všechny výše uvedené obrázky jsou majetkem Planetopedia.</>
-              )}
-              {language === 'de' && (
-                <>
-                  Alle oben genannten Bilder sind Eigentum von Planetopedia und
-                  wurden von ihr produziert.
-                </>
-              )}
-            </motion.p>
+            {hotel.credits_en && hotel.credits_cz && hotel.credits_de && (
+              <motion.p className='text-zinc-800'>
+                {language === 'en' && hotel.credits_en}
+                {language === 'cs' && hotel.credits_cz}
+                {language === 'de' && hotel.credits_de}
+              </motion.p>
+            )}
 
             <motion.p className='text-zinc-800'>
               {language === 'en' && (
