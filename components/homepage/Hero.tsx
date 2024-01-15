@@ -11,6 +11,7 @@ const caramel = Caramel({ subsets: ['latin'], weight: '400' })
 
 const Hero = () => {
   const { language } = useLanguage(state => state)
+
   return (
     <Container className='h-screen w-screen grid place-items-end z-[99999] bg-black'>
       <motion.h1
@@ -40,6 +41,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3 }}
+        className='pointer-events-none md:pointer-events-auto'
       >
         <Earth />
       </motion.div>
