@@ -46,6 +46,7 @@ export default function Earth() {
         <OrbitControls
           enablePan={true}
           enableDamping
+          enableRotate={isMobile ? false : true}
           autoRotate
           autoRotateSpeed={0.4}
           rotateSpeed={0.3}
