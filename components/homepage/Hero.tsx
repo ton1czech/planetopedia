@@ -20,7 +20,7 @@ const Hero = () => {
         transition={{ delay: 0.1, duration: 0.5 }}
         className={`${montserrat.className} font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl 
                       text-white absolute left-1/2 top-1/2 translate-x-[-50%]
-                      translate-y-[-100%] z-10 pointer-events-none select-none`}
+                      translate-y-[-100%] z-10 md:pointer-events-none select-none`}
       >
         PLANETOPEDIA
       </motion.h1>
@@ -30,7 +30,7 @@ const Hero = () => {
         transition={{ delay: 0.5, duration: 1.5 }}
         className={`${caramel.className} text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 
                       text-gold drop-shadow-sm  absolute left-1/2 top-1/2 translate-x-[-50%]
-                      translate-y-[-25%] z-10 pointer-events-none whitespace-nowrap select-none`}
+                      translate-y-[-25%] z-10 md:pointer-events-none whitespace-nowrap select-none`}
       >
         {language === 'en' && <>More than an agency</>}
         {language === 'cs' && <>Více než jen agentura</>}
@@ -41,7 +41,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3 }}
-        className='pointer-events-none md:pointer-events-auto'
+        className='md:pointer-events-none'
       >
         <Earth />
       </motion.div>
