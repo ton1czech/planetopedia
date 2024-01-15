@@ -40,7 +40,7 @@ export default function Earth() {
         far: 200,
         position: [isMobile ? -40 : -20, 3, 6],
       }}
-      className='!w-[100vw] md:!w-[200vh] !h-screen !opacity-90 !absolute !top-0 !right-0 md:!-right-[43vw] md:pointer-events-none'
+      className='!w-[100vw] md:!w-[200vh] !h-screen !opacity-90 !absolute !top-0 !right-0 md:!-right-[43vw]'
     >
       <Suspense fallback={<Loader />}>
         <OrbitControls
