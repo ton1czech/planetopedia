@@ -129,9 +129,9 @@ const Benefits = () => {
                 textDe='Unsere Gemeinschaft ist ein Ort, an dem man Spaß haben, sich mit anderen Gleichgesinnten austauschen und dauerhafte Freundschaften schließen kann.'
               />
               <Item
-                headingEn='4. Work together'
-                headingCz='4. Pracujme společně'
-                headingDe='4. Gemeinsam arbeiten'
+                headingEn='4. Be featured'
+                headingCz='4. Být uváděn'
+                headingDe='4. Aufgeführt werden'
                 textEn='Be shared in our Planetopedia IG feed among others.'
                 textCz='Buďte sdíleni na Planetopedia IG mezi ostatními.'
                 textDe='Wird unter anderem in unserem Planetopedia IG-Feed geteilt.'
@@ -182,7 +182,7 @@ const Benefits = () => {
           </div>
         </div>
 
-        <p className='absolute text-sm text-center -translate-x-1/2 text-zinc-400 bottom-10 left-1/2'>
+        <p className='absolute text-sm text-center -translate-x-1/2 text-zinc-400 bottom-10 left-1/2 whitespace-nowrap'>
           {language === 'en' && 'No fees, pure passion.'}
           {language === 'cs' && 'Žádné poplatky, jen čistá vášeň.'}
           {language === 'de' && 'Keine Gebühren, reine Leidenschaft.'}
