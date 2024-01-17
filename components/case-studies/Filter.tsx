@@ -117,13 +117,6 @@ const Filter = ({ setService, service }: FilterProps) => {
         setService={setService}
         service={service}
       />
-      <Item
-        labelEn='community of creators'
-        labelCz='komunita tvůrců'
-        labelDe='Gemeinschaft der Schöpfer'
-        setService={setService}
-        service={service}
-      />
     </motion.div>
   )
 }
