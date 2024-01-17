@@ -19,17 +19,17 @@ const paragraphs = [
   },
   {
     en: 'Shortly after, Planetopedia was born, which gradually became a marketing agency focusing not only on digital marketing. With proven experience in the industry, we offer innovative and engaging photographic and video marketing solutions.',
-    cz: 'Krátce poté se zrodila Planetopedia, která se postupně stala marketingovou agenturou se zaměřením nejen na digitální marketing. Díky prokazatelným zkušenostem v oblasti luxusního pohostinství nabízíme inovativní a poutavá fotografická a video marketingová řešení.',
+    cz: 'Krátce na to se zrodila Planetopedia, ze které se postupně stala marketingová agentura zaměřující se nejen na digitální marketing. S prokázanými zkušenostmi v oboru nabízíme inovativní a poutavá fotografická a video marketingová řešení.',
     de: 'Kurz darauf wurde Planetopedia geboren und hat sich nach und nach zu einer auf die Zukunft ausgerichteten Influencer-Agentur für digitales Marketing entwickelt. Mit bewährter Expertise in der Luxusgastronomie bieten wir innovative und auffällige Fotografie- und Videomarketinglösungen.',
   },
   {
-    en: 'Since then, we have been able to offer the capabilities to luxury brands, businesses and personal use around the world. A global community of over 200 talented creatives.',
-    cz: 'Od té doby můžeme jako celek nabízet schopnosti tvůrců pro luxusní značky, firmy i osobní účely po celém světě. Celosvětová komunita plná více než 200 talentovaných tvůrců.',
+    en: 'Since then, we have been able to offer the capabilities to luxury brands, businesses and personal use around the world.',
+    cz: 'Od té doby jsme schopni nabídnout možnosti luxusním značkám, podnikům a osobnímu použití po celém světě.',
     de: 'Seitdem sind wir in der Lage, die Fähigkeiten unserer Schöpfer für Luxusmarken, Unternehmen und persönliche Zwecke auf der ganzen Welt anzubieten. Eine weltweite Gemeinschaft mit mehr als 200 talentierten Schöpfern.',
   },
   {
-    en: 'The journey begins on Planetopedia, a global travel community with a unique combination of inspiring and aspirational experiences, photos and places. We connect with each other across all horizons in travel/tourism and the outdoors.',
-    cz: 'Cesta začíná na Planetopedia, globální cestovatelské komunitě s jedinečnou kombinací inspirativních a aspiračních zážitků, fotografií a míst. Vzájemně propojujeme napříč všemi obzory v oblasti cestování/turistiky a outdooru.',
+    en: 'The journey begins on Planetopedia, a global travel community of over 200 talented creatives with a unique combination of inspiring and aspirational experiences, photos and places. We connect with each other across all horizons.',
+    cz: 'Cesta začíná s Planetopedia, globální cestovatelská komunita s více než 200 talentovanými kreativci s jedinečnou kombinací inspirativních a ctižádostivých zážitků, fotografií a míst. Spojujeme se navzájem napříč všemi horizonty.',
     de: 'Die Reise beginnt mit Planetopedia, einer globalen Reise-Community mit einer einzigartigen Kombination aus inspirierenden und aufstrebenden Erfahrungen, Fotos und Orten. Wir verbinden Schöpfer und Markenunternehmen über alle Horizonte der Reise-/Tourismus- und Outdoor-Branche hinweg miteinander.',
   },
   {
