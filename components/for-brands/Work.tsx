@@ -81,24 +81,25 @@ const Work = () => {
         >
           {language === 'en' && (
             <>
-              From the biggest hotel companies to brands and world-inspiring
-              marketing agencies, our clients have the same thing in common: big
-              challenges that require a fresh & different approach.
+              From the biggest hotel chains to companies and dynamic marketing
+              agencies, our clients have the same thing in common: they face
+              substantial challenges demanding innovative and distinctive
+              solutions.
             </>
           )}
           {language === 'cs' && (
             <>
-              Od největších hotelových společností až po značky a světově
-              inspirativní marketingové agentury, naši klienti mají společné
-              jedno: velké výzvy, které vyžadují nový a odlišný přístup.
+              Od největších hotelových řetězců po firmy a dynamické marketingové
+              agentury mají naši klienti společné jedno: čelí zásadním výzvám
+              vyžadujícím inovativní a osobitá řešení.
             </>
           )}
           {language === 'de' && (
             <>
-              Von den größten Hotelunternehmen bis hin zu Marken und
-              weltberühmten Marketingagenturen haben unsere Kunden eines
-              gemeinsam: große Herausforderungen, die einen neuen und anderen
-              Ansatz erfordern.
+              Von den größten Hotelketten bis hin zu Unternehmen und dynamischen
+              Marketingagenturen haben unsere Kunden eines gemeinsam: Sie stehen
+              vor grundlegenden Herausforderungen, die innovative und
+              unverwechselbare Lösungen erfordern.
             </>
           )}
         </motion.p>

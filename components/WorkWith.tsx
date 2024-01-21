@@ -16,7 +16,7 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
   return (
     <div>
       {isCompanyPage ? (
-        <div className='mb-12 flex flex-col gap-5 max-w-3xl mx-auto text-justify'>
+        <div className='mb-12 flex flex-col max-w-3xl mx-auto text-justify'>
           <motion.h2
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -32,40 +32,26 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
             className='text-2xl font-semibold text-justify md:text-3xl lg:text-4xl'
           >
             {language === 'en' && (
-              <>We are here for people who want to stay connected.</>
-            )}
-            {language === 'cs' && (
-              <>Jsme zde pro lidi, kteří chtějí zůstat ve spojení</>
-            )}
-            {language === 'de' && (
-              <>Wir sind für Menschen da, die in Verbindung bleiben wollen.</>
-            )}
-          </motion.p>
-          <motion.p
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            className='text-lg'
-          >
-            {language === 'en' && (
               <>
-                From the biggest hotel companies to brands and world-inspiring
-                marketing agencies, our clients have the same thing in common:
-                big challenges that require a fresh & different approach.
+                From the biggest hotel chains to companies and dynamic marketing
+                agencies, our clients have the same thing in common: they face
+                substantial challenges demanding innovative and distinctive
+                solutions.
               </>
             )}
             {language === 'cs' && (
               <>
-                Od největších hotelových společností až po značky a světově
-                inspirativní marketingové agentury, naši klienti mají společné
-                jedno: velké výzvy, které vyžadují nový a odlišný přístup.
+                Od největších hotelových řetězců po firmy a dynamické
+                marketingové agentury mají naši klienti společné jedno: čelí
+                zásadním výzvám vyžadujícím inovativní a osobitá řešení.
               </>
             )}
             {language === 'de' && (
               <>
-                Von den größten Hotelunternehmen bis hin zu Marken und
-                weltberühmten Marketingagenturen haben unsere Kunden eines
-                gemeinsam: große Herausforderungen, die einen neuen und anderen
-                Ansatz erfordern.
+                Von den größten Hotelketten bis hin zu Unternehmen und
+                dynamischen Marketingagenturen haben unsere Kunden eines
+                gemeinsam: Sie stehen vor grundlegenden Herausforderungen, die
+                innovative und unverwechselbare Lösungen erfordern.
               </>
             )}
           </motion.p>
@@ -81,43 +67,31 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
             {language === 'cs' && <>S kým spolupracujeme</>}
             {language === 'de' && <>Mit wem wir arbeiten</>}
           </h2>
-          <div className='grid gap-6 md:grid-cols-2 md:gap-12'>
-            <p className='text-2xl font-semibold text-justify md:text-3xl lg:text-4xl'>
-              {language === 'en' && (
-                <>We are here for people who want to stay connected.</>
-              )}
-              {language === 'cs' && (
-                <>Jsme zde pro lidi, kteří chtějí zůstat ve spojení</>
-              )}
-              {language === 'de' && (
-                <>Wir sind für Menschen da, die in Verbindung bleiben wollen.</>
-              )}
-            </p>
-            <p className='text-lg'>
-              {language === 'en' && (
-                <>
-                  From the biggest hotel companies to brands and world-inspiring
-                  marketing agencies, our clients have the same thing in common:
-                  big challenges that require a fresh & different approach.
-                </>
-              )}
-              {language === 'cs' && (
-                <>
-                  Od největších hotelových společností až po značky a světově
-                  inspirativní marketingové agentury, naši klienti mají společné
-                  jedno: velké výzvy, které vyžadují nový a odlišný přístup.
-                </>
-              )}
-              {language === 'de' && (
-                <>
-                  Von den größten Hotelunternehmen bis hin zu Marken und
-                  weltberühmten Marketingagenturen haben unsere Kunden eines
-                  gemeinsam: große Herausforderungen, die einen neuen und
-                  anderen Ansatz erfordern.
-                </>
-              )}
-            </p>
-          </div>
+          <p className='text-2xl font-semibold text-justify md:text-3xl lg:text-4xl'>
+            {language === 'en' && (
+              <>
+                From the biggest hotel chains to companies and dynamic marketing
+                agencies, our clients have the same thing in common: they face
+                substantial challenges demanding innovative and distinctive
+                solutions.
+              </>
+            )}
+            {language === 'cs' && (
+              <>
+                Od největších hotelových řetězců po firmy a dynamické
+                marketingové agentury mají naši klienti společné jedno: čelí
+                zásadním výzvám vyžadujícím inovativní a osobitá řešení.
+              </>
+            )}
+            {language === 'de' && (
+              <>
+                Von den größten Hotelketten bis hin zu Unternehmen und
+                dynamischen Marketingagenturen haben unsere Kunden eines
+                gemeinsam: Sie stehen vor grundlegenden Herausforderungen, die
+                innovative und unverwechselbare Lösungen erfordern.
+              </>
+            )}
+          </p>
         </motion.div>
       )}
 
