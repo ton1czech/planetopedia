@@ -23,22 +23,13 @@ const Hero = () => {
           <div className='text-white text-center'>
             <h1 className='text-3xl font-black uppercase md:text-5xl lg:text-7xl'>
               {language === 'en' ? (
-                <>Join the Team!</>
+                <>Join the Community!</>
               ) : language === 'cs' ? (
-                <>Připoj se do Týmu!</>
+                <>Připoj se do Komunity!</>
               ) : language === 'de' ? (
-                <>Treten Sie dem Team bei!</>
+                <>Treten Sie dem Kommunity bei!</>
               ) : null}
             </h1>
-            <p className='text-lg md:text-3xl lg:text-4xl tracking-wide'>
-              {language === 'en' ? (
-                <>Let us take your work seriously</>
-              ) : language === 'cs' ? (
-                <>Vezmeme Vaši práci vážně</>
-              ) : language === 'de' ? (
-                <>Lassen Sie uns Ihre Arbeit ernst nehmen</>
-              ) : null}
-            </p>
           </div>
         </Container>
       </div>

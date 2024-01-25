@@ -37,9 +37,11 @@ const Web = () => {
           transition={{ delay: 0.5 }}
         >
           <h2 className='text-2xl text-center text-black md:text-3xl mb-4 font-bold'>
-            {language === 'en' && <>Web Development</>}
-            {language === 'cs' && <>Tvorba Webu</>}
-            {language === 'de' && <>Web-Entwicklung</>}
+            {language === 'en' && <>we develop websites, including this one</>}
+            {language === 'cs' && <>vyvíjíme webové stránky, včetně této</>}
+            {language === 'de' && (
+              <>wir entwickeln Websites, einschließlich dieser hier</>
+            )}
           </h2>
           <p className='text-black text-justify lg:text-center max-w-[90ch] mx-auto mb-6'>
             {language === 'en' && (
