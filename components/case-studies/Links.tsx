@@ -32,10 +32,10 @@ const Links = ({ links }: LinksProps) => {
       <motion.div
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        className='space-y-2'
+        className='space-y-2 overflow-hidden'
       >
         {links?.map(link => (
-          <p>
+          <p className='truncate'>
             <span className='capitalize text-zinc-800'>{link.site}: </span>
             <Link
               href={link.url}
