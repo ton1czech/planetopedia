@@ -258,10 +258,10 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className='mt-8 space-y-3 md:mt-12'
+              className='mt-8 space-y-3 overflow-hidden md:mt-12'
             >
               {restaurant?.web_link && (
-                <p>
+                <p className='truncate'>
                   <span className='text-zinc-600'>Web: </span>
                   <Link
                     href={restaurant.web_link}
@@ -273,7 +273,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                 </p>
               )}
               {restaurant?.instagram_link && (
-                <p>
+                <p className='truncate'>
                   <span className='text-zinc-600'>Instagram: </span>
                   <Link
                     href={restaurant.instagram_link}
