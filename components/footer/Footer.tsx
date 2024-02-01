@@ -147,6 +147,10 @@ const Footer = () => {
             <Phone className='w-4 h-4' />
             +420 739 830 034
           </p>
+          <p className='flex items-center gap-2 text-zinc-400'>
+            <Mail className='w-4 h-4' />
+            dominik@planetopedia.agency
+          </p>
           <p className='flex items-center gap-2 text-zinc-100'>
             <Mail className='w-4 h-4' />
             info@planetopedia.agency
