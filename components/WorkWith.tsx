@@ -43,7 +43,7 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
               <>
                 Od největších hotelových řetězců po firmy a dynamické
                 marketingové agentury mají naši klienti společné jedno: čelí
-                zásadním výzvám vyžadujícím inovativní a osobitá řešení.
+                zásadním výzvám vyžadující inovativní a osobitá řešení.
               </>
             )}
             {language === 'de' && (
@@ -80,7 +80,7 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
               <>
                 Od největších hotelových řetězců po firmy a dynamické
                 marketingové agentury mají naši klienti společné jedno: čelí
-                zásadním výzvám vyžadujícím inovativní a osobitá řešení.
+                zásadním výzvám vyžadující inovativní a osobitá řešení.
               </>
             )}
             {language === 'de' && (

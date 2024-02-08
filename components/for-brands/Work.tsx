@@ -91,7 +91,7 @@ const Work = () => {
             <>
               Od největších hotelových řetězců po firmy a dynamické marketingové
               agentury mají naši klienti společné jedno: čelí zásadním výzvám
-              vyžadujícím inovativní a osobitá řešení.
+              vyžadující inovativní a osobitá řešení.
             </>
           )}
           {language === 'de' && (
