@@ -1,6 +1,6 @@
 import Navbar from '@/components/nav/Navbar'
 import './globals.css'
-import type { Metadata, Viewport } from 'next'
+import type { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
 import Footer from '@/components/footer/Footer'
 import ToasterProvider from '@/providers/ToasterProvider'
@@ -58,12 +58,6 @@ export const metadata: Metadata = {
     'clients',
     'creators',
   ],
-}
-
-export const viewport: Viewport = {
-  initialScale: 1,
-  width: 'device-width',
-  maximumScale: 1,
 }
 
 export default function RootLayout({
