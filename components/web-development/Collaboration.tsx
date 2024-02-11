@@ -70,7 +70,7 @@ export const Collaboration = () => {
           className='relative space-y-10 border-l-2 border-zinc-400 lg:space-y-32 -mt-28'
         >
           <motion.div
-            className='absolute -left-[2px] z-10 w-[2px] h-full bg-sky-500 origin-top'
+            className='absolute -left-[3px] z-10 w-[4px] h-full bg-sky-500 origin-top'
             style={{ scaleY: scrollYProgress }}
           />
           <TimelineItem
