@@ -21,9 +21,9 @@ export const Meet = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className='flex flex-col gap-4'
+          className='flex flex-col gap-20 lg:gap-4'
         >
-          <div className='grid grid-cols-[1fr_2fr] gap-4'>
+          <div className='grid lg:grid-cols-[1fr_2fr] gap-4'>
             <img
               src='/team/daniel-anthony-baudys.webp'
               alt='Daniel Anthony Baudyš'
@@ -42,7 +42,7 @@ export const Meet = () => {
               </p>
             </div>
           </div>
-          <div className='grid grid-cols-[1fr_2fr] gap-4'>
+          <div className='grid lg:grid-cols-[1fr_2fr] gap-4'>
             <img src='/team/dominik-grossl.webp' alt='Dominik Grossl' />
             <div>
               <p className='text-xl font-semibold'>Dominik Grössl</p>
