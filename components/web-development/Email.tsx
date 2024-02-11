@@ -20,7 +20,7 @@ const Email = () => {
   }, [clicked])
 
   return (
-    <section className='bg-white'>
+    <section className='h-[80vh] bg-white'>
       <Container className='grid w-full h-full place-content-center'>
         <div>
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
