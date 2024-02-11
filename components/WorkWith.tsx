@@ -62,12 +62,12 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
           whileInView={{ y: 0, opacity: 1 }}
           className='mb-12'
         >
-          <h2 className='mb-2 text-xl font-thin md:text-2xl lg:text-3xl text-zinc-600'>
+          <h2 className='mb-2 text-xl font-semibold md:text-2xl lg:text-3xl'>
             {language === 'en' && <>Who we work with</>}
             {language === 'cs' && <>S kým spolupracujeme</>}
             {language === 'de' && <>Mit wem wir arbeiten</>}
           </h2>
-          <p className='text-2xl font-semibold text-justify md:text-3xl lg:text-4xl'>
+          <p className='text-2xl text-justify md:text-3xl lg:text-4xl font-thin text-zinc-700'>
             {language === 'en' && (
               <>
                 From the biggest hotel chains to companies and dynamic marketing
