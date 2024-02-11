@@ -55,7 +55,7 @@ export const Showcase = () => {
             <>Změníme vaše návštěvníky na věrné zákazníky.</>
           )}
         </motion.h2>
-        <div className='grid gap-20 lg:grid-cols-2'>
+        <div className='grid gap-10 md:gap-20 lg:grid-cols-2'>
           {projects.map(({ name, year, image, url }) => (
             <Project
               key={name}
