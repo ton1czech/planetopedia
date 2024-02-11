@@ -2,29 +2,16 @@
 
 import { useLanguage } from '@/store/useLanguage'
 import Container from '../Container'
-import { FC, useRef } from 'react'
-import { useScroll, motion } from 'framer-motion'
+import { FC } from 'react'
+import { motion } from 'framer-motion'
 
 interface TimelineItemProps {
   week: string
   label: string
   body: string
-  src: string
 }
 
-export const TimelineItem: FC<TimelineItemProps> = ({
-  week,
-  label,
-  body,
-  src,
-}) => {
-  const ref = useRef<HTMLImageElement>(null)
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['0 1', '1 1'],
-  })
-
+export const TimelineItem: FC<TimelineItemProps> = ({ week, label, body }) => {
   return (
     <li>
       <motion.div
@@ -46,11 +33,6 @@ export const TimelineItem: FC<TimelineItemProps> = ({
         <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
           {body}
         </motion.p>
-        {/* <motion.img
-          ref={ref}
-          src={src}
-          style={{ scale: scrollYProgress, opacity: scrollYProgress }}
-        /> */}
       </div>
     </li>
   )
@@ -67,7 +49,7 @@ export const Collaboration = () => {
           whileInView={{ opacity: 1 }}
           className='mb-4 text-xl font-semibold md:text-3xl xl:text-4xl'
         >
-          {language === 'en' && <>Our collaboration, step by step.</>}
+          {language === 'en' && <>Our cooperation, step by step.</>}
           {language === 'cs' && <>Naše spolupráce, krok po kroku.</>}
         </motion.h2>
         <ol className='space-y-10 border-l-2 border-zinc-400 lg:space-y-32'>
@@ -83,7 +65,6 @@ export const Collaboration = () => {
                 ? "In the first week, we'll focus on creating the fundamental structure and design of the website. Creativity meets functionality as we craft a visual identity that captivates and engages visitors."
                 : 'V prvním týdnu se společně zaměříme na vytvoření základní struktury a designu webu. Kreativita se setká s funkcionalitou, abychom vytvořili vizuální podobu, která bude zaujímat a lákat návštěvníky.'
             }
-            src='/services/web-development/timeline/1.webp'
           />
           <TimelineItem
             week={language === 'en' ? '2nd step' : '2. krok'}
@@ -97,7 +78,6 @@ export const Collaboration = () => {
                 ? "The second week is dedicated to populating the website with content that is not only visually appealing but also conveys crucial information. Together, we'll work on texts, images, and other elements to give the content meaning and value."
                 : 'Druhý týden bude věnován naplnění obsahu, který bude nejen esteticky působivý, ale bude také sdělovat důležité informace. Společně pracujeme na textech, obrázcích a dalších prvcích, které dodají obsahu webu jeho význam a hodnotu.'
             }
-            src='/services/web-development/timeline/2.webp'
           />
           <TimelineItem
             week={language === 'en' ? '3rd step' : '3. krok'}
@@ -111,7 +91,6 @@ export const Collaboration = () => {
                 ? "The third week focuses on refining details and making subtle adjustments. We'll pay attention to every minor tweak to ensure the website exudes professionalism and aligns precisely with your vision."
                 : 'Třetí týden se zaměříme na detaily a jemné úpravy. Věnujeme se všem drobným úpravám, které zajistí, že web bude působit profesionálně a přesně podle vašich představ.'
             }
-            src='/services/web-development/timeline/3.webp'
           />
           <TimelineItem
             week={language === 'en' ? '4th step' : '4. krok'}
@@ -125,7 +104,6 @@ export const Collaboration = () => {
                 ? "The final week is dedicated to final preparations for launching the website. We'll review all elements to ensure your website is ready for deployment and poised to welcome your visitors."
                 : 'Poslední týden je věnován finálním přípravám k spuštění webu. Zkontrolujeme všechny prvky, abychom zajistili, že váš web je připraven k uvedení do provozu a k přivítání vašich návštěvníků.'
             }
-            src='/services/web-development/timeline/4.webp'
           />
         </ol>
       </Container>
