@@ -48,12 +48,8 @@ export const Showcase = () => {
           whileInView={{ opacity: 1 }}
           className='mb-4 text-xl font-semibold md:text-3xl xl:text-4xl'
         >
-          {language === 'en' && (
-            <>We transform your visitors into loyal customers.</>
-          )}
-          {language === 'cs' && (
-            <>Změníme vaše návštěvníky na věrné zákazníky.</>
-          )}
+          {language === 'en' && <>Our projects, some of them.</>}
+          {language === 'cs' && <>Naše projekty, některé z nich.</>}
         </motion.h2>
         <div className='grid gap-10 md:gap-20 lg:grid-cols-2'>
           {projects.map(({ name, year, image, url }) => (

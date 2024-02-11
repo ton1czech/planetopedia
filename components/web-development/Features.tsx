@@ -20,8 +20,8 @@ export const Features = () => {
         whileInView={{ opacity: 1 }}
         className='mb-4 text-xl font-semibold md:text-3xl lg:text-4xl'
       >
-        {language === 'en' && <>A looooot of functions</>}
-        {language === 'cs' && <>Hooooodně funkcí</>}
+        {language === 'en' && <>We offer a looooot of functions</>}
+        {language === 'cs' && <>Nabízíme hooooodně funkcí</>}
       </motion.h2>
 
       <div className='grid gap-4 lg:grid-cols-2 lg:gap-6'>

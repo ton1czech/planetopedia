@@ -15,8 +15,8 @@ export const Meet = () => {
           whileInView={{ opacity: 1 }}
           className='mb-4 text-xl font-semibold md:text-3xl lg:text-4xl'
         >
-          {language === 'en' && <>Meet your team</>}
-          {language === 'cs' && <>Seznamte se se svým týmem</>}
+          {language === 'en' && <>Meet your team.</>}
+          {language === 'cs' && <>Seznamte se se svým týmem.</>}
         </motion.h2>
         <motion.div
           initial={{ opacity: 0 }}
