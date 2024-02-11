@@ -65,12 +65,12 @@ export const Collaboration = () => {
         <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className='mb-4 text-xl font-semibold text-center md:text-3xl xl:text-4xl'
+          className='mb-4 text-xl font-semibold md:text-3xl xl:text-4xl'
         >
-          {language === 'en' && <>Collaboration Timeline</>}
-          {language === 'cz' && <>Seznamte se se svým vývojářem</>}
+          {language === 'en' && <>Our collaboration, step by step.</>}
+          {language === 'cs' && <>Naše spolupráce, krok po kroku.</>}
         </motion.h2>
-        <ol className='border-l-2 border-zinc-400 dark:border-zinc-600 space-y-20 lg:space-y-32 max-w-[80ch] mx-auto'>
+        <ol className='space-y-10 border-l-2 border-zinc-400 lg:space-y-32'>
           <TimelineItem
             week={language === 'en' ? '1st step' : '1. krok'}
             label={

@@ -25,7 +25,7 @@ export const Project: FC<ProjectProps> = ({ name, year, image, url }) => {
       >
         <img src={image} alt={name} />
 
-        <h3 className='mt-3 italic text-zinc-700'>
+        <h3 className='mt-3 italic text-zinc-800'>
           {name}{' '}
           <span className='px-1 text-sm not-italic font-light text-zinc-600'>
             |
@@ -46,19 +46,13 @@ export const Showcase = () => {
         <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className='mb-4 text-xl font-semibold text-center md:text-3xl xl:text-4xl'
+          className='mb-4 text-xl font-semibold md:text-3xl xl:text-4xl'
         >
           {language === 'en' && (
-            <>
-              Check out the projects <br className='md:hidden' /> we've worked
-              on
-            </>
+            <>We transform your visitors into loyal customers.</>
           )}
-          {language === 'cz' && (
-            <>
-              Podívejte se na projekty, <br className='md:hidden' /> na kterých
-              jsme pracovali
-            </>
+          {language === 'cs' && (
+            <>Změníme vaše návštěvníky na věrné zákazníky.</>
           )}
         </motion.h2>
         <div className='grid gap-20 lg:grid-cols-2'>
