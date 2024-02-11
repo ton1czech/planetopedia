@@ -25,11 +25,7 @@ export const Features = () => {
       </motion.h2>
 
       <div className='grid gap-4 lg:grid-cols-2 lg:gap-6'>
-        <Accordion
-          type='multiple'
-          className='space-y-4'
-          defaultValue={['frontend', 'newsletter', 'analytics']}
-        >
+        <Accordion type='multiple' className='space-y-4'>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -45,9 +41,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I specialize in creating attractive and user-friendly websites with an emphasis on quality design and optimal user experience.'}
+                  'We specialize in creating attractive and user-friendly websites with an emphasis on quality design and optimal user experience.'}
                 {language === 'cs' &&
-                  'Specializuji se na tvorbu atraktivních a uživatelsky přívětivých webových stránek s důrazem na kvalitní design a optimální uživatelskou zkušenost.'}
+                  'Specializujeme se na tvorbu atraktivních a uživatelsky přívětivých webových stránek s důrazem na kvalitní design a optimální uživatelskou zkušenost.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -66,9 +62,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I offer a comprehensive e-commerce solution that makes it easy to manage products, secure payments and maximize conversions.'}
+                  'We offer a comprehensive e-commerce solution that makes it easy to manage products, secure payments and maximize conversions.'}
                 {language === 'cs' &&
-                  'Nabízím komplexní e-commerce řešení, které umožňuje snadnou správu produktů, bezpečné platby a maximalizaci konverzí.'}
+                  'Nabízíme komplexní e-commerce řešení, které umožňuje snadnou správu produktů, bezpečné platby a maximalizaci konverzí.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -87,9 +83,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I provide a custom booking platform with the ability to schedule and manage bookings for different types of business.'}
+                  'We provide a custom booking platform with the ability to schedule and manage bookings for different types of business.'}
                 {language === 'cs' &&
-                  'Poskytuji vlastní rezervační platformu s možností plánování a správy rezervací pro různé typy podnikání.'}
+                  'Poskytujeme vlastní rezervační platformu s možností plánování a správy rezervací pro různé typy podnikání.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -108,9 +104,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I develop and implement social networks with user interaction and content sharing features to strengthen the community.'}
+                  'We develop and implement social networks with user interaction and content sharing features to strengthen the community.'}
                 {language === 'cs' &&
-                  'Vyvíjím a implementuji sociální sítě s funkcemi interakce mezi uživateli a možností sdílení obsahu pro posílení komunity.'}
+                  'Vyvíjíme a implementujeme sociální sítě s funkcemi interakce mezi uživateli a možností sdílení obsahu pro posílení komunity.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -129,9 +125,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I create complex, multi-purpose platforms that allow users to interact, share and manage content.'}
+                  'We create complex, multi-purpose platforms that allow users to interact, share and manage content.'}
                 {language === 'cs' &&
-                  'Vytvářím komplexní platformy pro různé účely, umožňující uživatelům interakci, sdílení a správu obsahu.'}
+                  'Vytváříme komplexní platformy pro různé účely, umožňující uživatelům interakci, sdílení a správu obsahu.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -150,9 +146,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I design and create websites with 3D elements and visualizations to increase interactivity and attractiveness for users.'}
+                  'We design and create websites with 3D elements and visualizations to increase interactivity and attractiveness for users.'}
                 {language === 'cs' &&
-                  'Navrhuji a vytvářím stránky s 3D prvky a vizualizacemi pro zvýšení interaktivity a atraktivity pro uživatele.'}
+                  'Navrhujeme a vytváříme stránky s 3D prvky a vizualizacemi pro zvýšení interaktivity a atraktivity pro uživatele.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -171,9 +167,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I develop scalable web applications with intuitive interfaces and advanced features for different business areas.'}
+                  'We develop scalable web applications with intuitive interfaces and advanced features for different business areas.'}
                 {language === 'cs' &&
-                  'Rozvíjím škálovatelné webové aplikace s intuitivním rozhraním a pokročilými funkcemi pro různé oblasti podnikání.'}
+                  'Rozvíjíme škálovatelné webové aplikace s intuitivním rozhraním a pokročilými funkcemi pro různé oblasti podnikání.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -192,9 +188,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I offer the implementation and management of a newsletter to keep in touch with clients and keep them regularly informed of news.'}
+                  'We offer the implementation and management of a newsletter to keep in touch with clients and keep them regularly informed of news.'}
                 {language === 'cs' &&
-                  'Nabízím implementaci a správu newsletteru pro udržování kontaktu s klienty a pravidelné informování o novinkách.'}
+                  'Nabízíme implementaci a správu newsletteru pro udržování kontaktu s klienty a pravidelné informování o novinkách.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -213,9 +209,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I provide reliable hosting with sufficient capacity and security features to keep your website running smoothly.'}
+                  'We provide reliable hosting with sufficient capacity and security features to keep your website running smoothly.'}
                 {language === 'cs' &&
-                  'Poskytuji spolehlivý hosting s dostatečnou kapacitou a bezpečnostními funkcemi pro bezproblémový provoz webových stránek.'}
+                  'Poskytujeme spolehlivý hosting s dostatečnou kapacitou a bezpečnostními funkcemi pro bezproblémový provoz webových stránek.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -234,9 +230,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I provide detailed analytics and reports to help understand user behavior and optimize the site.'}
+                  'We provide detailed analytics and reports to help understand user behavior and optimize the site.'}
                 {language === 'cs' &&
-                  'Zajišťuji detailní analytické zprávy a reporty, které pomáhají porozumět chování uživatelů a optimalizovat stránky.'}
+                  'Zajišťujeme detailní analytické zprávy a reporty, které pomáhají porozumět chování uživatelů a optimalizovat stránky.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -255,9 +251,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I design and integrate forms to efficiently collect and manage contact information and user feedback.'}
+                  'We design and integrate forms to efficiently collect and manage contact information and user feedback.'}
                 {language === 'cs' &&
-                  'Navrhuji a integruji formuláře pro efektivní sběr a správu kontaktních informací a zpětnou vazbu od uživatelů.'}
+                  'Navrhujeme a integrujeme formuláře pro efektivní sběr a správu kontaktních informací a zpětnou vazbu od uživatelů.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -276,19 +272,15 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I implement 3D elements into websites that increase attractiveness and interactivity for visitors.'}
+                  'We implement 3D elements into websites that increase attractiveness and interactivity for visitors.'}
                 {language === 'cs' &&
-                  'Implementuji 3D prvky do webových stránek, které zvyšují atraktivitu a interaktivitu pro návštěvníky.'}
+                  'Implementujeme 3D prvky do webových stránek, které zvyšují atraktivitu a interaktivitu pro návštěvníky.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
         </Accordion>
 
-        <Accordion
-          type='multiple'
-          className='space-y-4'
-          defaultValue={['maps', 'seo', 'popups']}
-        >
+        <Accordion type='multiple' className='space-y-4'>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -304,9 +296,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I create user-friendly admin interfaces for easy management of content and site features.'}
+                  'We create user-friendly admin interfaces for easy management of content and site features.'}
                 {language === 'cs' &&
-                  'Vytvářím uživatelsky přívětivá administrátorská rozhraní pro snadnou správu obsahu a funkcí webu.'}
+                  'Vytváříme uživatelsky přívětivá administrátorská rozhraní pro snadnou správu obsahu a funkcí webu.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -325,9 +317,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I design and implement pop-ups to efficiently display actions, menus or important information to users.'}
+                  'We design and implement pop-ups to efficiently display actions, menus or important information to users.'}
                 {language === 'cs' &&
-                  'Navrhuji a implementuji vyskakovací okna pro efektivní zobrazení akcí, nabídek nebo důležitých informací pro uživatele.'}
+                  'Navrhujeme a implementuji vyskakovací okna pro efektivní zobrazení akcí, nabídek nebo důležitých informací pro uživatele.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -343,9 +335,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I provide Content Delivery Network (CDN) integration for fast content loading and improved site performance.'}
+                  'We provide Content Delivery Network (CDN) integration for fast content loading and improved site performance.'}
                 {language === 'cs' &&
-                  'Zajišťuji integraci Content Delivery Network (CDN) pro rychlé načítání obsahu a zlepšení výkonu stránek.'}
+                  'Zajišťujeme integraci Content Delivery Network (CDN) pro rychlé načítání obsahu a zlepšení výkonu stránek.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -364,9 +356,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I create chatbots to interact with users and improve their experience on the site.'}
+                  'We create chatbots to interact with users and improve their experience on the site.'}
                 {language === 'cs' &&
-                  'Vytvářím chatboty pro interaktivní komunikaci s uživateli a zlepšení jejich zkušeností na stránkách.'}
+                  'Vytváříme chatboty pro interaktivní komunikaci s uživateli a zlepšení jejich zkušeností na stránkách.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -382,9 +374,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I provide interconnection of web applications with databases for data storage and management.'}
+                  'We provide interconnection of web applications with databases for data storage and management.'}
                 {language === 'cs' &&
-                  'Zabezpečuji propojení webových aplikací s databázemi pro ukládání a správu dat.'}
+                  'Zabezpečujeme propojení webových aplikací s databázemi pro ukládání a správu dat.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -403,9 +395,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I implement animations to increase the attractiveness and interactivity of websites.'}
+                  'We implement animations to increase the attractiveness and interactivity of websites.'}
                 {language === 'cs' &&
-                  'Implementuji animace pro zvýšení atraktivity a interaktivity webových stránek.'}
+                  'Implementujeme animace pro zvýšení atraktivity a interaktivity webových stránek.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -424,9 +416,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I optimize websites for mobile devices to ensure a smooth and user-friendly experience.'}
+                  'We optimize websites for mobile devices to ensure a smooth and user-friendly experience.'}
                 {language === 'cs' &&
-                  'Optimalizuji webové stránky pro mobilní zařízení, aby byla zajištěna plynulá a uživatelsky přívětivá zkušenost.'}
+                  'Optimalizujeme webové stránky pro mobilní zařízení, aby byla zajištěna plynulá a uživatelsky přívětivá zkušenost.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -445,9 +437,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I help register and manage domains for websites with an emphasis on security and proper setup.'}
+                  'We help register and manage domains for websites with an emphasis on security and proper setup.'}
                 {language === 'cs' &&
-                  'Pomáhám s registrací a správou domén pro webové stránky s důrazem na bezpečnost a správné nastavení.'}
+                  'Pomáháme s registrací a správou domén pro webové stránky s důrazem na bezpečnost a správné nastavení.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -466,9 +458,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I provide site optimization for better indexing in search engines and improved visibility on the Internet.'}
+                  'We provide site optimization for better indexing in search engines and improved visibility on the Internet.'}
                 {language === 'cs' &&
-                  'Zajišťuji optimalizaci stránek pro lepší indexaci ve vyhledávačích a zlepšení viditelnosti na internetu.'}
+                  'Zajišťujeme optimalizaci stránek pro lepší indexaci ve vyhledávačích a zlepšení viditelnosti na internetu.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
@@ -484,9 +476,9 @@ export const Features = () => {
               </AccordionTrigger>
               <AccordionContent>
                 {language === 'en' &&
-                  'I provide Search Engine Optimization (SEO) strategies and implementation to improve positions in search results and gain organic traffic.'}
+                  'We provide Search Engine Optimization (SEO) strategies and implementation to improve positions in search results and gain organic traffic.'}
                 {language === 'cs' &&
-                  'Poskytuji strategie a implementaci Search Engine Optimization (SEO) pro zlepšení pozic ve výsledcích vyhledávání a získání organického provozu.'}
+                  'Poskytujeme strategie a implementaci Search Engine Optimization (SEO) pro zlepšení pozic ve výsledcích vyhledávání a získání organického provozu.'}
               </AccordionContent>
             </AccordionItem>
           </motion.div>
