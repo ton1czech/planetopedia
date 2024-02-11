@@ -13,7 +13,7 @@ export const Meet = () => {
         <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className='mb-4 text-xl font-semibold text-center md:text-3xl'
+          className='mb-4 text-xl font-semibold text-center md:text-3xl lg:text-4xl'
         >
           {language === 'en' && <>Meet your developer</>}
           {language === 'cz' && <>Seznamte se se svým vývojářem</>}
