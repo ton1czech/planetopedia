@@ -15,18 +15,31 @@ export const Meet = () => {
           whileInView={{ opacity: 1 }}
           className='mb-4 text-xl font-semibold md:text-3xl lg:text-4xl'
         >
-          {language === 'en' && <>Meet your developer</>}
-          {language === 'cs' && <>Seznamte se se svým vývojářem</>}
+          {language === 'en' && <>Meet your team</>}
+          {language === 'cs' && <>Seznamte se se svým týmem</>}
         </motion.h2>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className='grid gap-6 md:grid-cols-2'
+          className='flex flex-col gap-4'
         >
-          <img
-            src='/team/daniel-anthony-baudys.webp'
-            alt='Daniel Anthony Baudyš'
-          />
+          <div className='grid grid-cols-[1fr_3fr] gap-4'>
+            <img
+              src='/team/daniel-anthony-baudys.webp'
+              alt='Daniel Anthony Baudyš'
+            />
+            <div>
+              <p className='text-xl font-semibold'>Daniel Anthony Baudyš</p>
+              <p className='text-zinc-700'>developer</p>
+            </div>
+          </div>
+          <div className='grid grid-cols-[1fr_3fr] gap-4'>
+            <img src='/team/dominik-grossl.webp' alt='Dominik Grossl' />
+            <div>
+              <p className='text-xl font-semibold'>Dominik Grössl</p>
+              <p className='text-zinc-700'>project manager</p>
+            </div>
+          </div>
         </motion.div>
       </Container>
     </section>
