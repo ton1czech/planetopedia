@@ -2,59 +2,77 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { useLanguage } from '@/store/useLanguage'
+import Link from 'next/link'
+import { projects } from '@/database/projects'
+import Container from '../Container'
 
-const srcs = [
-  '/services/for-brands/web/1.webp',
-  '/services/for-brands/web/2.webp',
-  '/services/for-brands/web/3.webp',
-]
+interface ProjectProps {
+  name: string
+  year: number
+  image: string
+  url: string
+}
+
+export const Project: FC<ProjectProps> = ({ name, year, image, url }) => {
+  return (
+    <Link href={url} target='_blank'>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+      >
+        <img src={image} alt={name} />
+
+        <h3 className='mt-3 italic text-zinc-700'>
+          {name}{' '}
+          <span className='px-1 text-sm not-italic font-light text-zinc-600'>
+            |
+          </span>
+          <span className='text-zinc-600'>{year}</span>
+        </h3>
+      </motion.div>
+    </Link>
+  )
+}
 
 export const Showcase = () => {
   const { language } = useLanguage()
 
-  const [src, setSrc] = useState<string>(srcs[0])
-  const [index, setIndex] = useState<number>(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const nextImageIndex = (index + 1) % srcs.length
-      setIndex(nextImageIndex)
-      setSrc(srcs[nextImageIndex])
-    }, 5000)
-
-    return () => clearInterval(interval)
-  }, [index, srcs])
-
   return (
-    <section>
-      <motion.h2
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        className='mb-4 text-xl font-semibold text-center md:text-3xl xl:text-4xl'
-      >
-        {language === 'en' && (
-          <>
-            Check out the projects <br className='md:hidden' /> we've worked on
-          </>
-        )}
-        {language === 'cz' && (
-          <>
-            Podívejte se na projekty, <br className='md:hidden' /> na kterých
-            jsme pracovali
-          </>
-        )}
-      </motion.h2>
-      <motion.img
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        src={src}
-        alt='website'
-        width={1100}
-        height={650}
-        className='mx-auto mb-20 md:mb-40'
-      />
+    <section className='mb-20 md:mb-40'>
+      <Container>
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className='mb-4 text-xl font-semibold text-center md:text-3xl xl:text-4xl'
+        >
+          {language === 'en' && (
+            <>
+              Check out the projects <br className='md:hidden' /> we've worked
+              on
+            </>
+          )}
+          {language === 'cz' && (
+            <>
+              Podívejte se na projekty, <br className='md:hidden' /> na kterých
+              jsme pracovali
+            </>
+          )}
+        </motion.h2>
+        <div className='grid gap-20 lg:grid-cols-2'>
+          {projects.map(({ name, year, image, url }) => (
+            <Project
+              key={name}
+              name={name}
+              year={year}
+              image={image}
+              url={url}
+            />
+          ))}
+        </div>
+      </Container>
     </section>
   )
 }
