@@ -1,58 +1,37 @@
 'use client'
 
-import { useLanguage } from '@/store/useLanguage'
+import { useEffect, useRef, useState } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import Container from '../Container'
-import { FC, useRef } from 'react'
-import { motion, useScroll } from 'framer-motion'
+import { useLanguage } from '@/store/useLanguage'
 
 interface TimelineItemProps {
   week: string
   label: string
   body: string
+  barPositions: number[]
   scrollYProgress: any
 }
 
-export const TimelineItem: FC<TimelineItemProps> = ({
-  week,
-  label,
-  body,
-  scrollYProgress,
-}) => {
-  return (
-    <li>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        className='relative flex items-center pt-3 flex-start'
-      >
-        <div className='absolute -ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-zinc-400 z-10' />
-        <p className='ml-3 text-sm text-zinc-600'>{week}</p>
-      </motion.div>
-      <div className='mt-2 mb-6 ml-4'>
-        <motion.h3
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className='mb-3 text-xl font-semibold'
-        >
-          {label}
-        </motion.h3>
-        <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-          {body}
-        </motion.p>
-      </div>
-    </li>
-  )
-}
-
-export const Collaboration = () => {
+export const Collaboration: React.FC = () => {
   const { language } = useLanguage()
 
-  const ref = useRef(null)
-
+  const ref = useRef<HTMLOListElement>(null)
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start center', 'end center'],
   })
+  const [barPositions, setBarPositions] = useState<number[]>([])
+
+  useEffect(() => {
+    const bars = document.querySelectorAll('.timeline-bar')
+    const positions: number[] = []
+    bars.forEach(bar => {
+      const rect = bar.getBoundingClientRect()
+      positions.push(rect.top + window.scrollY)
+    })
+    setBarPositions(positions)
+  }, [])
 
   return (
     <section className='mb-20 md:mb-40'>
@@ -86,6 +65,7 @@ export const Collaboration = () => {
                 : 'V prvním týdnu se společně zaměříme na vytvoření základní struktury a designu webu. Kreativita se setká s funkcionalitou, abychom vytvořili vizuální podobu, která bude zaujímat a lákat návštěvníky.'
             }
             scrollYProgress={scrollYProgress}
+            barPositions={barPositions}
           />
           <TimelineItem
             week={language === 'en' ? '2nd step' : '2. krok'}
@@ -100,6 +80,7 @@ export const Collaboration = () => {
                 : 'Druhý týden bude věnován naplnění obsahu, který bude nejen esteticky působivý, ale bude také sdělovat důležité informace. Společně pracujeme na textech, obrázcích a dalších prvcích, které dodají obsahu webu jeho význam a hodnotu.'
             }
             scrollYProgress={scrollYProgress}
+            barPositions={barPositions}
           />
           <TimelineItem
             week={language === 'en' ? '3rd step' : '3. krok'}
@@ -114,6 +95,7 @@ export const Collaboration = () => {
                 : 'Třetí týden se zaměříme na detaily a jemné úpravy. Věnujeme se všem drobným úpravám, které zajistí, že web bude působit profesionálně a přesně podle vašich představ.'
             }
             scrollYProgress={scrollYProgress}
+            barPositions={barPositions}
           />
           <TimelineItem
             week={language === 'en' ? '4th step' : '4. krok'}
@@ -128,9 +110,70 @@ export const Collaboration = () => {
                 : 'Poslední týden je věnován finálním přípravám k spuštění webu. Zkontrolujeme všechny prvky, abychom zajistili, že váš web je připraven k uvedení do provozu a k přivítání vašich návštěvníků.'
             }
             scrollYProgress={scrollYProgress}
+            barPositions={barPositions}
           />
         </ol>
       </Container>
     </section>
   )
 }
+
+const TimelineItem: React.FC<TimelineItemProps> = ({
+  week,
+  label,
+  body,
+  barPositions,
+  scrollYProgress,
+}) => {
+  const index = barPositions.findIndex(
+    position => scrollYProgress.get() >= position
+  )
+  const adjustedScrollYProgress = useTransform(
+    scrollYProgress,
+    [barPositions[index], barPositions[index] + 100],
+    [0, 1]
+  )
+
+  const dotColor = useTransform(
+    adjustedScrollYProgress,
+    [0, 1],
+    ['rgba(255, 255, 255, 0)', 'rgba(0, 0, 255, 1)']
+  )
+  const textColor = useTransform(
+    adjustedScrollYProgress,
+    [0, 1],
+    ['rgba(255, 255, 255, 1)', 'rgba(0, 0, 255, 1)']
+  )
+
+  return (
+    <li>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className='relative flex items-center pt-3 flex-start'
+      >
+        <motion.div
+          style={{ backgroundColor: dotColor }}
+          className='absolute -ml-[5px] mr-3 h-[9px] w-[9px] rounded-full z-10'
+        />
+        <motion.p style={{ color: textColor }} className='ml-3 text-sm'>
+          {week}
+        </motion.p>
+      </motion.div>
+      <div className='mt-2 mb-6 ml-4'>
+        <motion.h3
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className='mb-3 text-xl font-semibold'
+        >
+          {label}
+        </motion.h3>
+        <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+          {body}
+        </motion.p>
+      </div>
+    </li>
+  )
+}
+
+export default Collaboration
