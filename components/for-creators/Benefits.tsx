@@ -124,7 +124,7 @@ const Benefits = () => {
                 headingEn='3. Meet the community'
                 headingCz='3. Setkání s komunitou'
                 headingDe='3. Treffen mit der Gemeinschaft'
-                textEn='Our community is a place for fun, communication with other like-minded people and to form long-lasting friendships.'
+                textEn={`Our community is a place for fun, communication with other likeminded people and to form long-lasting friendships.`}
                 textCz='Naše komunita je místem zábavy, komunikace s podobně smýšlejícími lidmi a navazování dlouhodobých přátelství.'
                 textDe='Unsere Gemeinschaft ist ein Ort, an dem man Spaß haben, sich mit anderen Gleichgesinnten austauschen und dauerhafte Freundschaften schließen kann.'
               />

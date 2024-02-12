@@ -19,7 +19,7 @@ export const projects = [
     image: '/web-development/pneuservisbaudys/mockups.webp',
   },
   {
-    name: 'Portfolio',
+    name: 'Freelancer Portfolio',
     url: 'https://baudys.dev',
     year: 2023,
     image: '/web-development/baudysdev/mockups.webp',
