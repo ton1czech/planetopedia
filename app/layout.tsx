@@ -5,6 +5,7 @@ import { Manrope } from 'next/font/google'
 import Footer from '@/components/footer/Footer'
 import ToasterProvider from '@/providers/ToasterProvider'
 import Head from 'next/head'
+import { DisableCopyingProvider } from '@/providers/DisableCopyingProvider'
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -77,6 +78,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Head>
       <body className={`${manrope.className} overflow-x-hidden bg-black`}>
         <ToasterProvider />
+        <DisableCopyingProvider />
         <Navbar />
         {children}
         <Footer />
