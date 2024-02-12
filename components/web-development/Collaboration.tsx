@@ -49,7 +49,7 @@ export const Collaboration: React.FC = () => {
               label={
                 language === 'en'
                   ? 'Content Shapes Form and Purpose'
-                  : 'Obsah plní formu a smysl'
+                  : 'Obsah se začíná formulovat a dávat smysl'
               }
               body={
                 language === 'en'
@@ -66,8 +66,8 @@ export const Collaboration: React.FC = () => {
               }
               body={
                 language === 'en'
-                  ? "We will focus on refining details and making subtle adjustments. We'll pay attention to every minor tweak to ensure the website exudes professionalism and aligns precisely with your vision."
-                  : 'Budeme se věnovat detailům a jemným úpravám. Věnujeme se všem drobným úpravám, které zajistí, že web bude působit profesionálně a přesně podle vašich představ.'
+                  ? 'We will focus on refining details and making subtle adjustments to ensure the website exudes professionalism and aligns precisely with your vision.'
+                  : 'Budeme se věnovat detailům a jemným úpravám, které zajistí, že web bude působit profesionálně a přesně podle vašich představ.'
               }
             />
             <TimelineItem
@@ -79,8 +79,8 @@ export const Collaboration: React.FC = () => {
               }
               body={
                 language === 'en'
-                  ? "We will focus on final preparations for launching the website. We'll review all elements to ensure your website is ready for deployment and poised to welcome your visitors."
-                  : 'Budeme se věnovat finálním přípravám k spuštění webu. Zkontrolujeme všechny prvky, abychom zajistili, že váš web je připraven k uvedení do provozu a k přivítání vašich návštěvníků.'
+                  ? "We will focus on final preparations for launching the website. We'll review all elements to ensure your website is ready for deployment and poised to welcome your visitors, future customers."
+                  : 'Budeme se věnovat finálním přípravám k spuštění webu. Zkontrolujeme všechny prvky, abychom zajistili, že váš web je připraven k uvedení do provozu a k přivítání vašich návštěvníků, budoucích zákazníků.'
               }
             />
           </div>

@@ -29,7 +29,7 @@ export const Meet = () => {
               alt='Daniel Anthony Baudyš'
             />
             <div>
-              <p className='text-3xl font-semibold md:text-4xl'>
+              <p className='text-2xl font-semibold md:text-3xl'>
                 Daniel Anthony Baudyš
               </p>
               <p className='mb-3 text-xl md:text-2xl text-zinc-700'>
@@ -38,16 +38,16 @@ export const Meet = () => {
               </p>
               <p className='text-justify text-zinc-800'>
                 {language === 'en' &&
-                  'Daniel Anthony Baudyš specializes in design and programming. He has been working in design and photography since 2015 and programming since 2019. During this time he has created dozens of projects, both for himself and for clients. His portfolio includes graphic design of inflation in the Czech Republic, several projects for the Pilsen office. The website you are reading right now is also my creation. He has also given several educational talks for children, mainly in Minecraft. Currently, his main focus is creating websites using the latest technologies, of which he is developing his knowledge every day. It is also important to mention that he successfully passed the Microsoft Office Specialist exams in PowerPoint and Word at the Bett 2023 event in London.'}
+                  'Daniel Anthony Baudyš specializes in design and programming. He has been working in design and photography since 2015 and programming since 2019. During this time he has created dozens of projects, both for himself and for clients. His portfolio includes graphic design of inflation in the Czech Republic, several projects for the Pilsen office. The website you are reading right now is also his creation. He has also given several educational talks for children, mainly in Minecraft. Currently, his main focus is creating websites using the latest technologies, of which he is developing his knowledge every day. It is also important to mention that he successfully passed the Microsoft Office Specialist exams in PowerPoint and Word at the Bett 2023 event in London.'}
                 {language === 'cs' &&
-                  'Daniel Anthony Baudyš se specializuje v oblasti designu a programování. Designu a fotografování se věnuje již od roku 2015, programování následně od roku 2019. Za tuto dobu stihl vytvořit desítky projektů, ať už sám pro sebe, tak i pro klienty. Jeho portfolia zahrnuje grafické zpracování inflace v České republice, několik projektů pro úřad Plzeňského. Web, který právě čtete je také můj výtvor. Také vedl několik výukových přednášek pro děti, především v Minecraftu. V současné době je jeho hlavním zaměřením tvorba webových stránek pomocí nejnovějších technologií, o kterých svou znalost rozvíjí každý den. Důležité je také zmínit, že úspěšně absolvoval Microsoft Office Specialist zkoušky z PowerPointu a Wordu na akci Bett 2023 v Londýně.'}
+                  'Daniel Anthony Baudyš se specializuje v oblasti designu a programování. Designu a fotografování se věnuje již od roku 2015, programování následně od roku 2019. Za tuto dobu stihl vytvořit desítky projektů, ať už sám pro sebe, tak i pro klienty. Jeho portfolia zahrnuje grafické zpracování inflace v České republice, několik projektů pro úřad Plzeňského kraje. Web, který právě čtete je také jeho výtvor. Také vedl několik výukových přednášek pro děti, především v Minecraftu. V současné době je jeho hlavním zaměřením tvorba webových stránek pomocí nejnovějších technologií, o kterých svou znalost rozvíjí každý den. Důležité je také zmínit, že úspěšně absolvoval Microsoft Office Specialist zkoušky z PowerPointu a Wordu na akci Bett 2023 v Londýně.'}
               </p>
             </div>
           </div>
           <div className='grid lg:grid-cols-[1fr_2.35fr] gap-4'>
             <img src='/team/dominik-grossl.webp' alt='Dominik Grossl' />
             <div>
-              <p className='text-3xl font-semibold md:text-4xl'>
+              <p className='text-2xl font-semibold md:text-3xl'>
                 Dominik Grössl
               </p>
               <p className='mb-3 text-xl md:text-2xl text-zinc-700'>
