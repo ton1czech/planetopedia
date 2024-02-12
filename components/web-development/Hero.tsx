@@ -15,7 +15,7 @@ export const Hero = () => {
         playsInline
         className='absolute inset-0 object-cover object-center w-full h-full'
       >
-        <source src='https://cdn.coverr.co/videos/coverr-typing-on-a-keyboard-866/1080p.mp4' />
+        <source src='https://cdn.coverr.co/videos/coverr-coding-on-a-laptop-2116/1080p.mp4' />
       </video>
 
       <div className='absolute inset-0 z-10 w-screen h-screen bg-black/10'>
@@ -26,8 +26,18 @@ export const Hero = () => {
               {language === 'cs' && <>Tvorba Webu</>}
             </h1>
             <p className='relative z-10 text-sm text-center sm:text-xl md:text-3xl text-neutral-100'>
-              for <b className='text-zinc-200'>individuals</b> and{' '}
-              <b className='text-zinc-200'>companies</b>, elegantly.
+              {language === 'en' && (
+                <>
+                  for <b className='text-zinc-200'>individuals</b> and{' '}
+                  <b className='text-zinc-200'>companies</b>, elegantly.
+                </>
+              )}
+              {language === 'cs' && (
+                <>
+                  pro <b className='text-zinc-200'>jednotlivce</b> i{' '}
+                  <b className='text-zinc-200'>firmy</b>, elegantně.
+                </>
+              )}
             </p>
           </div>
         </Container>
