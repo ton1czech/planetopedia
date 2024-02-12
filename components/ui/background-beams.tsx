@@ -77,8 +77,18 @@ export const BackgroundBeams = ({ className }: { className?: string }) => {
           stroke='url(#paint0_radial_242_278)'
           strokeOpacity='0.05'
           strokeWidth='0.5'
-        ></path>
+        />
 
+        {paths.map((path, index) => (
+          <motion.path
+            key={index}
+            d={path}
+            stroke={`url(#linearGradient-${index})`}
+            strokeOpacity='0.75'
+            strokeWidth='1'
+            className='md:hidden'
+          />
+        ))}
         {paths.map((path, index) => (
           <motion.path
             key={index}
@@ -86,7 +96,8 @@ export const BackgroundBeams = ({ className }: { className?: string }) => {
             stroke={`url(#linearGradient-${index})`}
             strokeOpacity='0.4'
             strokeWidth='0.5'
-          ></motion.path>
+            className='max-md:hidden'
+          />
         ))}
         <defs>
           {paths.map((path, index) => (
