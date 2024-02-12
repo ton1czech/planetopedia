@@ -23,7 +23,7 @@ export const Hero = () => {
           <div className='text-center text-white'>
             <h1 className='text-3xl font-black uppercase sm:text-5xl md:text-6xl lg:text-7xl'>
               {language === 'en' && <>Web Development</>}
-              {language === 'cs' && <>Web Development</>}
+              {language === 'cs' && <>Tvorba Webu</>}
             </h1>
             <p className='relative z-10 text-sm text-center sm:text-xl md:text-3xl text-neutral-100'>
               for <b className='text-zinc-200'>individuals</b> and{' '}

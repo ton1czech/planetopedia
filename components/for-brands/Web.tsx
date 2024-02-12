@@ -38,9 +38,19 @@ const Web = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          <h2 className='mb-6 text-2xl font-bold text-center text-black md:mb-20 -mt-28 md:text-3xl lg:text-4xl'>
-            {language === 'en' && <>We develop websites, including this one.</>}
-            {language === 'cs' && <>Vyvíjíme webové stránky, včetně této.</>}
+          <h2 className='mb-4 -mt-8 text-2xl font-bold text-center text-black md:mb-20 md:text-3xl lg:text-4xl'>
+            {language === 'en' && (
+              <>
+                We develop websites, <br className='md:hidden' /> including this
+                one.
+              </>
+            )}
+            {language === 'cs' && (
+              <>
+                Vyvíjíme webové stránky, <br className='md:hidden' /> včetně
+                této.
+              </>
+            )}
             {language === 'de' && (
               <>wir entwickeln Websites, einschließlich dieser hier</>
             )}
