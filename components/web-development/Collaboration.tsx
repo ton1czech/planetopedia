@@ -34,7 +34,7 @@ export const Collaboration: React.FC = () => {
             style={{ scaleY: scrollYProgress }}
           />
           <TimelineItem
-            week={language === 'en' ? '1st step' : '1. krok'}
+            step={language === 'en' ? '1st step' : '1. krok'}
             label={
               language === 'en'
                 ? 'Embarking on Visual Foundations'
@@ -47,7 +47,7 @@ export const Collaboration: React.FC = () => {
             }
           />
           <TimelineItem
-            week={language === 'en' ? '2nd step' : '2. krok'}
+            step={language === 'en' ? '2nd step' : '2. krok'}
             label={
               language === 'en'
                 ? 'Content Shapes Form and Purpose'
@@ -60,7 +60,7 @@ export const Collaboration: React.FC = () => {
             }
           />
           <TimelineItem
-            week={language === 'en' ? '3rd step' : '3. krok'}
+            step={language === 'en' ? '3rd step' : '3. krok'}
             label={
               language === 'en'
                 ? 'Finetuning for a Flawless Impression'
@@ -73,7 +73,7 @@ export const Collaboration: React.FC = () => {
             }
           />
           <TimelineItem
-            week={language === 'en' ? '4th step' : '4. krok'}
+            step={language === 'en' ? '4th step' : '4. krok'}
             label={
               language === 'en'
                 ? 'When Vision Becomes Reality'
@@ -92,12 +92,12 @@ export const Collaboration: React.FC = () => {
 }
 
 interface TimelineItemProps {
-  week: string
+  step: string
   label: string
   body: string
 }
 
-const TimelineItem: React.FC<TimelineItemProps> = ({ week, label, body }) => {
+const TimelineItem: React.FC<TimelineItemProps> = ({ step, label, body }) => {
   const ref = useRef<any>(null)
 
   const { scrollYProgress } = useScroll({
@@ -121,14 +121,14 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ week, label, body }) => {
           className='absolute -ml-[5px] mr-3 h-[9px] w-[9px] rounded-full z-10 bg-sky-500'
         />
         <motion.p className='absolute ml-3 text-sm text-zinc-500'>
-          {week}
+          {step}
         </motion.p>
         <motion.p
           ref={ref}
           style={{ opacity: scrollYProgress }}
           className='absolute ml-3 text-sm text-sky-500'
         >
-          {week}
+          {step}
         </motion.p>
       </motion.div>
       <div className='mt-2 mb-6 ml-4'>
