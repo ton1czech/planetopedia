@@ -1,17 +1,9 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
+import { motion, useScroll } from 'framer-motion'
 import Container from '../Container'
 import { useLanguage } from '@/store/useLanguage'
-
-interface TimelineItemProps {
-  week: string
-  label: string
-  body: string
-  barPositions: number[]
-  scrollYProgress: any
-}
 
 export const Collaboration: React.FC = () => {
   const { language } = useLanguage()
@@ -21,17 +13,6 @@ export const Collaboration: React.FC = () => {
     target: ref,
     offset: ['start center', 'end center'],
   })
-  const [barPositions, setBarPositions] = useState<number[]>([])
-
-  useEffect(() => {
-    const bars = document.querySelectorAll('.timeline-bar')
-    const positions: number[] = []
-    bars.forEach(bar => {
-      const rect = bar.getBoundingClientRect()
-      positions.push(rect.top + window.scrollY)
-    })
-    setBarPositions(positions)
-  }, [])
 
   return (
     <section className='mb-20 md:mb-40'>
@@ -39,14 +20,14 @@ export const Collaboration: React.FC = () => {
         <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className='mb-4 text-xl font-semibold md:text-3xl xl:text-4xl'
+          className='text-xl font-semibold md:text-3xl xl:text-4xl'
         >
           {language === 'en' && <>Our cooperation, step by step.</>}
           {language === 'cs' && <>Naše spolupráce, krok po kroku.</>}
         </motion.h2>
         <ol
           ref={ref}
-          className='relative mt-0 space-y-10 border-l-2 lg:-mt-32 border-zinc-400 lg:space-y-36'
+          className='relative -mt-8 space-y-10 border-l-2 lg:-mt-32 border-zinc-400 lg:space-y-36'
         >
           <motion.div
             className='absolute -left-[3px] z-10 w-[4px] h-full bg-sky-500 origin-top'
@@ -61,11 +42,9 @@ export const Collaboration: React.FC = () => {
             }
             body={
               language === 'en'
-                ? "In the first week, we'll focus on creating the fundamental structure and design of the website. Creativity meets functionality as we craft a visual identity that captivates and engages visitors."
-                : 'V prvním týdnu se společně zaměříme na vytvoření základní struktury a designu webu. Kreativita se setká s funkcionalitou, abychom vytvořili vizuální podobu, která bude zaujímat a lákat návštěvníky.'
+                ? 'We will focus on creating the fundamental structure and design of the website. Creativity meets functionality as we craft a visual identity that captivates and engages visitors.'
+                : 'Budeme se věnovat vytvoření základní struktury a designu webu. Kreativita se setká s funkcionalitou, abychom vytvořili vizuální podobu, která bude zaujímat a lákat návštěvníky.'
             }
-            scrollYProgress={scrollYProgress}
-            barPositions={barPositions}
           />
           <TimelineItem
             week={language === 'en' ? '2nd step' : '2. krok'}
@@ -76,11 +55,9 @@ export const Collaboration: React.FC = () => {
             }
             body={
               language === 'en'
-                ? "The second week is dedicated to populating the website with content that is not only visually appealing but also conveys crucial information. Together, we'll work on texts, images, and other elements to give the content meaning and value."
-                : 'Druhý týden bude věnován naplnění obsahu, který bude nejen esteticky působivý, ale bude také sdělovat důležité informace. Společně pracujeme na textech, obrázcích a dalších prvcích, které dodají obsahu webu jeho význam a hodnotu.'
+                ? "We will focus on populating the website with content that is not only visually appealing but also conveys crucial information. Together, we'll work on texts, images, and other elements to give the content meaning and value."
+                : 'Budeme se věnovat naplnění obsahu, který bude nejen esteticky působivý, ale bude také sdělovat důležité informace. Společně pracujeme na textech, obrázcích a dalších prvcích, které dodají obsahu webu jeho význam a hodnotu.'
             }
-            scrollYProgress={scrollYProgress}
-            barPositions={barPositions}
           />
           <TimelineItem
             week={language === 'en' ? '3rd step' : '3. krok'}
@@ -91,11 +68,9 @@ export const Collaboration: React.FC = () => {
             }
             body={
               language === 'en'
-                ? "The third week focuses on refining details and making subtle adjustments. We'll pay attention to every minor tweak to ensure the website exudes professionalism and aligns precisely with your vision."
-                : 'Třetí týden se zaměříme na detaily a jemné úpravy. Věnujeme se všem drobným úpravám, které zajistí, že web bude působit profesionálně a přesně podle vašich představ.'
+                ? "We will focus on refining details and making subtle adjustments. We'll pay attention to every minor tweak to ensure the website exudes professionalism and aligns precisely with your vision."
+                : 'Budeme se věnovat detailům a jemným úpravám. Věnujeme se všem drobným úpravám, které zajistí, že web bude působit profesionálně a přesně podle vašich představ.'
             }
-            scrollYProgress={scrollYProgress}
-            barPositions={barPositions}
           />
           <TimelineItem
             week={language === 'en' ? '4th step' : '4. krok'}
@@ -106,11 +81,9 @@ export const Collaboration: React.FC = () => {
             }
             body={
               language === 'en'
-                ? "The final week is dedicated to final preparations for launching the website. We'll review all elements to ensure your website is ready for deployment and poised to welcome your visitors."
-                : 'Poslední týden je věnován finálním přípravám k spuštění webu. Zkontrolujeme všechny prvky, abychom zajistili, že váš web je připraven k uvedení do provozu a k přivítání vašich návštěvníků.'
+                ? "We will focus on final preparations for launching the website. We'll review all elements to ensure your website is ready for deployment and poised to welcome your visitors."
+                : 'Budeme se věnovat finálním přípravám k spuštění webu. Zkontrolujeme všechny prvky, abychom zajistili, že váš web je připraven k uvedení do provozu a k přivítání vašich návštěvníků.'
             }
-            scrollYProgress={scrollYProgress}
-            barPositions={barPositions}
           />
         </ol>
       </Container>
@@ -118,32 +91,21 @@ export const Collaboration: React.FC = () => {
   )
 }
 
-const TimelineItem: React.FC<TimelineItemProps> = ({
-  week,
-  label,
-  body,
-  barPositions,
-  scrollYProgress,
-}) => {
-  const index = barPositions.findIndex(
-    position => scrollYProgress.get() >= position
-  )
-  const adjustedScrollYProgress = useTransform(
-    scrollYProgress,
-    [barPositions[index], barPositions[index] + 100],
-    [0, 1]
-  )
+interface TimelineItemProps {
+  week: string
+  label: string
+  body: string
+}
 
-  const dotColor = useTransform(
-    adjustedScrollYProgress,
-    [0, 1],
-    ['rgba(255, 255, 255, 0)', 'rgba(0, 0, 255, 1)']
-  )
-  const textColor = useTransform(
-    adjustedScrollYProgress,
-    [0, 1],
-    ['rgba(255, 255, 255, 1)', 'rgba(0, 0, 255, 1)']
-  )
+const TimelineItem: React.FC<TimelineItemProps> = ({ week, label, body }) => {
+  const ref = useRef<any>(null)
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start center', 'end center'],
+  })
+
+  console.log(scrollYProgress)
 
   return (
     <li>
@@ -152,11 +114,20 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
         whileInView={{ opacity: 1 }}
         className='relative flex items-center pt-3 flex-start'
       >
+        <motion.div className='absolute -ml-[5px] mr-3 h-[9px] w-[9px] rounded-full z-10 bg-zinc-400' />
         <motion.div
-          style={{ backgroundColor: dotColor }}
-          className='absolute -ml-[5px] mr-3 h-[9px] w-[9px] rounded-full z-10'
+          ref={ref}
+          style={{ opacity: scrollYProgress }}
+          className='absolute -ml-[5px] mr-3 h-[9px] w-[9px] rounded-full z-10 bg-sky-500'
         />
-        <motion.p style={{ color: textColor }} className='ml-3 text-sm'>
+        <motion.p className='absolute ml-3 text-sm text-zinc-500'>
+          {week}
+        </motion.p>
+        <motion.p
+          ref={ref}
+          style={{ opacity: scrollYProgress }}
+          className='absolute ml-3 text-sm text-sky-500'
+        >
           {week}
         </motion.p>
       </motion.div>
