@@ -21,20 +21,22 @@ export const Meet = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className='flex flex-col gap-20 lg:gap-4'
+          className='flex flex-col gap-20 lg:gap-8'
         >
-          <div className='grid lg:grid-cols-[1fr_2fr] gap-4'>
+          <div className='grid lg:grid-cols-[1fr_2.5fr] gap-4'>
             <img
               src='/team/daniel-anthony-baudys.webp'
               alt='Daniel Anthony Baudyš'
             />
             <div>
-              <p className='text-xl font-semibold'>Daniel Anthony Baudyš</p>
-              <p className='mb-2 text-zinc-700'>
+              <p className='text-3xl font-semibold md:text-4xl'>
+                Daniel Anthony Baudyš
+              </p>
+              <p className='mb-3 text-xl md:text-2xl text-zinc-700'>
                 {language === 'en' && 'developer'}
                 {language === 'cs' && 'vývojář'}
               </p>
-              <p className='text-zinc-800 text-justify'>
+              <p className='text-sm text-justify text-zinc-800'>
                 {language === 'en' &&
                   'Daniel Anthony Baudyš specializes in design and programming. He has been working in design and photography since 2015 and programming since 2019. During this time he has created dozens of projects, both for himself and for clients. His portfolio includes graphic design of inflation in the Czech Republic, several projects for the Pilsen office. The website you are reading right now is also my creation. He has also given several educational talks for children, mainly in Minecraft. Currently, his main focus is creating websites using the latest technologies, of which he is developing his knowledge every day. It is also important to mention that he successfully passed the Microsoft Office Specialist exams in PowerPoint and Word at the Bett 2023 event in London.'}
                 {language === 'cs' &&
@@ -42,15 +44,17 @@ export const Meet = () => {
               </p>
             </div>
           </div>
-          <div className='grid lg:grid-cols-[1fr_2fr] gap-4'>
+          <div className='grid lg:grid-cols-[1fr_2.5fr] gap-4'>
             <img src='/team/dominik-grossl.webp' alt='Dominik Grossl' />
             <div>
-              <p className='text-xl font-semibold'>Dominik Grössl</p>
-              <p className='mb-2 text-zinc-700'>
+              <p className='text-3xl font-semibold md:text-4xl'>
+                Dominik Grössl
+              </p>
+              <p className='mb-3 text-xl md:text-2xl text-zinc-700'>
                 {language === 'en' && 'project manager'}
                 {language === 'cs' && 'projektový manažer'}
               </p>
-              <p className='text-zinc-800 text-justify'>
+              <p className='text-sm text-justify text-zinc-800'>
                 {language === 'en' &&
                   'Dominik is the founder of digital marketing agency Planetopedia with a focus on digital marketing, content creation and cooperation with luxury brands. He is a multi-faceted, highly motivated digital marketer, networker and community builder. In recent years, he has had the opportunity to work with many content creators and collaborate with numerous companies and luxury hotels around the world such as Four Seasons, Ritz-Carlton, Six Senses and more. He not only managed to turn his travel dreams into reality, but also successfully entered the tourism industry through social media and created highly effective campaigns. Now with all these services he is able to inspire and build an audience to provide value to others.'}
                 {language === 'cs' &&
