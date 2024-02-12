@@ -18,9 +18,9 @@ const Hero = () => {
         <source src='https://cdn.coverr.co/videos/coverr-a-female-video-editor-is-checking-her-social-media-5063/1080p.mp4' />
       </video>
 
-      <div className='absolute bg-black/10 inset-0 w-full h-full'>
-        <Container className='grid items-center justify-center h-full w-full'>
-          <div className='text-white text-center'>
+      <div className='absolute inset-0 w-full h-full bg-black/10'>
+        <Container className='grid items-center justify-center w-full h-full'>
+          <div className='text-center text-white'>
             <h1 className='text-3xl font-black uppercase md:text-5xl lg:text-7xl'>
               {language === 'en' ? (
                 <>For Brands</>
