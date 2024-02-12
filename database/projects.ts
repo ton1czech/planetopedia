@@ -11,6 +11,7 @@ export const projects = [
     year: 2023,
     image: '/web-development/farmahajek/mockups.webp',
   },
+
   {
     name: 'Pneuservis Baudyš',
     url: 'https://pneuservisbaudys.cz',
@@ -18,9 +19,9 @@ export const projects = [
     image: '/web-development/pneuservisbaudys/mockups.webp',
   },
   {
-    name: 'Tespra',
-    url: 'https://tespra.cz',
+    name: 'Portfolio',
+    url: 'https://baudys.dev',
     year: 2023,
-    image: '/web-development/tespra/mockups.webp',
+    image: '/web-development/baudysdev/mockups.webp',
   },
 ]
