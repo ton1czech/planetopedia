@@ -19,7 +19,7 @@ export const Intro = () => {
           )}
           {language === 'cs' && (
             <>
-              <b>Přeměníme</b> <br /> vaše <b>návštěvníky</b> na <br /> věrné{' '}
+              <b>Přeměníme</b> vaše <br /> <b>návštěvníky</b> na <br /> věrné{' '}
               <b>zákazníky.</b>
             </>
           )}
