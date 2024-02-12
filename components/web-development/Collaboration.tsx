@@ -104,8 +104,6 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ step, label, body }) => {
     offset: ['start center', 'end center'],
   })
 
-  console.log(scrollYProgress)
-
   return (
     <li>
       <motion.div
