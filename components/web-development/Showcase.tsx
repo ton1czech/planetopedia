@@ -46,7 +46,7 @@ export const Showcase = () => {
         <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className='mb-4 text-xl font-semibold md:text-3xl xl:text-4xl'
+          className='mb-4 text-2xl font-semibold md:text-3xl xl:text-4xl'
         >
           {language === 'en' && <>Our projects, some of them.</>}
           {language === 'cs' && <>Naše projekty, některé z nich.</>}
