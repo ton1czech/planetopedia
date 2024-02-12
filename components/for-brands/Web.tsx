@@ -56,7 +56,7 @@ const Web = () => {
             )}
           </h2>
           <div className='grid md:grid-cols-[4fr_6fr] md:gap-6'>
-            <div>
+            <div className='mb-4'>
               <p className='mx-auto mb-6 text-justify text-black'>
                 {language === 'en' && (
                   <>
@@ -83,7 +83,7 @@ const Web = () => {
                 {language === 'de' && <></>}
               </p>
               <Link href='/web-development'>
-                <Button className='w-full max-md:hidden'>
+                <Button className='w-full'>
                   {language === 'en' && 'Learn More'}
                   {language === 'cs' && 'Dozvědět se více'}
                   {language === 'de' && ''}
@@ -91,13 +91,6 @@ const Web = () => {
               </Link>
             </div>
             <Image src={src} alt='website' width={1100} height={650} />
-            <Link href='/web-development'>
-              <Button className='w-full mt-12 md:hidden'>
-                {language === 'en' && 'Learn More'}
-                {language === 'cs' && 'Dozvědět se více'}
-                {language === 'de' && ''}
-              </Button>
-            </Link>
           </div>
         </motion.div>
       </Container>
