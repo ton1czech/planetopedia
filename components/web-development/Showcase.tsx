@@ -1,8 +1,7 @@
 'use client'
 
-import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { FC, useEffect, useState } from 'react'
+import { FC } from 'react'
 import { useLanguage } from '@/store/useLanguage'
 import Link from 'next/link'
 import { projects } from '@/database/projects'
