@@ -14,7 +14,7 @@ export const Features = () => {
   const { language } = useLanguage()
 
   return (
-    <Container className='pb-40 lg:pb-60 xl:pb-80'>
+    <Container className='mb-20 md:mb-40'>
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

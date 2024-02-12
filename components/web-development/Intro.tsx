@@ -9,12 +9,6 @@ export const Intro = () => {
           We <b>transform</b> <br /> your <b>visitors</b> into <br /> loyal{' '}
           <b>customers.</b>
         </h1>
-        <p className='relative z-10 mt-10 text-lg text-center md:mt-14 lg:mt-24 md:text-2xl xl:text-3xl 2xl:text-4xl text-neutral-500'>
-          <b className='text-zinc-600'>Web development</b> for{' '}
-          <b className='text-zinc-600'>individuals</b>{' '}
-          <br className='sm:hidden' /> and{' '}
-          <b className='text-zinc-600'>companies</b>, elegantly.
-        </p>
       </Container>
       <BackgroundBeams />
     </section>
