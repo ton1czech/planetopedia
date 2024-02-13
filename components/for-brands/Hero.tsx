@@ -15,7 +15,7 @@ const Hero = () => {
         playsInline
         className='absolute inset-0 object-cover object-center w-full h-full'
       >
-        <source src='https://cdn.coverr.co/videos/coverr-a-female-video-editor-is-checking-her-social-media-5063/1080p.mp4' />
+        <source src='/services/for-brands/hero.mp4' />
       </video>
 
       <div className='absolute inset-0 w-full h-full bg-black/10'>
