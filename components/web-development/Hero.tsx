@@ -13,9 +13,9 @@ export const Hero = () => {
         autoPlay
         loop
         playsInline
-        className='absolute inset-0 object-cover object-center w-full h-full'
+        className='absolute inset-0 object-cover object-bottom w-full h-full'
       >
-        <source src='/web-development/hero.mp4' />
+        <source src='https://i.imgur.com/XCbg1EC.mp4' />
       </video>
 
       <div className='absolute inset-0 z-10 w-screen h-screen bg-black/50'>
