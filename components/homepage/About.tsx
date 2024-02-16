@@ -10,9 +10,11 @@ interface ItemProps {
   text: string
   millions?: boolean
   delay?: number
+  zero?: boolean
+  thousands?: boolean
 }
 
-const Item = ({ num, text, millions, delay }: ItemProps) => {
+const Item = ({ num, text, millions, delay, zero, thousands }: ItemProps) => {
   return (
     <div className={cn('text-white rounded-md')}>
       <CountUp
@@ -23,7 +25,8 @@ const Item = ({ num, text, millions, delay }: ItemProps) => {
         useGrouping={true}
         separator=' '
         decimal=','
-        suffix={millions ? 'M+' : '+'}
+        decimals={thousands ? 1 : 0}
+        suffix={millions ? 'M+' : zero ? '' : thousands ? 'K' : '+'}
         className={
           'relative font-bold sm:text-2xl md:text-3xl before:absolute before:-left-5 before:top-0 before:w-px before:h-full before:bg-yellow-600/40'
         }
@@ -62,30 +65,31 @@ const About = () => {
         delay={2}
       />
       <Item
-        num={10}
+        num={1.2}
         text={
           language === 'en'
-            ? 'Instagram Followers'
+            ? 'Reels Created'
             : language === 'cs'
-            ? 'Sledujících na Instagramu'
+            ? 'Vytvořeno Reels'
             : language === 'de'
-            ? 'Instagram Follower'
+            ? ''
             : ''
         }
-        millions
+        thousands
         delay={2.3}
       />
       <Item
-        num={200}
+        num={0}
         text={
           language === 'en'
-            ? 'Creators Worldwide'
+            ? 'Dissatisfied Clients'
             : language === 'cs'
-            ? 'Tvůrců Celosvětově'
+            ? 'Nespokojených Klientů'
             : language === 'de'
-            ? 'Schöpfer weltweit'
+            ? ''
             : ''
         }
+        zero
         delay={2.6}
       />
     </motion.div>
