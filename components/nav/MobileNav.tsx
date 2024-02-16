@@ -167,17 +167,17 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
               : ''
           }
           links={[
-            {
-              label:
-                language === 'en'
-                  ? 'For Creators'
-                  : language === 'cs'
-                  ? 'Pro Tvůrce'
-                  : language === 'de'
-                  ? 'Für Schöpfer'
-                  : '',
-              href: '/services/for-creators',
-            },
+            // {
+            //   label:
+            //     language === 'en'
+            //       ? 'For Creators'
+            //       : language === 'cs'
+            //       ? 'Pro Tvůrce'
+            //       : language === 'de'
+            //       ? 'Für Schöpfer'
+            //       : '',
+            //   href: '/services/for-creators',
+            // },
             {
               label:
                 language === 'en'

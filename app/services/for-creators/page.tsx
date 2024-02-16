@@ -1,19 +1,19 @@
-import Benefits from '@/components/for-creators/Benefits'
-import Contact from '@/components/for-creators/Contact'
-import Email from '@/components/for-creators/Email'
-import Expecting from '@/components/for-creators/Expecting'
-import Hero from '@/components/for-creators/Hero'
+// import Benefits from '@/components/for-creators/Benefits'
+// import Contact from '@/components/for-creators/Contact'
+// import Email from '@/components/for-creators/Email'
+// import Expecting from '@/components/for-creators/Expecting'
+// import Hero from '@/components/for-creators/Hero'
 
-export default function ForCreators() {
-  return (
-    <section>
-      <Hero />
-      <div>
-        <Expecting />
-        <Benefits />
-        {/* <Contact /> */}
-        <Email />
-      </div>
-    </section>
-  )
-}
+// export default function ForCreators() {
+//   return (
+//     <section>
+//       <Hero />
+//       <div>
+//         <Expecting />
+//         <Benefits />
+//         {/* <Contact /> */}
+//         <Email />
+//       </div>
+//     </section>
+//   )
+// }
