@@ -23,8 +23,8 @@ const paragraphs = [
     de: 'Kurz darauf wurde Planetopedia geboren und hat sich nach und nach zu einer auf die Zukunft ausgerichteten Influencer-Agentur für digitales Marketing entwickelt. Mit bewährter Expertise in der Luxusgastronomie bieten wir innovative und auffällige Fotografie- und Videomarketinglösungen.',
   },
   {
-    en: 'Since then, we have been able to offer the capabilities to luxury brands, businesses and personal use around the world.',
-    cz: 'Od té doby jsme schopni nabídnout možnosti luxusním značkám, podnikům a osobnímu použití po celém světě.',
+    en: 'The journey begins at Planetopedia, a unique combination of inspiring and aspirational experiences, photos and places. We connect with each other across all horizons.',
+    cz: 'Cesta začíná s Planetopedia, jedinečná kombinace inspirativních a ctižádostivých zážitků, fotografií a míst. Spojujeme se navzájem napříč všemi horizonty.',
     de: 'Seitdem sind wir in der Lage, die Fähigkeiten unserer Schöpfer für Luxusmarken, Unternehmen und persönliche Zwecke auf der ganzen Welt anzubieten. Eine weltweite Gemeinschaft mit mehr als 200 talentierten Schöpfern.',
   },
   {
