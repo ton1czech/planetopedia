@@ -15,7 +15,7 @@ export const Hero = () => {
         playsInline
         className='absolute inset-0 object-cover object-bottom w-full h-full'
       >
-        <source src='https://i.imgur.com/XCbg1EC.mp4' />
+        <source src='/web-development/hero.mp4' />
       </video>
 
       <div className='absolute inset-0 z-10 w-screen h-screen bg-black/50'>
