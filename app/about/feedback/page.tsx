@@ -82,7 +82,7 @@ export default function Feedback() {
             </div>
           )}
 
-          <Testimonials data={reviewsBrands} />
+          {/* <Testimonials data={reviewsBrands} /> */}
         </Container>
       </motion.div>
     </div>
