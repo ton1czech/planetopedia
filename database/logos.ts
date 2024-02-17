@@ -191,7 +191,7 @@ export const logosCZ = [
     label: '',
   },
   {
-    src: '/logos/homehpstav.webp',
+    src: '/logos/jednorozec.webp',
     label: '',
   },
   {
