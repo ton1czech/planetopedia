@@ -20,7 +20,7 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
           <motion.h2
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            className='mb-2 text-xl font-thin md:text-2xl lg:text-3xl text-zinc-600'
+            className='mb-2 text-xl font-semibold md:text-2xl lg:text-3xl text-zinc-600'
           >
             {language === 'en' && <>Who we work with</>}
             {language === 'cs' && <>S kým spolupracujeme</>}
@@ -29,7 +29,7 @@ const WorkWith = ({ isCompanyPage }: WorkWithProps) => {
           <motion.p
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            className='text-2xl font-semibold text-justify md:text-3xl lg:text-4xl'
+            className='text-2xl font-thin text-justify md:text-3xl lg:text-4xl'
           >
             {language === 'en' && (
               <>
