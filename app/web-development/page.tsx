@@ -1,6 +1,7 @@
 import { Collaboration } from '@/components/web-development/Collaboration'
 import Email from '@/components/web-development/Email'
 import { Features } from '@/components/web-development/Features'
+import { Feedback } from '@/components/web-development/Feedback'
 import { Hero } from '@/components/web-development/Hero'
 import { Intro } from '@/components/web-development/Intro'
 import { Meet } from '@/components/web-development/Meet'
@@ -14,6 +15,7 @@ export default function Page() {
       <Showcase />
       <Features />
       <Collaboration />
+      <Feedback />
       <Meet />
       <Email />
     </main>

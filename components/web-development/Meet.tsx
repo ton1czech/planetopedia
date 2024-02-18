@@ -8,7 +8,7 @@ export const Meet = () => {
   const { language } = useLanguage()
 
   return (
-    <section className=''>
+    <section>
       <Container>
         <motion.h2
           initial={{ opacity: 0 }}
