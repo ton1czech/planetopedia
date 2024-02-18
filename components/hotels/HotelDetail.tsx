@@ -63,7 +63,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
               >
                 <h1 className='pb-2 text-2xl font-bold uppercase md:text-3xl lg:text-4xl md:pb-4'>
                   {language === 'en' && <>hotel overview</>}
-                  {language === 'cs' && <>přehled hotelů</>}
+                  {language === 'cs' && <>přehled hotelu</>}
                   {language === 'de' && <>Hotelübersicht</>}
                 </h1>
                 {language === 'en' && (
