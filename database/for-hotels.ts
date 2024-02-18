@@ -11,7 +11,7 @@ export const forHotels = [
         src: '/logos/sixsenses.webp',
       },
       {
-        src: '/logos/theluxurycollection.webp',
+        src: '/logos/doldergrand.webp',
         noPhone: true,
       },
       {
@@ -19,7 +19,7 @@ export const forHotels = [
         noPhone: true,
       },
       {
-        src: '/logos/shangrila.webp',
+        src: '/logos/horlogers.webp',
         noPhone: true,
       },
     ],
