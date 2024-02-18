@@ -19,7 +19,7 @@ const Video = () => {
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className='text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white'
+            className='text-2xl font-bold text-center text-white md:text-3xl lg:text-4xl'
           >
             {language === 'en' && <>More than an Agency.</>}
             {language === 'cs' && <>Více než jen Agentura.</>}
@@ -62,7 +62,7 @@ const Video = () => {
             className='ring-2 ring-white white-shadow'
           >
             <iframe
-              src='https://www.youtube.com/embed/6FVQmdEMA3o?si=g37RNrek6Y-5PlpY'
+              src='https://www.youtube.com/embed/7r-yCNlE6RM?si=bH9tXeH0qTHJOaVh'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
               allowFullScreen
               className='w-full mt-4 md:mt-10 h-[220px] sm:h-[380px] md:h-[430px] lg:h-[480px] xl:h-[520px] 2xl:h-[620px]'
