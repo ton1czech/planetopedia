@@ -91,9 +91,9 @@ const Navbar = () => {
                       href: '/blog/hotels',
                       label:
                         language === 'en'
-                          ? 'Luxury Hotels'
+                          ? 'Destinations'
                           : language === 'cs'
-                          ? 'Luxusní Hotely'
+                          ? 'Destinace'
                           : language === 'de'
                           ? 'Luxushotels'
                           : '',
@@ -101,9 +101,9 @@ const Navbar = () => {
                     {
                       label:
                         language === 'en'
-                          ? 'Luxury Restaurant'
+                          ? 'Dining'
                           : language === 'cs'
-                          ? 'Luxusní Restaurace'
+                          ? 'Stravování'
                           : language === 'de'
                           ? 'Luxuriöses Restaurant'
                           : '',
