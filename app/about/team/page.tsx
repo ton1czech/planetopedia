@@ -241,9 +241,9 @@ export default function Team() {
           }
           body={
             language === 'en'
-              ? "I'm Hana, and my job revolves around social media. My ability is to be creative and quickly adapt to new trends. I have a great passion for content creation and interacting with clients. What truly excites me is discovering the thoughts and goals of our clients."
+              ? "Hana's work involves taking care of social media. Her ability is to be creative and quickly adapt to new trends. She has a great passion for content creation and interacting with clients. What truly excites her is discovering the ideas and goals of our clients and presenting them to the target audience effectively."
               : language === 'cs'
-              ? 'Jsem Hana, a moje práce spočívá v tom, že se starám o sociální média. Moje schopnost je být kreativní a rychle se přizpůsobit novým trendům. Mám velkou vášeň pro tvorbu obsahu a interakci s klienty. Co mě opravdu nadchne, je objevovat myšlenky a cíle našich klientů.'
+              ? 'Práce Hany spočívá v tom, že se stará o sociální média. Její schopností je být kreativní a rychle se přizpůsobit novým trendům. Má velkou vášeň pro tvorbu obsahu a interakci s klienty. Co ji opravdu nadchne, je objevovat myšlenky a cíle našich klientů a odprezentovat je co nejlépe cílové skupině.'
               : language === 'de'
               ? 'Ich bin Hana, und mein Job dreht sich um soziale Medien. Ich habe die Fähigkeit, kreativ zu sein und mich schnell an neue Trends anzupassen. Ich habe eine große Leidenschaft für die Erstellung von Inhalten und die Interaktion mit Kunden. Was mich wirklich begeistert, ist, die Gedanken und Ziele unserer Kunden zu entdecken.'
               : ''
