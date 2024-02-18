@@ -28,8 +28,8 @@ const paragraphs = [
     de: 'Seitdem sind wir in der Lage, die Fähigkeiten unserer Schöpfer für Luxusmarken, Unternehmen und persönliche Zwecke auf der ganzen Welt anzubieten. Eine weltweite Gemeinschaft mit mehr als 200 talentierten Schöpfern.',
   },
   {
-    en: 'The journey begins on Planetopedia, a global travel community of over 200 talented creatives with a unique combination of inspiring and aspirational experiences, photos and places. We connect with each other across all horizons.',
-    cz: 'Cesta začíná s Planetopedia, globální cestovatelská komunita s více než 200 talentovanými kreativci s jedinečnou kombinací inspirativních a ctižádostivých zážitků, fotografií a míst. Spojujeme se navzájem napříč všemi horizonty.',
+    en: 'The journey begins at Planetopedia, a unique combination of inspiring and aspirational experiences, photos and places. We connect with each other across all horizons.',
+    cz: 'Cesta začíná s Planetopedia, jedinečná kombinace inspirativních a ctižádostivých zážitků, fotografií a míst. Spojujeme se navzájem napříč všemi horizonty.',
     de: 'Die Reise beginnt mit Planetopedia, einer globalen Reise-Community mit einer einzigartigen Kombination aus inspirierenden und aufstrebenden Erfahrungen, Fotos und Orten. Wir verbinden Schöpfer und Markenunternehmen über alle Horizonte der Reise-/Tourismus- und Outdoor-Branche hinweg miteinander.',
   },
   {

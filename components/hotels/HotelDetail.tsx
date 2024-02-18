@@ -402,7 +402,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
               </motion.p>
             )}
 
-            <motion.p className='text-zinc-800'>
+            {/* <motion.p className='text-zinc-800'>
               {language === 'en' && (
                 <>This hotel review is part of barter collaboration.</>
               )}
@@ -412,7 +412,7 @@ const HotelDetail = ({ hotel }: HotelDetailProps) => {
               {language === 'de' && (
                 <>Diese Hotelkritik ist Teil einer Tauschgemeinschaft.</>
               )}
-            </motion.p>
+            </motion.p> */}
 
             <motion.iframe
               initial={{ opacity: 0 }}

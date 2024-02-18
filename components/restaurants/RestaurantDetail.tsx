@@ -235,7 +235,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
                 </motion.p>
               )}
 
-            <motion.p className='text-zinc-800'>
+            {/* <motion.p className='text-zinc-800'>
               {language === 'en' && (
                 <>This restaurant review is part of barter collaboration.</>
               )}
@@ -245,7 +245,7 @@ const RestaurantDetail = ({ restaurant }: RestaurantDetailProps) => {
               {language === 'de' && (
                 <>Diese Restaurantkritik ist Teil einer Tauschgemeinschaft.</>
               )}
-            </motion.p>
+            </motion.p> */}
 
             <motion.iframe
               src={restaurant?.address}

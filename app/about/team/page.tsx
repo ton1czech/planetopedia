@@ -107,7 +107,7 @@ export default function Team() {
             },
           ]}
         />
-        <Member
+        {/* <Member
           src='/team/felipe-prieto.webp'
           name='Felipe Prieto'
           role={
@@ -198,7 +198,7 @@ export default function Team() {
               href: 'https://www.linkedin.com/in/drew-peden-438a62172/',
             },
           ]}
-        />
+        /> */}
         {/* <Member
           src='/team/kacka-kutalkova.webp'
           name='Kačka Kutálková'
@@ -226,7 +226,7 @@ export default function Team() {
               href: 'https://www.instagram.com/ton1czech/',
             },
           ]}
-        />
+        /> */}
         <Member
           src='/team/hanka-kostolanska.webp'
           name='Hana Kostolanská'
@@ -255,7 +255,7 @@ export default function Team() {
             },
           ]}
         />
-        <Member
+        {/* <Member
           src='/team/jan-tulis.webp'
           name='Jan Tulis'
           role={

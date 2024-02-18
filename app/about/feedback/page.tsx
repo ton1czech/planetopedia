@@ -21,7 +21,7 @@ export default function Feedback() {
         whileInView={{ y: 0, opacity: 1 }}
       >
         <Container>
-          <h2 className='text-2xl md:text-3xl mb-3 text-center'>
+          {/* <h2 className='text-2xl md:text-3xl mb-3 text-center'>
             {language === 'en' && (
               <>
                 What our <b>creators </b>say
@@ -38,9 +38,9 @@ export default function Feedback() {
               </>
             )}
           </h2>
-          <Videos data={videos} />
+          <Videos data={videos} /> */}
 
-          <h2 className='text-2xl md:text-3xl mt-8 md:mt-14 text-center mb-8'>
+          <h2 className='text-2xl md:text-3xl text-center mb-8'>
             {language === 'en' && (
               <>
                 What our <b>clients </b>say
@@ -82,7 +82,7 @@ export default function Feedback() {
             </div>
           )}
 
-          <Testimonials data={reviewsBrands} />
+          {/* <Testimonials data={reviewsBrands} /> */}
         </Container>
       </motion.div>
     </div>

@@ -7,18 +7,18 @@ export const logosEN = [
     src: '/logos/jumeirah.webp',
     label: 'Jumeirah',
   },
-  {
-    src: '/logos/shangrila.webp',
-    label: 'Shangri-la',
-  },
-  {
-    src: '/logos/sheraton.webp',
-    label: 'Sheraton',
-  },
-  {
-    src: '/logos/theluxurycollection.webp',
-    label: 'The luxury collection',
-  },
+  //   {
+  //     src: '/logos/shangrila.webp',
+  //     label: 'Shangri-la',
+  //   },
+  //   {
+  //     src: '/logos/sheraton.webp',
+  //     label: 'Sheraton',
+  //   },
+  //   {
+  //     src: '/logos/theluxurycollection.webp',
+  //     label: 'The luxury collection',
+  //   },
   {
     src: '/logos/ritzcarlton.webp',
     label: 'Ritz Carlton',
@@ -47,112 +47,124 @@ export const logosEN = [
     src: '/logos/anantara.webp',
     label: '',
   },
-  {
-    src: '/logos/bayerischerhof.webp',
-    label: '',
-  },
-  {
-    src: '/logos/charleshotel.webp',
-    label: '',
-  },
-  {
-    src: '/logos/corinthia.webp',
-    label: '',
-  },
-  {
-    src: '/logos/cretamaris.webp',
-    label: '',
-  },
-  {
-    src: '/logos/delpintor.webp',
-    label: '',
-  },
-  {
-    src: '/logos/docomunich.webp',
-    label: '',
-  },
+  //   {
+  //     src: '/logos/bayerischerhof.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/charleshotel.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/corinthia.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/cretamaris.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/delpintor.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/docomunich.webp',
+  //     label: '',
+  //   },
   {
     src: '/logos/doldergrand.webp',
     label: '',
   },
-  {
-    src: '/logos/eurostarsmadrid.webp',
-    label: '',
-  },
-  {
-    src: '/logos/fuschl.webp',
-    label: '',
-  },
-  {
-    src: '/logos/granhotelsoller.webp',
-    label: '',
-  },
+  //   {
+  //     src: '/logos/eurostarsmadrid.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/fuschl.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/granhotelsoller.webp',
+  //     label: '',
+  //   },
   {
     src: '/logos/ilpalagio.webp',
     label: '',
   },
-  {
-    src: '/logos/latelier.webp',
-    label: '',
-  },
-  {
-    src: '/logos/lenarcisse.webp',
-    label: '',
-  },
-  {
-    src: '/logos/matildpalace.webp',
-    label: '',
-  },
-  {
-    src: '/logos/middleeight.webp',
-    label: '',
-  },
+  //   {
+  //     src: '/logos/latelier.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/lenarcisse.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/matildpalace.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/middleeight.webp',
+  //     label: '',
+  //   },
   {
     src: '/logos/minocpalace.webp',
     label: '',
   },
-  {
-    src: '/logos/panpacific.webp',
-    label: '',
-  },
-  {
-    src: '/logos/pontroyal.webp',
-    label: '',
-  },
-  {
-    src: '/logos/sofiterl.webp',
-    label: '',
-  },
-  {
-    src: '/logos/sunborn.webp',
-    label: '',
-  },
-  {
-    src: '/logos/thelandmark.webp',
-    label: '',
-  },
-  {
-    src: '/logos/topazlamee.webp',
-    label: '',
-  },
-  {
-    src: '/logos/sheratongrand.webp',
-    label: '',
-  },
-  {
-    src: '/logos/seaside.webp',
-    label: '',
-  },
-  {
-    src: '/logos/qctermeroma.webp',
-    label: '',
-  },
-  {
-    src: '/logos/secretdeparis.webp',
-    label: '',
-  },
+  //   {
+  //     src: '/logos/panpacific.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/pontroyal.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/sofiterl.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/sunborn.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/thelandmark.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/topazlamee.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/sheratongrand.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/seaside.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/qctermeroma.webp',
+  //     label: '',
+  //   },
+  //   {
+  //     src: '/logos/secretdeparis.webp',
+  //     label: '',
+  //   },
   {
     src: '/logos/sixsenses.webp',
+    label: '',
+  },
+  {
+    src: '/logos/g.webp',
+    label: '',
+  },
+  {
+    src: '/logos/beatus.webp',
+    label: '',
+  },
+  {
+    src: '/logos/horlogers.webp',
     label: '',
   },
 ]
@@ -179,7 +191,7 @@ export const logosCZ = [
     label: '',
   },
   {
-    src: '/logos/homehpstav.webp',
+    src: '/logos/jednorozec.webp',
     label: '',
   },
   {

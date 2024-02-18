@@ -9,9 +9,11 @@ interface ItemProps {
   text: string
   millions?: boolean
   delay?: number
+  zero?: boolean
+  thousands?: boolean
 }
 
-const Item = ({ num, text, millions, delay }: ItemProps) => {
+const Item = ({ num, text, millions, delay, zero, thousands }: ItemProps) => {
   return (
     <div
       className={cn(
@@ -26,7 +28,8 @@ const Item = ({ num, text, millions, delay }: ItemProps) => {
         useGrouping={true}
         separator=' '
         decimal=','
-        suffix={millions ? 'M+' : '+'}
+        decimals={thousands ? 1 : 0}
+        suffix={millions ? 'M+' : zero ? '' : thousands ? 'K' : '+'}
         className={
           'font-black text-3xl lg:text-5xl xl:text-6xl text-center md:text-left'
         }
@@ -58,34 +61,35 @@ const Numbers = () => {
               ? 'Bemerkenswerte Kunden'
               : ''
           }
-          delay={0.2}
+          delay={2}
         />
         <Item
-          num={10}
+          num={1.2}
           text={
             language === 'en'
-              ? 'Instagram Followers'
+              ? 'Reels Created'
               : language === 'cs'
-              ? 'Sledujících na Instagramu'
+              ? 'Vytvořeno Reels'
               : language === 'de'
-              ? 'Instagram Follower'
+              ? ''
               : ''
           }
-          millions
-          delay={0.6}
+          thousands
+          delay={2.3}
         />
         <Item
-          num={200}
+          num={0}
           text={
             language === 'en'
-              ? 'Creators Worldwide'
+              ? 'Dissatisfied Clients'
               : language === 'cs'
-              ? 'Tvůrců Celosvětově'
+              ? 'Nespokojených Klientů'
               : language === 'de'
-              ? 'Schöpfer weltweit'
+              ? ''
               : ''
           }
-          delay={0.4}
+          zero
+          delay={2.6}
         />
       </div>
     </div>
