@@ -85,9 +85,9 @@ export const caseStudies = [
     categoryDe: 'Berühmte Persönlichkeiten',
     href: '/case-studies/frantisek-hrom',
     image: '/case-studies/frantisek-hrom/thumbnail.webp',
-    servicesEn: ['marketing', 'brand building', 'social media management'],
-    servicesCz: ['marketing', 'budování značky', 'správa sociálních sítí'],
-    servicesDe: ['marketing', 'markenbildung', 'verwaltung sozialer medien'],
+    servicesEn: ['marketing', 'brand building'],
+    servicesCz: ['marketing', 'budování značky'],
+    servicesDe: ['marketing', 'markenbildung'],
     whoEn:
       'František Hrom is an influencer and entertainer. A character created in order to create entertainment and successfully reach the vast majority of target groups throughout the Czech Republic & Slovakia.',
     whoCz:
