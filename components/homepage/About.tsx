@@ -70,7 +70,7 @@ const About = () => {
           language === 'en'
             ? 'Reels Created'
             : language === 'cs'
-            ? 'Vytvořeno Reels'
+            ? 'Vytvořených Reels'
             : language === 'de'
             ? ''
             : ''

@@ -37,7 +37,7 @@ const Item = ({ num, text, millions, delay, zero, thousands }: ItemProps) => {
         scrollSpyOnce
         delay={delay}
       />
-      <p className='text-xs sm:text-base text-center lg:text-2xl xl:text-3xl'>
+      <p className='text-xs text-center sm:text-base lg:text-2xl xl:text-3xl'>
         {text}
       </p>
     </div>
@@ -69,7 +69,7 @@ const Numbers = () => {
             language === 'en'
               ? 'Reels Created'
               : language === 'cs'
-              ? 'Vytvořeno Reels'
+              ? 'Vytvořených Reels'
               : language === 'de'
               ? ''
               : ''
