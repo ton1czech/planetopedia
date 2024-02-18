@@ -85,10 +85,10 @@ export const forBrands = [
         src: '/services/for-brands/socials/4.webp',
       },
       {
-        src: '/services/for-brands/socials/7.webp',
+        src: 'https://i.imgur.com/jWpA34L.mp4',
       },
       {
-        src: '/services/for-brands/socials/8.webp',
+        src: '/services/for-brands/socials/7.webp',
       },
       {
         src: 'https://i.imgur.com/MafGctM.mp4',
