@@ -3,9 +3,16 @@
 import { useLanguage } from '@/store/useLanguage'
 import Container from '../Container'
 import { BackgroundBeams } from '../ui/background-beams'
+import { useEffect, useState } from 'react'
 
 export const Intro = () => {
   const { language } = useLanguage()
+
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   return (
     <section className='relative h-[60vh] md:h-[85vh] w-full antialiased mb-20 lg:mb-40 grid place-content-center'>
@@ -25,7 +32,7 @@ export const Intro = () => {
           )}
         </h1>
       </Container>
-      <BackgroundBeams />
+      {isMounted && <BackgroundBeams />}
     </section>
   )
 }
