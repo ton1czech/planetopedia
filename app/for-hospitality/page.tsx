@@ -1,5 +1,4 @@
 import Charts from '@/components/for-hotels/Charts'
-import Contact from '@/components/for-hotels/Contact'
 import Email from '@/components/for-hotels/Email'
 import Feedback from '@/components/for-hotels/Feedback'
 import Hero from '@/components/for-hotels/Hero'

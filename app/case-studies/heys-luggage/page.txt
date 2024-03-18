@@ -4,11 +4,10 @@ import Links from '@/components/case-studies/Links'
 import Results from '@/components/case-studies/Results'
 import What from '@/components/case-studies/What'
 import Who from '@/components/case-studies/Who'
-import Events from '@/components/case-studies/farma-hajek/Events'
-import Marketing from '@/components/case-studies/farma-hajek/Marketing'
+import Creators from '@/components/case-studies/heys-luggage/Creators'
 import { caseStudies } from '@/database/case-studies'
 
-export default function FarmaHajek() {
+export default function HeysLuggage() {
   const {
     title,
     servicesEn,
@@ -20,27 +19,36 @@ export default function FarmaHajek() {
     whatEn,
     whatCz,
     whatDe,
-    contentSrcs,
     links,
-  } = caseStudies.filter((data: any) => data.title === 'Farma Hájek')[0]
-
+    contentSrcs,
+    boldCz,
+    boldDe,
+    boldEn,
+  } = caseStudies.filter((data: any) => data.title === 'Heys Luggage')[0]
   return (
     <div className='pt-24 pb-20 bg-white md:pb-32 md:pt-32'>
       <Hero
-        img='/case-studies/farma-hajek/thumbnail.webp'
+        img='/case-studies/heys-luggage/hero.webp'
         servicesEn={servicesEn}
         servicesCz={servicesCz}
         servicesDe={servicesDe}
         title={title}
       />
       <Who title={title} bodyEn={whoEn} bodyCz={whoCz} bodyDe={whoDe} />
-      <What bodyEn={whatEn} bodyCz={whatCz} bodyDe={whatDe} />
+      <What
+        bodyEn={whatEn}
+        bodyCz={whatCz}
+        bodyDe={whatDe}
+        boldCz={boldCz}
+        boldDe={boldDe}
+        boldEn={boldEn}
+      />
+
       <Results>
-        {/* <Web /> */}
-        <Marketing />
-        <Events />
-        <ContentCreation images={contentSrcs} rotate />
+        <Creators />
+        <ContentCreation images={contentSrcs} />
       </Results>
+
       <Links links={links} />
     </div>
   )
