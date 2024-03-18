@@ -13,7 +13,8 @@ const Footer = () => {
   const pathname = usePathname()
   const { language } = useLanguage()
 
-  const services = pathname.includes('services')
+  const services =
+    pathname.includes('/for-companies') || pathname.includes('/for-hospitality')
 
   return (
     <motion.footer
