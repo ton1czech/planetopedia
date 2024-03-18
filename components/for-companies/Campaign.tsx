@@ -4,7 +4,9 @@ import Image from 'next/image'
 import Container from '../Container'
 import dynamic from 'next/dynamic'
 import { useLanguage } from '@/store/useLanguage'
-const Map = dynamic(() => import('@/components/for-brands/Map'), { ssr: false })
+const Map = dynamic(() => import('@/components/for-companies/Map'), {
+  ssr: false,
+})
 import { motion } from 'framer-motion'
 
 const Campaign = () => {
