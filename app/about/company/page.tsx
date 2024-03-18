@@ -80,7 +80,7 @@ export default function Company() {
           </motion.div>
         </div>
 
-        <WorkWith isCompanyPage />
+        {/* <WorkWith isCompanyPage /> */}
       </Container>
     </div>
   )
