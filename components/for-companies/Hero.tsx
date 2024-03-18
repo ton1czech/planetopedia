@@ -23,7 +23,7 @@ const Hero = () => {
           <div className='text-center text-white'>
             <h1 className='text-3xl font-black uppercase md:text-5xl lg:text-7xl'>
               {language === 'en' ? (
-                <>For Brands</>
+                <>For Companies</>
               ) : language === 'cs' ? (
                 <>Pro Firmy</>
               ) : language === 'de' ? (

@@ -20,7 +20,7 @@ const Email = () => {
   }, [clicked])
 
   return (
-    <div className='sticky z-[80] bg-white snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)]'>
+    <div className='sticky z-50 bg-white snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)]'>
       <Container className='grid w-full h-full place-content-center'>
         <div>
           <p>

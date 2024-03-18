@@ -10,7 +10,7 @@ const Feedback = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-[70] bg-black flex items-center h-[calc(100vh-80px)]'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-30 bg-black flex items-center h-[calc(100vh-80px)]'>
       <Container className='h-[80vh] grid place-content-center'>
         <motion.div
           initial={{ y: 50, opacity: 0 }}

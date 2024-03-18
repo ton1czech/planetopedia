@@ -1,28 +1,25 @@
-import Campaign from '@/components/for-brands/Campaign'
-import Charts from '@/components/for-brands/Charts'
-import Contact from '@/components/for-brands/Contact'
-import ContentCreation from '@/components/for-brands/ContentCreation'
-import Email from '@/components/for-brands/Email'
-import Feedback from '@/components/for-brands/Feedback'
-import Hero from '@/components/for-brands/Hero'
-import SocialMedia from '@/components/for-brands/SocialMedia'
-import Video from '@/components/for-brands/Video'
-import Web from '@/components/for-brands/Web'
-import Work from '@/components/for-brands/Work'
+import Charts from '@/components/for-companies/Charts'
+import Email from '@/components/for-companies/Email'
+import Feedback from '@/components/for-companies/Feedback'
+import Hero from '@/components/for-companies/Hero'
+import { Intro } from '@/components/for-companies/Intro'
+import SocialMedia from '@/components/for-companies/SocialMedia'
+import Work from '@/components/for-companies/Work'
 
 export default function ForBrands() {
   return (
     <section>
       <Hero />
       <div>
-        <Work />
+        <Intro />
         <SocialMedia />
+        <Work />
+        <Feedback />
         <Charts />
         {/* <Campaign /> */}
         {/* <ContentCreation /> */}
-        <Video />
-        <Web />
-        <Feedback />
+        {/* <Video />
+        <Web /> */}
         {/* <Contact /> */}
         <Email />
       </div>

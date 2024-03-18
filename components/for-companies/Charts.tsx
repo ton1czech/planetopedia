@@ -16,7 +16,7 @@ const Charts = () => {
   const [chart, setChart] = useState('followers')
 
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 z-20 bg-white h-[calc(100vh-80px)] grid place-content-center'>
+    <div className='sticky top-0 snap-start scroll-mt-20 z-40 bg-white h-[calc(100vh-80px)] grid place-content-center'>
       <Container>
         <motion.h2
           initial={{ y: 50, opacity: 0 }}
