@@ -14,9 +14,9 @@ const Events = () => {
         whileInView={{ y: 0, opacity: 1 }}
         className='text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-2'
       >
-        {language === 'en' && <>/ Events</>}
-        {language === 'cs' && <>/ Akce</>}
-        {language === 'de' && <>/ Veranstaltungen</>}
+        {language === 'en' && <>/ A photo report</>}
+        {language === 'cs' && <>/ Fotoreportáž</>}
+        {language === 'de' && <>/ Eine Fotoreportage</>}
       </motion.h2>
       <motion.div
         initial={{ y: 50, opacity: 0 }}
@@ -26,31 +26,32 @@ const Events = () => {
         <p className='text-justify'>
           {language === 'en' && (
             <>
-              Strongman events at Farm Hájek represent a unique blend of
-              strength, endurance, and entertainment taking place in the heart
-              of the Czech countryside. These events offer not only thrilling
-              athletic challenges but also the opportunity for participants to
-              immerse themselves in the authentic agricultural environment of
-              Farm Hájek.
+              Content creation and marketing for Strongman events at Farm Hájek,
+              which offer a distinctive combination of strength, endurance, and
+              entertainment set in the picturesque Czech countryside. These
+              events provide not only exhilarating athletic challenges but also
+              the chance for participants to experience the genuine agricultural
+              ambiance of Farm Hájek.
             </>
           )}
           {language === 'cs' && (
             <>
-              Strongman akce na Farmě Hájek představují jedinečnou kombinaci
-              síly, vytrvalosti a zábavy, která se odehrává v srdci českého
-              venkova. Tyto akce přinášejí nejen vzrušující sportovní výzvy, ale
-              také umožňují účastníkům prožít pravé zemědělské prostředí Farmy
-              Hájek.
+              Tvorba obsahu a marketing pro akce Strongman na Farmě Hájek, které
+              nabízejí osobitou kombinaci síly, vytrvalosti a zábavy v malebné
+              české přírodě. Tyto akce poskytují nejen vzrušující sportovní
+              výzvy, ale také možnost pro účastníky zažít pravou zemědělskou
+              atmosféru Farmy Hájek.
             </>
           )}
           {language === 'de' && (
             <>
-              Die Strongman-Veranstaltungen auf der Farm Hájek sind eine
-              einzigartige Mischung aus Kraft, Ausdauer und Unterhaltung, die im
-              Herzen der tschechischen Landschaft. Diese Veranstaltungen bieten
-              nicht nur aufregende sportliche Herausforderungen, sondern bieten
-              den Teilnehmern auch die Möglichkeit, in die in die authentische
-              landwirtschaftliche Umgebung des Bauernhofs Hájek einzutauchen.
+              Erstellung von Inhalten und Marketing für Strongman-Events auf der
+              Farm Hájek, die eine einzigartige Kombination aus Kraft, Ausdauer
+              und Unterhaltung in der malerischen tschechischen Landschaft
+              bieten. Diese Veranstaltungen bieten nicht nur aufregende
+              sportliche Herausforderungen, sondern auch die Möglichkeit für die
+              Teilnehmer, das echte landwirtschaftliche Ambiente der Farm Hájek
+              zu erleben.
             </>
           )}
         </p>
