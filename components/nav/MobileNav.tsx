@@ -68,7 +68,7 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
           black={black}
           setIsOpen={setIsOpen}
         /> */}
-        <MobileExpandableNavItem
+        {/* <MobileExpandableNavItem
           label='Blog'
           links={[
             {
@@ -96,6 +96,48 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
           ]}
           black={black}
           setIsOpen={setIsOpen}
+        /> */}
+        <MobileNavItem
+          label={
+            language === 'en'
+              ? 'For Companies'
+              : language === 'cs'
+              ? 'Pro Firmy'
+              : language === 'de'
+              ? 'Für Marken'
+              : ''
+          }
+          href='/for-companies'
+          black={black}
+          setIsOpen={setIsOpen}
+        />
+        <MobileNavItem
+          label={
+            language === 'en'
+              ? 'For Hospitality'
+              : language === 'cs'
+              ? 'Pro Hotely'
+              : language === 'de'
+              ? 'Für Hotels'
+              : ''
+          }
+          href='/for-hospitality'
+          black={black}
+          setIsOpen={setIsOpen}
+        />
+        <MobileNavItem
+          label={
+            language === 'en'
+              ? 'Case Studies'
+              : language === 'cs'
+              ? 'Případové studie'
+              : language === 'de'
+              ? 'Fallstudien'
+              : ''
+          }
+          href='/case-studies'
+          black={black}
+          setIsOpen={setIsOpen}
         />
         <MobileExpandableNavItem
           label={
@@ -108,17 +150,17 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
               : ''
           }
           links={[
-            {
-              label:
-                language === 'en'
-                  ? 'Team'
-                  : language === 'cs'
-                  ? 'Tým'
-                  : language === 'de'
-                  ? 'Team'
-                  : '',
-              href: '/about/team',
-            },
+            // {
+            //   label:
+            //     language === 'en'
+            //       ? 'Team'
+            //       : language === 'cs'
+            //       ? 'Tým'
+            //       : language === 'de'
+            //       ? 'Team'
+            //       : '',
+            //   href: '/about/team',
+            // },
             {
               label:
                 language === 'en'
@@ -130,17 +172,17 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
                   : '',
               href: '/about/company',
             },
-            {
-              label:
-                language === 'en'
-                  ? 'Clients'
-                  : language === 'cs'
-                  ? 'Klienti'
-                  : language === 'de'
-                  ? 'Kunden'
-                  : '',
-              href: '/about/clients',
-            },
+            // {
+            //   label:
+            //     language === 'en'
+            //       ? 'Clients'
+            //       : language === 'cs'
+            //       ? 'Klienti'
+            //       : language === 'de'
+            //       ? 'Kunden'
+            //       : '',
+            //   href: '/about/clients',
+            // },
             {
               label:
                 language === 'en'
@@ -156,7 +198,7 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
           black={black}
           setIsOpen={setIsOpen}
         />
-        <MobileExpandableNavItem
+        {/* <MobileExpandableNavItem
           label={
             language === 'en'
               ? 'Services'
@@ -167,17 +209,17 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
               : ''
           }
           links={[
-            // {
-            //   label:
-            //     language === 'en'
-            //       ? 'For Creators'
-            //       : language === 'cs'
-            //       ? 'Pro Tvůrce'
-            //       : language === 'de'
-            //       ? 'Für Schöpfer'
-            //       : '',
-            //   href: '/services/for-creators',
-            // },
+            {
+              label:
+                language === 'en'
+                  ? 'For Creators'
+                  : language === 'cs'
+                  ? 'Pro Tvůrce'
+                  : language === 'de'
+                  ? 'Für Schöpfer'
+                  : '',
+              href: '/services/for-creators',
+            },
             {
               label:
                 language === 'en'
@@ -203,21 +245,7 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
           ]}
           black={black}
           setIsOpen={setIsOpen}
-        />
-        <MobileNavItem
-          label={
-            language === 'en'
-              ? 'Case Studies'
-              : language === 'cs'
-              ? 'Případové studie'
-              : language === 'de'
-              ? 'Fallstudien'
-              : ''
-          }
-          href='/case-studies'
-          black={black}
-          setIsOpen={setIsOpen}
-        />
+        /> */}
       </motion.ul>
       <motion.div
         initial={{ opacity: 0, y: 50, x: '-50%' }}

@@ -84,7 +84,7 @@ const Navbar = () => {
                   href='/community'
                   black={black}
                 /> */}
-                <ExpandableNavItem
+                {/* <ExpandableNavItem
                   label='Blog'
                   links={[
                     {
@@ -111,6 +111,46 @@ const Navbar = () => {
                     },
                   ]}
                   black={black}
+                /> */}
+
+                <NavItem
+                  label={
+                    language === 'en'
+                      ? 'For Companies'
+                      : language === 'cs'
+                      ? 'Pro Firmy'
+                      : language === 'de'
+                      ? 'Für Marken'
+                      : ''
+                  }
+                  href='/for-companies'
+                  black={black}
+                />
+                <NavItem
+                  label={
+                    language === 'en'
+                      ? 'For Hospitality'
+                      : language === 'cs'
+                      ? 'Pro Hotely'
+                      : language === 'de'
+                      ? 'Für Hotels'
+                      : ''
+                  }
+                  href='/for-hospitality'
+                  black={black}
+                />
+                <NavItem
+                  label={
+                    language === 'en'
+                      ? 'Case Studies'
+                      : language === 'cs'
+                      ? 'Případové studie'
+                      : language === 'de'
+                      ? 'Fallstudien'
+                      : ''
+                  }
+                  href='/case-studies'
+                  black={black}
                 />
                 <ExpandableNavItem
                   label={
@@ -123,17 +163,17 @@ const Navbar = () => {
                       : ''
                   }
                   links={[
-                    {
-                      label:
-                        language === 'en'
-                          ? 'Team'
-                          : language === 'cs'
-                          ? 'Tým'
-                          : language === 'de'
-                          ? 'Team'
-                          : '',
-                      href: '/about/team',
-                    },
+                    // {
+                    //   label:
+                    //     language === 'en'
+                    //       ? 'Team'
+                    //       : language === 'cs'
+                    //       ? 'Tým'
+                    //       : language === 'de'
+                    //       ? 'Team'
+                    //       : '',
+                    //   href: '/about/team',
+                    // },
                     {
                       label:
                         language === 'en'
@@ -145,17 +185,17 @@ const Navbar = () => {
                           : '',
                       href: '/about/company',
                     },
-                    {
-                      label:
-                        language === 'en'
-                          ? 'Clients'
-                          : language === 'cs'
-                          ? 'Klienti'
-                          : language === 'de'
-                          ? 'Kunden'
-                          : '',
-                      href: '/about/clients',
-                    },
+                    // {
+                    //   label:
+                    //     language === 'en'
+                    //       ? 'Clients'
+                    //       : language === 'cs'
+                    //       ? 'Klienti'
+                    //       : language === 'de'
+                    //       ? 'Kunden'
+                    //       : '',
+                    //   href: '/about/clients',
+                    // },
                     {
                       label:
                         language === 'en'
@@ -170,7 +210,7 @@ const Navbar = () => {
                   ]}
                   black={black}
                 />
-                <ExpandableNavItem
+                {/* <ExpandableNavItem
                   label={
                     language === 'en'
                       ? 'Services'
@@ -181,17 +221,17 @@ const Navbar = () => {
                       : ''
                   }
                   links={[
-                    // {
-                    //   label:
-                    //     language === 'en'
-                    //       ? 'For Creators'
-                    //       : language === 'cs'
-                    //       ? 'Pro Tvůrce'
-                    //       : language === 'de'
-                    //       ? 'Für Schöpfer'
-                    //       : '',
-                    //   href: '/services/for-creators',
-                    // },
+                    {
+                      label:
+                        language === 'en'
+                          ? 'For Creators'
+                          : language === 'cs'
+                          ? 'Pro Tvůrce'
+                          : language === 'de'
+                          ? 'Für Schöpfer'
+                          : '',
+                      href: '/services/for-creators',
+                    },
                     {
                       label:
                         language === 'en'
@@ -216,20 +256,7 @@ const Navbar = () => {
                     },
                   ]}
                   black={black}
-                />
-                <NavItem
-                  label={
-                    language === 'en'
-                      ? 'Case Studies'
-                      : language === 'cs'
-                      ? 'Případové studie'
-                      : language === 'de'
-                      ? 'Fallstudien'
-                      : ''
-                  }
-                  href='/case-studies'
-                  black={black}
-                />
+                /> */}
               </ul>
             </div>
 
