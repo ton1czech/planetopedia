@@ -8,21 +8,18 @@ export const caseStudies = [
     image: '/case-studies/farma-hajek/thumbnail.webp',
     servicesEn: [
       'marketing',
-      'events',
       'web development',
       'content creation',
       'social media management',
     ],
     servicesCz: [
       'marketing',
-      'akce',
       'tvorba webu',
       'tvorba obsahu',
       'správa sociálních sítí',
     ],
     servicesDe: [
       'marketing',
-      'veranstaltungen',
       'web-entwicklung',
       'erstellung von inhalten',
       'verwaltung sozialer medien',
@@ -78,61 +75,61 @@ export const caseStudies = [
       //   },
     ],
   },
-  {
-    title: 'František Hrom',
-    categoryEn: 'Famous Personality',
-    categoryCz: 'Slavná Osobnost',
-    categoryDe: 'Berühmte Persönlichkeiten',
-    href: '/case-studies/frantisek-hrom',
-    image: '/case-studies/frantisek-hrom/thumbnail.webp',
-    servicesEn: ['marketing', 'brand building'],
-    servicesCz: ['marketing', 'budování značky'],
-    servicesDe: ['marketing', 'markenbildung'],
-    whoEn:
-      'František Hrom is an influencer and entertainer. A character created in order to create entertainment and successfully reach the vast majority of target groups throughout the Czech Republic & Slovakia.',
-    whoCz:
-      'František Hrom je influencer a bavič. Postava vytvořená za účelem vytvářet zábavu a úspěšně oslovit drtivou většinu cílových skupin po celé ČR a SR.',
-    whoDe:
-      'František Hrom ist ein Influencer und Entertainer. Eine Figur, die geschaffen wurde, um Unterhaltung zu schaffen und die große Mehrheit der Zielgruppen in der Tschechischen Republik und der Slowakei erfolgreich zu erreichen.',
-    whatEn:
-      'To create a well-known and viral persona together with Lukáš Duchek - an actor and founder of the LuMi cafe. A character reflecting a Czech citizen and Czech humor, suitable for most marketing campaigns.',
-    whatCz:
-      'Vytvořit známou a virální personu společně s Lukášem Duchkem - herec a zakladatel LuMi kavárny. Charakter reflektující českého občana a český humor, vhodný pro většinu marketingových kampaní.',
-    whatDe:
-      'Zusammen mit Lukáš Duchek - einem Schauspieler und Gründer des Cafés LuMi - eine bekannte und virale Persona zu schaffen. Eine Figur, die einen tschechischen Bürger und tschechischen Humor widerspiegelt und für die meisten Marketingkampagnen geeignet ist.',
-    links: [
-      {
-        site: 'instagram',
-        url: 'https://www.instagram.com/frantisekhrom/',
-      },
-      {
-        site: 'tiktok',
-        url: 'https://www.tiktok.com/@frantisekhrom',
-      },
-      //   {
-      //     site: 'youtube',
-      //     url: 'https://www.youtube.com/@frantisekhrom',
-      //   },
-      //   {
-      //     site: 'facebook',
-      //     url: 'https://www.facebook.com/profile.php?id=100090109252762',
-      //   },
-    ],
-    logos: [
-      '/case-studies/frantisek-hrom/logos/oktagon.webp',
-      '/case-studies/frantisek-hrom/logos/redbull.webp',
-      '/case-studies/frantisek-hrom/logos/zoot.webp',
-      '/case-studies/frantisek-hrom/logos/mercedes.webp',
-      '/case-studies/frantisek-hrom/logos/msi.webp',
-      '/case-studies/frantisek-hrom/logos/rybizak.webp',
-      '/case-studies/frantisek-hrom/logos/maddera.webp',
-      '/case-studies/frantisek-hrom/logos/camppass.webp',
-      '/case-studies/frantisek-hrom/logos/farmahajek.webp',
-      '/case-studies/frantisek-hrom/logos/portmonka.webp',
-      '/case-studies/frantisek-hrom/logos/tackera.webp',
-      '/case-studies/frantisek-hrom/logos/balistas.webp',
-    ],
-  },
+  //   {
+  //     title: 'František Hrom',
+  //     categoryEn: 'Famous Personality',
+  //     categoryCz: 'Slavná Osobnost',
+  //     categoryDe: 'Berühmte Persönlichkeiten',
+  //     href: '/case-studies/frantisek-hrom',
+  //     image: '/case-studies/frantisek-hrom/thumbnail.webp',
+  //     servicesEn: ['marketing', 'brand building'],
+  //     servicesCz: ['marketing', 'budování značky'],
+  //     servicesDe: ['marketing', 'markenbildung'],
+  //     whoEn:
+  //       'František Hrom is an influencer and entertainer. A character created in order to create entertainment and successfully reach the vast majority of target groups throughout the Czech Republic & Slovakia.',
+  //     whoCz:
+  //       'František Hrom je influencer a bavič. Postava vytvořená za účelem vytvářet zábavu a úspěšně oslovit drtivou většinu cílových skupin po celé ČR a SR.',
+  //     whoDe:
+  //       'František Hrom ist ein Influencer und Entertainer. Eine Figur, die geschaffen wurde, um Unterhaltung zu schaffen und die große Mehrheit der Zielgruppen in der Tschechischen Republik und der Slowakei erfolgreich zu erreichen.',
+  //     whatEn:
+  //       'To create a well-known and viral persona together with Lukáš Duchek - an actor and founder of the LuMi cafe. A character reflecting a Czech citizen and Czech humor, suitable for most marketing campaigns.',
+  //     whatCz:
+  //       'Vytvořit známou a virální personu společně s Lukášem Duchkem - herec a zakladatel LuMi kavárny. Charakter reflektující českého občana a český humor, vhodný pro většinu marketingových kampaní.',
+  //     whatDe:
+  //       'Zusammen mit Lukáš Duchek - einem Schauspieler und Gründer des Cafés LuMi - eine bekannte und virale Persona zu schaffen. Eine Figur, die einen tschechischen Bürger und tschechischen Humor widerspiegelt und für die meisten Marketingkampagnen geeignet ist.',
+  //     links: [
+  //       {
+  //         site: 'instagram',
+  //         url: 'https://www.instagram.com/frantisekhrom/',
+  //       },
+  //       {
+  //         site: 'tiktok',
+  //         url: 'https://www.tiktok.com/@frantisekhrom',
+  //       },
+  //         {
+  //           site: 'youtube',
+  //           url: 'https://www.youtube.com/@frantisekhrom',
+  //         },
+  //         {
+  //           site: 'facebook',
+  //           url: 'https://www.facebook.com/profile.php?id=100090109252762',
+  //         },
+  //     ],
+  //     logos: [
+  //       '/case-studies/frantisek-hrom/logos/oktagon.webp',
+  //       '/case-studies/frantisek-hrom/logos/redbull.webp',
+  //       '/case-studies/frantisek-hrom/logos/zoot.webp',
+  //       '/case-studies/frantisek-hrom/logos/mercedes.webp',
+  //       '/case-studies/frantisek-hrom/logos/msi.webp',
+  //       '/case-studies/frantisek-hrom/logos/rybizak.webp',
+  //       '/case-studies/frantisek-hrom/logos/maddera.webp',
+  //       '/case-studies/frantisek-hrom/logos/camppass.webp',
+  //       '/case-studies/frantisek-hrom/logos/farmahajek.webp',
+  //       '/case-studies/frantisek-hrom/logos/portmonka.webp',
+  //       '/case-studies/frantisek-hrom/logos/tackera.webp',
+  //       '/case-studies/frantisek-hrom/logos/balistas.webp',
+  //     ],
+  //   },
   {
     title: 'Rozmluv se',
     categoryEn: 'Language school',
@@ -256,117 +253,117 @@ export const caseStudies = [
   //       },
   //     ],
   //   },
-  {
-    title: 'Four Seasons',
-    categoryEn: 'Hotel chain',
-    categoryCz: 'Hotelový řetězec',
-    categoryDe: 'Hotelkette',
-    href: '/case-studies/four-seasons',
-    image: '/case-studies/four-seasons/thumbnail.webp',
-    servicesEn: ['strategy', 'marketing', 'content creation'],
-    servicesCz: ['strategie', 'marketing', 'tvorba obsahu'],
-    servicesDe: ['strategie', 'marketing', 'erstellung von inhalten'],
-    whoEn:
-      "Four Seasons Hotels and Resorts is a world-renowned luxury hospitality brand known for its exceptional service and opulent accommodations. With properties in diverse global destinations, Four Seasons offers a seamless blend of elegance, comfort, and personalized experiences. Guests can expect exquisite dining, spa facilities, and a commitment to creating unforgettable moments in every season. It's a top choice for travelers seeking unparalleled luxury and relaxation.",
-    whoCz:
-      'Four Seasons Hotels and Resorts je světoznámá luxusní hotelová značka známá svým vynikajícím servisem a nádhernými ubytovacími možnostmi. S nemovitostmi v různých světových destinacích nabízí Four Seasons dokonalou kombinaci elegance, komfortu a personalizovaných zážitků. Hosté se mohou těšit na lahodné restaurace, wellness zařízení a závazek vytvářet nezapomenutelné okamžiky v každém ročním období. Je to nejlepší volba pro cestovatele hledající nepřekonatelný luxus a odpočinek.',
-    whoDe:
-      'Four Seasons Hotels and Resorts ist eine weltbekannte Marke der Luxusgastronomie, die für ihren außergewöhnlichen Service und ihre opulenten Unterkünfte bekannt ist. Mit Häusern an verschiedenen globalen Standorten bietet Four Seasons eine nahtlose Mischung aus Eleganz, Komfort und persönlichen Erfahrungen. Die Gäste können sich auf exquisite Restaurants, Spa-Einrichtungen und ein Engagement für unvergessliche Momente zu jeder Jahreszeit freuen. Es ist die erste Wahl für Reisende, die unvergleichlichen Luxus und Entspannung suchen.',
-    whatEn:
-      "During our visits to various hotels, our main goal was to create attention-grabbing content. These Press/Media visits demonstrated our knack for crafting eye-catching material for social media and driving successful marketing efforts, boosting our client's brand visibility and engagement.",
-    whatCz:
-      'Během našich návštěv různých hotelů bylo naším hlavním cílem vytvářet poutavý obsah. Tyto návštěvy prokázaly naši dovednost vytvářet materiál pro sociální media a úspěšně uskutečňovat marketingové výsledky, což zvýšilo viditelnost značky našeho klienta.',
-    whatDe:
-      'Bei unseren Besuchen in verschiedenen Hotels bestand unser Hauptziel darin, aufmerksamkeitsstarke Inhalte zu erstellen. Bei diesen Presse-/Medienbesuchen haben wir unser Talent für die Erstellung von aufmerksamkeitsstarkem Material für die sozialen Medien unter Beweis gestellt und erfolgreiche Marketingmaßnahmen eingeleitet, die die Sichtbarkeit und das Engagement der Marke unseres Kunden steigern.',
-    content: [
-      {
-        src: 'https://i.imgur.com/dRu3IOJ.mp4',
-        thumbnail: '/case-studies/four-seasons/content/thumbnails/1.webp',
-      },
-      {
-        src: '/case-studies/four-seasons/content/1.webp',
-        thumbnail: '',
-      },
-      {
-        src: 'https://i.imgur.com/yMrctIB.mp4',
-        thumbnail: '/case-studies/four-seasons/content/thumbnails/3.webp',
-      },
-      {
-        src: '/case-studies/four-seasons/content/2.webp',
-        thumbnail: '',
-      },
-      {
-        src: 'https://i.imgur.com/dRu3IOJ.mp4',
-        thumbnail: '/case-studies/four-seasons/content/thumbnails/1.webp',
-      },
-      {
-        src: '/case-studies/four-seasons/content/1.webp',
-        thumbnail: '',
-      },
-      {
-        src: 'https://i.imgur.com/yMrctIB.mp4',
-        thumbnail: '/case-studies/four-seasons/content/thumbnails/3.webp',
-      },
-      {
-        src: '/case-studies/four-seasons/content/2.webp',
-        thumbnail: '',
-      },
-    ],
-    contentSrcs: [
-      '/case-studies/four-seasons/media/1.webp',
-      '/case-studies/four-seasons/media/2.webp',
-      '/case-studies/four-seasons/media/3.webp',
-      '/case-studies/four-seasons/media/4.webp',
-      '/case-studies/four-seasons/media/5.webp',
-      '/case-studies/four-seasons/media/6.webp',
-      '/case-studies/four-seasons/media/7.webp',
-      '/case-studies/four-seasons/media/8.webp',
-      '/case-studies/four-seasons/media/9.webp',
-      '/case-studies/four-seasons/media/10.webp',
-    ],
-    links: [
-      {
-        site: 'web',
-        url: 'https://www.fourseasons.com/',
-      },
-      {
-        site: 'instagram',
-        url: 'https://www.instagram.com/fourseasons/',
-      },
-      //   {
-      //     site: 'youtube',
-      //     url: 'https://www.youtube.com/fourseasons',
-      //   },
-      //   {
-      //     site: 'facebook',
-      //     url: 'https://www.facebook.com/FourSeasons',
-      //   },
-    ],
-    blogPosts: [
-      {
-        title: 'FOUR SEASONS HAMPSHIRE',
-        locationEn: 'Hampshire, England',
-        locationCz: 'Hampshire, Anglie',
-        locationDe: 'Hampshire, England',
-        slug: '/blog/hotels/overview-four-seasons-hampshire',
-        src: '/case-studies/four-seasons/blog/1.webp',
-      },
-      {
-        title: 'FOUR SEASONS TEN TRINITY SQUARE',
-        locationEn: 'London, England',
-        locationCz: 'Londýn, Anglie',
-        locationDe: 'London, England',
-        slug: '/blog/hotels/overview-four-seasons-ten-trinity-square',
-        src: '/case-studies/four-seasons/blog/2.webp',
-      },
-      {
-        title: 'FOUR SEASONS FIRENZE',
-        locationEn: 'Florence, Italy',
-        locationCz: 'Florencie, Itálie',
-        locationDe: 'Florence, Italy',
-        slug: '/blog/hotels/overview-four-seasons-firenze',
-        src: '/case-studies/four-seasons/blog/3.webp',
-      },
-    ],
-  },
+  //   {
+  //     title: 'Four Seasons',
+  //     categoryEn: 'Hotel chain',
+  //     categoryCz: 'Hotelový řetězec',
+  //     categoryDe: 'Hotelkette',
+  //     href: '/case-studies/four-seasons',
+  //     image: '/case-studies/four-seasons/thumbnail.webp',
+  //     servicesEn: ['strategy', 'marketing', 'content creation'],
+  //     servicesCz: ['strategie', 'marketing', 'tvorba obsahu'],
+  //     servicesDe: ['strategie', 'marketing', 'erstellung von inhalten'],
+  //     whoEn:
+  //       "Four Seasons Hotels and Resorts is a world-renowned luxury hospitality brand known for its exceptional service and opulent accommodations. With properties in diverse global destinations, Four Seasons offers a seamless blend of elegance, comfort, and personalized experiences. Guests can expect exquisite dining, spa facilities, and a commitment to creating unforgettable moments in every season. It's a top choice for travelers seeking unparalleled luxury and relaxation.",
+  //     whoCz:
+  //       'Four Seasons Hotels and Resorts je světoznámá luxusní hotelová značka známá svým vynikajícím servisem a nádhernými ubytovacími možnostmi. S nemovitostmi v různých světových destinacích nabízí Four Seasons dokonalou kombinaci elegance, komfortu a personalizovaných zážitků. Hosté se mohou těšit na lahodné restaurace, wellness zařízení a závazek vytvářet nezapomenutelné okamžiky v každém ročním období. Je to nejlepší volba pro cestovatele hledající nepřekonatelný luxus a odpočinek.',
+  //     whoDe:
+  //       'Four Seasons Hotels and Resorts ist eine weltbekannte Marke der Luxusgastronomie, die für ihren außergewöhnlichen Service und ihre opulenten Unterkünfte bekannt ist. Mit Häusern an verschiedenen globalen Standorten bietet Four Seasons eine nahtlose Mischung aus Eleganz, Komfort und persönlichen Erfahrungen. Die Gäste können sich auf exquisite Restaurants, Spa-Einrichtungen und ein Engagement für unvergessliche Momente zu jeder Jahreszeit freuen. Es ist die erste Wahl für Reisende, die unvergleichlichen Luxus und Entspannung suchen.',
+  //     whatEn:
+  //       "During our visits to various hotels, our main goal was to create attention-grabbing content. These Press/Media visits demonstrated our knack for crafting eye-catching material for social media and driving successful marketing efforts, boosting our client's brand visibility and engagement.",
+  //     whatCz:
+  //       'Během našich návštěv různých hotelů bylo naším hlavním cílem vytvářet poutavý obsah. Tyto návštěvy prokázaly naši dovednost vytvářet materiál pro sociální media a úspěšně uskutečňovat marketingové výsledky, což zvýšilo viditelnost značky našeho klienta.',
+  //     whatDe:
+  //       'Bei unseren Besuchen in verschiedenen Hotels bestand unser Hauptziel darin, aufmerksamkeitsstarke Inhalte zu erstellen. Bei diesen Presse-/Medienbesuchen haben wir unser Talent für die Erstellung von aufmerksamkeitsstarkem Material für die sozialen Medien unter Beweis gestellt und erfolgreiche Marketingmaßnahmen eingeleitet, die die Sichtbarkeit und das Engagement der Marke unseres Kunden steigern.',
+  //     content: [
+  //       {
+  //         src: 'https://i.imgur.com/dRu3IOJ.mp4',
+  //         thumbnail: '/case-studies/four-seasons/content/thumbnails/1.webp',
+  //       },
+  //       {
+  //         src: '/case-studies/four-seasons/content/1.webp',
+  //         thumbnail: '',
+  //       },
+  //       {
+  //         src: 'https://i.imgur.com/yMrctIB.mp4',
+  //         thumbnail: '/case-studies/four-seasons/content/thumbnails/3.webp',
+  //       },
+  //       {
+  //         src: '/case-studies/four-seasons/content/2.webp',
+  //         thumbnail: '',
+  //       },
+  //       {
+  //         src: 'https://i.imgur.com/dRu3IOJ.mp4',
+  //         thumbnail: '/case-studies/four-seasons/content/thumbnails/1.webp',
+  //       },
+  //       {
+  //         src: '/case-studies/four-seasons/content/1.webp',
+  //         thumbnail: '',
+  //       },
+  //       {
+  //         src: 'https://i.imgur.com/yMrctIB.mp4',
+  //         thumbnail: '/case-studies/four-seasons/content/thumbnails/3.webp',
+  //       },
+  //       {
+  //         src: '/case-studies/four-seasons/content/2.webp',
+  //         thumbnail: '',
+  //       },
+  //     ],
+  //     contentSrcs: [
+  //       '/case-studies/four-seasons/media/1.webp',
+  //       '/case-studies/four-seasons/media/2.webp',
+  //       '/case-studies/four-seasons/media/3.webp',
+  //       '/case-studies/four-seasons/media/4.webp',
+  //       '/case-studies/four-seasons/media/5.webp',
+  //       '/case-studies/four-seasons/media/6.webp',
+  //       '/case-studies/four-seasons/media/7.webp',
+  //       '/case-studies/four-seasons/media/8.webp',
+  //       '/case-studies/four-seasons/media/9.webp',
+  //       '/case-studies/four-seasons/media/10.webp',
+  //     ],
+  //     links: [
+  //       {
+  //         site: 'web',
+  //         url: 'https://www.fourseasons.com/',
+  //       },
+  //       {
+  //         site: 'instagram',
+  //         url: 'https://www.instagram.com/fourseasons/',
+  //       },
+  //       {
+  //         site: 'youtube',
+  //         url: 'https://www.youtube.com/fourseasons',
+  //       },
+  //       {
+  //         site: 'facebook',
+  //         url: 'https://www.facebook.com/FourSeasons',
+  //       },
+  //     ],
+  //     blogPosts: [
+  //       {
+  //         title: 'FOUR SEASONS HAMPSHIRE',
+  //         locationEn: 'Hampshire, England',
+  //         locationCz: 'Hampshire, Anglie',
+  //         locationDe: 'Hampshire, England',
+  //         slug: '/blog/hotels/overview-four-seasons-hampshire',
+  //         src: '/case-studies/four-seasons/blog/1.webp',
+  //       },
+  //       {
+  //         title: 'FOUR SEASONS TEN TRINITY SQUARE',
+  //         locationEn: 'London, England',
+  //         locationCz: 'Londýn, Anglie',
+  //         locationDe: 'London, England',
+  //         slug: '/blog/hotels/overview-four-seasons-ten-trinity-square',
+  //         src: '/case-studies/four-seasons/blog/2.webp',
+  //       },
+  //       {
+  //         title: 'FOUR SEASONS FIRENZE',
+  //         locationEn: 'Florence, Italy',
+  //         locationCz: 'Florencie, Itálie',
+  //         locationDe: 'Florence, Italy',
+  //         slug: '/blog/hotels/overview-four-seasons-firenze',
+  //         src: '/case-studies/four-seasons/blog/3.webp',
+  //       },
+  //     ],
+  //   },
 ]

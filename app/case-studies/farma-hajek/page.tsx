@@ -37,7 +37,7 @@ export default function FarmaHajek() {
       <Who title={title} bodyEn={whoEn} bodyCz={whoCz} bodyDe={whoDe} />
       <What bodyEn={whatEn} bodyCz={whatCz} bodyDe={whatDe} />
       <Results>
-        <Web />
+        {/* <Web /> */}
         <Marketing />
         <Events />
         <ContentCreation images={contentSrcs} rotate />
