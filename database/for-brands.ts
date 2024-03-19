@@ -55,43 +55,31 @@ export const forBrands = [
     ],
     socials: [
       {
-        src: 'https://i.imgur.com/4sWGD88.mp4',
-      },
-      {
         src: '/services/for-brands/socials/1.webp',
       },
       {
-        src: '/services/for-brands/socials/5.webp',
-      },
-      {
-        src: 'https://i.imgur.com/xs31k1k.mp4',
-      },
-      {
-        src: '/services/for-brands/socials/6.webp',
+        src: 'https://i.imgur.com/nSgJaNq.mp4',
       },
       {
         src: '/services/for-brands/socials/2.webp',
       },
       {
-        src: 'https://i.imgur.com/xMF3joo.mp4',
+        src: 'https://i.imgur.com/xs31k1k.mp4',
       },
       {
         src: '/services/for-brands/socials/3.webp',
       },
       {
-        src: 'https://i.imgur.com/ppYri1P.mp4',
+        src: 'https://i.imgur.com/xMF3joo.mp4',
       },
       {
         src: '/services/for-brands/socials/4.webp',
       },
       {
-        src: 'https://i.imgur.com/jWpA34L.mp4',
+        src: 'https://i.imgur.com/3A6bcD7.mp4',
       },
       {
-        src: '/services/for-brands/socials/7.webp',
-      },
-      {
-        src: 'https://i.imgur.com/MafGctM.mp4',
+        src: '/services/for-brands/socials/5.webp',
       },
     ],
   },
