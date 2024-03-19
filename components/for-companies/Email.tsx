@@ -20,9 +20,9 @@ const Email = () => {
   }, [clicked])
 
   return (
-    <div className='sticky z-50 bg-white snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)]'>
-      <Container className='grid w-full h-full place-content-center'>
-        <div>
+    <div className='sticky z-[80] bg-black snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)]'>
+      <Container className='grid place-content-center w-full h-full'>
+        <div className='text-white'>
           <p>
             {language === 'en' && 'contact us at'}
             {language === 'cs' && 'kontaktujte nás na'}
@@ -33,13 +33,13 @@ const Email = () => {
               setClicked(true)
               navigator.clipboard.writeText('info@planetopedia.agency')
             }}
-            className='text-2xl font-bold transition cursor-pointer md:text-4xl lg:text-5xl xl:text-6xl hover:scale-105'
+            className='font-bold text-2xl md:text-4xl lg:text-5xl xl:text-6xl hover:scale-105 transition cursor-pointer'
           >
             info@planetopedia.agency
           </h4>
           <motion.p
             className={cn(
-              'mt-4 text-right opacity-0 transition text-zinc-800/70',
+              'mt-4 text-right opacity-0 transition text-zinc-200/70',
               clicked && 'opacity-100'
             )}
           >
