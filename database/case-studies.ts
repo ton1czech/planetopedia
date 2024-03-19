@@ -6,21 +6,10 @@ export const caseStudies = [
     categoryDe: 'Landwirtschaftliches Unternehmen',
     href: '/case-studies/farma-hajek',
     image: '/case-studies/farma-hajek/thumbnail.webp',
-    servicesEn: [
-      'marketing',
-      'web development',
-      'content creation',
-      'social media management',
-    ],
-    servicesCz: [
-      'marketing',
-      'tvorba webu',
-      'tvorba obsahu',
-      'správa sociálních sítí',
-    ],
+    servicesEn: ['marketing', 'content creation', 'social media management'],
+    servicesCz: ['marketing', 'tvorba obsahu', 'správa sociálních sítí'],
     servicesDe: [
       'marketing',
-      'web-entwicklung',
       'erstellung von inhalten',
       'verwaltung sozialer medien',
     ],
@@ -31,11 +20,11 @@ export const caseStudies = [
     whoDe:
       'Farm Hájek ist ein tschechischer Familienbetrieb, der sich auf die ganzjährige Freilandhaltung von Hühnern und Hennen, die Produktion von Frischeiern und den Anbau hochwertiger Kartoffeln spezialisiert hat. Sie sind stolz darauf, Tradition und Qualität aufrechtzuerhalten, nicht nur in der Tierhaltung, sondern auch in der modernen, vom tschechischen Wald inspirierten Gestaltung der Ställe. Der Bauernhof Hájek ist nicht einfach nur ein Bauernhof, er ist ein leidenschaftlicher Züchter und Landwirt, der Wert auf Qualität und Nachhaltigkeit legt.',
     whatEn:
-      'To increase brand awareness. Create a new, modern website. Optimize advertising campaigns. Manage social media. Build the brand online. Organize events.',
+      'To increase brand awareness. Optimize advertising campaigns. Manage social media. Build the brand online.',
     whatCz:
-      'Zvýšit podvědomí o značce. Nový, moderní web. Optimalizace reklamních kampaní. Správa sociálních sítí. Budování značky online. Organizace akcí.',
+      'Zvýšit podvědomí o značce. Optimalizace reklamních kampaní. Správa sociálních sítí. Budování značky online.',
     whatDe:
-      'Steigerung der Markenbekanntheit. Eine neue, moderne Website erstellen. Optimieren von Werbekampagnen. Soziale Medien verwalten. Die Marke online aufbauen. Veranstaltungen organisieren.',
+      'Steigerung der Markenbekanntheit. Optimieren von Werbekampagnen. Soziale Medien verwalten. Die Marke online aufbauen.',
     contentSrcs: [
       '/case-studies/farma-hajek/content/1.webp',
       '/case-studies/farma-hajek/content/2.webp',

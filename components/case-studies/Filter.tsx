@@ -76,20 +76,6 @@ const Filter = ({ setService, service }: FilterProps) => {
         service={service}
       />
       <Item
-        labelEn='events'
-        labelCz='akce'
-        labelDe='veranstaltungen'
-        setService={setService}
-        service={service}
-      />
-      <Item
-        labelEn='web development'
-        labelCz='tvorba webu'
-        labelDe='web-entwicklung'
-        setService={setService}
-        service={service}
-      />
-      <Item
         labelEn='content creation'
         labelCz='tvorba obsahu'
         labelDe='erstellung von inhalten'

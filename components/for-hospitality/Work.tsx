@@ -4,9 +4,7 @@ import Container from '../Container'
 import { forHotels } from '@/database/for-hotels'
 import Image from 'next/image'
 import { useLanguage } from '@/store/useLanguage'
-import Link from 'next/link'
 import { cn } from '@/lib/utils'
-import { ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const Work = () => {

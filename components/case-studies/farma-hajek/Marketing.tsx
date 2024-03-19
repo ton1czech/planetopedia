@@ -95,19 +95,18 @@ const Marketing = () => {
         {language === 'en' ? (
           <>
             The results to date have been positively influenced by: influencer
-            campaign, marketing campaigns on Seznam.cz / Google.com, organizing
-            events.
+            campaign, marketing campaigns on Seznam.cz / Google.com.
           </>
         ) : language === 'cs' ? (
           <>
             Dosavadní výsledky pozitivně ovlivnili: influencer kampaně,
-            marketingové kampaně na Seznam.cz / Google.com, pořádání eventů.
+            marketingové kampaně na Google.com.
           </>
         ) : language === 'de' ? (
           <>
             Die bisherigen Ergebnisse wurden positiv beeinflusst durch:
             Influencer Influencer-Kampagne, Marketing-Kampagnen auf Seznam.cz /
-            Google.com, Organisation von Veranstaltungen.
+            Google.com.
           </>
         ) : null}
       </motion.p>
