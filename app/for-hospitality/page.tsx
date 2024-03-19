@@ -1,10 +1,9 @@
-import Charts from '@/components/for-hotels/Charts'
-import Email from '@/components/for-hotels/Email'
-import Feedback from '@/components/for-hotels/Feedback'
-import Hero from '@/components/for-hotels/Hero'
-import Review from '@/components/for-hotels/Review'
-import Video from '@/components/for-hotels/Video'
-import Work from '@/components/for-hotels/Work'
+import Charts from '@/components/for-hospitality/Charts'
+import Email from '@/components/for-hospitality/Email'
+import Feedback from '@/components/for-hospitality/Feedback'
+import Hero from '@/components/for-hospitality/Hero'
+import Review from '@/components/for-hospitality/Review'
+import Work from '@/components/for-hospitality/Work'
 
 export default function ForHotels() {
   return (
@@ -12,7 +11,7 @@ export default function ForHotels() {
       <Hero />
       <div>
         <Work />
-        <Video />
+        {/* <Video /> */}
         <Review />
         <Feedback />
         <Charts />

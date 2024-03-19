@@ -5,17 +5,13 @@ export const forHotels = [
         src: '/logos/fourseasons.webp',
       },
       {
-        src: '/logos/ritzcarlton.webp',
-      },
-      {
         src: '/logos/sixsenses.webp',
       },
       {
-        src: '/logos/doldergrand.webp',
-        noPhone: true,
+        src: '/logos/ritzcarlton.webp',
       },
       {
-        src: '/logos/jumeirah.webp',
+        src: '/logos/sorores.webp',
         noPhone: true,
       },
       {
