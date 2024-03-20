@@ -9,23 +9,16 @@ import { Command, CommandGroup, CommandItem } from '@/components/ui/command'
 import { Check, ChevronsUpDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useState } from 'react'
-import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import { useLanguage } from '@/store/useLanguage'
 
 const languages = [
   {
     value: 'en',
-    src: '/flags/en.webp',
   },
   {
     value: 'cs',
-    src: '/flags/cs.webp',
   },
-  //   {
-  //     value: 'de',
-  //     src: '/flags/de.webp',
-  //   },
 ]
 
 interface LanguageSelectorProps {
@@ -33,7 +26,7 @@ interface LanguageSelectorProps {
 }
 
 const LanguageSelector = ({ black }: LanguageSelectorProps) => {
-  const { language, imgSrc, setLanguage } = useLanguage(state => state)
+  const { language, setLanguage } = useLanguage(state => state)
 
   const [open, setOpen] = useState<boolean>(false)
 
@@ -51,14 +44,14 @@ const LanguageSelector = ({ black }: LanguageSelectorProps) => {
               : 'text-black hover:text-black hover:bg-zinc-800/10'
           )}
         >
-          <Image src={imgSrc(language)} width={30} height={30} alt={language} />
+          <span className='uppercase'>{language}</span>
           <ChevronsUpDown className='w-4 h-4 ml-2 opacity-50 shrink-0' />
         </Button>
       </PopoverTrigger>
       <PopoverContent className='w-[100px] p-2 z-[1001] bg-white backdrop-blur-lg border-zinc-500/40'>
         <Command className='!bg-transparent'>
           <CommandGroup className='space-y-2'>
-            {languages.map(({ src, value }: { src: string; value: string }) => (
+            {languages.map(({ value }: { value: string }) => (
               <CommandItem
                 key={value}
                 onSelect={() => {
@@ -73,7 +66,7 @@ const LanguageSelector = ({ black }: LanguageSelectorProps) => {
                     language === value ? 'opacity-100' : 'opacity-0'
                   )}
                 />
-                <Image src={src} width={30} height={30} alt={value} />
+                <span className='uppercase'>{value}</span>
               </CommandItem>
             ))}
           </CommandGroup>
