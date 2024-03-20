@@ -42,20 +42,22 @@ const Footer = () => {
             <p>
               {language === 'en' && (
                 <>
-                  We are innovative marketing digital agency focused on <br />
+                  We are innovative marketing digital agency focused on{' '}
+                  <br className='hidden md:block' />
                   marketing solutions and eye-catching content production.
                 </>
               )}
               {language === 'cs' && (
                 <>
                   Jsme inovativní marketingová digitální agentura zaměřená{' '}
-                  <br /> na marketingová řešení a produkci poutavého obsahu.
+                  <br className='hidden md:block' /> na marketingová řešení a
+                  produkci poutavého obsahu.
                 </>
               )}
               {language === 'de' && (
                 <>
                   Wir sind eine innovative digitale Marketing-Agentur, die sich{' '}
-                  <br />
+                  <br className='hidden md:block' />
                   auf Marketinglösungen und aufmerksamkeitsstarke
                   Content-Produktion konzentriert.
                 </>
@@ -63,7 +65,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className='text-sm'>
+          <div className='text-xs sm:text-sm'>
             <h4 className='text-zinc-200 text-lg font-bold mb-2'>CONNECT</h4>
             <p>+420 739 830 034</p>
             <p>info@planetopedia.agency</p>
@@ -102,7 +104,7 @@ const Footer = () => {
                 </>
               )}
             </p>
-            <p>
+            <p className='mt-2'>
               {language === 'en' && <>ID No.: 14184397</>}
               {language === 'cs' && <>IČO: 14184397</>}
               {language === 'de' && <>ID No.: 14184397</>}
@@ -123,7 +125,7 @@ const Footer = () => {
               )}
             </p>
 
-            <p className='mt-1 mb-5'>
+            <p className='mb-2'>
               {language === 'en' && <>website created by </>}
               {language === 'cs' && <>webové stránky vytvořil </>}
               {language === 'de' && <>Website erstellt von </>}

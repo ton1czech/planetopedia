@@ -2,13 +2,12 @@
 
 import Earth from '@/components/3d/Earth'
 import Container from '@/components/Container'
-import { Montserrat, Caramel } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import { motion } from 'framer-motion'
 import { useLanguage } from '@/store/useLanguage'
 import { cn } from '@/lib/utils'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
-const caramel = Caramel({ subsets: ['latin'], weight: '400' })
 
 const Hero = () => {
   const { language } = useLanguage(state => state)
