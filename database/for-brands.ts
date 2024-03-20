@@ -81,6 +81,9 @@ export const forBrands = [
       {
         src: '/services/for-brands/socials/5.webp',
       },
+      {
+        src: 'https://i.imgur.com/ppYri1P.mp4',
+      },
     ],
   },
 ]
