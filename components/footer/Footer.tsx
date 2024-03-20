@@ -27,8 +27,8 @@ const Footer = () => {
         services && 'sticky z-[120] snap-start scroll-mt-20 h-screen bg-black'
       )}
     >
-      <Container className='hidden py-20 lg:block'>
-        <div className='flex flex-col md:flex-row justify-between'>
+      <Container className='py-20'>
+        <div className='flex flex-col md:flex-row justify-between gap-20 md:gap-4'>
           <div>
             <Link
               href='/'
@@ -72,7 +72,7 @@ const Footer = () => {
 
         <div className='w-full h-px bg-zinc-400/40 my-10' />
 
-        <div className='text-sm flex flex-col md:flex-row justify-between'>
+        <div className='text-sm flex flex-col md:flex-row justify-between gap-20 md:gap-4'>
           <div>
             <p>
               {language === 'en' && (
