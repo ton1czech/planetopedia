@@ -47,8 +47,20 @@ const Footer = () => {
                   production.
                 </>
               )}
-              {language === 'cs' && <>Více než jen agentura</>}
-              {language === 'de' && <>Mehr als eine Agentur</>}
+              {language === 'cs' && (
+                <>
+                  Jsme inovativní marketingová digitální <br /> agentura
+                  zaměřená na marketingová řešení <br /> a produkci poutavého
+                  obsahu.
+                </>
+              )}
+              {language === 'de' && (
+                <>
+                  Wir sind eine innovative digitale <br /> Marketing-Agentur,
+                  die sich auf Marketinglösungen <br /> und
+                  aufmerksamkeitsstarke Content-Produktion konzentriert.
+                </>
+              )}
             </p>
           </div>
 
