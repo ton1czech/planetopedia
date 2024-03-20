@@ -260,16 +260,6 @@ const MobileNav = ({ black, setIsOpen }: MobileNavProps) => {
           />
         </Link>
         <Link
-          href='https://www.linkedin.com/company/planetopedia/'
-          target='_blank'
-        >
-          <Facebook
-            className={cn('', black ? 'text-white' : 'text-black')}
-            size={30}
-          />
-        </Link>
-
-        <Link
           href='https://www.youtube.com/@myplanetopedia/videos'
           target='_blank'
         >

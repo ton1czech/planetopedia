@@ -20,7 +20,7 @@ const MobileNavItem = ({
         href={href}
         onClick={() => setIsOpen(false)}
         className={cn(
-          'transition text-3xl',
+          'transition text-3xl whitespace-nowrap',
           black
             ? 'text-white hover:text-zinc-400'
             : 'text-black hover:text-zinc-600'

@@ -44,7 +44,7 @@ const MobileExpandableNavItem = ({
     <div onClick={() => setIsOpen(prev => !prev)} className='relative'>
       <p
         className={cn(
-          'cursor-pointer flex gap-2 transition text-3xl items-center',
+          'cursor-pointer flex gap-2 transition text-3xl items-center whitespace-nowrap',
           black
             ? 'text-white hover:text-zinc-400'
             : 'text-black hover:text-zinc-600'
@@ -63,7 +63,7 @@ const MobileExpandableNavItem = ({
               key={link.href}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className='text-black hover:text-zinc-600 whitespace-nowrap text-2xl'
+              className='text-black hover:text-zinc-600 whitespace-nowrap text-2xl whitespace-nowrap'
             >
               {link.label}
             </Link>
