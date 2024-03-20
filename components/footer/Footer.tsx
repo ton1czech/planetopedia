@@ -148,21 +148,21 @@ const Footer = () => {
               {language === 'en' && (
                 <>
                   {' '}
-                  <span className='hidden md:block'>/</span>{' '}
+                  <span className='hidden md:inline-block'>/</span>{' '}
                   <br className='md:hidden' /> earth model by{' '}
                 </>
               )}
               {language === 'cs' && (
                 <>
                   {' '}
-                  <span className='hidden md:block'>/</span>{' '}
+                  <span className='hidden md:inline-block'>/</span>{' '}
                   <br className='md:hidden' /> model planety od{' '}
                 </>
               )}
               {language === 'de' && (
                 <>
                   {' '}
-                  <span className='hidden md:block'>/</span>{' '}
+                  <span className='hidden md:inline-block'>/</span>{' '}
                   <br className='md:hidden' /> Erdmodell von{' '}
                 </>
               )}
