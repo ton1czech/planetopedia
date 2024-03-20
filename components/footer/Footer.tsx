@@ -39,7 +39,7 @@ const Footer = () => {
             >
               PLANETOPEDIA
             </Link>
-            <p className={cn('drop-shadow-sm')}>
+            <p>
               {language === 'en' && (
                 <>
                   We are innovative marketing digital agency focused on <br />
@@ -84,14 +84,21 @@ const Footer = () => {
           <div>
             <p>
               {language === 'en' && (
-                <>Dominik Grössl, Němčice 26, 34506 Němčice, Czech Republic</>
+                <>
+                  Dominik Grössl <br /> Němčice 26, 34506 Němčice, Czech
+                  Republic
+                </>
               )}
               {language === 'cs' && (
-                <>Dominik Grössl, Němčice 26, 34506 Němčice, Česká Republika</>
+                <>
+                  Dominik Grössl <br /> Němčice 26, 34506 Němčice, Česká
+                  Republika
+                </>
               )}
               {language === 'de' && (
                 <>
-                  Dominik Grössl, Němčice 26, 34506 Němčice, Tsechische Republik
+                  Dominik Grössl <br /> Němčice 26, 34506 Němčice, Tsechische
+                  Republik
                 </>
               )}
             </p>
@@ -141,7 +148,7 @@ const Footer = () => {
 
             <Link
               href='/personal-data-protection'
-              className='hover:underline text-sm'
+              className='underline text-sm'
             >
               {language === 'en' && 'Personal data protection'}
               {language === 'cs' && 'Ochrana osobních údajů'}
