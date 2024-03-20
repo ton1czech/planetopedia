@@ -56,14 +56,14 @@ const MobileExpandableNavItem = ({
       {isOpen && (
         <div
           ref={ref}
-          className='z-40 flex flex-col absolute top-9 left-1/2 translate-x-[-50%] h-min p-4 rounded-md gap-2 border border-zinc-300 bg-white'
+          className='z-40 flex flex-col absolute top-9 left-1/2 translate-x-[-50%] h-min p-4 rounded-md gap-2'
         >
           {links.map(link => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className='text-black hover:text-zinc-600 whitespace-nowrap text-2xl whitespace-nowrap'
+              className='text-zinc-200 hover:text-zinc-600 text-2xl whitespace-nowrap'
             >
               {link.label}
             </Link>
