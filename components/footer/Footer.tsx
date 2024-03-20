@@ -39,13 +39,14 @@ const Footer = () => {
             >
               PLANETOPEDIA
             </Link>
-            <p
-              className={cn(
-                'text-3xl text-gold drop-shadow-sm whitespace-nowrap',
-                caramel.className
+            <p className={cn('text-xl drop-shadow-sm')}>
+              {language === 'en' && (
+                <>
+                  We are innovative marketing digital <br /> agency focused on
+                  marketing solutions <br /> and eye-catching content
+                  production.
+                </>
               )}
-            >
-              {language === 'en' && <>More than an agency</>}
               {language === 'cs' && <>Více než jen agentura</>}
               {language === 'de' && <>Mehr als eine Agentur</>}
             </p>
@@ -53,18 +54,14 @@ const Footer = () => {
 
           <div className='text-sm'>
             <h4 className='text-zinc-200 text-lg font-bold mb-2'>CONNECT</h4>
-            <p>Dominik Grössl</p>
             <p>+420 739 830 034</p>
-            <p>dominik@planetopedia.agency</p>
+            <p>info@planetopedia.agency</p>
             <div className='flex gap-4 mt-1 underline'>
               <Link href='https://www.instagram.com/planetopedia/'>
                 Instagram
               </Link>
               <Link href='https://www.linkedin.com/company/planetopedia/'>
                 Linkedin
-              </Link>
-              <Link href='https://www.youtube.com/@myplanetopedia/videos'>
-                YouTube
               </Link>
             </div>
           </div>
@@ -113,7 +110,7 @@ const Footer = () => {
               {language === 'cs' && <>webové stránky vytvořil </>}
               {language === 'de' && <>Website erstellt von </>}
               <Link
-                href='https://github.com/ton1czech'
+                href='https://baudys.dev'
                 target='_blank'
                 className='underline'
               >
