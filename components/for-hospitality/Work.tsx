@@ -62,7 +62,7 @@ const Work = () => {
                 alt='logo'
                 width={100}
                 height={50}
-                className={cn('w-full', noPhone && 'hidden')}
+                className={cn('w-full', noPhone && 'hidden md:block')}
               />
             </div>
           ))}
