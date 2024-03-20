@@ -39,26 +39,25 @@ const Footer = () => {
             >
               PLANETOPEDIA
             </Link>
-            <p className={cn('text-xl drop-shadow-sm')}>
+            <p className={cn('drop-shadow-sm')}>
               {language === 'en' && (
                 <>
-                  We are innovative marketing digital <br /> agency focused on
-                  marketing solutions <br /> and eye-catching content
-                  production.
+                  We are innovative marketing digital agency focused on <br />
+                  marketing solutions and eye-catching content production.
                 </>
               )}
               {language === 'cs' && (
                 <>
-                  Jsme inovativní marketingová digitální <br /> agentura
-                  zaměřená na marketingová řešení <br /> a produkci poutavého
-                  obsahu.
+                  Jsme inovativní marketingová digitální agentura zaměřená{' '}
+                  <br /> na marketingová řešení a produkci poutavého obsahu.
                 </>
               )}
               {language === 'de' && (
                 <>
-                  Wir sind eine innovative digitale <br /> Marketing-Agentur,
-                  die sich auf Marketinglösungen <br /> und
-                  aufmerksamkeitsstarke Content-Produktion konzentriert.
+                  Wir sind eine innovative digitale Marketing-Agentur, die sich{' '}
+                  <br />
+                  auf Marketinglösungen und aufmerksamkeitsstarke
+                  Content-Produktion konzentriert.
                 </>
               )}
             </p>
