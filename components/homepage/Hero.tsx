@@ -5,6 +5,7 @@ import Container from '@/components/Container'
 import { Montserrat, Caramel } from 'next/font/google'
 import { motion } from 'framer-motion'
 import { useLanguage } from '@/store/useLanguage'
+import { cn } from '@/lib/utils'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 const caramel = Caramel({ subsets: ['latin'], weight: '400' })
@@ -14,28 +15,25 @@ const Hero = () => {
 
   return (
     <Container className='h-screen w-screen grid place-items-end z-[99999] bg-black'>
-      <motion.h1
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.1, duration: 0.5 }}
-        className={`${montserrat.className} font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl 
-                      text-white absolute left-1/2 top-1/2 translate-x-[-50%]
-                      translate-y-[-100%] z-10 md:pointer-events-none select-none`}
+      <h1
+        className={cn(
+          'text-center relative z-10 text-xl text-transparent sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl !leading-tight bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-500 w-full',
+          montserrat.className
+        )}
       >
-        PLANETOPEDIA
-      </motion.h1>
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1.5 }}
-        className={`${caramel.className} text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 
-                      text-gold drop-shadow-sm  absolute left-1/2 top-1/2 translate-x-[-50%]
-                      translate-y-[-25%] z-10 md:pointer-events-none whitespace-nowrap select-none`}
-      >
-        {language === 'en' && <>More than an agency</>}
-        {language === 'cs' && <>Více než jen agentura</>}
-        {language === 'de' && <>Mehr als eine Agentur</>}
-      </motion.p>
+        {language === 'en' && (
+          <>
+            We <b>transform</b> <br /> your <b>visitors</b> into <br /> loyal{' '}
+            <b>customers.</b>
+          </>
+        )}
+        {language === 'cs' && (
+          <>
+            <b>Přeměníme</b> vaše <br /> <b>návštěvníky</b> na <br /> věrné{' '}
+            <b>zákazníky.</b>
+          </>
+        )}
+      </h1>
 
       <motion.div
         initial={{ opacity: 0 }}
