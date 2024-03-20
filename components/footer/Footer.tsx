@@ -2,12 +2,14 @@
 
 import { useLanguage } from '@/store/useLanguage'
 import Link from 'next/link'
-import FooterIcon from './FooterIcon'
-import { Instagram, Linkedin, Mail, Phone, Youtube } from 'lucide-react'
 import Container from '../Container'
 import { motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import { Caramel, Montserrat } from 'next/font/google'
+
+const montserrat = Montserrat({ subsets: ['latin'] })
+const caramel = Caramel({ subsets: ['latin'], weight: '400' })
 
 const Footer = () => {
   const pathname = usePathname()
@@ -21,14 +23,58 @@ const Footer = () => {
       initial={{ y: services ? 0 : 50, opacity: services ? 1 : 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       className={cn(
-        '',
+        'text-zinc-400',
         services && 'sticky z-[120] snap-start scroll-mt-20 h-screen bg-black'
       )}
     >
       <Container className='hidden py-20 lg:block'>
-        <div className='flex items-center justify-between lg:items-start mb-14 gap-y-14'>
+        <div className='flex flex-col md:flex-row justify-between'>
+          <div>
+            <Link
+              href='/'
+              className={cn(
+                'text-xl md:text-2xl font-black text-white',
+                montserrat.className
+              )}
+            >
+              PLANETOPEDIA
+            </Link>
+            <p
+              className={cn(
+                'text-3xl text-gold drop-shadow-sm whitespace-nowrap',
+                caramel.className
+              )}
+            >
+              {language === 'en' && <>More than an agency</>}
+              {language === 'cs' && <>Více než jen agentura</>}
+              {language === 'de' && <>Mehr als eine Agentur</>}
+            </p>
+          </div>
+
           <div className='text-sm'>
-            <p className='text-zinc-100'>
+            <h4 className='text-zinc-200 text-lg font-bold mb-2'>CONNECT</h4>
+            <p>Dominik Grössl</p>
+            <p>+420 739 830 034</p>
+            <p>dominik@planetopedia.agency</p>
+            <div className='flex gap-4 mt-1 underline'>
+              <Link href='https://www.instagram.com/planetopedia/'>
+                Instagram
+              </Link>
+              <Link href='https://www.linkedin.com/company/planetopedia/'>
+                Linkedin
+              </Link>
+              <Link href='https://www.youtube.com/@myplanetopedia/videos'>
+                YouTube
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className='w-full h-px bg-zinc-400/40 my-10' />
+
+        <div className='text-sm flex flex-col md:flex-row justify-between'>
+          <div>
+            <p>
               {language === 'en' && (
                 <>Dominik Grössl, Němčice 26, 34506 Němčice, Czech Republic</>
               )}
@@ -41,169 +87,59 @@ const Footer = () => {
                 </>
               )}
             </p>
-            <p className='text-zinc-100'>
+            <p>
               {language === 'en' && <>ID No.: 14184397</>}
               {language === 'cs' && <>IČO: 14184397</>}
               {language === 'de' && <>ID No.: 14184397</>}
             </p>
-            <p className='flex items-center gap-2 mt-2 text-zinc-400'>
-              <Phone className='w-4 h-4' />
-              +420 739 830 034
-            </p>
-            <p className='flex items-center gap-2 text-zinc-400'>
-              <Mail className='w-4 h-4' />
-              dominik@planetopedia.agency
-            </p>
-            <p className='flex items-center gap-2 text-zinc-400'>
-              <Mail className='w-4 h-4' />
-              info@planetopedia.agency
-            </p>
           </div>
 
-          <div className='flex items-center justify-center gap-x-2 md:gap-x-4'>
-            <FooterIcon
-              icon={Instagram}
-              href='https://www.instagram.com/planetopedia/'
-              name='instagram'
-            />
-            <FooterIcon
-              icon={Linkedin}
-              href='https://www.linkedin.com/company/planetopedia/'
-              name='linkedin'
-            />
-            <FooterIcon
-              icon={Youtube}
-              href='https://www.youtube.com/@myplanetopedia/videos'
-              name='youtube'
-            />
+          <div>
+            <p>
+              &copy;{new Date().getFullYear()} Planetopedia,{' '}
+              {language === 'en' && (
+                <>founder Dominik Grössl. All rights reserved.</>
+              )}
+              {language === 'cs' && (
+                <>zakladatel Dominik Grössl. Všechna práva vyhrazena.</>
+              )}
+              {language === 'de' && (
+                <>Gründer Dominik Grössl. Alle Rechte vorbehalten.</>
+              )}
+            </p>
+
+            <p className='mt-1 mb-5'>
+              {language === 'en' && <>website created by </>}
+              {language === 'cs' && <>webové stránky vytvořil </>}
+              {language === 'de' && <>Website erstellt von </>}
+              <Link
+                href='https://github.com/ton1czech'
+                target='_blank'
+                className='underline'
+              >
+                Daniel Anthony Baudyš
+              </Link>
+              {language === 'en' && <> / earth model by </>}
+              {language === 'cs' && <> / model planety od </>}
+              {language === 'de' && <> / Erdmodell von </>}
+              <Link
+                href='https://sketchfab.com/3d-models/earth-c2e4294c32ea4d8b850e152fc26aeeb4'
+                target='_blank'
+                className='underline'
+              >
+                @Abdullrahman
+              </Link>
+            </p>
+
+            <Link
+              href='/personal-data-protection'
+              className='hover:underline text-sm'
+            >
+              {language === 'en' && 'Personal data protection'}
+              {language === 'cs' && 'Ochrana osobních údajů'}
+              {language === 'de' && 'Schutz personenbezogener Daten'}
+            </Link>
           </div>
-        </div>
-
-        <div className='flex flex-row items-start justify-center text-sm lg:justify-between'>
-          <p className='text-white'>
-            &copy;{new Date().getFullYear()} Planetopedia,{' '}
-            {language === 'en' && (
-              <>founder Dominik Grössl. All rights reserved.</>
-            )}
-            {language === 'cs' && (
-              <>zakladatel Dominik Grössl. Všechna práva vyhrazena.</>
-            )}
-            {language === 'de' && (
-              <>Gründer Dominik Grössl. Alle Rechte vorbehalten.</>
-            )}
-          </p>
-
-          <Link
-            href='/personal-data-protection'
-            className='text-center hover:underline text-zinc-400'
-          >
-            {language === 'en' && <>Personal data protection</>}
-            {language === 'cs' && <>Ochrana osobních údajů</>}
-            {language === 'de' && <>Schutz personenbezogener Daten</>}
-          </Link>
-        </div>
-
-        <p className='mt-2 text-xs text-center text-zinc-400 lg:text-left'>
-          {language === 'en' && <>website created by </>}
-          {language === 'cs' && <>webové stránky vytvořil </>}
-          {language === 'de' && <>Website erstellt von </>}
-          <Link
-            href='https://github.com/ton1czech'
-            target='_blank'
-            className='underline'
-          >
-            Daniel Anthony Baudyš
-          </Link>
-          {language === 'en' && <> / earth model by </>}
-          {language === 'cs' && <> / model planety od </>}
-          {language === 'de' && <> / Erdmodell von </>}
-          <Link
-            href='https://sketchfab.com/3d-models/earth-c2e4294c32ea4d8b850e152fc26aeeb4'
-            target='_blank'
-            className='underline'
-          >
-            @Abdullrahman
-          </Link>
-        </p>
-      </Container>
-
-      <Container className='py-20 lg:hidden'>
-        <p className='text-sm text-center text-white mb-7'>
-          {language === 'en' && <>All rights reserved</>}
-          {language === 'cs' && <>Všechna práva vyhrazena.</>}
-          {language === 'de' && <>Alle Rechte vorbehalten.</>}
-          <br />
-          &copy;{new Date().getFullYear()} Planetopedia,{' '}
-          {language === 'en' && <>founder Dominik Grössl.</>}
-          {language === 'cs' && <>zakladatel Dominik Grössl.</>}
-          {language === 'de' && <>Gründer Dominik Grössl.</>}
-        </p>
-
-        <div className='text-sm mb-7'>
-          <p className='text-zinc-100'>
-            Dominik Grössl, Němčice 26, 34506 Němčice, Czech Republic
-          </p>
-          <p className='text-zinc-100'>ID No.: 14184397</p>
-          <p className='flex items-center gap-2 mt-2 text-zinc-100'>
-            <Phone className='w-4 h-4' />
-            +420 739 830 034
-          </p>
-          <p className='flex items-center gap-2 text-zinc-400'>
-            <Mail className='w-4 h-4' />
-            dominik@planetopedia.agency
-          </p>
-          <p className='flex items-center gap-2 text-zinc-100'>
-            <Mail className='w-4 h-4' />
-            info@planetopedia.agency
-          </p>
-        </div>
-
-        <div className='flex items-center justify-center gap-10 text-xs text-center text-zinc-400 mb-7'>
-          <Link href='/personal-data-protection' className='hover:underline'>
-            {language === 'en' && <>Personal data protection</>}
-            {language === 'cs' && <>Ochrana osobních údajů</>}
-            {language === 'de' && <>Schutz personenbezogener Daten</>}
-          </Link>
-        </div>
-
-        <p className='text-sm text-center text-zinc-400 mb-7 lg:text-left'>
-          {language === 'en' && <>website created by </>}
-          {language === 'cs' && <>webové stránky vytvořil </>}
-          {language === 'de' && <>Website erstellt von </>}
-          <Link href='https://baudys.dev' target='_blank' className='underline'>
-            Daniel Anthony Baudyš
-          </Link>
-
-          <br />
-
-          {language === 'en' && <>earth model by </>}
-          {language === 'cs' && <>model planety od </>}
-          {language === 'de' && <>Erdmodell von </>}
-          <Link
-            href='https://sketchfab.com/3d-models/earth-c2e4294c32ea4d8b850e152fc26aeeb4'
-            target='_blank'
-            className='underline'
-          >
-            @Abdullrahman
-          </Link>
-        </p>
-
-        <div className='flex items-center justify-center gap-x-2 md:gap-x-4'>
-          <FooterIcon
-            icon={Instagram}
-            href='https://www.instagram.com/planetopedia/'
-            name='instagram'
-          />
-          <FooterIcon
-            icon={Linkedin}
-            href='https://www.linkedin.com/company/planetopedia/'
-            name='linkedin'
-          />
-          <FooterIcon
-            icon={Youtube}
-            href='https://www.youtube.com/@myplanetopedia/videos'
-            name='youtube'
-          />
         </div>
       </Container>
     </motion.footer>
