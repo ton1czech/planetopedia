@@ -28,7 +28,7 @@ const Footer = () => {
       )}
     >
       <Container className='py-20'>
-        <div className='flex flex-col md:flex-row justify-between gap-20 md:gap-4'>
+        <div className='flex flex-col md:flex-row justify-between gap-12 md:gap-4'>
           <div>
             <Link
               href='/'
@@ -65,7 +65,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className='text-xs sm:text-sm'>
+          <div className='text-sm'>
             <h4 className='text-zinc-200 text-lg font-bold mb-2'>CONNECT</h4>
             <p>+420 739 830 034</p>
             <p>info@planetopedia.agency</p>
@@ -82,7 +82,7 @@ const Footer = () => {
 
         <div className='w-full h-px bg-zinc-400/40 my-10' />
 
-        <div className='text-sm flex flex-col md:flex-row justify-between gap-20 md:gap-4'>
+        <div className='text-sm flex flex-col md:flex-row justify-between gap-12 md:gap-4'>
           <div>
             <p>
               {language === 'en' && (
@@ -115,13 +115,22 @@ const Footer = () => {
             <p>
               &copy;{new Date().getFullYear()} Planetopedia,{' '}
               {language === 'en' && (
-                <>founder Dominik Grössl. All rights reserved.</>
+                <>
+                  founder Dominik Grössl. <br className='md:hidden' /> All
+                  rights reserved.
+                </>
               )}
               {language === 'cs' && (
-                <>zakladatel Dominik Grössl. Všechna práva vyhrazena.</>
+                <>
+                  zakladatel Dominik Grössl. <br className='md:hidden' />{' '}
+                  Všechna práva vyhrazena.
+                </>
               )}
               {language === 'de' && (
-                <>Gründer Dominik Grössl. Alle Rechte vorbehalten.</>
+                <>
+                  Gründer Dominik Grössl. <br className='md:hidden' /> Alle
+                  Rechte vorbehalten.
+                </>
               )}
             </p>
 
@@ -136,9 +145,27 @@ const Footer = () => {
               >
                 Daniel Anthony Baudyš
               </Link>
-              {language === 'en' && <> / earth model by </>}
-              {language === 'cs' && <> / model planety od </>}
-              {language === 'de' && <> / Erdmodell von </>}
+              {language === 'en' && (
+                <>
+                  {' '}
+                  <span className='hidden md:block'>/</span>{' '}
+                  <br className='md:hidden' /> earth model by{' '}
+                </>
+              )}
+              {language === 'cs' && (
+                <>
+                  {' '}
+                  <span className='hidden md:block'>/</span>{' '}
+                  <br className='md:hidden' /> model planety od{' '}
+                </>
+              )}
+              {language === 'de' && (
+                <>
+                  {' '}
+                  <span className='hidden md:block'>/</span>{' '}
+                  <br className='md:hidden' /> Erdmodell von{' '}
+                </>
+              )}
               <Link
                 href='https://sketchfab.com/3d-models/earth-c2e4294c32ea4d8b850e152fc26aeeb4'
                 target='_blank'
