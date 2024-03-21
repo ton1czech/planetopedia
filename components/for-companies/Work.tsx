@@ -20,9 +20,9 @@ const Work = () => {
           transition={{ delay: 0.5 }}
           className='text-2xl font-bold text-center text-black md:text-3xl lg:text-4xl mb-5'
         >
-          {language === 'en' && <>Our social media impact</>}
-          {language === 'cs' && <>Náš vliv na sociální sítě</>}
-          {language === 'de' && <>Unser Einfluss auf die sozialen Medien</>}
+          {language === 'en' && <>More than an agency</>}
+          {language === 'cs' && <>Více než jen agentura</>}
+          {language === 'de' && <></>}
         </motion.h1>
         <motion.p
           initial={{ y: 50, opacity: 0 }}
