@@ -20,9 +20,9 @@ const Email = () => {
   }, [clicked])
 
   return (
-    <div className='sticky z-[80] bg-black snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)]'>
+    <div className='sticky z-50 bg-white snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)]'>
       <Container className='grid place-content-center w-full h-full'>
-        <div className='text-white'>
+        <div className='text-black'>
           <p>
             {language === 'en' && 'contact us at'}
             {language === 'cs' && 'kontaktujte nás na'}
@@ -39,7 +39,7 @@ const Email = () => {
           </h4>
           <motion.p
             className={cn(
-              'mt-4 text-right opacity-0 transition text-zinc-200/70',
+              'mt-4 text-right opacity-0 transition text-zinc-800/70',
               clicked && 'opacity-100'
             )}
           >

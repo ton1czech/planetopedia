@@ -16,13 +16,13 @@ const Charts = () => {
   const [chart, setChart] = useState('followers')
 
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 z-[70] bg-white h-[calc(100vh-80px)] grid place-content-center'>
+    <div className='sticky top-0 snap-start scroll-mt-20 z-20 bg-black h-[calc(100vh-80px)] grid place-content-center'>
       <Container>
         <motion.h2
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className='text-2xl text-center text-black md:text-3xl mb-6 font-bold'
+          className='text-2xl text-center text-white md:text-3xl mb-6 font-bold'
         >
           {language === 'en' && (
             <>Social Media Management - Our Client's Results (2023)</>
@@ -44,8 +44,8 @@ const Charts = () => {
           <Button
             onClick={() => setChart('followers')}
             className={cn(
-              'bg-white text-black ring-2 ring-black hover:text-white',
-              chart === 'followers' && 'bg-black text-white'
+              'bg-black text-white ring-2 ring-white hover:bg-zinc-900',
+              chart === 'followers' && 'bg-white text-black hover:bg-zinc-200'
             )}
           >
             {language === 'en' ? (
@@ -59,8 +59,8 @@ const Charts = () => {
           <Button
             onClick={() => setChart('grow')}
             className={cn(
-              'bg-white text-black ring-2 ring-black hover:text-white',
-              chart === 'grow' && 'bg-black text-white'
+              'bg-black text-white ring-2 ring-white hover:bg-zinc-900',
+              chart === 'grow' && 'bg-white text-black hover:bg-zinc-200'
             )}
           >
             {language === 'en' ? (
@@ -74,8 +74,8 @@ const Charts = () => {
           <Button
             onClick={() => setChart('imprese')}
             className={cn(
-              'bg-white text-black ring-2 ring-black hover:text-white',
-              chart === 'imprese' && 'bg-black text-white'
+              'bg-black text-white ring-2 ring-white hover:bg-zinc-900',
+              chart === 'imprese' && 'bg-white text-black hover:bg-zinc-200'
             )}
           >
             {language === 'en' ? (

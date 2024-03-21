@@ -11,7 +11,7 @@ const Work = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-20 bg-white h-[calc(100vh-80px)]'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen z-10 bg-white h-[calc(100vh-80px)]'>
       <Container className='grid place-content-center h-full'>
         <motion.div
           initial={{ y: 50, opacity: 0 }}

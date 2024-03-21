@@ -11,11 +11,9 @@ export default function ForHotels() {
       <Hero />
       <div>
         <Work />
-        {/* <Video /> */}
+        <Charts />
         <Review />
         <Feedback />
-        <Charts />
-        {/* <Contact /> */}
         <Email />
       </div>
     </section>
