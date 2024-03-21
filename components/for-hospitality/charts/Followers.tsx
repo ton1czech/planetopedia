@@ -150,16 +150,22 @@ const Followers = () => {
       },
     },
     maintainAspectRatio: false,
-    color: 'rgb(161, 161, 170)',
+    color: 'rgba(255,255,255,.7)',
     scales: {
       x: {
         grid: {
-          color: 'rgba(255,255,255,.3)', // Barva mřížky pro osu x
+          color: 'rgba(255,255,255,.3)',
+        },
+        ticks: {
+          color: 'rgba(255,255,255,.7)',
         },
       },
       y: {
         grid: {
-          color: 'rgba(255,255,255,.3)', // Barva mřížky pro osu y
+          color: 'rgba(255,255,255,.3)',
+        },
+        ticks: {
+          color: 'rgba(255,255,255,.7)',
         },
       },
     },

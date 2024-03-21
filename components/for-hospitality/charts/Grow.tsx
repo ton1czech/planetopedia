@@ -151,15 +151,19 @@ const Grow = () => {
     scales: {
       y: {
         ticks: {
+          color: 'rgba(255,255,255,.7)',
           callback: function (value: any) {
             return value + '%'
           },
         },
-        color: 'rgba(255,255,255,.3)', // Barva mřížky pro osu y
+        color: 'rgba(255,255,255,.3)',
       },
       x: {
         grid: {
-          color: 'rgba(255,255,255,.3)', // Barva mřížky pro osu x
+          color: 'rgba(255,255,255,.3)',
+        },
+        ticks: {
+          color: 'rgba(255,255,255,.7)',
         },
       },
     },
