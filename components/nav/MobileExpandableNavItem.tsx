@@ -56,7 +56,7 @@ const MobileExpandableNavItem = ({
       {isOpen && (
         <div
           ref={ref}
-          className='z-40 flex flex-col absolute top-9 left-1/2 translate-x-[-50%] h-min p-4 rounded-md gap-2'
+          className='z-40 flex flex-col absolute top-9 left-0 h-min p-4 rounded-md gap-2'
         >
           {links.map(link => (
             <Link
