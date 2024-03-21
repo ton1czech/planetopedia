@@ -53,7 +53,7 @@ const LanguageSelector = ({ black }: LanguageSelectorProps) => {
           <ChevronsUpDown className='w-4 h-4 ml-2 opacity-50 shrink-0' />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className='w-[70px] h-[100px] z-[1001] bg-white backdrop-blur-lg border-none rounded-none'>
+      <PopoverContent className='w-min h-min z-[1001] bg-white backdrop-blur-lg border-none rounded-none p-0 m-0'>
         <Command className='!bg-transparent'>
           <CommandGroup className='space-y-1'>
             {languages.map(
