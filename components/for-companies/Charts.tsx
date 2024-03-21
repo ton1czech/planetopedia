@@ -105,21 +105,11 @@ const Charts = () => {
           className='italic mt-1 text-justify sm:text-left text-sm text-zinc-400'
         >
           {language === 'en' ? (
-            <>
-              The results to date have been positively influenced by: influencer
-              campaign, marketing campaigns on Seznam.cz / Google.com.
-            </>
+            <>The results are positively influenced by other marketing steps.</>
           ) : language === 'cs' ? (
-            <>
-              Dosavadní výsledky pozitivně ovlivnili: influencer kampaně,
-              marketingové kampaně na Seznam.cz / Google.com.
-            </>
+            <>Výsledky jsou pozitivně ovlivněny dalšími marketingovými kroky.</>
           ) : language === 'de' ? (
-            <>
-              Die bisherigen Ergebnisse wurden positiv beeinflusst durch:
-              Influencer Influencer-Kampagne, Marketing-Kampagnen auf Seznam.cz
-              / Google.com.
-            </>
+            <></>
           ) : null}
         </motion.p>
       </Container>
