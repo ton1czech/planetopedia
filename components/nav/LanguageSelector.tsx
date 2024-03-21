@@ -15,9 +15,11 @@ import { useLanguage } from '@/store/useLanguage'
 const languages = [
   {
     value: 'en',
+    label: 'EN',
   },
   {
     value: 'cs',
+    label: 'CZ',
   },
 ]
 
@@ -38,37 +40,36 @@ const LanguageSelector = ({ black }: LanguageSelectorProps) => {
           role='combobox'
           aria-expanded={open}
           className={cn(
-            'w-[70px] justify-between bg-transparent border-none',
+            'w-[70px] justify-between bg-transparent border-none hover:bg-transparent',
             black
-              ? 'text-white hover:text-white hover:bg-zinc-100/10'
-              : 'text-black hover:text-black hover:bg-zinc-800/10'
+              ? 'text-white hover:text-zinc-400'
+              : 'text-black hover:text-zinc-600'
           )}
         >
-          <span className='uppercase'>{language}</span>
+          <span>
+            {language === 'en' && 'EN'}
+            {language === 'cs' && 'CZ'}
+          </span>
           <ChevronsUpDown className='w-4 h-4 ml-2 opacity-50 shrink-0' />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className='w-[100px] p-2 z-[1001] bg-white backdrop-blur-lg border-zinc-500/40'>
+      <PopoverContent className='w-[70px] h-[100px] z-[1001] bg-white backdrop-blur-lg border-none rounded-none'>
         <Command className='!bg-transparent'>
-          <CommandGroup className='space-y-2'>
-            {languages.map(({ value }: { value: string }) => (
-              <CommandItem
-                key={value}
-                onSelect={() => {
-                  setLanguage(value)
-                  setOpen(false)
-                }}
-                className='mb-2 !bg-transparent cursor-pointer hover:!bg-zinc-400/20'
-              >
-                <Check
-                  className={cn(
-                    'mr-2 h-4 w-4 text-black',
-                    language === value ? 'opacity-100' : 'opacity-0'
-                  )}
-                />
-                <span className='uppercase'>{value}</span>
-              </CommandItem>
-            ))}
+          <CommandGroup className='space-y-1'>
+            {languages.map(
+              ({ value, label }: { value: string; label: string }) => (
+                <CommandItem
+                  key={value}
+                  onSelect={() => {
+                    setLanguage(value)
+                    setOpen(false)
+                  }}
+                  className='!bg-transparent cursor-pointer'
+                >
+                  <span className='uppercase'>{label}</span>
+                </CommandItem>
+              )
+            )}
           </CommandGroup>
         </Command>
       </PopoverContent>
