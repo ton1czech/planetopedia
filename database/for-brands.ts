@@ -2,7 +2,7 @@ export const forBrands = [
   {
     logos: [
       {
-        src: '/logos/fourseasons.webp',
+        src: '/logos/sixsenses.webp',
       },
       {
         src: '/logos/farmahajek.webp',
