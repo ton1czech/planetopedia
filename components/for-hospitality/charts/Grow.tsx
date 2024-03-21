@@ -156,7 +156,9 @@ const Grow = () => {
             return value + '%'
           },
         },
-        color: 'rgba(255,255,255,.3)',
+        grid: {
+          color: 'rgba(255,255,255,.3)',
+        },
       },
       x: {
         grid: {

@@ -40,7 +40,8 @@ export const SlidingText = () => {
       <div className='relative w-full h-full'>
         <p className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-left w-[350px] sm:w-[550px] md:w-[620px] lg:w-[750px] xl:w-[950px] 2xl:w-[1150px] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl z-10 inline-flex flex-col flex-nowrap'>
           <span className='flex whitespace-nowrap font-light'>
-            At Planetopedia,
+            {language === 'en' && 'At Planetopedia,'}
+            {language === 'cs' && 'V Planetopedia,'}
           </span>
           <span className='flex font-light'>
             {language === 'en' && <>we create </>}
