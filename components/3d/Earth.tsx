@@ -38,9 +38,9 @@ export default function Earth() {
         fov: 45,
         near: 3,
         far: 200,
-        position: [isMobile ? -35 : -20, 3, 6],
+        position: [isMobile ? -30 : -20, 3, 6],
       }}
-      className='!w-[200vh] !h-screen !opacity-90 !absolute !top-0 !-right-[60vw] md:!-right-[68vw] 2xl:!-right-[55vw] overflow-hidden'
+      className='hidden lg:block !w-[200vh] !h-screen !opacity-90 !absolute !top-0 !-right-[330vw] md:!-right-[68vw] 2xl:!-right-[55vw]'
     >
       <Suspense fallback={<Loader />}>
         <OrbitControls
