@@ -26,34 +26,22 @@ const Events = () => {
         <p className='text-justify'>
           {language === 'en' && (
             <>
-              Content creation and marketing for Strongman events at Farm Hájek,
-              which offer a distinctive combination of strength, endurance, and
-              entertainment set in the picturesque Czech countryside. These
-              events provide not only exhilarating athletic challenges but also
-              the chance for participants to experience the genuine agricultural
-              ambiance of Farm Hájek.
+              Content creation and marketing for Strongman events at Farma
+              Hájek. A combination of strength, endurance and fun in the
+              picturesque Czech countryside. These events are not only an
+              exciting sporting challenge, but also an opportunity to get to
+              know the farm.
             </>
           )}
           {language === 'cs' && (
             <>
-              Tvorba obsahu a marketing pro akce Strongman na Farmě Hájek, které
-              nabízejí osobitou kombinaci síly, vytrvalosti a zábavy v malebné
-              české přírodě. Tyto akce poskytují nejen vzrušující sportovní
-              výzvy, ale také možnost pro účastníky zažít pravou zemědělskou
-              atmosféru Farmy Hájek.
+              Tvorba obsahu a marketing pro Strongman akce na Farmě Hájek.
+              Kombinace síly, vytrvalosti a zábavy v malebné české přírodě. Tyto
+              akce jsou nejen vzrušující sportovní výzva, ale také možnost
+              poznat samotnou myšlenku farmy.
             </>
           )}
-          {language === 'de' && (
-            <>
-              Erstellung von Inhalten und Marketing für Strongman-Events auf der
-              Farm Hájek, die eine einzigartige Kombination aus Kraft, Ausdauer
-              und Unterhaltung in der malerischen tschechischen Landschaft
-              bieten. Diese Veranstaltungen bieten nicht nur aufregende
-              sportliche Herausforderungen, sondern auch die Möglichkeit für die
-              Teilnehmer, das echte landwirtschaftliche Ambiente der Farm Hájek
-              zu erleben.
-            </>
-          )}
+          {language === 'de' && <></>}
         </p>
         <div className='relative w-full aspect-square h-[300px] sm:h-[400px] lg:h-[500px]'>
           <Image
