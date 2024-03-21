@@ -63,7 +63,12 @@ const MobileExpandableNavItem = ({
               key={link.href}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className='text-zinc-200 hover:text-zinc-600 text-2xl whitespace-nowrap'
+              className={cn(
+                'text-2xl whitespace-nowrap',
+                black
+                  ? 'text-zinc-200 hover:text-zinc-600'
+                  : 'text-zinc-800 hover:text-zinc-900'
+              )}
             >
               {link.label}
             </Link>
