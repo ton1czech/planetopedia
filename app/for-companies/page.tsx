@@ -12,15 +12,10 @@ export default function ForBrands() {
       <Hero />
       <div>
         <Intro />
-        <SocialMedia />
         <Work />
-        <Feedback />
+        <SocialMedia />
         <Charts />
-        {/* <Campaign /> */}
-        {/* <ContentCreation /> */}
-        {/* <Video />
-        <Web /> */}
-        {/* <Contact /> */}
+        <Feedback />
         <Email />
       </div>
     </section>

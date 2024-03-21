@@ -9,7 +9,7 @@ import { useLanguage } from '@/store/useLanguage'
 const SocialMedia = () => {
   const { language } = useLanguage(state => state)
   return (
-    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)] z-10 bg-black grid place-content-center mt-8'>
+    <div className='sticky top-0 snap-start scroll-mt-20 w-screen h-[calc(100vh-80px)] z-30 bg-black grid place-content-center mt-8'>
       <motion.div
         initial={{ x: 50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
