@@ -31,7 +31,7 @@ const Item = ({ num, text, millions, delay, zero, thousands }: ItemProps) => {
         decimals={thousands ? 1 : 0}
         suffix={millions ? 'M+' : zero ? '' : thousands ? 'K' : '+'}
         className={
-          'font-black text-3xl lg:text-5xl xl:text-6xl text-center md:text-left'
+          'font-black text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl text-center md:text-left'
         }
         enableScrollSpy
         scrollSpyOnce

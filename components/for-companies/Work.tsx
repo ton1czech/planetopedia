@@ -28,7 +28,7 @@ const Work = () => {
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className='text-zinc-700 text-center max-w-[80ch] mx-auto'
+          className='text-zinc-700 md:text-center max-w-[80ch] mx-auto text-justify'
         >
           {language === 'en' && (
             <>
@@ -77,7 +77,7 @@ const Work = () => {
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className='text-zinc-700 text-center max-w-[80ch] mx-auto'
+          className='text-zinc-700 md:text-center text-justify max-w-[80ch] mx-auto'
         >
           {language === 'en' && (
             <>

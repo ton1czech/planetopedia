@@ -39,7 +39,7 @@ const Charts = () => {
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className='grid lg:grid-cols-3 gap-2 lg:gap-8 mt-4 mb-2'
+          className='grid grid-cols-3 gap-4 lg:gap-8 mt-4 mb-2'
         >
           <Button
             onClick={() => setChart('followers')}
@@ -102,7 +102,7 @@ const Charts = () => {
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className='italic mt-1 text-justify sm:text-left text-sm'
+          className='italic mt-1 text-justify sm:text-left text-sm text-zinc-400'
         >
           {language === 'en' ? (
             <>

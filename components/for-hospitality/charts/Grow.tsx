@@ -158,6 +158,7 @@ const Grow = () => {
       },
     },
     maintainAspectRatio: false,
+    color: 'rgb(161, 161, 170)',
   }
 
   return (
@@ -165,7 +166,7 @@ const Grow = () => {
       <Line
         data={data}
         options={options}
-        className='h-[300px] sm:h-[400px] md:h-[500px] w-full'
+        className='h-[400px] sm:h-[450px] md:h-[500px] w-full'
       />
     </div>
   )
