@@ -51,14 +51,14 @@ const Numbers = () => {
     <div className='mt-6 md:mt-12'>
       <div className='grid grid-cols-3 gap-4 lg:gap-8'>
         <Item
-          num={45}
+          num={27}
           text={
             language === 'en'
-              ? 'Notable Clients'
+              ? 'successful campaigns'
               : language === 'cs'
-              ? 'Významných Klientů'
+              ? 'Úspěšných kampaní'
               : language === 'de'
-              ? 'Bemerkenswerte Kunden'
+              ? ''
               : ''
           }
           delay={2}
