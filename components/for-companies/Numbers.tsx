@@ -64,7 +64,7 @@ const Numbers = () => {
           delay={2}
         />
         <Item
-          num={1.2}
+          num={1200}
           text={
             language === 'en'
               ? 'Reels Created'
@@ -74,7 +74,6 @@ const Numbers = () => {
               ? ''
               : ''
           }
-          thousands
           delay={2.3}
         />
         <Item
