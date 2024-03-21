@@ -150,6 +150,18 @@ const Imprese = () => {
     },
     maintainAspectRatio: false,
     color: 'rgb(161, 161, 170)',
+    scales: {
+      x: {
+        grid: {
+          color: 'rgba(255,255,255,.3)', // Barva mřížky pro osu x
+        },
+      },
+      y: {
+        grid: {
+          color: 'rgba(255,255,255,.3)', // Barva mřížky pro osu y
+        },
+      },
+    },
   }
 
   return (

@@ -155,6 +155,12 @@ const Grow = () => {
             return value + '%'
           },
         },
+        color: 'rgba(255,255,255,.3)', // Barva mřížky pro osu y
+      },
+      x: {
+        grid: {
+          color: 'rgba(255,255,255,.3)', // Barva mřížky pro osu x
+        },
       },
     },
     maintainAspectRatio: false,
