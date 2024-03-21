@@ -18,8 +18,8 @@ const paragraphs = [
     de: 'Gerade diese Entscheidung und das Gewinnen verschiedener Perspektiven erfüllten ihn so sehr, dass er beschloss, diese Momente nicht nur mit seinen Lieben zu teilen, sondern auch einzelne Menschen an verschiedenen Orten miteinander zu verbinden und sie mit dem Publikum in aller Welt zu teilen.',
   },
   {
-    en: 'Shortly after, Planetopedia was born, which gradually became a marketing agency focusing not only on digital marketing. With proven experience in the industry, we offer innovative and engaging photographic and video marketing solutions.',
-    cz: 'Krátce na to se zrodila Planetopedia, ze které se postupně stala marketingová agentura zaměřující se nejen na digitální marketing. S prokázanými zkušenostmi v oboru nabízíme inovativní a poutavá fotografická a video marketingová řešení.',
+    en: 'Shortly after, Planetopedia was born, which gradually became a marketing agency focusing not only on digital marketing. With proven experience in the industry, we offer innovative content creation and marketing solutions.',
+    cz: 'Krátce na to se zrodila Planetopedia, ze které se postupně stala marketingová agentura zaměřující se nejen na digitální marketing. S prokázanými zkušenostmi v oboru nabízíme inovativní tvorbu obsahu a marketingová řešení.',
     de: 'Kurz darauf wurde Planetopedia geboren und hat sich nach und nach zu einer auf die Zukunft ausgerichteten Influencer-Agentur für digitales Marketing entwickelt. Mit bewährter Expertise in der Luxusgastronomie bieten wir innovative und auffällige Fotografie- und Videomarketinglösungen.',
   },
   {
