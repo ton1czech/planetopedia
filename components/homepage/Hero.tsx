@@ -2,37 +2,13 @@
 
 import Earth from '@/components/3d/Earth'
 import Container from '@/components/Container'
-import { Montserrat } from 'next/font/google'
 import { motion } from 'framer-motion'
-import { useLanguage } from '@/store/useLanguage'
-import { cn } from '@/lib/utils'
-
-const montserrat = Montserrat({ subsets: ['latin'] })
+import { SlidingText } from './SlidingText'
 
 const Hero = () => {
-  const { language } = useLanguage(state => state)
-
   return (
-    <Container className='h-screen w-screen grid place-items-end z-[99999] bg-black'>
-      <h1
-        className={cn(
-          'text-center relative z-10 text-xl text-transparent sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl !leading-tight bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-500 w-full',
-          montserrat.className
-        )}
-      >
-        {language === 'en' && (
-          <>
-            We <b>transform</b> <br /> your <b>visitors</b> into <br /> loyal{' '}
-            <b>customers.</b>
-          </>
-        )}
-        {language === 'cs' && (
-          <>
-            <b>Přeměníme</b> vaše <br /> <b>návštěvníky</b> na <br /> věrné{' '}
-            <b>zákazníky.</b>
-          </>
-        )}
-      </h1>
+    <Container className='h-screen w-screen bg-black text-white'>
+      <SlidingText />
 
       <motion.div
         initial={{ opacity: 0 }}
