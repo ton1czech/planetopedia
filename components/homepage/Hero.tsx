@@ -14,12 +14,11 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3 }}
-        className='overflow-hidden'
+        className='!overflow-hidden !w-screen !h-screen'
       >
         <Earth />
       </motion.div>
-      {/* <div className='absolute top-0 left-0 z-10 w-full h-full md:pointer-events-none' /> */}
-      <div className='absolute top-0 left-0 z-10 w-full h-full pointer-events-none' />
+      <div className='absolute top-0 left-0 z-10 w-full h-full md:pointer-events-none' />
     </Container>
   )
 }
