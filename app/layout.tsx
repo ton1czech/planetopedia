@@ -76,7 +76,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           content='qX0rcP5-c8gZODKkUbQJXJoUU6eHXkVfPCrEVV-Afcc'
         />
       </Head>
-      <body className={`${manrope.className} overflow-x-hidden bg-black`}>
+      <body className={`${manrope.className} !overflow-x-hidden bg-black`}>
         <ToasterProvider />
         <DisableCopyingProvider />
         <Navbar />

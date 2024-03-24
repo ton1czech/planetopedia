@@ -7,14 +7,13 @@ import { SlidingText } from './SlidingText'
 
 const Hero = () => {
   return (
-    <Container className='h-screen w-screen bg-black text-white'>
+    <Container className='!h-screen !w-screen bg-black text-white'>
       <SlidingText />
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3 }}
-        className='!overflow-hidden !w-screen !h-screen'
       >
         <Earth />
       </motion.div>
