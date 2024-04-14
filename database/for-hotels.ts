@@ -8,14 +8,14 @@ export const forHotels = [
         src: '/logos/sixsenses.webp',
       },
       {
-        src: '/logos/ritzcarlton.webp',
+        src: '/logos/rozmluvse.webp',
       },
       {
         src: '/logos/sorores.webp',
         noPhone: true,
       },
       {
-        src: '/logos/horlogers.webp',
+        src: '/logos/niceface.webp',
         noPhone: true,
       },
     ],

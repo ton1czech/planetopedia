@@ -15,7 +15,7 @@ export const forBrands = [
         noPhone: true,
       },
       {
-        src: '/logos/ritzcarlton.webp',
+        src: '/logos/grundstein.webp',
         noPhone: true,
       },
       {
